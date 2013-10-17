@@ -1,3 +1,4 @@
-name: Your New Jekyll Site
+name: Imagery to the Crowd
 markdown: redcarpet
-pygments: true
+pygments: false
+timezone: America/New_York
