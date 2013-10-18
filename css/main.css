@@ -4,6 +4,16 @@ html, body {
 
 body {
   padding-top: 60px;
+  font-size: 16px;
+}
+
+/* Opera fix for sticky footer */
+body:before {/* thanks to Maleika (Kohoutec)*/
+  content:"";
+  height:100%;
+  float:left;
+  width:0;
+  margin-top:-32767px;/* thank you Erik J - negate effect of float*/
 }
 
 #main-wrapper {
@@ -21,6 +31,8 @@ body {
   margin-top: -180px; /* negative footer height */
   height: 180px;
   clear: both;
+  background-color: #f8f8f8;
+  border-top: 1px solid #e7e7e7;
 }
 
 .footer-nav {
@@ -35,13 +47,9 @@ body {
   float: left;
 }
 
-/* Opera fix for sticky footer */
-body:before {/* thanks to Maleika (Kohoutec)*/
-  content:"";
-  height:100%;
-  float:left;
-  width:0;
-  margin-top:-32767px;/* thank you Erik J - negate effect of float*/
+.media img {
+  float: left;
+  padding: 0 10px 10px 0;
 }
 
 /* Sticky footer thanks to http://www.cssstickyfooter.com */

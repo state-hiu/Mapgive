@@ -2,3 +2,4 @@ name: Imagery to the Crowd
 markdown: redcarpet
 pygments: false
 timezone: America/New_York
+permalink: none

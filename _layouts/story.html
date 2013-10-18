@@ -2,4 +2,25 @@
 layout: default
 ---
 
+<div class="row">
+  <div class="col-md-8">
+    <article>
+      <div class="story media">
+        <h1>{{ page.title }}</h1>
+        <img src="{{ page.image }}" alt="{{ page.altText }}">
+        {{ content }}
+      </div>
+    </article>
+  </div>
+  <div class="col-md-4">
+    <div class="promo-box">
+      <h2>More Information</h2>
+      <ul>
+        <li><a href="#">Lorum Ipsum</a></li>
+        <li><a href="#">Lorum Ipsum</a></li>
+        <li><a href="#">Lorum Ipsum</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
