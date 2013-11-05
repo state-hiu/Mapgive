@@ -16,9 +16,22 @@ body:before {/* thanks to Maleika (Kohoutec)*/
   margin-top:-32767px;/* thank you Erik J - negate effect of float*/
 }
 
+.accordion-toggle {
+  padding-right: 100%;
+}
+
+/*
+ ********************* Specific Styles *********************
+ */
 #main-wrapper {
   min-height: 100%;
   width: 100%;
+}
+
+@media (min-width: 992px) {
+  #main-wrapper {
+    margin-bottom: 50px;
+  }
 }
 
 #main {
@@ -33,23 +46,64 @@ body:before {/* thanks to Maleika (Kohoutec)*/
   clear: both;
   background-color: #f8f8f8;
   border-top: 1px solid #e7e7e7;
+
 }
 
-.footer-nav {
+#footer ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.footer-nav li {
-  margin: 0;
+#footer li {
+  margin: 0 0 0 10px;
   padding: 0;
-  float: left;
 }
 
+@media (min-width: 768px) {
+  #footer li {
+    margin: 0;
+  }
+}
+
+#footer .top {
+  font-weight: bold;
+  margin: 0;
+}
+
+
+/*
+ ******************** Objects *********************
+ */
 .media img {
   float: left;
   padding: 0 10px 10px 0;
 }
 
-/* Sticky footer thanks to http://www.cssstickyfooter.com */
+/* Responsive Video */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.action {
+  display: block;
+}
+
+.more-info {
+  display: block;
+}
+
+/* Thanks to... */
+/* Sticky footer http://www.cssstickyfooter.com */
+/* Responsive YouTube embed http://avexdesigns.com/responsive-youtube-embed/ */
