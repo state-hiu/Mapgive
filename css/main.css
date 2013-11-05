@@ -1,5 +1,7 @@
-html, body {
-  height: 100%;
+@media (min-width: 768px) {
+  html, body {
+    height: 100%;
+  }
 }
 
 body {
@@ -16,37 +18,25 @@ body:before {/* thanks to Maleika (Kohoutec)*/
   margin-top:-32767px;/* thank you Erik J - negate effect of float*/
 }
 
-.accordion-toggle {
-  padding-right: 100%;
-}
-
 /*
  ********************* Specific Styles *********************
  */
-#main-wrapper {
-  min-height: 100%;
-  width: 100%;
-}
-
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   #main-wrapper {
-    margin-bottom: 50px;
+    min-height: 100%;
+    width: 100%;
   }
 }
 
-#main {
-  overflow: auto;
-  padding-bottom: 180px; /* footer height */
+@media (min-width: 768px) {
+  #main {
+    padding-bottom: 182px; /* footer height */
+  }
 }
 
 #footer {
-  position: relative;
-  margin-top: -180px; /* negative footer height */
-  height: 180px;
-  clear: both;
   background-color: #f8f8f8;
   border-top: 1px solid #e7e7e7;
-
 }
 
 #footer ul {
@@ -61,6 +51,12 @@ body:before {/* thanks to Maleika (Kohoutec)*/
 }
 
 @media (min-width: 768px) {
+  #footer {
+    position: relative;
+    margin-top: -182px; /* negative footer height */
+    height: 182px;
+  }
+
   #footer li {
     margin: 0;
   }
