@@ -3,7 +3,7 @@ layout: story
 title: My Story
 person: John Doe
 country: Sudan
-image: /img/350x200.gif
+image: /assets/img/350x200.gif
 altText: Placeholder image
 ---
 
