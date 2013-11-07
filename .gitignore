@@ -2,3 +2,4 @@
 .vagrant
 Vagrantfile
 _site
+node_modules
