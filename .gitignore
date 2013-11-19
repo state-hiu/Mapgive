@@ -2,4 +2,5 @@
 .vagrant
 Vagrantfile
 _site
+assets
 node_modules

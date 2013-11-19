@@ -1,4 +1,4 @@
-(function($, window, document, undefined) {
+;(function($, window, document, undefined) {
   var $panels = $('#accordion .panel-collapse');
   var $panelTitles = $('#accordion .panel-title');
 
@@ -27,20 +27,20 @@
         'aria-selected': 'false'
       });
       $target.attr('aria-hidden', 'true');
-    };
+    }
   }
 
   // Activate OSM tabs on Instructions page
   $('#osmTab a').click(function (e) {
-    e.preventDefault()
-    $(this).tab('show')
+    e.preventDefault();
+    $(this).tab('show');
   });
 
   // Activate HOT tabs on Instructions page
   $('#hotTab a').click(function (e) {
-    e.preventDefault()
-    $(this).tab('show')
-  })
+    e.preventDefault();
+    $(this).tab('show');
+  });
 
   // Init the accordion
   initAccordion();
@@ -49,7 +49,33 @@
   $panelTitles.on('keydown', function(e) {
     if (e.which == 13) {
       setAriaAttr();
-    };
+    }
   });
+
+  // Apply box-sizing: border-box in ie7. See http://goo.gl/fZ6HMK
+  (function() {
+    if( $('html').hasClass('no-boxsizing') ){
+      $('.boxSized, .boxSized *').each(function(){
+        var fullW = $(this).outerWidth(),
+            actualW = $(this).width(),
+            wDiff = fullW - actualW,
+            newW = actualW - wDiff;
+ 
+          $(this).css('width',newW);
+      });
+    }
+  })();
+
+  (function() {
+    if ( $('html').hasClass('no-svg') ) {
+      // Replace SVG with PNG of file with same name
+      var $svgs = $("img[src$='.svg']");
+      $svgs.each(function(i) {
+        var filename = $(this).attr('src').split('.')[0],
+            src = filename + '.png';
+        $(this).attr('src', src);
+      });
+    }
+  })();
 
 })(jQuery, window, document);
