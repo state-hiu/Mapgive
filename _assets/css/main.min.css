@@ -36,7 +36,7 @@ h1,h2,h3,h4,h5,h6{font-family:Montserrat,Arial,sans-serif;font-weight:400;}
 .mission{margin-top:0;border:0;}
 .infographics{padding-top:70px;}
 .infographics .btn{width:220px;height:147px;font-size:2.5em;padding-left:25px;}
-.infographics .start-button:before{background-image:url(/assets/img/arrow.svg);display:inline-block;content:"";height:39px;width:190px;position:absolute;top:-50px;left:29px;}
+.infographics .start-button:before{background-image:url(/assets/img/arrow.svgz);display:inline-block;content:"";height:39px;width:190px;position:absolute;top:-50px;left:29px;}
 .media p{overflow:hidden;}
 }
 .media img{float:left;padding:0 10px 10px 0;margin-right:5%;}

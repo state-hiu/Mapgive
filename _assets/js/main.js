@@ -69,7 +69,7 @@
   (function() {
     if ( $('html').hasClass('no-svg') ) {
       // Replace SVG with PNG of file with same name
-      var $svgs = $("img[src$='.svg']");
+      var $svgs = $("img[src$='.svgz']");
       $svgs.each(function(i) {
         var filename = $(this).attr('src').split('.')[0],
             src = filename + '.png';
