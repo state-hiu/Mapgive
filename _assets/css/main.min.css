@@ -47,7 +47,7 @@ h1,h2,h3,h4,h5,h6{font-family:Montserrat,Arial,sans-serif;font-weight:400;}
 .video-container iframe,.video-container object,.video-container embed{position:absolute;top:0;left:0;width:100%;height:100%;}
 .img-container{width:33%;height:auto;}
 .img-container-small{width:15%;height:auto;}
-img[src$=".svg"].img-responsive{width:100%;}
+img[src$=".svgz"].img-responsive{width:100%;}
 .action-link,.action-link:hover{color:#d73f3f;}
 .infographics .btn .first,.action,.more-info{display:block;}
 .btn-primary{background-color:#d73f3f;border-color:#d73f3f;color:white;}
