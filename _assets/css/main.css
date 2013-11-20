@@ -9,7 +9,6 @@ body {
   font-weight: 400;
   /*background-image: url('/assets/img/bg.jpg');*/
   /*background-color: #FFFEF4;*/
-  background-color: #eee;
   font-size: 16px;
   color: #51504d;
 }
@@ -28,6 +27,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+blockquote {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
 
 /*
  ********************* Specific Styles *********************
@@ -42,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 768px) {
   #main {
-    padding-bottom: 182px; /* footer height */
+    padding-bottom: 300px; /* footer height */
   }
 }
 
@@ -76,11 +81,15 @@ h1, h2, h3, h4, h5, h6 {
   color: #51504d;
 }
 
-@media (min-width: 768px) {
+.navbar-default .navbar-nav>li>a:hover {
+  background-color: #d9e4ee;
+}
+
+/*@media (min-width: 768px) {
   .nav > li > a.first {
     padding-left: 0;
   }
-}
+}*/
 
 .navbar-default .navbar-collapse {
   border-color: #444;
@@ -105,6 +114,20 @@ h1, h2, h3, h4, h5, h6 {
   /*background-image: url('/assets/img/fbg.jpg');*/
   background-color: #bcbcbc;
   border-top: 10px solid #52504d;
+  position: relative;
+}
+
+#footer::before {
+  content: '';
+  display: block;
+  background: url('/assets/img/world-map.svg') 0 50% no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.15;
 }
 
 #footer ul {
@@ -116,6 +139,7 @@ h1, h2, h3, h4, h5, h6 {
 #footer li {
   margin: 0 0 0 10px;
   padding: 0;
+  font-size: .9em;
 }
 
 #footer a {
@@ -125,8 +149,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 768px) {
   #footer {
     position: relative;
-    margin-top: -182px; /* negative footer height */
-    min-height: 182px;
+    margin-top: -300px; /* negative footer height */
+    min-height: 300px;
     height: auto;
   }
 
@@ -136,9 +160,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #footer .top {
-  font-weight: bold;
   line-height: 19px;
   margin-top: 10px;
+}
+
+.footer-title {
+  border-bottom: 1px solid black;
+  margin-bottom: 1em;
+}
+
+.footer-title h2 {
+  background: url('/assets/img/flag-seal.png') 100% 0 no-repeat;
+  padding: 10px 0;
+  text-transform: uppercase;
 }
 
 .mission {
@@ -149,7 +183,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 768px) {
   .mission {
     margin-top: 0;
-    border: none;
+    border-top: 0;
+    border-left: 1px solid black;
   }
 }
 
@@ -234,8 +269,63 @@ h1, h2, h3, h4, h5, h6 {
 
 .promo-box, .story-promo {
   margin-bottom: 30px;
-  padding: 20px;
   background-color: #ccdddd;
+  background: url('/assets/img/stripes.svg') #ccdddd;
+}
+
+.promo-box a, .story-promo a {
+  color: #444;
+}
+
+.promo-box a:hover, .story-promo a:hover {
+  color: #d73f3f;
+}
+
+.promo-box a::after, .story-promo a::after {
+  content: '\00BB';
+  font-size: 20px;
+  display: inline-block;
+  padding-left: 5px;
+}
+
+.promo-box, .attribution{
+  padding: 20px;
+}
+
+.story-promo .attribution {
+  text-align: right;
+}
+
+.story-promo .quote::before {
+  /* The quote character*/
+  content: "\201C";
+  font-size: 3em;
+  position: absolute;
+  padding: 10px 0 0 20px;
+}
+
+.story-promo blockquote {
+  padding: 30px 20px 20px 40px;
+  font-size: 25px;
+  line-height: 1.15em;
+  font-style: italic;
+}
+
+.promo-box h2 {
+  margin-top: 0;
+  -webkit-margin-before: 0;
+  font-size: 25px;
+}
+
+.promo-box ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.promo-box li {
+  border-top: 1px dotted #444;
+  line-height: 2em;
 }
 
 .media {
@@ -244,7 +334,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 25px;
 }
 
-.media h2, .quote h3, .promo-box h2 {
+.media h2 {
+  margin-bottom: 1em;
+}
+
+.media h2 {
   margin-top: 0;
   -webkit-margin-before: 0;
 }
@@ -294,7 +388,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .img-container {
-  width: 33%;
+  width: 20%;
   height: auto;
 }
 
@@ -303,7 +397,7 @@ h1, h2, h3, h4, h5, h6 {
   height: auto;
 }
 
-img[src$=".svgz"].img-responsive {
+img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   width: 100%;
 }
 
@@ -353,7 +447,7 @@ img[src$=".svgz"].img-responsive {
 }
 
 .shadowed {
-  box-shadow: 3px 3px 25px -3px #888;
+  box-shadow: 1px 1px 7px -3px #888;
 }
 
 /* Thanks to... */
