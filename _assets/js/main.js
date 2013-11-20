@@ -78,4 +78,6 @@
     }
   })();
 
+  $('.navbar').sticky();
+
 })(jQuery, window, document);

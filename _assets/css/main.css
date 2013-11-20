@@ -65,6 +65,7 @@ blockquote {
 
 .navbar {
   border: none;
+  width: 100%;
 }
 
 .navbar-default {
