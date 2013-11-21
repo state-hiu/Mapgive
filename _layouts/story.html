@@ -9,8 +9,11 @@ layout: default
       <header>
         <h2>{{ page.title }}, {{ page.country }}</h2>
       </header>
-      <div class="story media">
-        <img src="{{ page.image }}" alt="{{ page.altText }}" class="img-responsive" />
+      <div class="story">
+        <div class="figure">
+          <img src="{{ page.image }}" alt="{{ page.altText }}" class="img-responsive shadowed" />
+          <p class="caption">{{ page.caption }}</p>
+      </div>
         {{ content }}
       </div>
     </article>

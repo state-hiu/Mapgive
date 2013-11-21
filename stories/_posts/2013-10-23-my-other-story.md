@@ -1,10 +1,11 @@
 ---
 layout: story
-title: My Story
-person: John Doe
-country: Sudan
-image: /assets/img/350x200.gif
-altText: Placeholder image
+title: Putting Dharavi on the Map
+person: Humanitarian OpenStreetMap Team
+country: India
+image: /assets/img/mumbai.jpg
+altText: Mumbai
+caption: The Dharavi slums
 ---
 
 Lorem ipsum dolor sit amet, et zril debitis intellegam qui. An nisl oblique voluptatum usu. Elitr apeirian necessitatibus mei id, an adipiscing efficiendi cum. Vix enim minim delenit eu, nihil utamur id eam, mei diam sonet persius et. Ad nam convenire erroribus consequuntur.

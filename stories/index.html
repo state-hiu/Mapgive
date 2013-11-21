@@ -5,27 +5,23 @@ title: Stories
 
 <h1>{{ page.title }}</h1>
 <div class="row">
-  <div class="col-md-8">
+  <div class="col-md-12">
     <div class="row">
       {% for story in site.categories.stories %}
-      <div class="col-sm-6 col-md-6">
+      <div class="col-sm-4 col-md-4">
         <div class="story">
         <section>
+          <h2><a href="{{ story.url }}">{{ story.title }}</a></h2>
           <a href="{{ story.url }}" class="image">
-            <img src="{{ story.image }} " alt="{{ story.altText }}" class="img-responsive" />
+            <img src="{{ story.image }} " alt="{{ story.altText }}" class="img-responsive shadowed" />
           </a>
           <div class="teaser">
-            <p><a href="{{ story.url }}">{{ story.title }}</a></p>
-            <p>{{ story.person }}</p>
-            <p>{{ story.country }}</p>
+            <p><strong>Location</strong>: {{ story.country }}</p>
           </div>
         </section>
         </div>
       </div>
       {% endfor %}
     </div>
-  </div>
-  <div class="col-md-offset-1 col-md-3">
-    {% include more-info.html %}
   </div>
 </div>

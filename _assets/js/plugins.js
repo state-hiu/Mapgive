@@ -21,20 +21,6 @@
     }
 }());
 
-// Place any jQuery/helper plugins in here.
-
-var WebFontConfig = {
-  google: { families: [ 'Montserrat::latin' ] }
-};
-;(function() {
-  var wf = document.createElement('script');
-  wf.src = ('//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js');
-  wf.type = 'text/javascript';
-  wf.async = 'true';
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(wf, s);
-})();
-
 // Sticky Plugin v1.0.0 for jQuery
 // =============
 // Author: Anthony Garand

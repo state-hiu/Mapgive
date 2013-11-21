@@ -83,6 +83,7 @@ a::after {
 .navbar a::after {
   content: '/';
   padding: 0 0 0 15px;
+  font-size: 1em;
 }
 
 .navbar-default {
@@ -296,8 +297,12 @@ a::after {
   background: url('/assets/img/stripes.svg') #ccdddd;
 }
 
-.promo-box, .attribution{
+.promo-box {
   padding: 20px;
+}
+
+.attribution {
+  padding: 0 20px 20px;
 }
 
 .story-promo .attribution {
@@ -377,6 +382,34 @@ a::after {
 
 .story {
   background-color: transparent;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.story a::after {
+  content: '';
+  padding: 0;
+}
+
+.story p {
+  overflow: visible;
+}
+
+.story .figure {
+  float: left;
+  margin: 0 15px 10px 0;
+  width: 100%;
+}
+
+.teaser {
+  -webkit-margin-before: 0;
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .story .figure {
+    width: 350px;
+  }
 }
 
 .video {
@@ -444,7 +477,9 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 }
 
 .caption {
-  font-size: 0.9em;
+  margin-top: 10px;
+  font-size: 0.8em;
+  color: #666;
 }
 
 /*
