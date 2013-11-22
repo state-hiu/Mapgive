@@ -11,10 +11,10 @@ title: Stories
       <div class="col-sm-4 col-md-4">
         <div class="story">
         <section>
-          <h2><a href="{{ story.url }}">{{ story.title }}</a></h2>
           <a href="{{ story.url }}" class="image">
             <img src="{{ story.image }} " alt="{{ story.altText }}" class="img-responsive shadowed" />
           </a>
+          <p class="title"><a href="{{ story.url }}">{{ story.title }}</a></p>
           <div class="teaser">
             <p><strong>Location</strong>: {{ story.country }}</p>
           </div>
