@@ -78,6 +78,28 @@
     }
   })();
 
-  $('.navbar').sticky();
+  // @todo: look for a better way to do this than looping through $thumbs twice
+  // Also, it doesn't automatically resize when window size changes, and it should
+  (function(){
+    var $thumbs = $('.thumbnail'),
+        tallest = 0,
+        _this;
+
+    $thumbs.each(function() {
+      _this = $(this);
+      tallest = (tallest < _this.outerHeight()) ? (_this.outerHeight()) : (tallest);
+    });
+
+    $thumbs.each(function() {
+      $(this).height(tallest);
+    });
+
+  })();
+
+  $('.navbar').affix({
+    offset: {
+      top: $('#site-header').height()
+    }
+  });
 
 })(jQuery, window, document);

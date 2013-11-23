@@ -49,10 +49,6 @@ a::after {
   padding-left: 5px;
 }
 
-/*
- ********************* Specific Styles *********************
- */
-
 @media (min-width: 768px) {
   #main-wrapper {
     min-height: 100%;
@@ -67,8 +63,6 @@ a::after {
 }
 
 .site-title {
-  /*padding: 0 0 0 65px;
-  background: url('/assets/img/satellite.svg') 0 0 no-repeat;*/
   font-size: 40px;
   text-transform: uppercase;
 }
@@ -89,12 +83,23 @@ a::after {
 
 .navbar {
   width: 100%;
+  z-index: 1;
 }
 
 .navbar a::after {
   content: '/';
   padding: 0 0 0 15px;
   font-size: 1em;
+}
+
+.navbar.affix {
+  position: fixed;
+  top: 0;
+}
+
+.navbar.affix + #main {
+  /* padding-top needs to be total height of .navbar */
+  padding-top: 78px;
 }
 
 .navbar-default {
@@ -113,15 +118,15 @@ a::after {
   color: #444;
 }
 
+@media (min-width: 768px) {
+  .navbar-default .navbar-nav>li:first-child>a {
+    padding-left: 0;
+  }
+}
+
 .navbar-default .navbar-nav>li>a:hover {
   text-decoration: underline;
 }
-
-/*@media (min-width: 768px) {
-  .nav > li > a.first {
-    padding-left: 0;
-  }
-}*/
 
 .navbar-default .navbar-collapse {
   border-color: #444;
@@ -141,6 +146,8 @@ a::after {
 }
 
 /***** Main Nav End *****/
+
+/******** Footer ********/
 
 #footer {
   /*background-image: url('/assets/img/fbg.jpg');*/
@@ -206,23 +213,39 @@ a::after {
 }
 
 .footer-title h2 {
-  background: url('/assets/img/flag-seal.png') 100% 0 no-repeat;
   padding: 10px 0;
   text-transform: uppercase;
 }
 
+@media (min-width: 768px) {
+  .footer-title h2 {
+    background: url('/assets/img/flag-seal.png') 100% 0 no-repeat;
+  }
+}
+
 .mission {
   margin-top: 20px;
-  border-top: 1px dotted #444;
+  border-top: 1px solid #444;
+}
+
+.mission > h4 {
+  background: url('/assets/img/flag-seal-small.png') 100% 0 no-repeat;
 }
 
 @media (min-width: 768px) {
   .mission {
+    background-image: none;
     margin-top: 0;
     border-top: 0;
     border-left: 1px solid black;
   }
+
+  .mission > h4 {
+    background-image: none;
+  }
 }
+
+/****** End Footer ******/
 
 .infographics img, .infographics .btn {
   margin-bottom: 20px;
@@ -299,10 +322,6 @@ a::after {
 }
 
 
-/*
- ******************** Objects *********************
- */
-
 .promo-box, .story-promo {
   margin-bottom: 30px;
   background-color: #ccdddd;
@@ -359,68 +378,40 @@ a::after {
   margin-bottom: 25px;
 }
 
-.media h2 {
-  margin-bottom: 1em;
-}
-
-.media h2 {
-  margin-top: 0;
-  -webkit-margin-before: 0;
-}
-
-.media p {
-  margin-bottom: 0;
-}
-
-@media (min-width: 768px) {
-  .media p {
-    overflow: hidden;
-  }
-}
-
-.media img {
-  float: left;
-  padding: 0 10px 10px 0;
-  margin-right: 5%;
+.media.last {
+  border-bottom: none;
 }
 
 .media:first-child {
   margin-top: 15px;
 }
 
-.media.last {
-  border-bottom: none;
+.media-heading {
+  margin: 0 0 .5em 0;
 }
 
-.story {
-  background-color: transparent;
-  padding-bottom: 25px;
-  margin-bottom: 25px;
+.thumbnail {
+  padding: 15px;
+  border: 1px solid #bcbcbc;
+  border-radius: 0;
 }
 
-.story .title {
-  font-size: 20px;
+.thumbnail h3 {
   margin-top: 0;
 }
 
-.story a::after {
+.thumbnail h3 a::after {
   content: '';
-  padding: 0;
 }
 
-.story p {
-  overflow: visible;
+.thumbnail, .story {
+  margin-bottom: 50px;
 }
 
 .story .figure {
   float: left;
   margin: 0 15px 10px 0;
   width: 100%;
-}
-
-.teaser {
-  -webkit-margin-before: 0;
-  margin-top: 0;
 }
 
 @media (min-width: 768px) {
