@@ -7,9 +7,10 @@ module.exports = function(grunt) {
         cssc: {
           build: {
             options: {
-              consolidateViaDeclarations: true,
-              consolidateViaSelectors: true,
-              consolidateMediaQueries: true
+              sortSelectors: false,
+              sortDeclarations: false,
+              sort: false,
+              safe: true
             },
             // dest: src
             files: {
@@ -50,7 +51,7 @@ module.exports = function(grunt) {
             files: {
               'assets/js/main.min.js': ['_assets/js/vendor/bootstrap.min.js', '_assets/js/plugins.js', '_assets/js/main.js'],
               'assets/js/lt-ie9.min.js': ['_assets/js/vendor/html5shiv.js', '_assets/js/vendor/respond.min.js'],
-              'assets/js/modernizr-2.6.2.min.js': ['_assets/js/vendor/modernizr-2.6.2.min.js'],
+              'assets/js/modernizr-2.7.0.min.js': ['_assets/js/vendor/modernizr-2.7.0.min.js'],
               'assets/js/jquery-1.10.2.min.js': ['_assets/js/vendor/jquery-1.10.2.min.js']
             }
           }
@@ -62,6 +63,25 @@ module.exports = function(grunt) {
               {cwd: '_assets/fonts', src: ['**'], dest: 'assets/fonts/'},
               {cwd: '_assets/img', src: ['**'], dest: 'assets/img/'}
             ]
+          }
+        },
+
+        img: {
+          main: {
+            src: ['_assets/img/**/*.png', '_assets/img/**/*.png'],
+            dest: 'assets/img'
+          }
+        },
+
+        svgmin: {
+          dist: {
+            files: [{
+              expand: true,
+              cwd: '_assets/img',
+              src: ['**/*.svg'],
+              dest: 'assets/img/',
+              ext: '.min.svg'
+            }]
           }
         },
 
@@ -86,6 +106,10 @@ module.exports = function(grunt) {
           css: {
             files: ['_assets/css/*.css'],
             tasks: ['buildcss']
+          },
+          img: {
+            files: ['_assets/img/*.jpg', '_assets/img/*.png', '_assets/img/*.svg'],
+            tasks: ['img', 'svgmin']
           },
           imgFonts: {
             files: ['_assets/img/**', '_assets/fonts/**'],

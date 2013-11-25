@@ -7,8 +7,6 @@
 body {
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 400;
-  /*background-image: url('/assets/img/bg.jpg');*/
-  /*background-color: #FFFEF4;*/
   font-size: 16px;
   color: #51504d;
 }
@@ -150,7 +148,6 @@ a::after {
 /******** Footer ********/
 
 #footer {
-  /*background-image: url('/assets/img/fbg.jpg');*/
   background-color: #bcbcbc;
   border-top: 10px solid #52504d;
   position: relative;
@@ -159,7 +156,7 @@ a::after {
 #footer::before {
   content: '';
   display: block;
-  background: url('/assets/img/world-map.svg') 0 50% no-repeat;
+  background: url('/assets/img/world-map.png') 0 50% no-repeat;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -219,7 +216,19 @@ a::after {
 
 @media (min-width: 768px) {
   .footer-title h2 {
-    background: url('/assets/img/flag-seal.png') 100% 0 no-repeat;
+    background: url('/assets/img/ie-sprite.png') no-repeat 585px -519px;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-title h2 {
+    background-position: 805px -519px;;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer-title h2 {
+    background-position: 1005px -519px;;
   }
 }
 
@@ -229,12 +238,11 @@ a::after {
 }
 
 .mission > h4 {
-  background: url('/assets/img/flag-seal-small.png') 100% 0 no-repeat;
+  background: url('/assets/img/ie-sprite.png') no-repeat 125px 0;
 }
 
 @media (min-width: 768px) {
   .mission {
-    background-image: none;
     margin-top: 0;
     border-top: 0;
     border-left: 1px solid black;
@@ -279,7 +287,7 @@ a::after {
   }
 
   .infographics .start-button::before {
-    background-image: url('/assets/img/arrow.svgz');
+    background-image: url('/assets/img/arrow.png');
     display: inline-block;
     content: "";
     height: 39px;
@@ -324,8 +332,7 @@ a::after {
 
 .promo-box, .story-promo {
   margin-bottom: 30px;
-  background-color: #ccdddd;
-  background: url('/assets/img/stripes.svg') #ccdddd;
+  background: url('/assets/img/stripes.png') #ccdddd;
 }
 
 .promo-box {
@@ -489,6 +496,16 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   color: #666;
 }
 
+.step {
+  margin-bottom: 15px;
+}
+
+.map-action {
+  background-color: #cdd;
+  display: inline-block;
+  padding: 20px;
+}
+
 /*
  ******************** Overrides *********************
  */
@@ -501,7 +518,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 }
 
 /*
- ******************** Helpers *********************
+ ******************** Helpers / Fixes *********************
  */
 
 .first {
@@ -509,14 +526,100 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   margin-left: 0;
 }
 
-.boxSized, .boxSized * { 
-  -webkit-box-sizing: border-box; 
-  -moz-box-sizing: border-box; 
-  box-sizing: border-box; 
+.lt-ie8 div[class^='col-'] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.lt-ie8 .row {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .shadowed {
   box-shadow: 1px 1px 7px -3px #888;
+}
+
+
+/*
+ ******************** Sprites *********************
+ */
+
+.media-body {
+  background: url('/assets/img/ie-sprite.png') no-repeat; 
+  padding-left: 16%;
+}
+
+.media-body.globe {
+  background-position: 0 -1071px;
+}
+
+.media-body.map {
+  background-position: 0 -3371px;
+}
+
+.media-body.marker {
+  background-position: 0 -4521px;
+}
+
+.media-body.osm {
+  background-position: 0 -5671px;
+}
+
+.media-body.hot {
+  background-position: 0 -2221px;
+}
+
+.media-body.dos {
+  background-position: 0 -6821px;
+}
+
+@media (min-width: 500px) {
+  .media-body {
+    padding-left: 11%;
+  }
+}
+
+@media (min-width: 768px) {
+  .media-body {
+    padding-left: 18%
+  }
+
+  .media-body.globe {
+    background-position: 0 -1621px;
+  }
+
+  .media-body.map {
+    background-position: 0 -3921px;
+  }
+
+  .media-body.marker {
+    background-position: 0 -5071px;
+  }
+
+  .media-body.osm {
+    background-position: 0 -6221px;
+  }
+
+  .media-body.hot {
+    background-position: 0 -2771px;
+  }
+
+  .media-body.dos {
+    background-position: 0 -7371px;  
+  }
+}
+
+@media (min-width: 992px) {
+  .media-body {
+    padding-left: 21%
+  }
+}
+
+@media (min-width: 1200px) {
+  .media-body {
+    padding-left: 18%
+  }
 }
 
 /* Thanks to... */

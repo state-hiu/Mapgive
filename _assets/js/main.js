@@ -52,42 +52,17 @@
     }
   });
 
-  // Apply box-sizing: border-box in ie7. See http://goo.gl/fZ6HMK
-  (function() {
-    if( $('html').hasClass('no-boxsizing') ){
-      $('.boxSized, .boxSized *').each(function(){
-        var fullW = $(this).outerWidth(),
-            actualW = $(this).width(),
-            wDiff = fullW - actualW,
-            newW = actualW - wDiff;
- 
-          $(this).css('width',newW);
-      });
-    }
-  })();
-
-  (function() {
-    if ( $('html').hasClass('no-svg') ) {
-      // Replace SVG with PNG of file with same name
-      var $svgs = $("img[src$='.svgz']");
-      $svgs.each(function(i) {
-        var filename = $(this).attr('src').split('.')[0],
-            src = filename + '.png';
-        $(this).attr('src', src);
-      });
-    }
-  })();
-
   // @todo: look for a better way to do this than looping through $thumbs twice
   // Also, it doesn't automatically resize when window size changes, and it should
   (function(){
     var $thumbs = $('.thumbnail'),
+        padding = 15,
         tallest = 0,
         _this;
 
     $thumbs.each(function() {
       _this = $(this);
-      tallest = (tallest < _this.outerHeight()) ? (_this.outerHeight()) : (tallest);
+      tallest = (tallest < _this.outerHeight()) ? (_this.outerHeight() + padding) : (tallest);
     });
 
     $thumbs.each(function() {
@@ -96,10 +71,12 @@
 
   })();
 
-  $('.navbar').affix({
-    offset: {
-      top: $('#site-header').height()
-    }
-  });
+  if (!($('html').hasClass('lt-ie8'))) {
+    $('.navbar').affix({
+      offset: {
+        top: $('#site-header').height()
+      }
+    });
+  }
 
 })(jQuery, window, document);

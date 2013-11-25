@@ -22,6 +22,8 @@
     "grunt-jekyll": "*",
     "grunt-shell": "*",
     "grunt-sync": "*",
+    "grunt-img": "*",
+    "grunt-svgmin": "*",
     "matchdep": "*"
   }
 }
