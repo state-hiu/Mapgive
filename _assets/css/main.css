@@ -5,9 +5,9 @@
 }
 
 body {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   color: #51504d;
 }
 
@@ -21,7 +21,7 @@ body:before {/* thanks to Maleika (Kohoutec)*/
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Trebuchet MS", Arial, sans-serif;
   font-weight: 400;
 }
 
@@ -61,20 +61,30 @@ a::after {
 }
 
 .site-title {
-  font-size: 40px;
+  margin: 0;
+  font-size: 24px;
   text-transform: uppercase;
+  color: #fff;
 }
 
 .site-title .first-word {
-  font-size: 0.4em;
+  font-size: 0.5em;
   display: block;
 }
 
 .site-title .tagline {
-  font-size: 0.3em;
+  font-size: 0.45833333333333em;
   display: block;
   margin-top: 5px;
   letter-spacing: 0.1em;
+}
+
+.page-title {
+  text-transform: uppercase;
+}
+
+.raised-cap {
+  font-size: 1.25em;
 }
 
 /***** Main Nav *****/
@@ -82,11 +92,13 @@ a::after {
 .navbar {
   width: 100%;
   z-index: 1;
+  padding: 10px 0 0 0;
 }
 
 .navbar a::after {
-  content: '/';
-  padding: 0 0 0 15px;
+  content: '';
+  padding: 0;
+  margin: 0;
   font-size: 1em;
 }
 
@@ -97,41 +109,67 @@ a::after {
 
 .navbar.affix + #main {
   /* padding-top needs to be total height of .navbar */
-  padding-top: 78px;
+  padding-top: 108px;
 }
 
 .navbar-default {
-  background-color: #DECCB4;
-  border-top: 7px solid #535351;
-  border-bottom: 1px solid #535351;
+  background-color: #667766;
+  border-bottom: 1px solid #51504d;
   border-radius: 0;
+}
+
+.navbar-nav {
+  margin: 0;
 }
 
 .lt-ie9 .navbar-default {
   border-bottom: 1px solid #bcbcbc;
 }
 
-.navbar-default .navbar-nav>li>a {
-  padding: 15px 0 15px 15px;
-  color: #444;
+.navbar-header {
+  padding-bottom: 10px;
 }
 
-@media (min-width: 768px) {
-  .navbar-default .navbar-nav>li:first-child>a {
-    padding-left: 0;
-  }
+.navbar-default .navbar-nav > li > a {
+  padding: 15px;
+  color: #fff;
 }
 
-.navbar-default .navbar-nav>li>a:hover {
+.navbar-default .navbar-nav > li > a:hover {
   text-decoration: underline;
+  color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a.navbar-btn {
+  margin: 15px;
+  padding: 6px 12px;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: #d73f3f;
+  border-color: #d73f3f;
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a.navbar-btn:active,
+.navbar-default .navbar-nav > li > a.navbar-btn:hover,
+.navbar-default .navbar-nav > li > a.navbar-btn:focus {
+  background-color: #E83030;
+  border-color: #E83030;
 }
 
 .navbar-default .navbar-collapse {
-  border-color: #444;
+  border-color: #fff;
+  padding: 0;
 }
 
 .navbar-default .navbar-toggle {
-  border-color: #444;
+  border-color: #fff;
+  position: relative;
+  top: 25px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .navbar-default .navbar-toggle:focus,
@@ -140,7 +178,25 @@ a::after {
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #444;
+  background-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .navbar-default .navbar-collapse {
+    position: relative;
+    bottom: -55px;
+  }
+
+  .navbar-default .navbar-nav > li > a {
+    padding: 0 0 0 20px;
+  }
+
+  .navbar-default .navbar-nav > li > a.navbar-btn {
+    position: relative;
+    bottom: 6px;
+    margin: 0 0 0 20px;
+  }
+
 }
 
 /***** Main Nav End *****/
@@ -157,6 +213,7 @@ a::after {
   content: '';
   display: block;
   background: url('/assets/img/world-map.png') 0 50% no-repeat;
+  background: rgba(0,0,0,0) url('/assets/img/world-map.svg') 0 50% no-repeat;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -287,7 +344,8 @@ a::after {
   }
 
   .infographics .start-button::before {
-    background-image: url('/assets/img/arrow.png');
+    background: url('/assets/img/arrow.png') repeat-x;
+    background: rgba(0,0,0,0) url('/assets/img/arrow.svg') repeat-x;
     display: inline-block;
     content: "";
     height: 39px;
@@ -333,6 +391,7 @@ a::after {
 .promo-box, .story-promo {
   margin-bottom: 30px;
   background: url('/assets/img/stripes.png') #ccdddd;
+  background: rgba(204,221,221,1) url('/assets/img/stripes.svg');
 }
 
 .promo-box {
@@ -475,19 +534,6 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 
 .more-info {
   display: block;
-}
-
-.btn-primary {
-  background-color: #d73f3f;
-  border-color: #d73f3f;
-  color: white;
-}
-
-.btn-primary:active, 
-.btn-primary:hover,
-.btn-primary:focus {
-  background-color: #E83030;
-  border-color: #E83030;
 }
 
 .caption {
