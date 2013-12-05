@@ -2,7 +2,7 @@
 layout: story
 title: Empowering People, Developing Communities
 person: Kepha Ngito, Executive Director of Map Kibera Trust 
-country: Kibera, Kenya
+country: Kenya
 image: /assets/img/mumbai.jpg
 altText: Mumbai
 caption: The Dharavi slums
