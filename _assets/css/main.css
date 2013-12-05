@@ -453,18 +453,22 @@ a::after {
   line-height: 2em;
 }
 
-.media {
+.step, .media {
   border-bottom: 1px dotted #444;
   padding-bottom: 25px;
   margin-bottom: 25px;
 }
 
-.media.last {
+.step:last-child, .media.last {
   border-bottom: none;
 }
 
-.media:first-child {
+.steps:first-child, .media:first-child {
   margin-top: 15px;
+}
+
+.steps button {
+  background-color: #e2e1dd;
 }
 
 .media-heading {
@@ -555,16 +559,6 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   margin-top: 10px;
   font-size: 0.8em;
   color: #666;
-}
-
-.step {
-  margin-bottom: 15px;
-}
-
-.map-action {
-  background-color: #cdd;
-  display: inline-block;
-  padding: 20px;
 }
 
 /*
