@@ -3,9 +3,9 @@ layout: story
 title: Empowering People, Developing Communities
 person: Kepha Ngito, Executive Director of Map Kibera Trust 
 country: Kenya
-image: /assets/img/mumbai.jpg
-altText: Mumbai
-caption: The Dharavi slums
+image: /assets/img/kepha-ngito.jpg
+altText: Kepha Ngito in Nairobi, Kenya.
+caption: Kepha Ngito in Nairobi, Kenya.
 ---
 
 Kepha Ngito grew up in the slums of Nairobi, Kenya where hundreds of thousands live in abject poverty. “I grew up in that time when we didn’t have a physical address. My house was never numbered. It wasn’t existent; it was not on the map.” His father worked in a factory to pay Kepha’s tuition through high school. Education gave Kepha the option to leave the shantytown. Instead, he stayed and became a community activist, starting Map Kibera Trust, a non-profit that uses open street map technology. “For many years Kibera was not on the map despite the fact that hundreds of thousands of people live there. It means they were not quantified as people.” Maps provide hard data to justify allocation of resources.  He says no maps, equals no data and therefore no political power.
