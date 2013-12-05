@@ -51,6 +51,10 @@ a {
   color: #444;
 }
 
+.lt-ie9 a {
+  color: #d73f3f;
+}
+
 a:hover {
   color: #d73f3f;
 }
@@ -320,6 +324,10 @@ a::after {
     border-left: 1px solid black;
   }
 
+  .lt-ie8 .mission {
+    border-left: none;
+  }
+
   .mission > h4 {
     background-image: none;
   }
@@ -407,6 +415,10 @@ a::after {
   margin-bottom: 30px;
   background: url('/assets/img/stripes.png') #ccdddd;
   background: rgba(204,221,221,1) url('/assets/img/stripes.svg');
+}
+
+.lt-ie8 .promo-box a, .lt-ie8 .story-promo a {
+  color: #444;
 }
 
 .promo-box {
