@@ -463,16 +463,59 @@ a::after {
   border-bottom: none;
 }
 
-.steps:first-child, .media:first-child {
+.step:first-child, .media:first-child {
   margin-top: 15px;
+}
+
+.media-heading {
+  margin: 0 0 .5em 0;
+}
+
+.step .title {
+  font-size: 1.15em;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.step ol {
+  list-style-type: lower-alpha;
+}
+
+.steps  {
+  counter-reset: li;
+  padding-left: 50px;
+}
+
+.steps .step {
+  list-style: none;
+  margin-left: 15px;
+}
+
+.steps .title:before {
+  content: counter(li);
+  counter-increment: li;
+  padding: 13px;
+  position: absolute;
+  left: 22px;
+}
+
+.steps .step:before {
+  content: "";
+  background-color: #deccb4;
+  padding: 15px;
+  position: absolute;
+  left: 15px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
 }
 
 .steps button {
   background-color: #e2e1dd;
 }
 
-.media-heading {
-  margin: 0 0 .5em 0;
+.steps p, .steps ol li {
+  font-size: 0.9em;
 }
 
 .thumbnail {

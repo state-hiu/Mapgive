@@ -117,7 +117,7 @@ module.exports = function(grunt) {
           },
           jekyll: {
             files: [
-              '*.html', '*.yml', '*.txt', 'about-open-mapping/**/*', 'assets/**/*', 'faq/**/*', 'favicon.*', 'get-started/**/*',
+              '*.html', '*.yml', '*.txt', 'about-open-mapping/**/*', 'assets/**/*', 'faq/**/*', 'favicon.*', 'start-mapping/**/*',
               '_includes/**', 'site-map/**/*', 'stories/**/*', 'the-cause/**/*', '_layouts/**/*'
             ],
             tasks: 'shell:jekyll'
