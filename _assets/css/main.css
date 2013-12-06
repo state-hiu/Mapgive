@@ -244,14 +244,48 @@ a::after {
 
 #footer ul {
   list-style-type: none;
-  margin: 0;
+  margin: 10px 0 0 0;
   padding: 0;
 }
 
-#footer li {
-  margin: 0 0 0 10px;
+.footer-nav {
+  overflow: hidden;
+}
+
+.footer-nav li {
+  margin: 0 0 15px 0;
   padding: 0;
   font-size: .9em;
+}
+
+.footer-nav > .first {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.footer-nav > .last {
+  padding-right: 0;
+}
+
+.footer-nav ul li {
+  font-size: 1em;
+}
+
+.footer-nav ul .first {
+  margin-top: 15px;
+}
+
+#footer .legal {
+  padding: 10px 0;
+  margin: 0;
+}
+
+#footer .legal a {
+  font-size: .8em;
+}
+
+#footer .legal > div {
+  padding: 0;
 }
 
 #footer a {
@@ -270,18 +304,20 @@ a::after {
     height: auto;
   }
 
-  #footer li {
-    margin: 0 0 15px 0;
+  .footer-nav > li {
+    width: 25%;
+    padding: 0 10px;
+    float: left;
+  }
+
+  .lt-ie8 .footer-nav > li {
+    padding: 0;
+    width: 22%;
   }
 }
 
-#footer .top {
-  line-height: 19px;
-  margin-top: 10px;
-}
-
 .footer-title {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #000;
   margin-bottom: 1em;
 }
 
