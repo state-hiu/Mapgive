@@ -3,9 +3,9 @@ layout: story
 title: Reducing Risks Before a Crisis
 person: Alyssa Wright, Volunteer 
 country: Nepal
-image: /assets/img/kepha-ngito.jpg
-altText: Kepha Ngito in Nairobi, Kenya.
-caption: Kepha Ngito in Nairobi, Kenya.
+image: /assets/img/alyssa-wright.jpg
+altText: Alyssa works with a colleague in Katmandu, Nepal.
+caption: Alyssa works with a colleague in Katmandu, Nepal.
 ---
 
 The people of the Katmandu valley in remote Nepal live in danger from the looming threat of an earthquake. Gathering data on critical infrastructures such as schools, hospitals and government offices now could make the difference between life and death. A World Bank led effort to crowd-sourced mapping effort included a 17 city U.S. OpenStreetMap editathon. In Manhattan a small group of volunteers include mapping volunteer Alyssa Wright. Here is her first person account of what it was like to help map Katmandu:
