@@ -48,10 +48,6 @@ blockquote {
 
 
 a {
-  color: #444;
-}
-
-.lt-ie9 a {
   color: #d73f3f;
 }
 
@@ -100,10 +96,12 @@ a::after {
 
 .page-title {
   text-transform: uppercase;
+  line-height: 1.4em;
 }
 
-.raised-cap {
+.page-title:first-letter {
   font-size: 1.25em;
+  margin-top: -3px;
 }
 
 /***** Main Nav *****/
@@ -455,8 +453,12 @@ a::after {
   background: rgba(204,221,221,1) url('/assets/img/stripes.svg');
 }
 
-.lt-ie8 .promo-box a, .lt-ie8 .story-promo a {
+.promo-box a, .story-promo a {
   color: #444;
+}
+
+.promo-box a:hover, .story-promo a:hover {
+  color: #d73f3f;
 }
 
 .promo-box {
@@ -589,6 +591,10 @@ a::after {
   font-size: 0.9em;
 }
 
+.steps .caption {
+  font-size: .8em;
+}
+
 .thumbnail {
   padding: 15px;
   border: 1px solid #bcbcbc;
@@ -655,14 +661,6 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 
 .action {
   display: block;
-}
-
-.action-link {
-  color: #d73f3f;
-}
-
-.action-link:hover {
-  color: #d73f3f;
 }
 
 .more-info {
