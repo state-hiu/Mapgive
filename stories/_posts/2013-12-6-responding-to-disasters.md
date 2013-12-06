@@ -13,7 +13,7 @@ Accurate weather forecasts could not thwart the deadly power of super typhoon Ha
 Within days volunteers had mapped 1240 place names, 29,845 buildings and traced 3,036 homes. This information provided critical data for assessing damage to infrastructure, getting people to evacuation centers and hospitals and routing emergency relief supplies. Crisis Camps around the world rallied volunteers to pitch in to mapping efforts. Journalist Tyler Machado reported on his experience at a Crisis Camp in Vermont.
 
 Excerpt from “Vermonters Help the Philippines Relief Effort with Digital Map Making,”
-Seven Days, Vermont newspaper, Nov. 20, 2013:
+*Seven Days, Vermont* newspaper, Nov. 20, 2013:
 
 It was one week after Super Typhoon Haiyan, and I was on a global team of volunteers performing emergency mapping work in uncharted areas of the island of Negros in the Philippines. My task was to mark the footprints of buildings — or where buildings had been before the storm blew through and destroyed them. Our team split up, each of us taking a block of about two square miles.
 
