@@ -11,8 +11,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="/assets/css/main.min.css" />
-    <script src="/assets/js/modernizr-2.7.0.min.js"></script>
+    
+    <script type="text/javascript" charset="utf-8">
+      var thumbs = new Array(),
+          tallest = 0,
+          padding = 15,
+          thumbNodeList,
+          i;
 
+      function getElementsByClassName(node, classname) {
+        var a = [];
+        var re = new RegExp('(^| )'+classname+'( |$)');
+        var els = node.getElementsByTagName("*");
+        for(var i=0,j=els.length; i<j; i++)
+            if(re.test(els[i].className))a.push(els[i]);
+        return a;
+      }
+
+      function resizeIt() {
+
+        thumbs = getElementsByClassName(document.body, "thumbnail");
+
+        for(i=0; i<thumbs.length; i++) {
+          tallest = (tallest < thumbs[i].clientHeight) ? (thumbs[i].clientHeight) : (tallest);
+        }
+
+        for(i=0; i<thumbs.length; i++) {
+          thumbs[i].style.height = (tallest - padding);
+          thumbs[i].setAttribute("style", "height:" + (tallest - padding) + "px");
+        }
+      }
+
+      if ( window.addEventListener ) { 
+        window.addEventListener( "load", resizeIt, false );
+      } else if ( window.attachEvent ) { 
+        window.attachEvent( "onload", resizeIt);
+      } else if ( window.onLoad ) {
+         window.onload = resizeIt();
+      }
+    </script>
     <!--[if lt IE 9]>
       <script src="/assets/js/lt-ie9.min.js"></script>
     <![endif]-->

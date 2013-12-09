@@ -52,25 +52,6 @@
     }
   });
 
-  // @todo: look for a better way to do this than looping through $thumbs twice
-  // Also, it doesn't automatically resize when window size changes, and it should
-  (function(){
-    var $thumbs = $('.thumbnail'),
-        padding = 15,
-        tallest = 0,
-        _this;
-
-    $thumbs.each(function() {
-      _this = $(this);
-      tallest = (tallest < _this.outerHeight()) ? (_this.outerHeight() + padding) : (tallest);
-    });
-
-    $thumbs.each(function() {
-      $(this).height(tallest);
-    });
-
-  })();
-
   if (!($('html').hasClass('lt-ie8'))) {
     $('.navbar').affix({
       offset: {

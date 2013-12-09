@@ -48,10 +48,10 @@ blockquote {
 
 
 a {
-  color: #d73f3f;
+  color: #444;
 }
 
-a:hover {
+.action-link, a:hover {
   color: #d73f3f;
 }
 
@@ -451,14 +451,6 @@ a::after {
   margin-bottom: 30px;
   background: url('/assets/img/stripes.png') #ccdddd;
   background: rgba(204,221,221,1) url('/assets/img/stripes.svg');
-}
-
-.promo-box a, .story-promo a {
-  color: #444;
-}
-
-.promo-box a:hover, .story-promo a:hover {
-  color: #d73f3f;
 }
 
 .promo-box {
