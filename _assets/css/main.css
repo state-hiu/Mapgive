@@ -62,10 +62,13 @@ a::after {
   padding-left: 5px;
 }
 
+#main-wrapper {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   #main-wrapper {
     min-height: 100%;
-    width: 100%;
   }
 }
 
@@ -593,8 +596,17 @@ a::after {
   border-radius: 0;
 }
 
+.lt-ie9 .thumbnail {
+  max-width: none;
+}
+
 .thumbnail h3 {
   margin-top: 0;
+}
+
+.thumbnail .image {
+  display: block;
+  width: 100%;
 }
 
 .thumbnail h3 a::after {
@@ -603,6 +615,35 @@ a::after {
 
 .thumbnail, .story {
   margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .thumbnail {
+    min-height: 308px;
+  }
+
+  .thumbnail img {
+    width: 188px;
+    height: 107px;
+  }
+}
+
+@media (min-width: 992px) {
+  .thumbnail img {
+    width: 261px;
+    height: 133px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .thumbnail {
+    min-height: 336px;
+  }
+
+  .thumbnail img {
+    width: 328px;
+    height: 187px;
+  }
 }
 
 .story .figure {
@@ -697,6 +738,11 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 
 .shadowed {
   box-shadow: 1px 1px 7px -3px #888;
+}
+
+.img-responsive {
+  width: 100%;
+  max-width: 100%;
 }
 
 

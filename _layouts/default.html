@@ -12,44 +12,6 @@
 
     <link rel="stylesheet" href="/assets/css/main.min.css" />
     
-    <script type="text/javascript" charset="utf-8">
-      var thumbs = new Array(),
-          tallest = 0,
-          padding = 15,
-          thumbNodeList,
-          i;
-
-      function getElementsByClassName(node, classname) {
-        var a = [];
-        var re = new RegExp('(^| )'+classname+'( |$)');
-        var els = node.getElementsByTagName("*");
-        for(var i=0,j=els.length; i<j; i++)
-            if(re.test(els[i].className))a.push(els[i]);
-        return a;
-      }
-
-      function resizeIt() {
-
-        thumbs = getElementsByClassName(document.body, "thumbnail");
-
-        for(i=0; i<thumbs.length; i++) {
-          tallest = (tallest < thumbs[i].clientHeight) ? (thumbs[i].clientHeight) : (tallest);
-        }
-
-        for(i=0; i<thumbs.length; i++) {
-          thumbs[i].style.height = (tallest - padding);
-          thumbs[i].setAttribute("style", "height:" + (tallest - padding) + "px");
-        }
-      }
-
-      if ( window.addEventListener ) { 
-        window.addEventListener( "load", resizeIt, false );
-      } else if ( window.attachEvent ) { 
-        window.attachEvent( "onload", resizeIt);
-      } else if ( window.onLoad ) {
-         window.onload = resizeIt();
-      }
-    </script>
     <!--[if lt IE 9]>
       <script src="/assets/js/lt-ie9.min.js"></script>
     <![endif]-->
@@ -84,7 +46,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/assets/js/jquery-1.10.2.min.js"><\/script>')</script>
     <script src="/assets/js/main.min.js"></script>
-
+    
     <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
         function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;

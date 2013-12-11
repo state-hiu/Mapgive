@@ -52,6 +52,34 @@
     }
   });
 
+  // This resizes the divs on the stories aggregation page if they exceed the min-width.
+  (function() {
+    var $thumbs = $('.thumbnail'),
+        padding = 15,
+        _this;
+    
+    function getTallest() {
+      var tallest = 0;
+
+      $thumbs.each(function() {
+        _this = $(this),
+        tallest = (tallest < _this.outerHeight()) ? (_this.outerHeight() + padding) : (tallest);
+      });
+
+      return tallest
+    }
+
+    function resizeIt() {
+      var currentTallest = getTallest();
+
+      $thumbs.each(function() {
+        $(this).height(currentTallest);
+      });
+    }
+
+    resizeIt();
+  })();
+  
   if (!($('html').hasClass('lt-ie8'))) {
     $('.navbar').affix({
       offset: {
