@@ -52,16 +52,16 @@
     }
   });
 
-  // This resizes the divs on the stories aggregation page if they exceed the min-width.
+  // Resizes the divs on the stories aggregation page if they exceed the min-width.
   (function() {
     var $thumbs = $('.thumbnail'),
         padding = 15,
         _this;
     
-    function getTallest() {
+    function getTallest($ele) {
       var tallest = 0;
 
-      $thumbs.each(function() {
+      $ele.each(function() {
         _this = $(this),
         tallest = (tallest < _this.outerHeight()) ? (_this.outerHeight() + padding) : (tallest);
       });
@@ -69,15 +69,15 @@
       return tallest
     }
 
-    function resizeIt() {
-      var currentTallest = getTallest();
+    function resizeIt($ele) {
+      var tallest = getTallest($ele);
 
-      $thumbs.each(function() {
-        $(this).height(currentTallest);
+      $ele.each(function() {
+        $(this).height(tallest);
       });
     }
 
-    resizeIt();
+    resizeIt($thumbs);
   })();
   
   if (!($('html').hasClass('lt-ie8'))) {
