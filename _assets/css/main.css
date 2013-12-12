@@ -115,6 +115,10 @@ a::after {
   padding: 10px 0 0 0;
 }
 
+.lt-ie8 .navbar {
+  border: 0;
+}
+
 .navbar a::after {
   content: '';
   padding: 0;
@@ -166,6 +170,10 @@ a::after {
   display: inline-block;
 }
 
+.lt-ie8 .navbar-default .navbar-nav > li > a.navbar-btn {
+  display: block;
+}
+
 .btn-primary {
   background-color: #d73f3f;
   border-color: #d73f3f;
@@ -208,7 +216,8 @@ a::after {
   }
 
   .navbar-default .navbar-nav > li > a {
-    padding: 0 0 0 20px;
+    padding: 0;
+    margin: 0 0 0 20px;
   }
 
   .navbar-default .navbar-nav > li > a.navbar-btn {
@@ -576,6 +585,27 @@ a::after {
     width: 50px;
     height: 50px;
   }
+}
+
+.lt-ie8 .steps {
+  padding-left: 0;
+}
+
+.lt-ie8 .steps .step {
+  margin-left: -40px;
+  padding-left: 75px;
+}
+
+.lt-ie8 .steps #step-1 {
+  background: url("/assets/img/circle-list-item-1.png") 0 0 no-repeat;
+}
+
+.lt-ie8 .steps #step-2 {
+  background: url("/assets/img/circle-list-item-2.png") 0 0 no-repeat;
+}
+
+.lt-ie8 .steps #step-3 {
+  background: url("/assets/img/circle-list-item-3.png") 0 0 no-repeat;
 }
 
 .steps button {
