@@ -1,5 +1,7 @@
 ;(function($, window, document, undefined) {
   var $html = $('html');
+
+  $html.removeClass('no-js');
  
   // Resizes the divs on the stories aggregation page if they exceed the min-width.
   // Couldn't get this to work reliablly in IE8 so bypassing for now...
