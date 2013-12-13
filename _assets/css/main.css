@@ -246,7 +246,7 @@ a::after {
   content: '';
   display: block;
   background: url('/assets/img/world-map.png') 50% 50% no-repeat;
-  background: rgba(0,0,0,0) url('/assets/img/world-map.svg') 50% 50% no-repeat;
+  background: rgba(0,0,0,0) url('/assets/img/world-map.svgz') 50% 50% no-repeat;
   background-size: cover;
   position: absolute;
   top: 0;
