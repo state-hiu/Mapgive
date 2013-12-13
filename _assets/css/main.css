@@ -608,10 +608,6 @@ a::after {
   background: url("/assets/img/circle-list-item-3.png") 0 0 no-repeat;
 }
 
-.steps button {
-  background-color: #e2e1dd;
-}
-
 .steps p, .steps ol li {
   font-size: 0.9em;
 }
@@ -771,6 +767,68 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   max-width: 100%;
 }
 
+/* 
+ ******************* Accordions *******************
+ */
+
+.accordion dt {
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.accordion dt:first-child {
+  margin-top: 0;
+}
+
+.accordion dt[aria-expanded="true"] {
+  background-color: #f7f7f7;
+}
+
+.no-js .accordion dt[aria-expanded="true"] {
+  background-color: transparent;
+}
+
+.accordion dd {
+  overflow: hidden;
+  max-height: 1000px;
+  -webkit-transition: all .3s ease-out;
+       -o-transition: all .3s ease-out;
+          transition: all .3s ease-out;
+  padding: 0 40px 10px 40px;
+  background-color: #f7f7f7;
+}
+
+.no-js .accordion dd {
+  background-color: transparent;
+}
+
+.accordion dd p:first-child {
+  border-top: 1px dotted #444;
+  padding-top: 10px;
+}
+
+.no-js dd p:first-child {
+  border: none;
+}
+
+.accordion .hide {
+  max-height: 0;
+}
+
+.accordion .js-control {
+  padding: 0 6px;
+  width: 20px;
+  display: inline-block;
+  color: white;
+  background-color: #d73f3f;
+  margin-right: 10px;
+}
+
+.lt-ie8 .accordion .js-control {
+  padding-right: 0;
+  padding-left: 10px;
+}
 
 /*
  ******************** Sprites *********************
