@@ -626,10 +626,6 @@ a::after {
   border-radius: 0;
 }
 
-.lt-ie9 .thumbnail {
-  max-width: none;
-}
-
 .thumbnail h3 {
   margin-top: 0;
 }
