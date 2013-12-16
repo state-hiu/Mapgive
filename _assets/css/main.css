@@ -562,7 +562,7 @@ a::after {
   counter-increment: li;
   padding: 8px;
   position: absolute;
-  left: 22px;
+  left: -28px;
 }
 
 .steps .step:before {
@@ -583,6 +583,7 @@ a::after {
 
   .steps .title:before {
     padding: 13px;
+    left: -43px;
   }
 
   .steps .step:before {
@@ -619,6 +620,24 @@ a::after {
 
 .steps .caption {
   font-size: .8em;
+}
+
+.steps .estimate {
+  background-color: #f7f7f7;
+  padding: 5px;
+}
+
+.steps .estimate p {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.steps .estimate .estimate-title {
+  border-bottom: 1px solid #bcbcbc;
+  background: url("/assets/img/clock.png") 5px 3px no-repeat;
+  padding: 1px 0 7px 25px;
+  font-size: 1.15em;
+  margin-bottom: 7px;
 }
 
 .thumbnail {
