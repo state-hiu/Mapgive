@@ -623,8 +623,8 @@ a::after {
 }
 
 .steps .estimate {
-  background-color: #f7f7f7;
   padding: 5px;
+  border-left: 1px dotted #51504d;
 }
 
 .steps .estimate p {
