@@ -577,20 +577,35 @@ a::after {
   padding-left: 0;
 }
 
-.lt-ie8 .steps .step {
+.lt-ie9 .steps .title:before {
+  content: "";
+  padding: 0;
+  position: static;
+}
+
+.lt-ie9 .steps .step:before {
+  background-color: transparent;
+  position: static;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  padding: 0;
+}
+
+.lt-ie9 .steps .step {
   margin-left: -40px;
   padding-left: 75px;
 }
 
-.lt-ie8 .steps #step-1 {
+.lt-ie9 .steps #step-1 {
   background: url("/assets/img/circle-list-item-1.png") 0 0 no-repeat;
 }
 
-.lt-ie8 .steps #step-2 {
+.lt-ie9 .steps #step-2 {
   background: url("/assets/img/circle-list-item-2.png") 0 0 no-repeat;
 }
 
-.lt-ie8 .steps #step-3 {
+.lt-ie9 .steps #step-3 {
   background: url("/assets/img/circle-list-item-3.png") 0 0 no-repeat;
 }
 
