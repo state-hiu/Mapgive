@@ -35,6 +35,7 @@
     }
   })();
   
+  // Activate fixed menu on all browsers less than IE8
   (function() {
     if (!($html.hasClass('lt-ie8'))) {
       $('.navbar').affix({
@@ -42,6 +43,13 @@
           top: $('#site-header').height()
         }
       });
+    }
+  })();
+
+  (function() {
+    if ( $html.hasClass('lt-ie8') ) {
+      var $quote = $(".quote blockquote");
+      $quote.prepend("&ldquo;");
     }
   })();
 
