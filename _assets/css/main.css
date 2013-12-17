@@ -752,45 +752,6 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   color: #666;
 }
 
-/*
- ******************** Overrides *********************
- */
-
-
-.image::after, .btn::after, .navbar .btn::after {
-  content: '';
-  padding: 0;
-  display: block;
-}
-
-/*
- ******************** Helpers / Fixes *********************
- */
-
-.first {
-  padding-left: 0;
-  margin-left: 0;
-}
-
-.lt-ie8 div[class^='col-'] {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.lt-ie8 .row {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.shadowed {
-  box-shadow: 1px 1px 7px -3px #888;
-}
-
-.img-responsive {
-  width: 100%;
-  max-width: 100%;
-}
-
 /* 
  ******************* Accordions *******************
  */
@@ -852,6 +813,55 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 .lt-ie8 .accordion .js-control {
   padding-right: 0;
   padding-left: 10px;
+}
+
+/*
+ ******************** Overrides *********************
+ */
+
+
+.image::after, .btn::after, .navbar .btn::after {
+  content: '';
+  padding: 0;
+  display: block;
+}
+
+/*
+ ******************** Helpers / Fixes *********************
+ */
+
+.first {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.lt-ie8 div[class^='col-'] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.lt-ie8 .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.shadowed {
+  box-shadow: 1px 1px 7px -3px #888;
+}
+
+.img-responsive {
+  width: 100%;
+  max-width: 100%;
+}
+
+.hyphenate {
+-ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+
+-webkit-hyphens: auto;
+   -moz-hyphens: auto;
+        hyphens: auto;
 }
 
 /*
