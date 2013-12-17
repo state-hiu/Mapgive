@@ -45,6 +45,24 @@
     }
   })();
 
+  
+  // Safely remove focus ring on accordion titles when clicked but keep for keyboard navigation
+  (function () {
+    var styleTag = '<style id="outline-none">dt:focus{outline:none}</style>';
+
+    $("body").on("mousedown", function() {
+      var $outlineNone = $("#outline-none");
+
+      if ( $outlineNone.length === 0) {
+        $("head").append(styleTag);
+      }
+    });
+
+    $("body").on("keydown", function() {
+      $("#outline-none").remove();
+    });
+  })();
+
   // Init accordions
   $(".js-accordion").a11yAccordion();
 
