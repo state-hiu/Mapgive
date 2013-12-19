@@ -5,8 +5,15 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Prefetch DNS -->
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+    <link rel="dns-prefetch" href="//ajax.googleapis.com" />
+    
     <title>The Open Globe Project | {{ page.title }}</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="{{ page.summary }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -27,10 +34,16 @@
     <![endif]-->
   </head>
   <body>
+
+    <!-- Hidden preload 'div' to fetch sprite images before css needs them -->
+    <div id="hidden-sprite">
+      <img src="/assets/img/low-res-sprite.png" width="0" height="0" alt="sprite" />
+      <img src="/assets/img/hi-res-sprite.png" width="0" height="0" alt="sprite" />
+    </div>
+
     <!--[if lt IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
 
     <div id="main-wrapper">
       {% include main-nav.html %}

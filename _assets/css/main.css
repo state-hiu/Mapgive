@@ -53,7 +53,7 @@ a {
 
 a:hover, 
 a:focus,
-.action-link, {
+.action-link {
   color: #d73f3f;
 }
 
@@ -249,7 +249,7 @@ dt {
   content: '';
   display: block;
   background: url('/assets/img/world-map.png') 50% 50% no-repeat;
-  background: rgba(0,0,0,0) url('/assets/img/world-map.svgz') 50% 50% no-repeat;
+  background: rgba(0,0,0,0) url('/assets/img/world-map.svg') 50% 50% no-repeat;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -347,7 +347,7 @@ dt {
 
 @media (min-width: 768px) {
   .footer-title h2 {
-    background: url('/assets/img/ie-sprite.png') no-repeat 585px -519px;
+    background: url('/assets/img/low-res-sprite.png') no-repeat 585px -519px;
   }
 }
 
@@ -369,7 +369,15 @@ dt {
 }
 
 .mission > h4 {
-  background: url('/assets/img/ie-sprite.png') no-repeat 125px 0;
+  background: url('/assets/img/low-res-sprite.png') no-repeat 125px 0;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .mission > h4 {
+    background: url('/assets/img/hi-res-sprite.png') no-repeat 125px 0;
+    background-size: 135px 7445px;
+    padding: 3px 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -603,6 +611,9 @@ dt {
   padding-left: 75px;
 }
 
+/* Can't sprite these because "written instructions" can make the page very,
+ * very long!
+ */
 .lt-ie9 .steps #step-1 {
   background: url("/assets/img/circle-list-item-1.png") 0 0 no-repeat;
 }
@@ -634,9 +645,19 @@ dt {
 }
 
 .steps .estimate .estimate-title {
-  background: url("/assets/img/clock.png") 0 2px no-repeat;
+  background: url('/assets/img/low-res-sprite.png') no-repeat;
+  background-position: 0 -7971px;
   padding: 0 0 0 25px;
   font-size: 1.15em;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), 
+       (min-resolution: 192dpi) {
+  .steps .estimate .estimate-title {
+    background: url('/assets/img/hi-res-sprite.png') no-repeat;
+    background-size: 135px 7445px;
+    background-position: 0 -7425px;
+  }
 }
 
 .steps .estimate .estimate-title:after {
@@ -680,12 +701,21 @@ dt {
     border-bottom: 1px solid #bcbcbc;
     margin-bottom: 7px;
     padding: 1px 0 7px 20px;
-    background-position: 15px 3px;
+    background-position: 15px -7969px;
   }
 
   .steps .estimate .estimate-title:after {
     content: "";
     padding: 0;
+  }
+}
+
+@media (min-width: 768px) and
+       (-webkit-min-device-pixel-ratio: 2), 
+       (min-resolution: 192dpi) {
+
+  .steps .estimate .estimate-title {
+    background-position: 15px -7425px;
   }
 }
 
@@ -933,8 +963,12 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
  ******************** Sprites *********************
  */
 
+#hidden-sprite {
+  display: none;
+}
+
 .media-body {
-  background: url('/assets/img/ie-sprite.png') no-repeat; 
+  background: url('/assets/img/low-res-sprite.png') no-repeat; 
   padding-left: 20%;
 }
 
@@ -1010,6 +1044,68 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   }
 }
 
+@media (-webkit-min-device-pixel-ratio: 2), 
+       (min-resolution: 192dpi) {
+  
+  .media-body {
+    background: url('/assets/img/hi-res-sprite.png') no-repeat;
+    background-size: 135px 7445px;
+    padding-left: 20%;
+  }
+
+  .media-body.globe {
+    background-position: 0 -525px;
+  }
+
+  .media-body.marker {
+    background-position: 0 -3975px;
+  }  
+  
+  .media-body.map {
+    background-position: 0 -2825px;
+  }
+
+  .media-body.osm {
+    background-position: 0 -5125px;
+  }
+
+  .media-body.hot {
+    background-position: 0 -1675px;
+  }
+
+  .media-body.dos {
+    background-position: 0 -6275px;
+  }
+}
+
+@media (min-width: 768px) and
+      (-webkit-min-device-pixel-ratio: 2), 
+       (min-resolution: 192dpi) {
+
+  .media-body.globe {
+    background-position: 0 -1075px;
+  }
+
+  .media-body.marker {
+    background-position: 0 -4525px;
+  }
+
+  .media-body.map {
+    background-position: 0 -3375px;
+  }
+
+  .media-body.osm {
+    background-position: 0 -5675px;
+  }
+
+  .media-body.hot {
+    background-position: 0 -2225px;
+  }
+
+  .media-body.dos {
+    background-position: 0 -6825px;
+  }
+}
 /* Thanks to... */
 /* Sticky footer http://www.cssstickyfooter.com */
 /* Responsive YouTube embed http://avexdesigns.com/responsive-youtube-embed/ */
