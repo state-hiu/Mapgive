@@ -139,13 +139,17 @@ dt {
 
 .navbar.affix + #main {
   /* padding-top needs to be total height of .navbar */
-  padding-top: 108px;
+  padding-top: 55px;
 }
 
 .navbar-default {
   background-color: #667766;
   border-bottom: 1px solid #51504d;
   border-radius: 0;
+}
+
+.navbar-brand {
+  padding: 0 15px;
 }
 
 .navbar-nav {
@@ -202,7 +206,7 @@ dt {
 .navbar-default .navbar-toggle {
   border-color: #fff;
   position: relative;
-  top: 25px;
+  top: 5px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -219,7 +223,7 @@ dt {
 @media (min-width: 768px) {
   .navbar-default .navbar-collapse {
     position: relative;
-    bottom: -55px;
+    bottom: -15px;
   }
 
   .navbar-default .navbar-nav > li > a {
@@ -249,7 +253,7 @@ dt {
   content: '';
   display: block;
   background: url('/assets/img/world-map.png') 50% 50% no-repeat;
-  background: rgba(0,0,0,0) url('/assets/img/world-map.svg') 50% 50% no-repeat;
+  background: rgba(0,0,0,0) url('/assets/img/world-map.svgz') 50% 50% no-repeat;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -712,6 +716,7 @@ dt {
 
 @media (min-width: 768px) and
        (-webkit-min-device-pixel-ratio: 2), 
+       (min-width: 768px) and 
        (min-resolution: 192dpi) {
 
   .steps .estimate .estimate-title {
@@ -1049,7 +1054,10 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   
   .media-body {
     background: url('/assets/img/hi-res-sprite.png') no-repeat;
-    background-size: 135px 7445px;
+    -webkit-background-size: 135px 7445px;
+       -mos-background-size: 135px 7445px;
+         -o-background-size: 135px 7445px;
+            background-size: 135px 7445px;
     padding-left: 20%;
   }
 
@@ -1059,7 +1067,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 
   .media-body.marker {
     background-position: 0 -3975px;
-  }  
+  }
   
   .media-body.map {
     background-position: 0 -2825px;
@@ -1079,7 +1087,8 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 }
 
 @media (min-width: 768px) and
-      (-webkit-min-device-pixel-ratio: 2), 
+       (-webkit-min-device-pixel-ratio: 2), 
+       (min-width: 768px) and
        (min-resolution: 192dpi) {
 
   .media-body.globe {
