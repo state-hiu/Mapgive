@@ -566,6 +566,7 @@ dt {
 .steps  {
   counter-reset: li;
   padding-left: 50px;
+  margin-top: 30px;
 }
 
 .steps .step {
@@ -873,7 +874,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 
 .accordion dd {
   overflow: hidden;
-  max-height: 1000px;
+  max-height: 7000px;
   -webkit-transition: all .3s ease-out;
        -o-transition: all .3s ease-out;
           transition: all .3s ease-out;
