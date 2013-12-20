@@ -17,7 +17,7 @@ dt{font-weight:normal;}
 .site-title{margin:0;font-size:24px;text-transform:uppercase;color:#fff;}
 .site-title .first-word{font-size:.5em;display:block;}
 .site-title .tagline{font-size:.45833333333333em;display:block;margin-top:5px;letter-spacing:.1em;}
-.page-title{text-transform:uppercase;line-height:1.4em;}
+.page-title{text-transform:uppercase;line-height:1.4em;margin-top:50px;}
 .page-title:first-letter{font-size:1.25em;margin-top:-3px;}
 .navbar{width:100%;z-index:1;padding:10px 0 0 0;}
 .lt-ie8 .navbar{border:0;}

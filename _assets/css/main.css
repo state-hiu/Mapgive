@@ -106,6 +106,7 @@ dt {
 .page-title {
   text-transform: uppercase;
   line-height: 1.4em;
+  margin-top: 50px;
 }
 
 .page-title:first-letter {
