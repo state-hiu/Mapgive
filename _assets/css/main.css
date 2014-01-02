@@ -91,7 +91,7 @@ dt {
 @media (min-width: 768px) {
   .site-tagline {
     color: white;
-    font-size: 14px;
+    font-size: 13px;
     margin: 0;
     padding: 0;
     display: block;
@@ -153,10 +153,19 @@ dt {
   padding: 0 15px;
 }
 
+.navbar-brand .brand {
+  max-width: 122px;
+}
+
 .navbar-nav {
   margin: 0;
-  position: relative;
-  top: 20px;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav {
+    position: relative;
+    top: 20px;
+  }
 }
 
 .lt-ie9 .navbar-default {
@@ -944,6 +953,8 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 .img-responsive {
   width: 100%;
   max-width: 100%;
+  height: auto !important;
+  -ms-interpolation-mode: bicubic;
 }
 
 .hyphenate {
