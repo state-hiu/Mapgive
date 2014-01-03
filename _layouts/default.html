@@ -17,6 +17,17 @@
 
     <meta name="description" content="{{ page.summary }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{ page.title }}" />
+    <meta name="twitter:description" content="{{ page.twitterDescription }}" />
+    {% if page.twitterImage %}
+    <meta name="twitter:image:src" content="{{ page.twitterImage }}" />
+    {% endif %}
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:description" content="{{ page.ogDescription }}" />
+    <meta property="og:image" content="{{ page.ogImage }}" />
 
     <link rel="stylesheet" href="/assets/css/main.min.css" />
     
