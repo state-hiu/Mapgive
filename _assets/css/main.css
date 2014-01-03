@@ -958,6 +958,12 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   margin-right: 0;
 }
 
+@media (min-width: 768px) {
+  .lt-ie8 .row {
+    overflow: hidden;
+  }
+}
+
 .shadowed {
   box-shadow: 1px 1px 7px -3px #888;
 }
