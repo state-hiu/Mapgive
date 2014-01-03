@@ -956,7 +956,6 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 .lt-ie8 .row {
   margin-left: 0;
   margin-right: 0;
-  overflow: hidden;
 }
 
 .shadowed {
