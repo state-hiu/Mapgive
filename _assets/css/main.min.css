@@ -190,6 +190,10 @@ img[src$=".svgz"].img-responsive,img[src$=".svg"].img-responsive{width:100%;}
 .first{padding-left:0;margin-left:0;}
 .lt-ie8 div[class^='col-']{padding-left:0;padding-right:0;}
 .lt-ie8 .row{margin-left:0;margin-right:0;}
+@media (min-width: 768px){.lt-ie8 .row{overflow:hidden;}
+}
+@media (min-width: 992px){.lt-ie8 .row{overflow:visible;}
+}
 .shadowed{box-shadow:1px 1px 7px -3px #888;}
 .img-responsive{width:100%;max-width:100%;height:auto!important;-ms-interpolation-mode:bicubic;}
 .hyphenate{-ms-word-break:break-all;word-break:break-all;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;}

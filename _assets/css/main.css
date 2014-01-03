@@ -964,6 +964,12 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   }
 }
 
+@media (min-width: 992px) {
+  .lt-ie8 .row {
+    overflow: visible;
+  }
+}
+
 .shadowed {
   box-shadow: 1px 1px 7px -3px #888;
 }
