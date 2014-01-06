@@ -21,14 +21,14 @@
     <meta name="twitter:title" content="{{ page.title }}" />
     <meta name="twitter:description" content="{{ page.twitterDescription }}" />
     {% if page.twitterImage %}
-    <meta name="twitter:image:src" content="{{ page.twitterImage }}" />
+    <meta name="twitter:image:src" content="{{ site.url }}{{ page.twitterImage }}" />
     {% endif %}
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:site_name" content="{{ site.name }}" />
     <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
     <meta property="og:description" content="{{ page.ogDescription }}" />
     {% if page.ogImage %}
-    <meta property="og:image" content="{{ page.ogImage }}" />
+    <meta property="og:image" content="{{ site.url }}{{ page.ogImage }}" />
     {% endif %}
 
     <link rel="stylesheet" href="/assets/css/main.min.css" />
