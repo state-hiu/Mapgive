@@ -27,7 +27,9 @@
     <meta property="og:site_name" content="{{ site.name }}" />
     <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
     <meta property="og:description" content="{{ page.ogDescription }}" />
+    {% if page.ogImage %}
     <meta property="og:image" content="{{ page.ogImage }}" />
+    {% endif %}
 
     <link rel="stylesheet" href="/assets/css/main.min.css" />
     

@@ -6,6 +6,11 @@ country: Kenya
 image: /assets/img/kepha-ngito.jpg
 altText: Kepha Ngito in Nairobi, Kenya.
 caption: Kepha Ngito in Nairobi, Kenya.
+twitterDescription: Maps improved living conditions in Nairobi's Kibera slum. Help build a brighter future with #MapGive
+twitterImage: "/assets/img/kepha-ngito.jpg"
+ogDescription: Maps led to validation and more government resources for the people of Kibera in Nairobi Kenya.
+ogImage: "/assets/img/kepha-ngito.jpg"
+emailDescription: "In the sprawling Kibera slum of Nairobi, Kenya, crowd-sourced maps provide data used by government to allocate resources that are building a brighter future."
 ---
 
 Kepha Ngito grew up in the slums of Nairobi, Kenya where hundreds of thousands live in abject poverty. “I grew up in that time when we didn’t have a physical address. My house was never numbered. It wasn’t existent; it was not on the map.” His father worked in a factory to pay Kepha’s tuition through high school. Education gave Kepha the option to leave the shantytown. Instead, he stayed and became a community activist, starting Map Kibera Trust, a non-profit that uses open street map technology. “For many years Kibera was not on the map despite the fact that hundreds of thousands of people live there. It means they were not quantified as people.” Maps provide hard data to justify allocation of resources.  He says no maps, equals no data and therefore no political power.

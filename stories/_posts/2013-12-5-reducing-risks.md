@@ -6,6 +6,11 @@ country: Nepal
 image: /assets/img/alyssa-wright.jpg
 altText: Alyssa works with a colleague in Katmandu, Nepal.
 caption: Alyssa works with a colleague in Katmandu, Nepal.
+twitterDescription: "Map now for the future. #MapGive"
+twitterImage: "/assets/img/alyssa-wright.jpg"
+ogDescription: "Read how mapping in Nepal now could save lives in the event of a future earthquake."
+ogImage: "/assets/img/alyssa-wright.jpg"
+emailDescription: "In Katmandu, Nepal people live in a dangerous earthquake zone. Gathering data on critical infrastructures such as schools, hospitals and government offices now could make the difference between life and death."
 ---
 
 The people of the Katmandu valley in remote Nepal live in danger from the looming threat of an earthquake. Gathering data on critical infrastructures such as schools, hospitals and government offices now could make the difference between life and death. A World Bank led effort to crowd-sourced mapping effort included a 17 city U.S. OpenStreetMap editathon. In Manhattan a small group of volunteers include mapping volunteer Alyssa Wright. Here is her first person account of what it was like to help map Katmandu:

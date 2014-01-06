@@ -6,6 +6,11 @@ country: Philippines
 image: /assets/img/philippines-story.jpg
 altText: Mappers review their materials in the Philippines.
 caption: Mappers review their materials in the Philippines.
+twitterDescription: "Before typhoon Haiyan made landfall, mappers went to work. #MapGive"
+twitterImage: "/assets/img/philippines-story.jpg"
+ogDescription: "Read about how mappers helped in the aftermath of the 2013 typhoon Haiyan in the Philippines."
+ogImage: "/assets/img/philippines-story.jpg"
+emailDescription: "In November 2013, the Humanitarian OpenSteetMap Team (HOT) activated volunteer mappers well in advance of super typhoon Haiyan making landfall in the Philippines in order to gather a baseline of geographic data."
 ---
 
 Accurate weather forecasts could not thwart the deadly power of super typhoon Haiyan in the Philippines in November 2013. But even before the storm made landfall, The Humanitarian OpenSteetMap Team (HOT) activated volunteers to track and gather geographic base data. 
