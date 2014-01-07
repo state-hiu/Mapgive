@@ -143,11 +143,21 @@ dt{font-weight:normal;}
 @media (min-width: 768px) and
        (-webkit-min-device-pixel-ratio: 2), 
        (min-width: 768px) and 
-       (min-resolution: 192dpi){.steps .estimate .estimate-title{background-position:15px -7425px;}
+       (min-resolution: 192dpi){.steps .estimate .estimate-title{background-position:15px -7849px;}
 }
 @media (min-width: 992px){.steps .estimate .estimate-title{background-position:5px -7969px;}
 }
+@media (min-width: 992px) and
+       (-webkit-min-device-pixel-ratio: 2), 
+       (min-width: 992px) and 
+       (min-resolution: 192dpi){.steps .estimate .estimate-title{background-position:5px -7849px;}
+}
 @media (min-width: 1200px){.steps .estimate .estimate-title{background-position:20px -7969px;}
+}
+@media (min-width: 1200px) and
+       (-webkit-min-device-pixel-ratio: 2), 
+       (min-width: 1200px) and 
+       (min-resolution: 192dpi){.steps .estimate .estimate-title{background-position:20px -7849px;}
 }
 .thumbnail{padding:15px;border:1px solid #bcbcbc;border-radius:0;}
 .thumbnail h3{margin-top:0;}
@@ -238,12 +248,20 @@ img[src$=".svgz"].img-responsive,img[src$=".svg"].img-responsive{width:100%;}
 .media-body.hot{background-position:0 -2373px;}
 .media-body.dos{background-position:0 -7216px;}
 }
+@media (min-width: 768px){.lt-ie9 .media-body.globe{background-position:0 -1621px;}
+.lt-ie9 .media-body.map{background-position:0 -3921px;}
+.lt-ie9 .media-body.marker{background-position:0 -5071px;}
+.lt-ie9 .media-body.osm{background-position:0 -6221px;}
+.lt-ie9 .media-body.hot{background-position:0 -2771px;}
+.lt-ie9 .media-body.dos{background-position:0 -7371px;}
+}
 .social{overflow:hidden;margin-bottom:20px;}
 @media (min-width: 992px){.social{margin-top:70px;}
 }
 .social div{float:left;margin-right:10px;}
 .social p{margin-bottom:0;line-height:20px;}
 .social a{padding-right:20px;}
+.lt-ie8 .social a{display:inline-block;}
 .social a:hover{color:transparent;text-decoration:none;}
 .social a:after{content:"";padding-left:0;display:inline;}
 .social .share{padding-right:10px;border-right:1px solid #51504d;}

@@ -1163,6 +1163,32 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   }
 }
 
+@media (min-width: 768px) {
+  .lt-ie9 .media-body.globe {
+    background-position: 0 -1621px;
+  }
+
+  .lt-ie9 .media-body.map {
+    background-position: 0 -3921px;
+  }
+
+  .lt-ie9 .media-body.marker {
+    background-position: 0 -5071px;
+  }
+
+  .lt-ie9 .media-body.osm {
+    background-position: 0 -6221px;
+  }
+
+  .lt-ie9 .media-body.hot {
+    background-position: 0 -2771px;
+  }
+
+  .lt-ie9 .media-body.dos {
+    background-position: 0 -7371px;  
+  }
+}
+
 .social {
   overflow: hidden;
   margin-bottom: 20px;
@@ -1186,6 +1212,10 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 
 .social a {
   padding-right: 20px;
+}
+
+.lt-ie8 .social a {
+  display: inline-block;
 }
 
 .social a:hover {
