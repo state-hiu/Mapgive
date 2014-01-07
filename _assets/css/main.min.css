@@ -43,7 +43,8 @@ dt{font-weight:normal;}
 .navbar-default .navbar-toggle{border-color:#fff;margin-top:0;margin-bottom:0;}
 .navbar-default .navbar-toggle:focus,.navbar-default .navbar-toggle:hover{background-color:transparent;}
 .navbar-default .navbar-toggle .icon-bar{background-color:#fff;}
-@media (min-width: 768px){.navbar-default .navbar-nav>li>a{padding:0;margin:0 0 0 20px;}
+@media (min-width: 768px){.navbar{min-height:64px;}
+.navbar-default .navbar-nav>li>a{padding:0;margin:0 0 0 20px;}
 .navbar-default .navbar-nav>li>a.navbar-btn{position:relative;bottom:6px;margin:0 0 0 20px;}
 }
 #footer{background-color:#bcbcbc;border-top:10px solid #52504d;position:relative;}
