@@ -4,14 +4,18 @@
   </div>
   <div class="email">
     <h6 class="sr-only">Email this page</h6>
+    <a href="mailto:?subject=I wanted you to see this site&amp;body={{ page.emailDescription }}" title="Share by Email"></a>
   </div>
   <div class="facebook">
     <h6 class="sr-only">Share this page on Facebook</h6>
+    <a href="http://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank"></a>
   </div>
   <div class="twitter">
     <h6 class="sr-only">Share this page on Twitter</h6>
+    <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}" target="_blank"></a>
   </div>
   <div class="google-plus">
     <h6 class="sr-only">Share this page on Google+</h6>
+    <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" target="_blank"></a>
   </div>
 </div>

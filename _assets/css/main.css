@@ -1081,10 +1081,10 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   
   .media-body {
     background: url('/assets/img/hi-res-sprite.png') no-repeat;
-    -webkit-background-size: 135px 7445px;
-       -mos-background-size: 135px 7445px;
-         -o-background-size: 135px 7445px;
-            background-size: 135px 7445px;
+    -webkit-background-size: 137px 10071px;
+       -mos-background-size: 137px 10071px;
+         -o-background-size: 137px 10071px;
+            background-size: 137px 10071px;
     padding-left: 20%;
   }
 
@@ -1144,8 +1144,14 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 }
 
 .social {
-  padding: 20px;
   overflow: hidden;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+  .social {
+    margin-top: 70px;
+  }
 }
 
 .social div {
@@ -1158,6 +1164,21 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   line-height: 20px;
 }
 
+.social a {
+  padding-right: 20px;
+}
+
+.social a:hover {
+  color: transparent;
+  text-decoration: none;
+}
+
+.social a:after {
+  content: "";
+  padding-left: 0;
+  display: inline;
+}
+
 .social .share {
   padding-right: 10px;
   border-right: 1px solid #51504d;
@@ -1168,8 +1189,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 .social .twitter,
 .social .google-plus {
   background: url('/assets/img/low-res-sprite.png') no-repeat;
-  width: 32px;
-  height: 32px;
+  width: 20px;
 }
 
 .social .email {
@@ -1189,6 +1209,36 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   margin-right: 0;
 }
 
+@media (-webkit-min-device-pixel-ratio: 2), 
+       (min-resolution: 192dpi) {
+  
+  .social .email,
+  .social .facebook,
+  .social .twitter,
+  .social .google-plus {
+    background: url('/assets/img/hi-res-sprite.png') no-repeat;
+    -webkit-background-size: 137px 10071px;
+       -mos-background-size: 137px 10071px;
+         -o-background-size: 137px 10071px;
+            background-size: 137px 10071px;
+  }
+
+  .social .email {
+    background-position: 0 -7945px;
+  }
+
+  .social .facebook {
+    background-position: 0 -8465px;
+  }
+
+  .social .twitter {
+    background-position: 0 -8985px;
+  }
+
+  .social .google-plus {
+    background-position: 0 -9505px;
+  }
+}
 /* Thanks to... */
 /* Sticky footer http://www.cssstickyfooter.com */
 /* Responsive YouTube embed http://avexdesigns.com/responsive-youtube-embed/ */

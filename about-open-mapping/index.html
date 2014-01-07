@@ -7,9 +7,16 @@ ogImage: "/assets/img/open-graph-logo.png"
 emailDescription: "OpenStreetMap (OSM) is a non-profit project that is building a free digital map of the world."
 ---
 
-<header role="header">
-  <h1 class="page-title">{{ page.title }}</h1>
-</header>
+<div class="row">
+  <div class="col-md-8">
+    <header role="header">
+      <h1 class="page-title">{{ page.title }}</h1>
+    </header>
+  </div>
+  <div class="col-md-offset-1 col-md-3">
+    {% include social-media.html %}
+  </div>
+</div>
 <div class="row">
   <div class="col-md-8">
     <article>

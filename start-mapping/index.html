@@ -7,9 +7,16 @@ ogImage: "http://ittc.kamp.io/assets/img/open-graph-logo.png"
 emailDescription: "Start mapping in three easy steps. Get an OpenStreetMap account, practice with our step-by-step video guide then choose a prioritized mapping task."
 ---
 
-<header role="header">
-  <h1 class="page-title">{{ page.title }}</h1>
-</header>
+<div class="row">
+  <div class="col-md-8">
+    <header role="header">
+      <h1 class="page-title">{{ page.title }}</h1>
+    </header>
+  </div>
+  <div class="col-md-offset-1 col-md-3">
+    {% include social-media.html %}
+  </div>
+</div>
 <div class="row">
   <div class="col-md-8">
     <section>
