@@ -733,7 +733,7 @@ dt {
        (min-resolution: 192dpi) {
 
   .steps .estimate .estimate-title {
-    background-position: 15px -7425px;
+    background-position: 15px -7849px;
   }
 }
 
@@ -743,11 +743,31 @@ dt {
   }
 }
 
+@media (min-width: 992px) and
+       (-webkit-min-device-pixel-ratio: 2), 
+       (min-width: 992px) and 
+       (min-resolution: 192dpi) {
+  .steps .estimate .estimate-title {
+    background-position: 5px -7849px;
+  }
+} 
+
 @media (min-width: 1200px) {
   .steps .estimate .estimate-title {
     background-position: 20px -7969px;
   }
 }
+
+@media (min-width: 1200px) and
+       (-webkit-min-device-pixel-ratio: 2), 
+       (min-width: 1200px) and 
+       (min-resolution: 192dpi) {
+
+  .steps .estimate .estimate-title {
+    background-position: 20px -7849px;
+  }       
+}
+
 
 .thumbnail {
   padding: 15px;
