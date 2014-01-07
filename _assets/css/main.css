@@ -383,8 +383,8 @@ dt {
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .mission > h4 {
     background: url('/assets/img/hi-res-sprite.png') no-repeat 125px 0;
-    background-size: 135px 7445px;
-    padding: 3px 0;
+    background-size: 137px 10071px;
+    padding: 4px 0;
   }
 }
 
@@ -668,8 +668,8 @@ dt {
        (min-resolution: 192dpi) {
   .steps .estimate .estimate-title {
     background: url('/assets/img/hi-res-sprite.png') no-repeat;
-    background-size: 135px 7445px;
-    background-position: 0 -7425px;
+    background-size: 135px 10071px;
+    background-position: 0 -7849px;
   }
 }
 
@@ -1089,27 +1089,27 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   }
 
   .media-body.globe {
-    background-position: 0 -525px;
+    background-position: 0 -555px;
   }
 
   .media-body.marker {
-    background-position: 0 -3975px;
+    background-position: 0 -4202px;
   }
   
   .media-body.map {
-    background-position: 0 -2825px;
+    background-position: 0 -2987px;
   }
 
   .media-body.osm {
-    background-position: 0 -5125px;
+    background-position: 0 -5418px;
   }
 
   .media-body.hot {
-    background-position: 0 -1675px;
+    background-position: 0 -1781px;
   }
 
   .media-body.dos {
-    background-position: 0 -6275px;
+    background-position: 0 -6634px;
   }
 }
 
@@ -1119,27 +1119,27 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
        (min-resolution: 192dpi) {
 
   .media-body.globe {
-    background-position: 0 -1075px;
+    background-position: 0 -1136px;
   }
 
   .media-body.marker {
-    background-position: 0 -4525px;
+    background-position: 0 -4784px;
   }
 
   .media-body.map {
-    background-position: 0 -3375px;
+    background-position: 0 -3568px;
   }
 
   .media-body.osm {
-    background-position: 0 -5675px;
+    background-position: 0 -6000px;
   }
 
   .media-body.hot {
-    background-position: 0 -2225px;
+    background-position: 0 -2373px;
   }
 
   .media-body.dos {
-    background-position: 0 -6825px;
+    background-position: 0 -7216px;
   }
 }
 
@@ -1222,21 +1222,20 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
          -o-background-size: 137px 10071px;
             background-size: 137px 10071px;
   }
-
   .social .email {
-    background-position: 0 -7945px;
+    background-position: 0 -8400px;
   }
 
   .social .facebook {
-    background-position: 0 -8465px;
+    background-position: 0 -8950px;
   }
 
   .social .twitter {
-    background-position: 0 -8985px;
+    background-position: 0 -9500px;
   }
 
   .social .google-plus {
-    background-position: 0 -9505px;
+    background-position: 0 -10050px;
   }
 }
 /* Thanks to... */

@@ -74,7 +74,7 @@ dt{font-weight:normal;}
 }
 .mission{margin-top:20px;border-top:1px solid #444;}
 .mission>h4{background:url(/assets/img/low-res-sprite.png) no-repeat 125px 0;}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi){.mission>h4{background:url(/assets/img/hi-res-sprite.png) no-repeat 125px 0;background-size:135px 7445px;padding:3px 0;}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi){.mission>h4{background:url(/assets/img/hi-res-sprite.png) no-repeat 125px 0;background-size:137px 10071px;padding:4px 0;}
 }
 @media (min-width: 768px){.mission{margin-top:0;border-top:0;border-left:1px solid black;}
 .lt-ie8 .mission{border-left:0;}
@@ -127,7 +127,7 @@ dt{font-weight:normal;}
 .steps .estimate p{display:inline-block;margin-bottom:0;}
 .steps .estimate .estimate-title{background:url(/assets/img/low-res-sprite.png) no-repeat;background-position:0 -7971px;padding:0 0 0 25px;font-size:1.15em;}
 @media (-webkit-min-device-pixel-ratio: 2), 
-       (min-resolution: 192dpi){.steps .estimate .estimate-title{background:url(/assets/img/hi-res-sprite.png) no-repeat;background-size:135px 7445px;background-position:0 -7425px;}
+       (min-resolution: 192dpi){.steps .estimate .estimate-title{background:url(/assets/img/hi-res-sprite.png) no-repeat;background-size:135px 10071px;background-position:0 -7849px;}
 }
 .steps .estimate .estimate-title:after{content:":";padding-right:2px;}
 @media (min-width: 768px){.steps .step{margin-left:15px;}
@@ -221,22 +221,22 @@ img[src$=".svgz"].img-responsive,img[src$=".svg"].img-responsive{width:100%;}
 }
 @media (-webkit-min-device-pixel-ratio: 2), 
        (min-resolution: 192dpi){.media-body{background:url(/assets/img/hi-res-sprite.png) no-repeat;-webkit-background-size:137px 10071px;-mos-background-size:137px 10071px;-o-background-size:137px 10071px;background-size:137px 10071px;padding-left:20%;}
-.media-body.globe{background-position:0 -525px;}
-.media-body.marker{background-position:0 -3975px;}
-.media-body.map{background-position:0 -2825px;}
-.media-body.osm{background-position:0 -5125px;}
-.media-body.hot{background-position:0 -1675px;}
-.media-body.dos{background-position:0 -6275px;}
+.media-body.globe{background-position:0 -555px;}
+.media-body.marker{background-position:0 -4202px;}
+.media-body.map{background-position:0 -2987px;}
+.media-body.osm{background-position:0 -5418px;}
+.media-body.hot{background-position:0 -1781px;}
+.media-body.dos{background-position:0 -6634px;}
 }
 @media (min-width: 768px) and
        (-webkit-min-device-pixel-ratio: 2), 
        (min-width: 768px) and
-       (min-resolution: 192dpi){.media-body.globe{background-position:0 -1075px;}
-.media-body.marker{background-position:0 -4525px;}
-.media-body.map{background-position:0 -3375px;}
-.media-body.osm{background-position:0 -5675px;}
-.media-body.hot{background-position:0 -2225px;}
-.media-body.dos{background-position:0 -6825px;}
+       (min-resolution: 192dpi){.media-body.globe{background-position:0 -1136px;}
+.media-body.marker{background-position:0 -4784px;}
+.media-body.map{background-position:0 -3568px;}
+.media-body.osm{background-position:0 -6000px;}
+.media-body.hot{background-position:0 -2373px;}
+.media-body.dos{background-position:0 -7216px;}
 }
 .social{overflow:hidden;margin-bottom:20px;}
 @media (min-width: 992px){.social{margin-top:70px;}
@@ -254,8 +254,8 @@ img[src$=".svgz"].img-responsive,img[src$=".svg"].img-responsive{width:100%;}
 .social .google-plus{background-position:0 -10051px;margin-right:0;}
 @media (-webkit-min-device-pixel-ratio: 2), 
        (min-resolution: 192dpi){.social .email,.social .facebook,.social .twitter,.social .google-plus{background:url(/assets/img/hi-res-sprite.png) no-repeat;-webkit-background-size:137px 10071px;-mos-background-size:137px 10071px;-o-background-size:137px 10071px;background-size:137px 10071px;}
-.social .email{background-position:0 -7945px;}
-.social .facebook{background-position:0 -8465px;}
-.social .twitter{background-position:0 -8985px;}
-.social .google-plus{background-position:0 -9505px;}
+.social .email{background-position:0 -8400px;}
+.social .facebook{background-position:0 -8950px;}
+.social .twitter{background-position:0 -9500px;}
+.social .google-plus{background-position:0 -10050px;}
 }
