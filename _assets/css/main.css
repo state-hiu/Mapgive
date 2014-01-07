@@ -1142,6 +1142,53 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
     background-position: 0 -6825px;
   }
 }
+
+.social {
+  padding: 20px;
+  overflow: hidden;
+}
+
+.social div {
+  float: left;
+  margin-right: 10px;
+}
+
+.social p {
+  margin-bottom: 0;
+  line-height: 20px;
+}
+
+.social .share {
+  padding-right: 10px;
+  border-right: 1px solid #51504d;
+}
+
+.social .email,
+.social .facebook,
+.social .twitter,
+.social .google-plus {
+  background: url('/assets/img/low-res-sprite.png') no-repeat;
+  width: 32px;
+  height: 32px;
+}
+
+.social .email {
+  background-position: 0 -8491px;
+}
+
+.social .facebook {
+  background-position: 0 -9011px;
+}
+
+.social .twitter {
+  background-position: 0 -9531px;
+}
+
+.social .google-plus {
+  background-position: 0 -10051px;
+  margin-right: 0;
+}
+
 /* Thanks to... */
 /* Sticky footer http://www.cssstickyfooter.com */
 /* Responsive YouTube embed http://avexdesigns.com/responsive-youtube-embed/ */
