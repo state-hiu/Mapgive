@@ -522,6 +522,7 @@ dt {
 .story-promo blockquote a::after {
   content: "";
   padding: 0;
+  display: inline;
 }
 
 .promo-box h2 {
