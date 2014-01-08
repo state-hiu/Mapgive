@@ -1,7 +1,7 @@
 /********** Fonts *********/
 
 @font-face {
-    font-family: "Open Sans Regular";
+    font-family: "Open Sans";
     src: url('/assets/fonts/OpenSans-Regular-webfont.eot');
     src: url('/assets/fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('/assets/fonts/OpenSans-Regular-webfont.woff') format('woff'),
@@ -20,7 +20,7 @@
 }
 
 body {
-  font-family: "Open Sans Regular", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #51504d;
