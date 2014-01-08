@@ -410,6 +410,10 @@ dt {
 
 /****** End Footer ******/
 
+.infographics {
+  margin-top: 40px;
+}
+
 .infographics img, .infographics .btn {
   margin-bottom: 20px;
 }
@@ -429,9 +433,15 @@ dt {
   margin-bottom: 20px;
 }
 
+.infographics .world {
+  display: none;
+  visibility: hidden;
+}
+
 @media (min-width: 768px) {
   .infographics {
     padding-top: 70px;
+    margin-top: 0;
   }
 
   .infographics .btn {
@@ -452,6 +462,11 @@ dt {
     top: -50px;
     left: 29px;
   }
+
+  .infographics .world {
+    display: block;
+    visibility: visible;
+  }
 }
 
 @media (min-width: 992px) {
@@ -465,6 +480,18 @@ dt {
   .infographics .start-button::before {
     width: 253px;
     left: 33px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .infographics .btn {
+    width: 360px;
+    height: 240px;
+    font-size: 5em;
+  }
+
+  .infographics .btn .first {
+    margin-top: 10px;
   }
 }
 
@@ -958,7 +985,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
  */
 
 
-.image::after, .btn::after, .navbar .btn::after {
+.infographics a::after, .image::after, .btn::after, .navbar .btn::after {
   content: '';
   padding: 0;
   display: block;
