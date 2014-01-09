@@ -109,6 +109,12 @@ dt {
   margin-top: -3px;
 }
 
+.btn-primary {
+  background-color: #d73f3f;
+  border-color: #d73f3f;
+  color: white;
+}
+
 /***** Main Nav *****/
 
 .navbar {
@@ -195,12 +201,6 @@ dt {
 
 .lt-ie8 .navbar-default .navbar-nav > li > a.navbar-btn {
   display: block;
-}
-
-.btn-primary {
-  background-color: #d73f3f;
-  border-color: #d73f3f;
-  color: white;
 }
 
 .navbar-default .navbar-nav > li > a.navbar-btn:active,
@@ -488,6 +488,10 @@ dt {
     width: 360px;
     height: 240px;
     font-size: 5em;
+  }
+
+  .infographics .start-button::before {
+    width: 315px;
   }
 
   .infographics .btn .first {
@@ -975,10 +979,19 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   margin-right: 10px;
 }
 
+@media (min-width: 768px) {
+  .accordion .js-control {
+    display: block;
+    float: left;
+    margin-bottom: 10px;
+  }
+}
+
 .lt-ie8 .accordion .js-control {
   padding-right: 0;
   padding-left: 10px;
 }
+
 
 /*
  ******************** Overrides *********************

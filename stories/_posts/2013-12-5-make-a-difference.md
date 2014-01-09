@@ -10,6 +10,7 @@ twitterDescription: Maps improved living conditions in Nairobi's Kibera slum. He
 twitterImage: "/assets/img/kepha-ngito.jpg"
 ogDescription: Maps led to validation and more government resources for the people of Kibera in Nairobi Kenya.
 ogImage: "/assets/img/kepha-ngito.jpg"
+emailSubject: Maps improved living conditions in Nairobi's Kibera slum.
 emailDescription: "In the sprawling Kibera slum of Nairobi, Kenya, crowd-sourced maps provide data used by government to allocate resources that are building a brighter future."
 ---
 

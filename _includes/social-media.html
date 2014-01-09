@@ -4,7 +4,7 @@
   </div>
   <div class="email">
     <h6 class="sr-only">Email this page</h6>
-    <a href="mailto:?subject=I wanted you to see this site&amp;body={{ page.emailDescription }}" title="Share by Email"></a>
+    <a href="mailto:?subject={{ page.emailSubject }}&amp;body={{ page.emailDescription }}%0D%0D{{ site.url }}{{ page.url }}" title="Share by Email"></a>
   </div>
   <div class="facebook">
     <h6 class="sr-only">Share this page on Facebook</h6>

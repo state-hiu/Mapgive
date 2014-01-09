@@ -10,6 +10,7 @@ twitterDescription: "Map now for the future. #MapGive"
 twitterImage: "/assets/img/alyssa-wright.jpg"
 ogDescription: "Read how mapping in Nepal now could save lives in the event of a future earthquake."
 ogImage: "/assets/img/alyssa-wright.jpg"
+emailSubject: Maps in Nepal could save lives in the event of a future earthquake.
 emailDescription: "In Katmandu, Nepal people live in a dangerous earthquake zone. Gathering data on critical infrastructures such as schools, hospitals and government offices now could make the difference between life and death."
 ---
 
