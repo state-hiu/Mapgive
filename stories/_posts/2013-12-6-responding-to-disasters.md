@@ -13,9 +13,10 @@ ogImage: "/assets/img/philippines-story.jpg"
 emailDescription: "In November 2013, the Humanitarian OpenSteetMap Team (HOT) activated volunteer mappers well in advance of super typhoon Haiyan making landfall in the Philippines in order to gather a baseline of geographic data."
 ---
 
-Accurate weather forecasts could not thwart the deadly power of super typhoon Haiyan in the Philippines in November 2013. But even before the storm made landfall, The Humanitarian OpenSteetMap Team (HOT) activated volunteers to track and gather geographic base data. 
+In November 2013, the <a href="http://hot.openstreetmap.org/about" target="_blank">Humanitarian OpenSteetMap Team</a> (H.O.T.) started activating volunteer mappers even before super typhoon Haiyan made landfall in the Philippines to gather a baseline of geographic data.
 
-Within days volunteers had mapped 1240 place names, 29,845 buildings and traced 3,036 homes. This information provided critical data for assessing damage to infrastructure, getting people to evacuation centers and hospitals and routing emergency relief supplies. Crisis Camps around the world rallied volunteers to pitch in to mapping efforts. Journalist Tyler Machado reported on his experience at a Crisis Camp in Vermont.
+Some 1600 volunteers quickly added approximately 4.5 million edits to the base map.
+This information provided critical data for assessing damage to infrastructure, getting people to evacuation centers and hospitals and routing emergency relief supplies. Crisis Camps around the world rallied volunteers to pitch in to mapping efforts. Journalist Tyler Machado reported on his experience at a Crisis Camp in Vermont.
 
 Excerpt from “Vermonters Help the Philippines Relief Effort with Digital Map Making,”
 *Seven Days, Vermont* newspaper, Nov. 20, 2013:
@@ -34,4 +35,4 @@ It’s easy to take extensive geographic information for granted in the develope
 
 Of course, the mere act of plotting roads on maps doesn’t help storm-stricken Filipinos to recovery. The crisis mapping of globally distributed volunteers is useful because it guides the relief work that’s happening on the ground. The OpenStreetMap software encourages this use; a viewer can see the maps in “humanitarian mode,” which displays road and building damage as marked by editors.
 
-I’ve already lost track of which sections of the map I edited — the HOT site now assigns me a new task when I visit it. But, as long as there are paths through the sugar-cane fields and mountains of the Philippines, there’s more work to be done — and I hope what’s been done so far has made the relief efforts more useful to the people who live there.
+I’ve already lost track of which sections of the map I edited — the H.O.T. site, <a href="http://tasks.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team tasking manager</a>, now assigns me a new task when I visit it. But, as long as there are paths through the sugar-cane fields and mountains of the Philippines, there’s more work to be done — and I hope what’s been done so far has made the relief efforts more useful to the people who live there.
