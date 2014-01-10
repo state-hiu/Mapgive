@@ -4,3 +4,4 @@ Vagrantfile
 _site
 assets
 node_modules
+robot.txt
