@@ -22,7 +22,7 @@
     "grunt-jekyll": "*",
     "grunt-shell": "*",
     "grunt-sync": "*",
-    "grunt-img": "*",
+    "grunt-contrib-imagemin": "*",
     "grunt-svgmin": "*",
     "grunt-hashres": "*",
     "grunt-contrib-compress": "*",

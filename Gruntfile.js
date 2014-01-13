@@ -65,10 +65,14 @@ module.exports = function(grunt) {
           }
         },
 
-        img: {
-          main: {
-            src: ['_assets/img/**/*.png', '_assets/img/**/*.jpg', '_assets/img/**/*.jpeg'],
-            dest: 'assets/img'
+        imagemin: {
+          dynamic: {
+            files: [{
+              expand: true,
+              cwd: '_assets/img',
+              src: ['**/*.{png,jpg,jpeg,gif}'],
+              dest: 'assets/img'
+            }]
           }
         },
 
@@ -90,7 +94,11 @@ module.exports = function(grunt) {
               mode: 'gzip'
             },
             files: [
-              {expand: true, src: ['assets/img/*.min.svg'], dest: 'assets/img/', ext: '.svgz'}
+              {expand: true,
+               cwd: 'assets/img',
+               src: ['*.min.svg'],
+               dest: 'assets/img',
+               ext: '.svgz'}
             ]
           }
         },
@@ -121,7 +129,7 @@ module.exports = function(grunt) {
             expand: true,
             src: '_site/*',
             dest: 'backups/',
-            rename: function() {
+            rename: function(dest, src) {
               var path = require('path');
               var d = new Date;
               var date = [d.getFullYear(),
@@ -149,19 +157,7 @@ module.exports = function(grunt) {
               'assets/img/**/*.svgz'
             ],
             dest: [
-              '*.html',
-              '_includes/**/.html',
-              '_layouts/**/.html',
-              'about-open-mapping/**/*.html',
-              'commonly-asked-question/**/*.html',
-              'site-map/**/*.html',
-              'start-mapping/**/*.html',
-              'stories/**/*.html',
-              'stories/**/*.md',
-              'the-cause/**/*.html',
-              'transcripts/**/*.html',
-              '_assets/css/*.css',
-              '_assets/js/*.js'
+              'temp/**'
             ]
           },
           js: {
@@ -169,13 +165,13 @@ module.exports = function(grunt) {
               'assets/js/lt-ie9.min.js',
               'assets/js/main.min.js'
             ],
-            dest: '_layouts/default.html'
+            dest: 'temp/**'
           },
           css: {
             src: [
               'assets/css/main.min.css'
             ],
-            dest: '_layouts/default.html'
+            dest: 'temp/**'
           }
         },
 
@@ -194,7 +190,7 @@ module.exports = function(grunt) {
           },
           img: {
             files: ['_assets/img/*.jpg', '_assets/img/*.png', '_assets/img/*.svg'],
-            tasks: ['img', 'svgmin']
+            tasks: ['imagmin', 'svgmin']
           },
           imgFonts: {
             files: ['_assets/img/**', '_assets/fonts/**'],
@@ -224,7 +220,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', [
       'optimages',
-      'hashres:img',
+      'hashres:images',
       'sync',
       'uglify',
       'buildcss',
@@ -243,7 +239,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('optimages', [
       'shell:rmAssets',
-      'img',
+      'imagemin',
       'svgmin',
       'compress'
     ]);
