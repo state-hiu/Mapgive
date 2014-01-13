@@ -60,15 +60,14 @@ module.exports = function(grunt) {
         sync: {
           main: {
             files: [
-              {cwd: '_assets/fonts', src: ['**'], dest: 'assets/fonts/'},
-              {cwd: '_assets/img', src: ['**'], dest: 'assets/img/'}
+              {cwd: '_assets/fonts', src: ['**'], dest: 'assets/fonts/'}
             ]
           }
         },
 
         img: {
           main: {
-            src: ['_assets/img/**/*.png', '_assets/img/**/*.png'],
+            src: ['_assets/img/**/*.png', '_assets/img/**/*.jpg', '_assets/img/**/*.jpeg'],
             dest: 'assets/img'
           }
         },
@@ -85,12 +84,98 @@ module.exports = function(grunt) {
           }
         },
 
+        compress: {
+          main: {
+            options: {
+              mode: 'gzip'
+            },
+            files: [
+              {expand: true, src: ['assets/img/*.min.svg'], dest: 'assets/img/', ext: '.svgz'}
+            ]
+          }
+        },
+
         shell: {
           jekyll: {
             options: {
               stdout: true
             },
-            command: 'jekyll build',
+            command: 'jekyll build'
+          },
+          rmAssets: {
+            options: {
+              stdout: true
+            },
+            command: 'rm -rf assets/'
+          },
+          mvTemp: {
+            options: {
+              stdout: true
+            },
+            command: 'mv temp _site'
+          }
+        },
+
+        copy: {
+          main: {
+            expand: true,
+            src: '_site/*',
+            dest: 'backups/',
+            rename: function() {
+              var path = require('path');
+              var d = new Date;
+              var date = [d.getFullYear(),
+                          d.getMonth()+1,
+                          d.getDate()].join('')+
+                         [d.getHours(),
+                          d.getMinutes(),
+                          d.getSeconds()].join('');
+              return path.join(dest, date);
+            }
+          }
+        },
+
+        hashres: {
+          options: {
+            encoding: 'utf8',
+            fileNameFormat: '${name}.${hash}.cache.${ext}',
+            renameFiles: true
+          },
+          images: {
+            src: [
+              'assets/img/**/*.png',
+              'assets/img/**/*.jpg',
+              'assets/img/**/*.jpeg',
+              'assets/img/**/*.svgz'
+            ],
+            dest: [
+              '*.html',
+              '_includes/**/.html',
+              '_layouts/**/.html',
+              'about-open-mapping/**/*.html',
+              'commonly-asked-question/**/*.html',
+              'site-map/**/*.html',
+              'start-mapping/**/*.html',
+              'stories/**/*.html',
+              'stories/**/*.md',
+              'the-cause/**/*.html',
+              'transcripts/**/*.html',
+              '_assets/css/*.css',
+              '_assets/js/*.js'
+            ]
+          },
+          js: {
+            src: [
+              'assets/js/lt-ie9.min.js',
+              'assets/js/main.min.js'
+            ],
+            dest: '_layouts/default.html'
+          },
+          css: {
+            src: [
+              'assets/css/main.min.css'
+            ],
+            dest: '_layouts/default.html'
           }
         },
 
@@ -117,14 +202,50 @@ module.exports = function(grunt) {
           },
           jekyll: {
             files: [
-              '*.html', '*.yml', '*.txt', 'about-open-mapping/**/*', 'assets/**/*', 'commonly-asked-questions/**/*', 'favicon.*', 'start-mapping/**/*',
-              '_includes/**', 'site-map/**/*', 'stories/**/*', 'the-cause/**/*', '_layouts/**/*'
+              '*.html',
+              '*.yml',
+              '*.txt',
+              'about-open-mapping/**/*',
+              'assets/**/*',
+              'commonly-asked-questions/**/*',
+              'favicon.*',
+              'start-mapping/**/*',
+              '_includes/**',
+              'site-map/**/*',
+              'stories/**/*',
+              'the-cause/**/*',
+              '_layouts/**/*',
+              'transcripts/**/*'
             ],
             tasks: 'shell:jekyll'
           }
         }
     });
 
-    grunt.registerTask('default', ['sync', 'uglify', 'buildcss', 'shell:jekyll', 'htmlhint']);
-    grunt.registerTask('buildcss', ['cssc', 'cssmin']);
+    grunt.registerTask('default', [
+      'optimages',
+      'hashres:img',
+      'sync',
+      'uglify',
+      'buildcss',
+      'shell:jekyll',
+      'hashres:js',
+      'hashres:css',
+      'copy',
+      'shell:mvTemp',
+      'htmlhint'
+    ]);
+
+    grunt.registerTask('buildcss', [
+      'cssc',
+      'cssmin'
+    ]);
+
+    grunt.registerTask('optimages', [
+      'shell:rmAssets',
+      'img',
+      'svgmin',
+      'compress'
+    ]);
 };
+

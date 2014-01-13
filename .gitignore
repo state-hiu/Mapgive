@@ -1,7 +1,9 @@
 .DS_Store
 .vagrant
-Vagrantfile
-_site
-assets
-node_modules
 robot.txt
+Vagrantfile
+node_modules
+_site
+backups
+temp
+assets

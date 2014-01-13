@@ -24,6 +24,10 @@
     "grunt-sync": "*",
     "grunt-img": "*",
     "grunt-svgmin": "*",
+    "grunt-hashres": "*",
+    "grunt-contrib-compress": "*",
+    "grunt-contrib-copy": "*",
     "matchdep": "*"
   }
 }
+
