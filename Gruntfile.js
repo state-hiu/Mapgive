@@ -120,26 +120,7 @@ module.exports = function(grunt) {
             options: {
               stdout: true
             },
-            command: 'mv temp _site'
-          }
-        },
-
-        copy: {
-          main: {
-            expand: true,
-            src: '_site/*',
-            dest: 'backups/',
-            rename: function(dest, src) {
-              var path = require('path');
-              var d = new Date;
-              var date = [d.getFullYear(),
-                          d.getMonth()+1,
-                          d.getDate()].join('')+
-                         [d.getHours(),
-                          d.getMinutes(),
-                          d.getSeconds()].join('');
-              return path.join(dest, date);
-            }
+            command: 'rm -rf _site && mv temp _site'
           }
         },
 
@@ -157,7 +138,8 @@ module.exports = function(grunt) {
               'assets/img/**/*.svgz'
             ],
             dest: [
-              'temp/**'
+              'temp/*.html',
+              'temp/**/*.html'
             ]
           },
           js: {
@@ -165,13 +147,19 @@ module.exports = function(grunt) {
               'assets/js/lt-ie9.min.js',
               'assets/js/main.min.js'
             ],
-            dest: 'temp/**'
+            dest: [
+              'temp/*.html',
+              'temp/**/*.html'
+            ]
           },
           css: {
             src: [
               'assets/css/main.min.css'
             ],
-            dest: 'temp/**'
+            dest: [
+              'temp/*.html',
+              'temp/**/*.html'
+            ]
           }
         },
 
@@ -227,7 +215,7 @@ module.exports = function(grunt) {
       'shell:jekyll',
       'hashres:js',
       'hashres:css',
-      'copy',
+      'backupSite',
       'shell:mvTemp',
       'htmlhint'
     ]);
@@ -243,5 +231,18 @@ module.exports = function(grunt) {
       'svgmin',
       'compress'
     ]);
+
+    grunt.registerTask('backupSite', 'Makes a dated copy of the _site folder in backups', function() {
+      var d = new Date,
+          wrench = require('wrench'),
+          date = [d.getFullYear(),
+                  d.getMonth()+1,
+                  d.getDate(),
+                  d.getHours(),
+                  d.getMinutes(),
+                  d.getSeconds()].join('');
+
+      wrench.copyDirSyncRecursive('_site', 'backups/' + date);
+    });
 };
 
