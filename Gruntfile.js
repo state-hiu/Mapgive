@@ -82,8 +82,8 @@ module.exports = function(grunt) {
               expand: true,
               cwd: '_assets/img',
               src: ['**/*.svg'],
-              dest: 'assets/img/',
-              ext: '.min.svg'
+              dest: 'assets/img',
+              ext: '.svg'
             }]
           }
         },
@@ -96,7 +96,7 @@ module.exports = function(grunt) {
             files: [
               {expand: true,
                cwd: 'assets/img',
-               src: ['*.min.svg'],
+               src: ['*.svg'],
                dest: 'assets/img',
                ext: '.svgz'}
             ]
@@ -128,24 +128,26 @@ module.exports = function(grunt) {
           options: {
             encoding: 'utf8',
             fileNameFormat: '${name}.${hash}.cache.${ext}',
-            renameFiles: true
+            renameFiles: true,
+            expand: true
           },
           images: {
             src: [
-              'assets/img/**/*.png',
-              'assets/img/**/*.jpg',
-              'assets/img/**/*.jpeg',
-              'assets/img/**/*.svgz'
+              'temp/assets/img/*.png',
+              'temp/assets/img/*.jpg',
+              'temp/assets/img/*.jpeg'
             ],
             dest: [
               'temp/*.html',
-              'temp/**/*.html'
+              'temp/**/*.html',
+              'temp/**/*.css',
+              'temp/**/*.js'
             ]
           },
           js: {
             src: [
-              'assets/js/lt-ie9.min.js',
-              'assets/js/main.min.js'
+              'temp/assets/js/lt-ie9.min.js',
+              'temp/assets/js/main.min.js'
             ],
             dest: [
               'temp/*.html',
@@ -154,7 +156,7 @@ module.exports = function(grunt) {
           },
           css: {
             src: [
-              'assets/css/main.min.css'
+              'temp/assets/css/main.min.css'
             ],
             dest: [
               'temp/*.html',
@@ -208,11 +210,11 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', [
       'optimages',
-      'hashres:images',
       'sync',
       'uglify',
       'buildcss',
       'shell:jekyll',
+      'hashres:images',
       'hashres:js',
       'hashres:css',
       'backupSite',
@@ -233,8 +235,8 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('backupSite', 'Makes a dated copy of the _site folder in backups', function() {
-      var d = new Date,
-          wrench = require('wrench'),
+      var wrench = require('wrench'),
+          d = new Date,
           date = [d.getFullYear(),
                   d.getMonth()+1,
                   d.getDate(),
