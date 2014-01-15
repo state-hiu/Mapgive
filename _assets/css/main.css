@@ -453,7 +453,7 @@ dt {
 
   .infographics .start-button::before {
     background: url('/assets/img/arrow.png') repeat-x;
-    background: rgba(0,0,0,0) url('/assets/img/arrow.svg') repeat-x;
+    background: rgba(0,0,0,0) url('/assets/img/arrow.svgz') repeat-x;
     display: inline-block;
     content: "";
     height: 39px;
@@ -520,7 +520,7 @@ dt {
 .promo-box, .story-promo {
   margin-bottom: 30px;
   background: url('/assets/img/stripes.png') #ccdddd;
-  background: rgba(204,221,221,1) url('/assets/img/stripes.svg');
+  background: rgba(204,221,221,1) url('/assets/img/stripes.svgz');
 }
 
 .promo-box {

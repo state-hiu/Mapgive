@@ -87,7 +87,7 @@ dt{font-weight:normal;}
 .infographics .world{display:none;visibility:hidden;}
 @media (min-width: 768px){.infographics{padding-top:70px;margin-top:0;}
 .infographics .btn{width:220px;height:147px;font-size:2.5em;padding-left:25px;}
-.infographics .start-button::before{background:url(/assets/img/arrow.png) repeat-x;background:rgba(0,0,0,0) url(/assets/img/arrow.svg) repeat-x;display:inline-block;content:"";height:39px;width:190px;position:absolute;top:-50px;left:29px;}
+.infographics .start-button::before{background:url(/assets/img/arrow.png) repeat-x;background:rgba(0,0,0,0) url(/assets/img/arrow.svgz) repeat-x;display:inline-block;content:"";height:39px;width:190px;position:absolute;top:-50px;left:29px;}
 .infographics .world{display:block;visibility:visible;}
 }
 @media (min-width: 992px){.infographics .btn{width:293px;height:196px;font-size:4em;padding-left:12px;}
@@ -101,7 +101,7 @@ dt{font-weight:normal;}
 .infographics .btn .text{text-shadow:3px 3px 10px #693f41;box-shadow:none;}
 .infographics .btn:active .text{text-shadow:1px 1px 10px #693f41;}
 .infographics .btn .first{display:block;}
-.promo-box,.story-promo{margin-bottom:30px;background:url(/assets/img/stripes.png) #cdd;background:rgba(204,221,221,1) url(/assets/img/stripes.svg);}
+.promo-box,.story-promo{margin-bottom:30px;background:url(/assets/img/stripes.png) #cdd;background:rgba(204,221,221,1) url(/assets/img/stripes.svgz);}
 .promo-box{padding:20px;}
 .attribution{padding:0 20px 20px;}
 .story-promo .attribution{text-align:right;}

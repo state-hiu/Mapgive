@@ -60,16 +60,19 @@ module.exports = function(grunt) {
         sync: {
           main: {
             files: [
-              {cwd: '_assets/fonts', src: ['**'], dest: 'assets/fonts/'},
-              {cwd: '_assets/img', src: ['**'], dest: 'assets/img/'}
+              {cwd: '_assets/fonts', src: ['**'], dest: 'assets/fonts/'}
             ]
           }
         },
 
-        img: {
-          main: {
-            src: ['_assets/img/**/*.png', '_assets/img/**/*.png'],
-            dest: 'assets/img'
+        imagemin: {
+          dynamic: {
+            files: [{
+              expand: true,
+              cwd: '_assets/img',
+              src: ['**/*.{png,jpg,jpeg,gif}'],
+              dest: 'assets/img'
+            }]
           }
         },
 
@@ -79,9 +82,24 @@ module.exports = function(grunt) {
               expand: true,
               cwd: '_assets/img',
               src: ['**/*.svg'],
-              dest: 'assets/img/',
-              ext: '.min.svg'
+              dest: 'assets/img',
+              ext: '.svg'
             }]
+          }
+        },
+
+        compress: {
+          main: {
+            options: {
+              mode: 'gzip'
+            },
+            files: [
+              {expand: true,
+               cwd: 'assets/img',
+               src: ['*.svg'],
+               dest: 'assets/img',
+               ext: '.svgz'}
+            ]
           }
         },
 
@@ -90,7 +108,60 @@ module.exports = function(grunt) {
             options: {
               stdout: true
             },
-            command: 'jekyll build',
+            command: 'jekyll build'
+          },
+          rmAssets: {
+            options: {
+              stdout: true
+            },
+            command: 'rm -rf assets/'
+          },
+          mvTemp: {
+            options: {
+              stdout: true
+            },
+            command: 'rm -rf _site && mv temp _site'
+          }
+        },
+
+        hashres: {
+          options: {
+            encoding: 'utf8',
+            fileNameFormat: '${name}.${hash}.cache.${ext}',
+            renameFiles: true,
+            expand: true
+          },
+          images: {
+            src: [
+              'temp/assets/img/*.png',
+              'temp/assets/img/*.jpg',
+              'temp/assets/img/*.jpeg'
+            ],
+            dest: [
+              'temp/*.html',
+              'temp/**/*.html',
+              'temp/**/*.css',
+              'temp/**/*.js'
+            ]
+          },
+          js: {
+            src: [
+              'temp/assets/js/lt-ie9.min.js',
+              'temp/assets/js/main.min.js'
+            ],
+            dest: [
+              'temp/*.html',
+              'temp/**/*.html'
+            ]
+          },
+          css: {
+            src: [
+              'temp/assets/css/main.min.css'
+            ],
+            dest: [
+              'temp/*.html',
+              'temp/**/*.html'
+            ]
           }
         },
 
@@ -109,7 +180,7 @@ module.exports = function(grunt) {
           },
           img: {
             files: ['_assets/img/*.jpg', '_assets/img/*.png', '_assets/img/*.svg'],
-            tasks: ['img', 'svgmin']
+            tasks: ['imagmin', 'svgmin']
           },
           imgFonts: {
             files: ['_assets/img/**', '_assets/fonts/**'],
@@ -117,14 +188,63 @@ module.exports = function(grunt) {
           },
           jekyll: {
             files: [
-              '*.html', '*.yml', '*.txt', 'about-open-mapping/**/*', 'assets/**/*', 'commonly-asked-questions/**/*', 'favicon.*', 'start-mapping/**/*',
-              '_includes/**', 'site-map/**/*', 'stories/**/*', 'the-cause/**/*', '_layouts/**/*'
+              '*.html',
+              '*.yml',
+              '*.txt',
+              'about-open-mapping/**/*',
+              'assets/**/*',
+              'commonly-asked-questions/**/*',
+              'favicon.*',
+              'start-mapping/**/*',
+              '_includes/**',
+              'site-map/**/*',
+              'stories/**/*',
+              'the-cause/**/*',
+              '_layouts/**/*',
+              'transcripts/**/*'
             ],
             tasks: 'shell:jekyll'
           }
         }
     });
 
-    grunt.registerTask('default', ['sync', 'uglify', 'buildcss', 'shell:jekyll', 'htmlhint']);
-    grunt.registerTask('buildcss', ['cssc', 'cssmin']);
+    grunt.registerTask('default', [
+      'optimages',
+      'sync',
+      'uglify',
+      'buildcss',
+      'shell:jekyll',
+      'hashres:images',
+      'hashres:js',
+      'hashres:css',
+      'backupSite',
+      'shell:mvTemp',
+      'htmlhint'
+    ]);
+
+    grunt.registerTask('buildcss', [
+      'cssc',
+      'cssmin'
+    ]);
+
+    grunt.registerTask('optimages', [
+      'shell:rmAssets',
+      'imagemin',
+      'svgmin',
+      'compress'
+    ]);
+
+    grunt.registerTask('backupSite', 'Makes a dated copy of the _site folder in backups', function() {
+      var wrench = require('wrench'),
+          d = new Date,
+          date = [d.getFullYear(),
+                  d.getMonth()+1,
+                  d.getDate(),
+                  d.getHours(),
+                  d.getMinutes(),
+                  d.getSeconds()].join('');
+
+      wrench.copyDirSyncRecursive('_site', 'backups/' + date);
+    });
 };
+
