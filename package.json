@@ -1,8 +1,8 @@
 {
-  "name": "ImageryToTheCrowd",
+  "name": "MapGive",
   "version": "0.1.0",
   "author": "Office of Innovative Engagement, U.S. Department of State",
-  "description": "The Imagery to the Crowd website",
+  "description": "MapGive, part of the Imagery to the Crowd project from the U.S. Department of State’s Humanitarian Information Unit, makes it easy for new volunteers to learn to map and get involved in online mapping tasks",
   "contributors": [{
     "name": "Humanitarian Information Unit, U.S. Department of State"
   }],
