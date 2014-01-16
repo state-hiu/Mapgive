@@ -498,6 +498,16 @@ FileETag None
 </IfModule>
 
 # ------------------------------------------------------------------------------
+# | Cache control headers                                                      |
+# ------------------------------------------------------------------------------
+
+<IfModule mod_headers.c>
+    <filesMatch ".(gif|png|jpg|jpeg|svgz|svg|woff)$">
+      Header append Cache-Control "public"
+    </filesMatch>
+</IfModule>
+
+# ------------------------------------------------------------------------------
 # | Filename-based cache busting                                               |
 # ------------------------------------------------------------------------------
 
