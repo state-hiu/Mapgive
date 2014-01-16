@@ -65,14 +65,14 @@ module.exports = function(grunt) {
           }
         },
 
-        imagemin: {
-          dynamic: {
-            files: [{
-              expand: true,
-              cwd: '_assets/img',
-              src: ['**/*.{png,jpg,jpeg,gif}'],
-              dest: 'assets/img'
-            }]
+        img: {
+          task: {
+            src: [
+              '_assets/img/**/*.jpg',
+              '_assets/img/**/*.jpeg',
+              '_assets/img/**/*.png',
+            ],
+            dest: 'assets/img'
           }
         },
 
@@ -115,6 +115,12 @@ module.exports = function(grunt) {
               stdout: true
             },
             command: 'rm -rf assets/'
+          },
+          mkAssets: {
+            options: {
+              stdout: true
+            },
+            command: 'mkdir -p assets/img'
           },
           mvTemp: {
             options: {
@@ -229,7 +235,8 @@ module.exports = function(grunt) {
 
     grunt.registerTask('optimages', [
       'shell:rmAssets',
-      'imagemin',
+      'shell:mkAssets',
+      'img',
       'svgmin',
       'compress'
     ]);
