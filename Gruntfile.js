@@ -68,9 +68,9 @@ module.exports = function(grunt) {
         img: {
           task: {
             src: [
-              '_assets/img/**/*.jpg',
-              '_assets/img/**/*.jpeg',
-              '_assets/img/**/*.png',
+              '_assets/img/*.jpg',
+              '_assets/img/*.jpeg',
+              '_assets/img/*.png',
             ],
             dest: 'assets/img'
           }
@@ -81,7 +81,7 @@ module.exports = function(grunt) {
             files: [{
               expand: true,
               cwd: '_assets/img',
-              src: ['**/*.svg'],
+              src: ['*.svg'],
               dest: 'assets/img',
               ext: '.svg'
             }]
@@ -133,9 +133,8 @@ module.exports = function(grunt) {
         hashres: {
           options: {
             encoding: 'utf8',
-            fileNameFormat: '${name}.${hash}.cache.${ext}',
-            renameFiles: true,
-            expand: true
+            fileNameFormat: '${name}.${ext}?${hash}',
+            renameFiles: false
           },
           images: {
             src: [
