@@ -71,6 +71,34 @@
     });
   })();
 
+  // Switch out YouTube videos when clicked
+  (function () {
+    var videos = $('.video-player-container'),
+    params = {
+      rel: 0,
+      autoplay: 1,
+      showinfo: 0,
+      modestbranding: 1
+    };
+
+    videos.on('click', function() {
+      var _this = $(this),
+          baseurl = 'http://www.youtube.com/embed/',
+          videoId = _this.attr('data'),
+          param = $.param(params),
+          url = baseurl + videoId + '?' + param,
+          code = $('<iframe />', {
+            frameborder: '0',
+            allowfullscreen: 'true',
+            src: url
+          });
+
+      _this.children().remove()
+      _this.append(code);
+      _this.css('padding-bottom', '56.25%');
+    });
+  })();
+
   // Init accordions
   $(".js-accordion").a11yAccordion();
 
