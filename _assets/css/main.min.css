@@ -17,14 +17,16 @@ dt{font-weight:normal;}
 .site-tagline{display:none;}
 @media (min-width: 768px){.site-tagline{color:white;font-size:13px;margin:0;padding:0;display:block;}
 }
-.page-title{text-transform:uppercase;line-height:1.4em;margin-top:50px;}
+.page-title{text-transform:uppercase;line-height:1.4em;margin-top:25px;}
 .page-title:first-letter{font-size:1.25em;margin-top:-3px;}
+@media (min-width: 768px){.page-title{margin-top:50px;}
+}
 .btn-primary{background-color:#d73f3f;border-color:#d73f3f;color:white;}
 .navbar{width:100%;z-index:1;min-height:0;}
 .lt-ie8 .navbar{border:0;}
 .navbar a::after{content:'';padding:0;margin:0;font-size:1em;}
 .navbar.affix{position:fixed;top:0;}
-.navbar.affix+#main{padding-top:55px;}
+.navbar.affix+#main{padding-top:63px;}
 .navbar-default{background-color:#676;border:0;border-bottom:1px solid #51504d;border-radius:0;}
 .navbar-default .navbar-header{padding:10px 0;}
 .navbar-brand{padding:0 15px;}
