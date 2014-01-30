@@ -604,8 +604,8 @@ dt {
 
 .step .title {
   font-size: 1.15em;
-  display: block;
   margin-bottom: 15px;
+  float: left;
 }
 
 .step ol {
@@ -666,21 +666,6 @@ dt {
   padding-left: 75px;
 }
 
-/* Can't sprite these because "written instructions" can make the page very,
- * very long!
- */
-.lt-ie9 .steps #step-1 {
-  background: url("/assets/img/circle-list-item-1.png") 0 0 no-repeat;
-}
-
-.lt-ie9 .steps #step-2 {
-  background: url("/assets/img/circle-list-item-2.png") 0 0 no-repeat;
-}
-
-.lt-ie9 .steps #step-3 {
-  background: url("/assets/img/circle-list-item-3.png") 0 0 no-repeat;
-}
-
 .steps p, .steps ol li {
   font-size: 0.9em;
 }
@@ -692,6 +677,8 @@ dt {
 .steps .estimate {
   padding: 5px 0;
   margin-bottom: 15px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .steps .estimate p {
@@ -700,19 +687,8 @@ dt {
 }
 
 .steps .estimate .estimate-title {
-  background: url('/assets/img/low-res-sprite.png') no-repeat;
-  background-position: 0 -7971px;
-  padding: 0 0 0 25px;
+  padding: 0 0 0 10px;
   font-size: 1.15em;
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), 
-       (min-resolution: 192dpi) {
-  .steps .estimate .estimate-title {
-    background: url('/assets/img/hi-res-sprite.png') no-repeat;
-    background-size: 135px 10071px;
-    background-position: 0 -7849px;
-  }
 }
 
 .steps .estimate .estimate-title:after {
@@ -756,11 +732,6 @@ dt {
     border-bottom: 1px solid #bcbcbc;
     margin-bottom: 7px;
     padding: 1px 0 7px 20px;
-    background-position: 15px -7969px;
-  }
-
-  .lt-ie8 .steps .estimate .estimate-title {
-    background-position: 15px -7969px !important;
   }
 
   .steps .estimate .estimate-title:after {
@@ -769,52 +740,11 @@ dt {
   }
 }
 
-@media (min-width: 768px) and
-       (-webkit-min-device-pixel-ratio: 2), 
-       (min-width: 768px) and 
-       (min-resolution: 192dpi) {
-
-  .steps .estimate .estimate-title {
-    background-position: 15px -7849px;
-  }
-}
-
-@media (min-width: 992px) {
-  .steps .estimate .estimate-title {
-    background-position: 5px -7969px;
-  }
-}
-
-@media (min-width: 992px) and
-       (-webkit-min-device-pixel-ratio: 2), 
-       (min-width: 992px) and 
-       (min-resolution: 192dpi) {
-  .steps .estimate .estimate-title {
-    background-position: 5px -7849px;
-  }
-} 
-
-@media (min-width: 1200px) {
-  .steps .estimate .estimate-title {
-    background-position: 20px -7969px;
-  }
-}
-
-@media (min-width: 1200px) and
-       (-webkit-min-device-pixel-ratio: 2), 
-       (min-width: 1200px) and 
-       (min-resolution: 192dpi) {
-
-  .steps .estimate .estimate-title {
-    background-position: 20px -7849px;
-  }       
-}
-
-
 .thumbnail {
   padding: 15px;
   border: 1px solid #bcbcbc;
   border-radius: 0;
+  min-height: 308px;
 }
 
 .thumbnail h3 {
@@ -892,20 +822,6 @@ dt {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.play {
-  background: rgba(0,0,0,.4) url("/assets/img/play-button.png") no-repeat 50% 50%;
-  background-size: 100px 100px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.lt-ie9 .play {
-  background: url("/assets/img/ie-play-button.png") no-repeat 50% 50%;
 }
 
 .img-container {
@@ -1083,275 +999,448 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   display: none;
 }
 
-.media-body {
-  background: url('/assets/img/low-res-sprite.png') no-repeat; 
-  padding-left: 20%;
-}
-
-.media-body.globe {
-  background-position: 0 -1071px;
-}
-
-.media-body.map {
-  background-position: 0 -3371px;
-}
-
-.media-body.marker {
-  background-position: 0 -4521px;
-}
-
-.media-body.osm {
-  background-position: 0 -5671px;
-}
-
-.media-body.hot {
-  background-position: 0 -2221px;
-}
-
-.media-body.dos {
-  background-position: 0 -6821px;
-}
-
-@media (min-width: 500px) {
-  .media-body {
-    padding-left: 11%;
-  }
-}
-
-@media (min-width: 768px) {
-  .media-body {
-    padding-left: 18%
-  }
-
-  .media-body.globe {
-    background-position: 0 -1621px;
-  }
-
-  .media-body.map {
-    background-position: 0 -3921px;
-  }
-
-  .media-body.marker {
-    background-position: 0 -5071px;
-  }
-
-  .media-body.osm {
-    background-position: 0 -6221px;
-  }
-
-  .media-body.hot {
-    background-position: 0 -2771px;
-  }
-
-  .media-body.dos {
-    background-position: 0 -7371px;  
-  }
-}
-
-@media (min-width: 992px) {
-  .media-body {
-    padding-left: 21%
-  }
-}
-
-@media (min-width: 1200px) {
-  .media-body {
-    padding-left: 18%
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), 
-       (min-resolution: 192dpi) {
-  
-  .media-body {
-    background: url('/assets/img/hi-res-sprite.png') no-repeat;
-    -webkit-background-size: 137px 10071px;
-       -mos-background-size: 137px 10071px;
-         -o-background-size: 137px 10071px;
-            background-size: 137px 10071px;
-    padding-left: 20%;
-  }
-
-  .media-body.globe {
-    background-position: 0 -555px;
-  }
-
-  .media-body.marker {
-    background-position: 0 -4202px;
-  }
-  
-  .media-body.map {
-    background-position: 0 -2987px;
-  }
-
-  .media-body.osm {
-    background-position: 0 -5418px;
-  }
-
-  .media-body.hot {
-    background-position: 0 -1781px;
-  }
-
-  .media-body.dos {
-    background-position: 0 -6634px;
-  }
-}
-
-@media (min-width: 768px) and
-       (-webkit-min-device-pixel-ratio: 2), 
-       (min-width: 768px) and
-       (min-resolution: 192dpi) {
-
-  .media-body.globe {
-    background-position: 0 -1136px;
-  }
-
-  .media-body.marker {
-    background-position: 0 -4784px;
-  }
-
-  .media-body.map {
-    background-position: 0 -3568px;
-  }
-
-  .media-body.osm {
-    background-position: 0 -6000px;
-  }
-
-  .media-body.hot {
-    background-position: 0 -2373px;
-  }
-
-  .media-body.dos {
-    background-position: 0 -7216px;
-  }
-}
-
-@media (min-width: 768px) {
-  .lt-ie9 .media-body.globe {
-    background-position: 0 -1621px;
-  }
-
-  .lt-ie9 .media-body.map {
-    background-position: 0 -3921px;
-  }
-
-  .lt-ie9 .media-body.marker {
-    background-position: 0 -5071px;
-  }
-
-  .lt-ie9 .media-body.osm {
-    background-position: 0 -6221px;
-  }
-
-  .lt-ie9 .media-body.hot {
-    background-position: 0 -2771px;
-  }
-
-  .lt-ie9 .media-body.dos {
-    background-position: 0 -7371px;  
-  }
-}
-
 .social {
+  list-style-type: none;
+  padding: 0;
   overflow: hidden;
-  margin-bottom: 20px;
 }
 
 @media (min-width: 992px) {
   .social {
-    margin-top: 70px;
+    margin: 70px 0 0;
   }
 }
 
-.social div {
+.social li {
   float: left;
+  width: 20px;
+  height: 20px;
   margin-right: 10px;
 }
 
-.social p {
-  margin-bottom: 0;
-  line-height: 20px;
+.social .share {
+  border-right: 1px solid #51504d;
+  padding-right: 10px;
+  width: auto;
+  height: auto;
+}
+
+.no-svg .social .share,
+.svg .social .share {
+  background: none;
 }
 
 .social a {
-  padding-right: 20px;
-}
-
-.lt-ie8 .social a {
+  width: 20px;
+  height: 20px;
   display: inline-block;
 }
 
-.social a:hover {
-  color: transparent;
-  text-decoration: none;
-}
-
 .social a:after {
-  content: "";
-  padding-left: 0;
-  display: inline;
+  content: '';
 }
 
-.social .share {
-  padding-right: 10px;
-  border-right: 1px solid #51504d;
+.svg .globe,
+.svg .marker,
+.svg .map,
+.svg .hot,
+.svg .dos,
+.svg .logo,
+.svg .play-button,
+.svg .steps .estimate .clock,
+.svg .social li {
+  background-image: url("/assets/img/sprite.svgz");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 366px 208px;
 }
 
-.social .email,
-.social .facebook,
-.social .twitter,
-.social .google-plus {
-  background: url('/assets/img/low-res-sprite.png') no-repeat;
+.svg .social .mail {
+  background-position: -256px -177px;
+  margin-top: 3px;
+}
+
+.svg .social .facebook {
+  background-position: -277px -177px;
+}
+
+.svg .social .twitter {
+  background-position: -298px -177px;
+  margin-top: 2px;
+}
+
+.svg .social .plus {
+  background-position: -319px -177px;
+}
+
+.media {
+  clear: both;
+}
+
+.media-object {
+  width: 65px;
+  height: 65px;
+}
+
+.media-object span {
+  display: block;
+  width: 65px;
+  height: 65px;
+}
+
+.svg .media-object .globe {
+  background-position: -67px 0;
+  background-size: 229px 134px;
+  margin: 0 auto;
+}
+
+.svg .media-object .marker {
+  background-position: -195px 0;
+  background-size: 229px 134px;
+  width: 33px;
+  margin: 0 auto;
+}
+
+.svg .media-object .map {
+  background-position: -132px 0;
+  background-size: 229px 134px;
+  width: 63px;
+  margin: 0 auto;
+}
+
+.svg .media-object .osm {
+  background-image: url("/assets/img/osm.svgz");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 65px 64px;
+  width: 95px;
+  height: 93px;
+  margin: 0 auto;
+}
+
+.svg .media-object .hot {
+  background-position: -156px -68px;
+  background-size: 229px 134px;
+  height: 39px;
+  margin: 0 auto;
+}
+
+.svg .media-object .dos {
+  background-position: 0 -67px;
+  background-size: 229px 134px;
+  width: 67px;
+  height: 68px;
+  margin: 0 auto;
+}
+
+.site-logo {
+  font-family: "Code Light", "Trebuchet MS", Arial, sans-serif;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.site-logo.white {
+  color: #ffffff;
+}
+
+.svg .logo {
+  background-position: -1.19444444444444em -1.13888888888889em; /* -43/36 -41/36 */
+  background-size: 4.05555555555556em 2.30555555555556em; /* 146/36 83/36 */
+  width: 0.80555555555556em; /* 29/36 */
+  height: 1.20833333333333em; /* 43.5/36 */
+  display: inline-block;
+  margin: 0 3px;
+  position: relative;
+  top: 0.08333333333333em; /* 3/36 */
+}
+
+.svg .site-logo.white .logo {
+  background-position: -2em -1.16666666666667em; /* -72/36 -42/36 */
+  background-size: 4.05555555555556em 2.30555555555556em; /* 146/36 83/36 */
+  width: 0.80555555555556em; /* 29/36 */
+  height: 1.19444444444444em; /* 43.5/36 */
+  display: inline-block;
+  margin: 0 3px;
+  position: relative;
+  top: 0.08333333333333em; /* 3/36 */
+}
+
+.svg .play {
+  background-color: rgba(0,0,0,.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.svg .play-button {
+  background-position: 0 0;
+  width: 104px;
+  height: 104px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -52px;
+}
+
+.svg .steps .estimate .clock {
+  background-position: -340px -177px;
   width: 20px;
+  height: 20px;
+  display: block;
+  float: left;
+  margin: 2px 0 0 0;
 }
 
-.social .email {
-  background-position: 0 -8491px;
+.no-svg .globe,
+.no-svg .marker,
+.no-svg .map,
+.no-svg .osm,
+.no-svg .hot,
+.no-svg .dos,
+.no-svg .play-button,
+.no-svg .steps .estimate .clock,
+.no-svg .social li {
+  background-image: url("/assets/img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
-.social .facebook {
-  background-position: 0 -9011px;
+.no-svg .social .mail {
+  background-position: -23px -317px;
+  margin-top: 3px;
 }
 
-.social .twitter {
-  background-position: 0 -9531px;
+.no-svg .social .facebook {
+  background-position: -44px -317px;
 }
 
-.social .google-plus {
-  background-position: 0 -10051px;
-  margin-right: 0;
+.no-svg .social .twitter {
+  background-position: -65px -317px;
+  margin-top: 2px;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), 
-       (min-resolution: 192dpi) {
-  
-  .social .email,
-  .social .facebook,
-  .social .twitter,
-  .social .google-plus {
-    background: url('/assets/img/hi-res-sprite.png') no-repeat;
-    -webkit-background-size: 137px 10071px;
-       -mos-background-size: 137px 10071px;
-         -o-background-size: 137px 10071px;
-            background-size: 137px 10071px;
+.no-svg .social .plus {
+  background-position: -86px -317px;
+}
+
+.no-svg .media-object .globe {
+  background-position: 0 -164px;
+  width: 51px;
+  height: 51px;
+  margin: 0 auto;
+}
+
+.no-svg .media-object .marker {
+  background-position: -101px -164px;
+  width: 26px;
+  height: 51px;
+  margin: 0 auto;
+}
+
+.no-svg .media-object .map {
+  background-position: -52px -164px;
+  width: 48px;
+  height: 51px;
+  margin: 0 auto;
+}
+
+.no-svg .media-object .osm {
+  background-position: -128px -164px;
+  width: 46px;
+  height: 49px;
+  margin: 0 auto;
+}
+
+.no-svg .media-object .hot {
+  background-position: -226px -164px;
+  width: 50px;
+  height: 32px;
+  margin: 0 auto;
+}
+
+.no-svg .media-object .dos {
+  background-position: -175px -164px;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.no-svg .play {
+  background-color: rgba(0,0,0,.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.no-svg.lt-ie9 .play {
+  background-color: #000000;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+}
+
+.no-svg.lt-ie8 .play {
+  background-color: #000000;
+  filter: alpha(opacity=40);
+}
+
+.no-svg .play-button {
+  background-position: -95px -216px;
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px;
+}
+
+.no-svg .logo {}
+
+.no-svg .site-logo.white .logo {}
+
+.no-svg .steps .estimate .clock {
+  background-position: -2px -317px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  float: left;
+  margin: 2px 0 0 0;
+}
+
+.lt-ie9 .steps #step-1,
+.lt-ie9 .steps #step-2,
+.lt-ie9 .steps #step-3 {
+  background: url("/assets/img/sprite.png") no-repeat;
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-left: -75px;
+}
+
+.lt-ie9 .steps #step-1 {
+  background-position: -252px -103px;
+}
+
+.lt-ie9 .steps #step-2 {
+  background-position: -252px -52px;
+}
+
+.lt-ie9 .steps #step-3 {
+  background-position: -252px -1px;
+}
+
+@media (min-width: 768px) {
+  .media-object {
+    width: 130px;
+    height: 130px;
   }
-  .social .email {
-    background-position: 0 -8400px;
+
+  .media-object span {
+    width: 130px;
+    height: 130px;
   }
 
-  .social .facebook {
-    background-position: 0 -8950px;
+  .svg .media-object .globe {
+    background-position: -108px 0;
+    background-size: 366px 208px;
+    width: 100px;
+    height: 100px;
   }
 
-  .social .twitter {
-    background-position: 0 -9500px;
+  .svg .media-object .marker {
+    background-position: -312px 0;
+    background-size: 366px 208px;
+    width: 52px;
+    height: 100px;
   }
 
-  .social .google-plus {
-    background-position: 0 -10050px;
+  .svg .media-object .map {
+    background-position: -212px 0;
+    background-size: 366px 208px;
+    width: 95px;
+    height: 101px;
+  }
+
+  .svg .media-object .osm {
+    background-size: 95px 93px;
+    width: 95px;
+    height: 93px;
+  }
+
+  .svg .media-object .hot {
+    background-position: -255px -107px;
+    background-size: 366px 208px;
+    width: 100px;
+    height: 61px;
+  }
+
+  .svg .media-object .dos {
+    background-position: -1px -105px;
+    background-size: 366px 208px;
+    width: 102px;
+    height: 102px;
+  }
+
+  .no-svg .steps .estimate .clock,
+  .svg .steps .estimate .clock {
+    margin-left: 15px;
+  }
+
+  .no-svg .media-object .globe {
+    background-position: -1px -1px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .no-svg .media-object .marker {
+    background-position: -199px -1px;
+    width: 52px;
+    height: 100px;
+  }
+
+  .no-svg .media-object .map {
+    background-position: -102px -1px;
+    width: 96px;
+    height: 100px;
+  }
+
+  .no-svg .media-object .osm {
+    background-position: -1px -216px;
+    width: 92px;
+    height: 96px;
+  }
+
+  .no-svg .media-object .hot {
+    background-position: -137px -102px;
+    width: 100px;
+    height: 62px;
+  }
+
+  .no-svg .media-object .dos {
+    background-position: -196px -216px;
+    width: 100px;
+    height: 100px;
   }
 }
+
+@media (min-width: 992px) {
+  .no-svg .steps .estimate .clock,
+  .svg .steps .estimate .clock {
+    margin-left: 5px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .no-svg .steps .estimate .clock,
+  .svg .steps .estimate .clock {
+    margin-left: 15px;
+  }
+}
+
 /* Thanks to... */
 /* Sticky footer http://www.cssstickyfooter.com */
 /* Responsive YouTube embed http://avexdesigns.com/responsive-youtube-embed/ */

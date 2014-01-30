@@ -51,7 +51,7 @@ module.exports = function(grunt) {
             files: {
               'assets/js/main.min.js': ['_assets/js/vendor/bootstrap.min.js', '_assets/js/plugins.js', '_assets/js/vendor/jquery.a11yAccordion.js', '_assets/js/main.js'],
               'assets/js/lt-ie9.min.js': ['_assets/js/vendor/html5shiv.js', '_assets/js/vendor/respond.min.js'],
-              'assets/js/modernizr-2.7.0.min.js': ['_assets/js/vendor/modernizr-2.7.0.min.js'],
+              'assets/js/modernizr-2.7.1.min.js': ['_assets/js/vendor/modernizr-2.7.1.min.js'],
               'assets/js/jquery-1.10.2.min.js': ['_assets/js/vendor/jquery-1.10.2.min.js']
             }
           }
@@ -77,6 +77,11 @@ module.exports = function(grunt) {
         },
 
         svgmin: {
+          options: {
+            plugins: [
+              { collapseGroups: false }
+            ]
+          },
           dist: {
             files: [{
               expand: true,
