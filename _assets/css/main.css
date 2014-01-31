@@ -169,8 +169,17 @@ dt {
   max-width: 122px;
 }
 
+.navbar-brand .brand a:hover {
+  text-decoration: none;
+}
+
 .navbar-brand .brand a:after {
   display: none;
+}
+
+.navbar-brand .brand h1 {
+  font-size: 24px;
+  margin: 0 0 2px 0;
 }
 
 .navbar-nav {
@@ -180,7 +189,7 @@ dt {
 @media (min-width: 768px) {
   .navbar-nav {
     position: relative;
-    top: 20px;
+    top: 25px;
   }
 }
 
@@ -361,24 +370,7 @@ dt {
 .footer-title h2 {
   padding: 10px 0;
   text-transform: uppercase;
-}
-
-@media (min-width: 768px) {
-  .footer-title h2 {
-    background: url('/assets/img/low-res-sprite.png') no-repeat 585px -519px;
-  }
-}
-
-@media (min-width: 992px) {
-  .footer-title h2 {
-    background-position: 805px -519px;;
-  }
-}
-
-@media (min-width: 1200px) {
-  .footer-title h2 {
-    background-position: 1005px -519px;;
-  }
+  display: inline-block;
 }
 
 .mission {
@@ -387,15 +379,7 @@ dt {
 }
 
 .mission > h4 {
-  background: url('/assets/img/low-res-sprite.png') no-repeat 125px 0;
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .mission > h4 {
-    background: url('/assets/img/hi-res-sprite.png') no-repeat 125px 0;
-    background-size: 137px 10071px;
-    padding: 4px 0;
-  }
+  display: inline-block;
 }
 
 @media (min-width: 768px) {
@@ -1134,9 +1118,8 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 }
 
 .site-logo {
-  font-family: "Code Light", "Trebuchet MS", Arial, sans-serif;
+  font-family: "Trebuchet MS", Arial, sans-serif;
   text-transform: uppercase;
-  overflow: hidden;
 }
 
 .site-logo.white {
@@ -1144,25 +1127,25 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 }
 
 .svg .logo {
-  background-position: -1.19444444444444em -1.13888888888889em; /* -43/36 -41/36 */
+  background-position: -2em -1.16666666666667em; /* -72/36 -42/36 */
   background-size: 4.05555555555556em 2.30555555555556em; /* 146/36 83/36 */
   width: 0.80555555555556em; /* 29/36 */
   height: 1.20833333333333em; /* 43.5/36 */
   display: inline-block;
   margin: 0 3px;
   position: relative;
-  top: 0.08333333333333em; /* 3/36 */
+  top: 0.16666666666667em; /* 3/36 */
 }
 
 .svg .site-logo.white .logo {
-  background-position: -2em -1.16666666666667em; /* -72/36 -42/36 */
+  background-position: -1.19444444444444em -1.13888888888889em; /* -43/36 -41/36 */
   background-size: 4.05555555555556em 2.30555555555556em; /* 146/36 83/36 */
   width: 0.80555555555556em; /* 29/36 */
   height: 1.19444444444444em; /* 43.5/36 */
   display: inline-block;
   margin: 0 3px;
   position: relative;
-  top: 0.08333333333333em; /* 3/36 */
+  top: 0.16666666666667em; /* 3/36 */
 }
 
 .svg .play {
@@ -1194,12 +1177,16 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   margin: 2px 0 0 0;
 }
 
+.footer-flag-seal,
+.mission-flag-seal,
 .no-svg .globe,
 .no-svg .marker,
 .no-svg .map,
 .no-svg .osm,
 .no-svg .hot,
 .no-svg .dos,
+.no-svg .brand .logo,
+.no-svg .footer-title .logo,
 .no-svg .play-button,
 .no-svg .steps .estimate .clock,
 .no-svg .social li {
@@ -1298,9 +1285,25 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   margin: -50px;
 }
 
-.no-svg .logo {}
+.no-svg .brand .logo {
+  background-position: -203px -317px;
+  width: 18px;
+  height: 28px;
+  display: inline-block;
+  margin: 0 3px;
+  position: relative;
+  top: 5px;
+}
 
-.no-svg .site-logo.white .logo {}
+.no-svg .footer-title .logo {
+  background-position: -225px -317px;
+  width: 23px;
+  height: 35px;
+  display: inline-block;
+  margin: 0 3px;
+  position: relative;
+  top: 5px;
+}
 
 .no-svg .steps .estimate .clock {
   background-position: -2px -317px;
@@ -1331,6 +1334,15 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 
 .lt-ie9 .steps #step-3 {
   background-position: -252px -1px;
+}
+
+.mission-flag-seal {
+  background-position: -108px -317px;
+  width: 53px;
+  height: 19px;
+  float: right;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 @media (min-width: 768px) {
@@ -1425,6 +1437,20 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
     width: 100px;
     height: 100px;
   }
+
+  .mission-flag-seal {
+    display: none;
+    visibility: hidden;
+  }
+
+  .footer-flag-seal {
+    background-position: 0 -102px;
+    width: 136px;
+    height: 49px;
+    display: inline-block;
+    float: right;
+    margin-top: 25px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1432,12 +1458,20 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   .svg .steps .estimate .clock {
     margin-left: 5px;
   }
+
+  .footer-title h2 {
+    background-position: 805px -519px;
+  }
 }
 
 @media (min-width: 1200px) {
   .no-svg .steps .estimate .clock,
   .svg .steps .estimate .clock {
     margin-left: 15px;
+  }
+
+  .footer-title h2 {
+    background-position: 1005px -519px;
   }
 }
 
