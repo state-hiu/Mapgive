@@ -63,6 +63,10 @@ h3 {
   page-break-after: avoid;
 }
 
+.col-md-8 {
+  width: 100%;
+}
+
 #main {
   padding-bottom: 0;
 }
@@ -135,13 +139,13 @@ h3 {
   width: 100%;
 }
 
+.navbar,
 .accordion .js-control,
 .promo-box,
 .story-promo,
 .video,
 .social,
 #footer .legal,
-#footer nav,
 #footer .footer-nav {
-  display: none;
+  display: none !important;
 }
