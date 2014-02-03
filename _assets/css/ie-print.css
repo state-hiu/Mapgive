@@ -10,9 +10,9 @@ a:visited {
   text-decoration: underline;
 }
 
-/*a[href]:after {
-  content: " (" attr(href) ")";
-}*/
+a[href]:after {
+  content: "";
+}
 
 abbr[title]:after {
   content: " (" attr(title) ")";
@@ -80,14 +80,6 @@ h3 {
   margin: 0;
 }
 
-.infographics div {
-  width: 200px;    
-}
-
-.infographics .btn {
-  font-size: 1em;
-}
-
 .thumbnail {
   border: 0;
   padding: 0;
@@ -139,13 +131,15 @@ h3 {
   width: 100%;
 }
 
-.navbar,
+.infographics img.img-responsive,
+.infographics .btn,
 .accordion .js-control,
 .promo-box,
 .story-promo,
 .video,
 .social,
 #footer .legal,
+#footer nav,
 #footer .footer-nav {
   display: none !important;
 }
