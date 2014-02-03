@@ -1429,8 +1429,8 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   }
 
   #main-wrapper {
-    height: auto;
-    min-height: none;
+    height: auto !important;
+    min-height: 0 !important;
   }
 
   .page-title {

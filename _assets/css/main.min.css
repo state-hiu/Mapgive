@@ -303,7 +303,7 @@ img{max-width:100%!important;}
 p,h2,h3{orphans:3;widows:3;}
 h2,h3{page-break-after:avoid;}
 #main{padding-bottom:0;}
-#main-wrapper{height:auto;min-height:none;}
+#main-wrapper{height:auto!important;min-height:0!important;}
 .page-title{margin:0;}
 .infographics div{width:200px;}
 .infographics .btn{font-size:1em;}
