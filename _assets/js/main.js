@@ -1,11 +1,11 @@
-;(function($, window, document, undefined) {
+;(function ($, window, document, undefined) {
   var $html = $('html');
 
   $html.removeClass('no-js');
  
   // Resizes the divs on the stories aggregation page if they exceed the min-width.
   // Couldn't get this to work reliablly in IE8 so bypassing for now...
-  (function() {
+  (function () {
     if (!($html.hasClass('lt-ie9'))) {
     
       var $thumbs = $('.thumbnail'),
@@ -36,7 +36,7 @@
   })();
   
   // Activate fixed menu on all browsers less than IE8
-  (function() {
+  (function () {
     if (!($html.hasClass('lt-ie8'))) {
       $('.navbar').affix({
         offset: {
@@ -46,7 +46,7 @@
     }
   })();
 
-  (function() {
+  (function () {
     if ( $html.hasClass('lt-ie8') ) {
       var $quote = $(".quote blockquote");
       $quote.prepend("&ldquo;");
@@ -74,15 +74,19 @@
   // Switch out YouTube videos when clicked
   (function () {
     var videos = $('.video-player-container'),
-    params = {
-      rel: 0,
-      autoplay: 1,
-      showinfo: 0,
-      modestbranding: 1
-    };
+        keys = {
+          space: 32,
+          enter: 13
+        };
 
-    videos.on('click', function() {
-      var _this = $(this),
+    function loadVideo (i) {
+      var _this = i,
+          params = {
+            rel: 0,
+            autoplay: 1,
+            showinfo: 0,
+            modestbranding: 1
+          },
           baseurl = 'http://www.youtube.com/embed/',
           videoId = _this.attr('data'),
           param = $.param(params),
@@ -96,6 +100,27 @@
       _this.children().remove()
       _this.append(code);
       _this.css('padding-bottom', '56.25%');
+    }
+
+    videos.on('click', function() {
+      var _this = $(this);
+      loadVideo(_this);
+      _this.children('iframe').attr('tabindex', '0').focus();
+    });
+
+    videos.on('keydown', function(e) {
+      var _this = $(this);
+      switch(true) {
+        case(e.which === keys.space):
+          e.preventDefault();
+          loadVideo(_this);
+          _this.children('iframe').attr('tabindex', '0');
+          break;
+        case(e.which === keys.enter):
+          loadVideo(_this);
+          _this.children('iframe').attr('tabindex', '0');
+          break;
+      }
     });
   })();
 

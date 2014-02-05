@@ -10,7 +10,7 @@
     
     <!-- Prefetch DNS -->
     <link rel="dns-prefetch" href="//www.google-analytics.com" />
-    <link rel="dns-prefetch" href="//ajax.googleapis.com" />
+    <link rel="dns-prefetch" href="//code.jquery.com" />
     <link rel="dns-prefetch" href="//www.youtube.com" />
     
     <title>{{ site.name }} | {{ page.title }}</title>
@@ -54,13 +54,24 @@
         }
       </style>
     <![endif]-->
+    <script type="text/javascript" charset="utf-8">
+      (function(){
+        var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1),
+            html = document.getElementsByTagName('html')[0];
+        
+        if (isOperaMini) {
+          html.className += ' ' + 'opera-mini';
+        }
+       })();
+    </script>
+    <script src="/assets/js/modernizr-2.7.1.min.js"></script>
   </head>
   <body>
 
     <!-- Hidden preload 'div' to fetch sprite images before css needs them -->
     <div id="hidden-sprite">
-      <img src="/assets/img/low-res-sprite.png" width="0" height="0" alt="sprite" />
-      <img src="/assets/img/hi-res-sprite.png" width="0" height="0" alt="sprite" />
+      <img src="/assets/img/sprite.png" width="0" height="0" alt="sprite" />
+      <img src="/assets/img/sprite.svgz" width="0" height="0" alt="sprite" />
     </div>
 
     <!--[if lt IE 8]>
@@ -78,7 +89,7 @@
       {% include footer.html %}
     </footer>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script>window.jQuery || document.write('<script src="/assets/js/jquery-1.10.2.min.js"><\/script>')</script>
     <script src="/assets/js/main.min.js"></script>
     
