@@ -10,7 +10,7 @@
     
     <!-- Prefetch DNS -->
     <link rel="dns-prefetch" href="//www.google-analytics.com" />
-    <link rel="dns-prefetch" href="//ajax.googleapis.com" />
+    <link rel="dns-prefetch" href="//code.jquery.com" />
     <link rel="dns-prefetch" href="//www.youtube.com" />
     
     <title>{{ site.name }} | {{ page.title }}</title>
@@ -52,7 +52,16 @@
         }
       </style>
     <![endif]-->
-
+    <script type="text/javascript" charset="utf-8">
+      (function(){
+        var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1),
+            html = document.getElementsByTagName('html')[0];
+        
+        if (isOperaMini) {
+          html.className += ' ' + 'opera-mini';
+        }
+       })();
+    </script>
     <script src="/assets/js/modernizr-2.7.1.min.js"></script>
   </head>
   <body>

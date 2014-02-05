@@ -165,11 +165,10 @@ dt {
   padding: 0 15px;
 }
 
-.navbar-brand .brand {
-  max-width: 122px;
-}
 
-.navbar-brand .brand a:hover {
+.navbar-brand .brand a:focus,
+.navbar-brand .brand a:hover,
+.navbar-brand .brand a:active {
   text-decoration: none;
 }
 
@@ -276,7 +275,6 @@ dt {
   content: '';
   display: block;
   background: url('/assets/img/world-map.png') 50% 50% no-repeat;
-  background: rgba(0,0,0,0) url('/assets/img/world-map.svgz') 50% 50% no-repeat;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -1009,6 +1007,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   height: auto;
 }
 
+.opera-mini .social .share,
 .no-svg .social .share,
 .svg .social .share {
   background: none;
@@ -1179,6 +1178,17 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 
 .footer-flag-seal,
 .mission-flag-seal,
+.opera-mini .globe,
+.opera-mini .marker,
+.opera-mini .map,
+.opera-mini .media-object .osm,
+.opera-mini .hot,
+.opera-mini .dos,
+.opera-mini .brand .logo,
+.opera-mini .footer-title .logo,
+.opera-mini .play-button,
+.opera-mini .steps .estimate .clock,
+.opera-mini .social li,
 .no-svg .globe,
 .no-svg .marker,
 .no-svg .map,
@@ -1195,24 +1205,29 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   background-position: 0 0;
 }
 
+.opera-mini .social .mail,
 .no-svg .social .mail {
   background-position: -23px -317px;
   margin-top: 3px;
 }
 
+.opera-mini .social .facebook,
 .no-svg .social .facebook {
   background-position: -44px -317px;
 }
 
+.opera-mini .social .twitter,
 .no-svg .social .twitter {
   background-position: -65px -317px;
   margin-top: 2px;
 }
 
+.opera-mini .social .plus,
 .no-svg .social .plus {
   background-position: -86px -317px;
 }
 
+.opera-mini .media-object .globe,
 .no-svg .media-object .globe {
   background-position: 0 -164px;
   width: 51px;
@@ -1220,6 +1235,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   margin: 0 auto;
 }
 
+.opera-mini .media-object .marker,
 .no-svg .media-object .marker {
   background-position: -101px -164px;
   width: 26px;
@@ -1227,6 +1243,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   margin: 0 auto;
 }
 
+.opera-mini .media-object .map,
 .no-svg .media-object .map {
   background-position: -52px -164px;
   width: 48px;
@@ -1234,6 +1251,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   margin: 0 auto;
 }
 
+.opera-mini .media-object .osm,
 .no-svg .media-object .osm {
   background-position: -128px -164px;
   width: 46px;
@@ -1241,6 +1259,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   margin: 0 auto;
 }
 
+.opera-mini .media-object .hot,
 .no-svg .media-object .hot {
   background-position: -226px -164px;
   width: 50px;
@@ -1248,6 +1267,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   margin: 0 auto;
 }
 
+.opera-mini .media-object .dos,
 .no-svg .media-object .dos {
   background-position: -175px -164px;
   width: 50px;
@@ -1255,6 +1275,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   margin: 0 auto;
 }
 
+.opera-mini .play,
 .no-svg .play {
   background-color: rgba(0,0,0,.4);
   width: 100%;
@@ -1274,6 +1295,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   filter: alpha(opacity=40);
 }
 
+.opera-mini .play-button,
 .no-svg .play-button {
   background-position: -95px -216px;
   width: 100px;
@@ -1282,9 +1304,10 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -50px;
+  margin: -51px;
 }
 
+.opera-mini .brand .logo,
 .no-svg .brand .logo {
   background-position: -203px -317px;
   width: 18px;
@@ -1295,6 +1318,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   top: 5px;
 }
 
+.opera-mini .footer-title .logo,
 .no-svg .footer-title .logo {
   background-position: -225px -317px;
   width: 23px;
@@ -1305,6 +1329,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   top: 5px;
 }
 
+.opera-mini .steps .estimate .clock,
 .no-svg .steps .estimate .clock {
   background-position: -2px -317px;
   width: 20px;
@@ -1397,41 +1422,48 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
     height: 102px;
   }
 
+  .opera-mini .steps .estimate .clock,
   .no-svg .steps .estimate .clock,
   .svg .steps .estimate .clock {
     margin-left: 15px;
   }
 
+  .opera-mini .media-object .globe,
   .no-svg .media-object .globe {
     background-position: -1px -1px;
     width: 100px;
     height: 100px;
   }
 
+  .opera-mini .media-object .marker,
   .no-svg .media-object .marker {
     background-position: -199px -1px;
     width: 52px;
     height: 100px;
   }
 
+  .opera-mini .media-object .map,
   .no-svg .media-object .map {
     background-position: -102px -1px;
     width: 96px;
     height: 100px;
   }
 
+  .opera-mini .media-object .osm,
   .no-svg .media-object .osm {
     background-position: -1px -216px;
     width: 92px;
     height: 96px;
   }
 
+  .opera-mini .media-object .hot,
   .no-svg .media-object .hot {
     background-position: -137px -102px;
     width: 100px;
     height: 62px;
   }
 
+  .opera-mini .media-object .dos,
   .no-svg .media-object .dos {
     background-position: -196px -216px;
     width: 100px;
@@ -1454,6 +1486,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 }
 
 @media (min-width: 992px) {
+  .opera-mini .steps .estimate .clock,
   .no-svg .steps .estimate .clock,
   .svg .steps .estimate .clock {
     margin-left: 5px;
@@ -1465,6 +1498,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 }
 
 @media (min-width: 1200px) {
+  .opera-mini .steps .estimate .clock,
   .no-svg .steps .estimate .clock,
   .svg .steps .estimate .clock {
     margin-left: 15px;
@@ -1473,6 +1507,24 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   .footer-title h2 {
     background-position: 1005px -519px;
   }
+}
+
+.opera-mini.svg .globe,
+.opera-mini.svg .marker,
+.opera-mini.svg .map,
+.opera-mini.svg .osm,
+.opera-mini.svg .hot,
+.opera-mini.svg .dos,
+.opera-mini.svg .logo,
+.opera-mini.svg .play-button,
+.opera-mini.svg .steps .estimate .clock,
+.opera-mini.svg .social li {
+  background-size: auto auto;
+}
+
+.opera-mini.svg .site-logo.white .logo {
+  background-size: auto auto;
+  background-position: -203px -317px;
 }
 
 /* Thanks to... */
