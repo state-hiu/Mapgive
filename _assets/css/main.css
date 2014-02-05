@@ -1164,7 +1164,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -52px;
+  margin: -53px;
 }
 
 .svg .steps .estimate .clock {
