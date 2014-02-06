@@ -30,7 +30,7 @@ dt{font-weight:normal;}
 .navbar-default .navbar-header{padding:10px 0;}
 .navbar-brand{padding:0 15px;}
 .navbar-brand .brand a:focus,.navbar-brand .brand a:hover,.navbar-brand .brand a:active{text-decoration:none;}
-.navbar-brand .brand h1{font-size:24px;margin:0 0 2px 0;}
+.navbar-brand .brand h1{font-size:24px;margin:0 0 2px 0;display:inline-block;}
 .navbar-nav{margin:0;}
 @media (min-width: 768px){.navbar-nav{position:relative;top:25px;}
 }

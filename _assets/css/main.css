@@ -166,6 +166,7 @@ dt {
 .navbar-brand .brand h1 {
   font-size: 24px;
   margin: 0 0 2px 0;
+  display: inline-block;
 }
 
 .navbar-nav {
@@ -489,7 +490,6 @@ dt {
 .infographics .btn .first {
   display: block;
 }
-
 
 .promo-box, 
 .story-promo {
