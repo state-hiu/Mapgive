@@ -55,17 +55,15 @@ a:hover,
 a:focus,
 .action-link {
   color: #d73f3f;
-}
-
-a::after {
-  content: '\00BB';
-  font-size: 1em;
-  display: inline-block;
-  padding-left: 5px;
+  text-decoration: underline;
 }
 
 dt {
   font-weight: normal;
+}
+
+#main a {
+  text-decoration: underline;
 }
 
 #main-wrapper {
@@ -133,13 +131,6 @@ dt {
   border: 0;
 }
 
-.navbar a::after {
-  content: '';
-  padding: 0;
-  margin: 0;
-  font-size: 1em;
-}
-
 .navbar.affix {
   position: fixed;
   top: 0;
@@ -170,10 +161,6 @@ dt {
 .navbar-brand .brand a:hover,
 .navbar-brand .brand a:active {
   text-decoration: none;
-}
-
-.navbar-brand .brand a:after {
-  display: none;
 }
 
 .navbar-brand .brand h1 {
@@ -335,11 +322,6 @@ dt {
   color: #444;
 }
 
-#footer a::after {
-  content: '';
-  padding: 0;
-}
-
 @media (min-width: 768px) {
   #footer {
     position: relative;
@@ -419,6 +401,10 @@ dt {
   padding-top: 30px;
   padding-bottom: 10px;
   margin-bottom: 20px;
+}
+
+#main .infographics .btn {
+  text-decoration: none;
 }
 
 .infographics .world {
@@ -505,10 +491,31 @@ dt {
 }
 
 
-.promo-box, .story-promo {
+.promo-box, 
+.story-promo {
   margin-bottom: 30px;
   background: url('/assets/img/stripes.png') #ccdddd;
   background: rgba(204,221,221,1) url('/assets/img/stripes.svgz');
+}
+
+#main .thumbnail .caption a,
+#main .promo-box a,
+#main .story-promo a {
+  text-decoration: none;
+}
+
+#main .caption a:hover,
+#main .promo-box a:hover,
+#main .story-promo a:hover {
+  text-decoration: underline;
+}
+
+.action-link::after,
+#main .promo-box a::after {
+  content: '\00BB';
+  font-size: 1em;
+  display: inline-block;
+  padding-left: 5px;
 }
 
 .promo-box {
@@ -536,12 +543,6 @@ dt {
   font-size: 25px;
   line-height: 1.15em;
   font-style: italic;
-}
-
-.story-promo blockquote a::after {
-  content: "";
-  padding: 0;
-  display: inline;
 }
 
 .promo-box h2 {
@@ -738,10 +739,6 @@ dt {
   width: 100%;
 }
 
-.thumbnail h3 a::after {
-  content: '';
-}
-
 .thumbnail, .story {
   margin-bottom: 50px;
 }
@@ -911,17 +908,6 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 
 
 /*
- ******************** Overrides *********************
- */
-
-
-.infographics a::after, .image::after, .btn::after, .navbar .btn::after {
-  content: '';
-  padding: 0;
-  display: block;
-}
-
-/*
  ******************** Helpers / Fixes *********************
  */
 
@@ -1017,10 +1003,6 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   width: 20px;
   height: 20px;
   display: inline-block;
-}
-
-.social a:after {
-  content: '';
 }
 
 .svg .globe,
