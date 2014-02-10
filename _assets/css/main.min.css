@@ -78,8 +78,7 @@ dt{font-weight:normal;}
 .infographics .btn{background-color:#d73f3f;color:#fff;text-transform:uppercase;border-radius:0;width:100%;height:200px;font-size:4em;text-align:left;line-height:1em;padding-top:30px;padding-bottom:10px;margin-bottom:20px;}
 #main .infographics .btn{text-decoration:none;}
 .infographics .world{display:none;visibility:hidden;}
-@media (min-width: 768px){.infographics{padding-top:70px;margin-top:0;}
-.infographics .btn{width:220px;height:147px;font-size:2.5em;padding-left:25px;}
+@media (min-width: 768px){.infographics .btn{width:220px;height:147px;font-size:2.5em;padding-left:25px;}
 .infographics .world{display:block;visibility:visible;}
 }
 @media (min-width: 992px){.infographics .btn{width:293px;height:196px;font-size:4em;padding-left:12px;}

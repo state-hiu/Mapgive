@@ -414,11 +414,6 @@ dt {
 }
 
 @media (min-width: 768px) {
-  .infographics {
-    padding-top: 70px;
-    margin-top: 0;
-  }
-
   .infographics .btn {
     width: 220px;
     height: 147px;
