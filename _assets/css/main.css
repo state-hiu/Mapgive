@@ -426,18 +426,6 @@ dt {
     padding-left: 25px;
   }
 
-  .infographics .start-button::before {
-    background: url('/assets/img/arrow.png') repeat-x;
-    background: rgba(0,0,0,0) url('/assets/img/arrow.svgz') repeat-x;
-    display: inline-block;
-    content: "";
-    height: 39px;
-    width: 190px;
-    position: absolute;
-    top: -50px;
-    left: 29px;
-  }
-
   .infographics .world {
     display: block;
     visibility: visible;
@@ -451,11 +439,6 @@ dt {
     font-size: 4em;
     padding-left: 12px;
   }
-
-  .infographics .start-button::before {
-    width: 253px;
-    left: 33px;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -463,10 +446,6 @@ dt {
     width: 360px;
     height: 240px;
     font-size: 5em;
-  }
-
-  .infographics .start-button::before {
-    width: 315px;
   }
 
   .infographics .btn .first {

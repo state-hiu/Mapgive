@@ -80,14 +80,11 @@ dt{font-weight:normal;}
 .infographics .world{display:none;visibility:hidden;}
 @media (min-width: 768px){.infographics{padding-top:70px;margin-top:0;}
 .infographics .btn{width:220px;height:147px;font-size:2.5em;padding-left:25px;}
-.infographics .start-button::before{background:url(/assets/img/arrow.png) repeat-x;background:rgba(0,0,0,0) url(/assets/img/arrow.svgz) repeat-x;display:inline-block;content:"";height:39px;width:190px;position:absolute;top:-50px;left:29px;}
 .infographics .world{display:block;visibility:visible;}
 }
 @media (min-width: 992px){.infographics .btn{width:293px;height:196px;font-size:4em;padding-left:12px;}
-.infographics .start-button::before{width:253px;left:33px;}
 }
 @media (min-width: 1200px){.infographics .btn{width:360px;height:240px;font-size:5em;}
-.infographics .start-button::before{width:315px;}
 .infographics .btn .first{margin-top:10px;}
 }
 .infographics .btn:active{box-shadow:inset 0 0 10px -2px #693f41;}
