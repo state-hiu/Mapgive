@@ -85,7 +85,8 @@
             rel: 0,
             autoplay: 1,
             showinfo: 0,
-            modestbranding: 1
+            modestbranding: 1,
+            html5: 1
           },
           baseurl = 'http://www.youtube.com/embed/',
           videoId = _this.attr('data'),
@@ -105,7 +106,6 @@
     videos.on('click', function() {
       var _this = $(this);
       loadVideo(_this);
-      _this.children('iframe').attr('tabindex', '0').focus();
     });
 
     videos.on('keydown', function(e) {
