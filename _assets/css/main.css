@@ -414,6 +414,11 @@ dt {
 }
 
 @media (min-width: 768px) {
+  .hook span {
+    display: block;
+    text-align: center;
+  }
+
   .infographics .btn {
     width: 220px;
     height: 147px;
