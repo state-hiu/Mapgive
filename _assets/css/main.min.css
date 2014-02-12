@@ -19,7 +19,7 @@ dt{font-weight:normal;}
 }
 .page-title{text-transform:uppercase;line-height:1.4em;margin-top:25px;}
 .page-title:first-letter{font-size:1.25em;margin-top:-3px;}
-@media (min-width: 768px){.page-title{margin-top:50px;}
+@media (min-width: 768px){.hook,.page-title{margin-top:50px;}
 }
 .btn-primary{background-color:#d73f3f;border-color:#d73f3f;color:white;}
 .navbar{width:100%;z-index:1;min-height:0;}

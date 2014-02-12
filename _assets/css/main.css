@@ -108,6 +108,7 @@ dt {
 }
 
 @media (min-width: 768px) {
+  .hook,
   .page-title {
     margin-top: 50px;
   }
