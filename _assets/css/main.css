@@ -279,6 +279,12 @@ dt {
   padding: 0;
 }
 
+#footer .social {
+  display: inline-block;
+  float: right;
+  margin: 0;
+}
+
 .footer-nav {
   overflow: hidden;
 }
@@ -314,6 +320,7 @@ dt {
 #footer .legal a {
   font-size: .8em;
   padding-right: 10px;
+  display: inline-block;
 }
 
 #footer .legal > div {
@@ -1014,6 +1021,10 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   margin-top: 2px;
 }
 
+.svg #footer .twitter {
+  margin: 0;
+}
+
 .svg .social .plus {
   background-position: -319px -177px;
 }
@@ -1182,6 +1193,11 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 .no-svg .social .twitter {
   background-position: -65px -317px;
   margin-top: 2px;
+}
+
+.opera-mini #footer .twitter,
+.no-svg #footer .twitter {
+  margin: 0;
 }
 
 .opera-mini .social .plus,

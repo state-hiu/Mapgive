@@ -51,6 +51,7 @@ dt{font-weight:normal;}
 #footer{background-color:#bcbcbc;border-top:10px solid #52504d;position:relative;}
 #footer::before{content:'';display:block;background:url(/assets/img/world-map.png) 50% 50% no-repeat;background-size:cover;position:absolute;top:0;left:0;bottom:0;right:0;opacity:0.15;}
 #footer ul{list-style-type:none;margin:10px 0 0 0;padding:0;}
+#footer .social{display:inline-block;float:right;margin:0;}
 .footer-nav{overflow:hidden;}
 .footer-nav li{margin:0 0 15px 0;padding:0;font-size:.9em;}
 .footer-nav>.first{padding-left:0;margin-bottom:0;}
@@ -58,7 +59,7 @@ dt{font-weight:normal;}
 .footer-nav ul li{font-size:1em;}
 .footer-nav ul .first{margin-top:15px;}
 #footer .legal{padding:10px 0;margin:0;}
-#footer .legal a{font-size:.8em;padding-right:10px;}
+#footer .legal a{font-size:.8em;padding-right:10px;display:inline-block;}
 #footer .legal>div{padding:0;}
 #footer a{color:#444;}
 @media (min-width: 768px){#footer{position:relative;margin-top:-300px;min-height:300px;height:auto;}
@@ -193,6 +194,7 @@ img[src$=".svgz"].img-responsive,img[src$=".svg"].img-responsive{width:100%;}
 .svg .social .mail{background-position:-256px -177px;margin-top:3px;}
 .svg .social .facebook{background-position:-277px -177px;}
 .svg .social .twitter{background-position:-298px -177px;margin-top:2px;}
+.svg #footer .twitter{margin:0;}
 .svg .social .plus{background-position:-319px -177px;}
 .media{clear:both;}
 .media-object{width:65px;height:65px;}
@@ -214,6 +216,7 @@ img[src$=".svgz"].img-responsive,img[src$=".svg"].img-responsive{width:100%;}
 .opera-mini .social .mail,.no-svg .social .mail{background-position:-23px -317px;margin-top:3px;}
 .opera-mini .social .facebook,.no-svg .social .facebook{background-position:-44px -317px;}
 .opera-mini .social .twitter,.no-svg .social .twitter{background-position:-65px -317px;margin-top:2px;}
+.opera-mini #footer .twitter,.no-svg #footer .twitter{margin:0;}
 .opera-mini .social .plus,.no-svg .social .plus{background-position:-86px -317px;}
 .opera-mini .media-object .globe,.no-svg .media-object .globe{background-position:0 -164px;width:51px;height:51px;margin:0 auto;}
 .opera-mini .media-object .marker,.no-svg .media-object .marker{background-position:-101px -164px;width:26px;height:51px;margin:0 auto;}
