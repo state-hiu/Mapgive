@@ -3,7 +3,7 @@ markdown: redcarpet
 pygments: false
 timezone: America/New_York
 permalink: none
-baseurl: /
+baseurl: /Mapgive
 url: http://mapgive.state.gov
 destination: temp/
 
