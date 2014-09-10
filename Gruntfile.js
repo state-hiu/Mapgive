@@ -94,6 +94,8 @@ module.exports = function(grunt) {
           }
         },
 
+
+/*
         compress: {
           main: {
             options: {
@@ -108,7 +110,7 @@ module.exports = function(grunt) {
             ]
           }
         },
-
+*/
         shell: {
           jekyll: {
             options: {
@@ -243,7 +245,7 @@ module.exports = function(grunt) {
       'shell:mkAssets',
       'img',
       'svgmin',
-      'compress'
+      //'compress'
     ]);
 
     grunt.registerTask('backupSite', 'Makes a dated copy of the _site folder in backups', function() {

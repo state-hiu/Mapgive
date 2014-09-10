@@ -482,7 +482,7 @@ dt {
 .story-promo {
   margin-bottom: 30px;
   background: url('/assets/img/stripes.png') #ccdddd;
-  background: rgba(204,221,221,1) url('/assets/img/stripes.svgz');
+  background: rgba(204,221,221,1) url('/assets/img/stripes.svg');
 }
 
 #main .thumbnail .caption a,
@@ -800,7 +800,7 @@ dt {
   height: auto;
 }
 
-img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
+img[src$=".svg"].img-responsive, img[src$=".svg"].img-responsive {
   width: 100%;
 }
 
@@ -1001,7 +1001,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 .svg .play-button,
 .svg .steps .estimate .clock,
 .svg .social li {
-  background-image: url("/assets/img/sprite.svgz");
+  background-image: url("/assets/img/sprite.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 366px 208px;
@@ -1065,7 +1065,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 }
 
 .svg .media-object .osm {
-  background-image: url("/assets/img/osm.svgz");
+  background-image: url("/assets/img/osm.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 65px 64px;
