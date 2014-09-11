@@ -2,11 +2,11 @@
 
 @font-face {
     font-family: "Open Sans";
-    src: url('{{ site.baseurl }}/assets/fonts/OpenSans-Regular-webfont.eot');
-    src: url('{{ site.baseurl }}/assets/fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('{{ site.baseurl }}/assets/fonts/OpenSans-Regular-webfont.woff') format('woff'),
-         url('{{ site.baseurl }}/assets/fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
-         url('{{ site.baseurl }}/assets/fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    src: url('/assets/fonts/OpenSans-Regular-webfont.eot');
+    src: url('/assets/fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('/assets/fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('/assets/fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -263,7 +263,7 @@ dt {
 #footer::before {
   content: '';
   display: block;
-  background: url('{{ site.baseurl }}/assets/img/world-map.png') 50% 50% no-repeat;
+  background: url('/assets/img/world-map.png') 50% 50% no-repeat;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -481,7 +481,7 @@ dt {
 .promo-box, 
 .story-promo {
   margin-bottom: 30px;
-  background: url('{{ site.baseurl }}/assets/img/stripes.png') #ccdddd;
+  background: url('/assets/img/stripes.png') #ccdddd;
   background: rgba(204,221,221,1) url('/assets/img/stripes.svg');
 }
 
@@ -1001,7 +1001,7 @@ img[src$=".svg"].img-responsive, img[src$=".svg"].img-responsive {
 .svg .play-button,
 .svg .steps .estimate .clock,
 .svg .social li {
-  background-image: url("{{ site.baseurl }}/assets/img/sprite.svg");
+  background-image: url("/assets/img/sprite.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 366px 208px;
@@ -1065,7 +1065,7 @@ img[src$=".svg"].img-responsive, img[src$=".svg"].img-responsive {
 }
 
 .svg .media-object .osm {
-  background-image: url("{{ site.baseurl }}/assets/img/osm.svg");
+  background-image: url("/assets/img/osm.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 65px 64px;
@@ -1173,7 +1173,7 @@ img[src$=".svg"].img-responsive, img[src$=".svg"].img-responsive {
 .no-svg .play-button,
 .no-svg .steps .estimate .clock,
 .no-svg .social li {
-  background-image: url("{{ site.baseurl }}/assets/img/sprite.png");
+  background-image: url("/assets/img/sprite.png");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -1320,7 +1320,7 @@ img[src$=".svg"].img-responsive, img[src$=".svg"].img-responsive {
 .lt-ie9 .steps #step-1,
 .lt-ie9 .steps #step-2,
 .lt-ie9 .steps #step-3 {
-  background: url("{{ site.baseurl }}/assets/img/sprite.png") no-repeat;
+  background: url("/assets/img/sprite.png") no-repeat;
   width: 50px;
   height: 50px;
   float: left;
