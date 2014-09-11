@@ -1,9 +1,9 @@
 ---
 layout: story
-title: Responding to Disasters, Saving Lives
+title: Mapping in response to Ebola Outbreak
 person: Tyler Machado, Journalist 
-country: Philippines
-image: ../assets/img/philippines-story.jpg
+country: Western Africa
+image: https://hiu.state.gov/Thumbnails_Region/Africa_EbolaDiseaseWithoutBorders_2014Aug11_HIU_U1064_300px.jpg
 altText: International agencies coordinated ground relief efforts after Typhoon Haiyan/Yolanda, Republic of the Philippines, November 2013; remote online mapping events supported the work. Photo by U.S. Army, SPC Andrew Robertson.
 caption: International agencies coordinated ground relief efforts after Typhoon Haiyan/Yolanda, Republic of the Philippines, November 2013; remote online mapping events supported the work. Photo by U.S. Army, SPC Andrew Robertson.
 twitterDescription: "Before typhoon Haiyan made landfall, mappers went to work. #MapGive"
@@ -13,6 +13,8 @@ ogImage: "../assets/img/philippines-story.jpg"
 emailSubject: Before typhoon Haiyan made landfall, mappers went to work.
 emailDescription: "In November 2013, the Humanitarian OpenSteetMap Team (HOT) activated volunteer mappers well in advance of super typhoon Haiyan making landfall in the Philippines in order to gather a baseline of geographic data."
 ---
+
+This is a test Story....
 
 In November 2013, the <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenSteetMap Team</a> (HOT) started activating volunteer mappers even before super typhoon Haiyan made landfall in the Philippines to gather a baseline of geographic data.
 
