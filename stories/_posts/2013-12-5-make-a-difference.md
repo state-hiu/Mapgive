@@ -3,13 +3,13 @@ layout: story
 title: Empowering People, Developing Communities
 person: Kepha Ngito, Executive Director of Map Kibera Trust 
 country: Kenya
-image: /assets/img/kepha-ngito.jpg
+image: ../assets/img/kepha-ngito.jpg
 altText: Kepha Ngito, Executive Director, Map Kibera, Nairobi, Kenya. Photo by cafod.org.uk.
 caption: Kepha Ngito, Executive Director, Map Kibera, Nairobi, Kenya. Photo by <a href="http://www.cafod.org.uk/" target="_blank">cafod.org.uk</a>.
 twitterDescription: Maps improved living conditions in Nairobi's Kibera slum. Help build a brighter future with #MapGive
-twitterImage: "/assets/img/kepha-ngito.jpg"
+twitterImage: "{{ site.baseurl }}/assets/img/kepha-ngito.jpg"
 ogDescription: Maps led to validation and more government resources for the people of Kibera in Nairobi Kenya.
-ogImage: "/assets/img/kepha-ngito.jpg"
+ogImage: "{{ site.baseurl }}/assets/img/kepha-ngito.jpg"
 emailSubject: Maps improved living conditions in Nairobi's Kibera slum.
 emailDescription: "In the sprawling Kibera slum of Nairobi, Kenya, crowd-sourced maps provide data used by government to allocate resources that are building a brighter future."
 ---
