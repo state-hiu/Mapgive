@@ -17,6 +17,7 @@
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-compress": "*",
+    "grunt-contrib-copy": "^0.5.0",
     "grunt-contrib-cssmin": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",

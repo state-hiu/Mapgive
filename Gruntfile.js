@@ -87,13 +87,20 @@ module.exports = function(grunt) {
             files: [{
               expand: true,
               cwd: '_assets/img',
-              src: ['*.svg'],
+              src: ['*.svg','!osm.svg'],
               dest: 'assets/img',
               ext: '.svg'
             }]
           }
         },
-
+        
+        //osm.svg was not compressing right so copying it instead
+        copy: {   
+			dist: {
+				src: '_assets/img/osm.svg', 
+				dest: 'assets/img/osm.svg',
+			}
+		},
 
 /*
         compress: {
@@ -137,6 +144,8 @@ module.exports = function(grunt) {
             command: 'rm -rf _site && mv temp _site'
           }
         },
+        
+        
 
         hashres: {
           options: {
@@ -177,6 +186,7 @@ module.exports = function(grunt) {
             ]
           }
         },
+        
 
         watch: {
           html: {
@@ -237,16 +247,19 @@ module.exports = function(grunt) {
 
     grunt.registerTask('buildcss', [
       'cssc',
-      'cssmin'
+      'cssmin',
+      'copy'
     ]);
 
     grunt.registerTask('optimages', [
       'shell:rmAssets',
       'shell:mkAssets',
       'img',
-      'svgmin',
+      'svgmin'
       //'compress'
     ]);
+    
+    
 
     grunt.registerTask('backupSite', 'Makes a dated copy of the _site folder in backups', function() {
       var wrench = require('wrench'),
