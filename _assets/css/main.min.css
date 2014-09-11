@@ -1,7 +1,7 @@
-@font-face{font-family:"Open Sans";src:url('/assets/fonts/OpenSans-Regular-webfont.eot');src:url('/assets/fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/assets/fonts/OpenSans-Regular-webfont.woff') format('woff'),
-         url('/assets/fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
-         url('/assets/fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');font-weight:normal;font-style:normal;}
+@font-face{font-family:"Open Sans";src:url("../fonts/OpenSans-Regular-webfont.eot");src:url("../fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/OpenSans-Regular-webfont.woff") format("woff"),
+         url("../fonts/OpenSans-Regular-webfont.ttf") format("truetype"),
+         url("../fonts/OpenSans-Regular-webfont.svg#open_sansregular") format("svg");font-weight:normal;font-style:normal;}
 @media (min-width: 768px){html,body{height:100%;}
 }
 body{font-family:Open Sans,Arial,sans-serif;font-weight:400;font-size:15px;color:#51504d;}
@@ -52,7 +52,7 @@ dt{font-weight:normal;}
 .navbar-default .navbar-nav>li>a.navbar-btn{position:relative;bottom:6px;margin:0 0 0 20px;}
 }
 #footer{background-color:#bcbcbc;border-top:10px solid #52504d;position:relative;}
-#footer::before{content:'';display:block;background:url(/assets/img/world-map.png) 50% 50% no-repeat;background-size:cover;position:absolute;top:0;left:0;bottom:0;right:0;opacity:0.15;}
+#footer::before{content:"";display:block;background:url(../img/world-map.png) 50% 50% no-repeat;background-size:cover;position:absolute;top:0;left:0;bottom:0;right:0;opacity:0.15;}
 #footer ul{list-style-type:none;margin:10px 0 0 0;padding:0;}
 #footer .social{display:inline-block;float:right;margin:0;}
 .footer-nav{overflow:hidden;}
@@ -95,10 +95,10 @@ dt{font-weight:normal;}
 .infographics .btn .text{text-shadow:3px 3px 10px #693f41;box-shadow:none;}
 .infographics .btn:active .text{text-shadow:1px 1px 10px #693f41;}
 .infographics .btn .first{display:block;}
-.promo-box,.story-promo{margin-bottom:30px;background:url(/assets/img/stripes.png) #cdd;background:rgba(204,221,221,1) url(/assets/img/stripes.svg);}
+.promo-box,.story-promo{margin-bottom:30px;background:url(../img/stripes.png) #cdd;background:rgba(204,221,221,1) url(../img/stripes.svg);}
 #main .thumbnail .caption a,#main .promo-box a,#main .story-promo a{text-decoration:none;}
 #main .caption a:hover,#main .promo-box a:hover,#main .story-promo a:hover{text-decoration:underline;}
-.action-link::after,#main .promo-box a::after{content:'\00BB';font-size:1em;display:inline-block;padding-left:5px;}
+.action-link::after,#main .promo-box a::after{content:"\00BB";font-size:1em;display:inline-block;padding-left:5px;}
 .promo-box{padding:20px;}
 .attribution{padding:0 20px 20px;}
 .story-promo .attribution{text-align:right;}
@@ -176,7 +176,7 @@ img[src$=".svg"].img-responsive{width:100%;}
 }
 .lt-ie8 .accordion .js-control{padding-right:0;padding-left:10px;}
 .first{padding-left:0;margin-left:0;}
-.lt-ie8 div[class^='col-']{padding-left:0;padding-right:0;}
+.lt-ie8 div[class^="col-"]{padding-left:0;padding-right:0;}
 .lt-ie8 .row{margin-left:0;margin-right:0;}
 @media (min-width: 768px){.lt-ie8 .row{overflow:hidden;}
 }
@@ -193,7 +193,7 @@ img[src$=".svg"].img-responsive{width:100%;}
 .social .share{border-right:1px solid #51504d;padding-right:10px;width:auto;height:auto;}
 .opera-mini .social .share,.no-svg .social .share,.svg .social .share{background:0;}
 .social a{width:20px;height:20px;display:inline-block;}
-.svg .globe,.svg .marker,.svg .map,.svg .hot,.svg .dos,.svg .logo,.svg .play-button,.svg .steps .estimate .clock,.svg .social li{background-image:url(/assets/img/sprite.svg);background-repeat:no-repeat;background-position:0 0;background-size:366px 208px;}
+.svg .globe,.svg .marker,.svg .map,.svg .hot,.svg .dos,.svg .logo,.svg .play-button,.svg .steps .estimate .clock,.svg .social li{background-image:url(../img/sprite.svg);background-repeat:no-repeat;background-position:0 0;background-size:366px 208px;}
 .svg .social .mail{background-position:-256px -177px;margin-top:3px;}
 .svg .social .facebook{background-position:-277px -177px;}
 .svg .social .twitter{background-position:-298px -177px;margin-top:2px;}
@@ -205,7 +205,7 @@ img[src$=".svg"].img-responsive{width:100%;}
 .svg .media-object .globe{background-position:-67px 0;background-size:229px 134px;margin:0 auto;}
 .svg .media-object .marker{background-position:-195px 0;background-size:229px 134px;width:33px;margin:0 auto;}
 .svg .media-object .map{background-position:-132px 0;background-size:229px 134px;width:63px;margin:0 auto;}
-.svg .media-object .osm{background-image:url(/assets/img/osm.svg);background-repeat:no-repeat;background-position:0 0;background-size:65px 64px;width:95px;height:93px;margin:0 auto;}
+.svg .media-object .osm{background-image:url(../img/osm.svg);background-repeat:no-repeat;background-position:0 0;background-size:65px 64px;width:95px;height:93px;margin:0 auto;}
 .svg .media-object .hot{background-position:-156px -68px;background-size:229px 134px;height:39px;margin:0 auto;}
 .svg .media-object .dos{background-position:0 -67px;background-size:229px 134px;width:67px;height:68px;margin:0 auto;}
 .site-logo{font-family:Trebuchet MS,Arial,sans-serif;text-transform:uppercase;}
@@ -215,7 +215,7 @@ img[src$=".svg"].img-responsive{width:100%;}
 .svg .play{background-color:rgba(0,0,0,.4);width:100%;height:100%;position:absolute;left:0;top:0;}
 .svg .play-button{background-position:0 0;width:104px;height:104px;display:block;position:absolute;top:50%;left:50%;margin:-53px;}
 .svg .steps .estimate .clock{background-position:-340px -177px;width:20px;height:20px;display:block;float:left;margin:2px 0 0 0;}
-.footer-flag-seal,.mission-flag-seal,.opera-mini .globe,.opera-mini .marker,.opera-mini .map,.opera-mini .media-object .osm,.opera-mini .hot,.opera-mini .dos,.opera-mini .brand .logo,.opera-mini .footer-title .logo,.opera-mini .play-button,.opera-mini .steps .estimate .clock,.opera-mini .social li,.no-svg .globe,.no-svg .marker,.no-svg .map,.no-svg .osm,.no-svg .hot,.no-svg .dos,.no-svg .brand .logo,.no-svg .footer-title .logo,.no-svg .play-button,.no-svg .steps .estimate .clock,.no-svg .social li{background-image:url(/assets/img/sprite.png);background-repeat:no-repeat;background-position:0 0;}
+.footer-flag-seal,.mission-flag-seal,.opera-mini .globe,.opera-mini .marker,.opera-mini .map,.opera-mini .media-object .osm,.opera-mini .hot,.opera-mini .dos,.opera-mini .brand .logo,.opera-mini .footer-title .logo,.opera-mini .play-button,.opera-mini .steps .estimate .clock,.opera-mini .social li,.no-svg .globe,.no-svg .marker,.no-svg .map,.no-svg .osm,.no-svg .hot,.no-svg .dos,.no-svg .brand .logo,.no-svg .footer-title .logo,.no-svg .play-button,.no-svg .steps .estimate .clock,.no-svg .social li{background-image:url(../img/sprite.png);background-repeat:no-repeat;background-position:0 0;}
 .opera-mini .social .mail,.no-svg .social .mail{background-position:-23px -317px;margin-top:3px;}
 .opera-mini .social .facebook,.no-svg .social .facebook{background-position:-44px -317px;}
 .opera-mini .social .twitter,.no-svg .social .twitter{background-position:-65px -317px;margin-top:2px;}
@@ -234,7 +234,7 @@ img[src$=".svg"].img-responsive{width:100%;}
 .opera-mini .brand .logo,.no-svg .brand .logo{background-position:-203px -317px;width:18px;height:28px;display:inline-block;margin:0 3px;position:relative;top:5px;}
 .opera-mini .footer-title .logo,.no-svg .footer-title .logo{background-position:-225px -317px;width:23px;height:35px;display:inline-block;margin:0 3px;position:relative;top:5px;}
 .opera-mini .steps .estimate .clock,.no-svg .steps .estimate .clock{background-position:-2px -317px;width:20px;height:20px;display:block;float:left;margin:2px 0 0 0;}
-.lt-ie9 .steps #step-1,.lt-ie9 .steps #step-2,.lt-ie9 .steps #step-3{background:url(/assets/img/sprite.png) no-repeat;width:50px;height:50px;float:left;margin-left:-75px;}
+.lt-ie9 .steps #step-1,.lt-ie9 .steps #step-2,.lt-ie9 .steps #step-3{background:url(../img/sprite.png) no-repeat;width:50px;height:50px;float:left;margin-left:-75px;}
 .lt-ie9 .steps #step-1{background-position:-252px -103px;}
 .lt-ie9 .steps #step-2{background-position:-252px -52px;}
 .lt-ie9 .steps #step-3{background-position:-252px -1px;}
