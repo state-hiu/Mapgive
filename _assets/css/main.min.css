@@ -5,6 +5,7 @@
 @media (min-width: 768px){html,body{height:100%;}
 }
 body{font-family:Open Sans,Arial,sans-serif;font-weight:400;font-size:15px;color:#51504d;}
+.tasks{font-size:25px;}
 body:before{content:"";height:100%;float:left;width:0;margin-top:-32767px;}
 h1,h2,h3,h4,h5,h6{font-family:Trebuchet MS,Arial,sans-serif;font-weight:400;}
 blockquote{padding:0;margin:0;border:0;}
@@ -80,6 +81,7 @@ dt{font-weight:normal;}
 .infographics{margin-top:40px;}
 .infographics img,.infographics .btn{margin-bottom:20px;}
 .infographics .btn{background-color:#d73f3f;color:#fff;text-transform:uppercase;border-radius:0;width:100%;height:200px;font-size:4em;text-align:left;line-height:1em;padding-top:30px;padding-bottom:10px;margin-bottom:20px;}
+.infographics .btn2{background-color:#9bcaff;color:#fff;text-transform:uppercase;border-radius:0;width:100%;height:200px;font-size:4em;text-align:left;line-height:1em;padding-top:30px;padding-bottom:10px;margin-bottom:20px;}
 #main .infographics .btn{text-decoration:none;}
 .infographics .world{display:none;visibility:hidden;}
 @media (min-width: 768px){.hook span{display:block;text-align:center;}
