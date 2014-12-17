@@ -18,6 +18,9 @@ Deploying Jekyll site to GitHub Pages (http://jekyllrb.com/docs/github-pages/)
 used this site to validate favicon:
 http://www.html-kit.com/favicon/validator/
 
+check out test site:   
+http://d3netxer.github.io/Mapgive/index.html
+
 
 
 
