@@ -1,6 +1,8 @@
 MapGive
 ===========
 
+**gh-pages branch: used for testing**
+
 This site was built using Jekyll, a static site generator (Intro to Jekyll video: https://www.youtube.com/watch?v=O7NBEFmA7yA)
 
 This is an existing Grunt project (http://gruntjs.com/getting-started). 
@@ -17,6 +19,9 @@ Deploying Jekyll site to GitHub Pages (http://jekyllrb.com/docs/github-pages/)
 
 used this site to validate favicon:
 http://www.html-kit.com/favicon/validator/
+
+check out test site:   
+http://d3netxer.github.io/Mapgive/index.html
 
 
 

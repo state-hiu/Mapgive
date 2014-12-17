@@ -1,6 +1,8 @@
 MapGive
 ===========
 
+**gh-pages branch: used for testing**
+
 This site was built using Jekyll, a static site generator (Intro to Jekyll video: https://www.youtube.com/watch?v=O7NBEFmA7yA)
 
 This is an existing Grunt project (http://gruntjs.com/getting-started). 
