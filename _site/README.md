@@ -3,6 +3,14 @@ MapGive
 
 **gh-pages branch: used for testing**
 
+new issues as of Dec 16, 2014:
+
+- couldn't integrate Leaflet until added L as a global variable in the grunt file!
+(https://github.com/tombatossals/angular-leaflet-directive/issues/519)
+
+
+
+
 This site was built using Jekyll, a static site generator (Intro to Jekyll video: https://www.youtube.com/watch?v=O7NBEFmA7yA)
 
 This is an existing Grunt project (http://gruntjs.com/getting-started). 
