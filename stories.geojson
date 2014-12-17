@@ -1,0 +1,26 @@
+---
+---
+{
+  "type": "FeatureCollection",
+  "features": [{% assign places = (site.posts | where: "category", "story") %}{% for place in places %}
+    {% if place.lon and place.lat %}
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "{{ place.title }}",
+        "url": "{{site.url}}{{place.url}}",
+        {% if place.highlight == true %}
+        "marker-color": "fce200",
+        "marker-size": "large"
+        {% else %}
+         "marker-color": "#8cc250"
+        {% endif %}
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [{{ place.lon }}, {{ place.lat }}]
+      }
+    }{% if forloop.rindex > 1 %},{% endif%}
+    {% endif %}{% endfor %}
+  ]
+}

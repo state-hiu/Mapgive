@@ -1,5 +1,6 @@
 ---
 layout: story
+category: story
 title: Responding to Disasters, Saving Lives
 person: Tyler Machado, Journalist 
 country: Philippines
@@ -12,6 +13,8 @@ ogDescription: "Read about how mappers helped in the aftermath of the 2013 typho
 ogImage: "../assets/img/philippines-story.jpg"
 emailSubject: Before typhoon Haiyan made landfall, mappers went to work.
 emailDescription: "In November 2013, the Humanitarian OpenSteetMap Team (HOT) activated volunteer mappers well in advance of super typhoon Haiyan making landfall in the Philippines in order to gather a baseline of geographic data."
+lat: 37.149884
+lon: -80.127563
 ---
 
 In November 2013, the <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenSteetMap Team</a> (HOT) started activating volunteer mappers even before super typhoon Haiyan made landfall in the Philippines to gather a baseline of geographic data.

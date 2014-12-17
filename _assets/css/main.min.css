@@ -294,3 +294,5 @@ h2,h3{page-break-after:avoid;}
 #footer .mission{border:0;width:100%;}
 .infographics img.img-responsive,.infographics .btn,.accordion .js-control,.promo-box,.story-promo,.video,.social,#footer .legal,#footer nav,#footer .footer-nav{display:none!important;}
 }
+#map{height:400px;}
+#map a{text-decoration:none;}

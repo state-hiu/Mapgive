@@ -1,5 +1,6 @@
 ---
 layout: story
+category: story
 title: Mapping in response to Ebola Outbreak
 person: Tyler Machado, Journalist 
 country: Western Africa
@@ -12,6 +13,8 @@ ogDescription: "Read about how mappers helped in the aftermath of the 2013 typho
 ogImage: "../assets/img/philippines-story.jpg"
 emailSubject: Before typhoon Haiyan made landfall, mappers went to work.
 emailDescription: "In November 2013, the Humanitarian OpenSteetMap Team (HOT) activated volunteer mappers well in advance of super typhoon Haiyan making landfall in the Philippines in order to gather a baseline of geographic data."
+lat: 37.149884
+lon: -12.127563
 ---
 
 This is a test Story....

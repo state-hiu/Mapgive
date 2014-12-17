@@ -1673,3 +1673,9 @@ img[src$=".svg"].img-responsive, img[src$=".svg"].img-responsive {
     display: none !important;
   }
 }
+
+
+
+#map { height: 400px; }
+#map a {text-decoration: none; }
+

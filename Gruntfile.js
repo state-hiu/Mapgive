@@ -33,6 +33,7 @@ module.exports = function(grunt) {
           }
         },
 
+
         htmlhint: {
           build: {
             options: {
@@ -51,6 +52,7 @@ module.exports = function(grunt) {
             src: ['_site/**/*.html']
           }
         },
+
 
         uglify: {
           build: {
@@ -245,9 +247,9 @@ module.exports = function(grunt) {
       'hashres:images',
       'hashres:js',
       'hashres:css',
-      'backupSite',
-      'shell:mvTemp',
-      'htmlhint'
+      //'backupSite',
+      'shell:mvTemp'
+      //'htmlhint'
     ]);
 
     grunt.registerTask('buildcss', [
@@ -265,7 +267,7 @@ module.exports = function(grunt) {
     ]);
     
     
-
+/*
     grunt.registerTask('backupSite', 'Makes a dated copy of the _site folder in backups', function() {
       var wrench = require('wrench'),
           d = new Date,
@@ -278,5 +280,7 @@ module.exports = function(grunt) {
 
       wrench.copyDirSyncRecursive('_site', 'backups/' + date);
     });
+*/
 };
+
 
