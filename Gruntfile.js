@@ -18,6 +18,11 @@ module.exports = function(grunt) {
             }
           }
         },
+        
+        globals: {
+    	L: true,
+    	angular: true
+		},
 
         cssmin: {
           combine: {
