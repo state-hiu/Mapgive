@@ -835,8 +835,10 @@ img[src$=".svg"].img-responsive, img[src$=".svg"].img-responsive {
   display: block;
 }
 
+
 .caption {
-  margin-top: 10px;
+  margin-top: 18px;
+  padding: 2px;
   font-size: 0.8em;
   color: #666;
 }

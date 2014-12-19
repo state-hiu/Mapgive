@@ -163,7 +163,7 @@ dt{font-weight:normal;}
 img[src$=".svg"].img-responsive{width:100%;}
 .action{display:block;}
 .more-info{display:block;}
-.caption{margin-top:10px;font-size:.8em;color:#666;}
+.caption{margin-top:18px;padding:2px;font-size:.8em;color:#666;}
 .accordion dt{cursor:pointer;margin-top:10px;padding:10px;}
 .accordion dt:first-child{margin-top:0;}
 .accordion dt[aria-expanded="true"]{background-color:#f7f7f7;}
