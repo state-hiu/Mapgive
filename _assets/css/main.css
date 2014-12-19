@@ -745,8 +745,12 @@ dt {
   width: 100%;
 }
 
-.thumbnail, .story {
+.thumbnail {
   margin-bottom: 50px;
+}
+
+.story {
+  margin-bottom: 35px;
 }
 
 @media (min-width: 768px) {
