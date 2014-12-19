@@ -6,22 +6,6 @@
       "type": "Feature",
       "properties": {
         "title": "Mapping in response to Ebola Outbreak",
-        "url": "http://mapgive.state.gov/stories/story/mapping-in-response-to-ebola2.html",
-        
-         "marker-color": "#8cc250"
-        
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-23.127563, 67.149884]
-      }
-    },
-    
-    
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "Mapping in response to Ebola Outbreak",
         "url": "http://mapgive.state.gov/stories/story/mapping-in-response-to-ebola.html",
         
          "marker-color": "#8cc250"

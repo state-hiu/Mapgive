@@ -38,6 +38,8 @@
     
     <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
     <link rel="shortcut icon" type="image/ico" href="/Mapgive/favicon.ico" />
     
     
@@ -148,20 +150,8 @@
       
       <div class="col-sm-12 col-md-12">
         <div class="thumbnail">
-          <a href="/Mapgive/stories/story/mapping-in-response-to-ebola2.html" class="image">
-            <img src="../assets/img/Africa_EbolaDisease.png " alt="International agencies coordinated ground relief efforts after Typhoon Haiyan/Yolanda, Republic of the Philippines, November 2013; remote online mapping events supported the work. Photo by U.S. Army, SPC Andrew Robertson." class="img-responsive shadowed" />
-          </a>
-          <div class="caption">
-            <h3><a href="/Mapgive/stories/story/mapping-in-response-to-ebola2.html">Mapping in response to Ebola Outbreak</a></h3>
-            <p><strong>Location</strong>: Western Africa</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-sm-12 col-md-12">
-        <div class="thumbnail">
           <a href="/Mapgive/stories/story/mapping-in-response-to-ebola.html" class="image">
-            <img src="../assets/img/Africa_EbolaDisease.png " alt="International agencies coordinated ground relief efforts after Typhoon Haiyan/Yolanda, Republic of the Philippines, November 2013; remote online mapping events supported the work. Photo by U.S. Army, SPC Andrew Robertson." class="img-responsive shadowed" />
+            <img src="../assets/img/Africa_EbolaDisease_test.png " alt="International agencies coordinated ground relief efforts after Typhoon Haiyan/Yolanda, Republic of the Philippines, November 2013; remote online mapping events supported the work. Photo by U.S. Army, SPC Andrew Robertson." class="img-responsive shadowed" />
           </a>
           <div class="caption">
             <h3><a href="/Mapgive/stories/story/mapping-in-response-to-ebola.html">Mapping in response to Ebola Outbreak</a></h3>
@@ -224,7 +214,29 @@
 		}).addTo(map);
 
 		var stories = new L.geoJson();
+/*
+var stories = {
+    "type": "Feature",
+    "properties": {
+        "name": "Coors Field",
+        "amenity": "Baseball Stadium",
+        "popupContent": "This is where the Rockies play!"
+    },
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-104.99404, 39.75621]
+    }
+};
+
+L.geoJson(stories).addTo(map);
+*/
+
+		
+
 		stories.addTo(map);
+
+
+
 
 /*
 		L.geoJson('../stories.geojson', {
@@ -239,7 +251,7 @@
 
 		$.ajax({
 		dataType: "json",
-		url: "../stories.geojson",
+		url: "/Mapgive/stories.geojson",
 		success: function(data) {
 		    $(data.features).each(function(key, data) {
 			stories.addData(data);
