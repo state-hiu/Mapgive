@@ -52,40 +52,9 @@ emailDescription: "Maps play a powerful role at each stage of the disaster relie
 		}).addTo(map);
 
 		var stories = new L.geoJson();
-/*
-var stories = {
-    "type": "Feature",
-    "properties": {
-        "name": "Coors Field",
-        "amenity": "Baseball Stadium",
-        "popupContent": "This is where the Rockies play!"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-104.99404, 39.75621]
-    }
-};
-
-L.geoJson(stories).addTo(map);
-*/
-
-		
 
 		stories.addTo(map);
 
-
-
-
-/*
-		L.geoJson('../stories.geojson', {
-		    style: function (feature) {
-			return {color: feature.properties.color};
-		    },
-		    onEachFeature: function (feature, layer) {
-			layer.bindPopup(feature.properties.description);
-		    }
-		}).addTo(map);
-*/
 
 		$.ajax({
 		dataType: "json",
