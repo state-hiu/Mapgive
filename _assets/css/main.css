@@ -746,11 +746,11 @@ dt {
 }
 
 .thumbnail {
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 
 .story {
-  margin-bottom: 35px;
+  margin-bottom: 50px;
 }
 
 @media (min-width: 768px) {

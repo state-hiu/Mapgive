@@ -142,8 +142,8 @@ dt{font-weight:normal;}
 .thumbnail{padding:15px;border:1px solid #bcbcbc;border-radius:0;min-height:308px;}
 .thumbnail h3{margin-top:0;}
 .thumbnail .image{display:block;width:100%;}
-.thumbnail{margin-bottom:50px;}
-.story{margin-bottom:35px;}
+.thumbnail{margin-bottom:35px;}
+.story{margin-bottom:50px;}
 @media (min-width: 768px){.thumbnail{min-height:308px;}
 .thumbnail img{width:188px;height:107px;}
 }
