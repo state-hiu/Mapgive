@@ -4,7 +4,7 @@ category: story
 title: Mapping in response to Ebola Outbreak
 person: Tyler Machado, Journalist 
 country: Western Africa
-image: ../assets/img/Africa_EbolaDisease_test.png
+image: ../assets/img/Africa_EbolaDisease_test.jpg
 altText: International agencies coordinated ground relief efforts after Typhoon Haiyan/Yolanda, Republic of the Philippines, November 2013; remote online mapping events supported the work. Photo by U.S. Army, SPC Andrew Robertson.
 caption: International agencies coordinated ground relief efforts after Typhoon Haiyan/Yolanda, Republic of the Philippines, November 2013; remote online mapping events supported the work. Photo by U.S. Army, SPC Andrew Robertson.
 twitterDescription: "Before typhoon Haiyan made landfall, mappers went to work. #MapGive"
