@@ -11,6 +11,7 @@
     font-style: normal;
 }
 
+
 /******* end Fonts ********/
 
 @media (min-width: 768px) {
@@ -416,6 +417,11 @@ dt {
   margin-bottom: 20px;
 }
 
+
+.infographics .btn2:hover {
+    box-shadow: 10px 10px 5px #FFD700;
+} 
+
 .infographics .btn2 {
   background-color: #9BCAFF;
   color: #fff;
@@ -749,7 +755,8 @@ dt {
 }
 
 .thumbnail {
-  margin-bottom: 35px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .story {

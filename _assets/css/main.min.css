@@ -81,6 +81,7 @@ dt{font-weight:normal;}
 .infographics{margin-top:40px;}
 .infographics img,.infographics .btn{margin-bottom:20px;}
 .infographics .btn{background-color:#d73f3f;color:#fff;text-transform:uppercase;border-radius:0;width:100%;height:200px;font-size:4em;text-align:left;line-height:1em;padding-top:30px;padding-bottom:10px;margin-bottom:20px;}
+.infographics .btn2:hover{box-shadow:10px 10px 5px #ffd700;}
 .infographics .btn2{background-color:#9bcaff;color:#fff;text-transform:uppercase;border-radius:0;width:100%;height:200px;font-size:4em;text-align:left;line-height:1em;padding-top:30px;padding-bottom:10px;margin-bottom:20px;}
 #main .infographics .btn{text-decoration:none;}
 .infographics .world{display:none;visibility:hidden;}
@@ -142,7 +143,7 @@ dt{font-weight:normal;}
 .thumbnail{padding-top:15px;padding-right:15px;padding-bottom:0;padding-left:15px;border:1px solid #bcbcbc;border-radius:0;min-height:308px;}
 .thumbnail h3{margin-top:0;}
 .thumbnail .image{display:block;width:100%;}
-.thumbnail{margin-bottom:35px;}
+.thumbnail{margin-top:20px;margin-bottom:20px;}
 .story{margin-bottom:50px;}
 @media (min-width: 768px){.thumbnail{min-height:308px;}
 .thumbnail img{width:188px;height:107px;}

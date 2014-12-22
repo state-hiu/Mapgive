@@ -2,7 +2,7 @@
 ---
 {
   "type": "FeatureCollection",
-  "features": [{% assign places = (site.posts | where: "category", "story") %}{% for story in stories %}
+  "features": [{% assign stories = (site.posts | where: "category", "story") %}{% for story in stories %}
     {% if story.lon and story.lat %}
     {
       "type": "Feature",

@@ -32,7 +32,7 @@
     
     
 
-    <link rel="stylesheet" href="/Mapgive/assets/css/main.min.css?d0475573" />
+    <link rel="stylesheet" href="/Mapgive/assets/css/main.min.css?11dcc043" />
     
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
     
@@ -144,11 +144,67 @@
 
   </div>
 </div>
+
 <div class="row">
-  <div class="col-md-4">
+  
+  <!--The col-md-offset centers the div, but the bootstrap div is messing with the leaflet map
+  <div class="col-md-10 col-md-offset-1"> -->
+
+  	<div id="map" style="margin-left: auto; margin-right: auto; width: 900px; height: 400px"></div>
+  	<script>
+
+		var map = L.map('map').setView([15, 25], 2);
+
+		//L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+		L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a> ',
+			id: 'examples.map-i875mjb7'
+		}).addTo(map);
+
+		//used Inkscape to save MapGive icon: http://inkscapetutorials.org/2014/04/22/inkscape-faq-how-do-i-crop-in-inkscape/#document
+		var mapgiveIcon = L.icon({
+		    iconUrl: "/Mapgive/mapgive_pt.png",
+		    iconSize: [30, 45],
+		    iconAnchor: [15, 40],
+		    popupAnchor: [0, 0]
+		});
+
+		var stories = new L.geoJson();
+
+		stories.addTo(map);
+
+		$.ajax({
+		dataType: "json",
+		url: "/Mapgive/stories.geojson",
+			success : function (response) {
+				stories = L.geoJson(response, {
+				    onEachFeature: function (feature, layer) {
+					var popupOptions = {maxWidth: 200};
+					//var latlng = feature.properties.coordinates;
+
+					//used as ex: http://jsfiddle.net/JYF9u/8/
+					layer.setIcon(mapgiveIcon);
+
+					//make sure path works, it changed to http://mapgive.state.gov/stories/ instead of http://mapgive.state.gov/stories/story/
+					var popupContent = "<h4><a href=" + feature.properties.url + ">" + feature.properties.title +
+					    "</a></h4>";
+					
+					layer.bindPopup(popupContent,popupOptions);
+					}
+				}).addTo(map); 
+			}
+		}).error(function() {});
+
+	</script>
+
+
+
+<div class="col-md-12">
     <div class="row">
       
-      <div class="col-sm-12 col-md-12">
+      <div class="col-sm-4">
         <div class="thumbnail">
           <a href="/Mapgive/stories/story/mapping-in-response-to-ebola.html" class="image">
             <img src="../assets/img/Africa_EbolaDisease_test.jpg?27a2f694 " alt="International agencies coordinated ground relief efforts after Typhoon Haiyan/Yolanda, Republic of the Philippines, November 2013; remote online mapping events supported the work. Photo by U.S. Army, SPC Andrew Robertson." class="img-responsive shadowed" />
@@ -160,7 +216,7 @@
         </div>
       </div>
       
-      <div class="col-sm-12 col-md-12">
+      <div class="col-sm-4">
         <div class="thumbnail">
           <a href="/Mapgive/stories/story/responding-to-disasters.html" class="image">
             <img src="../assets/img/philippines-story.jpg?a5db7f8b " alt="International agencies coordinated ground relief efforts after Typhoon Haiyan/Yolanda, Republic of the Philippines, November 2013; remote online mapping events supported the work. Photo by U.S. Army, SPC Andrew Robertson." class="img-responsive shadowed" />
@@ -172,7 +228,7 @@
         </div>
       </div>
       
-      <div class="col-sm-12 col-md-12">
+      <div class="col-sm-4">
         <div class="thumbnail">
           <a href="/Mapgive/stories/story/reducing-risks.html" class="image">
             <img src="../assets/img/alyssa-wright.jpg?4d2fb404 " alt="Alyssa Wright and another volunteer at a New York City editathon to map Kathmandu Valley, Nepal, April 21, 2013. Photo by The OpenStreetMap (OSM) Community of Nepal." class="img-responsive shadowed" />
@@ -184,7 +240,7 @@
         </div>
       </div>
       
-      <div class="col-sm-12 col-md-12">
+      <div class="col-sm-4">
         <div class="thumbnail">
           <a href="/Mapgive/stories/story/make-a-difference.html" class="image">
             <img src="../assets/img/kepha-ngito.jpg?9c3fff52 " alt="Kepha Ngito, Executive Director, Map Kibera, Nairobi, Kenya. Photo by cafod.org.uk." class="img-responsive shadowed" />
@@ -198,69 +254,8 @@
       
     </div>
   </div>
-  <div class="col-md-8"> 
-
-  	<div id="map"></div>
-  	<script>
-
-		var map = L.map('map').setView([15, 25], 2);
-
-		//L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
-		L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-			maxZoom: 18,
-			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a> ',
-			id: 'examples.map-i875mjb7'
-		}).addTo(map);
-
-		var stories = new L.geoJson();
-/*
-var stories = {
-    "type": "Feature",
-    "properties": {
-        "name": "Coors Field",
-        "amenity": "Baseball Stadium",
-        "popupContent": "This is where the Rockies play!"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-104.99404, 39.75621]
-    }
-};
-
-L.geoJson(stories).addTo(map);
-*/
-
-		
-
-		stories.addTo(map);
 
 
-
-
-/*
-		L.geoJson('../stories.geojson', {
-		    style: function (feature) {
-			return {color: feature.properties.color};
-		    },
-		    onEachFeature: function (feature, layer) {
-			layer.bindPopup(feature.properties.description);
-		    }
-		}).addTo(map);
-*/
-
-		$.ajax({
-		dataType: "json",
-		url: "/Mapgive/stories.geojson",
-		success: function(data) {
-		    $(data.features).each(function(key, data) {
-			stories.addData(data);
-		    });
-		}
-		}).error(function() {});
-
-	</script>
-  </div>
 </div>
 
       </div>
