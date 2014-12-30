@@ -109,7 +109,7 @@ module.exports = function(grunt) {
 			}
 		},
 
-/*
+
         compress: {
           main: {
             options: {
@@ -124,7 +124,7 @@ module.exports = function(grunt) {
             ]
           }
         },
-*/
+
         shell: {
           jekyll: {
             options: {
@@ -248,7 +248,7 @@ module.exports = function(grunt) {
       'hashres:js',
       'hashres:css',
       //'backupSite',
-      'shell:mvTemp'
+      'shell:mvTemp',
       //'htmlhint'
     ]);
 
@@ -262,8 +262,8 @@ module.exports = function(grunt) {
       'shell:rmAssets',
       'shell:mkAssets',
       'img',
-      'svgmin'
-      //'compress'
+      'svgmin',
+      'compress'
     ]);
     
     
