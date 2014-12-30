@@ -9,12 +9,21 @@ This repository contains the contents of the MapGive website accessible at [http
 
 These installation instructions are subject to change.
 
-TBD
+Jekyll (http://jekyllrb.com/) needs to be installed.
+
+Now you can run the commands below to install the other dependencies:
+
+sudo apt-get install npm
+sudo apt-get install nodejs
+sudo ln -s /usr/bin/nodejs /usr/bin/node #grunt expects "node"
+
+sudo npm install -g grunt-cli
+sudo apt-get install optipng
+sudo apt-get install libjpeg-progs
 
 ## Usage
 
-TBD
-
+Navigate to the Mapgive directory. The first time run 'npm install' to install the grunt dependencies. From now on you can build the site by running the 'grunt' command inside of the Mapgive directory. Grunt outputs the site in the '_site' folder.
 
 ## Contributing
 
