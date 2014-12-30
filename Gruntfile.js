@@ -78,7 +78,6 @@ module.exports = function(grunt) {
             src: [
               '_assets/img/*.jpg',
               '_assets/img/*.jpeg',
-              '_assets/img/*.png',
             ],
             dest: 'assets/img'
           }
@@ -108,6 +107,17 @@ module.exports = function(grunt) {
 				dest: 'assets/img/osm.svg',
 			}
 		},
+
+copy: {
+  main: {
+    expand: true,
+    cwd: '_assets/img/', 
+    src: '*.png',
+    dest: 'assets/img/',
+    flatten: true,
+    filter: 'isFile',
+  },
+},
 
 
         compress: {

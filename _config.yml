@@ -1,6 +1,6 @@
 name: MapGive
 markdown: redcarpet
-pygments: false
+highlighter: pygments
 timezone: America/New_York
 permalink: none
 baseurl: /Mapgive
