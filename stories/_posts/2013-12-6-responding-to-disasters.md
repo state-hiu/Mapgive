@@ -1,10 +1,10 @@
 ---
 layout: story
-category: story
+category: stories
 title: Responding to Disasters, Saving Lives
 person: Tyler Machado, Journalist 
 country: Philippines
-image: ../assets/img/philippines-story.jpg
+image: philippines-story.jpg
 altText: International agencies coordinated ground relief efforts after Typhoon Haiyan/Yolanda, Republic of the Philippines, November 2013; remote online mapping events supported the work. Photo by U.S. Army, SPC Andrew Robertson.
 caption: International agencies coordinated ground relief efforts after Typhoon Haiyan/Yolanda, Republic of the Philippines, November 2013; remote online mapping events supported the work. Photo by U.S. Army, SPC Andrew Robertson.
 twitterDescription: "Before typhoon Haiyan made landfall, mappers went to work. #MapGive"
