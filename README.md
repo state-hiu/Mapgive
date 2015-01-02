@@ -13,6 +13,7 @@ Jekyll (http://jekyllrb.com/) needs to be installed.
 
 Now you can run the commands below to install the other dependencies:
 
+```
 sudo apt-get install npm
 sudo apt-get install nodejs
 sudo ln -s /usr/bin/nodejs /usr/bin/node #grunt expects "node"
@@ -20,6 +21,7 @@ sudo ln -s /usr/bin/nodejs /usr/bin/node #grunt expects "node"
 sudo npm install -g grunt-cli
 sudo apt-get install optipng
 sudo apt-get install libjpeg-progs
+```
 
 ## Usage
 
