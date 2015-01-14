@@ -1,9 +1,9 @@
 name: MapGive
 markdown: redcarpet
-pygments: false
+highlighter: pygments
 timezone: America/New_York
 permalink: none
-baseurl: /
+baseurl: /Mapgive
 url: http://mapgive.state.gov
 destination: temp/
 
