@@ -854,7 +854,7 @@ dt {
   height: auto;
 }
 
-img[src$=".svg"].img-responsive, img[src$=".svg"].img-responsive {
+img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   width: 100%;
 }
 
