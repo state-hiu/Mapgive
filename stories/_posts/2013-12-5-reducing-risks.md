@@ -1,17 +1,20 @@
 ---
 layout: story
+category: stories
 title: Reducing Risks Before a Crisis
 person: Alyssa Wright, Volunteer 
 country: Nepal
-image: /assets/img/alyssa-wright.jpg
+image: alyssa-wright.jpg
 altText: Alyssa Wright and another volunteer at a New York City editathon to map Kathmandu Valley, Nepal, April 21, 2013. Photo by The OpenStreetMap (OSM) Community of Nepal.
 caption: Alyssa Wright and another volunteer at a New York City editathon to map Kathmandu Valley, Nepal, April 21, 2013. Photo by The OpenStreetMap (OSM) Community of Nepal.
 twitterDescription: "Map now for the future. #MapGive"
-twitterImage: "/assets/img/alyssa-wright.jpg"
+twitterImage: "../assets/img/alyssa-wright.jpg"
 ogDescription: "Read how mapping in Nepal now could save lives in the event of a future earthquake."
-ogImage: "/assets/img/alyssa-wright.jpg"
+ogImage: "../assets/img/alyssa-wright.jpg"
 emailSubject: Maps in Nepal could save lives in the event of a future earthquake.
 emailDescription: "In Katmandu, Nepal people live in a dangerous earthquake zone. Gathering data on critical infrastructures such as schools, hospitals and government offices now could make the difference between life and death."
+lat: 27.7076762
+lon: 85.3148882
 ---
 
 The people of the Kathmandu Valley in remote Nepal live in an earthquake-prone region. Gathering data on important infrastructure such as schools, hospitals and other civic buildings could make a world of difference for the community before a disaster strikes. In April 2013, the World Bank led an OpenStreetMap map-a-thon that included 17 cities in the U.S. In New York City, N.Y., a small group of volunteers included mapping volunteer Alyssa Wright. Here is <a href="http://kathmandulivinglabs.org/blog/crossing-boundaries-by-tracing-buildings-mapping-kathmandu-from-new-york-city/" target="_blank">her first person account</a> of what it was like to help map Kathmandu:

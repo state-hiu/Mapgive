@@ -3,7 +3,7 @@ layout: default
 title: Learn to Map 
 twitterDescription: "Start mapping in three easy steps with #MapGive."
 ogDescription: "Start mapping in three easy steps with the #MapGive video guide and instructions."
-ogImage: "/assets/img/how-to-map.jpg"
+ogImage: "{{ site.baseurl }}/assets/img/how-to-map.jpg"
 ogVideo: "http://youtu.be/9Jz-xn9mw7E"
 emailSubject: Get involved in crowdsourced mapping.
 emailDescription: "Start mapping in three easy steps. Get an OpenStreetMap account, practice with our step-by-step video guide then choose a prioritized mapping task."
@@ -81,12 +81,12 @@ emailDescription: "Start mapping in three easy steps. Get an OpenStreetMap accou
               <h2>Learn How to Map in OpenStreetMap</h2>
               <div class="video">
                 <div class="video-player-container shadowed" data="Ir-3K0pjwOI">
-                  <img src="/assets/img/how-to-map.jpg" alt="YouTube embedded video: Learn How to Map in OpenStreetMap. Press space or enter to play video." class="img-responsive" />
+                  <img src="{{ site.baseurl }}/assets/img/how-to-map.jpg" alt="YouTube embedded video: Learn How to Map in OpenStreetMap. Press space or enter to play video." class="img-responsive" />
                   <div class="play" tabindex="0">
                     <span class="play-button"></span>
                   </div>
                 </div>
-                <p class="caption"><a href="/transcripts/learn-to-map.html">Read the video transcript</a></p>
+                <p class="caption"><a href="{{ site.baseurl }}/transcripts/learn-to-map.html">Read the video transcript</a></p>
               </div>
               <dl class="js-accordion accordion" role="tablist" aria-multiselectable="true">
                 <dt id="accordion2-title1" role="tab" aria-controls="accordion2-panel1" aria-selected="true" aria-expanded="true" tabindex="0">Read the Written Instructions</dt>
@@ -189,20 +189,20 @@ emailDescription: "Start mapping in three easy steps. Get an OpenStreetMap accou
               <h2>How to Select a Task in the OpenStreetMap Tasking Manager</h2>
               <div class="video">
                 <div class="video-player-container shadowed" data="73XCpTgyhSk">
-                  <img src="/assets/img/how-to-select.jpg" alt="YouTube embedded video: How to Select a Task in the OpenStreetMap Tasking Manager. Press space or enter to play video." class="img-responsive" />
+                  <img src="{{ site.baseurl }}/assets/img/how-to-select.jpg" alt="YouTube embedded video: How to Select a Task in the OpenStreetMap Tasking Manager. Press space or enter to play video." class="img-responsive" />
                   <div class="play" tabindex="0">
                     <span class="play-button"></span>
                   </div>
                 </div>
-                <p class="caption"><a href="/transcripts/osm-tasking-manager.html">Read the video transcript</a></p>
+                <p class="caption"><a href="{{ site.baseurl }}/transcripts/osm-tasking-manager.html">Read the video transcript</a></p>
               </div>
               <dl class="js-accordion accordion" role="tablist" aria-multiselectable="true">
                 <dt id="accordion3-title1" role="tab" aria-controls="accordion3-panel1" aria-selected="true" aria-expanded="true" tabindex="0">Read the Written Instructions</dt>
                 <dd id="accordion3-panel1" role="tabpanel" aria-labelledby="accordion3-title1" aria-hidden="false">
-                  <p>Goal: Select a <a href="/learn-to-map/#select-a-task" target="_blank">Task</a> and map a tile. You do not need to be at the location and do not need to know the names of roads and buildings. You will look at satellite imagery and trace roads, paths, buildings and areas.</p>
+                  <p>Goal: Select a <a href="{{ site.baseurl }}/learn-to-map/#select-a-task" target="_blank">Task</a> and map a tile. You do not need to be at the location and do not need to know the names of roads and buildings. You will look at satellite imagery and trace roads, paths, buildings and areas.</p>
                   <p>Estimated time to spend each time you sit down to work on a map <strong>tile</strong> that is part of a <strong>task</strong>: 30 minutes or more.</p>
                   <ul>
-                    <li>Select the <a href="/learn-to-map/#select-a-task" target="_blank">Task</a> you wish to work on; a new browser tab or window (depends on browser settings) opens, taking you directly to the mapping task on the OpenStreetMap Tasking Manager website.</li>
+                    <li>Select the <a href="{{ site.baseurl }}/learn-to-map/#select-a-task" target="_blank">Task</a> you wish to work on; a new browser tab or window (depends on browser settings) opens, taking you directly to the mapping task on the OpenStreetMap Tasking Manager website.</li>
                     <li>Log in with your OpenStreetMap account. If you are still logged into OpenStreetMap, you will not need to enter your login info.</li>
                     <li>You will see a map and information about the task including instructions on what to map.</li>                	
                     <li>Select a <strong>tile</strong> to work on.</li>
@@ -242,24 +242,13 @@ emailDescription: "Start mapping in three easy steps. Get an OpenStreetMap accou
               </dl>
             </div>
           </div>
-          <div class="row">
-            <div class="col-sm-9 col-md-9">
-              <!--<a href="http://tasks.hotosm.org/" target="_blank" class="more-info">Select a task</a>-->
-              <h1 id="select-a-task">Select a Task</h1>
-              <ul class="tasks">
-                <li><a href="http://tasks.hotosm.org/project/621">Joru, Sierra Leone and Liberia</a></li>
-                <li><a href="http://tasks.hotosm.org/project/583">Kenema and Segbwema, Sierra Leone</a></li>
-                <li><a href="http://tasks.hotosm.org/project/586">Panguma, Sierra Leone</a></li>
-                <!--<li><a href="http://tasks.hotosm.org/job/422">Juba, South Sudan</a></li>-->
-                <li><a href="http://tasks.hotosm.org/project/661">Boende, DRC</a></li>
-                <li><a href="http://tasks.hotosm.org/project/648">Bokoto, DRC</a></li>
-                <li><a href="http://tasks.hotosm.org/project/445">Nimule, South Sudan</a></li>
-                <li><a href="http://tasks.hotosm.org/project/458">Punia, DRC</a></li>
-                <li><a href="http://tasks.hotosm.org/project/468">Kalima, DRC</a></li>
-                <li><a href="http://tasks.hotosm.org/project/467">Kasese, DRC</a></li>
-              </ul>
+          <div class="row infographics">
+            <div class="col-sm-4 col-md-4 ">
+              <!--<img src="{{ site.baseurl }}/assets/img/world.png" alt="A flat map of the world" class="img-responsive"/>-->
+              <a href="{{ site.baseurl }}/tasks" class="btn btn3 btn2 shadowed" role="button"><span class="first text">Start</span> <span class="text">Mapping</span></a>
             </div>
           </div>
+
         </li>
       </ol>
     </section>

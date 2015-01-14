@@ -18,6 +18,11 @@ module.exports = function(grunt) {
             }
           }
         },
+        
+        globals: {
+    	L: true,
+    	angular: true
+		},
 
         cssmin: {
           combine: {
@@ -27,6 +32,7 @@ module.exports = function(grunt) {
             }
           }
         },
+
 
         htmlhint: {
           build: {
@@ -46,6 +52,7 @@ module.exports = function(grunt) {
             src: ['_site/**/*.html']
           }
         },
+
 
         uglify: {
           build: {
@@ -71,7 +78,6 @@ module.exports = function(grunt) {
             src: [
               '_assets/img/*.jpg',
               '_assets/img/*.jpeg',
-              '_assets/img/*.png',
             ],
             dest: 'assets/img'
           }
@@ -87,12 +93,32 @@ module.exports = function(grunt) {
             files: [{
               expand: true,
               cwd: '_assets/img',
-              src: ['*.svg'],
+              src: ['*.svg','!osm.svg'],
               dest: 'assets/img',
               ext: '.svg'
             }]
           }
         },
+        
+        //osm.svg was not compressing right so copying it instead
+        copy: {   
+			dist: {
+				src: '_assets/img/osm.svg', 
+				dest: 'assets/img/osm.svg',
+			}
+		},
+        //img was not able to compress PNGs (optipng-bin error), so copying all PNGs instead
+        copy: {
+          main: {
+            expand: true,
+            cwd: '_assets/img/', 
+            src: '*.png',
+            dest: 'assets/img/',
+            flatten: true,
+            filter: 'isFile',
+          },
+        },
+
 
         compress: {
           main: {
@@ -135,6 +161,8 @@ module.exports = function(grunt) {
             command: 'rm -rf _site && mv temp _site'
           }
         },
+        
+        
 
         hashres: {
           options: {
@@ -175,6 +203,7 @@ module.exports = function(grunt) {
             ]
           }
         },
+        
 
         watch: {
           html: {
@@ -228,14 +257,15 @@ module.exports = function(grunt) {
       'hashres:images',
       'hashres:js',
       'hashres:css',
-      'backupSite',
+      //'backupSite',
       'shell:mvTemp',
-      'htmlhint'
+      //'htmlhint'
     ]);
 
     grunt.registerTask('buildcss', [
       'cssc',
-      'cssmin'
+      'cssmin',
+      'copy'
     ]);
 
     grunt.registerTask('optimages', [
@@ -245,7 +275,9 @@ module.exports = function(grunt) {
       'svgmin',
       'compress'
     ]);
-
+    
+    
+/*
     grunt.registerTask('backupSite', 'Makes a dated copy of the _site folder in backups', function() {
       var wrench = require('wrench'),
           d = new Date,
@@ -258,5 +290,7 @@ module.exports = function(grunt) {
 
       wrench.copyDirSyncRecursive('_site', 'backups/' + date);
     });
+*/
 };
+
 

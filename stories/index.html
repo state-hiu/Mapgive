@@ -3,7 +3,7 @@ layout: default
 title: Stories
 twitterDescription: "Want proof that open mapping projects help people? Read #MapGive stories."
 ogDescription: "Read examples of how digital maps are used to save lives and develop communities."
-ogImage: "/assets/img/kepha-ngito.jpg"
+ogImage: "../assets/img/kepha-ngito.jpg"
 emailSubject: Digital maps are used to save lives and build communities.
 emailDescription: "Maps play a powerful role at each stage of the disaster relief cycle. Read examples of how a map can save lives and empower community development."
 ---
@@ -18,17 +18,73 @@ emailDescription: "Maps play a powerful role at each stage of the disaster relie
     {% include social-media.html %}
   </div>
 </div>
+
 <div class="row">
-  <div class="col-md-12">
+  
+  <!--The col-md-offset centers the div, but the bootstrap div is messing with the leaflet map
+  <div class="col-md-10 col-md-offset-1"> -->
+
+  	<div id="map" style="margin-left: auto; margin-right: auto; width: 80%; height: 400px"></div>
+  	<script>
+
+		var map = L.map('map').setView([15, 25], 2);
+
+		//L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+		L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a> ',
+			id: 'examples.map-i875mjb7'
+		}).addTo(map);
+
+		//used Inkscape to save MapGive icon: http://inkscapetutorials.org/2014/04/22/inkscape-faq-how-do-i-crop-in-inkscape/#document
+		var mapgiveIcon = L.icon({
+		    iconUrl: "{{ site.baseurl }}/assets/img/mapgive_red_pt.svg",
+		    iconSize: [30, 45],
+		    iconAnchor: [15, 40],
+		    popupAnchor: [0, 0]
+		});
+
+		var stories = new L.geoJson();
+
+		stories.addTo(map);
+
+		$.ajax({
+		dataType: "json",
+		url: "{{ site.baseurl }}/stories.geojson",
+			success : function (response) {
+				stories = L.geoJson(response, {
+				    onEachFeature: function (feature, layer) {
+					var popupOptions = {maxWidth: 200};
+					//var latlng = feature.properties.coordinates;
+
+					//used as ex: http://jsfiddle.net/JYF9u/8/
+					layer.setIcon(mapgiveIcon);
+
+					//make sure path works, it changed to http://mapgive.state.gov/stories/ instead of http://mapgive.state.gov/stories/story/
+					var popupContent = "<h4><a href=" + feature.properties.url + ">" + feature.properties.title +
+					    "</a></h4>";
+					
+					layer.bindPopup(popupContent,popupOptions);
+					}
+				}).addTo(map); 
+			}
+		}).error(function() {});
+
+	</script>
+
+
+
+<div class="col-md-12">
     <div class="row">
       {% for story in site.categories.stories %}
-      <div class="col-sm-4 col-md-4">
+      <div class="col-sm-4">
         <div class="thumbnail">
-          <a href="{{ story.url }}" class="image">
-            <img src="{{ story.image }} " alt="{{ story.altText }}" class="img-responsive shadowed" />
+          <a href="{{ site.baseurl }}{{ story.url }}" class="image">
+            <img src="{{ site.baseurl }}/assets/img/{{ story.image }} " alt="{{ story.altText }}" class="img-responsive shadowed" />
           </a>
           <div class="caption">
-            <h3><a href="{{ story.url }}">{{ story.title }}</a></h3>
+            <h3><a href="{{ site.baseurl }}{{ story.url }}">{{ story.title }}</a></h3>
             <p><strong>Location</strong>: {{ story.country }}</p>
           </div>
         </div>
@@ -36,4 +92,6 @@ emailDescription: "Maps play a powerful role at each stage of the disaster relie
       {% endfor %}
     </div>
   </div>
+
+
 </div>
