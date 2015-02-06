@@ -103,17 +103,18 @@ emailDescription: "#HIU through #ITTC publishes high-resolution commercial satel
 
 //L.geoJson(centroidPt).addTo(map);
 
-
+/*
 L.geoJson(poly, {
     onEachFeature: onEachFeature
 });
+*/
 
 //console.log(poly);
 
 //test_json = $.getJSON("{{ site.baseurl }}/ittc_services_test.geojson");
  console.log('test json0');
  
-$.getJSON("{{ site.baseurl }}/ittc_services.geojson", function(data) {
+$.getJSON("{{ site.baseurl }}/ittc_services_test2.geojson", function(data) {
     console.log('test json1');
     console.log(data);
     test_json = data;
@@ -187,8 +188,6 @@ L.geoJson(test_json, {
 	console.log(services);
 		
 	</script>
-	
-	
 
 
 <div class="col-md-12">
