@@ -24,7 +24,11 @@ emailDescription: "#HIU through #ITTC publishes high-resolution commercial satel
   <div class="col-md-10 col-md-offset-1"> -->
 
   	<div id="map" style="margin-left: auto; margin-right: auto; width: 80%; height: 400px"></div>
+  	
+  	<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v1.3.0/turf.min.js'></script>
+  	
   	<script>
+  	
 
 		var map = L.map('map').setView([15, 25], 2);
 
@@ -44,34 +48,147 @@ emailDescription: "#HIU through #ITTC publishes high-resolution commercial satel
 		    popupAnchor: [0, 0]
 		});
 
+
+		function onEachFeature(feature) {
+		console.log(feature);
+		var centroidPt = turf.centroid(feature);
+		console.log(centroidPt);
+		L.geoJson(centroidPt).addTo(map);
+	
+		}
+
 		var services = new L.geoJson();
+		
 
 		services.addTo(map);
+		
+		
 
+		//services.clearlayers();
+
+  var poly = {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [32.22251513045263,2.6936046610997013],
+      [32.35757822315233, 2.6936046610997013],
+      [32.35757822315233,2.8294178398047896],
+      [32.22251513045263,2.8294178398047896],
+      [32.22251513045263,2.6936046610997013]
+        ]]
+      }
+    }, {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [2.230224, 47.85003],
+          [2.230224, 48.611121],
+          [4.361572, 48.611121],
+          [4.361572, 47.85003],
+          [2.230224, 47.85003]
+        ]]
+      }
+    }
+  ]
+};
+
+//var centroidPt = turf.centroid(poly);
+
+//L.geoJson(centroidPt).addTo(map);
+
+
+L.geoJson(poly, {
+    onEachFeature: onEachFeature
+});
+
+//console.log(poly);
+
+//test_json = $.getJSON("{{ site.baseurl }}/ittc_services_test.geojson");
+ console.log('test json0');
+ 
+$.getJSON("{{ site.baseurl }}/ittc_services.geojson", function(data) {
+    console.log('test json1');
+    console.log(data);
+    test_json = data;
+    L.geoJson(test_json, {
+    onEachFeature: onEachFeature
+});
+});
+
+/*
+console.log('test json2')
+//console.log(test_json);
+
+
+L.geoJson(test_json, {
+    onEachFeature: onEachFeature
+});
+*/
 		$.ajax({
 		dataType: "json",
-		/*url: "{{ site.baseurl }}/stories.geojson",*/
 		url: "{{ site.baseurl }}/ittc_services.geojson",
 			success : function (response) {
 				services = L.geoJson(response, {
 				    onEachFeature: function (feature, layer) {
-					var popupOptions = {maxWidth: 200};
-					//var latlng = feature.properties.coordinates;
+						var popupOptions = {maxWidth: 200};
+						//var latlng = feature.properties.coordinates;
 
-					//used as ex: http://jsfiddle.net/JYF9u/8/
-					//layer.setIcon(mapgiveIcon);
-
-					var popupContent = "<h4><a href=http://tasks.hotosm.org/project/" + feature.properties.tm_tasks + "> HOT OSM project: " + feature.properties.tm_tasks +
-					    "</a></h4>";
+						//used as ex: http://jsfiddle.net/JYF9u/8/
+						//layer.setIcon(mapgiveIcon);
 					
-					layer.bindPopup(popupContent,popupOptions);
+						var projects = feature.properties.tm_projects
+						
+						
+						
+					    //If request contains multiple projects it gives each project in the pop-up it's own link
+						if (projects.indexOf(",") > 0) {
+
+  						    //console.log(tasks);
+							
+							projects = projects.split(",")
+							console.log(projects);
+							
+							var popupContent = "<h4> HOT OSM projects: </h4>";
+							
+							for (i=0;i<projects.length;i++) {
+  								var popupContent = popupContent + "<h4><a href=http://tasks.hotosm.org/project/" + projects[i] + 
+  								">" + projects[i] + "</a></h4>";
+								
+							}
+							
+							
+							layer.bindPopup(popupContent,popupOptions);
+						    
+						} else if (projects == "none"){
+					
+							var popupContent = "<h4> HOT OSM project: none </h4>";
+					
+							layer.bindPopup(popupContent,popupOptions);
+						} else {
+					
+							var popupContent = "<h4><a href=http://tasks.hotosm.org/project/" + feature.properties.tm_projects + 
+							"> HOT OSM project: " + feature.properties.tm_projects + "</a></h4>";
+					
+							layer.bindPopup(popupContent,popupOptions);
+						}
+
 					}
 				}).addTo(map); 
 			}
 		}).error(function() {});
-
+		
+	console.log(services);
+		
 	</script>
-
+	
+	
 
 
 <div class="col-md-12">
