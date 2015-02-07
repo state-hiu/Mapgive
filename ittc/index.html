@@ -20,18 +20,44 @@ emailDescription: "#HIU through #ITTC publishes high-resolution commercial satel
 
 <div class="row">
   
-  <!--The col-md-offset centers the div, but the bootstrap div is messing with the leaflet map
-  <div class="col-md-10 col-md-offset-1"> -->
+  	<!--The col-md-offset centers the div, but the bootstrap div is messing with the leaflet map
+  	<div class="col-md-10 col-md-offset-1"> -->
 
   	<div id="map" style="margin-left: auto; margin-right: auto; width: 80%; height: 400px"></div>
   	
+  	<!--TurfJS link-->
   	<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v1.3.0/turf.min.js'></script>
   	
   	<script>
-  	
 
 		var map = L.map('map').setView([15, 25], 2);
-
+		
+		var pinLayer = L.featureGroup([]);
+		
+		//zoom listener from: http://stackoverflow.com/questions/19658564/leaflet-control-geojson-layers-by-zoom-level
+		map.on('zoomend', function (e) {
+			myZoomHandler();
+		});
+		
+		function myZoomHandler() {
+			var currentZoom = map.getZoom();
+			switch (currentZoom) {
+				case 4:
+					$(".mapgiveIcon").css("visibility", "visible");
+					$(".requestPolygons").css("visibility", "hidden");
+				break;
+				case 5:
+				    $(".mapgiveIcon").css("visibility", "hidden");
+				    $(".requestPolygons").css("visibility", "visible");
+				    //tried to use .cleatLayers but it was getting rid of all the layer references, so I was not able to re-add the layer again
+				    //copiedpinLayer.clearLayers(copiedpinLayer.getLayers());
+				break;
+				default:
+				    // etc
+				break;
+			}
+		}
+		
 		//L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
 		L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 			maxZoom: 18,
@@ -45,150 +71,109 @@ emailDescription: "#HIU through #ITTC publishes high-resolution commercial satel
 		    iconUrl: "{{ site.baseurl }}/assets/img/mapgive_red_pt.svg",
 		    iconSize: [30, 45],
 		    iconAnchor: [15, 40],
-		    popupAnchor: [0, 0]
+		    popupAnchor: [0, 0],
+          	//opacity: .5,
+          	//fillOpacity: 0.7,
+          	//You can also give a style a className property! : http://stackoverflow.com/questions/17086195/leaflet-path-how-can-i-set-a-css-class
+          	className: "mapgiveIcon"
+
 		});
+		
+		var requestPolygons = {
+			//"color": "#ff7800",
+			//"weight": 5,
+			//"opacity": 0.65,
+			className: "requestPolygons"
+		};
 
-
-		function onEachFeature(feature) {
-		console.log(feature);
-		var centroidPt = turf.centroid(feature);
-		console.log(centroidPt);
-		L.geoJson(centroidPt).addTo(map);
-	
+		//returns an array of objects according to key, value, or key and value matching
+		function getObjects(obj, key, val) {
+			var objects = [];
+			for (var i in obj) {
+				if (!obj.hasOwnProperty(i)) continue;
+				if (typeof obj[i] == 'object') {
+					objects = objects.concat(getObjects(obj[i], key, val));    
+				} else 
+				//if key matches and value matches or if key matches and value is not passed (eliminating the case where key matches but passed value does not)
+				if (i == key && obj[i] == val || i == key && val == '') { //
+					objects.push(obj);
+				} else if (obj[i] == val && key == ''){
+					//only add if the object is not already in the array
+					if (objects.lastIndexOf(obj) == -1){
+						objects.push(obj);
+					}
+				}
+			}
+			return objects;
 		}
 
-		var services = new L.geoJson();
+		var popupOptions = {maxWidth: 200};
+		var popupContent = "<h4> HOT OSM projects: </h4>";
 		
-
-		services.addTo(map);
+		function popupContentFunction(projects,popupContent) {
 		
-		
-
-		//services.clearlayers();
-
-  var poly = {
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [32.22251513045263,2.6936046610997013],
-      [32.35757822315233, 2.6936046610997013],
-      [32.35757822315233,2.8294178398047896],
-      [32.22251513045263,2.8294178398047896],
-      [32.22251513045263,2.6936046610997013]
-        ]]
-      }
-    }, {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [2.230224, 47.85003],
-          [2.230224, 48.611121],
-          [4.361572, 48.611121],
-          [4.361572, 47.85003],
-          [2.230224, 47.85003]
-        ]]
-      }
-    }
-  ]
-};
-
-//var centroidPt = turf.centroid(poly);
-
-//L.geoJson(centroidPt).addTo(map);
-
-/*
-L.geoJson(poly, {
-    onEachFeature: onEachFeature
-});
-*/
-
-//console.log(poly);
-
-//test_json = $.getJSON("{{ site.baseurl }}/ittc_services_test.geojson");
- console.log('test json0');
- 
-$.getJSON("{{ site.baseurl }}/ittc_services_test2.geojson", function(data) {
-    console.log('test json1');
-    console.log(data);
-    test_json = data;
-    L.geoJson(test_json, {
-    onEachFeature: onEachFeature
-});
-});
-
-/*
-console.log('test json2')
-//console.log(test_json);
-
-
-L.geoJson(test_json, {
-    onEachFeature: onEachFeature
-});
-*/
-		$.ajax({
-		dataType: "json",
-		url: "{{ site.baseurl }}/ittc_services.geojson",
-			success : function (response) {
-				services = L.geoJson(response, {
-				    onEachFeature: function (feature, layer) {
-						var popupOptions = {maxWidth: 200};
-						//var latlng = feature.properties.coordinates;
-
-						//used as ex: http://jsfiddle.net/JYF9u/8/
-						//layer.setIcon(mapgiveIcon);
-					
-						var projects = feature.properties.tm_projects
-						
-						
-						
-					    //If request contains multiple projects it gives each project in the pop-up it's own link
-						if (projects.indexOf(",") > 0) {
-
-  						    //console.log(tasks);
-							
-							projects = projects.split(",")
-							console.log(projects);
-							
-							var popupContent = "<h4> HOT OSM projects: </h4>";
-							
-							for (i=0;i<projects.length;i++) {
-  								var popupContent = popupContent + "<h4><a href=http://tasks.hotosm.org/project/" + projects[i] + 
-  								">" + projects[i] + "</a></h4>";
-								
-							}
-							
-							
-							layer.bindPopup(popupContent,popupOptions);
-						    
-						} else if (projects == "none"){
-					
-							var popupContent = "<h4> HOT OSM project: none </h4>";
-					
-							layer.bindPopup(popupContent,popupOptions);
-						} else {
-					
-							var popupContent = "<h4><a href=http://tasks.hotosm.org/project/" + feature.properties.tm_projects + 
-							"> HOT OSM project: " + feature.properties.tm_projects + "</a></h4>";
-					
-							layer.bindPopup(popupContent,popupOptions);
-						}
-
-					}
-				}).addTo(map); 
+			if (projects.indexOf(",") > 0) {
+				projects = projects.split(",")
+				console.log(projects);
+				//var popupContent = "<h4> HOT OSM projects: </h4>";
+				console.log('test popupContent: ');
+				console.log(popupContent);
+				for (i=0;i<projects.length;i++) {
+					var popupContent = popupContent + "<h4><a href=http://tasks.hotosm.org/project/" + projects[i] + 
+					">" + projects[i] + "</a></h4>";
+				}
+				
+				console.log('test popupContent return: ');
+				console.log(popupContent);
+				return popupContent;
+			
+			} else if (projects == "none"){
+				var popupContent = "<h4> HOT OSM project: none </h4>";
+				return popupContent;
+			} else {
+				var popupContent = "<h4><a href=http://tasks.hotosm.org/project/" + projects + 
+				"> HOT OSM project: " + projects + "</a></h4>";
+				return popupContent;
 			}
-		}).error(function() {});
+		}
 		
-	console.log(services);
-		
-	</script>
+		$.getJSON("{{ site.baseurl }}/ittc_services.geojson", function(data) {
+			//uses getObjects function, which parses geojson for objects that match a certain key:value
+			test_json = getObjects(data,'type','FeatureCollection');
 
+			for (var i in test_json) {
+		
+				//The geojson has one outer FeatureCollection object, which contains all of the
+				//other FeatureCollections. The outer FeatureCollection object has no properties object
+				if (test_json[i].hasOwnProperty('properties')) {
+
+					var projects = test_json[i].properties.tm_projects
+
+					L.geoJson(test_json[i], {
+						onEachFeature: function (feature, layer) {
+							layer.bindPopup(popupContentFunction(projects,popupContent),popupOptions).setStyle(requestPolygons);
+						}
+					}).addTo(map);
+					
+					//making requestPolygons hidden right away after page load
+					$(".requestPolygons").css("visibility", "hidden");
+					
+					//Turf JS centroid function
+					var centroidPt = turf.centroid(test_json[i]);
+
+					L.geoJson(centroidPt, {
+						onEachFeature: function (feature, layer) {
+							layer.bindPopup(popupContentFunction(projects,popupContent),popupOptions).setIcon(mapgiveIcon);
+						}
+					}).addTo(map);
+				}
+			}
+			
+			pinLayer.addTo(map);
+			
+		});
+
+	</script>
 
 <div class="col-md-12">
 <br>
