@@ -93,7 +93,7 @@ module.exports = function(grunt) {
             files: [{
               expand: true,
               cwd: '_assets/img',
-              src: ['*.svg','!osm.svg'],
+              src: ['*.svg'],
               dest: 'assets/img',
               ext: '.svg'
             }]
