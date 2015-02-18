@@ -7,6 +7,22 @@ emailSubject: HIU through ITTC publishes imagery services.
 emailDescription: "#HIU through #ITTC publishes high-resolution commercial satellite imagery services for humanitarian response."
 ---
 
+<style>
+		.info {
+			padding: 6px 8px;
+			font: 14px/16px Arial, Helvetica, sans-serif;
+			background: white;
+			background: rgba(255,255,255,0.8);
+			box-shadow: 0 0 15px rgba(0,0,0,0.2);
+			border-radius: 5px;
+		}
+		.info h4 {
+			margin: 0 0 5px;
+			color: #777;
+		}
+	</style>
+
+
 <div class="col-md-12">
 
 
@@ -73,6 +89,19 @@ emailDescription: "#HIU through #ITTC publishes high-resolution commercial satel
 			id: 'examples.map-i875mjb7'
 		}).addTo(map);
 
+//taken from: http://leafletjs.com/examples/choropleth-example.html
+//info box that contains title
+		var info = L.control();
+
+		info.onAdd = function (map) {
+			this._div = L.DomUtil.create('div', 'info');
+			this._div.innerHTML = '<h4>Imagery Services</h4>';
+			return this._div;
+		};
+
+		info.addTo(map);
+
+
 		//used Inkscape to save MapGive icon: http://inkscapetutorials.org/2014/04/22/inkscape-faq-how-do-i-crop-in-inkscape/#document
 		var mapgiveIcon = L.icon({
 		    iconUrl: "{{ site.baseurl }}/assets/img/mapgive_red_pt.svg",
@@ -134,7 +163,7 @@ emailDescription: "#HIU through #ITTC publishes high-resolution commercial satel
 				console.log(popupContent);
 				return popupContent;
 			
-			} else if (projects == "none"){
+			} else if (projects == "none" || projects == ""){
 				var popupContent = "<h4> HOT OSM project: none </h4>";
 				return popupContent;
 			} else {
