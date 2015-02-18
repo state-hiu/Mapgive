@@ -51,27 +51,6 @@ emailDescription: "#HIU through #ITTC publishes high-resolution commercial satel
 			myZoomHandler();
 		});
 		
-/*
-		function myZoomHandler() {
-			var currentZoom = map.getZoom();
-			switch (currentZoom) {
-				case 4:
-					$(".mapgiveIcon").css("visibility", "visible");
-					$(".requestPolygons").css("visibility", "hidden");
-				break;
-				case 5:
-				    $(".mapgiveIcon").css("visibility", "hidden");
-				    $(".requestPolygons").css("visibility", "visible");
-				    //tried to use .cleatLayers but it was getting rid of all the layer references, so I was not able to re-add the layer again
-				    //copiedpinLayer.clearLayers(copiedpinLayer.getLayers());
-				break;
-				default:
-				    // etc
-				break;
-			}
-		}
-*/
-
 		function myZoomHandler() {
 			var currentZoom = map.getZoom();
 			if (currentZoom < 4) {
@@ -203,16 +182,12 @@ emailDescription: "#HIU through #ITTC publishes high-resolution commercial satel
 
 	</script>
 
-	<br>
-	<h2>Frequently Asked Questions about Imagery</h2>
-	<br>
+  <br>
 
-  <!--
-	using markdown tags to be able to include a markdown file in the includes folder and have it rendered. Added a Jekyll plug-in to do this via this site: http://stackoverflow.com/questions/15917463/embedding-markdown-in-jekyll-html . Also, I don't think Redcarpet Markdown processing processes spaces in markdown well.  
-	-->
-	{% markdown %}  
-	{% include ittc-faqs.md %}
-	{% endmarkdown %}
+  <h2> Imagery Frequently Asked Questions </h2>
+
+
+  {% include ittc-faqs.html %}
 
 	<br>
 
