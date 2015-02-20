@@ -107,6 +107,19 @@ module.exports = function(grunt) {
 				dest: 'assets/img/osm.svg',
 			}
 		},
+        //copy js/gov/*
+        copy: {
+          main: {
+            expand: true,
+            cwd: '_assets/js/gov',
+            src: '*.js',
+            dest: 'assets/js/gov',
+            flatten: true,
+            filter: 'isFile',
+          },
+        },
+
+
         //img was not able to compress PNGs (optipng-bin error), so copying all PNGs instead
         copy: {
           main: {
