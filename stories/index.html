@@ -27,73 +27,89 @@ emailDescription: "Maps play a powerful role at each stage of the disaster relie
 </div>
 
 <div class="row">
+
+  <div class="col-md-9">
+
+ <div style="margin-left: auto; margin-right: auto; width: 95%" >
+
+    {% include stories-header.html %}
+  </div>
   
-  <!--The col-md-offset centers the div, but the bootstrap div is messing with the leaflet map
-  <div class="col-md-10 col-md-offset-1"> -->
+		<!--The col-md-offset centers the div, but the bootstrap div is messing with the leaflet map
+		<div class="col-md-10 col-md-offset-1"> -->
 
-  	<div id="map" style="margin-left: auto; margin-right: auto; width: 80%; height: 400px"></div>
-  	<script>
+			<div id="map" style="margin-left: auto; margin-right: auto; width: 95%; height: 400px"></div>
+			<script>
 
-		//map extent
-		var southWest = L.latLng(-50,-100),
-    		northEast = L.latLng(55,140),
-    		bounds = L.latLngBounds(southWest, northEast);
-    
-		//var map = L.map('map').setView([15, 25], 2);
-		var map = L.map('map', {
-			minZoom: 1,
-			maxZoom: 16
-		});
+			//map extent
+			var southWest = L.latLng(-50,-100),
+		  		northEast = L.latLng(55,140),
+		  		bounds = L.latLngBounds(southWest, northEast);
+		  
+			//var map = L.map('map').setView([15, 25], 2);
+			var map = L.map('map', {
+				minZoom: 1,
+				maxZoom: 16
+			});
 		
-		map.setMaxBounds(bounds);
-		// zoom the map to that bounding box
-		map.fitBounds(bounds);
+			map.setMaxBounds(bounds);
+			// zoom the map to that bounding box
+			map.fitBounds(bounds);
 
-		//L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
-		L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-			maxZoom: 18,
-			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Names and boundary representation are not necessarily authoritative. ',
-			id: 'examples.map-i875mjb7'
-		}).addTo(map);
+			//L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+			L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+				maxZoom: 18,
+				attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+					'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Names and boundary representation are not necessarily authoritative. ',
+				id: 'examples.map-i875mjb7'
+			}).addTo(map);
 
-		//used Inkscape to save MapGive icon: http://inkscapetutorials.org/2014/04/22/inkscape-faq-how-do-i-crop-in-inkscape/#document
-		var mapgiveIcon = L.icon({
-		    iconUrl: "{{ site.baseurl }}/assets/img/mapgive_red_pt.svg",
-		    iconSize: [30, 45],
-		    iconAnchor: [15, 40],
-		    popupAnchor: [0, 0]
-		});
+			//used Inkscape to save MapGive icon: http://inkscapetutorials.org/2014/04/22/inkscape-faq-how-do-i-crop-in-inkscape/#document
+			var mapgiveIcon = L.icon({
+				  iconUrl: "{{ site.baseurl }}/assets/img/mapgive_red_pt.svg",
+				  iconSize: [30, 45],
+				  iconAnchor: [15, 40],
+				  popupAnchor: [0, 0]
+			});
 
-		var stories = new L.geoJson();
+			var stories = new L.geoJson();
 
-		stories.addTo(map);
+			stories.addTo(map);
 
-		$.ajax({
-		dataType: "json",
-		url: "{{ site.baseurl }}/stories.geojson",
-			success : function (response) {
-				stories = L.geoJson(response, {
-				    onEachFeature: function (feature, layer) {
-					var popupOptions = {maxWidth: 200};
-					//var latlng = feature.properties.coordinates;
+			$.ajax({
+			dataType: "json",
+			url: "{{ site.baseurl }}/stories.geojson",
+				success : function (response) {
+					stories = L.geoJson(response, {
+						  onEachFeature: function (feature, layer) {
+						var popupOptions = {maxWidth: 200};
+						//var latlng = feature.properties.coordinates;
 
-					//used as ex: http://jsfiddle.net/JYF9u/8/
-					layer.setIcon(mapgiveIcon);
+						//used as ex: http://jsfiddle.net/JYF9u/8/
+						layer.setIcon(mapgiveIcon);
 
-					//make sure path works, it changed to http://mapgive.state.gov/stories/ instead of http://mapgive.state.gov/stories/story/
-					var popupContent = "<h4><a href=" + feature.properties.url + ">" + feature.properties.title +
-					    "</a></h4>";
+						//make sure path works, it changed to http://mapgive.state.gov/stories/ instead of http://mapgive.state.gov/stories/story/
+						var popupContent = "<h4><a href=" + feature.properties.url + ">" + feature.properties.title +
+							  "</a></h4>";
 					
-					layer.bindPopup(popupContent,popupOptions);
-					}
-				}).addTo(map); 
-			}
-		}).error(function() {});
+						layer.bindPopup(popupContent,popupOptions);
+						}
+					}).addTo(map); 
+				}
+			}).error(function() {});
 
-	</script>
+		</script>
 
+	</div>
 
+	<div class="col-md-3">
+
+	<a class="twitter-timeline" href="https://twitter.com/MapGive" data-widget-id="568534040936853505">Tweets by @MapGive</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+	</div>
+
+</div>
 
 <div class="col-md-12">
     <div class="row">
