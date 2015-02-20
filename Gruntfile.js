@@ -60,7 +60,7 @@ module.exports = function(grunt) {
               'assets/js/main.min.js': ['_assets/js/vendor/bootstrap.min.js', '_assets/js/plugins.js', '_assets/js/vendor/jquery.a11yAccordion.js', '_assets/js/main.js'],
               'assets/js/lt-ie9.min.js': ['_assets/js/vendor/html5shiv.js', '_assets/js/vendor/respond.min.js', '_assets/js/vendor/html5shiv-printshiv.js'],
               'assets/js/modernizr-2.7.1.min.js': ['_assets/js/vendor/modernizr-2.7.1.min.js'],
-              'assets/js/jquery-1.10.2.min.js': ['_assets/js/vendor/jquery-1.10.2.min.js']
+              'assets/js/jquery-1.10.2.min.js': ['_assets/js/vendor/jquery-1.10.2.min.js'],
             }
           }
         },
@@ -107,6 +107,19 @@ module.exports = function(grunt) {
 				dest: 'assets/img/osm.svg',
 			}
 		},
+        //copy js/gov/*
+        copy: {
+          main: {
+            expand: true,
+            cwd: '_assets/js/gov',
+            src: '*.js',
+            dest: 'assets/js/gov',
+            flatten: true,
+            filter: 'isFile',
+          },
+        },
+
+
         //img was not able to compress PNGs (optipng-bin error), so copying all PNGs instead
         copy: {
           main: {
