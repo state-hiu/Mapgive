@@ -1,12 +1,19 @@
 ---
 layout: default
 title: Stories
-twitterDescription: "Want proof that open mapping projects help people? Read #MapGive stories."
+twitterDescription: "Want proof that open mapping projects help people? Read MapGive stories."
 ogDescription: "Read examples of how digital maps are used to save lives and develop communities."
 ogImage: "../assets/img/kepha-ngito.jpg"
 emailSubject: Digital maps are used to save lives and build communities.
 emailDescription: "Maps play a powerful role at each stage of the disaster relief cycle. Read examples of how a map can save lives and empower community development."
 ---
+
+<style>
+		/*overides leaflet control layer order so it doesn't appear on top of nav bar*/
+		.leaflet-top, .leaflet-bottom {
+			z-index: 1;
+		}
+</style>
 
 <div class="row">
   <div class="col-md-8">
@@ -27,13 +34,26 @@ emailDescription: "Maps play a powerful role at each stage of the disaster relie
   	<div id="map" style="margin-left: auto; margin-right: auto; width: 80%; height: 400px"></div>
   	<script>
 
-		var map = L.map('map').setView([15, 25], 2);
+		//map extent
+		var southWest = L.latLng(-50,-100),
+    		northEast = L.latLng(55,140),
+    		bounds = L.latLngBounds(southWest, northEast);
+    
+		//var map = L.map('map').setView([15, 25], 2);
+		var map = L.map('map', {
+			minZoom: 1,
+			maxZoom: 16
+		});
+		
+		map.setMaxBounds(bounds);
+		// zoom the map to that bounding box
+		map.fitBounds(bounds);
 
 		//L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
 		L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 			maxZoom: 18,
 			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a> ',
+				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Names and boundary representation are not necessarily authoritative. ',
 			id: 'examples.map-i875mjb7'
 		}).addTo(map);
 

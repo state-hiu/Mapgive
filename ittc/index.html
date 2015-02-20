@@ -1,10 +1,14 @@
 ---
 layout: default
 title: Imagery to the Crowd 
-twitterDescription: "#HIU through #ITTC publishes high-resolution commercial satellite imagery services for humanitarian response."
-ogDescription: "#HIU through #ITTC publishes high-resolution commercial satellite imagery services for humanitarian response."
-emailSubject: HIU through ITTC publishes imagery services.
-emailDescription: "#HIU through #ITTC publishes high-resolution commercial satellite imagery services for humanitarian response."
+twitterDescription: "MapGive's Imagery to the Crowd Services: From Imagery to a Map"
+ogDescription: "MapGive's Imagery to the Crowd Services help make remote
+mapping possible for online volunteers around the world. Learn more about
+Imagery to the Crowd, open mapping, and how to get involved on the MapGive
+website."
+emailSubject: "Mapgive, an initiative of the U.S. State Department's Humanitarian Information Unit, makes it easy for new volunteers to learn to map and get involved with online tasks. MapGive also
+works to connect humanitarian mapping projects with high resolution satellite imagery to make remote volunteer mapping possible. Read more on the MapGive website."
+emailDescription: "HIU through ITTC publishes high-resolution commercial satellite imagery services for humanitarian response."
 ---
 
 <style>
@@ -20,7 +24,11 @@ emailDescription: "#HIU through #ITTC publishes high-resolution commercial satel
 			margin: 0 0 5px;
 			color: #777;
 		}
-	</style>
+		/*overides leaflet control layer order so it doesn't appear on top of nav bar*/
+		.leaflet-top, .leaflet-bottom {
+			z-index: 1;
+		}
+</style>
 
 
 <div class="col-md-12">
@@ -58,7 +66,17 @@ emailDescription: "#HIU through #ITTC publishes high-resolution commercial satel
   	
   	<script>
 
-		var map = L.map('map').setView([15, 25], 2);
+		//map extent
+		var southWest = L.latLng(-50,-100),
+    		northEast = L.latLng(50,140),
+    		bounds = L.latLngBounds(southWest, northEast);
+    
+		//var map = L.map('map').setView([15, 25], 2);
+		//var map = L.map('map').setView([15, 25], 2);
+		var map = L.map('map', {
+			minZoom: 1,
+			maxZoom: 16
+		});
 		
 		var pinLayer = L.featureGroup([]);
 		
@@ -85,12 +103,12 @@ emailDescription: "#HIU through #ITTC publishes high-resolution commercial satel
 		L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 			maxZoom: 18,
 			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a> ',
+				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Names and boundary representation are not necessarily authoritative. ',
 			id: 'examples.map-i875mjb7'
 		}).addTo(map);
 
-//taken from: http://leafletjs.com/examples/choropleth-example.html
-//info box that contains title
+		//taken from: http://leafletjs.com/examples/choropleth-example.html
+		//info box that contains title
 		var info = L.control();
 
 		info.onAdd = function (map) {
@@ -145,6 +163,10 @@ emailDescription: "#HIU through #ITTC publishes high-resolution commercial satel
 
 		var popupOptions = {maxWidth: 200};
 		var popupContent = "<h4> HOT OSM projects: </h4>";
+		
+		map.setMaxBounds(bounds);
+		// zoom the map to that bounding box
+		map.fitBounds(bounds);
 		
 		function popupContentFunction(projects,popupContent) {
 		

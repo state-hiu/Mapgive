@@ -30,7 +30,7 @@ dt{font-weight:normal;}
 @media (min-width: 768px){.hook,.page-title{margin-top:50px;}
 }
 .btn-primary{background-color:#d73f3f;border-color:#d73f3f;color:white;}
-.navbar{width:100%;z-index:1;min-height:0;}
+.navbar{width:100%;z-index:10;min-height:0;}
 .lt-ie8 .navbar{border:0;}
 .navbar.affix{position:fixed;top:0;}
 .navbar.affix+#main{padding-top:63px;}

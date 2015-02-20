@@ -7,7 +7,7 @@ country: Nepal
 image: alyssa-wright.jpg
 altText: Alyssa Wright and another volunteer at a New York City editathon to map Kathmandu Valley, Nepal, April 21, 2013. Photo by The OpenStreetMap (OSM) Community of Nepal.
 caption: Alyssa Wright and another volunteer at a New York City editathon to map Kathmandu Valley, Nepal, April 21, 2013. Photo by The OpenStreetMap (OSM) Community of Nepal.
-twitterDescription: "Map now for the future. #MapGive"
+twitterDescription: "Map now for the future. "
 twitterImage: "../assets/img/alyssa-wright.jpg"
 ogDescription: "Read how mapping in Nepal now could save lives in the event of a future earthquake."
 ogImage: "../assets/img/alyssa-wright.jpg"
