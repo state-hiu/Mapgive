@@ -7,7 +7,7 @@ country: Kenya
 image: kepha-ngito.jpg
 altText: Kepha Ngito, Executive Director, Map Kibera, Nairobi, Kenya. Photo by cafod.org.uk.
 caption: Kepha Ngito, Executive Director, Map Kibera, Nairobi, Kenya. Photo by <a href="http://www.cafod.org.uk/" target="_blank">cafod.org.uk</a>.
-twitterDescription: Maps improved living conditions in Nairobi's Kibera slum. Help build a brighter future with #MapGive
+twitterDescription: Maps improved living conditions in Nairobi's Kibera slum. Help build a brighter future with MapGive
 twitterImage: "../assets/img/kepha-ngito.jpg"
 ogDescription: Maps led to validation and more government resources for the people of Kibera in Nairobi Kenya.
 ogImage: "../assets/img/kepha-ngito.jpg"

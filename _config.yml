@@ -6,6 +6,9 @@ permalink: none
 baseurl: /Mapgive
 url: http://mapgive.state.gov
 destination: temp/
+twitter_username: MapGive
 
 # Explicit excludes, including dotfiles to be safe
 exclude: [.DS_Store, .git, .gitignore, .vagrant, Gruntfile.js, Vagrantfile, package.json, node_modules, backups, _assets/img/src-images]
+
+

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Commonly Asked Questions
+title: Frequently Asked Questions
 twitterDescription: "Have questions about humanitarian digital map projects? #MapGive has the answers."
 ogDescription: "Find answers to commonly asked questions about the #MapGive campaign."
 ogImage: "/assets/img/open-graph-logo.png"
@@ -32,11 +32,6 @@ emailDescription: "Have questions about MapGive? Find answers to commonly asked 
         <p>Note: You will not be able to map from mobile device.</p>
       </dd>
 
-      <dt id="title2" role="tab" aria-controls="panel2" aria-selected="true" aria-expanded="true" tabindex="0">Why do we need mappers when satellite imagery is available?</dt>
-      <dd id="panel2" role="tabpanel" aria-labelledby="title2" aria-hidden="false">
-        <p>Many people assume that detailed, accessible geographic data is available – when often it is not. It can be expensive or simply does not exist. As a volunteer, your efforts build a foundation of data and make it freely available to the public. </p>
-      </dd>
-
       <dt id="title3" role="tab" aria-controls="panel3" aria-selected="true" aria-expanded="true" tabindex="0">How do you know that the information volunteers provide is accurate?</dt>
       <dd id="panel3" role="tabpanel" aria-labelledby="title3" aria-hidden="false">
         <p>Members of the professional online mapping community review samples of map edits for quality assurance. When a mapper completes a tile, it turns red. Then, an experienced mapper, typically from the Humanitarian OpenStreetMap team, reviews a sample of those edits to validate the work.  Validated tiles display as green. If edits are not acceptable, then the reviewer resets the tile to grey and returns it to the tasking manager to be worked on again. Additionally, with the large number of volunteer mappers contributing data, the information is often self-checked by the online mapping community itself.</p>
@@ -55,19 +50,28 @@ emailDescription: "Have questions about MapGive? Find answers to commonly asked 
         <p>The <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a> is incorporated as a U.S. based 501c(3) non-profit organization that coordinates volunteer mappers and on the ground mapping efforts through OpenStreetMap. The efforts of the Humanitarian OpenStreetMap Team (HOT) first had a significant impact supporting on the ground efforts after an earthquake hit Haiti in 2010. Its mission is to apply the principles of open source and open data sharing towards humanitarian response and economic development.</p>
       </dd>
 
-<dt id="title6" role="tab" aria-controls="panel6" aria-selected="true" aria-expanded="true" tabindex="0">What is the Humanitarian Information Unit’s Imagery to the Crowd?</dt>
-      <dd id="panel6" role="tabpanel" aria-labelledby="title6" aria-hidden="false">
-        <p>Many efforts in the global mapping movement are supported by satellite imagery released by the U.S. State Department’s Humanitarian Information Unit through their project, <a href="https://hiu.state.gov/ittc/ittc.aspx" target="_blank">Imagery to the Crowd</a> (IttC). OpenStreetMap takes it, stores it, and breaks it down into small sections for volunteers to trace and label (called digitizing or mapping). IttC partners with the Humanitarian OpenStreetMap Team and has launched many successful projects including in Gulu, Uganda; Kathmandu, Nepal and Tacloban, Philippines.</p>
-      </dd>
-
 <dt id="title7" role="tab" aria-controls="panel7" aria-selected="true" aria-expanded="true" tabindex="0">How is map data useful to people, communities, organizations, etc?</dt>
       <dd id="panel7" role="tabpanel" aria-labelledby="title7" aria-hidden="false">
         <p>A map is a visual depiction of geographic data. There is a difference between map data and the map itself. Being able to share the data with a community provides them with a foundation of geographic information to identify problems and communicate in common terms with each other. They can come together to respond to a broad range of economic development, environmental and crisis management needs. </p>
       </dd>
+
+<dt id="title6" role="tab" aria-controls="panel6" aria-selected="true" aria-expanded="true" tabindex="0">What is the Humanitarian Information Unit’s Imagery to the Crowd?</dt>
+      <dd id="panel6" role="tabpanel" aria-labelledby="title6" aria-hidden="false">
+        <p>Many efforts in the global mapping movement are supported by satellite imagery released by the U.S. State Department’s Humanitarian Information Unit through their project, <a href="{{ site.baseurl }}/ittc/" target="_blank">Imagery to the Crowd</a> (IttC). OpenStreetMap takes it, stores it, and breaks it down into small sections for volunteers to trace and label (called digitizing or mapping). IttC partners with the Humanitarian OpenStreetMap Team and has launched many successful projects including in Gulu, Uganda; Kathmandu, Nepal and Tacloban, Philippines.</p>
+      </dd>
+
+      <dt id="title2" role="tab" aria-controls="panel2" aria-selected="true" aria-expanded="true" tabindex="0">Why do we need mappers when satellite imagery is available?</dt>
+      <dd id="panel2" role="tabpanel" aria-labelledby="title2" aria-hidden="false">
+        <p>Many people assume that detailed, accessible geographic data is available – when often it is not. It can be expensive or simply does not exist. As a volunteer, your efforts build a foundation of data and make it freely available to the public. </p>
+      </dd>
+
+{% include ittc-faqs.html %}
+
       
     </dl>
   </div>
   <div class="col-md-offset-1 col-md-3">
     {% include more-info.html %}
+    {% include feedback.html %}
   </div>
 </div>

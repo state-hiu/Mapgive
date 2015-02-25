@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Swipe between layers</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
+<body>
+
+<style>
+.range {
+  position:absolute;
+  width:100%;
+  }
+.leaflet-top .leaflet-control-zoom {
+  top:20px;
+  }
+</style>
+
+<div id='map'></div>
+<input id='range' class='range' type='range' min='0' max='1.0' step='any' />
+
+<script>
+
+
+L.mapbox.accessToken = 'pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ';
+
+var southWest = L.latLng(8.1259,33.93),
+    northEast = L.latLng(8.3764,34.50),
+    bounds = L.latLngBounds(southWest, northEast);
+
+//var map = L.mapbox.map('map');
+
+var map = L.map('map', {
+	minZoom: 11,
+	maxZoom: 16
+});
+
+L.mapbox.tileLayer('hiu.kcka1561').addTo(map);
+
+var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+var osm = new L.TileLayer(osmUrl, {minZoom: 7, maxZoom: 18, attribution: osmAttrib});	
+var overlay = osm.addTo(map);
+var range = document.getElementById('range');
+
+function clip() {
+  var nw = map.containerPointToLayerPoint([0, 0]),
+      se = map.containerPointToLayerPoint(map.getSize()),
+      clipX = nw.x + (se.x - nw.x) * range.value;
+
+  overlay.getContainer().style.clip = 'rect(' + [nw.y, clipX, se.y, nw.x].join('px,') + 'px)';
+}
+
+range['oninput' in range ? 'oninput' : 'onchange'] = clip;
+map.on('move', clip);
+//map.setView([8.25,34.27], 12);
+
+map.setMaxBounds(bounds);
+//map.minZoom(10);
+
+// zoom the map to that bounding box
+map.fitBounds(bounds);
+
+
+
+
+clip();
+</script>
+
+</body>
+</html>
+
+
