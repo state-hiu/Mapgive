@@ -647,6 +647,10 @@ dt {
   left: -28px;
 }
 
+.steps .step.start .title:before {
+  content: "\2730";
+}
+
 .steps .step:before {
   content: "";
   background-color: #deccb4;
