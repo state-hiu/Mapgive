@@ -85,6 +85,13 @@ dt {
 #main a {
   text-decoration: underline;
 }
+#main .page-title a {
+  text-decoration: none;
+}
+#main .page-title a:hover {
+  text-decoration: underline;
+}
+
 
 #main-wrapper {
   width: 100%;
@@ -123,7 +130,8 @@ dt {
 }
 
 .page-title:first-letter {
-  font-size: 1.25em;
+  /*font-size: 1.25em;*/
+  /*Disabled since it interferes with straight underline for link.*/
   margin-top: -3px;
 }
 
