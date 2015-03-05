@@ -17,6 +17,8 @@ a{color:#444;}
 a:hover,a:focus,.action-link{color:#d73f3f;text-decoration:underline;}
 dt{font-weight:normal;}
 #main a{text-decoration:underline;}
+#main .page-title a{text-decoration:none;}
+#main .page-title a:hover{text-decoration:underline;}
 #main-wrapper{width:100%;}
 @media (min-width: 768px){#main-wrapper{min-height:100%;}
 }
@@ -26,7 +28,7 @@ dt{font-weight:normal;}
 @media (min-width: 768px){.site-tagline{color:white;font-size:13px;margin:0;padding:0;display:block;}
 }
 .page-title{text-transform:uppercase;line-height:1.4em;margin-top:25px;}
-.page-title:first-letter{font-size:1.25em;margin-top:-3px;}
+.page-title:first-letter{margin-top:-3px;}
 @media (min-width: 768px){.hook,.page-title{margin-top:50px;}
 }
 .btn-primary{background-color:#d73f3f;border-color:#d73f3f;color:white;}
