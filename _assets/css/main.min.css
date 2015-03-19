@@ -267,6 +267,7 @@ img[src$=".svgz"].img-responsive,img[src$=".svg"].img-responsive{width:100%;}
 .opera-mini .media-object .hot,.no-svg .media-object .hot{background-position:-137px -102px;width:100px;height:62px;}
 .opera-mini .media-object .dos,.no-svg .media-object .dos{background-position:-196px -216px;width:100px;height:100px;}
 .mission-flag-seal{display:none;visibility:hidden;}
+.hiu-logo{background-position:0 -103px;display:inline-block;float:right;height:49px;margin-top:25px;margin-right:25px;margin-left:25px;width:105px;}
 .footer-flag-seal{background-position:0 -102px;width:136px;height:49px;display:inline-block;float:right;margin-top:25px;}
 }
 @media (min-width: 992px){.opera-mini .steps .estimate .clock,.no-svg .steps .estimate .clock,.svg .steps .estimate .clock{margin-left:5px;}
