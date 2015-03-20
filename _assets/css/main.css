@@ -13,7 +13,9 @@
 
 
 /******* end Fonts ********/
-
+.faq {
+font-size:20px;
+}
 
 .tasks ul {
 margin: 0 0 8px 0;
@@ -1519,6 +1521,17 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
     display: none;
     visibility: hidden;
   }
+
+.hiu-logo {
+    background-position: 0 -103px;
+    display: inline-block;
+    float: right;
+    height: 49px;
+    margin-top: 25px;
+    margin-right: 23px;
+    margin-left: 23px;
+    width: 105px;
+}
 
   .footer-flag-seal {
     background-position: 0 -102px;

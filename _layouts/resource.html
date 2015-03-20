@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="row">
+  <div class="col-md-8">
+    <header role="header">
+
+    </header>
+  </div>
+  <div class="col-md-offset-1 col-md-3">
+    {% include social-media.html %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    <article>
+      <header>
+        <h2>{{ page.title }}</h2>
+      </header>
+
+        {{ content }}
+
+    </article>
+  </div>
+  <div class="col-md-offset-1 col-md-3">
+  <p>
+    {% include more-info.html %}
+  </div>
+</div>
+
