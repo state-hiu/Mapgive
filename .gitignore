@@ -4,6 +4,7 @@ robot.txt
 Vagrantfile
 node_modules
 _site
+assets
 backups
 temp
 
