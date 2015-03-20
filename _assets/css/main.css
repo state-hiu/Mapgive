@@ -1526,11 +1526,10 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
     background-position: 0 -103px;
     display: inline-block;
     float: right;
-    height: 49px;
-    margin-top: 25px;
-    margin-right: 23px;
     margin-left: 23px;
-    width: 105px;
+    margin-right: 15px;
+    margin-top: 37px;
+    opacity: 0.75;
 }
 
   .footer-flag-seal {
