@@ -19,6 +19,28 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
 			<header role="header">
 			  <h1 class="page-title">{{ page.title }}</h1>
 			</header>
+
+
+
+<div class='limiter pad4y clearfix'>
+{% assign sorted_pages = (site.categories.events | sort: 'date') %}
+{% for post in sorted_pages %}
+  {% assign display = null %}
+  {% assign ready = null %}
+  {% for tag in post.tags %}
+    {% if tag == "event" %}{% assign display = true %}{% endif %}
+  {% endfor %}
+  {% if display == true %}
+    <div class='keyline-all pad4 space-bottom4 project-tile'>
+      <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+      <h3>{{ post.subtitle }}</h3>
+      <p>{{ post.excerpt }}</p>
+    </div>
+  {% endif %}
+{% endfor %}
+</div>
+
+
 		</div>
 		<div class="col-md-offset-1 col-md-3">
 			{% include social-media.html %}
