@@ -20,7 +20,7 @@
         "type": "Point",
         "coordinates": [{{ story.lon }}, {{ story.lat }}]
       }
-    }{% if forloop.rindex > 1 %},{% endif%}
+    }{% unless forloop.last %},{% endunless %}
     {% endif %}{% endfor %}
   ]
 }
