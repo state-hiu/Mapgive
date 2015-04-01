@@ -203,7 +203,7 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
 		
 		$.getJSON("{{ site.baseurl }}/ittc_services.geojson", function(data) {
 			//uses getObjects function, which parses geojson for objects that match a certain key:value
-			test_json = getObjects(data,'type','FeatureCollection');
+			test_json = getObjects(data,'type','Feature');
 
 			for (var i in test_json) {
 		
