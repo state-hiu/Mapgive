@@ -7,7 +7,7 @@ tags:
   - planner
 ---
 
-Here are helpful tips for organizing an event, from recruiting participants, logistics on the day, to follow up.
+Here are helpful tips for planning an event, including recruiting participants and managing logistics.
 
 Also, there are even more good ideas for <a href="http://education.nationalgeographic.com/media/file/HowTo_Event_Educators.pdf">event planning shared by National Geographic for Geography Awareness Week</a>, and the <a href="http://wiki.openstreetmap.org/wiki/Mapping_Weekend_Howto">OSM Mapping Weekend HOWTO</a>.
 

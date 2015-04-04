@@ -30,6 +30,9 @@ margin: 0 0 3px 40px;
    text-decoration: underline; 
 }
 
+#upper_padding {
+   padding-top: 40px; 
+}
 
 @media (min-width: 768px) {
   html, body {
