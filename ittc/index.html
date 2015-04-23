@@ -57,9 +57,12 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
 			emergencies worldwide and promotes innovative technologies and best practices for humanitarian information management. 
 			IttC publishes high-resolution commercial satellite imagery licensed by the United States Government, in a format that 
 			volunteers easily map into OpenStreetMap. IttC addresses significant data gaps for humanitarian and development needs.</p>
-                        <p><b style="padding-right: 4px;">Map Tip:</b>Zoom in to see full extents of imagery services.  Download GeoJSON of extents <a href="/ittc_services.geojson" target="_blank">here</a>.</p>
+                        <p><b style="padding-right: 4px;">Map Tip:</b>Zoom in to see full extents of imagery services.</p>
+
+  <br>
+
 		</section>
-		<br>
+
   
   	<!--The col-md-offset centers the div, but the bootstrap div is messing with the leaflet map
   	<div class="col-md-10 col-md-offset-1"> -->
@@ -201,7 +204,7 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
 			}
 		}
 		
-		$.getJSON("{{ site.baseurl }}/ittc_services.geojson", function(data) {
+		$.getJSON("{{ site.baseurl }}/ittc_services/ittc_services.geojson", function(data) {
 			//uses getObjects function, which parses geojson for objects that match a certain key:value
 			test_json = getObjects(data,'type','Feature');
 
@@ -239,7 +242,9 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
 
 	</script>
 
-  <br>
+	<dl class="js-accordion accordion" role="tablist" aria-multiselectable="true">
+  {% include download-ittc-services.html %}
+	</dl>
 
   <h2> Imagery Frequently Asked Questions </h2>
 
