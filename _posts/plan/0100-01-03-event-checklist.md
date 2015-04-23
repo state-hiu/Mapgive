@@ -7,7 +7,7 @@ tags:
   - planner
 ---
 
-Checklist to help in the preperation, on the day, and follow up to your event:
+Checklist to help in the preparation on the day of the event, and to follow-up:
 
 # Task
 
