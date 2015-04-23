@@ -11,13 +11,13 @@ Here are helpful tips for planning an event, including recruiting participants a
 
 Also, there are even more good ideas for <a href="http://education.nationalgeographic.com/media/file/HowTo_Event_Educators.pdf">event planning shared by National Geographic for Geography Awareness Week</a>, and the <a href="http://wiki.openstreetmap.org/wiki/Mapping_Weekend_Howto">OSM Mapping Weekend HOWTO</a>.
 
-For educators, we are launching <a href="http://teachosm.org/">TeachOSM</a>, guidance for bringing OpenStreetMap into the classroom.
+For educators, there is <a href="http://teachosm.org/">TeachOSM</a>, guidance for bringing OpenStreetMap into the classroom.
 
 ## Recruitment
 
 Students are a primary audience, but the event can also to professionals/citizens who likely to have GIS/OSM skills or interest. And reach out beyond geography and GIS; particularly for students studying international affairs or international students, there would be interest in international humanitarian efforts. Outside of school, there may be local meetups or OSM groups with whom to coordinate.
 
-Nearly all of the strategies produce results by either connecting to unique groups or reinforcing the message to the point that people committed to participating.  Put your marketing hat on. For each email, flyer, calendar posting customize it to what would be of interest to that group. For instance, to international students, emphasize that they would gain skills that would allow them to assist when humanitarian disasters strike their own countries; to the OSM enthusiasts promote it as a humanitarian OSM event, etc.  The <a href="http://mapgive.state.gov/why-map/">Map Give Why Map Video</a> is a great starting point for all.
+Nearly all of the strategies produce results by either connecting to unique groups or reinforcing the message to the point that people are committed to participating.  Put your marketing hat on. Customize each email, flyer, and calendar posting to what would be of interest to that group. For instance, to international students, emphasize that they would gain skills that would allow them to assist when humanitarian disasters strike their own countries; to the OSM enthusiasts promote it as a humanitarian OSM event, etc.  The <a href="http://mapgive.state.gov/why-map/">Map Give Why Map Video</a> is a great starting point for all.
 
 ### Emails
 
@@ -46,13 +46,13 @@ Nearly all of the strategies produce results by either connecting to unique grou
 ### Registration
 It is often helpful to “require” registration.  Although there is no fee for participation, having participants register beforehand gives a very good sense of how many people will show up, and additional event details can be provided on the registration page.  Plus, this provides a way to track who attended and acts as a failsafe in case something comes up that requires a change in venue, rescheduling, or cancellation.
  
-<a href="https://www.eventbrite.com/">Eventbrite</a> is good.  This is free, if the event is free, and it has some nice features that allow management of the tickets/event.  Sometimes, events like this charge a nominal fee to encourage people to actually show up if the register.
+<a href="https://www.eventbrite.com/">Eventbrite</a> is good.  This is free, if the event is free, and it has some nice features that allow management of the tickets/event.  Sometimes, events like this charge a nominal fee to encourage people to actually show up if the register. Eventbrite also allows you to have multiple registration types, for instance you can have people register as beginner, intermediate, or advanced mappers to better plan your event.
  
 It's not necessary to turn anybody away for the event who show up, but who did not register. Again, registration is mainly a tool to help with logistics.
  
 ### Agenda
 
-It can be helpful to start with an OSM beginners workshop at the front end of the event (for an hour or so), then have experienced OSMers join in. Or perhaps assign an experienced OSMer to a small group of people during the first hour to work with them closely.
+It can be helpful to start with an OSM beginners workshop at the front end of the event (for an hour or so), then have experienced OSMers join in. Or perhaps assign an experienced OSMer to a small group of people during the first hour to work with them closely. Aim for having at least a 1:4 ration fo experience to new mappers.
  
 ## Venue Logistics
  
@@ -65,7 +65,9 @@ With many laptops whizzing away, some rooms can get a little warmer than usual, 
 
 ### Internet
 
-This may be obvious, but a reliable internet connection is a requirement. Test out internet ahead of time, if you can. 
+This may be obvious, but a reliable internet connection is a requirement. Test out internet ahead of time, if you can. Investigate if IT support needs to be aware an event if going to happen. It is possible that an ISP can block a connection if too much activity is happening on the network and the provider thinks it is suspicious.
+
+If your event has more than fifty mappers and you are all mapping from one IP address, let the OSM Operations Working Group(operations@osmfoundation.org) informed to ensure that throtteling won't slow anyone down.
  
 ### Computers and Power
 
@@ -77,6 +79,10 @@ Helpful to remind people to bring an external mouse (usb/wireless) because digit
 
 Try to secure a little money to provide free food and beverages for the event.  Buy plenty of soda/water, various snacks, and pizza to keep people happily mapping all day.  This in an important thing to offer, if you can, because this is both a draw to get people to participate, and hunger/thirst are not a reason to leave.
  
+### Collaboration
+
+Involve other groups who may be mapping at the same time or create an option for people to attend virtually. A Google hangout or Skype session will work for this. Test the video session before the event. In addition plan messaging to create better facilitation. A video call is a good time to show metrics, prizes, and motivate. Have comms open between organizers during event. Have a speaker broadcast to group.
+
 ### Ambiance
 
 Create a little ambiance during the event, for example, play music from the region you're mapping.  This was designed to both create a connection to the culture of the region that we were mapping, and to give a little energy to the room.
@@ -87,20 +93,22 @@ On the projection screen, put up the live OSM edit feed at <a href="http://live.
 
 ## Connecting
  
-Connect with various other OpenStreetMap networks, like HOT, MapGive, and Mising Maps. Make sure they know when the event will be held, and which task you'll be working.  This is was helpful for leveraging social media to promote the event and tweet out pics and progress throughout the day.
+Connect with various other OpenStreetMap networks, like HOT, MapGive, and Mising Maps. Make sure they know when the event will be held, and which task you'll be working. This is was helpful for leveraging social media to promote the event and tweet out pics and progress throughout the day. Work on generating shared talking points and hashtags.
  
 You can also ask prominent individuals in the community to come and speak in person, or Skype in during the event and project, to give an overview of mapping efforts, and to emphasize the value of the work the people were doing.  This is a nice touch that allowed people to feel connected in a very real way to a larger effort).
  
-In addition to your event, think about coordinating activities at other locations through networks of colleagues. Share the information in these guides, and kept them updated on any relevant information encountered during planning.
+In addition to your event, think about coordinating activities at other locations through networks of colleagues. Share the information in these guides, and keep them updated on any relevant information encountered during planning.
+
+Having a dedicated comms person for larger events will be important for obtaining photos and publishing posts on social media.
 
 ### Context
 
-Emphasize the fact that we were not just putting lines on a map, but were doing something that was helping real people in areas that have real needs.  Include information in emails/flyers/personal communication that talk about the situation in the regions being mapped; for example, for a DRC mapathon, print a large, poster sized page from the USAID Fact Sheet on the ongoing complex humanitarian crisis in the DRC, and displayed it prominently at the event.
+Emphasize the fact that we were not just putting lines on a map, but were doing something that was helping real people in areas that have real needs.  Include information in emails/flyers/personal communication that talk about the situation in the regions being mapped; for example, for a DRC mapathon, print a large, poster sized page from the USAID Fact Sheet on the ongoing complex humanitarian crisis in the DRC, and display it prominently at the event.
  
 
 ## Follow on activities
  
-Have a good follow up strategy for participants. Communicate the results after the event, and invite them to connect on the local OSM mailing lists and other communication channels. Invite to the next event.
+Have a good follow up strategy for participants. Communicate the results after the event, and invite them to connect on the local OSM mailing lists and other communication channels. Encourage participants to keep on mapping and validating on the projects they worked on. Invite them to the next event. Sharing photos and feedback from users of the data is great.
 
 Participants may be interested to hosting a similar event or start a group back home, in their department, etc.  Transition into working with them soon after the event so that we can provide support, and additional training for them while the “iron is hot.”
  

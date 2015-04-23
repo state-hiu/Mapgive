@@ -51,16 +51,17 @@ Checklist to help in the preparation on the day of the event, and to follow-up:
 * Event posters (guide people to the room)
 * Print any necessary handouts
 * Name tags
+* 'I mapped' stickers
 * Music
 * Extra mice if possible
 * Extra laptops if possible
 * Food/Drink
 * Cups, Plates, Utensils, Napkins
 
-#Pre event Outreach
+#Pre-event Outreach
 
 * Coordinate with potential partners
-* MeetUp
+* MeetUp or EventBrite
 * Reach out to similar MeetUps
 * Reach out to local universities
 * Libraries
@@ -78,6 +79,7 @@ Checklist to help in the preparation on the day of the event, and to follow-up:
 * Gauge the room’s experience
 * Everyone mapping has an OSM account 
 * Live editing tutorial (ID editor)
+* Tweet
 * Take pictures!
 * Check in with mappers throughout the event
 
