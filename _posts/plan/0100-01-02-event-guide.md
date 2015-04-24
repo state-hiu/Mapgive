@@ -52,7 +52,7 @@ It's not necessary to turn anybody away for the event who show up, but who did n
  
 ### Agenda
 
-It can be helpful to start with an OSM beginners workshop at the front end of the event (for an hour or so), then have experienced OSMers join in. Or perhaps assign an experienced OSMer to a small group of people during the first hour to work with them closely. Aim for having at least a 1:4 ration fo experience to new mappers.
+It can be helpful to start with an OSM beginners workshop at the front end of the event (for an hour or so), then have experienced OSMers join in. Or perhaps assign an experienced OSMer to a small group of people during the first hour to work with them closely. Aim for having at least a 1:4 ratio of experienced to new mappers.
  
 ## Venue Logistics
  
@@ -67,7 +67,7 @@ With many laptops whizzing away, some rooms can get a little warmer than usual, 
 
 This may be obvious, but a reliable internet connection is a requirement. Test out internet ahead of time, if you can. Investigate if IT support needs to be aware an event if going to happen. It is possible that an ISP can block a connection if too much activity is happening on the network and the provider thinks it is suspicious.
 
-If your event has more than fifty mappers and you are all mapping from one IP address, let the OSM Operations Working Group(operations@osmfoundation.org) informed to ensure that throtteling won't slow anyone down.
+If your event has more than fifty mappers and you are all mapping from one IP address, let the OSM Operations Working Group (operations@osmfoundation.org) informed to ensure that throttling won't slow anyone down.
  
 ### Computers and Power
 
