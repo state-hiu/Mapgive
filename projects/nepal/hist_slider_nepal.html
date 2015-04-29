@@ -11,9 +11,50 @@
   #map { position:absolute; top:0; bottom:0; width:100%; }
 </style>
 </head>
-<body>
 
 <style>
+
+
+		.info {
+			padding: 6px 8px;
+			font: 14px/16px Arial, Helvetica, sans-serif;
+			background: white;
+			background: rgba(255,255,255,0.8);
+			box-shadow: 0 0 15px rgba(0,0,0,0.2);
+			border-radius: 5px;
+		}
+		.info h4 {
+			margin: 0 0 5px;
+			color: #d73f3f;
+		}
+		/*overides leaflet control layer order so it doesn't appear on top of nav bar*/
+		.leaflet-top, .leaflet-bottom {
+			z-index: 1;
+		}
+
+/*adds extra bottom margin to bottom left label*/
+    .leaflet-left.leaflet-bottom {
+			margin-bottom: 20px;
+		}
+
+
+#mapAtitle {
+    left:1%;
+    bottom:15%;
+    width:35%;
+    text-align:left;
+    z-index:10;
+    background-color:rgba(255,255,255,0.7);
+}
+
+#mapBtitle {
+    left:69%;
+    width:30%;
+    bottom:15%;
+    text-align:right;
+    z-index:10;
+    background-color:rgba(255,255,255,0.7);
+}
 
 .range {
   position:absolute;
@@ -92,6 +133,8 @@ input[type=range]::-ms-thumb {
 
 </style>
 
+<body>
+
 <div id='map'></div>
 <input id='range' class='range' type='range' min='0' max='1.0' step='any' />
 
@@ -141,6 +184,28 @@ map.setMaxBounds(bounds);
 //map.fitBounds(bounds);
 
 map.setView([27.6959,85.3774],10);
+
+		//taken from: http://leafletjs.com/examples/choropleth-example.html
+		//info box that contains title
+		var bottom_left_text = L.control({position: 'bottomleft'});
+
+		bottom_left_text.onAdd = function (map) {
+			this._div = L.DomUtil.create('div', 'info');
+			this._div.innerHTML = '<h4>Before Response</h4>';
+			return this._div;
+		};
+
+		bottom_left_text.addTo(map);
+
+		var bottom_right_text = L.control({position: 'bottomright'});
+
+		bottom_right_text.onAdd = function (map) {
+			this._div = L.DomUtil.create('div', 'info');
+			this._div.innerHTML = '<h4>Today</h4>';
+			return this._div;
+		};
+
+		bottom_right_text.addTo(map);
 
 clip();
 </script>
