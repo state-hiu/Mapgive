@@ -1,7 +1,7 @@
 ---
 layout: resource
 category: events
-permalink: '/events/earth-obs-day/'
+external_url: 'http://mapgive.state.gov/events/earth-obs-day/'
 title: Earth Observation Day
 status: past
 date: 20150408
