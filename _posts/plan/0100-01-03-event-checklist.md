@@ -9,20 +9,13 @@ tags:
 
 Checklist to help in the preparation on the day of the event, and to follow-up:
 
-# Task
+# Project
 
-* Pick the mapathon-specific tasks
-* Check the overall imagery quality
-* Check for special concerns regarding task
-* Prepare a tracing/tagging guide for the task
-* Take retraceable “before shots” of the area 
-  * OSM
-  * ID editor
-  * JOSM
-  * Mapnik?
-  * Assign ITO “areas” (different zooms)
-* Before metrics
-  * Extract OSM data
+* Pick specific projects for the mapathon
+* Check the overall imagery quality of the area
+* Check for special concerns regarding the project
+* Check for an existing project guide
+* Try to capture "before shots" and "before metrics" of the area
 
 # Venue
 
@@ -40,61 +33,52 @@ Checklist to help in the preparation on the day of the event, and to follow-up:
 * Know who to contact in advance in case of IT issues
 
 # Logistics
-
+* Event posters (guide people to the room)
+* Sign in sheet (Name, Email, Affiliation, How’d You Hear about This Event?)
+* Name tags
 * Power strips
 * Chairs
 * Tables
 * Speakers
 * Microphones
-* Posters
-* Sign in sheet (Name, Email, Affiliation, How’d You Hear about This Event?)
-* Event posters (guide people to the room)
-* Print any necessary handouts
-* Name tags
-* 'I mapped' stickers
 * Music
-* Extra mice if possible
-* Extra laptops if possible
 * Food/Drink
 * Cups, Plates, Utensils, Napkins
+* Extra mice if possible
+* Extra laptops if possible
 
 #Pre-event Outreach
 
 * Coordinate with potential partners
-* MeetUp or EventBrite
-* Reach out to similar MeetUps
-* Reach out to local universities
-* Libraries
-* Media
+* - Reach out to similar groups
+* - Reach out to local universities
+* - Reach out to local libraries
+* - Reach out to media
+* Pick a platform to organize invitees
 * Encourage people to join remotely
-* Teleconference
-* Twitter (Pick a hashtag)
-* Facebook Posts
-* Consider sending partners social media toolkit
-* Send a friendly event reminder
+* Organize a teleconference
+* Social media (pick a hashtag!)
+* Send a friendly reminder before the event
 
 # During the event
 
-* Show the ”Why Map?” video
-* Gauge the room’s experience
-* Everyone mapping has an OSM account 
-* Live editing tutorial (ID editor)
-* Tweet
+* Gauge the room’s mapping experience
+* Ask exerienced mappers to identify themselves as such
+* Make sure everyone has or sets up an OSM account
+* Show the ”Why Map?” video!
+* Live editing tutorial in ID editor for beginners
+* Spread the word about your event on social media
 * Take pictures!
 * Check in with mappers throughout the event
+* Remind mappers to save often
+* Record any commonly asked questions
 
 # Post event
 
 * Thank everyone for attending!
-* (Are there related events in the area? Point them out!)
+* Are there related events in the area? Point them out!
+* Check the mapathon metrics (how many people, how many edits?
 * Send a progress report to all attendees
 * Consider sending personalized emails thanking people for their individual contributions
-* Metrics (how many people, how many edits?)
-* After shots
-  * OSM
-  * ID editor
-  * JOSM
-  * ITO areas
-* Create graphics
 * Start planning the next one!
 
