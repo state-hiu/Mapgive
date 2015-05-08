@@ -5,7 +5,6 @@ external_url: 'https://www.digitalgov.gov/2014/12/17/with-every-tool-possible-su
 title: With Every Tool Possible Supporting Humanitarian Aid Efforts Through Crowdsourced Mapping
 publication: DigitalGov
 author: Ashley Wichman
-status: past
 date: 20141217
 mapgive_is_author: no
 explicit_mention: yes
