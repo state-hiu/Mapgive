@@ -50,10 +50,10 @@ Checklist to help in the preparation on the day of the event, and to follow-up:
 #Pre-event Outreach
 
 * Coordinate with potential partners
-* - Reach out to similar groups
-* - Reach out to local universities
-* - Reach out to local libraries
-* - Reach out to media
+  * Reach out to similar groups
+  * Reach out to local universities
+  * Reach out to local libraries
+  * Reach out to media
 * Pick a platform to organize invitees
 * Encourage people to join remotely
 * Organize a teleconference
