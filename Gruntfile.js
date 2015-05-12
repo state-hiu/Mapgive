@@ -28,7 +28,8 @@ module.exports = function(grunt) {
           combine: {
             files: {
               'assets/css/main.min.css': ['_assets/css/bootstrap.min.css', '_assets/css/main.min.css'],
-              'assets/css/ie-print.min.css': '_assets/css/ie-print.css'
+              'assets/css/ie-print.min.css': '_assets/css/ie-print.css',
+              'assets/css/lightbox.css': '_assets/css/lightbox.css'
             }
           }
         },
@@ -60,7 +61,9 @@ module.exports = function(grunt) {
               'assets/js/main.min.js': ['_assets/js/vendor/bootstrap.min.js', '_assets/js/plugins.js', '_assets/js/vendor/jquery.a11yAccordion.js', '_assets/js/main.js'],
               'assets/js/lt-ie9.min.js': ['_assets/js/vendor/html5shiv.js', '_assets/js/vendor/respond.min.js', '_assets/js/vendor/html5shiv-printshiv.js'],
               'assets/js/modernizr-2.7.1.min.js': ['_assets/js/vendor/modernizr-2.7.1.min.js'],
-              'assets/js/jquery-1.10.2.min.js': ['_assets/js/vendor/jquery-1.10.2.min.js']
+              'assets/js/jquery-1.10.2.min.js': ['_assets/js/vendor/jquery-1.10.2.min.js'],
+              'assets/js/lightbox.js':'_assets/js/vendor/lightbox.js',
+              'assets/js/lightbox.min.js':'_assets/js/vendor/lightbox.min.js'
             }
           }
         },
