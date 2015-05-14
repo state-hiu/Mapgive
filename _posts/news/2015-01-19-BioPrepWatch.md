@@ -1,7 +1,7 @@
 ---
 layout: resource
 category: news
-external_url: ‘http://bioprepwatch.com/news/volunteer-mappers-help-cdc-others-find-ebola-patients/340598/'
+external_url: 'http://bioprepwatch.com/news/volunteer-mappers-help-cdc-others-find-ebola-patients/340598/'
 title: BioPrepWatch
 publication: Volunteer mappers help CDC, others find Ebola patients
 author: 

@@ -1,8 +1,8 @@
 ---
 layout: resource
 category: news
-external_url: ‘http://technical.ly/dc/2015/04/29/nepal-earthquake-maptime-dc/'
-title: How #dctech can help the Nepal earthquake relief effort
+external_url: 'http://technical.ly/dc/2015/04/29/nepal-earthquake-maptime-dc/'
+title: How &#35;dctech can help the Nepal earthquake relief effort
 publication: Technical.ly
 author: Lalita Clozel
 date: 20150429

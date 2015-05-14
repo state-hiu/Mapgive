@@ -1,7 +1,7 @@
 ---
 layout: resource
 category: news
-external_url: ‘http://library.stanford.edu/blogs/stanford-libraries-blog/2015/02/stanford-geospatial-center-helps-use-crowd-reduce-childhood'
+external_url: 'http://library.stanford.edu/blogs/stanford-libraries-blog/2015/02/stanford-geospatial-center-helps-use-crowd-reduce-childhood'
 title: Geospatial Center helps use “The Crowd” to reduce childhood cholera
 publication: Stanford Libraries Blog
 author: Stacey Maples

@@ -1,7 +1,7 @@
 ---
 layout: resource
 category: news
-external_url: ‘http://www.state.gov/r/pa/prs/ps/2015/03/238691.htm'
+external_url: 'http://www.state.gov/r/pa/prs/ps/2015/03/238691.htm'
 title: State Department’s First Connect Camp in Tanzania Empowers Young African Leaders
 publication: U.S. State Department
 author: Office of the Spokesperson
