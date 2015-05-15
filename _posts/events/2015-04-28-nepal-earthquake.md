@@ -3,7 +3,7 @@ layout: resource
 category: events
 external_url: 'http://www.meetup.com/Maptime-DC/events/220505118/'
 title: Intro to OSM for Humanitarian Response + Mapping for Nepal
-status: upcoming
+status: past
 date: 20150429
 tags:
   - event
