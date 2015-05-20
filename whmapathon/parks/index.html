@@ -1,6 +1,6 @@
 ---
 layout: default
-title: White House Mapathon
+title: Every Kid in a Park
 twitterDescription: "White House Mapathon"
 ogDescription: "White House Mapathon"
 emailSubject: "White House Mapathon"
@@ -11,7 +11,7 @@ emailDescription: "White House Mapathon, http://mapgive.state.gov/whmapathon"
   <div class="row">
     <div class="col-md-8">
       <header role="header">
-        <h1 class="page-title"><a href="/whmapathon/">White House Mapathon</a> / Every Kid in a Park</h1>
+        <h1 class="page-title"><a href="{{ site.baseurl }}/whmapathon/">White House Mapathon</a> / {{ title }}</h1>
       </header>
     </div>
     <div class="col-md-offset-1 col-md-3">
@@ -20,38 +20,32 @@ emailDescription: "White House Mapathon, http://mapgive.state.gov/whmapathon"
   </div>
   <div class="row">
     <div class="col-md-8">
+
       <header role="header">
-        <h2 class="page-title">HashTag</h2>
+        <h2 class="page-title">Description</h2>
+      </header>
+      <p>In the lead up to the <a href="http://www.nationalparks.org/our-work/celebrating-100-years-service">100th birthday</a> of the National Park Service in 2016, the President’s <a href="http://www.nationalparks.org/ook/every-kid-in-a-park">Every Kid in a Park</a> initiative is a call to action to get all children to visit and enjoy America’s unparalleled outdoors.</p>
+      <p>This dataset documents sites where educational activities related to the Every Kid in a Park initiative are available, as collected by the various agencies represented under FICOR.   Through this exercise we’re going to improve the location and attributes for this information to provide better planning resources and contextual information for the “find your park” aspect of the initiative.</p>
+ 
+      <header id="instructions" role="header">
+        <h2 class="page-title">Instructions</h2>
       </header>
 
-      #WHMapathon
+<ol>
+  <li>Welcome to join the slack channel #dev4outdoors.  To join the channel, go to <a href="http://dev4outdoors.herokuapp.com/">http://dev4outdoors.herokuapp.com/</a> and request access.</li>
+  <li>Go to <a href="https://www.openstreetmap.org">OpenStreetMap</a> - if you don’t already have an account, <a href="https://www.openstreetmap.org/user/new">sign up for one</a> and quickly learn to map.</li>
+  <li>Visit the spreadsheet -  <a href="https://docs.google.com/spreadsheets/d/1Cou71UIGqwoeZdj8PdzZGB6bgi5JM6p9J8CrWg2L7qY/edit#gid=245679282">https://docs.google.com/spreadsheets/d/1Cou71UIGqwoeZdj8PdzZGB6bgi5JM6p9J8CrWg2L7qY/edit#gid=245679282</a>. Check out one State at a time (data is alphabetical by State) by noting your initials in the spreadsheet in the first column.  NOTE: It might be helpful to shade all the records by State with a color of your choice while editing to alert other viewers that you’re working on those records.</li>
+  <li>Search in OpenStreetMap by the park name, address, or both.  Searches on address may not return the exact location you’re looking for - if you can’t easily find the correct location, please note it in the spreadsheet and move on to the next record.</li>
+  <li>Once the correct location is identified, create features and attributes for as many of the activities as possible.  Key features to look for: Buildings, roads, trails. Handicap accessibility, restrooms, education-specific activities. Also be on the lookout for major recreational activities (e.g., hiking, camping, fishing, boating, swimming, picnicking, bird watching, etc.)</li>
+  <li>When saving your edits, tag changeset commits to OSM with #WHMapathon and #EKIP.</li>
+  <li>Once you’ve completed a park, move on to the next one!</li>
+</ol>
 
-      <header role="header">
-        <h2 class="page-title">Remote Mapping Projects</h2>
-      </header>
-
-      <h3>Open Roads, Philippines</h3>
-      <div>Improved Real Time Decision making of Infrastructure Investments for the Philippines by linking geospatial road network data with rich geo-tagged social data collected through mobile phones.  Imagery service provided by <a href="http://mapgive.state.gov/ittc/">Imagery to the Crowd</a>.</div>
-      <br>
-      <div><b>Projects: </b><a href="http://tasks.hotosm.org/project/1054">1054</a>, <a href="http://tasks.hotosm.org/project/1055">1055</a>, and <a href="http://tasks.hotosm.org/project/1056">1056</a></div>
-
-      <h3>Peace Corps, Botswana</h3>
-      <div>Imagery service provided by Bing.</div>
-      <br>
-      <div><b>Project: </b><a href="http://tasks.hotosm.org/project/1057">1057</a></div>
-
-      <h3>Nepal Earthquake</h3>
-      <div>Over <a href="http://osm.townsendjennings.com/nepal/">5,000 volunteer mappers</a> have improved the basemap of Nepal after the recent Earthquake.  There's still some projects set up by HOT with tiles that need to be completed.  Imagery service provided by Bing.</div>
-      <br>
-      <div><b>Projects: </b><a href="http://tasks.hotosm.org/project/1043">Solukhumbu</a>, <a href="http://tasks.hotosm.org/project/1048">Tanahu</a>, and <a href="http://tasks.hotosm.org/project/1047">Palpa</a></div>
-
-      <hr></hr>
-
-      <header role="header">
-        <h2 class="page-title">Partners</h2>
+      <header id="results" role="header">
+        <h2 class="page-title">Results</h2>
       </header>
  
-      <a href="http://mapgive.state.gov">MapGive</a>, PeaceCorps, TBD_
+      <a href="/whmapathon/results/">Results Page</a>
       
       </br>
     </div>
