@@ -1,48 +1,33 @@
 MapGive
-================
-test1
-## Description
+===========
 
-This repository contains the contents of the MapGive website accessible at [http://mapgive.state.gov](http://mapgive.state.gov).
+**gh-pages branch: used for testing**
 
-## Installation
+This branch does not have the assets directory in the gitignore file. It includes the assets folder so jekyll can access the assets when displaying the site. In the master branch you are expected to run Grunt first, which will build the assets directory for you.
 
-These installation instructions are subject to change.
+Dec 16, 2014:
 
-Jekyll (http://jekyllrb.com/) needs to be installed.
+- couldn't integrate Leaflet until added L as a global variable in the grunt file!
+(https://github.com/tombatossals/angular-leaflet-directive/issues/519)
 
-Now you can run the commands below to install the other dependencies:
 
-```
-sudo apt-get install npm
-sudo apt-get install nodejs
-sudo ln -s /usr/bin/nodejs /usr/bin/node #grunt expects "node"
+This site was built using Jekyll, a static site generator (Intro to Jekyll video: https://www.youtube.com/watch?v=O7NBEFmA7yA)
 
-sudo npm install -g grunt-cli
-sudo apt-get install optipng
-sudo apt-get install libjpeg-progs
-```
+This is an existing Grunt project (http://gruntjs.com/getting-started). 
+Assuming that the Grunt CLI has been installed and that the project has already been configured with a package.json and a Gruntfile, it's very easy to start working with Grunt:
 
-<<<<<<< HEAD
 1. Navigate to the project's root directory.
 2. Install project dependencies with 'npm install' command.
 3. run Grunt with 'grunt' command.
-=======
-## Usage
->>>>>>> f0ab34aa232042e6ca21953831a4c855ff6c737b
 
-Navigate to the Mapgive directory. The first time run 'npm install' to install the grunt dependencies. From now on you can build the site by running the 'grunt' command inside of the Mapgive directory. Grunt outputs the site in the '_site' folder.
+-The Grunt file does many optimization functions and builds the Jekyll site
 
-## Contributing
+Deploying Jekyll site to GitHub Pages (http://jekyllrb.com/docs/github-pages/)
+-This involves changing the baseurl name in the _config file
 
-HIU is currently accepting pull requests for this repository. Please provide a human-readable description of the changes in the pull request. Additionally, update the README.md file as needed.
+used this site to validate favicon:
+http://www.html-kit.com/favicon/validator/
 
-## License
-This project constitutes a work of the United States Government and is not subject to domestic copyright protection under 17 USC § 105.
-
-However, because the project utilizes code licensed from contributors and other third parties, it therefore is licensed under the MIT License. http://opensource.org/licenses/mit-license.php. Under that license, permission is granted free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the conditions that any appropriate copyright notices and this permission notice are included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
+check out test site:   
+http://d3netxer.github.io/Mapgive/index.html
 
