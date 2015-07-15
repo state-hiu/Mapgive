@@ -20,9 +20,9 @@ module.exports = function(grunt) {
         },
         
         globals: {
-    	L: true,
-    	angular: true
-		},
+          L: true,
+          angular: true
+        },
 
         cssmin: {
           combine: {
@@ -81,6 +81,7 @@ module.exports = function(grunt) {
             src: [
               '_assets/img/*.jpg',
               '_assets/img/*.jpeg',
+              '_assets/img/*.png',
             ],
             dest: 'assets/img'
           }
@@ -103,31 +104,32 @@ module.exports = function(grunt) {
           }
         },
         
-        //osm.svg was not compressing right so copying it instead
-        copy: {   
-		dist: {
-			src: '_assets/img/osm.svg', 
-			dest: 'assets/img/osm.svg'
-		},
-		gov: {
-            		expand: true,
-            		cwd: '_assets/js/gov',
-            		src: '*.js',
-            		dest: 'assets/js/gov',
-		        flatten: true,
-            		filter: 'isFile'
-          	},
-          	img: {
-            		expand: true,
-            		cwd: '_assets/img/', 
-            		src: '*.png',
-            		dest: 'assets/img/',
-            		flatten: true,
-            		filter: 'isFile'
-          	}
+        copy: {  
+        /* osm.svg was not compressing right so copying it instead
+          dist: {
+            src: '_assets/img/osm.svg', 
+            dest: 'assets/img/osm.svg'
+          },
+          */
+          gov: {
+            expand: true,
+            cwd: '_assets/js/gov',
+            src: '*.js',
+            dest: 'assets/js/gov',
+            flatten: true,
+            filter: 'isFile'
+            },
+          /* //copied png files instead of compressing them because optipng was not installed
+          img: {
+            expand: true,
+            cwd: '_assets/img/', 
+            src: '*.png',
+            dest: 'assets/img/',
+            flatten: true,
+            filter: 'isFile'
+          }
+          */
         },
-
-
         compress: {
           main: {
             options: {
@@ -142,6 +144,7 @@ module.exports = function(grunt) {
             ]
           }
         },
+
 
         shell: {
           jekyll: {
@@ -170,7 +173,6 @@ module.exports = function(grunt) {
           }
         },
         
-        
 
         hashres: {
           options: {
@@ -178,6 +180,8 @@ module.exports = function(grunt) {
             fileNameFormat: '${name}.${ext}?${hash}',
             renameFiles: false
           },
+          //compresses the images. If you can't install one of the dependencies (optipng or jpegtran)
+          //then you will need use a grunt copy task instead
           images: {
             src: [
               'temp/assets/img/*.png',
