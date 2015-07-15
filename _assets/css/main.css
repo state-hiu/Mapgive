@@ -1594,17 +1594,6 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
     visibility: hidden;
   }
 
-.hiu-logo {
-    background-position: 0 -103px;
-    display: inline-block;
-    float: right;
-    margin-left: 23px;
-    margin-right: 13px;
-    margin-top: 24px;
-    opacity: 0.75;
-    width: 135px;
-}
-
   .footer-flag-seal {
     background-position: 0 -102px;
     width: 136px;
@@ -1823,4 +1812,14 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
 #map { height: 400px; }
 #map a {text-decoration: none; }
 
+.hiu-logo {
+    background-position: 0 -103px;
+    display: inline-block;
+    float: right;
+    margin-left: 23px;
+    margin-right: 13px;
+    margin-top: 24px;
+    opacity: 0.75;
+    width: 135px;
+}
 
