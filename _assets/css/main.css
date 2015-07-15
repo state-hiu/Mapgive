@@ -114,6 +114,28 @@ dt {
   }
 }
 
+.navbar.affix + #main {
+  /* padding-top needs to be total height of .navbar */
+  padding-top: 63px;
+}
+
+@media (max-width: 991px) {
+  .navbar.affix + #main {
+    padding-top: 125px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar.affix + #main {
+    padding-top: 200px;
+  }
+}
+
+@media (max-width: 569px) {
+  .navbar.affix + #main {
+    padding-top: 280px;
+  }
+}
+
 .site-tagline {
   display: none;
 }
@@ -153,6 +175,12 @@ dt {
   color: white;
 }
 
+.btn-blue-primary {
+  background-color: #9bcaff;
+  border-color: #9bcaff;
+  color: white;
+}
+
 /***** Main Nav *****/
 
 .navbar {
@@ -168,11 +196,6 @@ dt {
 .navbar.affix {
   position: fixed;
   top: 0;
-}
-
-.navbar.affix + #main {
-  /* padding-top needs to be total height of .navbar */
-  padding-top: 63px;
 }
 
 .navbar-default {
@@ -205,6 +228,7 @@ dt {
 
 .navbar-nav {
   margin: 0;
+  float:none;
 }
 
 @media (min-width: 768px) {
@@ -221,6 +245,15 @@ dt {
 .navbar-default .navbar-nav > li > a {
   padding: 15px;
   color: #fff;
+}
+
+#blue-button {
+  color: black;
+}
+
+.navbar-blue-btn > li > a {
+  padding: 15px;
+  color: black;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -244,6 +277,13 @@ dt {
 .navbar-default .navbar-nav > li > a.navbar-btn:focus {
   background-color: #E83030;
   border-color: #E83030;
+}
+
+.navbar-default .navbar-nav > li > a#blue-button:active,
+.navbar-default .navbar-nav > li > a#blue-button:hover,
+.navbar-default .navbar-nav > li > a#blue-button:focus {
+  background-color: #9bb9ff;
+  border-color: #9bb9ff;
 }
 
 .navbar-default .navbar-collapse {
@@ -281,6 +321,35 @@ dt {
     bottom: 6px;
     margin: 0 0 0 20px;
   }
+}
+
+/*http://codepen.io/ThiefMaster/pen/afGbB*/
+#content       
+{
+    /*font-size: .75em;  12/16 */
+    max-width: 960px;
+    /*text-align: right;
+    margin: 0px auto; auto centers the container */
+}
+/*CSS3 multiple columns.*/
+/* Get em size for colums: 184/16 */   
+.columns
+{   
+    -moz-column-width: 17.5em; /* Firefox */
+    -webkit-column-width: 17.5em; /* webkit, Safari, Chrome */
+    column-width: 17.5em;
+}
+/*remove standard list and bullet formatting from ul*/
+.columns ul
+{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+/* correct webkit/chrome uneven margin on the first column*/
+.columns ul li:first-child
+{
+    margin-top:0px;
 }
 
 /***** Main Nav End *****/
@@ -1738,8 +1807,20 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   }
 }
 
+/*Markup free clearing
+Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
+.clearfix:after {
+  content:'';
+  display:block;  
+  height:0;
+  clear:both;
+  visibility:hidden;
+  }
+* html .clearfix { height:1%; }
+*:first-child + html .clearfix { min-height:1%; }
 
 
 #map { height: 400px; }
 #map a {text-decoration: none; }
+
 

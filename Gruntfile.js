@@ -75,7 +75,8 @@ module.exports = function(grunt) {
             ]
           }
         },
-
+          //compresses the images. If you can't install one of the dependencies (optipng or jpegtran)
+          //then you will need use a grunt copy task instead
         img: {
           task: {
             src: [
@@ -180,8 +181,6 @@ module.exports = function(grunt) {
             fileNameFormat: '${name}.${ext}?${hash}',
             renameFiles: false
           },
-          //compresses the images. If you can't install one of the dependencies (optipng or jpegtran)
-          //then you will need use a grunt copy task instead
           images: {
             src: [
               'temp/assets/img/*.png',
