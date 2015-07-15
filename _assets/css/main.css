@@ -248,7 +248,7 @@ dt {
 }
 
 #blue-button {
-  color: black;
+  color: #52504d;
 }
 
 .navbar-blue-btn > li > a {
@@ -335,7 +335,7 @@ dt {
 /* Get em size for colums: 184/16 */   
 .columns
 {   
-    -moz-column-width: 17.5em; /* Firefox */
+    -moz-column-width: 36.5em; /* Firefox */
     -webkit-column-width: 17.5em; /* webkit, Safari, Chrome */
     column-width: 17.5em;
 }
