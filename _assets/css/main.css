@@ -121,7 +121,7 @@ dt {
 
 @media (max-width: 991px) {
   .navbar.affix + #main {
-    padding-top: 125px;
+    padding-top: 75px;
   }
 }
 @media (max-width: 768px) {
@@ -130,7 +130,7 @@ dt {
   }
 }
 
-@media (max-width: 569px) {
+@media (max-width: 660px) {
   .navbar.affix + #main {
     padding-top: 280px;
   }
@@ -323,20 +323,33 @@ dt {
   }
 }
 
-/*http://codepen.io/ThiefMaster/pen/afGbB*/
-#content       
-{
-    /*font-size: .75em;  12/16 */
+@media (max-width: 991px) {
+  #content {
     max-width: 960px;
-    /*text-align: right;
-    margin: 0px auto; auto centers the container */
+    width: 400px;
+  }
 }
+
+@media (max-width: 768px) {
+  #content {
+    max-width: 960px;
+    width: inherit;
+  }
+}
+
+@media (min-width: 992px) {
+  #content {
+    max-width: 960px;
+    width: 550px;
+  }
+}
+/*http://codepen.io/ThiefMaster/pen/afGbB*/
 /*CSS3 multiple columns.*/
-/* Get em size for colums: 184/16 */   
+/* Get em size for colums: 184/16 */  
 .columns
 {   
     -moz-column-width: 36.5em; /* Firefox */
-    -webkit-column-width: 17.5em; /* webkit, Safari, Chrome */
+    -webkit-column-width: 20.5em; /* webkit, Safari, Chrome */
     column-width: 17.5em;
 }
 /*remove standard list and bullet formatting from ul*/
