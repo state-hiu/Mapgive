@@ -9,9 +9,10 @@ date: 20150604
 mapgive_is_author: no
 explicit_mention: yes
 type: news
-feactured: False
 photo:
-quote:
+video:
+featured: no
+quote: MapGive is filling gaps through the provision of high-resolution satellite imagery and assisting with metrics, visualizations and analysis to mobilize the crowd and improve the data, and to bring attention to this unique form of digital volunteerism
 tags:
   - insert here
 ---
