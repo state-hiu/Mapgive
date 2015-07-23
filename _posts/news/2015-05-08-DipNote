@@ -10,7 +10,8 @@ mapgive_is_author: yes
 explicit_mention: yes
 type: news
 photo: http://blogs.state.gov/sites/default/files/styles/large/public/contributed_images/2015_0507_Nepal_CarCrushed.jpg?itok=7Twz17Bx
-quote:
-tags:
+video:
+featured: no 
+quote: Open map data helps rescuers and aid groups get to the people they need to help. In Nepal, updated OpenStreetMap data are being used for logistics and planning by operational responders and by organizations supporting them with maps and analysis.
   - insert here
 ---
