@@ -11,6 +11,8 @@ explicit_mention: yes
 type: news
 featured: false
 photo: http://itu.edu.pk/wp-content/uploads/2015/06/Lahore-Mapathon.jpg
+video:
+featured: no
 quote:
 tags:
   - insert here
