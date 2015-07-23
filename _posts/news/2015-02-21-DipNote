@@ -10,6 +10,8 @@ mapgive_is_author: yes
 explicit_mention: yes
 type: news
 photo: http://blogs.state.gov/sites/default/files/styles/large/public/contributed_images/2015_0221_map_give_4.jpg?itok=bjLWaaY3
+video:
+featured: yes
 quote:
 tags: 
   - news
