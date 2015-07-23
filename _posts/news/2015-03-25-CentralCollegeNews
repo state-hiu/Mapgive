@@ -9,8 +9,9 @@ date: 20150325
 mapgive_is_author: no
 explicit_mention: yes
 type: news
-featured: false
 photo: http://news.central.edu.s3.amazonaws.com/wp-content/uploads/2015/03/jjk_map_n_am-300x224.jpg
+video:
+featured: no
 quote:
 tags:
   - insert here
