@@ -120,7 +120,7 @@ module.exports = function(grunt) {
             flatten: true,
             filter: 'isFile'
             },
-          /* //copied png files instead of compressing them because optipng was not installed
+           //copied png files instead of compressing them because optipng was not installed
           img: {
             expand: true,
             cwd: '_assets/img/', 
@@ -129,7 +129,7 @@ module.exports = function(grunt) {
             flatten: true,
             filter: 'isFile'
           }
-          */
+          
         },
         compress: {
           main: {

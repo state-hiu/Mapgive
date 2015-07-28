@@ -69,14 +69,33 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
 
       <!--<h1 class="page-title">Additional MapGive News</h1>-->
 
+<!--Jekyll doesn't count, round-about way: https://ecommerce.shopify.com/c/shopify-discussion/t/easy-one-liquid-integer-variables-31824-->
+{% assign count = '' %}
+
+{% assign sorted_pages = (site.categories.news%}
+  {% for post in sorted_pages %}
+    {% if post.featured == false %}
+      {% capture increment %}{{ count }}*{% endcapture %}
+  {% assign count = increment %}
+{% endif %}
+{% endfor %}
+
+{% assign an_integer = increment.size %}
+<h1>We have {{ an_integer }} items.</h1>
+
+{% assign offset = 0 %}
+
+
       <div class='limiter pad4y clearfix'>
       {% assign sorted_pages = (site.categories.news | reversed sort: 'date') %}
-      {% for post in sorted_pages %}
-      <div class='keyline-all pad4 space-bottom4 project-tile'>
+      {% for post in sorted_pages limit:10 offset:offset %}
+        {% if post.featured == false %}
+          <div class='keyline-all pad4 space-bottom4 project-tile'>
             <h2><a href="{{ post.external_url }}">{{ post.title }}</a></h2>
             <h3>{{ post.publication }}</h3>
             <p>{{ post.date | date: '%B %d, %Y' }}</p>
           </div>
+        {% endif %}
       {% endfor %}
       </div>
 
