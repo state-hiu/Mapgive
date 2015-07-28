@@ -2,7 +2,7 @@
 layout: resource
 category: news
 external_url: 'https://www.whitehouse.gov/blog/2015/05/28/citizen-cartographers-unite-report-first-white-house-mapathon'
-title: Citizen Cartographers Unite: Report from the first White House Mapathon
+title: Citizen Cartographers Unite&colon; Report from the first White House Mapathon
 publication: The White House
 author: Megan Smith and Mikel Maron
 date: 20150528

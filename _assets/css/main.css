@@ -877,6 +877,7 @@ dt {
 .thumbnail {
   margin-top: 20px;
   margin-bottom: 20px;
+  margin: 20px;
 }
 
 .news-thumbnail {
@@ -901,6 +902,7 @@ dt {
 .news-thumbnail {
   margin-top: 20px;
   margin-bottom: 20px;
+  margin: 20px;
 }
 
 .story {
