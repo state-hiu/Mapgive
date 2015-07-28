@@ -27,19 +27,54 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
 
 
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-9">
 
 
-<div class='limiter pad4y clearfix'>
-{% assign sorted_pages = (site.categories.news | reversed sort: 'date') %}
-{% for post in sorted_pages %}
-<div class='keyline-all pad4 space-bottom4 project-tile'>
-      <h2><a href="{{ post.external_url }}">{{ post.title }}</a></h2>
-      <h3>{{ post.publication }}</h3>
-      <p>{{ post.date | date: '%B %d, %Y' }}</p>
-    </div>
-{% endfor %}
-</div>
+      {% assign sorted_pages = (site.categories.news | reversed sort: 'date') %}
+        {% for post in sorted_pages %}
+          {% assign display = null %}
+          {% assign ready = null %}
+          {% for tag in post.tags %}
+            {% if tag == "event" %}{% assign display = true %}{% endif %}
+          {% endfor %}
+          {% if display == true %}
+            {% if post.status == "past" %}
+            <div class='keyline-all pad4 space-bottom4 project-tile'>
+              <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+              <h3>{{ post.subtitle }}</h3>
+              <p>{{ post.excerpt }}</p>
+            </div>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+
+      <div class="row">
+        {% for story in site.categories.stories %}
+        <div class="col-sm-4">
+          <div class="news-thumbnail">
+            <a href="{{ site.baseurl }}{{ story.url }}" class="image">
+              <img src="{{ site.baseurl }}/assets/img/{{ story.image }} " alt="{{ story.altText }}" class="img-responsive shadowed" />
+            </a>
+            <div class="caption">
+              <h3><a href="{{ site.baseurl }}{{ story.url }}">{{ story.title }}</a></h3>
+              <p><strong>Location</strong>: {{ story.country }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+
+      <div class='limiter pad4y clearfix'>
+      {% assign sorted_pages = (site.categories.news | reversed sort: 'date') %}
+      {% for post in sorted_pages %}
+      <div class='keyline-all pad4 space-bottom4 project-tile'>
+            <h2><a href="{{ post.external_url }}">{{ post.title }}</a></h2>
+            <h3>{{ post.publication }}</h3>
+            <p>{{ post.date | date: '%B %d, %Y' }}</p>
+          </div>
+      {% endfor %}
+      </div>
 
 
 <!--
@@ -72,7 +107,7 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
 
 
 
-    <div class="col-md-offset-1 col-md-3" >
+    <div class="col-md-3" >
     {% include more-info.html %}
 
     </div>
