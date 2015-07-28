@@ -9,7 +9,9 @@ date: 20141113
 mapgive_is_author: no
 explicit_mention: yes
 type: news
-photo:
+photo: http://press.nationalgeographic.com/files/2014/11/Web-image.jpg
+video:
+featured: no
 quote:
 tags:
   - insert here

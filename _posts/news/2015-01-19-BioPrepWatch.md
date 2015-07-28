@@ -9,7 +9,9 @@ date: 20150119
 mapgive_is_author: no
 explicit_mention: yes
 type: news
-photo:
+photo: https://jnswire.s3.amazonaws.com/jns-media/45/5d/38040/cdc_logo.jpg
+video:
+featured: no
 quote:
 tags:
   - insert here

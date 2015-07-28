@@ -9,7 +9,9 @@ date: 20140403
 mapgive_is_author: no
 explicit_mention: yes
 type: news
-photo:
+photo: http://techpresident.com/sites/default/files/imagecache/techpresident_leader/files/Screen%20Shot%202014-04-03%20at%203.38.25%20PM.png
+video:
+featured: no
 quote:
 tags:
   - insert here

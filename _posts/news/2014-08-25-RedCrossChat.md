@@ -9,8 +9,10 @@ date: 20140825
 mapgive_is_author: no
 explicit_mention: yes
 type: news
-photo:
-quote:
+photo: http://redcrosschat.org/wp-content/uploads/2014/08/mapping-ebola-300x199.jpg
+video:
+featured: yes
+quote: Each trace of a lined road leads to clear transportation routes, each trace of a square house leads to in-person Ebola awareness and education; each trace on a map leads to humanitarian aid that will fight against the Ebola virus.
 tags:
   - insert here
 ---

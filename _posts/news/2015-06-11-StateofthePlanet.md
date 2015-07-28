@@ -9,7 +9,9 @@ date: 20150611
 mapgive_is_author: no
 explicit_mention: yes
 type: news
-photo:
+photo: http://blogs.ei.columbia.edu/wp-content/uploads/2015/06/2015-06-11_1335441-300x201.jpg
+video:
+featured: no
 quote:
 tags:
   - insert here
