@@ -82,7 +82,7 @@ module.exports = function(grunt) {
             src: [
               '_assets/img/*.jpg',
               '_assets/img/*.jpeg',
-              '_assets/img/*.png',
+              //'_assets/img/*.png',
             ],
             dest: 'assets/img'
           }
