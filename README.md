@@ -1,5 +1,4 @@
 MapGive
-===========
 
 **gh-pages branch: used for testing**
 
