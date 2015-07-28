@@ -106,31 +106,37 @@ module.exports = function(grunt) {
         },
         
         copy: {  
-        /* osm.svg was not compressing right so copying it instead
-          dist: {
-            src: '_assets/img/osm.svg', 
-            dest: 'assets/img/osm.svg'
-          },
-          */
-          gov: {
+            /* osm.svg was not compressing right so copying it instead
+              dist: {
+                src: '_assets/img/osm.svg', 
+                dest: 'assets/img/osm.svg'
+              },
+              */
+              collecticons: {
             expand: true,
-            cwd: '_assets/js/gov',
-            src: '*.js',
-            dest: 'assets/js/gov',
-            flatten: true,
+            cwd: '_assets/css/collecticons/',
+            src: '**', 
+            dest: 'assets/css/collecticons/',
             filter: 'isFile'
-            },
-           //copied png files instead of compressing them because optipng was not installed
-          img: {
-            expand: true,
-            cwd: '_assets/img/', 
-            src: '*.png',
-            dest: 'assets/img/',
-            flatten: true,
-            filter: 'isFile'
-          }
-          
         },
+              gov: {
+                expand: true,
+                cwd: '_assets/js/gov',
+                src: '*.js',
+                dest: 'assets/js/gov',
+                flatten: true,
+                filter: 'isFile'
+                },
+               //copied png files instead of compressing them because optipng was not installed
+              img: {
+                expand: true,
+                cwd: '_assets/img/', 
+                src: '*.png',
+                dest: 'assets/img/',
+                flatten: true,
+                filter: 'isFile'
+              }
+            },
         compress: {
           main: {
             options: {

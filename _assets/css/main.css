@@ -1885,3 +1885,22 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
     width: 135px;
 }
 
+.ico.icon.collecticon-star-full {
+padding:10px;
+left:22px;
+position:absolute;
+font-size: 2rem;
+display:inline;
+}
+
+@media (max-width: 768px) {
+  .ico.icon.collecticon-star-full {
+  padding:6px;
+  left:20px;
+  position:absolute;
+  font-size: 2rem;
+  display:inline;
+  }
+}
+
+
