@@ -9,8 +9,10 @@ date: 20150429
 mapgive_is_author: no
 explicit_mention: yes
 type: news
-photo:
-quote:
+photo: http://technical.ly/dc/wp-content/uploads/sites/5/2015/04/open-data-day-dc-20151.jpg
+video:
+featured: no
+quote: With all these people around the world who can do this mapping from their computer, we can bring a lot of resources to bear on the problem and get data to people that need it fast
 tags:
   - insert here
 ---

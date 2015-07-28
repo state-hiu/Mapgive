@@ -10,6 +10,8 @@ mapgive_is_author: no
 explicit_mention: yes
 type: podcast
 photo:
+video:
+featured: no
 quote:
 tags:
   - insert here
