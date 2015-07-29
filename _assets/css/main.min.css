@@ -55,7 +55,8 @@ dt{font-weight:normal;}
 }
 .lt-ie9 .navbar-default{border-bottom:1px solid #bcbcbc;}
 .navbar-default .navbar-nav>li>a{padding:15px;color:#fff;}
-#blue-button{color:#52504d;}
+#blue-button{text-shadow:3px 3px 10px #693f41;}
+#red-button{text-shadow:3px 3px 10px #693f41;}
 .navbar-blue-btn>li>a{padding:15px;color:black;}
 .navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>li>a:focus{text-decoration:underline;color:#fff;}
 .navbar-default .navbar-nav>li>a.navbar-btn{margin:15px;padding:6px 12px;display:inline-block;}
@@ -339,6 +340,6 @@ h2,h3{page-break-after:avoid;}
 #map{height:400px;}
 #map a{text-decoration:none;}
 .hiu-logo{background-position:0 -103px;display:inline-block;float:right;margin-left:23px;margin-right:13px;margin-top:24px;opacity:0.75;width:135px;}
-.ico.icon.collecticon-star-full{padding:10px;left:21px;position:absolute;font-size:2rem;display:inline;}
-@media (max-width: 768px){.ico.icon.collecticon-star-full{padding:6px;left:20px;position:absolute;font-size:2rem;display:inline;}
+.ico.icon.collecticon-star-full{padding:10px;left:20px;position:absolute;font-size:2rem;display:inline;}
+@media (max-width: 768px){.ico.icon.collecticon-star-full{padding:5px;left:20px;position:absolute;font-size:2rem;display:inline;}
 }

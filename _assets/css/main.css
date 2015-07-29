@@ -248,8 +248,13 @@ dt {
 }
 
 #blue-button {
-  color: #52504d;
+  text-shadow: 3px 3px 10px #693f41;
 }
+
+#red-button {
+  text-shadow: 3px 3px 10px #693f41;
+}
+
 
 .navbar-blue-btn > li > a {
   padding: 15px;
@@ -1887,7 +1892,7 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
 
 .ico.icon.collecticon-star-full {
 padding:10px;
-left:21px;
+left:20px;
 position:absolute;
 font-size: 2rem;
 display:inline;
@@ -1895,7 +1900,7 @@ display:inline;
 
 @media (max-width: 768px) {
   .ico.icon.collecticon-star-full {
-  padding:6px;
+  padding:5px;
   left:20px;
   position:absolute;
   font-size: 2rem;
