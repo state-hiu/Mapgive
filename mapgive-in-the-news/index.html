@@ -231,6 +231,7 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
                       currentPage--;
                     }
                     console.log(currentPage)
+                    //pass along currenPage to function
                     //$('#older').attr("href", "http://www.google.com/");
                   });
 
@@ -239,8 +240,14 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
                       currentPage++;
                     }
                     console.log(currentPage)
+                    //pass along currenPage to function
                     //$('#newer').attr("href", "http://www.yahoo.com/");
                   });
+
+                  //Paginate function
+                  //for each (key,value) currentPage*5 +1 unto currentPage*6
+                    //Jquery eliminate all divs (make them share a class)
+                    //only load div elements on page
               }
 
               /**
