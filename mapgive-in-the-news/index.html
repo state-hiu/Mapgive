@@ -107,15 +107,16 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
       <h1>We have <span class="post-list" data-count> </span> items.</h1>
       
       <div class="pager">
-        <li class="previous">
-          <a id="older" href="#">&larr; Older</a>
-        </li>
-        <li class="next">
-          <a id="newer" href="#">Newer &rarr;</a>
+        <!--<li class="next"> the next class would adjust the button to the right of the screen-->
+        <li>
+          <a id="more" href="#">More</a>
         </li>
       </div>
 
       <div class="post-list" data-search-results>
+      </div>
+
+      <div id="end" end-of-list>
       </div>
 
       <!-- aka result template-->
@@ -133,10 +134,12 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
 
       <script>
 
-            var q, jsonFeedUrl = "{{ site.baseurl }}/mapgive-in-the-news/news.json",
+            var jsonFeedUrl = "{{ site.baseurl }}/mapgive-in-the-news/news.json",
+                resultsArray = [],
                 $resultTemplate = $("#search-result"),
                 $countTemplate = $("#count-result"),
-                $resultsPlaceholder = $("[data-search-results]");
+                $resultsPlaceholder = $("[data-search-results]"),
+                $endListPlaceholder = $("[end-of-list]"),
                 $countPlaceholder = $("[data-count]");
 
             $(document).ready( function() {
@@ -154,6 +157,7 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
                 html = injectContent(html, item.date, '##date##');
                 //html = injectContent(html, populateTags(item.tags), '##Tags##');
                 //console.log(html)
+                resultsArray.push(html);
                 return html;
             }
 
@@ -168,19 +172,9 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
                       var resultsCount = 0,
                           results = "";
 
+                      
+
                       $.each(jsonFeedUrl, function(index, item) {
-
-                          // http://stackoverflow.com/questions/8072774/difficulty-converting-an-array-of-strings-tolowercase-and-adding-to-my-function
-                          //var tmp = item.tags.join('~').toLowerCase()
-                          //var lcArray = tmp.split('~')
-
-                          // check if search term is in content or title or tags!
-                          /*
-                          if (item.excerpt.toLowerCase().indexOf(q.toLowerCase()) > -1 || item.title.toLowerCase().indexOf(q.toLowerCase()) > -1 || lcArray.indexOf(q.toLowerCase()) > -1) {
-                              var result = populateResultContent($resultTemplate.html(), item);
-                              resultsCount++;
-                              results += result;
-                          }*/
 
                           //console.log(item.name)
 
@@ -195,7 +189,7 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
                           
                       });
 
-                      //console.log(results)
+                      console.log(resultsArray[1])
 
                       //populateResultsString(resultsCount);
                       showSearchResults(results, resultsCount);
@@ -208,8 +202,7 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
                * @return null
                */
               function showSearchResults(results, resultsCount) {
-                  // Add results HTML to placeholder
-                  $resultsPlaceholder.html(results);
+                  
 
                   //can we use js to get the first 5 now and create a place holder
                   //then use jquery to delete all other placeholders and load the one
@@ -217,31 +210,27 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
 
                   $countPlaceholder.html(resultsCount);
 
-                  totalPages = Math.ceil(resultsCount/5)
+                  itemsPerPage = 5;
+
+                  totalPages = Math.ceil(resultsCount/itemsPerPage)
                   console.log(totalPages)
 
                   currentPage = 1;
                   console.log(currentPage)
 
-                  
-                  //$('#older').attr("href", "http://www.google.com/");
+                  // Add initial results HTML to placeholder
+                  $resultsPlaceholder.html(resultsArray.slice(currentPage,itemsPerPage));
 
-                  $('#older').click( function() {
-                    if (currentPage >= 2) {
-                      currentPage--;
-                    }
-                    console.log(currentPage)
-                    //pass along currenPage to function
-                    //$('#older').attr("href", "http://www.google.com/");
-                  });
-
-                  $('#newer').click( function() {
+                  $('#more').click( function() {
                     if (currentPage <= totalPages-1) {
                       currentPage++;
                     }
                     console.log(currentPage)
-                    //pass along currenPage to function
+                    //pass along currentPage to function
                     //$('#newer').attr("href", "http://www.yahoo.com/");
+                    //$resultsPlaceholder.html(resultsArray.slice(6,11));
+                    $resultsPlaceholder.html(resultsArray.slice(6,11)).insertBefore( "#end" );
+                    //$endListPlaceholder
                   });
 
                   //Paginate function
