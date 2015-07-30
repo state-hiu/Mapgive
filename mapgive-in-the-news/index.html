@@ -70,6 +70,8 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
       <!--<h1 class="page-title">Additional MapGive News</h1>-->
 
 <!--Jekyll doesn't count, round-about way: https://ecommerce.shopify.com/c/shopify-discussion/t/easy-one-liquid-integer-variables-31824-->
+
+<!--
 {% assign count = '' %}
 
 {% assign sorted_pages = (site.categories.news%}
@@ -84,11 +86,12 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
 <h1>We have {{ an_integer }} items.</h1>
 
 {% assign offset = 0 %}
+-->
 
-
+<!-- Don't need this anymore news.json builds a json feed
       <div class='limiter pad4y clearfix'>
       {% assign sorted_pages = (site.categories.news | reversed sort: 'date') %}
-      {% for post in sorted_pages limit:10 offset:offset %}
+      {% for post in sorted_pages %}
         {% if post.featured == false %}
           <div class='keyline-all pad4 space-bottom4 project-tile'>
             <h2><a href="{{ post.external_url }}">{{ post.title }}</a></h2>
@@ -98,6 +101,131 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
         {% endif %}
       {% endfor %}
       </div>
+-->
+      <h1>We have <span class="post-list" data-count> </span> items.</h1>
+      
+      <div class="pager">
+        <li class="previous">
+          <a href="#">&larr; Older</a>
+        </li>
+        <li class="next">
+          <a href="#">Newer &rarr;</a>
+        </li>
+      </div>
+
+      <div class="post-list" data-search-results>
+      </div>
+
+      <!-- aka result template-->
+      <script type="text/x-template" id="search-result">
+
+
+          <div class='keyline-all pad4 space-bottom4 project-tile'>
+              <h3><a href="##external_url##">##title##</a></h3>
+              <h4>##publication##</h4>
+              <p>##date##</p>
+          </div>
+      </script>
+
+      <script type="text/x-template" id="count-result">
+          <h1>We have ##count## items.</h1>
+      </script>
+
+      <script>
+
+            var q, jsonFeedUrl = "{{ site.baseurl }}/mapgive-in-the-news/news.json",
+                $resultTemplate = $("#search-result"),
+                $countTemplate = $("#count-result"),
+                $resultsPlaceholder = $("[data-search-results]");
+                $countPlaceholder = $("[data-count]");
+
+            $(document).ready( function() {
+                // initiate search functionality
+                $.get(jsonFeedUrl, processData(), 'json');
+                
+            });
+
+
+            function populateResultContent(html, item) {
+                html = injectContent(html, item.title, '##title##');
+                html = injectContent(html, item.publication, '##publication##');
+                html = injectContent(html, item.author, '##author##');
+                html = injectContent(html, item.external_url, '##external_url##');
+                html = injectContent(html, item.date, '##date##');
+                //html = injectContent(html, populateTags(item.tags), '##Tags##');
+                //console.log(html)
+                return html;
+            }
+
+            function processData() {
+                  $results = [];
+                  
+                  console.log('hi')
+                  console.log(jsonFeedUrl)
+
+                  return function(jsonFeedUrl) {
+                      
+                      var resultsCount = 0,
+                          results = "";
+
+                      $.each(jsonFeedUrl, function(index, item) {
+
+                          // http://stackoverflow.com/questions/8072774/difficulty-converting-an-array-of-strings-tolowercase-and-adding-to-my-function
+                          //var tmp = item.tags.join('~').toLowerCase()
+                          //var lcArray = tmp.split('~')
+
+                          // check if search term is in content or title or tags!
+                          /*
+                          if (item.excerpt.toLowerCase().indexOf(q.toLowerCase()) > -1 || item.title.toLowerCase().indexOf(q.toLowerCase()) > -1 || lcArray.indexOf(q.toLowerCase()) > -1) {
+                              var result = populateResultContent($resultTemplate.html(), item);
+                              resultsCount++;
+                              results += result;
+                          }*/
+
+                          //console.log(item.name)
+
+                          //builds result template using variables extracted from news json
+
+                          //only displayed news articles that are not featured
+                          if (item.featured == 'false') {
+                            var result = populateResultContent($resultTemplate.html(), item);
+                            resultsCount++;
+                            results += result;
+                          }
+                          
+                      });
+
+                      console.log(results)
+
+                      //populateResultsString(resultsCount);
+                      showSearchResults(results, resultsCount);
+                  }
+              };
+
+              /**
+               * Add search results to placeholder
+               * @param {String} results
+               * @return null
+               */
+              function showSearchResults(results, resultsCount) {
+                  // Add results HTML to placeholder
+                  $resultsPlaceholder.html(results);
+                  $countPlaceholder.html(resultsCount);
+              }
+
+              /**
+               * Injects content into template using placeholder
+               * @param {String} originalContent
+               * @param {String} injection
+               * @param {String} placeholder 
+               * @return {String} injected content
+               */
+              function injectContent(originalContent, injection, placeholder) {
+                  var regex = new RegExp(placeholder, 'g');
+                  return originalContent.replace(regex, injection);
+              }
+
+      </script>
 
     </div>
 
