@@ -63,7 +63,8 @@ module.exports = function(grunt) {
               'assets/js/modernizr-2.7.1.min.js': ['_assets/js/vendor/modernizr-2.7.1.min.js'],
               'assets/js/jquery-1.10.2.min.js': ['_assets/js/vendor/jquery-1.10.2.min.js'],
               'assets/js/lightbox.js':'_assets/js/vendor/lightbox.js',
-              'assets/js/lightbox.min.js':'_assets/js/vendor/lightbox.min.js'
+              'assets/js/lightbox.min.js':'_assets/js/vendor/lightbox.min.js',
+              'assets/js/bootstrap-paginator.min.js':'_assets/js/vendor/bootstrap-paginator.min.js'
             }
           }
         },

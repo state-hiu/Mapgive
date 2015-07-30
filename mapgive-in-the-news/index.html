@@ -11,8 +11,9 @@ works to connect humanitarian mapping projects with high resolution satellite im
 emailDescription: "HIU through ITTC publishes high-resolution commercial satellite imagery services for humanitarian response."
 ---
 
-<div class="col-md-12">
+<!--<script src="{{ site.baseurl }}/assets/js/bootstrap-paginator.min.js"></script>-->
 
+<div class="col-md-12">
 
 <div class="row">
   <div class="col-md-8">
@@ -102,14 +103,15 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
       {% endfor %}
       </div>
 -->
+
       <h1>We have <span class="post-list" data-count> </span> items.</h1>
       
       <div class="pager">
         <li class="previous">
-          <a href="#">&larr; Older</a>
+          <a id="older" href="#">&larr; Older</a>
         </li>
         <li class="next">
-          <a href="#">Newer &rarr;</a>
+          <a id="newer" href="#">Newer &rarr;</a>
         </li>
       </div>
 
@@ -118,8 +120,6 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
 
       <!-- aka result template-->
       <script type="text/x-template" id="search-result">
-
-
           <div class='keyline-all pad4 space-bottom4 project-tile'>
               <h3><a href="##external_url##">##title##</a></h3>
               <h4>##publication##</h4>
@@ -160,8 +160,8 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
             function processData() {
                   $results = [];
                   
-                  console.log('hi')
-                  console.log(jsonFeedUrl)
+                  //console.log('hi')
+                  //console.log(jsonFeedUrl)
 
                   return function(jsonFeedUrl) {
                       
@@ -195,7 +195,7 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
                           
                       });
 
-                      console.log(results)
+                      //console.log(results)
 
                       //populateResultsString(resultsCount);
                       showSearchResults(results, resultsCount);
@@ -210,7 +210,37 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
               function showSearchResults(results, resultsCount) {
                   // Add results HTML to placeholder
                   $resultsPlaceholder.html(results);
+
+                  //can we use js to get the first 5 now and create a place holder
+                  //then use jquery to delete all other placeholders and load the one
+                  //according to the button?
+
                   $countPlaceholder.html(resultsCount);
+
+                  totalPages = Math.ceil(resultsCount/5)
+                  console.log(totalPages)
+
+                  currentPage = 1;
+                  console.log(currentPage)
+
+                  
+                  //$('#older').attr("href", "http://www.google.com/");
+
+                  $('#older').click( function() {
+                    if (currentPage >= 2) {
+                      currentPage--;
+                    }
+                    console.log(currentPage)
+                    //$('#older').attr("href", "http://www.google.com/");
+                  });
+
+                  $('#newer').click( function() {
+                    if (currentPage <= totalPages-1) {
+                      currentPage++;
+                    }
+                    console.log(currentPage)
+                    //$('#newer').attr("href", "http://www.yahoo.com/");
+                  });
               }
 
               /**
