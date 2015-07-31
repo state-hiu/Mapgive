@@ -15,20 +15,20 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
 
 <div class="col-md-12">
 
-<div class="row">
-  <div class="col-md-8">
-    <header role="header">
-      <h1 class="page-title">{{ page.title }}</h1>
-    </header>
+  <div class="row">
+    <div class="col-md-8">
+      <header role="header">
+        <h1 class="page-title">{{ page.title }}</h1>
+      </header>
+    </div>
+    <div class="col-md-offset-1 col-md-3">
+      {% include social-media.html %}
+    </div>
   </div>
-  <div class="col-md-offset-1 col-md-3">
-    {% include social-media.html %}
-  </div>
-</div>
 
 
   <div class="row">
-    <div class="col-md-9">
+    <div class="col-md-12">
 
       <div class="row">
       {% assign sorted_pages = (site.categories.news | reversed sort: 'date') %}
@@ -38,21 +38,18 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
           {% if post.featured == true %}{% assign display = true %}{% endif %}
           {% if display == true %}
 
-          {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+          {% capture thecycle %}{% cycle '1', '2', '3' %}{% endcapture %}
   
-            {% if thecycle == 'even' %}
+            {% if thecycle == '3' %}
               <div class="row">
             {% endif %}
 
-            <div class="col-sm-5 news-thumbnail">
+            <div class="col-sm-4 news-thumbnail">
 
-              {% if post.video != nil %}
-                <iframe width="300" height="169" src="{{ post.video }}" frameborder="0" allowfullscreen></iframe>
-              {% else %}
                 <a href="{{ post.external_url }}" class="image">
                   <img src="{{ post.photo }} " alt="{{ post.title }}" class="img-responsive shadowed" />
                 </a>
-              {% endif %}
+
               <div class="caption">
                 <h3><a href="{{ post.external_url }}">{{ post.title }}</a></h3>
                 <p><strong>publication</strong>: {{ post.publication }}</p>
@@ -60,7 +57,7 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
               </div>
             </div>
 
-            {% if thecycle == 'even' %}
+            {% if thecycle == '3' %}
               </div>
             {% endif %}
 
@@ -104,19 +101,19 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
       </div>
 -->
 
-      <h1>We have <span class="post-list" data-count> </span> items.</h1>
-      
-      <div class="pager">
-        <!--<li class="next"> the next class would adjust the button to the right of the screen-->
-        <li>
-          <a id="more" href="#">More</a>
-        </li>
-      </div>
+      <!--<h1>We have <span class="post-list" data-count> </span> items.</h1>-->
 
       <div class="post-list" data-search-results>
       </div>
 
       <div id="end" end-of-list>
+      </div>
+
+      <div class="pager">
+        <!--<li class="next"> the next class would adjust the button to the right of the screen-->
+        <li>
+          <a class="pager" id="more">LOAD MORE</a>
+        </li>
       </div>
 
       <!-- aka result template-->
@@ -172,8 +169,6 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
                       var resultsCount = 0,
                           results = "";
 
-                      
-
                       $.each(jsonFeedUrl, function(index, item) {
 
                           //console.log(item.name)
@@ -188,8 +183,6 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
                           }
                           
                       });
-
-                      console.log(resultsArray[1])
 
                       //populateResultsString(resultsCount);
                       showSearchResults(results, resultsCount);
@@ -219,18 +212,20 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
                   console.log(currentPage)
 
                   // Add initial results HTML to placeholder
-                  $resultsPlaceholder.html(resultsArray.slice(currentPage,itemsPerPage));
+                  $resultsPlaceholder.html(resultsArray.slice(0,itemsPerPage));
+
+
 
                   $('#more').click( function() {
-                    if (currentPage <= totalPages-1) {
+                    if (currentPage < totalPages) {
+                      
+                      $jqueryVar = resultsArray.slice(((currentPage*itemsPerPage)),((currentPage*itemsPerPage)+itemsPerPage)).join("");
+                      //console.log($jqueryVar)
+                      //console.log(resultsArray[2])
                       currentPage++;
+                      $($jqueryVar).insertBefore( "#end" );
                     }
-                    console.log(currentPage)
-                    //pass along currentPage to function
-                    //$('#newer').attr("href", "http://www.yahoo.com/");
-                    //$resultsPlaceholder.html(resultsArray.slice(6,11));
-                    $resultsPlaceholder.html(resultsArray.slice(6,11)).insertBefore( "#end" );
-                    //$endListPlaceholder
+                    
                   });
 
                   //Paginate function
@@ -254,12 +249,12 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
       </script>
 
     </div>
-
+<!--
     <div class="col-md-3" >
     {% include more-info.html %}
 
     </div>
-
+-->
   </div>
 
 </div>
