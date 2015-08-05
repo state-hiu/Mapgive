@@ -32,6 +32,7 @@
             },
             "id": "mading-24aug2014",
             "properties": {
+                "country": "South Sudan",
                 "id": "mading-24aug2014",
                 "tm_projects": "729"
             },
@@ -69,6 +70,7 @@
             },
             "id": "nyaruguru-04feb2012",
             "properties": {
+                "country": "Rwanda,Burundi",
                 "id": "nyaruguru-04feb2012",
                 "tm_projects": "728"
             },
@@ -106,6 +108,7 @@
             },
             "id": "kobe_and_melkadida_u8bit",
             "properties": {
+                "country": "ethiopia",
                 "id": "kobe_and_melkadida_u8bit",
                 "tm_projects": ""
             },
@@ -143,6 +146,7 @@
             },
             "id": "capul-27jan2014",
             "properties": {
+                "country": "philippines",
                 "id": "capul-27jan2014",
                 "tm_projects": "807"
             },
@@ -228,6 +232,7 @@
             },
             "id": "calbayog-13jul2014",
             "properties": {
+                "country": "philippines",
                 "id": "calbayog-13jul2014",
                 "tm_projects": "805"
             },
@@ -265,6 +270,7 @@
             },
             "id": "bossangoa-06apr2014",
             "properties": {
+                "country": "CAR",
                 "id": "bossangoa-06apr2014",
                 "tm_projects": "584"
             },
@@ -302,6 +308,7 @@
             },
             "id": "akobo-25jan2015",
             "properties": {
+                "country": "South Sudan",
                 "id": "akobo-25jan2015",
                 "tm_projects": "878"
             },
@@ -363,6 +370,7 @@
             },
             "id": "gamay-12jul2014",
             "properties": {
+                "country": "philippines",
                 "id": "gamay-12jul2014",
                 "tm_projects": "801"
             },
@@ -400,6 +408,7 @@
             },
             "id": "carles-post",
             "properties": {
+                "country": "philippines",
                 "id": "carles-post",
                 "tm_projects": "392"
             },
@@ -485,6 +494,7 @@
             },
             "id": "colombo",
             "properties": {
+                "country": "Sri Lanka",
                 "id": "colombo",
                 "tm_projects": "764"
             },
@@ -522,6 +532,7 @@
             },
             "id": "sevilla-22feb2014",
             "properties": {
+                "country": "philippines",
                 "id": "sevilla-22feb2014",
                 "tm_projects": ""
             },
@@ -607,6 +618,7 @@
             },
             "id": "panguma-2014",
             "properties": {
+                "country": "Sierra Leone",
                 "id": "panguma-2014",
                 "tm_projects": "586,587"
             },
@@ -668,6 +680,7 @@
             },
             "id": "obo-21sep2014",
             "properties": {
+                "country": "CAR",
                 "id": "obo-21sep2014",
                 "tm_projects": "909"
             },
@@ -705,6 +718,7 @@
             },
             "id": "rafai-24mar2014",
             "properties": {
+                "country": "CAR",
                 "id": "rafai-24mar2014",
                 "tm_projects": "883"
             },
@@ -742,6 +756,7 @@
             },
             "id": "karangetang-28jun2012",
             "properties": {
+                "country": "indonesia",
                 "id": "karangetang-28jun2012",
                 "tm_projects": "908"
             },
@@ -779,6 +794,7 @@
             },
             "id": "punia-26sep2013",
             "properties": {
+                "country": "DRC",
                 "id": "punia-26sep2013",
                 "tm_projects": "458"
             },
@@ -816,8 +832,157 @@
             },
             "id": "nimule-05jan2014",
             "properties": {
+                "country": "south sudan,uganda",
                 "id": "nimule-05jan2014",
                 "tm_projects": "445"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        [
+                            [
+                                20.67169499993812,
+                                4.00212900004673
+                            ],
+                            [
+                                20.864776499895203,
+                                4.00212900004673
+                            ],
+                            [
+                                20.864776499895203,
+                                4.149585000000009
+                            ],
+                            [
+                                20.67169499993812,
+                                4.149585000000009
+                            ],
+                            [
+                                20.67169499993812,
+                                4.00212900004673
+                            ]
+                        ]
+                    ]
+                ],
+                "type": "MultiPolygon"
+            },
+            "id": "inke-15jan2015",
+            "properties": {
+                "country": "DRC",
+                "id": "inke-15jan2015",
+                "tm_projects": "978"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        [
+                            [
+                                35.43997662498525,
+                                -17.14740328414237
+                            ],
+                            [
+                                35.58296532580262,
+                                -17.14740328414237
+                            ],
+                            [
+                                35.58296532580262,
+                                -16.48498649921998
+                            ],
+                            [
+                                35.43997662498525,
+                                -16.48498649921998
+                            ],
+                            [
+                                35.43997662498525,
+                                -17.14740328414237
+                            ]
+                        ]
+                    ],
+                    [
+                        [
+                            [
+                                35.55858719075781,
+                                -17.14988324509405
+                            ],
+                            [
+                                35.69589238636095,
+                                -17.14988324509405
+                            ],
+                            [
+                                35.69589238636095,
+                                -16.485101758559896
+                            ],
+                            [
+                                35.55858719075781,
+                                -16.485101758559896
+                            ],
+                            [
+                                35.55858719075781,
+                                -17.14988324509405
+                            ]
+                        ]
+                    ],
+                    [
+                        [
+                            [
+                                35.67423802222767,
+                                -17.146826610269077
+                            ],
+                            [
+                                35.80137499648283,
+                                -17.146826610269077
+                            ],
+                            [
+                                35.80137499648283,
+                                -16.484440919003443
+                            ],
+                            [
+                                35.67423802222767,
+                                -16.484440919003443
+                            ],
+                            [
+                                35.67423802222767,
+                                -17.146826610269077
+                            ]
+                        ]
+                    ],
+                    [
+                        [
+                            [
+                                35.847301500042185,
+                                -17.01585899963519
+                            ],
+                            [
+                                36.007933500006494,
+                                -17.01585899963519
+                            ],
+                            [
+                                36.007933500006494,
+                                -16.484751
+                            ],
+                            [
+                                35.847301500042185,
+                                -16.484751
+                            ],
+                            [
+                                35.847301500042185,
+                                -17.01585899963519
+                            ]
+                        ]
+                    ]
+                ],
+                "type": "MultiPolygon"
+            },
+            "id": "morire-2015",
+            "properties": {
+                "country": "Mozambique",
+                "id": "morire-2015",
+                "tm_projects": ""
             },
             "type": "Feature"
         },
@@ -1045,8 +1210,47 @@
             },
             "id": "all_u8bit",
             "properties": {
+                "country": "indonesia,uganda,ethiopia,kenya",
                 "id": "all_u8bit",
                 "tm_projects": ""
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        [
+                            [
+                                18.73298880003377,
+                                4.099740039182018
+                            ],
+                            [
+                                18.863996399997387,
+                                4.099740039182018
+                            ],
+                            [
+                                18.863996399997387,
+                                4.223037599999863
+                            ],
+                            [
+                                18.73298880003377,
+                                4.223037599999863
+                            ],
+                            [
+                                18.73298880003377,
+                                4.099740039182018
+                            ]
+                        ]
+                    ]
+                ],
+                "type": "MultiPolygon"
+            },
+            "id": "mole-19feb2015",
+            "properties": {
+                "country": "DRC",
+                "id": "mole-19feb2015",
+                "tm_projects": "979"
             },
             "type": "Feature"
         },
@@ -1082,6 +1286,7 @@
             },
             "id": "nimni-16jun2014",
             "properties": {
+                "country": "South Sudan",
                 "id": "nimni-16jun2014",
                 "tm_projects": "853"
             },
@@ -1119,6 +1324,7 @@
             },
             "id": "lokon-26sep2011",
             "properties": {
+                "country": "indonesia",
                 "id": "lokon-26sep2011",
                 "tm_projects": ""
             },
@@ -1180,6 +1386,7 @@
             },
             "id": "kule-09oct2014",
             "properties": {
+                "country": "ethiopia",
                 "id": "kule-09oct2014",
                 "tm_projects": "713"
             },
@@ -1217,6 +1424,7 @@
             },
             "id": "zwedru-12mar2014",
             "properties": {
+                "country": "Liberia",
                 "id": "zwedru-12mar2014",
                 "tm_projects": "780"
             },
@@ -1254,8 +1462,47 @@
             },
             "id": "mayon-22dec2014",
             "properties": {
+                "country": "South Sudan",
                 "id": "mayon-22dec2014",
                 "tm_projects": "856"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        [
+                            [
+                                85.21041240002329,
+                                27.495348809988702
+                            ],
+                            [
+                                85.3423883999744,
+                                27.495348809988702
+                            ],
+                            [
+                                85.3423883999744,
+                                28.02618899999831
+                            ],
+                            [
+                                85.21041240002329,
+                                28.02618899999831
+                            ],
+                            [
+                                85.21041240002329,
+                                27.495348809988702
+                            ]
+                        ]
+                    ]
+                ],
+                "type": "MultiPolygon"
+            },
+            "id": "kath-w-25nov2014",
+            "properties": {
+                "country": "Nepal",
+                "id": "kath-w-25nov2014",
+                "tm_projects": ""
             },
             "type": "Feature"
         },
@@ -1291,6 +1538,7 @@
             },
             "id": "dhaka-e-2014",
             "properties": {
+                "country": "Bangladesh",
                 "id": "dhaka-e-2014",
                 "tm_projects": ""
             },
@@ -1328,6 +1576,7 @@
             },
             "id": "giporlos-04apr2014",
             "properties": {
+                "country": "philippines",
                 "id": "giporlos-04apr2014",
                 "tm_projects": "808"
             },
@@ -1365,6 +1614,7 @@
             },
             "id": "kindu",
             "properties": {
+                "country": "DRC",
                 "id": "kindu",
                 "tm_projects": "352"
             },
@@ -1402,6 +1652,7 @@
             },
             "id": "boende-2",
             "properties": {
+                "country": "DRC",
                 "id": "boende-2",
                 "tm_projects": "658,661"
             },
@@ -1463,6 +1714,7 @@
             },
             "id": "grandgedeh",
             "properties": {
+                "country": "Liberia",
                 "id": "grandgedeh",
                 "tm_projects": "865"
             },
@@ -1548,6 +1800,7 @@
             },
             "id": "caracol-23dec2014",
             "properties": {
+                "country": "Haiti",
                 "id": "caracol-23dec2014",
                 "tm_projects": ""
             },
@@ -1585,6 +1838,7 @@
             },
             "id": "leyte-07nov2014",
             "properties": {
+                "country": "philippines",
                 "id": "leyte-07nov2014",
                 "tm_projects": "1129"
             },
@@ -1622,6 +1876,7 @@
             },
             "id": "ormoccity-pre",
             "properties": {
+                "country": "philippines",
                 "id": "ormoccity-pre",
                 "tm_projects": "351"
             },
@@ -1659,8 +1914,133 @@
             },
             "id": "cebu-post",
             "properties": {
+                "country": "philippines",
                 "id": "cebu-post",
                 "tm_projects": "360"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        [
+                            [
+                                85.36181399983411,
+                                27.569689375603424
+                            ],
+                            [
+                                85.52311199954735,
+                                27.569689375603424
+                            ],
+                            [
+                                85.52311199954735,
+                                27.815417999998818
+                            ],
+                            [
+                                85.36181399983411,
+                                27.815417999998818
+                            ],
+                            [
+                                85.36181399983411,
+                                27.569689375603424
+                            ]
+                        ]
+                    ]
+                ],
+                "type": "MultiPolygon"
+            },
+            "id": "kath-e-13mar2015",
+            "properties": {
+                "country": "Nepal",
+                "id": "kath-e-13mar2015",
+                "tm_projects": ""
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        [
+                            [
+                                84.54558284808297,
+                                28.196428500247347
+                            ],
+                            [
+                                84.71864503214056,
+                                28.196428500247347
+                            ],
+                            [
+                                84.71864503214056,
+                                28.56506850016541
+                            ],
+                            [
+                                84.54558284808297,
+                                28.56506850016541
+                            ],
+                            [
+                                84.54558284808297,
+                                28.196428500247347
+                            ]
+                        ]
+                    ],
+                    [
+                        [
+                            [
+                                84.58589852872863,
+                                27.94708799976379
+                            ],
+                            [
+                                84.75573818146275,
+                                27.94708799976379
+                            ],
+                            [
+                                84.75573818146275,
+                                28.315727999927645
+                            ],
+                            [
+                                84.58589852872863,
+                                28.315727999927645
+                            ],
+                            [
+                                84.58589852872863,
+                                27.94708799976379
+                            ]
+                        ]
+                    ],
+                    [
+                        [
+                            [
+                                84.45643757352612,
+                                27.946417500199942
+                            ],
+                            [
+                                84.62172916490435,
+                                27.946417500199942
+                            ],
+                            [
+                                84.62172916490435,
+                                28.315057500118026
+                            ],
+                            [
+                                84.45643757352612,
+                                28.315057500118026
+                            ],
+                            [
+                                84.45643757352612,
+                                27.946417500199942
+                            ]
+                        ]
+                    ]
+                ],
+                "type": "MultiPolygon"
+            },
+            "id": "gorkha-apr2015",
+            "properties": {
+                "country": "Nepal",
+                "id": "gorkha-apr2015",
+                "tm_projects": "1009"
             },
             "type": "Feature"
         },
@@ -1720,6 +2100,7 @@
             },
             "id": "comoros-2014",
             "properties": {
+                "country": "Comoros",
                 "id": "comoros-2014",
                 "tm_projects": ""
             },
@@ -1757,6 +2138,7 @@
             },
             "id": "lira_1",
             "properties": {
+                "country": "uganda",
                 "id": "lira_1",
                 "tm_projects": "49"
             },
@@ -1794,6 +2176,7 @@
             },
             "id": "kalima-07sep2013",
             "properties": {
+                "country": "DRC",
                 "id": "kalima-07sep2013",
                 "tm_projects": "468"
             },
@@ -1831,6 +2214,7 @@
             },
             "id": "bokoto-02feb2012",
             "properties": {
+                "country": "DRC",
                 "id": "bokoto-02feb2012",
                 "tm_projects": "648"
             },
@@ -1868,6 +2252,7 @@
             },
             "id": "kasese-15sep2013",
             "properties": {
+                "country": "DRC",
                 "id": "kasese-15sep2013",
                 "tm_projects": "467"
             },
@@ -1905,6 +2290,7 @@
             },
             "id": "quelimane-11feb2015",
             "properties": {
+                "country": "Mozambique",
                 "id": "quelimane-11feb2015",
                 "tm_projects": "928,929,930,931"
             },
@@ -1990,6 +2376,7 @@
             },
             "id": "rivercess-07jan2015",
             "properties": {
+                "country": "Liberia",
                 "id": "rivercess-07jan2015",
                 "tm_projects": "915"
             },
@@ -2051,6 +2438,7 @@
             },
             "id": "bangula-20jul2014",
             "properties": {
+                "country": "Malawi",
                 "id": "bangula-20jul2014",
                 "tm_projects": "644,847"
             },
@@ -2088,6 +2476,7 @@
             },
             "id": "boende-14may2011",
             "properties": {
+                "country": "DRC",
                 "id": "boende-14may2011",
                 "tm_projects": "649"
             },
@@ -2125,6 +2514,7 @@
             },
             "id": "doro-27dec2014",
             "properties": {
+                "country": "South Sudan",
                 "id": "doro-27dec2014",
                 "tm_projects": "1121"
             },
@@ -2162,6 +2552,7 @@
             },
             "id": "nguinea-10jan2013",
             "properties": {
+                "country": "Nicaragua",
                 "id": "nguinea-10jan2013",
                 "tm_projects": "871,874"
             },
@@ -2247,8 +2638,47 @@
             },
             "id": "khulna-2014",
             "properties": {
+                "country": "Bangladesh",
                 "id": "khulna-2014",
                 "tm_projects": "698"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        [
+                            [
+                                90.27583358576689,
+                                23.604952500149256
+                            ],
+                            [
+                                90.46521645062712,
+                                23.604952500149256
+                            ],
+                            [
+                                90.46521645062712,
+                                23.973592500067344
+                            ],
+                            [
+                                90.27583358576689,
+                                23.973592500067344
+                            ],
+                            [
+                                90.27583358576689,
+                                23.604952500149256
+                            ]
+                        ]
+                    ]
+                ],
+                "type": "MultiPolygon"
+            },
+            "id": "dhaka-22mar2015",
+            "properties": {
+                "country": "Bangladesh",
+                "id": "dhaka-22mar2015",
+                "tm_projects": "844,845"
             },
             "type": "Feature"
         },
@@ -2308,6 +2738,7 @@
             },
             "id": "joru",
             "properties": {
+                "country": "Sierra Leone,Liberia",
                 "id": "joru",
                 "tm_projects": "621"
             },
@@ -2345,6 +2776,7 @@
             },
             "id": "dhaka-23oct2014",
             "properties": {
+                "country": "Bangladesh",
                 "id": "dhaka-23oct2014",
                 "tm_projects": "831,833,838"
             },
@@ -2382,6 +2814,7 @@
             },
             "id": "koch-03jul2014",
             "properties": {
+                "country": "South Sudan",
                 "id": "koch-03jul2014",
                 "tm_projects": "854"
             },
@@ -2419,6 +2852,7 @@
             },
             "id": "kathmandu",
             "properties": {
+                "country": "nepal",
                 "id": "kathmandu",
                 "tm_projects": "190,327,328"
             },
@@ -2456,8 +2890,47 @@
             },
             "id": "juba-20feb2014",
             "properties": {
+                "country": "south sudan",
                 "id": "juba-20feb2014",
                 "tm_projects": "591"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        [
+                            [
+                                84.90783599983988,
+                                27.941444750579613
+                            ],
+                            [
+                                85.08952529895765,
+                                27.941444750579613
+                            ],
+                            [
+                                85.08952529895765,
+                                28.271934000001384
+                            ],
+                            [
+                                84.90783599983988,
+                                28.271934000001384
+                            ],
+                            [
+                                84.90783599983988,
+                                27.941444750579613
+                            ]
+                        ]
+                    ]
+                ],
+                "type": "MultiPolygon"
+            },
+            "id": "borang-10feb2015",
+            "properties": {
+                "country": "Nepal",
+                "id": "borang-10feb2015",
+                "tm_projects": "1023"
             },
             "type": "Feature"
         },
@@ -2517,6 +2990,7 @@
             },
             "id": "kenema-segbwema",
             "properties": {
+                "country": "Sierra Leone",
                 "id": "kenema-segbwema",
                 "tm_projects": "583"
             },
@@ -2698,6 +3172,7 @@
             },
             "id": "boholisland",
             "properties": {
+                "country": "philippines",
                 "id": "boholisland",
                 "tm_projects": "768"
             },
@@ -2759,6 +3234,7 @@
             },
             "id": "taclobancity-post",
             "properties": {
+                "country": "philippines",
                 "id": "taclobancity-post",
                 "tm_projects": "350"
             },
