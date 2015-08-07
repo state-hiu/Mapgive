@@ -1,7 +1,7 @@
 ---
 layout: resource
 category: news
-external_url: 'https://www.digitalgov.gov/2014/12/17/with-every-tool-possible-supporting-humanitarian-aid-efforts-through-crowdsourced-mapping/'
+external_url: 'http://www.fastcoexist.com/3027507/the-us-state-department-wants-you-to-go-to-your-computer-and-help-it-make-maps'
 title: The U.S. State Department Wants You To Go To Your Computer And Help It Make Maps
 publication: FastCoExist
 author: Sydney Brownstone
@@ -9,10 +9,10 @@ date: 20140312
 mapgive_is_author: no
 explicit_mention: yes
 type: news
-photo:https://www.digitalgov.gov/files/2014/12/600-x-337-MapGive-example-from-OpenStreetMap-intro-video-Dept-of-State-Humanitarian-Information-Unit.jpg
+photo:
 video:
 featured: no
-quote:
+quote: "Our goal isn’t to own the data," Campbell said. "Our goal is to leverage the satellite imagery we already purchase to catalyze existing mapping efforts done by ... the broader humanitarian community."
 tags:
   - insert here
 ---
