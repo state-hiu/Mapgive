@@ -16,3 +16,5 @@ quote:
 tags:
   - insert here
 ---
+
+<!--not including this post as part of our news section-->
