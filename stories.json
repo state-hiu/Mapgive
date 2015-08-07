@@ -1,0 +1,18 @@
+---
+---
+[
+  {% assign stories = (site.posts | where: "category", "stories") %}{% for story in stories %}
+    {% if story.lon and story.lat %}
+    {
+      "title": "{{ story.title }}",
+      "excerpt": "{{ story.ogDescription }}",
+      "author": "MapGive",
+      "lat": {{ story.lat }},
+      "lon": {{ story.lon }},
+      "image": "{{ site.baseurl }}/assets/img/{{ story.image }}",
+      "tags": "[{% for item in story.tags %}{{item}}{% unless forloop.last %},{% endunless %}{% endfor %}]",
+      "content":{{ story.content | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endif %}{% endfor %}
+]
+

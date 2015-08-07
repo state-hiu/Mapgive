@@ -1,0 +1,21 @@
+---
+---
+[
+  {% assign stories = (site.posts | where: "category", "news") %}{% for story in stories %}
+    {
+      "external_url": "{{ story.external_url }}",
+      "title": "{{ story.title }}",
+      "publication": "{{ story.publication }}",
+      "author": "{{ story.author }}",
+      "date": "{{ story.date | date: '%B %d, %Y' }}",
+      "mapgive_is_author": "{{ story.mapgive_is_author }}",
+      "explicit_mention": "{{ story.explicit_mention }}",
+      "type": "{{ story.type }}",
+      "featured": "{{ story.featured }}",
+      "photo": "{{ story.photo }}",
+      "quote": "{{ story.quote }}",
+      "tags": "[{% for item in story.tags %}{{item}}{% unless forloop.last %},{% endunless %}{% endfor %}]"
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+
