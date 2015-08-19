@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Swipe between layers</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
+
+<style>
+
+
+		.info {
+			padding: 6px 8px;
+			font: 14px/16px Arial, Helvetica, sans-serif;
+			background: white;
+			background: rgba(255,255,255,0.8);
+			box-shadow: 0 0 15px rgba(0,0,0,0.2);
+			border-radius: 5px;
+		}
+		.info h4 {
+			margin: 0 0 5px;
+			color: #d73f3f;
+		}
+		/*overides leaflet control layer order so it doesn't appear on top of nav bar*/
+		.leaflet-top, .leaflet-bottom {
+			z-index: 1;
+		}
+
+/*adds extra bottom margin to bottom left label*/
+    .leaflet-left.leaflet-bottom {
+			margin-bottom: 20px;
+		}
+
+
+#mapAtitle {
+    left:1%;
+    bottom:15%;
+    width:35%;
+    text-align:left;
+    z-index:10;
+    background-color:rgba(255,255,255,0.7);
+}
+
+#mapBtitle {
+    left:69%;
+    width:30%;
+    bottom:15%;
+    text-align:right;
+    z-index:10;
+    background-color:rgba(255,255,255,0.7);
+}
+
+.range {
+  position:absolute;
+  width:100%;
+  background:black;
+  background:rgba(0, 0, 0, 0.5);   
+  top:5px;
+  left:0px;
+  right:0px;
+  z-index:1000;
+  padding:1px;
+  height:20px;
+  border-bottom: 1px solid #CCC;
+  margin: 1px;
+  }
+
+/* https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ */
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 97.5%;
+  cursor: pointer;
+  background: transparent; /* Hides the slider so custom styles can be added */
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 26px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -1px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 26px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 26px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.leaflet-top .leaflet-control-zoom {
+  top:20px;
+  }
+
+</style>
+
+<body>
+
+<div id='map'></div>
+<input id='range' class='range' type='range' min='0' max='1.0' step='any' />
+
+<script>
+
+
+L.mapbox.accessToken = 'pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ';
+
+var southWest = L.latLng(-13.712, -72.211),
+    northEast = L.latLng(-13.31, -71.643),
+    bounds = L.latLngBounds(southWest, northEast);
+
+//var map = L.mapbox.map('map');
+
+var map = L.map('map', {
+	minZoom: 11,
+	maxZoom: 16
+});
+
+L.mapbox.tileLayer('hiu.openstreetmap-carto-cusco').addTo(map);
+
+var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+var osm = new L.TileLayer(osmUrl, {minZoom: 7, maxZoom: 18, attribution: osmAttrib});	
+//var overlay = osm.addTo(map);
+var right = osm.addTo(map);
+
+var range = document.getElementById('range');
+
+function clip() {
+        var nw = map.containerPointToLayerPoint([0, 0]),
+            se = map.containerPointToLayerPoint(map.getSize()),
+            clipX = nw.x + (se.x - nw.x) * range.value;
+        //left.getContainer().style.clip = 'rect(' + [nw.y, clipX, se.y, nw.x].join('px,') + 'px)';
+        right.getContainer().style.clip = 'rect(' + [nw.y, se.x, se.y, clipX].join('px,') + 'px)';
+    }
+
+range['oninput' in range ? 'oninput' : 'onchange'] = clip;
+map.on('move', clip);
+
+//map.setView([8.25,34.27], 12);
+
+map.setMaxBounds(bounds);
+//map.minZoom(10);
+
+// zoom the map to that bounding box
+//map.fitBounds(bounds);
+map.setView([-13.521,-71.964],13);
+
+		//taken from: http://leafletjs.com/examples/choropleth-example.html
+		//info box that contains title
+		var bottom_left_text = L.control({position: 'bottomleft'});
+
+		bottom_left_text.onAdd = function (map) {
+			this._div = L.DomUtil.create('div', 'info');
+			this._div.innerHTML = '<h4>August 16th, 2015</h4>';
+			return this._div;
+		};
+
+		bottom_left_text.addTo(map);
+
+		var bottom_right_text = L.control({position: 'bottomright'});
+
+		bottom_right_text.onAdd = function (map) {
+			this._div = L.DomUtil.create('div', 'info');
+			this._div.innerHTML = '<h4>Today</h4>';
+			return this._div;
+		};
+
+		bottom_right_text.addTo(map);
+
+clip();
+</script>
+
+</body>
+</html>
+
+
