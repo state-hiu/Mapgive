@@ -294,6 +294,15 @@ dt {
 .navbar-default .navbar-collapse {
   border-color: #fff;
   padding: 0;
+  border-top:none;
+  box-shadow:none;
+}
+
+.navbar-right .navbar-collapse {
+  border-color: #fff;
+  padding: 0;
+  border-top:none;
+  box-shadow:none;
 }
 
 .navbar-default .navbar-toggle {
@@ -329,21 +338,21 @@ dt {
 }
 
 @media (max-width: 991px) {
-  #content {
+  .content {
     max-width: 960px;
     width: 400px;
   }
 }
 
 @media (max-width: 768px) {
-  #content {
+  .content {
     max-width: 960px;
     width: inherit;
   }
 }
 
 @media (min-width: 992px) {
-  #content {
+  content {
     max-width: 960px;
     width: 550px;
   }
