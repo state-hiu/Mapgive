@@ -4,6 +4,7 @@ category: stories
 title: Empowering People, Developing Communities
 person: Kepha Ngito, Executive Director of Map Kibera Trust 
 country: Kenya
+date: 2009-11-01
 image: kepha-ngito.jpg
 tags: [Kenya,Kibera,Case Study,slums]
 altText: Kepha Ngito, Executive Director, Map Kibera, Nairobi, Kenya. Photo by cafod.org.uk.
