@@ -32,55 +32,31 @@ website. For some event ideas, take a look at the <a href=http://mapgive.state.g
 
 <div class="col-md-8">
 
+  <div class='limiter pad4y clearfix'>
+<h3>
+Planning an event? <a href="mailto:mapgive@state.gov">Let us know</a>!
+<br/><br/>
+Check out <a href="{{site.baseurl}}/box/">MapGive in a Box</a> for comprehensive helpful resources and event guidance. And take a look at the <a href="{{ site.baseurl }}/events/">Events</a> page for ideas.
+</h3>
+
+</div>
+
   	<section>
       <div class="video">
-        <div class="video-player-container shadowed" data="C175zW8-6j8" tabindex="0">
-<!-- We need the National Geographic video on YouTube so we can add it
-          <img src="{{ site.baseurl }}/assets/img/the-cause.jpg" alt="YouTube embedded video: The Cause. Press space or enter to play video." class="img-responsive" />
-          <div class="play"><span class="play-button"></span></div>
--->
-        </div>
-        <!--<p class="caption"><a href="{{ site.baseurl }}/transcripts/the-cause.html">Read the video transcript</a></p>-->
+
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/FA6QBlnUcWo" frameborder="0" allowfullscreen></iframe>
+
       </div>
     </section>
 
-  <div class='limiter pad4y clearfix'>
-Planning an event? Let us know! Check out these helpful resources for event guidance, and take a look at the <a href="{{ site.baseurl }}/events/">Events</a> page for some ideas. 
-  </div>
-  <h2> Resources </h2>
 
-<div class='limiter pad4y clearfix'>
-{% assign sorted_pages = (site.categories.plan | sort: 'date') %}
-{% for post in sorted_pages %}
-  {% assign display = null %}
-  {% assign ready = null %}
-  {% for tag in post.tags %}
-    {% if tag == "planner" %}{% assign display = true %}{% endif %}
-  {% endfor %}
-  {% if display == true %}
-    <div class='keyline-all pad4 space-bottom4 project-tile'>
-      <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-      <h3>{{ post.subtitle }}</h3>
-      <p>{{ post.excerpt }}</p>
-    </div>
-  {% endif %}
-{% endfor %}
-</div>
-
-
-<br>
-
-</div>
-
-
-<div class="col-md-offset-1 col-md-3">
-    {% include more-info.html %}
-    {% include tracing_guides-sidebar.html %}
-</div>
 
  </div>
   
-  
+  <div class="col-md-offset-1 col-md-3">
+    {% include more-info.html %}
+    {% include tracing_guides-sidebar.html %}
+</div>
 
 
 
