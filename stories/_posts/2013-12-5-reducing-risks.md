@@ -4,6 +4,7 @@ category: stories
 title: Reducing Risks Before a Crisis
 person: Alyssa Wright, Volunteer 
 country: Nepal
+date: 2013-04-21
 image: alyssa-wright.jpg
 tags: [Nepal,Kathmandu,Case Study]
 altText: Alyssa Wright and another volunteer at a New York City editathon to map Kathmandu Valley, Nepal, April 21, 2013. Photo by The OpenStreetMap (OSM) Community of Nepal.
