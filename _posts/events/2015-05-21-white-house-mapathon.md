@@ -9,3 +9,5 @@ video: https://www.youtube.com/watch?v=bHQh68bXDqg
 tags:
   - event
 ---
+
+Citizen cartographers join the White House Office of Science and Technology Policy and Office of Digital Strategy for the first-ever White House Mapathon.
