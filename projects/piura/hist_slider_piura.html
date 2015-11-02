@@ -172,7 +172,19 @@ function clip() {
         right.getContainer().style.clip = 'rect(' + [nw.y, se.x, se.y, clipX].join('px,') + 'px)';
     }
 
-range['oninput' in range ? 'oninput' : 'onchange'] = clip;
+//range['oninput' in range ? 'oninput' : 'onchange'] = clip;
+var isIE = /*@cc_on!@*/false || !!document.documentMode;   // At least IE6
+
+range.change = clip;
+
+if (isIE) {
+  range.onchange = clip;
+}
+else {
+  range.oninput = clip;
+}
+
+
 map.on('move', clip);
 
 //map.setView([8.25,34.27], 12);
