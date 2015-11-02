@@ -121,12 +121,12 @@ dt {
 
 @media (max-width: 991px) {
   .navbar.affix + #main {
-    padding-top: 75px;
+    padding-top: 110px;
   }
 }
 @media (max-width: 768px) {
   .navbar.affix + #main {
-    padding-top: 200px;
+    padding-top: 75px;
   }
 }
 
@@ -235,6 +235,8 @@ dt {
   .navbar-nav {
     position: relative;
     top: 25px;
+    min-width: 534px;
+    float: right;
   }
 }
 
