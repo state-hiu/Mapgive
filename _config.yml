@@ -4,6 +4,7 @@ highlighter: pygments
 timezone: America/New_York
 permalink: none
 baseurl: /Mapgive
+url: http://d3netxer.github.io/Mapgive
 destination: temp/
 twitter_username: MapGive
 encoding: utf-8
