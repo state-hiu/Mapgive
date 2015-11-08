@@ -1980,3 +1980,28 @@ display:inline;
 .pager .disabled a:hover {
   color: #999999;
 }
+
+.pad2y {
+    padding-top: 65px;
+    padding-bottom: 10px;
+}
+
+.fill-blue {
+    background-color: #9bb9ff;
+}
+
+.dark-text a {
+    color: #d73f3f;
+    font-family: 'Kreon', serif;
+}
+
+.center {
+    text-align: center;
+}
+
+.limiter {
+    width: 83.33%;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+}
