@@ -3,7 +3,7 @@ layout: resource
 category: events
 external_url: 'http://www.eventbrite.com/e/open-mapping-for-diaspora-members-tickets-18834067202'
 title: Open Mapping for Diaspora Members Virtual Mapathon
-status: upcoming
+status: past
 date: 20151014
 tags:
   - event
