@@ -25,7 +25,7 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
-    "grunt-cssc": "*",
+    "grunt-cssc": "^0.2.6",
     "grunt-hashres": "*",
     "grunt-htmlhint": "*",
     "grunt-img": "*",
@@ -33,6 +33,7 @@
     "grunt-shell": "*",
     "grunt-svgmin": "*",
     "grunt-sync": "*",
+    "gulp-util": "^3.0.7",
     "jshint": "^2.5.1",
     "matchdep": "*",
     "wrench": "*"

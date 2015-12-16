@@ -1,690 +1,887 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
-<Document><Folder><name>OGRGeoJSON</name>
-<Schema name="OGRGeoJSON" id="OGRGeoJSON">
+<Document><Folder><name>ittc_services_flattened</name>
+<Schema name="ittc_services_flattened" id="ittc_services_flattened">
 	<SimpleField name="Name" type="string"></SimpleField>
 	<SimpleField name="Description" type="string"></SimpleField>
 	<SimpleField name="tm_projects" type="string"></SimpleField>
 	<SimpleField name="id" type="string"></SimpleField>
+	<SimpleField name="country" type="string"></SimpleField>
 </Schema>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">729</SimpleData>
-		<SimpleData name="id">0</SimpleData>
+		<SimpleData name="id">mading-24aug2014</SimpleData>
+		<SimpleData name="country">South Sudan</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>33.222914999833954,8.724824999887574 33.419839500052767,8.724824999887574 33.419839500052767,8.924913 33.222914999833954,8.924913 33.222914999833954,8.724824999887574</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>33.222914999833954,8.724824999887574 33.419839500052767,8.724824999887574 33.419839500052767,8.924913 33.222914999833954,8.924913 33.222914999833954,8.724824999887574</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">728</SimpleData>
-		<SimpleData name="id">1</SimpleData>
+		<SimpleData name="id">nyaruguru-04feb2012</SimpleData>
+		<SimpleData name="country">Rwanda,Burundi</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>29.543101395849117,-2.860064999976848 29.68947055539255,-2.860064999976848 29.68947055539255,-2.712608999976866 29.543101395849117,-2.712608999976866 29.543101395849117,-2.860064999976848</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>29.543101395849117,-2.860064999976848 29.68947055539255,-2.860064999976848 29.68947055539255,-2.712608999976866 29.543101395849117,-2.712608999976866 29.543101395849117,-2.860064999976848</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
-		<SimpleData name="tm_projects"></SimpleData>
-		<SimpleData name="id">2</SimpleData>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">kobe_and_melkadida_u8bit</SimpleData>
+		<SimpleData name="country">ethiopia</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>41.696499186819992,4.456868145886643 41.775060817462425,4.456868145886643 41.775060817462425,4.543364817462422 41.696499186819992,4.543364817462422 41.696499186819992,4.456868145886643</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>41.696499186819992,4.456868145886643 41.775060817462425,4.456868145886643 41.775060817462425,4.543364817462422 41.696499186819992,4.543364817462422 41.696499186819992,4.456868145886643</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">807</SimpleData>
-		<SimpleData name="id">3</SimpleData>
+		<SimpleData name="id">capul-27jan2014</SimpleData>
+		<SimpleData name="country">philippines</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>123.999016499838802,12.21467680651004 124.214247000077947,12.21467680651004 124.214247000077947,13.025682 123.999016499838802,13.025682 123.999016499838802,12.21467680651004</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>123.999016499838802,12.21467680651004 124.214247000077947,12.21467680651004 124.214247000077947,13.025682 123.999016499838802,13.025682 123.999016499838802,12.21467680651004</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">805</SimpleData>
-		<SimpleData name="id">4</SimpleData>
+		<SimpleData name="id">calbayog-13jul2014</SimpleData>
+		<SimpleData name="country">philippines</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>124.206424578411955,12.312125999927771 124.378863413824746,12.312125999927771 124.378863413824746,12.60703799992776 124.206424578411955,12.60703799992776 124.206424578411955,12.312125999927771</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>124.206424578411955,12.312125999927771 124.378863413824746,12.312125999927771 124.378863413824746,12.60703799992776 124.206424578411955,12.60703799992776 124.206424578411955,12.312125999927771</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">805</SimpleData>
-		<SimpleData name="id">5</SimpleData>
+		<SimpleData name="id">calbayog-13jul2014</SimpleData>
+		<SimpleData name="country">philippines</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>124.489524468553228,11.999330999930097 124.642828118562164,11.999330999930097 124.642828118562164,12.589154999930077 124.489524468553228,12.589154999930077 124.489524468553228,11.999330999930097</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>124.489524468553228,11.999330999930097 124.642828118562164,11.999330999930097 124.642828118562164,12.589154999930077 124.489524468553228,12.589154999930077 124.489524468553228,11.999330999930097</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">805</SimpleData>
-		<SimpleData name="id">6</SimpleData>
+		<SimpleData name="id">calbayog-13jul2014</SimpleData>
+		<SimpleData name="country">philippines</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>124.622233527283981,11.92244849987822 124.773459061606431,11.92244849987822 124.773459061606431,12.586000499730751 124.622233527283981,12.586000499730751 124.622233527283981,11.92244849987822</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>124.622233527283981,11.92244849987822 124.773459061606431,11.92244849987822 124.773459061606431,12.586000499730751 124.622233527283981,12.586000499730751 124.622233527283981,11.92244849987822</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">584</SimpleData>
-		<SimpleData name="id">7</SimpleData>
+		<SimpleData name="id">bossangoa-06apr2014</SimpleData>
+		<SimpleData name="country">CAR</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>17.362840499938169,6.401272499968349 17.529290999901175,6.401272499968349 17.529290999901175,6.588315 17.362840499938169,6.588315 17.362840499938169,6.401272499968349</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>17.362840499938169,6.401272499968349 17.529290999901175,6.401272499968349 17.529290999901175,6.588315 17.362840499938169,6.588315 17.362840499938169,6.401272499968349</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">878</SimpleData>
-		<SimpleData name="id">8</SimpleData>
+		<SimpleData name="id">akobo-25jan2015</SimpleData>
+		<SimpleData name="country">South Sudan</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>32.877400023333927,7.771588326819735 33.061780558603424,7.771588326819735 33.061780558603424,7.986817686791684 32.877400023333927,7.986817686791684 32.877400023333927,7.771588326819735</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>32.877400023333927,7.771588326819735 33.061780558603424,7.771588326819735 33.061780558603424,7.986817686791684 32.877400023333927,7.986817686791684 32.877400023333927,7.771588326819735</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">801</SimpleData>
-		<SimpleData name="id">9</SimpleData>
+		<SimpleData name="id">gamay-12jul2014</SimpleData>
+		<SimpleData name="country">philippines</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>125.190917575766463,11.670376499928157 125.383055193189776,11.670376499928157 125.383055193189776,12.599810999928167 125.190917575766463,12.599810999928167 125.190917575766463,11.670376499928157</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>125.190917575766463,11.670376499928157 125.383055193189776,11.670376499928157 125.383055193189776,12.599810999928167 125.190917575766463,12.599810999928167 125.190917575766463,11.670376499928157</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">801</SimpleData>
-		<SimpleData name="id">10</SimpleData>
+		<SimpleData name="id">gamay-12jul2014</SimpleData>
+		<SimpleData name="country">philippines</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>125.363929499834811,11.675758499929209 125.556345314173939,11.675758499929209 125.556345314173939,12.441986999929224 125.363929499834811,12.441986999929224 125.363929499834811,11.675758499929209</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>125.363929499834811,11.675758499929209 125.556345314173939,11.675758499929209 125.556345314173939,12.441986999929224 125.363929499834811,12.441986999929224 125.363929499834811,11.675758499929209</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">392</SimpleData>
-		<SimpleData name="id">11</SimpleData>
+		<SimpleData name="id">carles-post</SimpleData>
+		<SimpleData name="country">philippines</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>123.052177929943284,11.414568901424207 123.37787179799335,11.414568901424207 123.37787179799335,11.645904840517948 123.052177929943284,11.645904840517948 123.052177929943284,11.414568901424207</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>123.052177929943284,11.414568901424207 123.37787179799335,11.414568901424207 123.37787179799335,11.645904840517948 123.052177929943284,11.645904840517948 123.052177929943284,11.414568901424207</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">764</SimpleData>
-		<SimpleData name="id">12</SimpleData>
+		<SimpleData name="id">colombo</SimpleData>
+		<SimpleData name="country">Sri Lanka</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>79.992247500332283,6.500808992484369 80.088628500439356,6.500808992484369 80.088628500439356,7.38518063136743 79.992247500332283,7.38518063136743 79.992247500332283,6.500808992484369</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>79.992247500332283,6.500808992484369 80.088628500439356,6.500808992484369 80.088628500439356,7.38518063136743 79.992247500332283,7.38518063136743 79.992247500332283,6.500808992484369</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">764</SimpleData>
-		<SimpleData name="id">13</SimpleData>
+		<SimpleData name="id">colombo</SimpleData>
+		<SimpleData name="country">Sri Lanka</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>79.850528999833884,6.977265458927786 79.997984999571727,6.977265458927786 79.997984999571727,7.376491404133392 79.850528999833884,7.376491404133392 79.850528999833884,6.977265458927786</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>79.850528999833884,6.977265458927786 79.997984999571727,6.977265458927786 79.997984999571727,7.376491404133392 79.850528999833884,7.376491404133392 79.850528999833884,6.977265458927786</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">764</SimpleData>
-		<SimpleData name="id">14</SimpleData>
+		<SimpleData name="id">colombo</SimpleData>
+		<SimpleData name="country">Sri Lanka</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>79.880575500250373,6.529409999789189 80.048394000436872,6.529409999789189 80.048394000436872,7.012057499999824 79.880575500250373,7.012057499999824 79.880575500250373,6.529409999789189</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>79.880575500250373,6.529409999789189 80.048394000436872,6.529409999789189 80.048394000436872,7.012057499999824 79.880575500250373,7.012057499999824 79.880575500250373,6.529409999789189</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
-		<SimpleData name="tm_projects"></SimpleData>
-		<SimpleData name="id">15</SimpleData>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">sevilla-22feb2014</SimpleData>
+		<SimpleData name="country">philippines</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>123.997166999834661,9.557850562177315 124.153245000008056,9.557850562177315 124.153245000008056,10.000215 123.997166999834661,10.000215 123.997166999834661,9.557850562177315</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>123.997166999834661,9.557850562177315 124.153245000008056,9.557850562177315 124.153245000008056,10.000215 123.997166999834661,10.000215 123.997166999834661,9.557850562177315</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">586,587</SimpleData>
-		<SimpleData name="id">16</SimpleData>
+		<SimpleData name="id">panguma-2014</SimpleData>
+		<SimpleData name="country">Sierra Leone</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>-11.385835589069346,7.965273555921786 -11.217221068261544,7.965273555921786 -11.217221068261544,8.955280032825351 -11.385835589069346,8.955280032825351 -11.385835589069346,7.965273555921786</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-11.385835589069346,7.965273555921786 -11.217221068261544,7.965273555921786 -11.217221068261544,8.955280032825351 -11.385835589069346,8.955280032825351 -11.385835589069346,7.965273555921786</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">586,587</SimpleData>
-		<SimpleData name="id">17</SimpleData>
+		<SimpleData name="id">panguma-2014</SimpleData>
+		<SimpleData name="country">Sierra Leone</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>-11.241668919010804,7.970555318182124 -11.051385596139909,7.970555318182124 -11.051385596139909,8.952502255047571 -11.241668919010804,8.952502255047571 -11.241668919010804,7.970555318182124</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-11.241668919010804,7.970555318182124 -11.051385596139909,7.970555318182124 -11.051385596139909,8.952502255047571 -11.241668919010804,8.952502255047571 -11.241668919010804,7.970555318182124</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">586,587</SimpleData>
-		<SimpleData name="id">18</SimpleData>
+		<SimpleData name="id">panguma-2014</SimpleData>
+		<SimpleData name="country">Sierra Leone</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>-11.255800488232328,7.970004645737117 -11.222598696497295,7.970004645737117 -11.222598696497295,8.942304489070642 -11.255800488232328,8.942304489070642 -11.255800488232328,7.970004645737117</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-11.255800488232328,7.970004645737117 -11.222598696497295,7.970004645737117 -11.222598696497295,8.942304489070642 -11.255800488232328,8.942304489070642 -11.255800488232328,7.970004645737117</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">909</SimpleData>
-		<SimpleData name="id">19</SimpleData>
+		<SimpleData name="id">obo-21sep2014</SimpleData>
+		<SimpleData name="country">CAR</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>26.32121592315946,5.281398000113605 26.49486543713795,5.281398000113605 26.49486543713795,5.502582000113605 26.32121592315946,5.502582000113605 26.32121592315946,5.281398000113605</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>26.32121592315946,5.281398000113605 26.49486543713795,5.281398000113605 26.49486543713795,5.502582000113605 26.32121592315946,5.502582000113605 26.32121592315946,5.281398000113605</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">909</SimpleData>
-		<SimpleData name="id">20</SimpleData>
+		<SimpleData name="id">obo-21sep2014</SimpleData>
+		<SimpleData name="country">CAR</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>26.472049088637167,5.266012500112145 26.636302965623916,5.266012500112145 26.636302965623916,5.487196500112131 26.472049088637167,5.487196500112131 26.472049088637167,5.266012500112145</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>26.472049088637167,5.266012500112145 26.636302965623916,5.266012500112145 26.636302965623916,5.487196500112131 26.472049088637167,5.487196500112131 26.472049088637167,5.266012500112145</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">883</SimpleData>
-		<SimpleData name="id">21</SimpleData>
+		<SimpleData name="id">rafai-24mar2014</SimpleData>
+		<SimpleData name="country">CAR</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>23.850738000042227,4.867825499859514 24.005151000007913,4.867825499859514 24.005151000007913,5.015277 23.850738000042227,5.015277 23.850738000042227,4.867825499859514</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>23.850738000042227,4.867825499859514 24.005151000007913,4.867825499859514 24.005151000007913,5.015277 23.850738000042227,5.015277 23.850738000042227,4.867825499859514</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">908</SimpleData>
-		<SimpleData name="id">22</SimpleData>
+		<SimpleData name="id">karangetang-28jun2012</SimpleData>
+		<SimpleData name="country">indonesia</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>125.333036998934034,2.735398378555971 125.480492998278677,2.735398378555971 125.480492998278677,2.875075449898699 125.333036998934034,2.875075449898699 125.333036998934034,2.735398378555971</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>125.333036998934034,2.735398378555971 125.480492998278677,2.735398378555971 125.480492998278677,2.875075449898699 125.333036998934034,2.875075449898699 125.333036998934034,2.735398378555971</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">458</SimpleData>
-		<SimpleData name="id">23</SimpleData>
+		<SimpleData name="id">punia-26sep2013</SimpleData>
+		<SimpleData name="country">DRC</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>26.368608861863176,-1.575555962481453 26.524168881610652,-1.575555962481453 26.524168881610652,-1.354164411619099 26.368608861863176,-1.354164411619099 26.368608861863176,-1.575555962481453</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>26.368608861863176,-1.575555962481453 26.524168881610652,-1.575555962481453 26.524168881610652,-1.354164411619099 26.368608861863176,-1.354164411619099 26.368608861863176,-1.575555962481453</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">445</SimpleData>
-		<SimpleData name="id">24</SimpleData>
+		<SimpleData name="id">nimule-05jan2014</SimpleData>
+		<SimpleData name="country">south sudan,uganda</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>31.990831095104387,3.527220458769094 32.101390652341983,3.527220458769094 32.101390652341983,3.637780016006717 31.990831095104387,3.637780016006717 31.990831095104387,3.527220458769094</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>31.990831095104387,3.527220458769094 32.101390652341983,3.527220458769094 32.101390652341983,3.637780016006717 31.990831095104387,3.637780016006717 31.990831095104387,3.527220458769094</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
-		<SimpleData name="tm_projects"></SimpleData>
-		<SimpleData name="id">25</SimpleData>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">978</SimpleData>
+		<SimpleData name="id">inke-15jan2015</SimpleData>
+		<SimpleData name="country">DRC</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>41.507770230404738,4.500531216168858 41.57610318253758,4.500531216168858 41.57610318253758,4.567453817462422 41.507770230404738,4.567453817462422 41.507770230404738,4.500531216168858</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>20.671694999938119,4.00212900004673 20.864776499895203,4.00212900004673 20.864776499895203,4.149585 20.671694999938119,4.149585 20.671694999938119,4.00212900004673</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
-		<SimpleData name="tm_projects"></SimpleData>
-		<SimpleData name="id">26</SimpleData>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">morire-2015</SimpleData>
+		<SimpleData name="country">Mozambique</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>41.84047838674077,4.348392822469959 41.891611607507436,4.348392822469959 41.891611607507436,4.388746607507433 41.84047838674077,4.388746607507433 41.84047838674077,4.348392822469959</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>35.439976624985249,-17.147403284142371 35.582965325802618,-17.147403284142371 35.582965325802618,-16.484986499219978 35.439976624985249,-16.484986499219978 35.439976624985249,-17.147403284142371</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
-		<SimpleData name="tm_projects"></SimpleData>
-		<SimpleData name="id">27</SimpleData>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">morire-2015</SimpleData>
+		<SimpleData name="country">Mozambique</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>40.311499043662998,-0.066327062518748 40.417724752531839,-0.066327062518748 40.417724752531839,0.037839752531843 40.311499043662998,0.037839752531843 40.311499043662998,-0.066327062518748</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>35.558587190757812,-17.149883245094049 35.695892386360953,-17.149883245094049 35.695892386360953,-16.485101758559896 35.558587190757812,-16.485101758559896 35.558587190757812,-17.149883245094049</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
-		<SimpleData name="tm_projects"></SimpleData>
-		<SimpleData name="id">28</SimpleData>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">morire-2015</SimpleData>
+		<SimpleData name="country">Mozambique</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>41.894555567674459,4.287284170284187 41.943068598170015,4.287284170284187 41.943068598170015,4.318763598170014 41.894555567674459,4.318763598170014 41.894555567674459,4.287284170284187</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>35.674238022227669,-17.146826610269077 35.801374996482828,-17.146826610269077 35.801374996482828,-16.484440919003443 35.674238022227669,-16.484440919003443 35.674238022227669,-17.146826610269077</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
-		<SimpleData name="tm_projects"></SimpleData>
-		<SimpleData name="id">29</SimpleData>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">morire-2015</SimpleData>
+		<SimpleData name="country">Mozambique</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>40.29493927262525,0.038665601329223 40.340977358376882,0.038665601329223 40.340977358376882,0.146538727374748 40.29493927262525,0.146538727374748 40.29493927262525,0.038665601329223</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>35.847301500042185,-17.015858999635189 36.007933500006494,-17.015858999635189 36.007933500006494,-16.484751 35.847301500042185,-16.484751 35.847301500042185,-17.015858999635189</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
-		<SimpleData name="tm_projects"></SimpleData>
-		<SimpleData name="id">30</SimpleData>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">all_u8bit</SimpleData>
+		<SimpleData name="country">indonesia,uganda,ethiopia,kenya</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>40.293171527251651,0.130555918406989 40.341583716428524,0.130555918406989 40.341583716428524,0.162897716428525 40.293171527251651,0.162897716428525 40.293171527251651,0.130555918406989</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>41.507770230404738,4.500531216168858 41.57610318253758,4.500531216168858 41.57610318253758,4.567453817462422 41.507770230404738,4.567453817462422 41.507770230404738,4.500531216168858</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
-		<SimpleData name="tm_projects"></SimpleData>
-		<SimpleData name="id">31</SimpleData>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">all_u8bit</SimpleData>
+		<SimpleData name="country">indonesia,uganda,ethiopia,kenya</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>41.696499186819992,4.456868145886643 41.775060817462425,4.456868145886643 41.775060817462425,4.543364817462422 41.696499186819992,4.543364817462422 41.696499186819992,4.456868145886643</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>41.84047838674077,4.348392822469959 41.891611607507436,4.348392822469959 41.891611607507436,4.388746607507433 41.84047838674077,4.388746607507433 41.84047838674077,4.348392822469959</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
-		<SimpleData name="tm_projects"></SimpleData>
-		<SimpleData name="id">32</SimpleData>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">all_u8bit</SimpleData>
+		<SimpleData name="country">indonesia,uganda,ethiopia,kenya</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>32.222515130452628,2.693604661099701 32.357578223152331,2.693604661099701 32.357578223152331,2.82941783980479 32.222515130452628,2.82941783980479 32.222515130452628,2.693604661099701</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>40.311499043662998,-0.066327062518748 40.417724752531839,-0.066327062518748 40.417724752531839,0.037839752531843 40.311499043662998,0.037839752531843 40.311499043662998,-0.066327062518748</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
-		<SimpleData name="tm_projects"></SimpleData>
-		<SimpleData name="id">33</SimpleData>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">all_u8bit</SimpleData>
+		<SimpleData name="country">indonesia,uganda,ethiopia,kenya</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>128.027438214738709,-3.813181907277268 128.289106098222049,-3.813181907277268 128.289106098222049,-3.560801050845486 128.027438214738709,-3.560801050845486 128.027438214738709,-3.813181907277268</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>41.894555567674459,4.287284170284187 41.943068598170015,4.287284170284187 41.943068598170015,4.318763598170014 41.894555567674459,4.318763598170014 41.894555567674459,4.287284170284187</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">all_u8bit</SimpleData>
+		<SimpleData name="country">indonesia,uganda,ethiopia,kenya</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>40.29493927262525,0.038665601329223 40.340977358376882,0.038665601329223 40.340977358376882,0.146538727374748 40.29493927262525,0.146538727374748 40.29493927262525,0.038665601329223</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">all_u8bit</SimpleData>
+		<SimpleData name="country">indonesia,uganda,ethiopia,kenya</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>40.293171527251651,0.130555918406989 40.341583716428524,0.130555918406989 40.341583716428524,0.162897716428525 40.293171527251651,0.162897716428525 40.293171527251651,0.130555918406989</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">all_u8bit</SimpleData>
+		<SimpleData name="country">indonesia,uganda,ethiopia,kenya</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>41.696499186819992,4.456868145886643 41.775060817462425,4.456868145886643 41.775060817462425,4.543364817462422 41.696499186819992,4.543364817462422 41.696499186819992,4.456868145886643</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">all_u8bit</SimpleData>
+		<SimpleData name="country">indonesia,uganda,ethiopia,kenya</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>32.222515130452628,2.693604661099701 32.357578223152331,2.693604661099701 32.357578223152331,2.82941783980479 32.222515130452628,2.82941783980479 32.222515130452628,2.693604661099701</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">all_u8bit</SimpleData>
+		<SimpleData name="country">indonesia,uganda,ethiopia,kenya</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>128.027438214738709,-3.813181907277268 128.289106098222049,-3.813181907277268 128.289106098222049,-3.560801050845486 128.027438214738709,-3.560801050845486 128.027438214738709,-3.813181907277268</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">979</SimpleData>
+		<SimpleData name="id">mole-19feb2015</SimpleData>
+		<SimpleData name="country">DRC</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>18.73298880003377,4.099740039182018 18.863996399997387,4.099740039182018 18.863996399997387,4.223037599999863 18.73298880003377,4.223037599999863 18.73298880003377,4.099740039182018</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">853</SimpleData>
-		<SimpleData name="id">34</SimpleData>
+		<SimpleData name="id">nimni-16jun2014</SimpleData>
+		<SimpleData name="country">South Sudan</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>29.912795999983594,9.25489799993233 30.096949499942667,9.25489799993233 30.096949499942667,9.402353999932314 29.912795999983594,9.402353999932314 29.912795999983594,9.25489799993233</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>29.912795999983594,9.25489799993233 30.096949499942667,9.25489799993233 30.096949499942667,9.402353999932314 29.912795999983594,9.402353999932314 29.912795999983594,9.25489799993233</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
-		<SimpleData name="tm_projects"></SimpleData>
-		<SimpleData name="id">35</SimpleData>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">lokon-26sep2011</SimpleData>
+		<SimpleData name="country">indonesia</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>124.74786149983548,1.301485499988631 124.92063899906762,1.301485499988631 124.92063899906762,1.494414 124.74786149983548,1.494414 124.74786149983548,1.301485499988631</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>124.74786149983548,1.301485499988631 124.92063899906762,1.301485499988631 124.92063899906762,1.494414 124.74786149983548,1.494414 124.74786149983548,1.301485499988631</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">713</SimpleData>
-		<SimpleData name="id">36</SimpleData>
+		<SimpleData name="id">kule-09oct2014</SimpleData>
+		<SimpleData name="country">ethiopia</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>34.135537500042275,8.189874000061598 34.292803500007331,8.189874000061598 34.292803500007331,8.356504500000277 34.135537500042275,8.356504500000277 34.135537500042275,8.189874000061598</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>34.135537500042275,8.189874000061598 34.292803500007331,8.189874000061598 34.292803500007331,8.356504500000277 34.135537500042275,8.356504500000277 34.135537500042275,8.189874000061598</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">713</SimpleData>
-		<SimpleData name="id">37</SimpleData>
+		<SimpleData name="id">kule-09oct2014</SimpleData>
+		<SimpleData name="country">ethiopia</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>34.275185999833909,8.190114425486824 34.437329999797882,8.190114425486824 34.437329999797882,8.3561445 34.275185999833909,8.3561445 34.275185999833909,8.190114425486824</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>34.275185999833909,8.190114425486824 34.437329999797882,8.190114425486824 34.437329999797882,8.3561445 34.275185999833909,8.3561445 34.275185999833909,8.190114425486824</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">780</SimpleData>
-		<SimpleData name="id">38</SimpleData>
+		<SimpleData name="id">zwedru-12mar2014</SimpleData>
+		<SimpleData name="country">Liberia</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>-8.210110500009826,5.994814499981286 -8.049253697161316,5.994814499981286 -8.049253697161316,6.138396 -8.210110500009826,6.138396 -8.210110500009826,5.994814499981286</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-8.210110500009826,5.994814499981286 -8.049253697161316,5.994814499981286 -8.049253697161316,6.138396 -8.210110500009826,6.138396 -8.210110500009826,5.994814499981286</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">856</SimpleData>
-		<SimpleData name="id">39</SimpleData>
+		<SimpleData name="id">mayon-22dec2014</SimpleData>
+		<SimpleData name="country">South Sudan</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>29.080643791434618,8.972431200294727 29.215218620765121,8.972431200294727 29.215218620765121,9.292546800383645 29.080643791434618,9.292546800383645 29.080643791434618,8.972431200294727</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>29.080643791434618,8.972431200294727 29.215218620765121,8.972431200294727 29.215218620765121,9.292546800383645 29.080643791434618,9.292546800383645 29.080643791434618,8.972431200294727</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
-		<SimpleData name="tm_projects"></SimpleData>
-		<SimpleData name="id">40</SimpleData>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">kath-w-25nov2014</SimpleData>
+		<SimpleData name="country">Nepal</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>90.329564980711623,23.69401065771304 90.462412829827144,23.69401065771304 90.462412829827144,23.809190445647587 90.329564980711623,23.809190445647587 90.329564980711623,23.69401065771304</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>85.210412400023287,27.495348809988702 85.342388399974396,27.495348809988702 85.342388399974396,28.026188999998311 85.210412400023287,28.026188999998311 85.210412400023287,27.495348809988702</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">dhaka-e-2014</SimpleData>
+		<SimpleData name="country">Bangladesh</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>90.329564980711623,23.69401065771304 90.462412829827144,23.69401065771304 90.462412829827144,23.809190445647587 90.329564980711623,23.809190445647587 90.329564980711623,23.69401065771304</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">808</SimpleData>
-		<SimpleData name="id">41</SimpleData>
+		<SimpleData name="id">giporlos-04apr2014</SimpleData>
+		<SimpleData name="country">philippines</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>125.366692500655645,11.073743999222399 125.544078000852792,11.073743999222399 125.544078000852792,11.884747499999943 125.366692500655645,11.884747499999943 125.366692500655645,11.073743999222399</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>125.366692500655645,11.073743999222399 125.544078000852792,11.073743999222399 125.544078000852792,11.884747499999943 125.366692500655645,11.884747499999943 125.366692500655645,11.073743999222399</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">352</SimpleData>
-		<SimpleData name="id">42</SimpleData>
+		<SimpleData name="id">kindu</SimpleData>
+		<SimpleData name="country">DRC</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>25.803606746340567,-3.030283154985292 26.022779784306969,-3.030283154985292 26.022779784306969,-2.849717579607922 25.803606746340567,-2.849717579607922 25.803606746340567,-3.030283154985292</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>25.803606746340567,-3.030283154985292 26.022779784306969,-3.030283154985292 26.022779784306969,-2.849717579607922 25.803606746340567,-2.849717579607922 25.803606746340567,-3.030283154985292</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">658,661</SimpleData>
-		<SimpleData name="id">43</SimpleData>
+		<SimpleData name="id">boende-2</SimpleData>
+		<SimpleData name="country">DRC</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>20.712833130754547,-1.051252238685158 20.957967049182454,-1.051252238685158 20.957967049182454,0.032022899533588 20.712833130754547,0.032022899533588 20.712833130754547,-1.051252238685158</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>20.712833130754547,-1.051252238685158 20.957967049182454,-1.051252238685158 20.957967049182454,0.032022899533588 20.712833130754547,0.032022899533588 20.712833130754547,-1.051252238685158</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">865</SimpleData>
-		<SimpleData name="id">44</SimpleData>
+		<SimpleData name="id">grandgedeh</SimpleData>
+		<SimpleData name="country">Liberia</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>-9.001808900842557,5.998187925064967 -8.498188422430909,5.998187925064967 -8.498188422430909,6.501872402499551 -9.001808900842557,6.501872402499551 -9.001808900842557,5.998187925064967</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-9.001808900842557,5.998187925064967 -8.498188422430909,5.998187925064967 -8.498188422430909,6.501872402499551 -9.001808900842557,6.501872402499551 -9.001808900842557,5.998187925064967</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">865</SimpleData>
-		<SimpleData name="id">45</SimpleData>
+		<SimpleData name="id">grandgedeh</SimpleData>
+		<SimpleData name="country">Liberia</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>-9.00182977396209,5.498166367065807 -8.498166763106807,5.498166367065807 -8.498166763106807,6.001835793459744 -9.00182977396209,6.001835793459744 -9.00182977396209,5.498166367065807</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-9.00182977396209,5.498166367065807 -8.498166763106807,5.498166367065807 -8.498166763106807,6.001835793459744 -9.00182977396209,6.001835793459744 -9.00182977396209,5.498166367065807</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
-		<SimpleData name="tm_projects"></SimpleData>
-		<SimpleData name="id">46</SimpleData>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">caracol-23dec2014</SimpleData>
+		<SimpleData name="country">Haiti</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>-72.259561912982264,19.655920800056087 -72.111159764145881,19.655920800056087 -72.111159764145881,19.791961200018299 -72.259561912982264,19.791961200018299 -72.259561912982264,19.655920800056087</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-72.259561912982264,19.655920800056087 -72.111159764145881,19.655920800056087 -72.111159764145881,19.791961200018299 -72.259561912982264,19.791961200018299 -72.259561912982264,19.655920800056087</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
-		<SimpleData name="tm_projects"></SimpleData>
-		<SimpleData name="id">47</SimpleData>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">caracol-23dec2014</SimpleData>
+		<SimpleData name="country">Haiti</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>-71.977464000165341,19.521828952285677 -71.797244549148502,19.521828952285677 -71.797244549148502,19.771425 -71.977464000165341,19.771425 -71.977464000165341,19.521828952285677</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-71.977464000165341,19.521828952285677 -71.797244549148502,19.521828952285677 -71.797244549148502,19.771425 -71.977464000165341,19.771425 -71.977464000165341,19.521828952285677</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
-		<SimpleData name="tm_projects"></SimpleData>
-		<SimpleData name="id">48</SimpleData>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">caracol-23dec2014</SimpleData>
+		<SimpleData name="country">Haiti</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>-72.145201500163878,19.514740100727899 -71.958136499956012,19.514740100727899 -71.958136499956012,19.782846 -72.145201500163878,19.782846 -72.145201500163878,19.514740100727899</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-72.145201500163878,19.514740100727899 -71.958136499956012,19.514740100727899 -71.958136499956012,19.782846 -72.145201500163878,19.782846 -72.145201500163878,19.514740100727899</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1129</SimpleData>
+		<SimpleData name="id">leyte-07nov2014</SimpleData>
+		<SimpleData name="country">philippines</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>124.816018499841036,10.000002905123672 125.004995999001139,10.000002905123672 125.004995999001139,11.019951 124.816018499841036,11.019951 124.816018499841036,10.000002905123672</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">351</SimpleData>
-		<SimpleData name="id">49</SimpleData>
+		<SimpleData name="id">ormoccity-pre</SimpleData>
+		<SimpleData name="country">philippines</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>124.568331074672813,10.961105563625926 124.717508343532216,10.961105563625926 124.717508343532216,11.097224481655871 124.568331074672813,11.097224481655871 124.568331074672813,10.961105563625926</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>124.568331074672813,10.961105563625926 124.717508343532216,10.961105563625926 124.717508343532216,11.097224481655871 124.568331074672813,11.097224481655871 124.568331074672813,10.961105563625926</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">360</SimpleData>
-		<SimpleData name="id">50</SimpleData>
+		<SimpleData name="id">cebu-post</SimpleData>
+		<SimpleData name="country">philippines</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>123.910848745589249,11.041082428448707 124.077260329444769,11.041082428448707 124.077260329444769,11.283774254410748 123.910848745589249,11.283774254410748 123.910848745589249,11.041082428448707</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>123.910848745589249,11.041082428448707 124.077260329444769,11.041082428448707 124.077260329444769,11.283774254410748 123.910848745589249,11.283774254410748 123.910848745589249,11.041082428448707</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
-		<SimpleData name="tm_projects"></SimpleData>
-		<SimpleData name="id">51</SimpleData>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">kath-e-13mar2015</SimpleData>
+		<SimpleData name="country">Nepal</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>43.26720759693184,-11.924396999802605 43.41436659689915,-11.924396999802605 43.41436659689915,-11.776940999835382 43.26720759693184,-11.776940999835382 43.26720759693184,-11.924396999802605</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>85.361813999834112,27.569689375603424 85.523111999547353,27.569689375603424 85.523111999547353,27.815417999998818 85.361813999834112,27.815417999998818 85.361813999834112,27.569689375603424</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
-		<SimpleData name="tm_projects"></SimpleData>
-		<SimpleData name="id">52</SimpleData>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1009</SimpleData>
+		<SimpleData name="id">gorkha-apr2015</SimpleData>
+		<SimpleData name="country">Nepal</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>43.215497999817806,-11.803212000059293 43.289225999801424,-11.803212000059293 43.289225999801424,-11.655756000059284 43.215497999817806,-11.655756000059284 43.215497999817806,-11.803212000059293</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>84.545582848082972,28.196428500247347 84.718645032140557,28.196428500247347 84.718645032140557,28.56506850016541 84.545582848082972,28.56506850016541 84.545582848082972,28.196428500247347</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1009</SimpleData>
+		<SimpleData name="id">gorkha-apr2015</SimpleData>
+		<SimpleData name="country">Nepal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>84.585898528728634,27.947087999763792 84.755738181462746,27.947087999763792 84.755738181462746,28.315727999927645 84.585898528728634,28.315727999927645 84.585898528728634,27.947087999763792</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1009</SimpleData>
+		<SimpleData name="id">gorkha-apr2015</SimpleData>
+		<SimpleData name="country">Nepal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>84.456437573526117,27.946417500199942 84.621729164904352,27.946417500199942 84.621729164904352,28.315057500118026 84.456437573526117,28.315057500118026 84.456437573526117,27.946417500199942</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">comoros-2014</SimpleData>
+		<SimpleData name="country">Comoros</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>43.26720759693184,-11.924396999802605 43.41436659689915,-11.924396999802605 43.41436659689915,-11.776940999835382 43.26720759693184,-11.776940999835382 43.26720759693184,-11.924396999802605</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">comoros-2014</SimpleData>
+		<SimpleData name="country">Comoros</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>43.215497999817806,-11.803212000059293 43.289225999801424,-11.803212000059293 43.289225999801424,-11.655756000059284 43.215497999817806,-11.655756000059284 43.215497999817806,-11.803212000059293</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">49</SimpleData>
-		<SimpleData name="id">53</SimpleData>
+		<SimpleData name="id">lira_1</SimpleData>
+		<SimpleData name="country">uganda</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>32.82937851767344,2.17650561260314 32.969724420084752,2.17650561260314 32.969724420084752,2.317687094287897 32.82937851767344,2.317687094287897 32.82937851767344,2.17650561260314</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>32.82937851767344,2.17650561260314 32.969724420084752,2.17650561260314 32.969724420084752,2.317687094287897 32.82937851767344,2.317687094287897 32.82937851767344,2.17650561260314</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">468</SimpleData>
-		<SimpleData name="id">54</SimpleData>
+		<SimpleData name="id">kalima-07sep2013</SimpleData>
+		<SimpleData name="country">DRC</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>26.506941741555622,-2.695837970592823 26.662222704266089,-2.695837970592823 26.662222704266089,-2.430275073416217 26.506941741555622,-2.430275073416217 26.506941741555622,-2.695837970592823</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>26.506941741555622,-2.695837970592823 26.662222704266089,-2.695837970592823 26.662222704266089,-2.430275073416217 26.506941741555622,-2.430275073416217 26.506941741555622,-2.695837970592823</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">648</SimpleData>
-		<SimpleData name="id">55</SimpleData>
+		<SimpleData name="id">bokoto-02feb2012</SimpleData>
+		<SimpleData name="country">DRC</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>20.274227999938187,-1.044556480466993 20.45152349989878,-1.044556480466993 20.45152349989878,0.037552499999989 20.274227999938187,0.037552499999989 20.274227999938187,-1.044556480466993</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>20.274227999938187,-1.044556480466993 20.45152349989878,-1.044556480466993 20.45152349989878,0.037552499999989 20.274227999938187,0.037552499999989 20.274227999938187,-1.044556480466993</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">467</SimpleData>
-		<SimpleData name="id">56</SimpleData>
+		<SimpleData name="id">kasese-15sep2013</SimpleData>
+		<SimpleData name="country">DRC</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>26.994719972181311,-1.719167073592548 27.147500241392649,-1.719167073592548 27.147500241392649,-1.497775522730207 26.994719972181311,-1.497775522730207 26.994719972181311,-1.719167073592548</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>26.994719972181311,-1.719167073592548 27.147500241392649,-1.719167073592548 27.147500241392649,-1.497775522730207 26.994719972181311,-1.497775522730207 26.994719972181311,-1.719167073592548</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">928,929,930,931</SimpleData>
-		<SimpleData name="id">57</SimpleData>
+		<SimpleData name="id">quelimane-11feb2015</SimpleData>
+		<SimpleData name="country">Mozambique</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>36.797449499833974,-17.948360089333036 37.000447289007965,-17.948360089333036 37.000447289007965,-17.796906 36.797449499833974,-17.796906 36.797449499833974,-17.948360089333036</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>36.797449499833974,-17.948360089333036 37.000447289007965,-17.948360089333036 37.000447289007965,-17.796906 36.797449499833974,-17.796906 36.797449499833974,-17.948360089333036</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">915</SimpleData>
-		<SimpleData name="id">58</SimpleData>
+		<SimpleData name="id">rivercess-07jan2015</SimpleData>
+		<SimpleData name="country">Liberia</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>-9.45619579022177,5.099031851457985 -9.303776820434585,5.099031851457985 -9.303776820434585,5.9837625 -9.45619579022177,5.9837625 -9.45619579022177,5.099031851457985</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-9.45619579022177,5.099031851457985 -9.303776820434585,5.099031851457985 -9.303776820434585,5.9837625 -9.45619579022177,5.9837625 -9.45619579022177,5.099031851457985</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">915</SimpleData>
-		<SimpleData name="id">59</SimpleData>
+		<SimpleData name="id">rivercess-07jan2015</SimpleData>
+		<SimpleData name="country">Liberia</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>-9.58853664284762,5.244054552723171 -9.439248783959947,5.244054552723171 -9.439248783959947,5.9813325 -9.58853664284762,5.9813325 -9.58853664284762,5.244054552723171</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-9.58853664284762,5.244054552723171 -9.439248783959947,5.244054552723171 -9.439248783959947,5.9813325 -9.58853664284762,5.9813325 -9.58853664284762,5.244054552723171</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">915</SimpleData>
-		<SimpleData name="id">60</SimpleData>
+		<SimpleData name="id">rivercess-07jan2015</SimpleData>
+		<SimpleData name="country">Liberia</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>-9.722554450942184,5.391008999443215 -9.5713243623275,5.391008999443215 -9.5713243623275,5.980828499999927 -9.722554450942184,5.980828499999927 -9.722554450942184,5.391008999443215</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-9.722554450942184,5.391008999443215 -9.5713243623275,5.391008999443215 -9.5713243623275,5.980828499999927 -9.722554450942184,5.980828499999927 -9.722554450942184,5.391008999443215</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">644,847</SimpleData>
-		<SimpleData name="id">61</SimpleData>
+		<SimpleData name="id">bangula-20jul2014</SimpleData>
+		<SimpleData name="country">Malawi</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>35.080812000041732,-16.6845693303 35.258073389905093,-16.6845693303 35.258073389905093,-15.617511 35.080812000041732,-15.617511 35.080812000041732,-16.6845693303</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>35.080812000041732,-16.6845693303 35.258073389905093,-16.6845693303 35.258073389905093,-15.617511 35.080812000041732,-15.617511 35.080812000041732,-16.6845693303</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">644,847</SimpleData>
-		<SimpleData name="id">62</SimpleData>
+		<SimpleData name="id">bangula-20jul2014</SimpleData>
+		<SimpleData name="country">Malawi</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>34.936069500041704,-16.68464099879392 35.103622500227885,-16.68464099879392 35.103622500227885,-15.63075 34.936069500041704,-15.63075 34.936069500041704,-16.68464099879392</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>34.936069500041704,-16.68464099879392 35.103622500227885,-16.68464099879392 35.103622500227885,-15.63075 34.936069500041704,-15.63075 34.936069500041704,-16.68464099879392</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">649</SimpleData>
-		<SimpleData name="id">63</SimpleData>
+		<SimpleData name="id">boende-14may2011</SimpleData>
+		<SimpleData name="country">DRC</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>20.585254500042165,-1.038976651055213 20.779142187532859,-1.038976651055213 20.779142187532859,0.031356 20.585254500042165,0.031356 20.585254500042165,-1.038976651055213</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>20.585254500042165,-1.038976651055213 20.779142187532859,-1.038976651055213 20.779142187532859,0.031356 20.585254500042165,0.031356 20.585254500042165,-1.038976651055213</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1121</SimpleData>
+		<SimpleData name="id">doro-27dec2014</SimpleData>
+		<SimpleData name="country">South Sudan</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>33.661069200033793,9.823397743102554 33.782032800000181,9.823397743102554 33.782032800000181,10.000346399999987 33.661069200033793,10.000346399999987 33.661069200033793,9.823397743102554</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">871,874</SimpleData>
-		<SimpleData name="id">64</SimpleData>
+		<SimpleData name="id">nguinea-10jan2013</SimpleData>
+		<SimpleData name="country">Nicaragua</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>-84.489061542267095,11.598227999926689 -84.288689927111236,11.598227999926689 -84.288689927111236,11.8194119999267 -84.489061542267095,11.8194119999267 -84.489061542267095,11.598227999926689</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-84.489061542267095,11.598227999926689 -84.288689927111236,11.598227999926689 -84.288689927111236,11.8194119999267 -84.489061542267095,11.8194119999267 -84.489061542267095,11.598227999926689</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">698</SimpleData>
-		<SimpleData name="id">65</SimpleData>
+		<SimpleData name="id">khulna-2014</SimpleData>
+		<SimpleData name="country">Bangladesh</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>89.400275076287386,21.983053834763272 89.553615976623092,21.983053834763272 89.553615976623092,23.006113815637747 89.400275076287386,23.006113815637747 89.400275076287386,21.983053834763272</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>89.400275076287386,21.983053834763272 89.553615976623092,21.983053834763272 89.553615976623092,23.006113815637747 89.400275076287386,23.006113815637747 89.400275076287386,21.983053834763272</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">698</SimpleData>
-		<SimpleData name="id">66</SimpleData>
+		<SimpleData name="id">khulna-2014</SimpleData>
+		<SimpleData name="country">Bangladesh</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>89.505275522730201,22.449996032472686 89.672225715002668,22.449996032472686 89.672225715002668,22.585835588380917 89.505275522730201,22.585835588380917 89.505275522730201,22.449996032472686</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>89.505275522730201,22.449996032472686 89.672225715002668,22.449996032472686 89.672225715002668,22.585835588380917 89.505275522730201,22.585835588380917 89.505275522730201,22.449996032472686</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">698</SimpleData>
-		<SimpleData name="id">67</SimpleData>
+		<SimpleData name="id">khulna-2014</SimpleData>
+		<SimpleData name="country">Bangladesh</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>89.332906500000249,22.673083500069978 89.679753000385688,22.673083500069978 89.679753000385688,22.856058 89.332906500000249,22.856058 89.332906500000249,22.673083500069978</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>89.332906500000249,22.673083500069978 89.679753000385688,22.673083500069978 89.679753000385688,22.856058 89.332906500000249,22.856058 89.332906500000249,22.673083500069978</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">844,845</SimpleData>
+		<SimpleData name="id">dhaka-22mar2015</SimpleData>
+		<SimpleData name="country">Bangladesh</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>90.27583358576689,23.604952500149256 90.465216450627125,23.604952500149256 90.465216450627125,23.973592500067344 90.27583358576689,23.973592500067344 90.27583358576689,23.604952500149256</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">621</SimpleData>
-		<SimpleData name="id">68</SimpleData>
+		<SimpleData name="id">joru</SimpleData>
+		<SimpleData name="country">Sierra Leone,Liberia</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>-11.260002263525198,6.998330603538898 -10.99805354635903,6.998330603538898 -10.99805354635903,7.780002255047581 -11.260002263525198,7.780002255047581 -11.260002263525198,6.998330603538898</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-11.260002263525198,6.998330603538898 -10.99805354635903,6.998330603538898 -10.99805354635903,7.780002255047581 -11.260002263525198,7.780002255047581 -11.260002263525198,6.998330603538898</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">621</SimpleData>
-		<SimpleData name="id">69</SimpleData>
+		<SimpleData name="id">joru</SimpleData>
+		<SimpleData name="country">Sierra Leone,Liberia</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>-11.004168931579056,7.013052935970213 -10.834164607655403,7.013052935970213 -10.834164607655403,7.53139115241407 -11.004168931579056,7.53139115241407 -11.004168931579056,7.013052935970213</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-11.004168931579056,7.013052935970213 -10.834164607655403,7.013052935970213 -10.834164607655403,7.53139115241407 -11.004168931579056,7.53139115241407 -11.004168931579056,7.013052935970213</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">831,833,838</SimpleData>
-		<SimpleData name="id">70</SimpleData>
+		<SimpleData name="id">dhaka-23oct2014</SimpleData>
+		<SimpleData name="country">Bangladesh</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>90.333124827425507,23.696200451008647 90.406651500332501,23.696200451008647 90.406651500332501,23.760787499970402 90.333124827425507,23.760787499970402 90.333124827425507,23.696200451008647</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>90.333124827425507,23.696200451008647 90.406651500332501,23.696200451008647 90.406651500332501,23.760787499970402 90.333124827425507,23.760787499970402 90.333124827425507,23.696200451008647</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">854</SimpleData>
-		<SimpleData name="id">71</SimpleData>
+		<SimpleData name="id">koch-03jul2014</SimpleData>
+		<SimpleData name="country">South Sudan</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>29.882049820353075,8.53869149992641 30.057237415190663,8.53869149992641 30.057237415190663,8.686143 29.882049820353075,8.686143 29.882049820353075,8.53869149992641</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>29.882049820353075,8.53869149992641 30.057237415190663,8.53869149992641 30.057237415190663,8.686143 29.882049820353075,8.686143 29.882049820353075,8.53869149992641</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">190,327,328</SimpleData>
-		<SimpleData name="id">72</SimpleData>
+		<SimpleData name="id">kathmandu</SimpleData>
+		<SimpleData name="country">nepal</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>85.201160186602493,27.562412665282306 85.495359990664653,27.562412665282306 85.495359990664653,27.815500528783708 85.201160186602493,27.815500528783708 85.201160186602493,27.562412665282306</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>85.201160186602493,27.562412665282306 85.495359990664653,27.562412665282306 85.495359990664653,27.815500528783708 85.201160186602493,27.815500528783708 85.201160186602493,27.562412665282306</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">591</SimpleData>
-		<SimpleData name="id">73</SimpleData>
+		<SimpleData name="id">juba-20feb2014</SimpleData>
+		<SimpleData name="country">south sudan</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>31.495499409797095,4.684195167821461 31.659052152033276,4.684195167821461 31.659052152033276,4.979259064404104 31.495499409797095,4.979259064404104 31.495499409797095,4.684195167821461</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>31.495499409797095,4.684195167821461 31.659052152033276,4.684195167821461 31.659052152033276,4.979259064404104 31.495499409797095,4.979259064404104 31.495499409797095,4.684195167821461</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1023</SimpleData>
+		<SimpleData name="id">borang-10feb2015</SimpleData>
+		<SimpleData name="country">Nepal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>84.907835999839875,27.941444750579613 85.089525298957653,27.941444750579613 85.089525298957653,28.271934000001384 84.907835999839875,28.271934000001384 84.907835999839875,27.941444750579613</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">583</SimpleData>
-		<SimpleData name="id">74</SimpleData>
+		<SimpleData name="id">kenema-segbwema</SimpleData>
+		<SimpleData name="country">Sierra Leone</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>-11.260002263525198,7.779995896830729 -10.99805354635903,7.779995896830729 -10.99805354635903,7.928057810603117 -11.260002263525198,7.928057810603117 -11.260002263525198,7.779995896830729</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-11.260002263525198,7.779995896830729 -10.99805354635903,7.779995896830729 -10.99805354635903,7.928057810603117 -11.260002263525198,7.928057810603117 -11.260002263525198,7.779995896830729</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">583</SimpleData>
-		<SimpleData name="id">75</SimpleData>
+		<SimpleData name="id">kenema-segbwema</SimpleData>
+		<SimpleData name="country">Sierra Leone</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>-11.005002263663373,7.531388261544818 -10.832497532861266,7.531388261544818 -10.832497532861266,8.049724477269784 -11.005002263663373,8.049724477269784 -11.005002263663373,7.531388261544818</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-11.005002263663373,7.531388261544818 -10.832497532861266,7.531388261544818 -10.832497532861266,8.049724477269784 -11.005002263663373,8.049724477269784 -11.005002263663373,7.531388261544818</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">768</SimpleData>
-		<SimpleData name="id">76</SimpleData>
+		<SimpleData name="id">boholisland</SimpleData>
+		<SimpleData name="country">philippines</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>123.875338499508345,9.557851499932209 124.005352498930492,9.557851499932209 124.005352498930492,9.926491499932203 123.875338499508345,9.926491499932203 123.875338499508345,9.557851499932209</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>123.875338499508345,9.557851499932209 124.005352498930492,9.557851499932209 124.005352498930492,9.926491499932203 123.875338499508345,9.926491499932203 123.875338499508345,9.557851499932209</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">768</SimpleData>
-		<SimpleData name="id">77</SimpleData>
+		<SimpleData name="id">boholisland</SimpleData>
+		<SimpleData name="country">philippines</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>124.133516999835166,9.557955233721657 124.286746499154177,9.557955233721657 124.286746499154177,10.000318499999988 124.133516999835166,10.000318499999988 124.133516999835166,9.557955233721657</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>124.133516999835166,9.557955233721657 124.286746499154177,9.557955233721657 124.286746499154177,10.000318499999988 124.133516999835166,10.000318499999988 124.133516999835166,9.557955233721657</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">768</SimpleData>
-		<SimpleData name="id">78</SimpleData>
+		<SimpleData name="id">boholisland</SimpleData>
+		<SimpleData name="country">philippines</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>123.988126499835658,9.557861070544938 124.160755500027506,9.557861070544938 124.160755500027506,10.000224 123.988126499835658,10.000224 123.988126499835658,9.557861070544938</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>123.988126499835658,9.557861070544938 124.160755500027506,9.557861070544938 124.160755500027506,10.000224 123.988126499835658,10.000224 123.988126499835658,9.557861070544938</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">768</SimpleData>
-		<SimpleData name="id">79</SimpleData>
+		<SimpleData name="id">boholisland</SimpleData>
+		<SimpleData name="country">philippines</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>123.715961999916473,9.852875999931717 123.795828000005201,9.852875999931717 123.795828000005201,9.926603999931734 123.715961999916473,9.926603999931734 123.715961999916473,9.852875999931717</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>123.715961999916473,9.852875999931717 123.795828000005201,9.852875999931717 123.795828000005201,9.926603999931734 123.715961999916473,9.926603999931734 123.715961999916473,9.852875999931717</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">768</SimpleData>
-		<SimpleData name="id">80</SimpleData>
+		<SimpleData name="id">boholisland</SimpleData>
+		<SimpleData name="country">philippines</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>123.715961999916473,9.484235999931736 123.797398500006935,9.484235999931736 123.797398500006935,9.631691999931718 123.715961999916473,9.631691999931718 123.715961999916473,9.484235999931736</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>123.715961999916473,9.484235999931736 123.797398500006935,9.484235999931736 123.797398500006935,9.631691999931718 123.715961999916473,9.631691999931718 123.715961999916473,9.484235999931736</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">768</SimpleData>
-		<SimpleData name="id">81</SimpleData>
+		<SimpleData name="id">boholisland</SimpleData>
+		<SimpleData name="country">philippines</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>123.779425826524786,9.557869499931874 123.929308545636076,9.557869499931874 123.929308545636076,9.92650949993188 123.779425826524786,9.92650949993188 123.779425826524786,9.557869499931874</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>123.779425826524786,9.557869499931874 123.929308545636076,9.557869499931874 123.929308545636076,9.92650949993188 123.779425826524786,9.92650949993188 123.779425826524786,9.557869499931874</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">768</SimpleData>
-		<SimpleData name="id">82</SimpleData>
+		<SimpleData name="id">boholisland</SimpleData>
+		<SimpleData name="country">philippines</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>124.269655499834471,9.558004838038551 124.425400500007513,9.558004838038551 124.425400500007513,10.000368 124.269655499834471,10.000368 124.269655499834471,9.558004838038551</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>124.269655499834471,9.558004838038551 124.425400500007513,9.558004838038551 124.425400500007513,10.000368 124.269655499834471,10.000368 124.269655499834471,9.558004838038551</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">350</SimpleData>
-		<SimpleData name="id">83</SimpleData>
+		<SimpleData name="id">taclobancity-post</SimpleData>
+		<SimpleData name="country">philippines</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>124.88,11.177 125.079,11.177 125.079,11.348 124.88,11.348 124.88,11.177</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>124.88,11.177 125.079,11.177 125.079,11.348 124.88,11.348 124.88,11.177</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
-	<ExtendedData><SchemaData schemaUrl="#OGRGeoJSON">
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">350</SimpleData>
-		<SimpleData name="id">84</SimpleData>
+		<SimpleData name="id">taclobancity-post</SimpleData>
+		<SimpleData name="country">philippines</SimpleData>
 	</SchemaData></ExtendedData>
-      <Polygon><outerBoundaryIs><LinearRing><coordinates>124.94,10.997 125.033,10.997 125.033,11.188 124.94,11.188 124.94,10.997</coordinates></LinearRing></outerBoundaryIs></Polygon>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>124.94,10.997 125.033,10.997 125.033,11.188 124.94,11.188 124.94,10.997</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
 </Folder></Document></kml>
