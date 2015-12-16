@@ -1,16 +1,16 @@
 module.exports = function(grunt) {
     require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
-
+    grunt.loadNpmTasks('grunt-cssc');
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
         cssc: {
-          build: {
+          csscFirstSet: {
             options: {
               sortSelectors: false,
               sortDeclarations: false,
               sort: false,
-              safe: true
+              safe: true,
             },
             // dest: src
             files: {
