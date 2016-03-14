@@ -4,7 +4,7 @@ highlighter: pygments
 timezone: America/New_York
 permalink: none
 baseurl: /Mapgive
-url: http://mapgive.state.gov
+#url: http://mapgive.state.gov
 destination: temp/
 twitter_username: MapGive
 encoding: utf-8
