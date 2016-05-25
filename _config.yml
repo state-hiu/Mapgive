@@ -1,5 +1,5 @@
 name: MapGive
-markdown: redcarpet
+#markdown: redcarpet
 highlighter: pygments
 timezone: America/New_York
 permalink: none

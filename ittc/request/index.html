@@ -558,9 +558,9 @@ $(document).ready(function(){
                     var $inputs = $form.find("input, select, button, textarea");
 
                     // Serialize the data in the form
-                    //var serializedData = $form.serialize();
-                    event.preventDefault();
-                    var serializedData = $('input[name!=geojson]', this).serialize(); 
+                    var serializedData = $form.serialize();
+                    //event.preventDefault();
+                    //var serializedData = $('input[name!=geojson]', this).serialize(); 
 
                     // Let's disable the inputs for the duration of the Ajax request.
                     // Note: we disable elements AFTER the form data has been serialized.
