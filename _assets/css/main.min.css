@@ -358,6 +358,8 @@ h2,h3{page-break-after:avoid;}
 .pager .disabled a,.pager .disabled a:hover{color:#999;}
 .pad2y{padding-top:65px;padding-bottom:10px;}
 .fill-blue{background-color:#9bb9ff;}
+.fill-dark{background-color:#202020;}
 .dark-text a{color:#d73f3f;font-family:Kreon,serif;}
+.osmgeoweek-text a{color:#fff;font-family:Montserrat,sans-serif;}
 .center{text-align:center;}
 .limiter{width:83.33%;max-width:1080px;margin-left:auto;margin-right:auto;}

@@ -1990,9 +1990,18 @@ display:inline;
     background-color: #9bb9ff;
 }
 
+.fill-dark {
+  background-color: #202020;
+}
+
 .dark-text a {
     color: #d73f3f;
     font-family: 'Kreon', serif;
+}
+
+.osmgeoweek-text a {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .center {

@@ -1,0 +1,147 @@
+---
+layout: default
+lang: en
+teachtitle: What is MapGive in a Box?
+teachintro: "This guide contains the collective wisdom of the MapGive team, and partners who have organized MapGive events and projects. The goal is to provide clear guidelines for engagement and project design with the MapGive program, for someone with no background in mapping."
+osmtitle: What is MapGive?
+osmintro: "<a href='http://mapgive.state.gov/'>MapGive</a> is a Department of State public diplomacy program designed to engage volunteers to map in OpenStreetMap for humanitarian and development missions."
+ourguides: Our Guides
+searchtext: What are you looking for?
+begspan: Why MapGive in a Box?
+beg: Let us tell you more...
+beglink: ./intro/
+interspan: Event Planning Guide
+interspanlink: ./process/
+inter: Prepare a successful mapping event
+advspan: Case Studies
+adv: Showcase MapGive Engagements
+advspanlink: ./cases/
+faq: Site Navigation
+faqA: About this site
+faqB: Workflow
+faqC: Case Studies
+faqD: Resources
+---
+
+<meta charset="UTF-8">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'>
+    <title>MapGive in a Box</title>
+    <link href="{{ site.baseurl }}/reset.css" rel="stylesheet" type="text/css">
+    <link href="{{ site.baseurl }}/style.css" rel="stylesheet" type="text/css">
+    <link href="{{ site.baseurl }}/print.css" rel="stylesheet" type="text/css" media="print">
+    <link rel='shortcut icon' href='{{site.baseurl}}/img/favicon.ico' type='image/x-icon' />
+    <link href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" rel="stylesheet" >
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic |Quattrocento:400,700' rel='stylesheet' type='text/css'>
+    <script src="{{ site.baseurl }}/vendor/jquery-1.8.2.min.js"></script>
+    <script src="{{ site.baseurl }}/vendor/jquery-ui-1.9.2.custom.js"></script>
+    <script>
+      window.app = window.app || {};
+      window.app.permalink = '{{page.permalink}}';
+      window.app.baseurl = '{{site.baseurl}}';
+      window.app.lang = '{{page.lang}}';
+      // Google Analytics
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-7046215-3']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="{{ site.baseurl }}/site.js"></script>
+
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="//unslider.com/unslider.min.js"></script>
+
+<style>
+.slider { position: relative; overflow: auto; }
+    .slider li { list-style: none; }
+        .slider ul li { float: left; }
+</style>
+
+<style type="text/css">
+{% include mapgive-in-a-box/style.css %}
+</style>
+
+<div id='ads' class='marginL cell9 padAll'>
+	
+  <div class='ad1 cell8'>
+    <a href='{{page.beglink}}'>
+      <span class='ad-title'>{{ page.begspan }}</span>
+      <span class='ad-txt'>{{ page.beg }}</span>
+      <span class='door'></span>
+    </a>
+  </div>
+
+  <div class='ad2 cell4'>
+    <a href='{{page.interspanlink}}'>
+      <span class='ad-title'>{{page.interspan}}</span>
+      <span class='ad-txt'>{{ page.inter }}</span>
+    </a>
+  </div>
+  <div class='ad3 cell4'>
+    <a href='{{page.advspanlink}}'>
+      <span class='ad-title'>{{page.advspan}}</span>
+      <span class='ad-txt'>{{page.adv}}</span>
+    </a>
+  </div>
+
+</div>
+
+<div class='marginL cell9 padAll'>
+  <form class='searchbox rounded'>
+    <span class='logo logo-search'></span>
+    <input id='search-field' type='text' name='search' class='default-value cell10'></input>
+  </form>
+</div>
+
+<div id='front' class='marginL cell9 padAll'>
+  <div class='front-text cell7'>
+    <h4 class='tagtitle'>{{ page.teachtitle }}</h4>
+    <p class='tagwords'>{{ page.teachintro }}</p>
+
+    <h4 class='tagtitle'>{{ page.osmtitle }}</h4>
+    <p class='tagwords'>{{ page.osmintro }}</p>
+  </div>
+
+  <div class='cell4 case-ad slider'>
+      <ul>
+      {% for post in site.categories.['cases'] reversed %}
+      {% if {{post.lang}} == {{page.lang}} and post.image %}{% unless post.hidden %}
+        <li>
+        <a href="{{site.baseurl}}{{ post.url }}">
+        <span class='ad-title'>Case Study: {{ post.title }}</span><span><img  class="cell12" src="{{site.baseurl}}/img/posts/{{post.image}}"/></span>
+        </a>
+        </li>
+      {% endunless %}{% endif %}
+      {% endfor %}
+      </ul>
+    </ul>
+
+  </div>
+
+</div>
+<script>
+// detect if ad is overflowing
+var spanTitle = $('span.ad-title','#ads');
+  $.each(spanTitle, function(i,el){
+  var titleParent = el.parentElement,
+      titleSister = el.nextElementSibling;
+  var titleHeight = el.offsetHeight,
+      txtHeight = titleSister.offsetHeight,
+      adHeight = titleParent.offsetHeight;
+  if (titleHeight + txtHeight > adHeight) {
+    titleSister.style.display = 'none'
+  } 
+});
+</script>
+
+<script>
+$(function() {
+    $('.slider').unslider();
+});
+</script>
+
+
+
