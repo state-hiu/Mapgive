@@ -28,6 +28,7 @@
 .padAll {
     padding:20px;
     display: inline-block;
+    width: 100%;
 }
 
 .padTB {padding:20px 0;}
@@ -286,8 +287,27 @@ body {
 #ads .ad2 a {height:80px; background:#667766; margin-bottom:20px;}
 #ads .ad3 a {height:80px; background:#d73f3f;}
 .case-ad { margin-bottom: 20px; float: right;}
-.case-ad a { height: 350px; border-color: #9bcaff; color: #9bcaff; border-width: 2px; border-style: solid; font-weight: bold; font-size: 24px;}
-.case-ad img { border: 0px; background: transparent; padding: 0px; margin: 0px ; }
+
+.case-ad a { 
+    height: 415px; 
+    border-width: 2px; 
+    border-style: solid; 
+    font-weight: bold; 
+    font-size: 24px;
+    background-color: black;
+}
+
+#main .case-ad a {
+    text-decoration: none;
+}
+
+.case-ad img { 
+    background: transparent; 
+    padding: 0px;
+    border: 2.5px solid white;
+    margin-top: 10px; 
+}
+
   #ads .ad1 a:hover { opacity:0.8;}
   #ads .ad2 a:hover { opacity:0.8}
   #ads .ad3 a:hover { opacity:0.8}
@@ -297,14 +317,14 @@ body {
     margin-top: -62px;
     height:178px;
     width:100px;
-    background:transparent url(./../assets/img/sprite.png);
+    background:transparent url(./../assets/img/sprite-box.png);
     background-position:-280px -160px;
   }
     #ads .ad1 span.door:hover {
       background-position:-270px -193px;
     }
 .icon {
-  background:url(./../assets/img/sprite.png) no-repeat;
+  background:url(./../assets/img/sprite-box.png) no-repeat;
   width:16px;
   height:20px;
   margin-right:20px;
@@ -314,7 +334,7 @@ body {
   margin-right:20px;
   width:60px;
   height:60px;
-  background:url(./../assets/img/sprite.png) no-repeat;
+  background:url(./../assets/img/sprite-box.png) no-repeat;
 }
 
 .svg .globe,
@@ -385,7 +405,7 @@ body {
     margin-top: 8px;
     width:16px;
     height:20px;
-    background:url(./../assets/img/sprite.png) 2px -165px no-repeat;
+    background:url(./../assets/img/sprite-box.png) 2px -165px no-repeat;
     overflow:hidden;
     }
   .faq li a:hover:before {background-position:2px -185px;}
@@ -475,23 +495,30 @@ body {
 }
 
 .searchbox {
-  height:32px;
+  height:40px;
   border:4px solid #acbfbd;
+  width: 100%;
   }
   .searchbox input {
     border:none;
-    padding:4px 0px 4px 20px;
+    padding:5px 0px 4px 20px;
     font-size:16px;
     font-family:'Source Sans Pro',sans-serif;
     background-color: #ffffff;
   }
+
   .logo-search {
     float:left;
     margin-left:3px;
+    margin-right: 20px;
     width: 30px;
     height: 28px;
+    display: block;
+    /*background-position needs to appear after background*/
+    background: url(./../assets/img/sprite-box.png) no-repeat;
     background-position:-152px -150px;
   }
+
   input.default-value {
     color:#ccc !important;
     font-style: italic;
@@ -533,7 +560,7 @@ body {
       height: 65px;
       width: 70px;
       float:left;
-      background: url(./../assets/img/sprite.png);
+      background: url(./../assets/img/sprite-box.png);
     }
     .getstarted span:before {background-position: -350px -95px;margin-top:-10px;}
     .getstarted span:after {background-position: -412px -95px; float:right;margin-top:-52px;}
@@ -560,3 +587,6 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
 * html .clearfix { height:1%; }
 *:first-child + html .clearfix { min-height:1%; }
 
+ :focus {
+    outline: 0;
+}

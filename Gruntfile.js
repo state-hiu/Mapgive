@@ -29,7 +29,8 @@ module.exports = function(grunt) {
             files: {
               'assets/css/main.min.css': ['_assets/css/bootstrap.min.css', '_assets/css/main.min.css'],
               'assets/css/ie-print.min.css': '_assets/css/ie-print.css',
-              'assets/css/lightbox.css': '_assets/css/lightbox.css'
+              'assets/css/lightbox.css': '_assets/css/lightbox.css',
+              'assets/css/unslider-combined.css': ['_assets/css/unslider.css', '_assets/css/unslider-dots.css']
             }
           }
         },
@@ -62,6 +63,9 @@ module.exports = function(grunt) {
               'assets/js/lt-ie9.min.js': ['_assets/js/vendor/html5shiv.js', '_assets/js/vendor/respond.min.js', '_assets/js/vendor/html5shiv-printshiv.js'],
               'assets/js/modernizr-2.7.1.min.js': ['_assets/js/vendor/modernizr-2.7.1.min.js'],
               'assets/js/jquery-1.10.2.min.js': ['_assets/js/vendor/jquery-1.10.2.min.js'],
+              'assets/js/jquery-1.8.2.min.js': ['_assets/js/vendor/jquery-1.8.2.min.js'],
+              'assets/js/jquery-ui-1.9.2.custom.js': ['_assets/js/vendor/jquery-ui-1.9.2.custom.js'],
+              'assets/js/unslider-min.js': ['_assets/js/vendor/unslider-min.js'],
               'assets/js/lightbox.js':'_assets/js/vendor/lightbox.js',
               'assets/js/lightbox.min.js':'_assets/js/vendor/lightbox.min.js'
             }
