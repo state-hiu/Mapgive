@@ -64,9 +64,13 @@ faqD: Resources
 {% include mapgive-in-a-box/style.css %}
 </style>
 
+<!--
 <div id='ads' class='marginL cell9 padAll'>
-	
-  <div class='ad1 cell8'>
+-->
+
+<div id='ads' class='padAll clear'>
+
+  <div class='ad1 cell-left'>
     <a href='{{page.beglink}}'>
       <span class='ad-title'>{{ page.begspan }}</span>
       <span class='ad-txt'>{{ page.beg }}</span>
@@ -74,13 +78,13 @@ faqD: Resources
     </a>
   </div>
 
-  <div class='ad2 cell4'>
+  <div class='ad2 cell-right clear'>
     <a href='{{page.interspanlink}}'>
       <span class='ad-title'>{{page.interspan}}</span>
       <span class='ad-txt'>{{ page.inter }}</span>
     </a>
   </div>
-  <div class='ad3 cell4'>
+  <div class='ad3 cell-right clear'>
     <a href='{{page.advspanlink}}'>
       <span class='ad-title'>{{page.advspan}}</span>
       <span class='ad-txt'>{{page.adv}}</span>
@@ -122,8 +126,10 @@ faqD: Resources
   </div>
 
 </div>
+
 <script>
 // detect if ad is overflowing
+/*
 var spanTitle = $('span.ad-title','#ads');
   $.each(spanTitle, function(i,el){
   var titleParent = el.parentElement,
@@ -135,6 +141,7 @@ var spanTitle = $('span.ad-title','#ads');
     titleSister.style.display = 'none'
   } 
 });
+*/
 </script>
 
 <script>

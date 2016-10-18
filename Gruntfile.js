@@ -80,13 +80,14 @@ module.exports = function(grunt) {
         img: {
           task: {
             src: [
-              '_assets/img/*.jpg',
-              '_assets/img/*.jpeg',
+              '_assets/img/**/*.jpg',
+              '_assets/img/**/*.jpeg',
               //'_assets/img/*.png',
             ],
             dest: 'assets/img'
           }
         },
+
 
         svgmin: {
           options: {
@@ -112,30 +113,30 @@ module.exports = function(grunt) {
                 dest: 'assets/img/osm.svg'
               },
               */
-              collecticons: {
-            expand: true,
-            cwd: '_assets/css/collecticons/',
-            src: '**', 
-            dest: 'assets/css/collecticons/',
-            filter: 'isFile'
-        },
-              gov: {
-                expand: true,
-                cwd: '_assets/js/gov',
-                src: '*.js',
-                dest: 'assets/js/gov',
-                flatten: true,
-                filter: 'isFile'
-                },
-               //copied png files instead of compressing them because optipng was not installed
-              img: {
-                expand: true,
-                cwd: '_assets/img/', 
-                src: '*.png',
-                dest: 'assets/img/',
-                flatten: true,
-                filter: 'isFile'
-              }
+                  collecticons: {
+                    expand: true,
+                    cwd: '_assets/css/collecticons/',
+                    src: '**', 
+                    dest: 'assets/css/collecticons/',
+                    filter: 'isFile'
+                  },
+                  gov: {
+                    expand: true,
+                    cwd: '_assets/js/gov',
+                    src: '*.js',
+                    dest: 'assets/js/gov',
+                    flatten: true,
+                    filter: 'isFile'
+                    },
+                   //copied png files instead of compressing them because optipng was not installed
+                  img: {
+                    expand: true,
+                    cwd: '_assets/img',
+                    src: '*.png',
+                    dest: 'assets/img',
+                    flatten: true,
+                    filter: 'isFile'
+                  }
             },
         compress: {
           main: {

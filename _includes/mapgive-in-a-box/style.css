@@ -14,13 +14,22 @@
 .cell10 { float:left; width:83.3333%; }
 .cell11 { float:left; width:91.6666%; }
 .cell12 { float:left; width:100.0000%; }
+
+.cell-left { float:left; width:60%; }
+.cell-right { float:left; width:40%; }
+
 .footercell { float:left; width:75%; }
 .right {float:right;}
 .left {float:left;}
 
 .marginL { margin-left: 08.3333%; }
 .marginR { margin-right:08.3333%; }
-.padAll {padding:20px;}
+
+.padAll {
+    padding:20px;
+    display: inline-block;
+}
+
 .padTB {padding:20px 0;}
 .padLR {padding:0 20px;}
 .hide-desktop {display:none;}
@@ -216,12 +225,12 @@ body {
 
 #header {
   padding:20px 0px;
-  background: #fff url(./img/dot.png) repeat-x bottom;
+  background: #fff url(./../assets/img/dot.png) repeat-x bottom;
   }
 .banner, .banner-mobile {
     position:absolute;
     right:0;
-    background: transparent url(./img/sprite.png)  -324px 0px;
+    background: transparent url(./../assets/img/sprite.png)  -324px 0px;
     width: 60px;
     height: 76px;
     transition: all 200ms linear;
@@ -248,6 +257,10 @@ body {
   font-weight:700;
 }
 
+#ads a {
+    text-decoration: none;
+}
+
 #ads a, .case-ad a {
   display:block;
   color:#f9f9f9;
@@ -267,9 +280,11 @@ body {
   font-weight:700;
 }
 #ads a:hover {color:#ffffff;}
-#ads .ad1 a {height:180px; margin-right:20px; border-color: #9bcaff; border-width: 2px; border-style: solid; background-image: url("./img/banner.jpg"); font-size: 36px;/*color: #9bcaff;*/ font-weight: bold; text-shadow: 3px 3px 10px #693f41;}
+
+#ads .ad1 a {height:180px; margin-right:20px; border-color: #9bcaff; border-width: 2px; border-style: solid; background-image: url("./../assets/img/banner.jpg"); font-size: 36px;/*color: #9bcaff;*/ font-weight: bold; text-shadow: 3px 3px 10px #693f41;}
+
 #ads .ad2 a {height:80px; background:#667766; margin-bottom:20px;}
-#ads .ad3 a {height:60px; background:#d73f3f;}
+#ads .ad3 a {height:80px; background:#d73f3f;}
 .case-ad { margin-bottom: 20px; float: right;}
 .case-ad a { height: 350px; border-color: #9bcaff; color: #9bcaff; border-width: 2px; border-style: solid; font-weight: bold; font-size: 24px;}
 .case-ad img { border: 0px; background: transparent; padding: 0px; margin: 0px ; }
@@ -279,17 +294,17 @@ body {
   #ads .ad1 span.door {
     float: right;
     margin-right: -20px;
-    margin-top: -40px;
-    height:200px;
+    margin-top: -62px;
+    height:178px;
     width:100px;
-    background:transparent url(./img/sprite.png);
+    background:transparent url(./../assets/img/sprite.png);
     background-position:-280px -160px;
   }
     #ads .ad1 span.door:hover {
       background-position:-270px -193px;
     }
 .icon {
-  background:url(./img/sprite.png) no-repeat;
+  background:url(./../assets/img/sprite.png) no-repeat;
   width:16px;
   height:20px;
   margin-right:20px;
@@ -299,7 +314,7 @@ body {
   margin-right:20px;
   width:60px;
   height:60px;
-  background:url(./img/sprite.png) no-repeat;
+  background:url(./../assets/img/sprite.png) no-repeat;
 }
 
 .svg .globe,
@@ -312,7 +327,7 @@ body {
 .svg .play-button,
 .svg .steps .estimate .clock,
 .svg .social li {
-  background-image: url("./img/sprite_mapgive.svg");
+  background-image: url("./../assets/img/sprite_mapgive.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 366px 208px;
@@ -370,7 +385,7 @@ body {
     margin-top: 8px;
     width:16px;
     height:20px;
-    background:url(./img/sprite.png) 2px -165px no-repeat;
+    background:url(./../assets/img/sprite.png) 2px -165px no-repeat;
     overflow:hidden;
     }
   .faq li a:hover:before {background-position:2px -185px;}
@@ -497,7 +512,7 @@ body {
   display:block;
 }
 .feedback {
-  background: #fff url(./img/dot.png) repeat-x top;
+  background: #fff url(./../assets/img/dot.png) repeat-x top;
 }
   .getstarted span a {
     display:block;
@@ -518,7 +533,7 @@ body {
       height: 65px;
       width: 70px;
       float:left;
-      background: url(./img/sprite.png);
+      background: url(./../assets/img/sprite.png);
     }
     .getstarted span:before {background-position: -350px -95px;margin-top:-10px;}
     .getstarted span:after {background-position: -412px -95px; float:right;margin-top:-52px;}
