@@ -32,7 +32,7 @@
 }
 
 .padLeft {
-    padding-left: 10px;
+    padding: 0px 5px 0px 10px;
     display: inline-block;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .padRight {
-    width: 77%;
+    width: 75%;
     padding: 5px 15px 5px 20px;
 }
 
@@ -325,7 +325,7 @@ body {
     float: right;
     margin-right: -20px;
     margin-top: -87px;
-    height:202px;
+    height:204px;
     width:100px;
     background:transparent url(./../assets/img/sprite-box.png);
     background-position:-280px -160px;
@@ -442,7 +442,7 @@ body {
   border-bottom-left-radius:          5px;
 }
 .doc-main {
-  margin-left:23%;
+  margin-left:25%;
   min-height:540px;
 }
 .doc .title{
