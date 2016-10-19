@@ -1994,13 +1994,17 @@ display:inline;
   background-color: #202020;
 }
 
+.fill-light-green {
+  background-color: #ACBFBD;
+}
+
 .dark-text a {
     color: #d73f3f;
     font-family: 'Kreon', serif;
 }
 
 .osmgeoweek-text a {
-    color: #fff;
+    color: black;
     font-family: 'Montserrat', sans-serif;
 }
 
