@@ -2003,8 +2003,13 @@ display:inline;
     font-family: 'Kreon', serif;
 }
 
-.osmgeoweek-text a {
+.osmgeoweek-text {
     color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.osmgeoweek-text a {
+    color: #ef4815;
     font-family: 'Montserrat', sans-serif;
 }
 
