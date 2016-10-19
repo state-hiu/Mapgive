@@ -170,7 +170,7 @@ dt{font-weight:normal;}
 .steps .estimate .estimate-title{border-bottom:1px solid #bcbcbc;margin-bottom:7px;padding:1px 0 7px 20px;}
 .steps .estimate .estimate-title:after{content:"";padding:0;}
 }
-.thumbnail{padding-top:15px;padding-right:15px;padding-bottom:0;padding-left:15px;border:1px solid #bcbcbc;border-radius:0;min-height:308px;height:330px;}
+.thumbnail{padding-top:15px;padding-right:15px;padding-bottom:0;padding-left:15px;border:1px solid #bcbcbc;box-shadow:1px 1px 7px -3px #888;border-radius:0;min-height:308px;height:330px;}
 .thumbnail h3{margin-top:0;}
 .thumbnail .image{display:block;width:100%;}
 .thumbnail{margin-top:20px;margin-bottom:20px;margin:20px;}
@@ -362,6 +362,6 @@ h2,h3{page-break-after:avoid;}
 .fill-light-green{background-color:#acbfbd;}
 .dark-text a{color:#d73f3f;font-family:Kreon,serif;}
 .osmgeoweek-text{color:black;font-family:Montserrat,sans-serif;}
-.osmgeoweek-text a{color:#ef4815;font-family:Montserrat,sans-serif;}
+.osmgeoweek-text a{color:#d73f3f;font-family:Montserrat,sans-serif;}
 .center{text-align:center;}
 .limiter{width:83.33%;max-width:1080px;margin-left:auto;margin-right:auto;}

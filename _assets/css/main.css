@@ -877,6 +877,7 @@ dt {
   padding-bottom: 0px;
   padding-left: 15px;
   border: 1px solid #bcbcbc;
+  box-shadow: 1px 1px 7px -3px #888;
   border-radius: 0;
   min-height: 308px;
   height:330px;
@@ -2009,7 +2010,7 @@ display:inline;
 }
 
 .osmgeoweek-text a {
-    color: #ef4815;
+    color: #d73f3f;
     font-family: 'Montserrat', sans-serif;
 }
 
