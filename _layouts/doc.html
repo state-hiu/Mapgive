@@ -2,7 +2,11 @@
 layout: default
 ---
 
-<div class='doc-nav marginL cell3 padAll cf' id='doc-nav-left'>
+<style type="text/css">
+{% include mapgive-in-a-box/style.css %}
+</style>
+
+<div class='doc-nav cell2 padLeft cf' id='doc-nav-left'>
       
   {% unless {{site.categories.[page.category].size}} == 0 %}
     <ul>
@@ -43,7 +47,7 @@ layout: default
   </ul>
 
 </div>
-<div class='doc-main doc cell5 padAll'>
+<div class='doc-main doc cell5 padRight'>
   <h1>{{page.title}}</h1>
   {{content}}
 

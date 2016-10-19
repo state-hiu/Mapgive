@@ -8,7 +8,7 @@ cover: "yes"
 published: true
 ---
 
-![Globe Pops]({{site.baseurl}}/img/posts/globe-pops.jpg)
+<img src="{{site.baseurl}}/assets/img/globe-pops.jpg" alt="Globe Pops" style="width:400px">
 
 There are many additional resources on engagement with OpenStreetMap.
 
@@ -24,6 +24,6 @@ The [HOT Activation Protocol](http://hotosm.org/sites/default/files/HOTActivatio
 
 ## MapGive Partners
 
-![Partners]({{site.baseurl}}/img/posts/partners.jpg)
+![Partners]({{site.baseurl}}/assets/img/partners.jpg)
 
-And always count on the strong network of [partners]({{site.baseurl}}/en/process/partners) for even more help and insights.
+And always count on the strong network of [partners]({{site.baseurl}}/box/en/process/partners) for even more help and insights.

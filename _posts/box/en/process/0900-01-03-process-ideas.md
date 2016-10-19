@@ -7,7 +7,7 @@ category: process
 published: true
 ---
 
-![pointing]({{site.baseurl}}/img/posts/pointing.jpg)
+<img src="{{site.baseurl}}/assets/img/pointing.png" alt="pointing" style="width:400px">
 
 The key draw for Posts and for participants to get involved in mapping, is to contribute to an impact on critical issues. The activity itself is enjoyable and educational. But what makes OpenStreetMap different, is the immediate need for the data created.
 

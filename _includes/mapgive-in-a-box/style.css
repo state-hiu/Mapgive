@@ -31,6 +31,40 @@
     width: 100%;
 }
 
+.padLeft {
+    padding-left: 10px;
+    display: inline-block;
+}
+
+.padLeft ul {
+    padding: 0px;
+}
+
+#main .padLeft a {
+    text-decoration: none;
+}
+
+.padRight {
+    width: 77%;
+    padding: 5px 15px 5px 20px;
+}
+
+.padRight img {
+  display: block;
+  max-width:800px;
+  border:1px solid #ddd;
+  background: #fff;
+  padding:14px;
+  margin:20px 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -webkit-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+}
+
 .padTB {padding:20px 0;}
 .padLR {padding:0 20px;}
 .hide-desktop {display:none;}
@@ -126,36 +160,11 @@ border-radius: 4px;
   100% {background-position: 50% top;}
   }
 
-/* custom list style */
-.doc ol,
-.doc ul {
-  counter-reset:li;
-  margin-left:0;
-  padding-left:0;
-  }
-  .doc ol > li,
-  .doc ul > li {
-    position:relative;
-    }
-    .doc ol > li:before,
-    .doc ul > li:before {
-      position:absolute;
-      top:-1px;
-      left:-3em;
-      width:2em;
-      font-family:'Source Sans Pro',sans-serif;
-      font-size:12px;
-      text-align:center;
-    }
-    .doc ul > li:before {content:'◆'}
-    .doc ol > li:before {
-      content:counter(li);
-      counter-increment:li;
-      border-radius:50%;
-      background:#f0f0f0;
-      }
-      .doc ol li ul > li:before,
-      .doc ul li ul > li:before {content:'➝';}
+
+doc li {
+    margin-left: 30px;
+}
+    
 
 /* --------------------------------------------------------
   Colors
@@ -308,6 +317,7 @@ body {
     margin-top: 10px; 
 }
 
+
   #ads .ad1 a:hover { opacity:0.8;}
   #ads .ad2 a:hover { opacity:0.8}
   #ads .ad3 a:hover { opacity:0.8}
@@ -335,22 +345,6 @@ body {
   width:60px;
   height:60px;
   background:url(./../assets/img/sprite-box.png) no-repeat;
-}
-
-.svg .globe,
-.svg .marker,
-.svg .map,
-.svg .hot,
-.svg .dos,
-.m-logo,
-.f-logo,
-.svg .play-button,
-.svg .steps .estimate .clock,
-.svg .social li {
-  background-image: url("./../assets/img/sprite_mapgive.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: 366px 208px;
 }
 
 .site-logo.white .m-logo {
@@ -448,7 +442,7 @@ body {
   border-bottom-left-radius:          5px;
 }
 .doc-main {
-  margin-left:41.6666%;
+  margin-left:23%;
   min-height:540px;
 }
 .doc .title{
@@ -590,3 +584,5 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
  :focus {
     outline: 0;
 }
+
+
