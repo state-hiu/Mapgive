@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /box/
 lang: en
 teachtitle: What is MapGive in a Box?
 teachintro: "This guide contains the collective wisdom of the MapGive team, and partners who have organized MapGive events and projects. The goal is to provide clear guidelines for engagement and project design with the MapGive program, for someone with no background in mapping."
@@ -9,13 +10,13 @@ ourguides: Our Guides
 searchtext: What are you looking for?
 begspan: Why MapGive in a Box?
 beg: Let us tell you more...
-beglink: ./intro/
+beglink: ./en/intro/
 interspan: Event Planning Guide
-interspanlink: ./process/
+interspanlink: ./en/process/
 inter: Prepare a successful mapping event
 advspan: Case Studies
 adv: Showcase MapGive Engagements
-advspanlink: ./cases/
+advspanlink: ./en/cases/
 faq: Site Navigation
 faqA: About this site
 faqB: Workflow
@@ -99,8 +100,8 @@ faqD: Resources
 
       <div class='case-ad my-slider2' style="width:90%">
           <ul>
-              {% for post in site.categories.['cases'] reversed %}
-              {% if {{post.lang}} == {{page.lang}} and post.image %}{% unless post.hidden %}
+              {% for post in site.categories.cases reversed %}
+              {% if post.lang == page.lang and post.image %}{% unless post.hidden %}
                 <li>
                     <a href="{{site.baseurl}}{{ post.url }}">
                         <span class='ad-title'>Case Study: {{ post.title }}</span>

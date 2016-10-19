@@ -1,6 +1,6 @@
 ---
 layout: doc
-permalink: /en/intro/open-mapping/
+permalink: /box/en/intro/open-mapping/
 lang: en
 title: Intro to Open Mapping
 category: intro

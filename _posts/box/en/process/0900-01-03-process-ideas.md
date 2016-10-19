@@ -1,6 +1,6 @@
 ---
 layout: doc
-permalink: /en/process/ideas/
+permalink: /box/en/process/ideas/
 lang: en
 title: Determine the Need
 category: process

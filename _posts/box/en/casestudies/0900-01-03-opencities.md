@@ -1,6 +1,6 @@
 ---
 layout: doc
-permalink: /en/cases/open-cities
+permalink: /box/en/cases/open-cities
 lang: en
 title: Open Cities
 category: cases

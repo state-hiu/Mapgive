@@ -1,6 +1,6 @@
 ---
 layout: doc
-permalink: /en/process/event-planning
+permalink: /box/en/process/event-planning
 lang: en
 title: Plan an Event
 category: process
