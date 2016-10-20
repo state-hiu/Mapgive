@@ -42,19 +42,21 @@ emailDescription: "Maps play a powerful role at each stage of the disaster relie
 			<script>
 
 			//map extent
-			var southWest = L.latLng(-50,-100),
-		  		northEast = L.latLng(55,140),
+			var southWest = L.latLng(-50,-140),
+		  		northEast = L.latLng(55,200),
 		  		bounds = L.latLngBounds(southWest, northEast);
 		  
 			//var map = L.map('map').setView([15, 25], 2);
 			var map = L.map('map', {
-				minZoom: 1,
+				minZoom: 2,
 				maxZoom: 16
 			});
 		
 			map.setMaxBounds(bounds);
+
 			// zoom the map to that bounding box
-			map.fitBounds(bounds);
+			//map.fitBounds(bounds);
+            map.setView([20, 25], 2);
 
 			//L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
 			L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {

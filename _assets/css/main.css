@@ -566,7 +566,14 @@ dt {
 }
 
 .infographics .btn3 {
-  	border-radius: 25px;
+  	border-radius: 4px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.infographics .btn3:hover {
+    background-color: #9bb9ff;
+    border-color: #9bb9ff;
 }
 
 #main .infographics .btn {
@@ -585,10 +592,10 @@ dt {
   }
 
   .infographics .btn {
-    width: 220px;
-    height: 147px;
-    font-size: 2.5em;
-    padding-left: 25px;
+    width: 215px;
+    height: 95px;
+    font-size: 2.7em;
+    padding-left: 15px;
   }
 
   .infographics .world {
@@ -600,8 +607,8 @@ dt {
 @media (min-width: 992px) {
   .infographics .btn {
     width: 293px;
-    height: 196px;
-    font-size: 4em;
+    height: 130px;
+    font-size: 3.8em;
     padding-left: 12px;
   }
 }
@@ -609,8 +616,8 @@ dt {
 @media (min-width: 1200px) {
   .infographics .btn {
     width: 360px;
-    height: 240px;
-    font-size: 4.8em;
+    height: 170px;
+    font-size: 4.5em;
   }
 
   .infographics .btn .first {
@@ -912,6 +919,7 @@ dt {
   padding-bottom: 0px;
   padding-left: 15px;
   border: 1px solid #bcbcbc;
+  box-shadow: 1px 1px 7px -3px #888;
   border-radius: 0;
   min-height: 208px;
 }

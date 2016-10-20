@@ -111,16 +111,17 @@ dt{font-weight:normal;}
 .infographics img,.infographics .btn{margin-bottom:20px;}
 .infographics .btn{background-color:#d73f3f;color:#fff;text-transform:uppercase;border-radius:0;width:100%;height:200px;font-size:4em;text-align:left;line-height:1em;padding-top:30px;padding-bottom:10px;margin-bottom:20px;}
 .infographics .btn2{background-color:#9bcaff;color:#fff;text-transform:uppercase;border-radius:0;width:100%;height:200px;font-size:4em;text-align:left;line-height:1em;padding-top:30px;padding-bottom:10px;margin-bottom:20px;}
-.infographics .btn3{border-radius:25px;}
+.infographics .btn3{border-radius:4px;padding-top:5px;padding-bottom:10px;}
+.infographics .btn3:hover{background-color:#9bb9ff;border-color:#9bb9ff;}
 #main .infographics .btn{text-decoration:none;}
 .infographics .world{display:none;visibility:hidden;}
 @media (min-width: 768px){.hook span{display:block;text-align:center;}
-.infographics .btn{width:220px;height:147px;font-size:2.5em;padding-left:25px;}
+.infographics .btn{width:215px;height:95px;font-size:2.7em;padding-left:15px;}
 .infographics .world{display:block;visibility:visible;}
 }
-@media (min-width: 992px){.infographics .btn{width:293px;height:196px;font-size:4em;padding-left:12px;}
+@media (min-width: 992px){.infographics .btn{width:293px;height:130px;font-size:3.8em;padding-left:12px;}
 }
-@media (min-width: 1200px){.infographics .btn{width:360px;height:240px;font-size:4.8em;}
+@media (min-width: 1200px){.infographics .btn{width:360px;height:170px;font-size:4.5em;}
 .infographics .btn .first{margin-top:10px;}
 }
 .infographics .btn:active{box-shadow:inset 0 0 10px -2px #693f41;}
@@ -176,7 +177,7 @@ dt{font-weight:normal;}
 .thumbnail{margin-top:20px;margin-bottom:20px;margin:20px;}
 @media (min-width: 768px){.col-sm-4.news-thumbnail{width:30%;height:400px;}
 }
-.news-thumbnail{padding-top:15px;padding-right:15px;padding-bottom:0;padding-left:15px;border:1px solid #bcbcbc;border-radius:0;min-height:208px;}
+.news-thumbnail{padding-top:15px;padding-right:15px;padding-bottom:0;padding-left:15px;border:1px solid #bcbcbc;box-shadow:1px 1px 7px -3px #888;border-radius:0;min-height:208px;}
 .news-thumbnail h3{margin-top:0;}
 .news-thumbnail .image{display:block;width:100%;}
 .news-thumbnail{margin-top:20px;margin-bottom:20px;margin:5px;}
