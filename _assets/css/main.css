@@ -977,6 +977,31 @@ dt {
   }
 }
 
+.projects-container {
+  position: absolute;
+  bottom: 0;
+  height: 300px;
+  width: 92%;
+}
+
+.img-responsive {
+  width: 100%;
+  max-width: 100%;
+  height: auto !important;
+  -ms-interpolation-mode: bicubic;
+}
+
+.projects-thumbnail .img-responsive {
+    width: 100%;
+    max-width: 240px;
+    max-height: 155px;
+    overflow: hidden;
+    -ms-interpolation-mode: bicubic;
+    margin-bottom: 60%;
+    position: relative;
+    object-fit: cover;
+}
+
 .projects-thumbnail h3 {
   margin-top: 0;
 }
@@ -984,12 +1009,10 @@ dt {
 .projects-thumbnail .image {
     display: block;
     width: 100%;
-    position: absolute;
-    bottom: 0;
 }
 
 .projects-thumbnail .caption {
-    margin-top: 70%;
+    margin-top: -50%;
     font-size: .8em;
     color: #666;
 }
@@ -1230,27 +1253,8 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   }
 }
 
-
 .shadowed {
   box-shadow: 1px 1px 7px -3px #888;
-}
-
-.img-responsive {
-  width: 100%;
-  max-width: 100%;
-  height: auto !important;
-  -ms-interpolation-mode: bicubic;
-}
-
-.projects-thumbnail .img-responsive {
-    width: 100%;
-    max-width: 240px;
-    max-height: 155px;
-    overflow: hidden;
-    -ms-interpolation-mode: bicubic;
-    margin-bottom: 60%;
-    position: relative;
-    object-fit: cover;
 }
 
 .hyphenate {

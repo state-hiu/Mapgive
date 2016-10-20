@@ -55,15 +55,17 @@ margin: 0 0 3px 40px;
             {% endif %}
 
             <div class="col-sm-4 projects-thumbnail">
-              <a href="{{ post.external_url }}" class="image">
-                <img src="{{ post.photo }} " alt="{{ post.title }}" class="img-responsive shadowed" />
-              </a>
-              <div class="caption">
-                <h3><a href="{{ post.external_url }}">{{ post.title }}</a></h3>
-                <p><strong>author</strong>: {{ post.author }}</p>
-                <!--
-                <p><strong>published</strong>: {{ post.date | date: '%B %d, %Y' }}</p>
-                -->
+              <div class="projects-container">
+                <a href="{{ post.external_url }}" class="image">
+                  <img src="{{ post.photo }} " alt="{{ post.title }}" class="img-responsive shadowed" />
+                </a>
+                <div class="caption">
+                  <h3><a href="{{ post.external_url }}">{{ post.title }}</a></h3>
+                  <p><strong>author</strong>: {{ post.author }}</p>
+                  <!--
+                  <p><strong>published</strong>: {{ post.date | date: '%B %d, %Y' }}</p>
+                  -->
+                </div>
               </div>
             </div>
 
@@ -73,7 +75,6 @@ margin: 0 0 3px 40px;
 
           {% endif %}
         {% endfor %}
-      </br>
     </div>
 
 
