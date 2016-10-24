@@ -29,7 +29,7 @@
     "grunt-hashres": "*",
     "grunt-htmlhint": "*",
     "grunt-img": "*",
-    "grunt-jekyll": "*",
+    "grunt-jekyll": "^0.4.4",
     "grunt-shell": "*",
     "grunt-svgmin": "*",
     "grunt-sync": "*",

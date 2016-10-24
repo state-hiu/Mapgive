@@ -75,18 +75,17 @@ emailDescription: "Mapgive, an initiative of the U.S. State Department's Humanit
   	<script>
 
 		//map extent
-		var southWest = L.latLng(-50,-100),
-    		northEast = L.latLng(50,140),
-    		bounds = L.latLngBounds(southWest, northEast);
+		var southWest = L.latLng(-50,-140),
+				northEast = L.latLng(55,200),
+				bounds = L.latLngBounds(southWest, northEast);
     
-		//var map = L.map('map').setView([15, 25], 2);
-		//var map = L.map('map').setView([15, 25], 2);
 		var map = L.map('map', {
-			minZoom: 1,
+			minZoom: 2,
 			maxZoom: 16,
-			//scrollWheelZoom: false,
 		});
 		
+        map.setView([20, 25], 2);
+
 		var pinLayer = L.featureGroup([]);
 		
 		//zoom listener from: http://stackoverflow.com/questions/19658564/leaflet-control-geojson-layers-by-zoom-level
