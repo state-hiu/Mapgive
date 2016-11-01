@@ -1,13 +1,83 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
-<Document><Folder><name>ittc_services_flattened</name>
+<Document id="root_doc">
 <Schema name="ittc_services_flattened" id="ittc_services_flattened">
-	<SimpleField name="Name" type="string"></SimpleField>
-	<SimpleField name="Description" type="string"></SimpleField>
 	<SimpleField name="tm_projects" type="string"></SimpleField>
 	<SimpleField name="id" type="string"></SimpleField>
 	<SimpleField name="country" type="string"></SimpleField>
 </Schema>
+<Folder><name>ittc_services_flattened</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-nw-nov2014</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-12.130797600018246,12.965187600306386 -11.995656910966954,12.965187600306386 -11.995656910966954,13.443919200173415 -12.130797600018246,13.443919200173415 -12.130797600018246,12.965187600306386</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-nw-nov2014</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-12.239701199966559,12.966480342290806 -12.111047013586287,12.966480342290806 -12.111047013586287,14.024300400000117 -12.239701199966559,14.024300400000117 -12.239701199966559,12.966480342290806</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-nw-nov2014</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-12.349276669984553,12.968082000305849 -12.217282085052467,12.968082000305849 -12.217282085052467,13.503387600157152 -12.349276669984553,13.503387600157152 -12.349276669984553,12.968082000305849</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-nw-nov2014</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-12.456604799966506,12.969079200302764 -12.331019234080381,12.969079200302764 -12.331019234080381,13.317202800206061 -12.456604799966506,13.317202800206061 -12.456604799966506,12.969079200302764</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-nw-nov2014</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-12.560889279760451,12.972916800302134 -12.437615149442149,12.972916800302134 -12.437615149442149,13.318772400206058 -12.560889279760451,13.318772400206058 -12.560889279760451,12.972916800302134</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-nw-nov2014</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-12.685388070310252,12.97364760030573 -12.542238485680677,12.97364760030573 -12.542238485680677,13.272631200222696 -12.685388070310252,13.272631200222696 -12.685388070310252,12.97364760030573</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-nw-nov2014</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-12.809564698925545,12.977679600307257 -12.669445452425723,12.977679600307257 -12.669445452425723,13.223347200239015 -12.809564698925545,13.223347200239015 -12.809564698925545,12.977679600307257</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">huaq-28feb2015</SimpleData>
+		<SimpleData name="country">Ecuador</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-80.312472000166053,-3.551890499892716 -80.133793094124812,-3.551890499892716 -80.133793094124812,-2.948058 -80.312472000166053,-2.948058 -80.312472000166053,-3.551890499892716</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
 	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
@@ -82,6 +152,42 @@
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
 	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1301</SimpleData>
+		<SimpleData name="id">fizi-09jul2014</SimpleData>
+		<SimpleData name="country">DRC</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>28.566108000042203,-4.129204499969588 29.016922499942012,-4.129204499969588 29.016922499942012,-3.986869499999803 28.566108000042203,-3.986869499999803 28.566108000042203,-4.129204499969588</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1301</SimpleData>
+		<SimpleData name="id">fizi-09jul2014</SimpleData>
+		<SimpleData name="country">DRC</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>28.564190999969263,-4.268043000022835 29.018762999868244,-4.268043000022835 29.018762999868244,-4.11016050000029 28.564190999969263,-4.11016050000029 28.564190999969263,-4.268043000022835</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1301</SimpleData>
+		<SimpleData name="id">fizi-09jul2014</SimpleData>
+		<SimpleData name="country">DRC</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>28.564825500000147,-4.415044500031427 28.876167000138523,-4.415044500031427 28.876167000138523,-4.229752500000374 28.564825500000147,-4.229752500000374 28.564825500000147,-4.415044500031427</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1159</SimpleData>
+		<SimpleData name="id">cusco-25mar2014</SimpleData>
+		<SimpleData name="country">Peru</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-72.058698000000817,-13.579915526812055 -71.837513999755075,-13.579915526812055 -71.837513999755075,-13.439160720000118 -72.058698000000817,-13.439160720000118 -72.058698000000817,-13.579915526812055</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">878</SimpleData>
 		<SimpleData name="id">akobo-25jan2015</SimpleData>
 		<SimpleData name="country">South Sudan</SimpleData>
@@ -141,6 +247,14 @@
 		<SimpleData name="country">Sri Lanka</SimpleData>
 	</SchemaData></ExtendedData>
       <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>79.880575500250373,6.529409999789189 80.048394000436872,6.529409999789189 80.048394000436872,7.012057499999824 79.880575500250373,7.012057499999824 79.880575500250373,6.529409999789189</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">mukuru-27jun2015</SimpleData>
+		<SimpleData name="country">Kenya</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>36.781618458471044,-1.35337685389949 36.900035385399903,-1.35337685389949 36.900035385399903,-1.269629411465185 36.781618458471044,-1.269629411465185 36.781618458471044,-1.35337685389949</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
@@ -216,6 +330,24 @@
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
 	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1239</SimpleData>
+		<SimpleData name="id">maganga-10oct2014</SimpleData>
+		<SimpleData name="country">Malawi</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>34.393383000041979,-14.013846000971492 34.571029500002496,-14.013846000971492 34.571029500002496,-12.977289 34.393383000041979,-12.977289 34.393383000041979,-14.013846000971492</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1239</SimpleData>
+		<SimpleData name="id">maganga-10oct2014</SimpleData>
+		<SimpleData name="country">Malawi</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>34.544673000042252,-14.006493000956043 34.709287500005672,-14.006493000956043 34.709287500005672,-12.9782115 34.544673000042252,-12.9782115 34.544673000042252,-14.006493000956043</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">458</SimpleData>
 		<SimpleData name="id">punia-26sep2013</SimpleData>
 		<SimpleData name="country">DRC</SimpleData>
@@ -230,6 +362,123 @@
 		<SimpleData name="country">south sudan,uganda</SimpleData>
 	</SchemaData></ExtendedData>
       <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>31.990831095104387,3.527220458769094 32.101390652341983,3.527220458769094 32.101390652341983,3.637780016006717 31.990831095104387,3.637780016006717 31.990831095104387,3.527220458769094</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1301</SimpleData>
+		<SimpleData name="id">baraka-13dec2014</SimpleData>
+		<SimpleData name="country">DRC</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>28.918395000041215,-4.41937350034557 29.098498500241323,-4.41937350034557 29.098498500241323,-3.801222 28.918395000041215,-3.801222 28.918395000041215,-4.41937350034557</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-dec2014-jan2015</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-11.474352000009683,11.972119501215177 -11.299423500009688,11.972119501215177 -11.299423500009688,13.030222500000349 -11.474352000009683,13.030222500000349 -11.474352000009683,11.972119501215177</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-dec2014-jan2015</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-11.548714500009787,11.985576873077354 -11.394984930802671,11.985576873077354 -11.394984930802671,13.009729500000054 -11.548714500009787,13.009729500000054 -11.548714500009787,11.985576873077354</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-dec2014-jan2015</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-11.695288500009788,11.974958150516828 -11.527822722035758,11.974958150516828 -11.527822722035758,13.0137885 -11.695288500009788,13.0137885 -11.695288500009788,11.974958150516828</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-dec2014-jan2015</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-11.842186499957844,11.970514378243513 -11.668256400498242,11.970514378243513 -11.668256400498242,13.029718499999973 -11.842186499957844,13.029718499999973 -11.842186499957844,11.970514378243513</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-dec2014-jan2015</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-12.068514000009777,11.976445777483127 -11.883829500050821,11.976445777483127 -11.883829500050821,13.045243499999923 -12.068514000009777,13.045243499999923 -12.068514000009777,11.976445777483127</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-dec2014-jan2015</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-12.207208500009676,11.979646501458889 -12.040402500009678,11.979646501458889 -12.040402500009678,13.020336 -12.207208500009676,13.020336 -12.207208500009676,11.979646501458889</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-dec2014-jan2015</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-12.350047500009683,11.981288456326096 -12.190738500009687,11.981288456326096 -12.190738500009687,13.016295 -12.350047500009683,13.016295 -12.350047500009683,11.981288456326096</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-dec2014-jan2015</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-12.490231500009733,11.982257999032631 -12.332317661914217,11.982257999032631 -12.332317661914217,13.016583 -12.490231500009733,13.016583 -12.490231500009733,11.982257999032631</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-dec2014-jan2015</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-12.634222500009759,11.976803999023419 -12.466743338049559,11.976803999023419 -12.466743338049559,13.016043 -12.634222500009759,13.016043 -12.634222500009759,11.976803999023419</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-dec2014-jan2015</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-12.779743499957789,11.979013499021226 -12.607850482060085,11.979013499021226 -12.607850482060085,13.019409 -12.779743499957789,13.019409 -12.779743499957789,11.979013499021226</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-dec2014-jan2015</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-12.897511199966841,11.988216000449908 -12.768872400002573,11.988216000449908 -12.768872400002573,13.022596800000073 -12.897511199966841,13.022596800000073 -12.897511199966841,11.988216000449908</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-dec2014-jan2015</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-13.012664400018135,11.976807600458407 -12.877189200055765,11.976807600458407 -12.877189200055765,13.025469600000077 -13.012664400018135,13.025469600000077 -13.012664400018135,11.976807600458407</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
@@ -271,6 +520,41 @@
 		<SimpleData name="country">Mozambique</SimpleData>
 	</SchemaData></ExtendedData>
       <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>35.847301500042185,-17.015858999635189 36.007933500006494,-17.015858999635189 36.007933500006494,-16.484751 35.847301500042185,-16.484751 35.847301500042185,-17.015858999635189</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">lake-chilwa-east-10aug2015</SimpleData>
+		<SimpleData name="country">Mozambique</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>35.826686477778999,-16.015162500438944 35.996499700936219,-16.015162500438944 35.996499700936219,-15.265233000105656 35.826686477778999,-15.265233000105656 35.826686477778999,-16.015162500438944</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-n-aug2013</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-11.644026695755565,12.972032999928913 -11.47194141989519,12.972032999928913 -11.47194141989519,13.44621599992891 -11.644026695755565,13.44621599992891 -11.644026695755565,12.972032999928913</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-n-aug2013</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-11.801630941946145,12.968082000311268 -11.624406947872409,12.968082000311268 -11.624406947872409,13.462546500201402 -11.801630941946145,13.462546500201402 -11.801630941946145,12.968082000311268</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-n-aug2013</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-12.006967499957906,12.954640499926413 -11.818545613087123,12.954640499926413 -11.818545613087123,13.466069999926438 -12.006967499957906,13.466069999926438 -12.006967499957906,12.954640499926413</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
@@ -347,6 +631,14 @@
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
 	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">mukuru-27jun2015-rectified</SimpleData>
+		<SimpleData name="country">Kenya</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>36.786187761496876,-1.352871366432515 36.875101262844645,-1.352871366432515 36.875101262844645,-1.266961495342007 36.786187761496876,-1.266961495342007 36.786187761496876,-1.352871366432515</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">979</SimpleData>
 		<SimpleData name="id">mole-19feb2015</SimpleData>
 		<SimpleData name="country">DRC</SimpleData>
@@ -361,6 +653,42 @@
 		<SimpleData name="country">South Sudan</SimpleData>
 	</SchemaData></ExtendedData>
       <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>29.912795999983594,9.25489799993233 30.096949499942667,9.25489799993233 30.096949499942667,9.402353999932314 29.912795999983594,9.402353999932314 29.912795999983594,9.25489799993233</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1294</SimpleData>
+		<SimpleData name="id">saraya-ne-28oct2014</SimpleData>
+		<SimpleData name="country">Senegal</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-11.468344500009815,12.790106999972325 -11.32088837681729,12.790106999972325 -11.32088837681729,13.13125649997232 -11.468344500009815,13.13125649997232 -11.468344500009815,12.790106999972325</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1108</SimpleData>
+		<SimpleData name="id">milange-28aug2015</SimpleData>
+		<SimpleData name="country">Mozambique</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>35.713622726150312,-16.162945972825426 35.846704913003656,-16.162945972825426 35.846704913003656,-15.985198625825307 35.713622726150312,-15.985198625825307 35.713622726150312,-16.162945972825426</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1108</SimpleData>
+		<SimpleData name="id">milange-28aug2015</SimpleData>
+		<SimpleData name="country">Mozambique</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>0.000319718823916,-0.000145173484005 0.00032091712775,-0.000145173484005 0.00032091712775,-0.000143658035307 0.000319718823916,-0.000143658035307 0.000319718823916,-0.000145173484005</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1184, 1182</SimpleData>
+		<SimpleData name="id">khayel-07mar2015</SimpleData>
+		<SimpleData name="country">South Africa</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>18.623626542115389,-34.055685072377315 18.673786112928319,-34.055685072377315 18.673786112928319,-34.005525501515244 18.623626542115389,-34.005525501515244 18.623626542115389,-34.055685072377315</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
@@ -496,7 +824,7 @@
 	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">1129</SimpleData>
 		<SimpleData name="id">leyte-07nov2014</SimpleData>
-		<SimpleData name="country">philippines</SimpleData>
+		<SimpleData name="country">Philippines</SimpleData>
 	</SchemaData></ExtendedData>
       <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>124.816018499841036,10.000002905123672 125.004995999001139,10.000002905123672 125.004995999001139,11.019951 124.816018499841036,11.019951 124.816018499841036,10.000002905123672</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
@@ -556,6 +884,24 @@
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
 	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1259</SimpleData>
+		<SimpleData name="id">gamalama-2015</SimpleData>
+		<SimpleData name="country">Indonesia</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>127.308261947974188,0.582203260766679 127.439804906072084,0.582203260766679 127.439804906072084,0.958398962944473 127.308261947974188,0.958398962944473 127.308261947974188,0.582203260766679</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1259</SimpleData>
+		<SimpleData name="id">gamalama-2015</SimpleData>
+		<SimpleData name="country">Indonesia</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>127.401389999835132,0.589558499987175 127.475032499916964,0.589558499987175 127.475032499916964,0.810742499987174 127.401389999835132,0.810742499987174 127.401389999835132,0.589558499987175</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="id">comoros-2014</SimpleData>
 		<SimpleData name="country">Comoros</SimpleData>
 	</SchemaData></ExtendedData>
@@ -572,11 +918,45 @@
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
 	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">sutusinjang-27may2015</SimpleData>
+		<SimpleData name="country">The Gambia</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-16.478302499957753,12.967256597741333 -16.301623499879227,12.967256597741333 -16.301623499879227,14.04711 -16.478302499957753,14.04711 -16.478302499957753,12.967256597741333</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">49</SimpleData>
 		<SimpleData name="id">lira_1</SimpleData>
 		<SimpleData name="country">uganda</SimpleData>
 	</SchemaData></ExtendedData>
       <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>32.82937851767344,2.17650561260314 32.969724420084752,2.17650561260314 32.969724420084752,2.317687094287897 32.82937851767344,2.317687094287897 32.82937851767344,2.17650561260314</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">lusaka-11jul2015</SimpleData>
+		<SimpleData name="country">Zambia</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>28.308904005004834,-15.414466169598152 28.431677452356041,-15.414466169598152 28.431677452356041,-15.285338992049946 28.308904005004834,-15.285338992049946 28.308904005004834,-15.414466169598152</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1206</SimpleData>
+		<SimpleData name="id">morrum-28aug2015</SimpleData>
+		<SimpleData name="country">Mozambique</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>35.570732281895069,-17.404588772610648 35.701379654727155,-17.404588772610648 35.701379654727155,-17.194504606670115 35.570732281895069,-17.194504606670115 35.570732281895069,-17.404588772610648</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1206</SimpleData>
+		<SimpleData name="id">morrum-28aug2015</SimpleData>
+		<SimpleData name="country">Mozambique</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>35.451079129398423,-17.409132656369138 35.586266471624874,-17.409132656369138 35.586266471624874,-17.194529215619198 35.451079129398423,-17.194529215619198 35.451079129398423,-17.409132656369138</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
@@ -671,9 +1051,34 @@
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
 	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">canaan-2015</SimpleData>
+		<SimpleData name="country">Haiti</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-72.402228337465971,18.48846391279492 -72.273126609845818,18.48846391279492 -72.273126609845818,18.659892876663502 -72.402228337465971,18.659892876663502 -72.402228337465971,18.48846391279492</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="id">canaan-2015</SimpleData>
+		<SimpleData name="country">Haiti</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>-72.292932000165152,17.977077861944018 -72.133012687437429,17.977077861944018 -72.133012687437429,19.015101000000286 -72.292932000165152,19.015101000000286 -72.292932000165152,17.977077861944018</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1301</SimpleData>
+		<SimpleData name="id">fizi-11jun2015</SimpleData>
+		<SimpleData name="country">DRC</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>28.833304500042139,-4.527277176664578 28.991955761093607,-4.527277176664578 28.991955761093607,-4.244008500000052 28.833304500042139,-4.244008500000052 28.833304500042139,-4.527277176664578</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
 		<SimpleData name="tm_projects">1121</SimpleData>
 		<SimpleData name="id">doro-27dec2014</SimpleData>
-		<SimpleData name="country">South Sudan</SimpleData>
+		<SimpleData name="country">Indonesia</SimpleData>
 	</SchemaData></ExtendedData>
       <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>33.661069200033793,9.823397743102554 33.782032800000181,9.823397743102554 33.782032800000181,10.000346399999987 33.661069200033793,10.000346399999987 33.661069200033793,9.823397743102554</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
@@ -748,6 +1153,15 @@
 		<SimpleData name="country">Bangladesh</SimpleData>
 	</SchemaData></ExtendedData>
       <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>90.333124827425507,23.696200451008647 90.406651500332501,23.696200451008647 90.406651500332501,23.760787499970402 90.333124827425507,23.760787499970402 90.333124827425507,23.696200451008647</coordinates></LinearRing></outerBoundaryIs></Polygon>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#ittc_services_flattened">
+		<SimpleData name="tm_projects">1240</SimpleData>
+		<SimpleData name="id">ribaue-04apr2015</SimpleData>
+		<SimpleData name="country">Mozambique</SimpleData>
+	</SchemaData></ExtendedData>
+      <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>38.199046500042066,-15.017482687451945 38.364650248449614,-15.017482687451945 38.364650248449614,-14.106231 38.199046500042066,-14.106231 38.199046500042066,-15.017482687451945</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
   <Placemark>
 	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
@@ -884,4 +1298,5 @@
 	</SchemaData></ExtendedData>
       <Polygon><altitudeMode>relativeToGround</altitudeMode><outerBoundaryIs><LinearRing><altitudeMode>relativeToGround</altitudeMode><coordinates>124.94,10.997 125.033,10.997 125.033,11.188 124.94,11.188 124.94,10.997</coordinates></LinearRing></outerBoundaryIs></Polygon>
   </Placemark>
-</Folder></Document></kml>
+</Folder>
+</Document></kml>
