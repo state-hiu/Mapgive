@@ -1,6 +1,6 @@
 ---
 layout: doc
-permalink: /en/resources/event-checklist
+permalink: /en/resources/event-checklist/
 lang: en
 title: Event Checklist
 category: resources
