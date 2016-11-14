@@ -1,7 +1,7 @@
 ---
 layout: resource
 category: events
-external_url: 'http://osmgeoweek.org/'
+external_url: 'http://2014.osmgeoweek.org/'
 title: OpenStreetMap Geography Awareness Week
 status: past
 date: 20141108
