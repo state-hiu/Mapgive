@@ -1303,7 +1303,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 
 .opera-mini .social .share,
 .no-svg .social .share,
-.social .share {
+.svg .social .share {
   background: none;
 }
 
@@ -1313,40 +1313,40 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   display: inline-block;
 }
 
-.globe,
-.marker,
-.map,
-.hot,
-.dos,
-.logo,
-.play-button,
-.steps .estimate .clock,
-.social li {
+.svg .globe,
+.svg .marker,
+.svg .map,
+.svg .hot,
+.svg .dos,
+.svg .logo,
+.svg .play-button,
+.svg .steps .estimate .clock,
+.svg .social li {
   background-image: url("../img/sprite.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 366px 208px;
 }
 
-.social .mail {
+.svg .social .mail {
   background-position: -256px -177px;
   margin-top: 3px;
 }
 
-.social .facebook {
+.svg .social .facebook {
   background-position: -277px -177px;
 }
 
-.social .twitter {
+.svg .social .twitter {
   background-position: -298px -177px;
   margin-top: 2px;
 }
 
-#footer .twitter {
+.svg #footer .twitter {
   margin: 0;
 }
 
-.social .plus {
+.svg .social .plus {
   background-position: -319px -177px;
 }
 
@@ -1365,27 +1365,27 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   height: 65px;
 }
 
-.media-object .globe {
+.svg .media-object .globe {
   background-position: -67px 0;
   background-size: 229px 134px;
   margin: 0 auto;
 }
 
-.media-object .marker {
+.svg .media-object .marker {
   background-position: -195px 0;
   background-size: 229px 134px;
   width: 33px;
   margin: 0 auto;
 }
 
-.media-object .map {
+.svg .media-object .map {
   background-position: -132px 0;
   background-size: 229px 134px;
   width: 63px;
   margin: 0 auto;
 }
 
-.media-object .osm {
+.svg .media-object .osm {
   background-image: url("../img/osm.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1395,14 +1395,14 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   margin: 0 auto;
 }
 
-.media-object .hot {
+.svg .media-object .hot {
   background-position: -156px -68px;
   background-size: 229px 134px;
   height: 39px;
   margin: 0 auto;
 }
 
-.media-object .dos {
+.svg .media-object .dos {
   background-position: 0 -67px;
   background-size: 229px 134px;
   width: 67px;
@@ -1419,7 +1419,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   color: #ffffff;
 }
 
-.logo {
+.svg .logo {
   background-position: -2em -1.16666666666667em; /* -72/36 -42/36 */
   background-size: 4.05555555555556em 2.30555555555556em; /* 146/36 83/36 */
   width: 0.80555555555556em; /* 29/36 */
@@ -1430,7 +1430,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   top: 0.16666666666667em; /* 3/36 */
 }
 
-.site-logo.white .logo {
+.svg .site-logo.white .logo {
   background-position: -1.19444444444444em -1.13888888888889em; /* -43/36 -41/36 */
   background-size: 4.05555555555556em 2.30555555555556em; /* 146/36 83/36 */
   width: 0.80555555555556em; /* 29/36 */
@@ -1441,7 +1441,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   top: 0.16666666666667em; /* 3/36 */
 }
 
-.play {
+.svg .play {
   background-color: rgba(0,0,0,.4);
   width: 100%;
   height: 100%;
@@ -1450,7 +1450,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   top: 0;
 }
 
-.play-button {
+.svg .play-button {
   background-position: 0 0;
   width: 104px;
   height: 104px;
@@ -1461,7 +1461,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   margin: -53px;
 }
 
-.steps .estimate .clock {
+.svg .steps .estimate .clock {
   background-position: -340px -177px;
   width: 20px;
   height: 20px;
@@ -1680,41 +1680,41 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
     height: 130px;
   }
 
-  .media-object .globe {
+  .svg .media-object .globe {
     background-position: -108px 0;
     background-size: 366px 208px;
     width: 100px;
     height: 100px;
   }
 
-  .media-object .marker {
+  .svg .media-object .marker {
     background-position: -312px 0;
     background-size: 366px 208px;
     width: 52px;
     height: 100px;
   }
 
-  .media-object .map {
+  .svg .media-object .map {
     background-position: -212px 0;
     background-size: 366px 208px;
     width: 95px;
     height: 101px;
   }
 
-  .media-object .osm {
+  .svg .media-object .osm {
     background-size: 95px 93px;
     width: 95px;
     height: 93px;
   }
 
-  .media-object .hot {
+  .svg .media-object .hot {
     background-position: -255px -107px;
     background-size: 366px 208px;
     width: 100px;
     height: 61px;
   }
 
-  .media-object .dos {
+  .svg .media-object .dos {
     background-position: -1px -105px;
     background-size: 366px 208px;
     width: 102px;
@@ -1723,7 +1723,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 
   .opera-mini .steps .estimate .clock,
   .no-svg .steps .estimate .clock,
-  .steps .estimate .clock {
+  .svg .steps .estimate .clock {
     margin-left: 15px;
   }
 
@@ -1787,7 +1787,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 @media (min-width: 992px) {
   .opera-mini .steps .estimate .clock,
   .no-svg .steps .estimate .clock,
-  .steps .estimate .clock {
+  .svg .steps .estimate .clock {
     margin-left: 5px;
   }
 
@@ -1799,7 +1799,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 @media (min-width: 1200px) {
   .opera-mini .steps .estimate .clock,
   .no-svg .steps .estimate .clock,
-  .steps .estimate .clock {
+  .svg .steps .estimate .clock {
     margin-left: 15px;
   }
 
@@ -1989,10 +1989,7 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
 *:first-child + html .clearfix { min-height:1%; }
 
 
-#map { 
-  height: 400px;
-  z-index: -1;
-}
+#map { height: 400px; }
 #map a {text-decoration: none; }
 
 .hiu-logo {
