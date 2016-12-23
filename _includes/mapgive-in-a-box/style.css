@@ -339,13 +339,7 @@ body {
   height:20px;
   margin-right:20px;
   }
-.logo {
-  display:block;
-  margin-right:20px;
-  width:60px;
-  height:60px;
-  background:url(./../assets/img/sprite-box.png) no-repeat;
-}
+
 
 .site-logo.white .m-logo {
   background-position: -1.19444444444444em -1.13888888888889em; /* -43/36 -41/36 */
