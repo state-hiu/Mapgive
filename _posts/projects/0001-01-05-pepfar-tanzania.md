@@ -7,7 +7,7 @@ project-number: 2301
 author: PEPFAR, MapGive, USAID
 date: 20161118
 type: remote
-photo: 'http://osmgeoweek.org/img/logos/tanz_pepfar_logo.jpg'
+photo: 'https://mapgive.state.gov/assets/img/tanz_pepfar_logo.jpg'
 video: 
 featured: yes
 quote: ""
