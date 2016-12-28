@@ -130,11 +130,13 @@ dt {
   }
 }
 
+/*
 @media (max-width: 660px) {
   .navbar.affix + #main {
     padding-top: 280px;
   }
 }
+*/
 
 .site-tagline {
   display: none;
@@ -235,8 +237,19 @@ dt {
   .navbar-nav {
     position: relative;
     top: 25px;
-    min-width: 534px;
     float: right;
+    width: 500px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 991px) {
+  .navbar-nav {
+    position: relative;
+    top: 25px;
+    float: right;
+    font-size: 15px;
+    min-width: 534px;
   }
 }
 
@@ -502,6 +515,16 @@ dt {
   display: inline-block;
 }
 
+.infographics .btn3.red-button {
+    background-color: #d73f3f;
+    border-color: #d73f3f;
+}
+
+.infographics .btn3.red-button:hover {
+    background-color: #e83030;
+    border-color: #e83030;
+}
+
 @media (min-width: 768px) {
   .mission {
     margin-top: 0;
@@ -599,8 +622,8 @@ dt {
   }
 
   .infographics .btn3 {
-    width: 215px;
-    height: 95px;
+    width: 225px;
+    height: 135px;
     font-size: 2.7em;
     padding-left: 15px;
   }
@@ -621,9 +644,9 @@ dt {
   }
 
   .infographics .btn3 {
-    width: 293px;
+    width: 200px;
     height: 130px;
-    font-size: 3.8em;
+    font-size: 2.5em;
     padding-left: 12px;
   }
 }
@@ -637,9 +660,9 @@ dt {
   }
 
   .infographics .btn3 {
-    width: 360px;
+    width: 210px;
     height: 170px;
-    font-size: 4.5em;
+    font-size: 2.6em;
   }
 
   .infographics .btn .first {
@@ -772,6 +795,12 @@ dt {
   float: left;
 }
 
+.step .title2 {
+  font-size: 1.15em;
+  margin-bottom: 15px;
+  float: left;
+}
+
 .step ol {
   list-style-type: lower-alpha;
 }
@@ -785,6 +814,17 @@ dt {
 .steps .step {
   list-style: none;
   margin-left: 0;
+}
+
+.step-or:before {
+    content: "";
+    background-color: #deccb4;
+    position: absolute;
+    left: 15px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    z-index: -1;
 }
 
 .steps .title:before {
@@ -2014,6 +2054,13 @@ font-size: 2rem;
 display:inline;
 }
 
+.or-text {
+    font-weight: 700;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-top: 5px;
+  }
+
 @media (max-width: 768px) {
   .ico.icon.collecticon-star-full {
   padding:5px;
@@ -2021,6 +2068,10 @@ display:inline;
   position:absolute;
   font-size: 2rem;
   display:inline;
+  }
+  .or-text {
+    width: 20px;
+    margin: 20px 0 40px 0px;
   }
 }
 

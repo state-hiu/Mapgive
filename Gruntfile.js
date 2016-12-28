@@ -60,7 +60,8 @@ module.exports = function(grunt) {
         uglify: {
           build: {
             files: {
-              'assets/js/main.min.js': ['_assets/js/vendor/bootstrap.min.js', '_assets/js/plugins.js', '_assets/js/vendor/jquery.a11yAccordion.js', '_assets/js/main.js'],
+              'assets/js/main.min.js': ['_assets/js/plugins.js', '_assets/js/vendor/jquery.a11yAccordion.js', '_assets/js/main.js'],
+              'assets/js/bootstrap.min.js': ['_assets/js/vendor/bootstrap.min.js'],
               'assets/js/lt-ie9.min.js': ['_assets/js/vendor/html5shiv.js', '_assets/js/vendor/respond.min.js', '_assets/js/vendor/html5shiv-printshiv.js'],
               'assets/js/modernizr-2.7.1.min.js': ['_assets/js/vendor/modernizr-2.7.1.min.js'],
               'assets/js/jquery-1.10.2.min.js': ['_assets/js/vendor/jquery-1.10.2.min.js'],
