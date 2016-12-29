@@ -187,7 +187,8 @@ dt {
 
 .navbar {
   width: 100%;
-  z-index: 10;
+  /*to remain on top of map div*/
+  z-index: 1001;
   min-height: 0;
 }
 
@@ -2031,7 +2032,7 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
 
 #map { 
   height: 400px;
-  z-index: -1;
+
 }
 #map a {text-decoration: none; }
 
