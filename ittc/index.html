@@ -12,259 +12,238 @@ emailDescription: "Mapgive, an initiative of the U.S. State Department's Humanit
 ---
 
 <style>
-		.info {
-			padding: 6px 8px;
-			font: 14px/16px Arial, Helvetica, sans-serif;
-			background: white;
-			background: rgba(255,255,255,0.8);
-			box-shadow: 0 0 15px rgba(0,0,0,0.2);
-			border-radius: 5px;
-		}
-		.info h4 {
-			margin: 0 0 5px;
-			color: #d73f3f;
-		}
-		/*overides leaflet control layer order so it doesn't appear on top of nav bar*/
-		.leaflet-top, .leaflet-bottom {
-			z-index: 1000;
-		}
+    .info {
+        padding: 6px 8px;
+        font: 14px/16px Arial, Helvetica, sans-serif;
+        background: white;
+        background: rgba(255,255,255,0.8);
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        border-radius: 5px;
+    }
+    .info h4 {
+        margin: 0 0 5px;
+        color: #d73f3f;
+    }
+    /*overides leaflet control layer order so it doesn't appear on top of nav bar*/
+    .leaflet-top, .leaflet-bottom {
+        z-index: 1000;
+    }
 </style>
 
 
-<!--<div class="col-md-12">-->
-
-
 <div class="row">
-	<div class="col-md-8">
-		<header role="header">
-		  <h1 class="page-title">{{ page.title }}</h1>
-		</header>
-	</div>
-	<div class="col-md-offset-1 col-md-3">
-		{% include social-media.html %}
-	</div>
+    <div class="col-md-8">
+        <header role="header">
+          <h1 class="page-title">{{ page.title }}</h1>
+        </header>
+    </div>
+    <div class="col-md-offset-1 col-md-3">
+        {% include social-media.html %}
+    </div>
 </div>
 
 
 <div class="row">
+    <div class="col-md-8">
+        <br>
+        <section>
+            <p>Imagery to the Crowd (IttC) is an initiative of the State Department’s Humanitarian Information Unit (HIU). 
+            The HIU provides information to decision-makers and partners in preparation for and response to humanitarian 
+            emergencies worldwide and promotes innovative technologies and best practices for humanitarian information management. 
+            IttC publishes high-resolution commercial satellite imagery licensed by the United States Government, in a format that 
+            volunteers easily map into OpenStreetMap. IttC addresses significant data gaps for humanitarian and development needs.</p>
+            <p><b style="padding-right: 4px;">Map Tip:</b>Zoom in to see full extents of imagery services.</p>
+        <br>
+        </section>
 
-<div class="col-md-8">
+        <div id="map" style="margin-left: auto; margin-right: auto; width: 100%; height: 400px"></div>
 
-		<br>
-		<section>
-			<p>Imagery to the Crowd (IttC) is an initiative of the State Department’s Humanitarian Information Unit (HIU). 
-			The HIU provides information to decision-makers and partners in preparation for and response to humanitarian 
-			emergencies worldwide and promotes innovative technologies and best practices for humanitarian information management. 
-			IttC publishes high-resolution commercial satellite imagery licensed by the United States Government, in a format that 
-			volunteers easily map into OpenStreetMap. IttC addresses significant data gaps for humanitarian and development needs.</p>
-                        <p><b style="padding-right: 4px;">Map Tip:</b>Zoom in to see full extents of imagery services.</p>
+        <dl class="js-accordion accordion" role="tablist" aria-multiselectable="true">
+            {% include download-ittc-services.html %}
+        </dl>
 
-  <br>
+        <h2> Imagery Frequently Asked Questions </h2>
 
-		</section>
-
-  
-  	<!--The col-md-offset centers the div, but the bootstrap div is messing with the leaflet map
-  	<div class="col-md-10 col-md-offset-1"> -->
-
-  	<div id="map" style="margin-left: auto; margin-right: auto; width: 100%; height: 400px"></div>
-  	
-  	<!--TurfJS link-->
-  	<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v1.3.0/turf.min.js'></script>
-  	
-  	<script>
-
-		//map extent
-		var southWest = L.latLng(-45,-150),
-				northEast = L.latLng(55,200),
-				bounds = L.latLngBounds(southWest, northEast);
-    
-		var map = L.map('map', {
-			minZoom: 2,
-			maxZoom: 16,
-		});
-		
-        map.setView([10, 27], 2);
-
-		var pinLayer = L.featureGroup([]);
-		
-		//zoom listener from: http://stackoverflow.com/questions/19658564/leaflet-control-geojson-layers-by-zoom-level
-		map.on('zoomend', function (e) {
-			myZoomHandler();
-		});
-		
-		function myZoomHandler() {
-			var currentZoom = map.getZoom();
-			if (currentZoom < 4) {
-						$(".mapgiveIcon").css("visibility", "visible");
-						$(".requestPolygons").css("visibility", "hidden");
-			} else {
-				    $(".mapgiveIcon").css("visibility", "hidden");
-				    $(".requestPolygons").css("visibility", "visible");
-			}
-				    //tried to use .cleatLayers but it was getting rid of all the layer references, so I was not able to re-add the layer again
-				    //copiedpinLayer.clearLayers(copiedpinLayer.getLayers());
-			
-		}
-		
-		//L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
-		//L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ', {
-			maxZoom: 18,
-			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Names and boundary representation are not necessarily authoritative. ',
-			id: 'mapbox.streets-basic'
-		}).addTo(map);
-
-		//taken from: http://leafletjs.com/examples/choropleth-example.html
-		//info box that contains title
-		var info = L.control();
-
-		info.onAdd = function (map) {
-			this._div = L.DomUtil.create('div', 'info');
-			this._div.innerHTML = '<h4>Imagery Services</h4>';
-			return this._div;
-		};
-
-		info.addTo(map);
-
-
-		//used Inkscape to save MapGive icon: http://inkscapetutorials.org/2014/04/22/inkscape-faq-how-do-i-crop-in-inkscape/#document
-		var mapgiveIcon = L.icon({
-		    iconUrl: "{{ site.baseurl }}/assets/img/mapgive_red_pt.png",
-		    iconSize: [30, 45],
-		    iconAnchor: [15, 40],
-		    popupAnchor: [0, 0],
-          	//opacity: .5,
-          	//fillOpacity: 0.7,
-          	//You can also give a style a className property! : http://stackoverflow.com/questions/17086195/leaflet-path-how-can-i-set-a-css-class
-          	className: "mapgiveIcon"
-
-		});
-		
-		var requestPolygons = {
-			//"color": "#ff7800",
-			//"weight": 5,
-			//"opacity": 0.65,
-			className: "requestPolygons"
-		};
-
-		//returns an array of objects according to key, value, or key and value matching
-		function getObjects(obj, key, val) {
-			var objects = [];
-			for (var i in obj) {
-				if (!obj.hasOwnProperty(i)) continue;
-				if (typeof obj[i] == 'object') {
-					objects = objects.concat(getObjects(obj[i], key, val));    
-				} else 
-				//if key matches and value matches or if key matches and value is not passed (eliminating the case where key matches but passed value does not)
-				if (i == key && obj[i] == val || i == key && val == '') { //
-					objects.push(obj);
-				} else if (obj[i] == val && key == ''){
-					//only add if the object is not already in the array
-					if (objects.lastIndexOf(obj) == -1){
-						objects.push(obj);
-					}
-				}
-			}
-			return objects;
-		}
-
-		var popupOptions = {maxWidth: 200};
-		var popupContent = "<h4> HOT OSM projects: </h4>";
-		
-		map.setMaxBounds(bounds);
-		// zoom the map to that bounding box
-		map.fitBounds(bounds);
-		
-		function popupContentFunction(projects,popupContent) {
-		
-			if (projects.indexOf(",") > 0) {
-				projects = projects.split(",")
-				console.log(projects);
-				//var popupContent = "<h4> HOT OSM projects: </h4>";
-				console.log('test popupContent: ');
-				console.log(popupContent);
-				for (i=0;i<projects.length;i++) {
-					var popupContent = popupContent + "<h4><a href=http://tasks.hotosm.org/project/" + projects[i] + 
-					">" + projects[i] + "</a></h4>";
-				}
-				
-				console.log('test popupContent return: ');
-				console.log(popupContent);
-				return popupContent;
-			
-			} else if (projects == "none" || projects == ""){
-				var popupContent = "<h4> HOT OSM project: none </h4>";
-				return popupContent;
-			} else {
-				var popupContent = "<h4><a href=http://tasks.hotosm.org/project/" + projects + 
-				"> HOT OSM project: " + projects + "</a></h4>";
-				return popupContent;
-			}
-		}
-		
-		$.getJSON("{{ site.baseurl }}/ittc_services/ittc_services.geojson", function(data) {
-			//uses getObjects function, which parses geojson for objects that match a certain key:value
-			test_json = getObjects(data,'type','Feature');
-
-			for (var i in test_json) {
-		
-				//The geojson has one outer FeatureCollection object, which contains all of the
-				//other FeatureCollections. The outer FeatureCollection object has no properties object
-				if (test_json[i].hasOwnProperty('properties')) {
-
-					var projects = test_json[i].properties.tm_projects
-
-					L.geoJson(test_json[i], {
-						onEachFeature: function (feature, layer) {
-							layer.bindPopup(popupContentFunction(projects,popupContent),popupOptions).setStyle(requestPolygons);
-						}
-					}).addTo(map);
-					
-					//making requestPolygons hidden right away after page load
-					$(".requestPolygons").css("visibility", "hidden");
-					
-					//Turf JS centroid function
-					var centroidPt = turf.centroid(test_json[i]);
-
-					L.geoJson(centroidPt, {
-						onEachFeature: function (feature, layer) {
-							layer.bindPopup(popupContentFunction(projects,popupContent),popupOptions).setIcon(mapgiveIcon);
-						}
-					}).addTo(map);
-				}
-			}
-			
-			pinLayer.addTo(map);
-			
-		});
-
-	</script>
-
-	<dl class="js-accordion accordion" role="tablist" aria-multiselectable="true">
-  {% include download-ittc-services.html %}
-	</dl>
-
-  <h2> Imagery Frequently Asked Questions </h2>
-
-	<dl class="js-accordion accordion" role="tablist" aria-multiselectable="true">
-  {% include ittc-faqs.html %}
-	</dl>
-
-	<br>
-
+        <dl class="js-accordion accordion" role="tablist" aria-multiselectable="true">
+            {% include ittc-faqs.html %}
+        </dl>
+        <br>
 </div>
-
 
 <div class="col-md-offset-1 col-md-3">
     {% include more-info.html %}
     {% include ittc-sidebar.html %}
 </div>
 
-<!--</div>-->
-  
-  
+<!--TurfJS link-->
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v1.3.0/turf.min.js'></script>
 
+<!--map code-->
+<script>
 
+    //map extent
+    var southWest = L.latLng(-45,-150),
+            northEast = L.latLng(55,200),
+            bounds = L.latLngBounds(southWest, northEast);
+
+    var map = L.map('map', {
+        minZoom: 2,
+        maxZoom: 16,
+    });
+    
+    map.setView([10, 27], 2);
+
+    var pinLayer = L.featureGroup([]);
+    
+    //zoom listener from: http://stackoverflow.com/questions/19658564/leaflet-control-geojson-layers-by-zoom-level
+    map.on('zoomend', function (e) {
+        myZoomHandler();
+    });
+    
+    function myZoomHandler() {
+        var currentZoom = map.getZoom();
+        if (currentZoom < 4) {
+                    $(".mapgiveIcon").css("visibility", "visible");
+                    $(".requestPolygons").css("visibility", "hidden");
+        } else {
+                $(".mapgiveIcon").css("visibility", "hidden");
+                $(".requestPolygons").css("visibility", "visible");
+        }
+                //tried to use .cleatLayers but it was getting rid of all the layer references, so I was not able to re-add the layer again
+                //copiedpinLayer.clearLayers(copiedpinLayer.getLayers());
+    }
+    
+    //L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+    //L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ', {
+        maxZoom: 18,
+        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+            '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Names and boundary representation are not necessarily authoritative. ',
+        id: 'mapbox.streets-basic'
+    }).addTo(map);
+
+    //taken from: http://leafletjs.com/examples/choropleth-example.html
+    //info box that contains title
+    var info = L.control();
+
+    info.onAdd = function (map) {
+        this._div = L.DomUtil.create('div', 'info');
+        this._div.innerHTML = '<h4>Imagery Services</h4>';
+        return this._div;
+    };
+
+    info.addTo(map);
+
+    //used Inkscape to save MapGive icon: http://inkscapetutorials.org/2014/04/22/inkscape-faq-how-do-i-crop-in-inkscape/#document
+    var mapgiveIcon = L.icon({
+        iconUrl: "{{ site.baseurl }}/assets/img/mapgive_red_pt.png",
+        iconSize: [30, 45],
+        iconAnchor: [15, 40],
+        popupAnchor: [0, 0],
+          //opacity: .5,
+          //fillOpacity: 0.7,
+          //You can also give a style a className property! : http://stackoverflow.com/questions/17086195/leaflet-path-how-can-i-set-a-css-class
+          className: "mapgiveIcon"
+
+    });
+    
+    var requestPolygons = {
+        //"color": "#ff7800",
+        //"weight": 5,
+        //"opacity": 0.65,
+        className: "requestPolygons"
+    };
+
+    //returns an array of objects according to key, value, or key and value matching
+    function getObjects(obj, key, val) {
+        var objects = [];
+        for (var i in obj) {
+            if (!obj.hasOwnProperty(i)) continue;
+            if (typeof obj[i] == 'object') {
+                objects = objects.concat(getObjects(obj[i], key, val));    
+            } else 
+            //if key matches and value matches or if key matches and value is not passed (eliminating the case where key matches but passed value does not)
+            if (i == key && obj[i] == val || i == key && val == '') { //
+                objects.push(obj);
+            } else if (obj[i] == val && key == ''){
+                //only add if the object is not already in the array
+                if (objects.lastIndexOf(obj) == -1){
+                    objects.push(obj);
+                }
+            }
+        }
+        return objects;
+    }
+
+    var popupOptions = {maxWidth: 200};
+    var popupContent = "<h4> HOT OSM projects: </h4>";
+    
+    map.setMaxBounds(bounds);
+    // zoom the map to that bounding box
+    map.fitBounds(bounds);
+    
+    function popupContentFunction(projects,popupContent) {
+    
+        if (projects.indexOf(",") > 0) {
+            projects = projects.split(",")
+            console.log(projects);
+            //var popupContent = "<h4> HOT OSM projects: </h4>";
+            console.log('test popupContent: ');
+            console.log(popupContent);
+            for (i=0;i<projects.length;i++) {
+                var popupContent = popupContent + "<h4><a href=http://tasks.hotosm.org/project/" + projects[i] + 
+                ">" + projects[i] + "</a></h4>";
+            }
+            
+            console.log('test popupContent return: ');
+            console.log(popupContent);
+            return popupContent;
+        
+        } else if (projects == "none" || projects == ""){
+            var popupContent = "<h4> HOT OSM project: none </h4>";
+            return popupContent;
+        } else {
+            var popupContent = "<h4><a href=http://tasks.hotosm.org/project/" + projects + 
+            "> HOT OSM project: " + projects + "</a></h4>";
+            return popupContent;
+        }
+    }
+    
+    $.getJSON("{{ site.baseurl }}/ittc_services/ittc_services.geojson", function(data) {
+        //uses getObjects function, which parses geojson for objects that match a certain key:value
+        test_json = getObjects(data,'type','Feature');
+
+        for (var i in test_json) {
+    
+            //The geojson has one outer FeatureCollection object, which contains all of the
+            //other FeatureCollections. The outer FeatureCollection object has no properties object
+            if (test_json[i].hasOwnProperty('properties')) {
+
+                var projects = test_json[i].properties.tm_projects
+
+                L.geoJson(test_json[i], {
+                    onEachFeature: function (feature, layer) {
+                        layer.bindPopup(popupContentFunction(projects,popupContent),popupOptions).setStyle(requestPolygons);
+                    }
+                }).addTo(map);
+                
+                //making requestPolygons hidden right away after page load
+                $(".requestPolygons").css("visibility", "hidden");
+                
+                //Turf JS centroid function
+                var centroidPt = turf.centroid(test_json[i]);
+
+                L.geoJson(centroidPt, {
+                    onEachFeature: function (feature, layer) {
+                        layer.bindPopup(popupContentFunction(projects,popupContent),popupOptions).setIcon(mapgiveIcon);
+                    }
+                }).addTo(map);
+            }
+        }
+        
+        pinLayer.addTo(map);
+        
+    });
+
+</script>
 
