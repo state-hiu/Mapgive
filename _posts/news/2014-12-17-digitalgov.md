@@ -9,7 +9,7 @@ date: 20141217
 mapgive_is_author: no
 explicit_mention: yes
 type: news
-photo:
+photo: 'https://www.digitalgov.gov/files/2014/12/600-x-338-MapGive-steps-from-OpenStreetMap-intro-video-Dept-of-State-Humanitarian-Information-Unit.jpg'
 video:
 featured: no
 quote:

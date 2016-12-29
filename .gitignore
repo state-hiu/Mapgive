@@ -7,6 +7,6 @@ _site
 backups
 temp
 Gemfile.lock
-assets
+#assets
 #~
 
