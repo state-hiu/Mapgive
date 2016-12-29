@@ -31,8 +31,6 @@ dt{font-weight:normal;}
 }
 @media (max-width: 768px){.navbar.affix+#main{padding-top:75px;}
 }
-@media (max-width: 660px){.navbar.affix+#main{padding-top:280px;}
-}
 .site-tagline{display:none;}
 @media (min-width: 768px){.site-tagline{color:white;font-size:13px;margin:0;padding:0;display:block;}
 }
@@ -42,7 +40,7 @@ dt{font-weight:normal;}
 }
 .btn-primary{background-color:#d73f3f;border-color:#d73f3f;color:white;}
 .btn-blue-primary{background-color:#9bcaff;border-color:#9bcaff;color:white;}
-.navbar{width:100%;z-index:10;min-height:0;}
+.navbar{width:100%;z-index:1001;min-height:0;}
 .lt-ie8 .navbar{border:0;}
 .navbar.affix{position:fixed;top:0;}
 .navbar-default{background-color:#676;border:0;border-bottom:1px solid #51504d;border-radius:0;}
@@ -51,7 +49,9 @@ dt{font-weight:normal;}
 .navbar-brand .brand a:focus,.navbar-brand .brand a:hover,.navbar-brand .brand a:active{text-decoration:none;}
 .navbar-brand .brand h1{font-size:24px;margin:0 0 2px 0;display:inline-block;}
 .navbar-nav{margin:0;float:none;}
-@media (min-width: 768px){.navbar-nav{position:relative;top:25px;min-width:534px;float:right;}
+@media (min-width: 768px){.navbar-nav{position:relative;top:25px;float:right;width:500px;font-size:12px;}
+}
+@media (min-width: 991px){.navbar-nav{position:relative;top:25px;float:right;font-size:15px;min-width:534px;}
 }
 .lt-ie9 .navbar-default{border-bottom:1px solid #bcbcbc;}
 .navbar-default .navbar-nav>li>a{padding:15px;color:#fff;}
@@ -103,6 +103,8 @@ dt{font-weight:normal;}
 .footer-title h2{padding:10px 0;text-transform:uppercase;display:inline-block;}
 .mission{margin-top:20px;border-top:1px solid #444;}
 .mission>h4{display:inline-block;}
+.infographics .btn3.red-button{background-color:#d73f3f;border-color:#d73f3f;}
+.infographics .btn3.red-button:hover{background-color:#e83030;border-color:#e83030;}
 @media (min-width: 768px){.mission{margin-top:0;border-top:0;border-left:1px solid black;}
 .lt-ie8 .mission{border-left:0;}
 .mission>h4{background-image:none;}
@@ -117,14 +119,14 @@ dt{font-weight:normal;}
 .infographics .world{display:none;visibility:hidden;}
 @media (min-width: 768px){.hook span{display:block;text-align:center;}
 .infographics .btn{width:220px;height:147px;font-size:2.5em;padding-left:25px;}
-.infographics .btn3{width:215px;height:95px;font-size:2.7em;padding-left:15px;}
+.infographics .btn3{width:225px;height:135px;font-size:2.7em;padding-left:15px;}
 .infographics .world{display:block;visibility:visible;}
 }
 @media (min-width: 992px){.infographics .btn{width:293px;height:196px;font-size:4em;padding-left:12px;}
-.infographics .btn3{width:293px;height:130px;font-size:3.8em;padding-left:12px;}
+.infographics .btn3{width:200px;height:130px;font-size:2.5em;padding-left:12px;}
 }
 @media (min-width: 1200px){.infographics .btn{width:360px;height:240px;font-size:4.8em;}
-.infographics .btn3{width:360px;height:170px;font-size:4.5em;}
+.infographics .btn3{width:210px;height:170px;font-size:2.6em;}
 .infographics .btn .first{margin-top:10px;}
 }
 .infographics .btn:active{box-shadow:inset 0 0 10px -2px #693f41;}
@@ -151,9 +153,11 @@ dt{font-weight:normal;}
 .step:first-child,.media:first-child{margin-top:15px;}
 .media-heading{margin:0 0 .5em 0;}
 .step .title{font-size:1.15em;margin-bottom:15px;float:left;}
+.step .title2{font-size:1.15em;margin-bottom:15px;float:left;}
 .step ol{list-style-type:lower-alpha;}
 .steps{counter-reset:li;padding-left:50px;margin-top:30px;}
 .steps .step{list-style:none;margin-left:0;}
+.step-or:before{content:"";background-color:#deccb4;position:absolute;left:15px;border-radius:50%;width:40px;height:40px;z-index:-1;}
 .steps .title:before{content:counter(li);counter-increment:li;padding:8px;position:absolute;left:-28px;}
 .steps .step.start .title:before{content:"\2730";}
 .steps .step:before{content:"";background-color:#deccb4;padding:0;position:absolute;left:15px;border-radius:50%;width:40px;height:40px;}
@@ -354,11 +358,13 @@ h2,h3{page-break-after:avoid;}
 .clearfix:after{content:'';display:block;height:0;clear:both;visibility:hidden;}
 * html .clearfix{height:1%;}
 *:first-child+html .clearfix{min-height:1%;}
-#map{height:400px;z-index:-1;}
+#map{height:400px;}
 #map a{text-decoration:none;}
 .hiu-logo{background-position:0 -103px;display:inline-block;float:right;margin-left:23px;margin-right:13px;margin-top:24px;opacity:0.75;width:135px;}
 .ico.icon.collecticon-star-full{padding:10px;left:20px;position:absolute;font-size:2rem;display:inline;}
+.or-text{font-weight:700;font-size:20px;padding-left:10px;padding-top:5px;}
 @media (max-width: 768px){.ico.icon.collecticon-star-full{padding:5px;left:20px;position:absolute;font-size:2rem;display:inline;}
+.or-text{width:20px;margin:20px 0 40px 0;}
 }
 .pager{margin-left:0;margin-bottom:18px;list-style:none;text-align:center;*zoom:1;}
 .pager:before,.pager:after{display:table;content:"";}
