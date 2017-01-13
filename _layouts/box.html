@@ -8,7 +8,8 @@ layout: default
 
 <div class='doc-nav cell2 padLeft cf' id='doc-nav-left'>
 
-{% assign post_size = {{site.categories[page.category].size}} %}
+{% comment %}{% assign post_size = {{site.categories[page.category].size}} %}{% endcomment %}
+{% assign post_size = {{site.categories.about.size}} %}
 
   {% if post_size != 0 %}
     <ul>
@@ -17,7 +18,8 @@ layout: default
         <span>About</span>
         </a>
     </li>
-      {% for post in site.categories[page.category] reversed %}
+    <div class="submenu">
+      {% for post in site.categories.about reversed %}
           {% if post.lang == page.lang %}
               {% unless post.hidden %}
                 <li class='doc rounded'>
@@ -28,6 +30,7 @@ layout: default
               {% endunless %}
           {% endif %}
       {% endfor %}
+    </div>
     </ul>
   {% endif %}
 
@@ -41,6 +44,7 @@ layout: default
         <span>Case Studies</span>
         </a>
     </li>
+    <div class="submenu">
       {% for post in site.categories.cases reversed %}
           {% if post.lang == page.lang %}
               {% unless post.hidden %}
@@ -52,6 +56,7 @@ layout: default
               {% endunless %}
           {% endif %}
       {% endfor %}
+    </div>
     </ul>
   {% endif %}
 
@@ -64,6 +69,7 @@ layout: default
         <span>Resources</span>
         </a>
     </li>
+    <div class="submenu">
       {% for post in site.categories.resources reversed %}
           {% if post.lang == page.lang %}
               {% unless post.hidden %}
@@ -75,9 +81,76 @@ layout: default
               {% endunless %}
           {% endif %}
       {% endfor %}
+    </div>
     </ul>
   {% endif %}
 
+<script type="text/javascript">
+
+//make header active that has an active link
+//$('.title.active').closest('.submenu').addClass("active");
+
+//hide all menus that aren't active
+$('.submenu').not('.active').hide();
+
+//if one of the titles is active
+if ( $( '.title.active' ).length ) {
+  //just hide the other menus
+  console.log('we have an active title');
+  //console.log($( '.title.active' ));
+  console.log($('.title').not('active').closest('.submenu'));
+
+  //if submenu not already active
+  if ( !$( '.submenu.active' ).length ) {
+    console.log('submenu not active yet');
+    //make submenu active
+    $('.title.active').closest('.submenu').addClass("active");
+
+    //slide down the submenu
+    $('.title.active').closest('.submenu').slideDown();
+
+  }
+
+  //$('.submenu').not('.active').slideUp();
+
+} else {
+  //hide all menus
+  //$('.header').not(".active").closest(".rounded").next().hide();
+
+  //open the menu with the active title
+  console.log('submenu to open');
+  console.log($('.title.active').parent().parent());
+
+  //$('.title.active').parent().parent().slideDown();
+  //$('.title.active').parent().parent().addClass("active");
+
+}
+
+$('.header').on('click', function(){
+  console.log('next');
+  console.log($(this).closest(".rounded").next());
+  //$(this).closest(".rounded").next().slideUp();
+
+  //if submenu is not visible
+  if(!($(this).closest(".rounded").next().is(':visible'))){
+    $(this).closest(".rounded").next().slideUp();
+    $(this).closest(".rounded").next().slideDown();
+    $(this).addClass("active");
+
+    $('.header').not(".active").closest(".rounded").next().slideUp();
+    $('.header').not(".active").closest(".rounded").next().removeClass("active");
+    //$('.header').not(".active").closest(".rounded").next().slideDown();
+
+    $(this).removeClass("active");
+
+  } else {
+    $(this).closest(".rounded").next().slideUp();
+    $(this).removeClass("active");
+  }
+
+});
+
+</script>
 <!--   
   <ul style="margin-top:40px;">
       <li class='doc rounded'>
