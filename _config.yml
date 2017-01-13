@@ -4,6 +4,7 @@ baseurl: /Mapgive
 #url: http://mapgive.state.gov
 destination: temp/
 twitter_username: MapGive
+permalink: none
 future: true
 
 # Explicit excludes, including dotfiles to be safe
