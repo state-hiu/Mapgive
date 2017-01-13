@@ -1,9 +1,9 @@
 ---
-layout: doc
-permalink: /box/en/intro/open-mapping/
+layout: box
+permalink: /box/en/about/open-mapping/
 lang: en
 title: Intro to Open Mapping
-category: intro
+category: about
 published: true
 ---
 

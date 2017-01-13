@@ -405,7 +405,7 @@ body {
 }
 .doc-nav.fixed {
   position:fixed;
-  top: 0;
+  top: 60px;
 }
 .doc-nav.bottom {
   positon:absolute;
@@ -442,7 +442,7 @@ body {
 .doc .title{
   display:block;
   padding:10px;
-  background:#acbfbd;
+  background:#bcbcbc;
   }
   .doc .title.active {
     background:#328cac;
@@ -459,7 +459,7 @@ body {
     text-transform:uppercase;
     font-weight:700;
     text-align:center;
-    background: #fff;
+    /*background: #fff;*/
     padding:8px;
     color:#404040;
     border-top: 4px solid   #f0f0f0;
@@ -470,6 +470,28 @@ body {
     .doc .cover span:before {
       content:'';
     }
+
+
+.doc .title.header,
+  .doc .title.header:hover,
+  .doc .title.header.active {
+    font-size:12px;
+    text-transform:uppercase;
+    font-weight:700;
+    text-align:center;
+    background: #fff;
+    padding:8px;
+    color:#404040;
+    border-top: 4px solid   #f0f0f0;
+    border-left: 4px solid  #f0f0f0;
+    border-right: 4px solid #f0f0f0;
+    border-bottom: 4px solid #f0f0f0;
+}
+    .doc .header span:before {
+      content:'';
+    }
+
+
 
 /* Ideas for "other guide" navigation menu */
   .doc .title.other {

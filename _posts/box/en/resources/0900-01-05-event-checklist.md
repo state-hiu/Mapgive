@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: box
 permalink: /en/resources/event-checklist/
 lang: en
 title: Event Checklist

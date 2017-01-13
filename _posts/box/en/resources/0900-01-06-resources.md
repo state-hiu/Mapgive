@@ -1,10 +1,9 @@
 ---
-layout: doc
+layout: box
 permalink: /en/resources/
 lang: en
 title: Resources
 category: resources
-cover: "yes"
 published: true
 ---
 

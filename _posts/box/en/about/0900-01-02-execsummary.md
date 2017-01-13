@@ -1,6 +1,6 @@
 ---
 layout: doc
-permalink: /box/en/intro/exec-summary/
+permalink: /box/en/about/exec-summary/
 lang: en
 title: Executive Summary
 category: intro

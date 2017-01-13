@@ -1,9 +1,9 @@
 ---
-layout: doc
+layout: box
 permalink: /box/en/process/event-planning/
 lang: en
 title: Plan an Event
-category: process
+category: resources
 published: true
 ---
 

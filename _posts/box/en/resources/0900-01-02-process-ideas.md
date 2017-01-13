@@ -1,9 +1,9 @@
 ---
-layout: doc
+layout: box
 permalink: /box/en/process/ideas/
 lang: en
 title: Determine the Need
-category: process
+category: resources
 published: true
 ---
 
