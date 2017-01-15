@@ -2,7 +2,7 @@
 layout: box
 permalink: /en/resources/
 lang: en
-title: Resources
+title: Additional Resources
 category: resources
 published: true
 ---

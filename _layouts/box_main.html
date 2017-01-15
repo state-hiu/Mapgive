@@ -18,7 +18,7 @@ layout: default
   {% if post_size != 0 %}
     <ul>
     <li class='doc rounded'>
-        <a class='title header'>
+        <a class='title header' href='#about'> 
         <span>About</span>
         </a>
     </li>
@@ -28,7 +28,7 @@ layout: default
               {% unless post.hidden %}
 
                 <li class='doc rounded'>
-                    <a class='title {% comment %}{% if post.cover %}cover{% endif %}{% endcomment %} ' href="#{{ post.title | slugify }}">
+                    <a class='title {% comment %}{% if post.cover %}cover{% endif %}{% endcomment %} ' href="#about#{{ post.title | slugify }}">
                     <span>{{ post.title }}</span>
                     </a>
                 </li>
@@ -45,7 +45,7 @@ layout: default
   {% if post_size_cases != 0 %}
     <ul>
     <li class='doc rounded'>
-        <a class='title header' >
+        <a class='title header' href='#cases'>
         <span>Case Studies</span>
         </a>
     </li>
@@ -54,7 +54,7 @@ layout: default
           {% if post.lang == page.lang %}
               {% unless post.hidden %}
                 <li class='doc rounded'>
-                    <a class='title {% if page.url == post.url %}active{% endif %}' href="#{{ post.title | slugify }}">
+                    <a class='title {% if page.url == post.url %}active{% endif %}' href="#cases#{{ post.title | slugify }}">
                     <span>{{ post.title }}</span>
                     </a>
                 </li>
@@ -70,7 +70,7 @@ layout: default
   {% if post_size != 0 %}
     <ul>
     <li class='doc rounded'>
-        <a class='title header' >
+        <a class='title header' href='#resources'>
         <span>Resources</span>
         </a>
     </li>
@@ -79,7 +79,7 @@ layout: default
           {% if post.lang == page.lang %}
               {% unless post.hidden %}
                 <li class='doc rounded'>
-                    <a class='title {% if page.url == post.url %}active{% endif %}' href="#{{ post.title | slugify }}">
+                    <a class='title {% if page.url == post.url %}active{% endif %}' href="#resources#{{ post.title | slugify }}">
                     <span>{{ post.title }}</span>
                     </a>
                 </li>
@@ -90,6 +90,72 @@ layout: default
     </ul>
   {% endif %}
 
+
+
+<script type="text/javascript">
+
+//need a router for the hashes in the url
+//first hash will be for the categories: #about, #cases, and #resources
+//2nd hash will be for the page: ex. #determine-the-need
+
+//the hashes will be parsed. the categories will determine the submenu to be opened
+//and the page hashtag will load the post content
+
+//This code opens the right tab by reading the url hash.
+$( document ).ready(function() {
+    console.log('doc ready called');
+    console.log('doc loc hash');
+    console.log(document.location.hash);
+    // Javascript to enable link to tab
+    var hash = document.location.hash;
+
+
+    console.log('try');
+
+    
+
+    hash_page = hash.slice(1).split('#');
+
+    console.log('hash page 1');
+    console.log(hash_page[0]);
+
+
+    //remove active from existing headers
+    $('.header').removeClass("active");
+
+    $("a[href='#"+hash_page[0]+"']").closest(".rounded").next().slideUp();
+
+    $("a[href='#"+hash_page[0]+"']").closest(".rounded").next().slideDown();
+    $("a[href='#"+hash_page[0]+"']").addClass("active");
+
+    $('.header').not(".active").closest(".rounded").next().slideUp();
+    $('.header').not(".active").closest(".rounded").next().removeClass("active");
+    //$('.header').not(".active").closest(".rounded").next().slideDown();
+
+
+    if (hash_page.length > 1) {
+      console.log( 'hash_page new: ' );
+      console.log( hash_page[1] );
+
+      hash_page = '#' + hash_page[1];
+
+      console.log( 'title_href2' );
+      console.log( hash_page );
+
+      $( hash_page+".outer-div" ).show();
+
+      //make page link in menu active
+      $("a[href='"+document.location.hash+"']").addClass("active");
+    }
+
+
+});
+
+
+
+</script>
+
+<!--code to open and close submenus-->
 <script type="text/javascript">
 
 //make header active that has an active link
@@ -113,7 +179,6 @@ if ( $( '.title.active' ).length ) {
 
     //slide down the submenu
     $('.title.active').closest('.submenu').slideDown();
-
   }
 
   //$('.submenu').not('.active').slideUp();
@@ -159,6 +224,8 @@ $('.header').on('click', function(){
 });
 
 </script>
+
+
 <!--   
   <ul style="margin-top:40px;">
       <li class='doc rounded'>
@@ -253,7 +320,20 @@ $( ".title" ).on( "click", function() {
 
   $( ".outer-div" ).hide();
 
-  $( title_href+".outer-div" ).show();
+  //take away first hash 
+
+  title_href = title_href.slice(1).split('#');
+
+  console.log( 'title_href new: ' );
+  console.log( title_href[1] );
+
+  title_href2 = '#' + title_href[1];
+
+  console.log( 'title_href2' );
+  console.log( title_href2 );
+
+  $( title_href2+".outer-div" ).show();
+
 });
 
 //http://stackoverflow.com/questions/17534661/make-anchor-link-go-some-pixels-above-where-its-linked-to
