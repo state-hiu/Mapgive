@@ -8,6 +8,21 @@ layout: default
 #main {
   min-height: 900px;
 }
+
+/*https://www.itsupportguides.com/tech-tips-tricks/how-to-offset-anchor-tag-link-using-css/
+div.anchor :before {
+content:"";
+display:block;
+height:90px; 
+margin:-90px 0 0; 
+}
+*/
+
+.anchor {
+    padding-top: 50px;
+    margin-top: -50px;
+}
+
 </style>
 
 <div class='doc-nav cell2 padLeft cf' id='doc-nav-left'>
@@ -17,7 +32,7 @@ layout: default
 
   <ul>
     <li class='doc rounded' style='padding:0px;'>
-      <a href="/Mapgive/box/new/" class="title header" style='padding:0px;'>
+      <a href="#home" class="title header" style='padding:0px;'>
         <img src="{{site.baseurl}}/assets/img/box_graphic_small.png" alt="MapGive in a box home page" class="img-responsive" style="width:33%;display:inline;">
         MapGive in a Box
       </a>
@@ -99,173 +114,42 @@ layout: default
     </ul>
   {% endif %}
 
-
-
-<script type="text/javascript">
-
-//need a router for the hashes in the url
-//first hash will be for the categories: #about, #cases, and #resources
-//2nd hash will be for the page: ex. #determine-the-need
-
-//the hashes will be parsed. the categories will determine the submenu to be opened
-//and the page hashtag will load the post content
-
-//This code opens the right tab by reading the url hash.
-$( document ).ready(function() {
-    console.log('doc ready called');
-    console.log('doc loc hash');
-    console.log(document.location.hash);
-    // Javascript to enable link to tab
-    var hash = document.location.hash;
-
-
-    console.log('try');
-
-    
-
-    hash_page = hash.slice(1).split('#');
-
-    console.log('hash page 1');
-    console.log(hash_page[0]);
-
-
-    //remove active from existing headers
-    $('.header').removeClass("active");
-
-    $("a[href='#"+hash_page[0]+"']").closest(".rounded").next().slideUp();
-
-    $("a[href='#"+hash_page[0]+"']").closest(".rounded").next().slideDown();
-    $("a[href='#"+hash_page[0]+"']").addClass("active");
-
-    $('.header').not(".active").closest(".rounded").next().slideUp();
-    $('.header').not(".active").closest(".rounded").next().removeClass("active");
-    //$('.header').not(".active").closest(".rounded").next().slideDown();
-
-
-    if (hash_page.length > 1) {
-      console.log( 'hash_page new: ' );
-      console.log( hash_page[1] );
-
-      hash_page = '#' + hash_page[1];
-
-      console.log( 'title_href2' );
-      console.log( hash_page );
-
-      $( hash_page+".outer-div" ).show();
-
-      //make page link in menu active
-      $("a[href='"+document.location.hash+"']").addClass("active");
-    }
-
-
-});
-
-
-
-</script>
-
-<!--code to open and close submenus-->
-<script type="text/javascript">
-
-//make header active that has an active link
-//$('.title.active').closest('.submenu').addClass("active");
-
-//hide all menus that aren't active
-$('.submenu').not('.active').hide();
-
-//if one of the titles is active
-if ( $( '.title.active' ).length ) {
-  //just hide the other menus
-  console.log('we have an active title');
-  //console.log($( '.title.active' ));
-  console.log($('.title').not('active').closest('.submenu'));
-
-  //if submenu not already active
-  if ( !$( '.submenu.active' ).length ) {
-    console.log('submenu not active yet');
-    //make submenu active
-    $('.title.active').closest('.submenu').addClass("active");
-
-    //slide down the submenu
-    $('.title.active').closest('.submenu').slideDown();
-  }
-
-  //$('.submenu').not('.active').slideUp();
-
-} else {
-  //hide all menus
-  //$('.header').not(".active").closest(".rounded").next().hide();
-
-  //open the menu with the active title
-  console.log('submenu to open');
-  console.log($('.title.active').parent().parent());
-
-  //$('.title.active').parent().parent().slideDown();
-  //$('.title.active').parent().parent().addClass("active");
-
-}
-
-$('.header').on('click', function(){
-  console.log('next');
-  console.log($(this).closest(".rounded").next());
-  //$(this).closest(".rounded").next().slideUp();
-
-  //if submenu is not visible
-  if(!($(this).closest(".rounded").next().is(':visible'))){
-
-    $('.header').removeClass("active");
-
-    $(this).closest(".rounded").next().slideUp();
-    $(this).closest(".rounded").next().slideDown();
-    $(this).addClass("active");
-
-    $('.header').not(".active").closest(".rounded").next().slideUp();
-    $('.header').not(".active").closest(".rounded").next().removeClass("active");
-    //$('.header').not(".active").closest(".rounded").next().slideDown();
-
-    $(this).removeClass("active");
-
-  } else {
-    $(this).closest(".rounded").next().slideUp();
-    $(this).removeClass("active");
-  }
-
-});
-
-</script>
-
-
-<!--   
-  <ul style="margin-top:40px;">
-      <li class='doc rounded'>
-        <a class='title cover'>
-          {% if page.otherguides %}
-            <span>{{ page.otherguides }}</span>
-          {% else %}
-            <span>Site Navigation</span>
-          {% endif %}
-        </a>
-      </li>
-      
-      {% for post in site.posts reversed %}
-        {% if post.lang == page.lang %}{% unless post.hidden %}
-        {% if post.cover %}{% unless post.category == page.category %}
-          <li class='doc rounded'>
-            <a class='title' href="{{site.baseurl}}{{ post.url }}">
-              <span>{{ post.title }}</span>
-            </a>
-          </li>
-        {% endunless %}{% endif %}
-        {% endunless %}{% endif %}
-      {% endfor %}
-  </ul>
--->
-
-
 </div>
+
 <div class='doc-main doc cell5 padRight'>
-  <h1>{{page.title}}</h1>
-  {{content}}
+
+  <div class="anchor outer-div" id="home" style="display: none;">
+    </br>
+    <h2 class='tagtitle'>What is MapGive in a Box?</h2>
+    <p class='tagwords'>
+      This guide contains the collective wisdom of the MapGive team, and partners who have organized MapGive events and projects. The goal is to provide clear guidelines for engagement and project design with the MapGive program, for someone with no background in mapping.
+    </p></br>
+  </div>
+
+  <div class="anchor outer-div" id="about" style="display: none;">
+    </br>
+    <h2 class='tagtitle'>About</h2>
+    <p class='tagwords'>
+      The MapGive team is ready to help, and MapGive in a Box will help you prepare to work with the team. How much good can we do together?
+    </p></br>
+  </div>
+
+  <div class="anchor outer-div" id="cases" style="display: none;">
+    </br>
+    <h2 class='tagtitle'>Case Studies</h2>
+    <p class='tagwords'>
+      MapGive has been utilized in a wide variety of places and settings, and range from simple, lightly resourced events to in-depth activities with substantial design and implementation support. Take a look through these Case Studies to learn more how colleagues have implemented MapGive programs.
+    </p></br>
+  </div>
+
+  <div class="anchor outer-div" id="resources" style="display: none;">
+    </br>
+    <h2 class='tagtitle'>Resources</h2>
+    <p class='tagwords'>
+      All the resources needed to hold a MapGive engagement from start to finish. 
+    </p></br>
+  </div>
+
   <!--do for loops and make everything hidden here-->
   <!--the hidden posts can have their images be lazy loads
   <!--when button is clicked, show active post-->
@@ -314,52 +198,244 @@ $('.header').on('click', function(){
 
 </div>
 
+
+
+<script type="text/javascript">
+/*
+need a router for the hashes in the url
+first hash will be for the categories: #about, #cases, and #resources
+2nd hash will be for the page: ex. #determine-the-need
+
+the hashes will be parsed. the categories will determine the submenu to be opened
+and the page hashtag will load the post content
+*/
+
+//This code opens the right tab by reading the url hash.
+$( document ).ready(function() {
+    console.log('doc ready called');
+    console.log('doc loc hash');
+    console.log(document.location.hash);
+    // Javascript to enable link to tab
+    var hash = document.location.hash;
+
+    hash_page = hash.slice(1).split('#');
+
+    console.log('hash page 1');
+    console.log(hash_page[0]);
+
+    //remove active from existing headers
+    $('.header').removeClass("active");
+
+    $("a[href='#"+hash_page[0]+"']").closest(".rounded").next().slideUp();
+
+    $("a[href='#"+hash_page[0]+"']").closest(".rounded").next().slideDown();
+    $("a[href='#"+hash_page[0]+"']").addClass("active");
+
+    $('.header').not(".active").closest(".rounded").next().slideUp();
+    $('.header').not(".active").closest(".rounded").next().removeClass("active");
+    //$('.header').not(".active").closest(".rounded").next().slideDown();
+
+    if (hash_page.length == 1) {
+
+        hash_section = '#' + hash_page[0];
+
+        //load page content
+        $( hash_section+".outer-div" ).show();
+
+        if (hash_page[0] == 'home') {
+
+          console.log('do the loop');
+
+          loop = ['#home','#about','#cases','#resources'];
+
+
+          // loop through array 
+          var i = 0, l = loop.length;
+          (function iterator() {
+              console.log('loop[i]');
+              console.log(loop[i]);
+
+              clickHandler($('.header[href="'+loop[i]+'"]'));
+
+              console.log('i');
+              console.log(i);
+              console.log('l');
+              console.log(l);
+
+              if(i==l-1) {
+                i=-1;
+              }
+
+              if(++i<l) {
+                  myTimeout = setTimeout(iterator, 4000);
+              }
+          })();
+
+          
+        }
+    }
+
+    if (hash_page.length > 1) {
+      console.log( 'hash_page new: ' );
+      console.log( hash_page[1] );
+
+      hash_page = '#' + hash_page[1];
+
+      console.log( 'title_href2' );
+      console.log( hash_page );
+
+      //show post
+      $( hash_page+".outer-div" ).show();
+
+      //make page link in menu active
+      $("a[href='"+document.location.hash+"']").addClass("active");
+    }
+
+
+});
+
+
+
+var clickHandler = function( event ) {
+    if ( event ) {
+        console.log( 'event' );
+        console.log( event );
+
+        title_href = $(event).attr('href');
+        console.log( 'showing link href' );
+        console.log( title_href );
+
+        $( ".title" ).removeClass("active");
+        $(event).addClass("active");
+
+        $( ".outer-div" ).hide();
+
+        //take away first hash 
+        title_href = title_href.slice(1).split('#');
+
+        console.log( 'showing link href2' );
+        console.log( title_href );
+
+        if (title_href.length == 1) {
+
+            hash_section = '#' + title_href[0];
+
+            //load page content
+            $( hash_section+".outer-div" ).show();
+        }
+
+        console.log( 'title_href new: ' );
+        console.log( title_href[1] );
+
+        title_href2 = '#' + title_href[1];
+
+        console.log( 'title_href2' );
+        console.log( title_href2 );
+
+        $( title_href2+".outer-div" ).show();
+
+    } else {
+        console.log( "this didn't come from an event!" );
+    }
+};
+
+
+
+
+</script>
+
+<!--code to open and close submenus-->
+<script type="text/javascript">
+
+//make header active that has an active link
+//$('.title.active').closest('.submenu').addClass("active");
+
+//hide all menus that aren't active
+$('.submenu').not('.active').hide();
+
+//if one of the titles is active
+if ( $( '.title.active' ).length ) {
+  //just hide the other menus
+  console.log('we have an active title');
+  //console.log($( '.title.active' ));
+  console.log($('.title').not('active').closest('.submenu'));
+
+    //if submenu not already active
+    if ( !$( '.submenu.active' ).length ) {
+      console.log('submenu not active yet');
+      //make submenu active
+      $('.title.active').closest('.submenu').addClass("active");
+
+      //slide down the submenu
+      $('.title.active').closest('.submenu').slideDown();
+    }
+
+  //$('.submenu').not('.active').slideUp();
+
+} else {
+  //hide all menus
+  //$('.header').not(".active").closest(".rounded").next().hide();
+
+  //open the menu with the active title
+  console.log('submenu to open');
+  console.log($('.title.active').parent().parent());
+
+  //$('.title.active').parent().parent().slideDown();
+  //$('.title.active').parent().parent().addClass("active");
+
+}
+
+$('.header').on('click', function(){
+  console.log('next');
+  console.log($(this).closest(".rounded").next());
+  //$(this).closest(".rounded").next().slideUp();
+
+  //if submenu is not visible
+  if(!($(this).closest(".rounded").next().is(':visible'))){
+
+    $('.header').removeClass("active");
+
+    $(this).closest(".rounded").next().slideUp();
+    $(this).closest(".rounded").next().slideDown();
+    $(this).addClass("active");
+
+    $('.header').not(".active").closest(".rounded").next().slideUp();
+    $('.header').not(".active").closest(".rounded").next().removeClass("active");
+    //$('.header').not(".active").closest(".rounded").next().slideDown();
+
+    $(this).removeClass("active");
+
+  } else {
+    $(this).closest(".rounded").next().slideUp();
+    $(this).removeClass("active");
+  }
+
+});
+
+</script>
+
+
 <script type="text/javascript">
 
 //click listeners to show and hide posts
 
-$( ".title" ).on( "click", function() {
-  
-  title_href = $(this).attr('href');
-  console.log( 'showing link href' );
-  console.log( title_href );
 
-  $( ".title" ).removeClass("active");
-  $(this).addClass("active");
 
-  $( ".outer-div" ).hide();
+$( ".title" ).on( "click", function(){
+  console.log('clicking title');
+  console.log( $( this ).text() );
 
-  //take away first hash 
+  //Stop Timeout loop
+  if(typeof myTimeout !== "undefined"){
+    clearTimeout(myTimeout);
+  }
 
-  title_href = title_href.slice(1).split('#');
-
-  console.log( 'title_href new: ' );
-  console.log( title_href[1] );
-
-  title_href2 = '#' + title_href[1];
-
-  console.log( 'title_href2' );
-  console.log( title_href2 );
-
-  $( title_href2+".outer-div" ).show();
-
+  clickHandler(this);
 });
 
-//http://stackoverflow.com/questions/17534661/make-anchor-link-go-some-pixels-above-where-its-linked-to
-// The function actually applying the offset
-function offsetAnchor() {
-    if(location.hash.length !== 0) {
-        window.scrollTo(window.scrollX, window.scrollY - 200);
-    }
-}
 
-// This will capture hash changes while on the page
-window.addEventListener("hashchange", offsetAnchor);
 
-// This is here so that when you enter the page with a hash,
-// it can provide the offset in that case too. Having a timeout
-// seems necessary to allow the browser to jump to the anchor first.
-window.setTimeout(offsetAnchor, 1); // The delay of 1 is arbitrary and may not always work right (although it did in my testing).
+
 
 </script>
 
