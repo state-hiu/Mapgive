@@ -15,6 +15,15 @@ layout: default
 {% comment %}{% assign post_size = {{site.categories[page.category].size}} %}{% endcomment %}
 {% assign post_size = {{site.categories.about.size}} %}
 
+  <ul>
+    <li class='doc rounded' style='padding:0px;'>
+      <a href="/Mapgive/box/new/" class="title header" style='padding:0px;'>
+        <img src="{{site.baseurl}}/assets/img/box_graphic_small.png" alt="MapGive in a box home page" class="img-responsive" style="width:33%;display:inline;">
+        MapGive in a Box
+      </a>
+    </li>
+  </ul>
+
   {% if post_size != 0 %}
     <ul>
     <li class='doc rounded'>
