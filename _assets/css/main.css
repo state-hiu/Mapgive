@@ -1076,6 +1076,27 @@ dt {
   margin-bottom: 50px;
 }
 
+@media (max-width: 768px) {
+    .projects-container {
+      height: 92%;
+  }
+    .projects-thumbnail .image {
+      display: inline-block;
+      width: 50%;
+  }
+    .caption {
+      display: inline-block;
+      width: 45%;
+      margin-left: 10px;
+  }
+    .img-responsive {
+      display: inline-block;
+  }
+    .projects-thumbnail .img-responsive {
+      margin-bottom: 0%;
+  }
+}
+
 @media (min-width: 768px) {
   .thumbnail {
     min-height: 308px;
