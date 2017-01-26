@@ -1095,6 +1095,9 @@ dt {
     .projects-thumbnail .img-responsive {
       margin-bottom: 0%;
   }
+    .projects-thumbnail .caption {
+      margin-top: 0%;
+  }
 }
 
 @media (min-width: 768px) {

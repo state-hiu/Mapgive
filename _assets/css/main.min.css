@@ -205,6 +205,7 @@ dt{font-weight:normal;}
 .caption{display:inline-block;width:45%;margin-left:10px;}
 .img-responsive{display:inline-block;}
 .projects-thumbnail .img-responsive{margin-bottom:0;}
+.projects-thumbnail .caption{margin-top:0;}
 }
 @media (min-width: 768px){.thumbnail{min-height:308px;}
 .thumbnail img{width:188px;height:107px;}
