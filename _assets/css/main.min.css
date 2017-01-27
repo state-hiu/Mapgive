@@ -367,7 +367,7 @@ h2,h3{page-break-after:avoid;}
 *:first-child+html .clearfix{min-height:1%;}
 #map{height:400px;}
 #map a{text-decoration:none;}
-.hiu-logo{background-position:0 -103px;display:inline-block;float:right;margin-left:23px;margin-right:13px;margin-top:24px;opacity:0.75;width:135px;}
+.hiu-logo{background-position:0 -103px;display:inline-block;float:right;margin-left:23px;margin-right:16px;margin-top:32px;opacity:0.75;width:135px;}
 .ico.icon.collecticon-star-full{padding:10px;left:20px;position:absolute;font-size:2rem;display:inline;}
 .or-text{font-weight:700;font-size:20px;padding-left:10px;padding-top:5px;}
 @media (max-width: 768px){.ico.icon.collecticon-star-full{padding:5px;left:20px;position:absolute;font-size:2rem;display:inline;}
