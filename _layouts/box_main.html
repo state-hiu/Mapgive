@@ -9,6 +9,10 @@ layout: default
   min-height: 930px;
 }
 
+#doc-nav-left {
+  min-height: 580px;
+}
+
 /*https://www.itsupportguides.com/tech-tips-tricks/how-to-offset-anchor-tag-link-using-css/
 div.anchor :before {
 content:"";
@@ -502,7 +506,7 @@ $( ".title" ).on( "click", function(){
 
   // Set the min-height of the page dynamically based on height of navigation div
   $('.doc-main').css("min-height", function() {
-    return $('#doc-nav-left').height() + 25;
+    return $('#doc-nav-left').height() + 35;
   });
   
 </script>

@@ -23,6 +23,7 @@
 .cell-main {
     padding: 5px 15px 5px 30px;
     float: left;
+    width: calc(100% - 340px);
 }
 
 .footercell { float:left; width:75%; }
@@ -443,8 +444,8 @@ body {
   border-bottom-left-radius:          5px;
 }
 .doc-main {
-  margin-left:25%;
-  min-height:540px;
+  margin-left: 290px;
+  min-height: 540px;
 }
 .doc .title{
   display:block;
