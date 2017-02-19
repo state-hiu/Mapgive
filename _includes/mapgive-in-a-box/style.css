@@ -693,6 +693,11 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
   line-height: 96px;
 }
 
+#positioner {
+    width:auto;
+    overflow-x:scroll;
+
+}
 
 /*
 #box .front  { background: hsla( 000, 100%, 50%, 0.7 ); }
@@ -747,7 +752,6 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
           transform: rotateX(  -90deg ) translateZ( 100px );
 }
 
-
 #box.show-front {
   -webkit-transform: translateZ(  -50px );
      -moz-transform: translateZ(  -50px );
@@ -800,8 +804,4 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
           transform: translateZ( -100px ) rotateX(   90deg );
 }
 
-#positioner {
-    width:auto;
-    overflow-x:scroll;
 
-}
