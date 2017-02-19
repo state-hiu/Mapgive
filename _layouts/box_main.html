@@ -23,13 +23,13 @@ margin:-90px 0 0;
 */
 
 .anchor {
-    padding-top: 90px;
-    margin-top: -90px;
+    padding-top: 500px;
+    margin-top: -500px;
 }
 
 </style>
 
-<div class='doc-nav cell-menubar padLeft cf' id='doc-nav-left'>
+<div class='doc-nav cell-menubar padLeft cf' id='doc-nav-left show-buttons'>
 
 {% comment %}{% assign post_size = {{site.categories[page.category].size}} %}{% endcomment %}
 {% assign post_size = {{site.categories.about.size}} %}
@@ -56,7 +56,7 @@ margin:-90px 0 0;
               {% unless post.hidden %}
 
                 <li class='doc rounded'>
-                    <a class='title {% comment %}{% if post.cover %}cover{% endif %}{% endcomment %} ' href="#about#{{ post.title | slugify }}">
+                    <a class='title {% comment %}{% if post.cover %}cover{% endif %}{% endcomment %} ' href="#about&{{ post.title | slugify }}">
                     <span>{{ post.title }}</span>
                     </a>
                 </li>
@@ -82,7 +82,7 @@ margin:-90px 0 0;
           {% if post.lang == page.lang %}
               {% unless post.hidden %}
                 <li class='doc rounded'>
-                    <a class='title {% if page.url == post.url %}active{% endif %}' href="#cases#{{ post.title | slugify }}">
+                    <a class='title {% if page.url == post.url %}active{% endif %}' href="#cases&{{ post.title | slugify }}">
                     <span>{{ post.title }}</span>
                     </a>
                 </li>
@@ -107,7 +107,7 @@ margin:-90px 0 0;
           {% if post.lang == page.lang %}
               {% unless post.hidden %}
                 <li class='doc rounded'>
-                    <a class='title {% if page.url == post.url %}active{% endif %}' href="#resources#{{ post.title | slugify }}">
+                    <a class='title {% if page.url == post.url %}active{% endif %}' href="#resources&{{ post.title | slugify }}">
                     <span>{{ post.title }}</span>
                     </a>
                 </li>
@@ -122,6 +122,10 @@ margin:-90px 0 0;
 
 <div class='doc-main doc cell-main'>
 
+
+  {% include mapgive-in-a-box/3d_box.html %}
+
+
   <div class="anchor outer-div" id="home" style="display: none;">
     </br>
     <h2 class='tagtitle'>What is MapGive in a Box?</h2>
@@ -132,7 +136,7 @@ margin:-90px 0 0;
 
   <div class="anchor outer-div" id="about" style="display: none;">
     </br>
-    <h2 class='tagtitle'>About</h2>
+    <!--<h2 class='tagtitle'>About</h2>-->
     <p class='tagwords'>
       The MapGive team is ready to help, and MapGive in a Box will help you prepare to work with the team. How much good can we do together?
     </p></br>
@@ -140,7 +144,7 @@ margin:-90px 0 0;
 
   <div class="anchor outer-div" id="cases" style="display: none;">
     </br>
-    <h2 class='tagtitle'>Case Studies</h2>
+    <!--<h2 class='tagtitle'>Case Studies</h2>-->
     <p class='tagwords'>
       MapGive has been utilized in a wide variety of places and settings, and range from simple, lightly resourced events to in-depth activities with substantial design and implementation support. Take a look through these Case Studies to learn more how colleagues have implemented MapGive programs.
     </p></br>
@@ -148,7 +152,7 @@ margin:-90px 0 0;
 
   <div class="anchor outer-div" id="resources" style="display: none;">
     </br>
-    <h2 class='tagtitle'>Resources</h2>
+    <!--<h2 class='tagtitle'>Resources</h2>-->
     <p class='tagwords'>
       All the resources needed to hold a MapGive engagement from start to finish. 
     </p></br>
@@ -214,6 +218,8 @@ the hashes will be parsed. the categories will determine the submenu to be opene
 and the page hashtag will load the post content
 */
 
+var panelClassName = 'show-front'
+
 //This code opens the right tab by reading the url hash.
 $( document ).ready(function() {
     console.log('doc ready called');
@@ -239,65 +245,111 @@ $( document ).ready(function() {
     $('.header').not(".active").closest(".rounded").next().removeClass("active");
     //$('.header').not(".active").closest(".rounded").next().slideDown();
 
+    console.log('hash_page length: ');
+    console.log(hash_page.length);
+
     if (hash_page.length == 1) {
 
         hash_section = '#' + hash_page[0];
 
-        //load page content
-        $( hash_section+".outer-div" ).show();
+        console.log('hash_section');
+        console.log(hash_section);
 
-        if (hash_page[0] == 'home') {
+        title_href = hash_section.slice(1).split('&');
 
-          console.log('do the loop');
+        console.log( 'showing link href2' );
+        console.log( title_href );
 
-          loop = ['#home','#about','#cases','#resources'];
+        console.log('title_href.length');
+        console.log(title_href.length);
+
+        if (title_href.length == 1) {
+
+            if (hash_page[0] == '') {
+              $( "#home" + ".outer-div" ).show();
+            } else {
+              //load page content
+              $( hash_section + ".outer-div" ).show();
+            }
+            //turn box face
+
+            if (hash_section == '#home') {
+              box.removeClassName( panelClassName );
+              panelClassName = 'show-front';
+              box.addClassName( panelClassName );
+            }
+
+            if (hash_section == '#about') {
+              box.removeClassName( panelClassName );
+              panelClassName = 'show-right';
+              box.addClassName( panelClassName );
+            }
+
+            if (hash_section == '#cases') {
+              box.removeClassName( panelClassName );
+              panelClassName = 'show-back2';
+              box.addClassName( panelClassName );
+            }
+
+            if (hash_section == '#resources') {
+              box.removeClassName( panelClassName );
+              panelClassName = 'show-left2';
+              box.addClassName( panelClassName );
+            }
 
 
-          // loop through array 
-          var i = 0, l = loop.length;
-          (function iterator() {
-              console.log('loop[i]');
-              console.log(loop[i]);
+            if (hash_page[0] == 'home' || hash_page[0] == '') {
 
-              clickHandler($('.header[href="'+loop[i]+'"]'));
+              console.log('do the loop');
 
-              console.log('i');
-              console.log(i);
-              console.log('l');
-              console.log(l);
+              loop = ['#home','#about','#cases','#resources'];
 
-              if(i==l-1) {
-                i=-1;
-              }
+              // loop through array 
+              var i = 0, l = loop.length;
+              (function iterator() {
+                  console.log('loop[i]');
+                  console.log(loop[i]);
 
-              if(++i<l) {
-                  myTimeout = setTimeout(iterator, 4000);
-              }
-          })();
+                  clickHandler($('.header[href="'+loop[i]+'"]'));
 
-          
+                  console.log('i');
+                  console.log(i);
+                  console.log('l');
+                  console.log(l);
+
+                  if(i==l-1) {
+                    i=-1;
+                  }
+
+                  if(++i<l) {
+                      myTimeout = setTimeout(iterator, 8000);
+                  }
+              })();
+            }
         }
-    }
 
-    if (hash_page.length > 1) {
-      console.log( 'hash_page new: ' );
-      console.log( hash_page[1] );
+        if (title_href.length == 2) {
 
-      hash_page = '#' + hash_page[1];
+          $( ".box-container" ).hide();
 
-      console.log( 'title_href2' );
-      console.log( hash_page );
+          console.log( 'title_href new: ' );
+          console.log( title_href[1] );
 
-      //show post
-      $( hash_page+".outer-div" ).show();
+          title_href2 = '#' + title_href[1];
 
-      //make page link in menu active
-      $("a[href='"+document.location.hash+"']").addClass("active");
+          console.log( 'title_href2' );
+          console.log( title_href2 );
+
+          $( title_href2 + ".outer-div" ).show();
+
+          //make page link in menu active
+          $("a[href='"+document.location.hash+"']").addClass("active");
+
+        }
     }
 
 
 });
-
 
 
 var clickHandler = function( event ) {
@@ -306,6 +358,7 @@ var clickHandler = function( event ) {
         console.log( event );
 
         title_href = $(event).attr('href');
+
         console.log( 'showing link href' );
         console.log( title_href );
 
@@ -313,19 +366,52 @@ var clickHandler = function( event ) {
         $(event).addClass("active");
 
         $( ".outer-div" ).hide();
+        $( ".box-container" ).hide();
 
         //take away first hash 
-        title_href = title_href.slice(1).split('#');
+        title_href = title_href.slice(1).split('&');
 
         console.log( 'showing link href2' );
         console.log( title_href );
 
+        console.log('title_href.length');
+        console.log(title_href.length);
+
+        //if just one hash, ex #cases
         if (title_href.length == 1) {
 
             hash_section = '#' + title_href[0];
 
             //load page content
-            $( hash_section+".outer-div" ).show();
+            $( hash_section + ".outer-div" ).show();
+            $( ".box-container" ).show();
+
+            //turn box face
+
+            if (hash_section == '#home') {
+              box.removeClassName( panelClassName );
+              panelClassName = 'show-front';
+              box.addClassName( panelClassName );
+            }
+
+            if (hash_section == '#about') {
+              box.removeClassName( panelClassName );
+              panelClassName = 'show-right';
+              box.addClassName( panelClassName );
+            }
+
+            if (hash_section == '#cases') {
+              box.removeClassName( panelClassName );
+              panelClassName = 'show-back2';
+              box.addClassName( panelClassName );
+            }
+
+            if (hash_section == '#resources') {
+              box.removeClassName( panelClassName );
+              panelClassName = 'show-left2';
+              box.addClassName( panelClassName );
+            }
+
         }
 
         console.log( 'title_href new: ' );
@@ -336,7 +422,7 @@ var clickHandler = function( event ) {
         console.log( 'title_href2' );
         console.log( title_href2 );
 
-        $( title_href2+".outer-div" ).show();
+        $( title_href2 + ".outer-div" ).show();
 
     } else {
         console.log( "this didn't come from an event!" );
