@@ -21,7 +21,7 @@
 .cell-menubar { float:left; width:300px; }
 
 .cell-main {
-    padding: 5px 15px 5px 30px;
+    padding: 5px 15px 5px 10px;
     float: left;
     width: calc(100% - 340px);
 }
@@ -40,7 +40,7 @@
 }
 
 .padLeft {
-    padding: 0px 5px 0px 10px;
+    padding: 0px 10px 0px 10px;
     display: inline-block;
 }
 
@@ -408,8 +408,10 @@ body {
 
 /* doc nav */
 .doc-nav {
-  position:absolute;
-  padding-top: 20px;
+  /*position:absolute;*/
+  padding-top: 15px;
+  position: fixed;
+  margin-left: -320px;
 }
 .doc-nav.fixed {
   position:fixed;
@@ -444,8 +446,9 @@ body {
   border-bottom-left-radius:          5px;
 }
 .doc-main {
-  margin-left: 290px;
+  margin-left: 300px;
   min-height: 540px;
+  position: relative;
 }
 
 .doc-main img {
@@ -797,4 +800,8 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
           transform: translateZ( -100px ) rotateX(   90deg );
 }
 
+#positioner {
+    width:auto;
+    overflow-x:scroll;
 
+}

@@ -23,105 +23,110 @@ margin:-90px 0 0;
 */
 
 .anchor {
-    padding-top: 500px;
-    margin-top: -500px;
+    padding-top: 620px;
+    margin-top: -620px;
 }
 
 </style>
 
-<div class='doc-nav cell-menubar padLeft cf' id='doc-nav-left show-buttons'>
 
-{% comment %}{% assign post_size = {{site.categories[page.category].size}} %}{% endcomment %}
-{% assign post_size = {{site.categories.about.size}} %}
-
-  <ul>
-    <li class='doc rounded' style='padding:0px;'>
-      <a href="#home" class="title header" style='padding:0px;'>
-        <img src="{{site.baseurl}}/assets/img/box_graphic_small.png" alt="MapGive in a box home page" class="img-responsive" style="width:33%;display:inline;">
-        MapGive in a Box
-      </a>
-    </li>
-  </ul>
-
-  {% if post_size != 0 %}
-    <ul>
-    <li class='doc rounded'>
-        <a class='title header' href='#about'> 
-        <span>About</span>
-        </a>
-    </li>
-    <div class="submenu">
-      {% for post in site.categories.about reversed %}
-          {% if post.lang == page.lang %}
-              {% unless post.hidden %}
-
-                <li class='doc rounded'>
-                    <a class='title {% comment %}{% if post.cover %}cover{% endif %}{% endcomment %} ' href="#about&{{ post.title | slugify }}">
-                    <span>{{ post.title }}</span>
-                    </a>
-                </li>
-              {% endunless %}
-          {% endif %}
-      {% endfor %}
-    </div>
-    </ul>
-  {% endif %}
-
-
-{% assign post_size_cases = {{site.categories.cases.size}} %}
-
-  {% if post_size_cases != 0 %}
-    <ul>
-    <li class='doc rounded'>
-        <a class='title header' href='#cases'>
-        <span>Case Studies</span>
-        </a>
-    </li>
-    <div class="submenu">
-      {% for post in site.categories.cases reversed %}
-          {% if post.lang == page.lang %}
-              {% unless post.hidden %}
-                <li class='doc rounded'>
-                    <a class='title {% if page.url == post.url %}active{% endif %}' href="#cases&{{ post.title | slugify }}">
-                    <span>{{ post.title }}</span>
-                    </a>
-                </li>
-              {% endunless %}
-          {% endif %}
-      {% endfor %}
-    </div>
-    </ul>
-  {% endif %}
-
-{% assign post_size = {{site.categories.resources.size}} %}
-
-  {% if post_size != 0 %}
-    <ul>
-    <li class='doc rounded'>
-        <a class='title header' href='#resources'>
-        <span>Resources</span>
-        </a>
-    </li>
-    <div class="submenu">
-      {% for post in site.categories.resources reversed %}
-          {% if post.lang == page.lang %}
-              {% unless post.hidden %}
-                <li class='doc rounded'>
-                    <a class='title {% if page.url == post.url %}active{% endif %}' href="#resources&{{ post.title | slugify }}">
-                    <span>{{ post.title }}</span>
-                    </a>
-                </li>
-              {% endunless %}
-          {% endif %}
-      {% endfor %}
-    </div>
-    </ul>
-  {% endif %}
-
-</div>
 
 <div class='doc-main doc cell-main'>
 
+  <div class='doc-nav cell-menubar padLeft cf' id='doc-nav-left show-buttons'>
+
+    {% comment %}{% assign post_size = {{site.categories[page.category].size}} %}{% endcomment %}
+    {% assign post_size = {{site.categories.about.size}} %}
+
+      <ul>
+        <li class='doc rounded' style='padding:0px;'>
+          <a href="#home" class="title header" style='padding:0px;'>
+            <img src="{{site.baseurl}}/assets/img/box_graphic_small.png" alt="MapGive in a box home page" class="img-responsive" style="width:33%;display:inline;">
+            MapGive in a Box
+          </a>
+        </li>
+      </ul>
+
+      {% if post_size != 0 %}
+        <ul>
+        <li class='doc rounded'>
+            <a class='title header' href='#about'> 
+            <span>About</span>
+            </a>
+        </li>
+        <div class="submenu">
+          {% for post in site.categories.about reversed %}
+              {% if post.lang == page.lang %}
+                  {% unless post.hidden %}
+
+                    <li class='doc rounded'>
+                        <a class='title {% comment %}{% if post.cover %}cover{% endif %}{% endcomment %} ' href="#about&{{ post.title | slugify }}">
+                        <span>{{ post.title }}</span>
+                        </a>
+                    </li>
+                  {% endunless %}
+              {% endif %}
+          {% endfor %}
+        </div>
+        </ul>
+      {% endif %}
+
+
+    {% assign post_size_cases = {{site.categories.cases.size}} %}
+
+      {% if post_size_cases != 0 %}
+        <ul>
+        <li class='doc rounded'>
+            <a class='title header' href='#cases'>
+            <span>Case Studies</span>
+            </a>
+        </li>
+        <div class="submenu">
+          {% for post in site.categories.cases reversed %}
+              {% if post.lang == page.lang %}
+                  {% unless post.hidden %}
+                    <li class='doc rounded'>
+                        <a class='title {% if page.url == post.url %}active{% endif %}' href="#cases&{{ post.title | slugify }}">
+                        <span>{{ post.title }}</span>
+                        </a>
+                    </li>
+                  {% endunless %}
+              {% endif %}
+          {% endfor %}
+        </div>
+        </ul>
+      {% endif %}
+
+    {% assign post_size = {{site.categories.resources.size}} %}
+
+      {% if post_size != 0 %}
+        <ul>
+        <li class='doc rounded'>
+            <a class='title header' href='#resources'>
+            <span>Resources</span>
+            </a>
+        </li>
+        <div class="submenu">
+          {% for post in site.categories.resources reversed %}
+              {% if post.lang == page.lang %}
+                  {% unless post.hidden %}
+                    <li class='doc rounded'>
+                        <a class='title {% if page.url == post.url %}active{% endif %}' href="#resources&{{ post.title | slugify }}">
+                        <span>{{ post.title }}</span>
+                        </a>
+                    </li>
+                  {% endunless %}
+              {% endif %}
+          {% endfor %}
+        </div>
+        </ul>
+      {% endif %}
+
+  </div>
+
+  <!-- http://stackoverflow.com/questions/19230537/how-to-make-content-next-to-a-fixed-position-menu-not-overlap-in-smaller-resolut -->
+  <!-- http://jsfiddle.net/YE7ZZ/4/ -->
+  <div id="positioner">
 
   {% include mapgive-in-a-box/3d_box.html %}
 
@@ -203,9 +208,8 @@ margin:-90px 0 0;
       {% endif %}
   {% endfor %}
 
-
+  </div>
 </div>
-
 
 
 <script type="text/javascript">
@@ -557,6 +561,7 @@ $( ".title" ).on( "click", function(){
   
   // make title nav sticky
   
+  /*
   $(document).ready(function(){
   	var nav = $('.doc-nav'),
       	navTop = nav.offset().top,
@@ -585,6 +590,7 @@ $( ".title" ).on( "click", function(){
     	}
   	});
   });
+*/
 
   // get the second url of doc nav and make it the url of the 'proceed' link
   var proceedTo = $('.doc-nav li:nth-child(2) a').attr('href');
@@ -593,6 +599,11 @@ $( ".title" ).on( "click", function(){
   // Set the min-height of the page dynamically based on height of navigation div
   $('.doc-main').css("min-height", function() {
     return $('#doc-nav-left').height() + 35;
+  });
+
+  //http://stackoverflow.com/questions/17534661/make-anchor-link-go-some-pixels-above-where-its-linked-to
+  window.addEventListener("hashchange", function () {
+    window.scrollTo(window.scrollX, window.scrollY - 100);
   });
   
 </script>

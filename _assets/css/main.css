@@ -116,7 +116,7 @@ dt {
 
 .navbar.affix + #main {
   /* padding-top needs to be total height of .navbar */
-  padding-top: 63px;
+  padding-top: 70px;
 }
 
 @media (max-width: 991px) {
