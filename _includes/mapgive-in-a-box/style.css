@@ -409,7 +409,7 @@ body {
 /* doc nav */
 .doc-nav {
   /*position:absolute;*/
-  padding-top: 15px;
+  padding-top: 5px;
   position: fixed;
   margin-left: -320px;
 }
