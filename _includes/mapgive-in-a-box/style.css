@@ -695,7 +695,7 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
 
 #positioner {
     width:auto;
-    overflow-x:scroll;
+    overflow-x:auto;
 
 }
 
