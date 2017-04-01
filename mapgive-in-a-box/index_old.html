@@ -1,0 +1,145 @@
+---
+layout: default
+permalink: 
+lang: en
+teachtitle: What is MapGive in a Box?
+teachintro: "This guide contains the collective wisdom of the MapGive team, and partners who have organized MapGive events and projects. The goal is to provide clear guidelines for engagement and project design with the MapGive program, for someone with no background in mapping."
+osmtitle: What is MapGive?
+osmintro: "MapGive is a Department of State public diplomacy program designed to engage volunteers to map in OpenStreetMap for humanitarian and development missions."
+ourguides: Our Guides
+searchtext: What are you looking for?
+begspan: Why MapGive in a Box?
+beg: Let us tell you more...
+beglink: ./en/intro/
+interspan: Event Planning Guide
+interspanlink: ./en/process/
+inter: Prepare a successful mapping event
+advspan: Case Studies
+adv: Showcase MapGive Engagements
+advspanlink: ./en/cases/
+faq: Site Navigation
+faqA: About this site
+faqB: Workflow
+faqC: Case Studies
+faqD: Resources
+---
+
+<meta charset="UTF-8">
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'>
+
+<title>MapGive in a Box</title>
+
+<link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" >
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic |Quattrocento:400,700' rel='stylesheet' type='text/css'>
+
+<style>
+.slider { position: relative; overflow: auto; }
+    .slider li { list-style: none; }
+        .slider ul li { float: left; }
+</style>
+
+<style type="text/css">
+{% include mapgive-in-a-box/style.css %}
+</style>
+
+<link href="{{ site.baseurl }}/assets/css/unslider-combined.css" rel="stylesheet" >
+
+<script src="{{ site.baseurl }}/site.js"></script>
+
+
+<div id='ads' class='padAll clear'>
+
+  <div class='ad1 cell-left'>
+    <a href='{{page.beglink}}' style="overflow: hidden;">
+      <span class='ad-title'>{{ page.begspan }}</span>
+      <span class='ad-txt'>{{ page.beg }}</span>
+      <span class='door'></span>
+    </a>
+  </div>
+
+  <div class='ad2 cell-right clear'>
+    <a href='{{page.interspanlink}}'>
+      <span class='ad-title'>{{page.interspan}}</span>
+      <span class='ad-txt'>{{ page.inter }}</span>
+    </a>
+  </div>
+  <div class='ad3 cell-right clear'>
+    <a href='{{page.advspanlink}}'>
+      <span class='ad-title'>{{page.advspan}}</span>
+      <span class='ad-txt'>{{page.adv}}</span>
+    </a>
+  </div>
+
+</div>
+
+<!--
+<div class="my-slider">
+	<ul>
+		<li>My slide</li>
+		<li>Another slide</li>
+		<li>My last slide</li>
+	</ul>
+</div>
+-->
+
+<div class='padAll clear'>
+      <form class='searchbox rounded'>
+        <span class='logo-search'></span>
+        <input id='search-field' type='text' name='search' class='default-value cell10'></input>
+      </form>
+</div>
+
+<div id='front' class='padAll clear'>
+      <div class='front-text cell6'>
+        <h4 class='tagtitle'>{{ page.teachtitle }}</h4>
+        <p class='tagwords'>{{ page.teachintro }}</p></br>
+
+        <h4 class='tagtitle'>{{ page.osmtitle }}</h4>
+        <p class='tagwords'>{{ page.osmintro }}</p>
+       </div>
+
+      <div class='case-ad my-slider2' style="width:90%">
+          <ul>
+              {% for post in site.categories.cases reversed %}
+              {% if post.lang == page.lang and post.image %}{% unless post.hidden %}
+                <li>
+                    <a href="{{site.baseurl}}{{ post.url }}">
+                        <span class='ad-title'>Case Study: {{ post.title }}</span>
+                        <span><img  class="cell12" src="{{site.baseurl}}/assets/img/{{post.image}}"/></span>
+                    </a>
+                </li>
+              {% endunless %}{% endif %}
+              {% endfor %}
+          </ul>
+      </div>
+
+</div>
+
+<script>
+// detect if ad is overflowing
+/*
+var spanTitle = $('span.ad-title','#ads');
+  $.each(spanTitle, function(i,el){
+  var titleParent = el.parentElement,
+      titleSister = el.nextElementSibling;
+  var titleHeight = el.offsetHeight,
+      txtHeight = titleSister.offsetHeight,
+      adHeight = titleParent.offsetHeight;
+  if (titleHeight + txtHeight > adHeight) {
+    titleSister.style.display = 'none'
+  } 
+});
+*/
+</script>
+
+<script>
+  window.app = window.app || {};
+  window.app.permalink = '{{page.permalink}}';
+  window.app.baseurl = '{{site.baseurl}}';
+  window.app.lang = '{{page.lang}}';
+</script>
+
+
+
+
+

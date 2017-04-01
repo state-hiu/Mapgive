@@ -1,8 +1,8 @@
 ---
 layout: box
-permalink: /en/resources/schwag/
+permalink: /en/resources/printables/
 lang: en
-title: Schwag
+title: Printables
 category: resources
 published: true
 ---

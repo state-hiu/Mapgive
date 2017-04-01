@@ -27,6 +27,8 @@ margin:-90px 0 0;
     margin-top: -620px;
 }
 
+.submenu{display:none}
+
 </style>
 
 
@@ -224,137 +226,6 @@ and the page hashtag will load the post content
 
 var panelClassName = 'show-front'
 
-//This code opens the right tab by reading the url hash.
-$( document ).ready(function() {
-    console.log('doc ready called');
-    console.log('doc loc hash');
-    console.log(document.location.hash);
-    // Javascript to enable link to tab
-    var hash = document.location.hash;
-
-    hash_page = hash.slice(1).split('#');
-
-    console.log('hash page 1');
-    console.log(hash_page[0]);
-
-    //remove active from existing headers
-    $('.header').removeClass("active");
-
-    $("a[href='#"+hash_page[0]+"']").closest(".rounded").next().slideUp();
-
-    $("a[href='#"+hash_page[0]+"']").closest(".rounded").next().slideDown();
-    $("a[href='#"+hash_page[0]+"']").addClass("active");
-
-    $('.header').not(".active").closest(".rounded").next().slideUp();
-    $('.header').not(".active").closest(".rounded").next().removeClass("active");
-    //$('.header').not(".active").closest(".rounded").next().slideDown();
-
-    console.log('hash_page length: ');
-    console.log(hash_page.length);
-
-    if (hash_page.length == 1) {
-
-        hash_section = '#' + hash_page[0];
-
-        console.log('hash_section');
-        console.log(hash_section);
-
-        title_href = hash_section.slice(1).split('&');
-
-        console.log( 'showing link href2' );
-        console.log( title_href );
-
-        console.log('title_href.length');
-        console.log(title_href.length);
-
-        if (title_href.length == 1) {
-
-            if (hash_page[0] == '') {
-              $( "#home" + ".outer-div" ).show();
-            } else {
-              //load page content
-              $( hash_section + ".outer-div" ).show();
-            }
-            //turn box face
-
-            if (hash_section == '#home') {
-              box.removeClassName( panelClassName );
-              panelClassName = 'show-front';
-              box.addClassName( panelClassName );
-            }
-
-            if (hash_section == '#about') {
-              box.removeClassName( panelClassName );
-              panelClassName = 'show-right';
-              box.addClassName( panelClassName );
-            }
-
-            if (hash_section == '#cases') {
-              box.removeClassName( panelClassName );
-              panelClassName = 'show-back2';
-              box.addClassName( panelClassName );
-            }
-
-            if (hash_section == '#resources') {
-              box.removeClassName( panelClassName );
-              panelClassName = 'show-left2';
-              box.addClassName( panelClassName );
-            }
-
-
-            if (hash_page[0] == 'home' || hash_page[0] == '') {
-
-              console.log('do the loop');
-
-              loop = ['#home','#about','#cases','#resources'];
-
-              // loop through array 
-              var i = 0, l = loop.length;
-              (function iterator() {
-                  console.log('loop[i]');
-                  console.log(loop[i]);
-
-                  clickHandler($('.header[href="'+loop[i]+'"]'));
-
-                  console.log('i');
-                  console.log(i);
-                  console.log('l');
-                  console.log(l);
-
-                  if(i==l-1) {
-                    i=-1;
-                  }
-
-                  if(++i<l) {
-                      myTimeout = setTimeout(iterator, 8000);
-                  }
-              })();
-            }
-        }
-
-        if (title_href.length == 2) {
-
-          $( ".box-container" ).hide();
-
-          console.log( 'title_href new: ' );
-          console.log( title_href[1] );
-
-          title_href2 = '#' + title_href[1];
-
-          console.log( 'title_href2' );
-          console.log( title_href2 );
-
-          $( title_href2 + ".outer-div" ).show();
-
-          //make page link in menu active
-          $("a[href='"+document.location.hash+"']").addClass("active");
-
-        }
-    }
-
-
-});
-
 
 var clickHandler = function( event ) {
     if ( event ) {
@@ -434,6 +305,186 @@ var clickHandler = function( event ) {
 };
 
 
+var linkHandler = function(link) {
+
+
+    console.log('doc ready called');
+    console.log('doc loc hash');
+    console.log(document.location.hash);
+
+
+    if (link) {
+      console.log('link!');
+      console.log(link);
+      link = link.slice(1).split('#');
+      link = '#' + link[1];
+      console.log('link hash!');
+      console.log(link);
+    } else {
+      // Javascript to enable link to tab
+      var link = document.location.hash;
+    }
+
+    console.log('link!2');
+    console.log(link);
+
+    hash_page = link.slice(1).split('#');
+
+    console.log('hash page 1');
+    console.log(hash_page[0]);
+
+    console.log('hash page 2');
+    console.log(hash_page[1]);
+
+    section = hash_page[0].slice(0).split('&');
+
+    console.log('section');
+    console.log(section);
+
+    //remove active from existing headers
+    $('.header').removeClass("active");
+
+    /*if ($("a[href='#"+section[0]+"']").closest(".rounded").next().is(':visible'))) {
+
+    }*/
+    
+
+    $("a[href='#"+section[0]+"']").closest(".rounded").next().slideDown();
+    $("a[href='#"+section[0]+"']").addClass("active");
+
+    $('.header').not(".active").closest(".rounded").next().slideUp();
+    $('.header').not(".active").closest(".rounded").next().removeClass("active");
+
+    console.log('hash_page length: ');
+    console.log(hash_page.length);
+
+
+    if (hash_page.length == 1) {
+
+        hash_section = '#' + hash_page[0];
+
+        console.log('hash_section');
+        console.log(hash_section);
+
+        title_href = hash_section.slice(1).split('&');
+
+        console.log( 'showing link href2' );
+        console.log( title_href );
+
+        console.log('title_href.length');
+        console.log(title_href.length);
+
+        if (title_href.length == 1) {
+
+            if (hash_page[0] == '') {
+              $( "#home" + ".outer-div" ).show();
+            } else {
+              $( ".outer-div" ).hide();
+              $( ".box-container" ).show();
+              //load page content
+              $( hash_section + ".outer-div" ).show();
+            }
+            //turn box face
+
+            if (hash_section == '#home') {
+              box.removeClassName( panelClassName );
+              panelClassName = 'show-front';
+              box.addClassName( panelClassName );
+            }
+
+            if (hash_section == '#about') {
+              box.removeClassName( panelClassName );
+              panelClassName = 'show-right';
+              box.addClassName( panelClassName );
+            }
+
+            if (hash_section == '#cases') {
+              box.removeClassName( panelClassName );
+              panelClassName = 'show-back2';
+              box.addClassName( panelClassName );
+            }
+
+            if (hash_section == '#resources') {
+              box.removeClassName( panelClassName );
+              panelClassName = 'show-left2';
+              box.addClassName( panelClassName );
+            }
+
+
+            if (hash_page[0] == 'home' || hash_page[0] == '') {
+
+              console.log('do the loop');
+
+              loop = ['#home','#about','#cases','#resources'];
+
+              // loop through array 
+              var i = 0, l = loop.length;
+              (function iterator() {
+                  console.log('loop[i]');
+                  console.log(loop[i]);
+
+                  clickHandler($('.header[href="'+loop[i]+'"]'));
+
+                  console.log('i');
+                  console.log(i);
+                  console.log('l');
+                  console.log(l);
+
+                  if(i==l-1) {
+                    i=-1;
+                  }
+
+                  if(++i<l) {
+                      myTimeout = setTimeout(iterator, 8000);
+                  }
+              })();
+            }
+        }
+
+        if (title_href.length == 2) {
+
+          $( ".box-container" ).hide();
+
+          $( ".outer-div" ).hide();
+
+          console.log( 'title_href new: ' );
+          console.log( title_href[1] );
+
+          title_href2 = '#' + title_href[1];
+
+          console.log( 'title_href2' );
+          console.log( title_href2 );
+
+          $( title_href2 + ".outer-div" ).show();
+
+          $( ".title" ).removeClass("active");
+
+          //make page link in menu active
+          $("a[href='"+hash_section+"']").addClass("active");
+
+        }
+    }
+
+}
+ 
+window.onload = linkHandler();
+
+
+$(window).bind('hashchange', function() {
+ linkHandler();
+});
+
+//This code opens the right tab by reading the url hash.
+/*$( document ).ready(function() {
+
+    linkHandler();
+
+});*/
+
+
+
+
+
 
 
 </script>
@@ -464,7 +515,6 @@ if ( $( '.title.active' ).length ) {
       $('.title.active').closest('.submenu').slideDown();
     }
 
-  //$('.submenu').not('.active').slideUp();
 
 } else {
   //hide all menus

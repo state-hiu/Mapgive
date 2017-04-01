@@ -15,14 +15,14 @@ Learn more [About Open Mapping](http://mapgive.state.gov/about-open-mapping/) an
 
 ## MapGive Capabilities
 
-The [MapGive](http://mapgive.state.gov/) program provides a number of capabilities to assist Posts in public diplomacy through Open Mapping, and support the OpenStreetMap community. 
+The MapGive program provides a number of capabilities to assist Posts in public diplomacy through Open Mapping, and support the OpenStreetMap community. 
 
 * Fill gaps in satellite imagery through Imagery to the Crowd. 
 * Share knowledge in event organization.
 * With deep links in the OpenStreetMap and humanitarian response communities, connect with the global network.
 * Utilize technical and analysis services, like events statistics and GeoNode.
 
-Learn more in [Process from Start to Finish]({{site.baseurl}}/en/process).
+Learn more in [Process from Start to Finish](#resources&start-to-finish).
 
 ## Types of MapGive Engagements
 
@@ -34,4 +34,4 @@ There are two main kinds of MapGive engagements.
 
 ## Get Started 
 
-From here, it can be very helpful to read about how MapGive has been implemented in [Case Studies]({{site.baseurl}}/en/cases/).
+From here, it can be very helpful to read about how MapGive has been implemented in [Case Studies](#cases).

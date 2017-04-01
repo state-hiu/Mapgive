@@ -25,4 +25,4 @@ The [HOT Activation Protocol](http://hotosm.org/sites/default/files/HOTActivatio
 
 ![Partners]({{site.baseurl}}/assets/img/partners.jpg)
 
-And always count on the strong network of [partners]({{site.baseurl}}/box/en/process/partners) for even more help and insights.
+And always count on the strong network of [partners](#resources&form-partnerships) for even more help and insights.
