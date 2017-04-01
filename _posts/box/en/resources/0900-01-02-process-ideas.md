@@ -33,7 +33,7 @@ A number of considerations, more involved than mapathon, in identifying the righ
 
 Once a need and method are identified, look at exact kind of features to collect. Roads and buildings are the common base infrastructure mapped, especially when mapping remotely using satellite imagery. With local knowledge, it's possible to collect things like schools, clinics, government offices, markets, transportation infrastructure, cultural sites, recreation areas, agricultural land use, etc.
 
-In some cases, existing aerial imagery available to OSM may not be sufficient. There may be no imagery, or more up to date imagery is necessary. In this case, consider making an [Imagery to the Crowd](http://mapgive.state.gov/ittc/) request.
+In some cases, existing aerial imagery available to OSM may not be sufficient. There may be no imagery, or more up to date imagery is necessary. In this case, consider making an [Imagery to the Crowd]({{site.baseurl}}/ittc/) request.
 
 Also, there may be existing data, from government or civil society, which could be incorprated in the mapping project. The MapGive team can help evaluate whether other data sources are permissable and useful for import into OpenStreetMap.
 
@@ -43,6 +43,6 @@ Open Data is a global movement to make the information and representations of ou
 
 Partnerships and building a strong network around mapping activities is key. In fact, a major benefit of OSM is how it easily allows collaborations between different institutions, because the data is so open. 
 
-Mapping projects can be seen as one point along a process. The data is not an end point in itself, but a tool to achieve some other impact. Think through approaches to sustaining the activities and opportunities from the onset. This is where [partnships]({{site.baseurl}}/en/process/partners) are especially critical.
+Mapping projects can be seen as one point along a process. The data is not an end point in itself, but a tool to achieve some other impact. Think through approaches to sustaining the activities and opportunities from the onset. This is where [partnerships](#resources&form-partnerships) are especially critical.
 
 

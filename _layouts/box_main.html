@@ -175,7 +175,7 @@ margin:-90px 0 0;
       {% if post.lang == page.lang %}
           {% unless post.hidden %}
             
-            <div class="outer-div" id="{{ post.title | slugify }}" style="display: none;">
+            <div class="anchor outer-div" id="{{ post.title | slugify }}" style="display: none;">
               <h1>{{post.title}}</h1>
               {{ post.content }}
             </div>
@@ -188,7 +188,7 @@ margin:-90px 0 0;
       {% if post.lang == page.lang %}
           {% unless post.hidden %}
             
-            <div class="outer-div" id="{{ post.title | slugify }}" style="display: none;">
+            <div class="anchor outer-div" id="{{ post.title | slugify }}" style="display: none;">
               <h1>{{post.title}}</h1>
               {{ post.content }}
             </div>
@@ -201,7 +201,7 @@ margin:-90px 0 0;
       {% if post.lang == page.lang %}
           {% unless post.hidden %}
             
-            <div class="outer-div" id="{{ post.title | slugify }}" style="display: none;">
+            <div class="anchor outer-div" id="{{ post.title | slugify }}" style="display: none;">
               <h1>{{post.title}}</h1>
               {{ post.content }}
             </div>
@@ -454,6 +454,9 @@ var linkHandler = function(link) {
 
           console.log( 'title_href2' );
           console.log( title_href2 );
+
+          //scrolls to the top of the page
+          window.scrollTo(0,0);
 
           $( title_href2 + ".outer-div" ).show();
 

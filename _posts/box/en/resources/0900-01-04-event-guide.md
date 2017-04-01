@@ -11,9 +11,9 @@ published: true
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/FA6QBlnUcWo" frameborder="0" allowfullscreen></iframe>
 
-Here are helpful tips for organizing an event, from recruiting participants, logistics on the day, to follow up. The suggestions here are summarized in the [event checklist]({{site.baseurl}}/en/resources/event-checklist/). The video "What is an OpenStreetMap Mapping Party?" shows the atmosphere of these kind of events.
+Here are helpful tips for organizing an event, from recruiting participants, logistics on the day, to follow up. The suggestions here are summarized in the [event checklist](#resources&event-checklist). The video "What is an OpenStreetMap Mapping Party?" shows the atmosphere of these kind of events.
 
-Also, there are even more good ideas for <a href="http://education.nationalgeographic.com/media/file/HowTo_Event_Educators.pdf">event planning shared by National Geographic for Geography Awareness Week</a>, and the <a href="http://wiki.openstreetmap.org/wiki/Mapping_Weekend_Howto">OSM Mapping Weekend HOWTO</a>.
+Also, there are even more good ideas for event planning shared by the <a href="http://wiki.openstreetmap.org/wiki/Mapping_Weekend_Howto">OSM Mapping Weekend HOWTO</a>.
 
 For educators, we are launching <a href="http://teachosm.org/">TeachOSM</a>, guidance for bringing OpenStreetMap into the classroom.
 
@@ -21,7 +21,7 @@ For educators, we are launching <a href="http://teachosm.org/">TeachOSM</a>, gui
 
 Students are a primary audience, but the event can also to professionals/citizens who likely to have GIS/OSM skills or interest. And reach out beyond geography and GIS; particularly for students studying international affairs or international students, there would be interest in international humanitarian efforts. Outside of school, there may be local meetups or OSM groups with whom to coordinate.
 
-Nearly all of the strategies produce results by either connecting to unique groups or reinforcing the message to the point that people committed to participating.  Put your marketing hat on. For each email, flyer, calendar posting customize it to what would be of interest to that group. For instance, to international students, emphasize that they would gain skills that would allow them to assist when humanitarian disasters strike their own countries; to the OSM enthusiasts promote it as a humanitarian OSM event, etc.  The <a href="http://mapgive.state.gov/why-map/">Map Give Why Map Video</a> is a great starting point for all.
+Nearly all of the strategies produce results by either connecting to unique groups or reinforcing the message to the point that people committed to participating.  Put your marketing hat on. For each email, flyer, calendar posting customize it to what would be of interest to that group. For instance, to international students, emphasize that they would gain skills that would allow them to assist when humanitarian disasters strike their own countries; to the OSM enthusiasts promote it as a humanitarian OSM event, etc.  The <a href="{{site.baseurl}}/why-map/">Map Give Why Map Video</a> is a great starting point for all.
 
 ### Emails
 
