@@ -657,6 +657,10 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
   color: white;
 }
 
+#box figure .text-top{
+  padding-top: 40px;
+}
+
 #box figure .text-center{
   padding-top: 110px;
 }
@@ -710,8 +714,21 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
   background-image: url("./../assets/img/ramallah.jpg"); 
   background-size: cover;
 }
-#box .right  { background: #d73f3f; }
-#box .left   { background: #9bb9ff; }
+
+/*#box .right  { background: #d73f3f; }*/
+
+#box .right   { 
+  background-image: url("./../assets/img/mapgive-logo-blank.png"); 
+  background-size: cover;
+}
+
+/*#box .left   { background: #9bb9ff; }*/
+
+#box .left   { 
+  background-image: url("./../assets/img/mapgive_stickers.png"); 
+  background-size: cover;
+}
+
 #box .top    { background: hsla( 240, 100%, 50%, 0.7 ); }
 #box .bottom { background: hsla( 300, 100%, 50%, 0.7 ); }
 

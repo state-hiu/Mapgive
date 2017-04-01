@@ -23,6 +23,6 @@ The [HOT Activation Protocol](http://hotosm.org/sites/default/files/HOTActivatio
 
 ## MapGive Partners
 
-![Partners]({{site.baseurl}}/assets/img/partners.jpg)
+<img src="{{site.baseurl}}/assets/img/partners.jpg" alt="partners" style="width:400px">
 
 And always count on the strong network of [partners](#resources&form-partnerships) for even more help and insights.
