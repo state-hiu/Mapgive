@@ -1,6 +1,6 @@
 ---
 layout: resource
-category: schwag
+category: printable
 #external_url: 'http://tasks.hotosm.org/project/2030'
 title: "I Mapped sticker"
 author: MapGive
