@@ -26,7 +26,7 @@ dt{font-weight:normal;}
 }
 @media (min-width: 768px){#main{padding-bottom:300px;}
 }
-.navbar.affix+#main{padding-top:63px;}
+.navbar.affix+#main{padding-top:70px;}
 @media (max-width: 991px){.navbar.affix+#main{padding-top:110px;}
 }
 @media (max-width: 768px){.navbar.affix+#main{padding-top:75px;}
@@ -200,6 +200,13 @@ dt{font-weight:normal;}
 .projects-thumbnail .caption{margin-top:-50%;font-size:.8em;color:#666;}
 .projects-thumbnail{padding-top:15px;padding-right:10px;padding-bottom:0;padding-left:10px;border:1px solid #bcbcbc;box-shadow:1px 1px 7px -3px #888;border-radius:0;min-height:208px;margin-top:20px;margin-bottom:20px;margin:5px;}
 .story{margin-bottom:50px;}
+@media (max-width: 768px){.projects-container{height:92%;}
+.projects-thumbnail .image{display:inline-block;width:50%;}
+.caption{display:inline-block;width:45%;margin-left:10px;}
+.img-responsive{display:inline-block;}
+.projects-thumbnail .img-responsive{margin-bottom:0;}
+.projects-thumbnail .caption{margin-top:0;}
+}
 @media (min-width: 768px){.thumbnail{min-height:308px;}
 .thumbnail img{width:188px;height:107px;}
 .news-thumbnail{min-height:308px;}
@@ -360,7 +367,7 @@ h2,h3{page-break-after:avoid;}
 *:first-child+html .clearfix{min-height:1%;}
 #map{height:400px;}
 #map a{text-decoration:none;}
-.hiu-logo{background-position:0 -103px;display:inline-block;float:right;margin-left:23px;margin-right:13px;margin-top:24px;opacity:0.75;width:135px;}
+.hiu-logo{background-position:0 -103px;display:inline-block;float:right;margin-left:23px;margin-right:16px;margin-top:32px;opacity:0.75;width:135px;}
 .ico.icon.collecticon-star-full{padding:10px;left:20px;position:absolute;font-size:2rem;display:inline;}
 .or-text{font-weight:700;font-size:20px;padding-left:10px;padding-top:5px;}
 @media (max-width: 768px){.ico.icon.collecticon-star-full{padding:5px;left:20px;position:absolute;font-size:2rem;display:inline;}

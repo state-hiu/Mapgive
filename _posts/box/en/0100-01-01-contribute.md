@@ -1,6 +1,6 @@
 ---
 layout: contribute
-permalink: /en/contribute/
+permalink: /box/en/about/contribute/
 lang: en
 title: Contribute
 contributetitle: Help improve our guides

@@ -116,7 +116,7 @@ dt {
 
 .navbar.affix + #main {
   /* padding-top needs to be total height of .navbar */
-  padding-top: 63px;
+  padding-top: 70px;
 }
 
 @media (max-width: 991px) {
@@ -1074,6 +1074,30 @@ dt {
 
 .story {
   margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+      height: 92%;
+  }
+    .projects-thumbnail .image {
+      display: inline-block;
+      width: 50%;
+  }
+    .caption {
+      display: inline-block;
+      width: 45%;
+      margin-left: 10px;
+  }
+    .img-responsive {
+      display: inline-block;
+  }
+    .projects-thumbnail .img-responsive {
+      margin-bottom: 0%;
+  }
+    .projects-thumbnail .caption {
+      margin-top: 0%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -2041,8 +2065,8 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
     display: inline-block;
     float: right;
     margin-left: 23px;
-    margin-right: 13px;
-    margin-top: 24px;
+    margin-right: 16px;
+    margin-top: 32px;
     opacity: 0.75;
     width: 135px;
 }

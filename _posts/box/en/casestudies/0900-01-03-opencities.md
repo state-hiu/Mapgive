@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: box
 permalink: /box/en/cases/open-cities
 lang: en
 title: Open Cities

@@ -9,7 +9,7 @@ date: 20150528
 mapgive_is_author: yes
 explicit_mention: yes
 type: news
-photo: https://www.whitehouse.gov/sites/default/files/imagecache/embedded_img_small/image/image_file/benson_wilder.jpg?itok=WxW9yuWi
+photo: '../assets/img/wh_mapathon.jpg'
 video:
 featured: yes
 quote: The Department of Energy committed to working with the Red Cross to continue open mapping national power outage information with the goal of having complete data for the entire country
