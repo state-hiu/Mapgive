@@ -7,22 +7,56 @@ category: resources
 published: true
 ---
 
-<img src="{{site.baseurl}}/assets/img/globe-pops.jpg" alt="Globe Pops" style="width:400px">
 
-There are many additional resources on engagement with OpenStreetMap.
+<style>
 
-For the classroom, [TeachOSM](http://teachosm.org/) is a MapGive supported resource that brings OpenStreetMap into classroom curriculum.
 
-[LearnOSM](http://learnosm.org/) are self guided materials for the basics of contributing to OpenStreetMap.
+.img1 {
+    float: right;
+}
 
-[Planning an Open Cities Mapping Project Guide](http://www.worldbank.org/en/region/sar/publication/planning-open-cities-mapping-project) is a detailed look at organizing OSM based field projects for disaster preparedness.
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 
-The [session plan from Connect Camps Maps](http://mapgive.state.gov/events/connect-camp-maps/sessions/) has good ideas on how to organize a multi-faceted mapping session.
+.img2 {
+    float: right;
+}
+</style>
 
-The [HOT Activation Protocol](http://hotosm.org/sites/default/files/HOTActivationProtocol.pdf) describes the flow of activities and roles involved in working with OpenStreetMap during a disaster response.
+<div class="clearfix"><img class="img2" src="{{site.baseurl}}/assets/img/globe-pops.jpg" alt="Globe Pops" style="width:300px; padding-left:15px;">
 
-## MapGive Partners
+    <p>There are many additional resources on engagement with OpenStreetMap.</p>
+
+    <p>
+    For the classroom, <a href="http://teachosm.org/">TeachOSM</a> is a MapGive supported resource that brings OpenStreetMap into classroom curriculum.
+    </p>
+
+    <p>
+    <a href="http://learnosm.org/">LearnOSM</a> provides easy to understand, step-by-step guides to get started with contributing to OpenStreetMap and using OpenStreetMap data.
+    </p>
+
+    <p>
+    <a href="http://www.worldbank.org/en/region/sar/publication/planning-open-cities-mapping-project">Planning an Open Cities Mapping Project Guide</a> is a detailed look at organizing OSM based field projects for disaster preparedness.
+    </p>
+
+    <p>
+    The <a href="http://mapgive.state.gov/events/connect-camp-maps/sessions/">session plan from Connect Camps Maps</a> has good ideas on how to plan multi-faceted mapping sessions.
+    </p>
+
+    <p>
+    The <a href="http://hotosm.org/sites/default/files/HOTActivationProtocol.pdf">HOT Activation Protocol</a> describes the flow of activities and roles involved in working with OpenStreetMap during a disaster response.
+    </p>
+
+</div>
+
+<h2>MapGive Partners</h2>
 
 <img src="{{site.baseurl}}/assets/img/partners.jpg" alt="partners" style="width:400px">
 
-And always count on the strong network of [partners](#resources&form-partnerships) for even more help and insights.
+<p>
+And always count on the strong network of <a href="#resources&form-partnerships">partners</a> for even more help and insights.
+</p>
+

@@ -16,13 +16,10 @@ Checklist to help in the preperation, on the day, and follow up to your event:
 * Check for special concerns regarding task
 * Prepare a tracing/tagging guide for the task
 * Take retraceable “before shots” of the area 
-  * OSM
-  * ID editor
-  * JOSM
-  * Mapnik?
-  * Assign ITO “areas” (different zooms)
+  * OpenStreetMap (OSM)
+  * ID editor or JOSM
 * Before metrics
-  * Extract OSM data
+  * Extract OSM data (e.g. www.geofabrik.de)
 
 ## Venue
 
@@ -47,7 +44,7 @@ Checklist to help in the preperation, on the day, and follow up to your event:
 * Speakers
 * Microphones
 * Posters
-* Sign in sheet (Name, Email, Affiliation, How’d You Hear about This Event?)
+* Sign-in sheet (Name, Email, Affiliation, How’d You Hear about This Event?, Would you like to sign-up for updates?)
 * Event posters (guide people to the room)
 * Print any necessary handouts
 * Name tags
@@ -55,15 +52,14 @@ Checklist to help in the preperation, on the day, and follow up to your event:
 * Extra mice if possible
 * Extra laptops if possible
 * Food/Drink
-* Cups, Plates, Utensils, Napkins
+  * Cups, Plates, Utensils, Napkins
 
-## Pre event Outreach
+## Pre-event Outreach
 
 * Coordinate with potential partners
-* MeetUp
-* Reach out to similar MeetUps
-* Reach out to local universities
-* Libraries
+* MeetUp, EventBrite, or similiar platform to for outreach and to manage RSVPs
+* Reach out to similar MeetUps or existing groups
+* Reach out to local universities, libraries, and other institutions
 * Media
 * Encourage people to join remotely
 * Teleconference
@@ -74,25 +70,25 @@ Checklist to help in the preperation, on the day, and follow up to your event:
 
 ## During the event
 
-* Show the ”Why Map?” video
-* Gauge the room’s experience
+* Show the MapGive ”Why Map?” video
+* Gauge the room’s experience with mapping
 * Everyone mapping has an OSM account 
 * Live editing tutorial (ID editor)
-* Take pictures!
 * Check in with mappers throughout the event
+* Motivate mappers by displaying live edits and the Missing Maps leaderboard
+* Take pictures! Engage in social media
 
-## Post event
+## Post-event
 
 * Thank everyone for attending!
 * (Are there related events in the area? Point them out!)
 * Send a progress report to all attendees
 * Consider sending personalized emails thanking people for their individual contributions
-* Metrics (how many people, how many edits?)
 * After shots
   * OSM
-  * ID editor
-  * JOSM
+  * ID editor or JOSM
   * ITO areas
+* Metrics (how many people, how many edits?)
+  * osm-analytics.org
 * Create graphics
 * Start planning the next one!
-
