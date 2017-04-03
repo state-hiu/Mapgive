@@ -63,10 +63,10 @@ published: true
                     <button class="btn btn-primary dropdown-toggle" style="padding: 3px 10px;" type="button" data-toggle="dropdown" aria-expanded="true">Download<span class="caret"></span></button>
                     <ul class="dropdown-menu">
                       <li>
-                        <a class="png" href="{{ post.png }}" target="_blank">PNG</a>
+                        <a class="png" href="{{ post.png }}" target="_blank">{{ post.png_label }}</a>
                       </li>
                       <li>
-                        <a class="eps" href="{{ post.eps }}" target="_blank">EPS</a>
+                        <a class="eps" href="{{ post.eps }}" download="">{{ post.eps_label }}</a>
                       </li>
                     </ul>
                     {% else %}
