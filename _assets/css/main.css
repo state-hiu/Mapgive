@@ -1014,14 +1014,14 @@ dt {
 @media (min-width: 768px) {
   .col-sm-4.projects-thumbnail {
     width: 30%;
-    height: 330px;
+    height: 420px;
   }
 }
 
 .projects-container {
   position: absolute;
   bottom: 0;
-  height: 300px;
+  height: 405px;
   width: 92%;
 }
 
@@ -1035,7 +1035,7 @@ dt {
 .projects-thumbnail .img-responsive {
     width: 100%;
     max-width: 240px;
-    max-height: 155px;
+    max-height: 230px;
     overflow: hidden;
     -ms-interpolation-mode: bicubic;
     margin-bottom: 60%;

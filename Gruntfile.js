@@ -143,7 +143,7 @@ module.exports = function(grunt) {
                   img: {
                     expand: true,
                     cwd: '_assets/img',
-                    src: ['**/*.png', '**/*.gif'],
+                    src: ['**/*.png', '**/*.gif', '**/*.eps'],
                     dest: 'assets/img',
                     flatten: true,
                     filter: 'isFile'
