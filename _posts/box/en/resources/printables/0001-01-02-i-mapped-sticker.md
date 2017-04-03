@@ -8,6 +8,9 @@ date: 20160901
 photo: 'https://mapgive.state.gov/assets/img/IMapped_MapGive.png'
 video: 
 featured: yes
+download_button: true
+png: 'https://mapgive.state.gov/assets/img/IMapped_MapGive.png'
+eps: 'https://mapgive.state.gov/assets/img/IMapped_MapGive.eps'
 quote: ""
 hashtag:
 tags:
