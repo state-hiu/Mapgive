@@ -9,6 +9,8 @@ photo: 'https://mapgive.state.gov/assets/img/IMapped_MapGive.png'
 video: 
 featured: yes
 download_button: true
+png_label: PNG (270 KB)
+eps_label: EPS (4.3 MB)
 png: 'https://mapgive.state.gov/assets/img/IMapped_MapGive.png'
 eps: 'https://mapgive.state.gov/assets/img/IMapped_MapGive.eps'
 quote: ""
