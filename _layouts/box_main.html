@@ -760,6 +760,30 @@ $('.header').on('click', function(){
 
   window.onload = linkHandler();
 
+  var eventFired = 0;
+
+  console.log('window width');
+  console.log($(window).width());
+
+  if ($(window).width() < 740) {
+      console.log('hide box');
+      $( ".box-container" ).hide();
+  }
+  else {
+      alert('More than 740');
+      $( ".box-container" ).show();
+  }
+
+  $(window).on('resize', function() {
+      if (!eventFired) {
+          if ($(window).width() < 740) {
+              $( ".box-container" ).hide();
+          } else {
+              $( ".box-container" ).show();
+          }
+      }
+  });
+
   $(window).bind('hashchange', function() {
    console.log('bind linkHandler');
    linkHandler();
