@@ -1,9 +1,10 @@
 ---
 layout: box
-permalink: /box/en/about/open-mapping/
+permalink: /box/about/
 lang: en
 title: Intro to Open Mapping
 category: about
+cover: "yes"
 published: true
 ---
 

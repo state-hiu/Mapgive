@@ -707,7 +707,7 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
 #box .front  { background: hsla( 000, 100%, 50%, 0.7 ); }
 */
 #box .front  { 
-  background-image: url("./../assets/img/banner.jpg"); 
+  background-image: url("./../assets/img/banner_box.jpg"); 
   background-size: cover;
 }
 #box .back   { 
@@ -821,4 +821,39 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
           transform: translateZ( -100px ) rotateX(   90deg );
 }
 
-
+@media screen and (max-width: 736px) {
+    #box {
+      display: none;
+    }
+    .box-container {
+      display: none;
+    }
+    .cell-menubar {
+      float: none;
+    }
+    .doc-nav {
+      position: initial;
+      margin-left: 0px;
+    }
+    .cell-main {
+      float: none;
+      width: 100%;
+      padding: 0px;
+    }
+    .doc-main {
+      margin-left: 0px;
+    }
+    /*
+    body, html { overflow-x:hidden; }
+    */
+    .doc-main img {
+      max-width: 95vw;
+    }
+    iframe
+    {
+      max-width: 95vw;
+    }
+    .projects-thumbnail {
+      min-height: 460px;
+    }
+}

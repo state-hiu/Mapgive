@@ -26,7 +26,7 @@ published: true
 }
 </style>
 
-<div class="clearfix"><img class="img2" src="{{site.baseurl}}/assets/img/globe-pops.jpg" alt="Globe Pops" style="width:300px; padding-left:15px;">
+<div class="clearfix"><img class="img2" src="{{site.baseurl}}/assets/img/globe-pops.jpg" alt="Globe Pops" style="width:250px; padding-left:15px;">
 
     <p>There are many additional resources on engagement with OpenStreetMap.</p>
 
