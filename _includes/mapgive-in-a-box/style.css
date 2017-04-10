@@ -621,6 +621,7 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
 /*css for 3d box */
 
 .box-container {
+  visibility:hidden;
   width: 300px;
   height: 300px;
   position: relative;
@@ -699,8 +700,6 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
 
 #positioner {
     width:auto;
-    overflow-x:auto;
-
 }
 
 /*
