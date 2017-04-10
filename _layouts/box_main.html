@@ -23,8 +23,8 @@ margin:-90px 0 0;
 */
 
 .anchor {
-    padding-top: 20px;
-    margin-top: -20px;
+    padding-top: 200px;
+    margin-top: -200px;
 }
 
 .submenu{display:none}
@@ -373,6 +373,8 @@ var linkHandler = function(link) {
 
         console.log('title_href.length');
         console.log(title_href.length);
+
+        window.scrollTo(0,0);
 
         if (title_href.length == 1) {
 
@@ -738,15 +740,11 @@ $('.header').on('click', function(){
 
   function offsetAnchor() {
         console.log('this2');
-        //console.log(this);
-        console.log('hashchange triggered');
-        if(location.hash.length !== 0) {
-            window.scrollTo(window.scrollX, window.scrollY - 10);
-        }
+        window.scrollTo(window.scrollX, window.scrollY - 100);
     }
 
   //http://stackoverflow.com/questions/17534661/make-anchor-link-go-some-pixels-above-where-its-linked-to
-  //window.addEventListener("hashchange", offsetAnchor());
+  window.addEventListener("hashchange", offsetAnchor());
 
     
 
