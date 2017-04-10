@@ -847,6 +847,13 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
     body, html { overflow-x:hidden; }
     */
     .doc-main img {
-    max-width: 95vw;
+      max-width: 95vw;
+    }
+    iframe
+    {
+      max-width: 95vw;
+    }
+    .projects-thumbnail {
+      min-height: 460px;
     }
 }
