@@ -707,7 +707,7 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
 #box .front  { background: hsla( 000, 100%, 50%, 0.7 ); }
 */
 #box .front  { 
-  background-image: url("./../assets/img/banner.jpg"); 
+  background-image: url("./../assets/img/banner_box.jpg"); 
   background-size: cover;
 }
 #box .back   { 

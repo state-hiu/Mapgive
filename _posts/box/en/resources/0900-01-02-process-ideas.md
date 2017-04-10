@@ -23,7 +23,7 @@ As a public diplomacy and humanitarian tool, there are circumstances where mappi
 
 It's certainly possible to organize to contribute to a need somewhere else in the world. The humanitarian community is always responding somewhere, and there will be a need for map data.
 
-## Apapting to Local Context
+## Adapting to Local Context
 
 Especially when mapping in the field, considerations of the local context are critical. What locations and set of partners are ideal to support a more in depth project? Excellent trust relationships with the communities being engaged and mapped are necessary. Consider the level of government presence, the access to technology, and capacity and education levels to work with these tools. Work to take a facilitative posture, allowing participants to take the lead on what to map, and in fact, whether to map at all.
 

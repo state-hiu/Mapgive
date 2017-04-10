@@ -23,8 +23,8 @@ margin:-90px 0 0;
 */
 
 .anchor {
-    padding-top: 620px;
-    margin-top: -620px;
+    padding-top: 20px;
+    margin-top: -20px;
 }
 
 .submenu{display:none}
@@ -174,7 +174,7 @@ margin:-90px 0 0;
       {% if post.lang == page.lang %}
           {% unless post.hidden %}
             
-            <div class="anchor outer-div" id="{{ post.title | slugify }}" style="display: none;">
+            <div class="anchor outer-div about" id="{{ post.title | slugify }}" style="display: none;">
               <h1>{{post.title}}</h1>
               {{ post.content }}
             </div>
@@ -187,7 +187,7 @@ margin:-90px 0 0;
       {% if post.lang == page.lang %}
           {% unless post.hidden %}
             
-            <div class="anchor outer-div" id="{{ post.title | slugify }}" style="display: none;">
+            <div class="anchor outer-div cases" id="{{ post.title | slugify }}" style="display: none;">
               <h1>{{post.title}}</h1>
               {{ post.content }}
             </div>
@@ -200,7 +200,7 @@ margin:-90px 0 0;
       {% if post.lang == page.lang %}
           {% unless post.hidden %}
             
-            <div class="anchor outer-div" id="{{ post.title | slugify }}" style="display: none;">
+            <div class="anchor outer-div resources" id="{{ post.title | slugify }}" style="display: none;">
               <h1>{{post.title}}</h1>
               {{ post.content }}
             </div>
@@ -227,6 +227,7 @@ var panelClassName = 'show-front'
 
 
 var clickHandler = function( event ) {
+    console.log('clickHandler called');
     if ( event ) {
         console.log( 'event' );
         console.log( event );
@@ -306,8 +307,7 @@ var clickHandler = function( event ) {
 
 var linkHandler = function(link) {
 
-
-    console.log('doc ready called');
+    console.log('linkHandler called');
     console.log('doc loc hash');
     console.log(document.location.hash);
 
@@ -316,7 +316,8 @@ var linkHandler = function(link) {
       console.log('link!');
       console.log(link);
       link = link.slice(1).split('#');
-      link = '#' + link[1];
+      //link = '#' + link[1];
+      link = '#' + link;
       console.log('link hash!');
       console.log(link);
     } else {
@@ -465,34 +466,81 @@ var linkHandler = function(link) {
           $("a[href='"+hash_section+"']").addClass("active");
 
         }
+
+        if (title_href.length == 4) {
+
+          console.log( 'title_href length 4! ' );
+
+          console.log( 'title_href' );
+          console.log( title_href );
+
+          //remove position 2 & run linkHandler again;
+
+        }
+
+        if (title_href.length == 3) {
+
+
+          $( ".box-container" ).hide();
+
+          $( ".outer-div" ).hide();
+
+          console.log( 'title_href new: ' );
+          console.log( title_href[1] );
+
+          title_href2 = '#' + title_href[1];
+
+          console.log( 'title_href2' );
+          console.log( title_href2 );
+
+          $( title_href2 + ".outer-div" ).show();
+
+          $( ".title" ).removeClass("active");
+
+          //make page link in menu active
+          $("a[href='"+hash_section+"']").addClass("active");
+
+
+
+          console.log( 'title_href length 3! ' );
+
+          console.log( 'title_href' );
+          console.log( title_href );
+
+          nav_anchor = '#'+title_href[0]+'&'+title_href[1]+'&'+title_href[2];
+
+          console.log( 'nav_anchor' );
+          console.log( nav_anchor );
+
+
+          var x = document.getElementById(nav_anchor);
+
+          x.scrollIntoView();
+
+          window.scrollBy(0,-80);
+
+          //$('html,body').animate({scrollTop: x.offset().top},'slow');
+
+          //var element_to_scroll_to = $('#resources\\&determine-the-need\\&developing-a-project')[0];
+
+          //x = document.getElementById("#resources&determine-the-need&developing-a-project");
+
+          //x = document.getElementById(nav_anchor);
+
+          // Basically `element_to_scroll_to` just have to be a reference
+          // to any DOM element present on the page
+          // Then:
+          //x.scrollIntoView();
+
+          //$('html, body').animate({ scrollTop: x.offset().top-10 }, 1000);
+
+        }
     }
 
 }
  
-window.onload = linkHandler();
 
 
-$(window).bind('hashchange', function() {
- linkHandler();
-});
-
-//This code opens the right tab by reading the url hash.
-/*$( document ).ready(function() {
-
-    linkHandler();
-
-});*/
-
-
-
-
-
-
-
-</script>
-
-<!--code to open and close submenus-->
-<script type="text/javascript">
 
 //make header active that has an active link
 //$('.title.active').closest('.submenu').addClass("active");
@@ -558,56 +606,94 @@ $('.header').on('click', function(){
 
 });
 
-</script>
 
+  //click listeners to show and hide posts
+  $( ".title" ).on( "click", function(){
+    console.log('clicking title');
+    console.log( $( this ).text() );
 
-<script type="text/javascript">
+    //Stop Timeout loop
+    if(typeof myTimeout !== "undefined"){
+      clearTimeout(myTimeout);
+    }
 
-//click listeners to show and hide posts
+    clickHandler(this);
+  });
 
-
-$( ".title" ).on( "click", function(){
-  console.log('clicking title');
-  console.log( $( this ).text() );
-
-  //Stop Timeout loop
-  if(typeof myTimeout !== "undefined"){
-    clearTimeout(myTimeout);
-  }
-
-  clickHandler(this);
-});
-
-
-
-</script>
-
-
-
-<script>
   // loop through the node list to get the innerHTML from each node
   // copy that as the id for the node
-  var addId = function(list){
-    for (i = 0; i < list.length; i++) {
-      element = list[i];
-      sectionCopy = element.innerHTML.toLowerCase().replace(/ /g, '-').replace(/([^0-9a-z-])/g,''); //substitute space with dash
-      element.id = sectionCopy;
-    }
-  };
 
+  //if url already has hash with more than two '&' then need to shorten
+
+  id_title_href = document.location.hash.slice(1).split('&');
+
+  console.log( 'new showing link href2' );
+  console.log( id_title_href );
+
+  console.log('new title_href.length');
+  console.log(id_title_href.length);
+
+  var reduced_id_title_href = document.location.hash;
+
+  if (id_title_href.length >= 3) {
+    reduced_id_title_href = '#'+id_title_href[0]+'&'+id_title_href[1];
+  }
+
+
+    var addId = function(element, section, page){
+      console.log('addId called');
+      console.log(element);
+
+      console.log('reduced_id_title_href');
+      console.log(reduced_id_title_href);
+
+      sectionCopy = '#'+section+'&'+page+'&'+element.innerHTML.toLowerCase().replace(/ /g, '-').replace(/([^0-9a-z-])/g,''); //substitute space with dash
+      element.id = sectionCopy;
+}
+
+  /*
   var allH2 = document.getElementsByTagName('h2');
   var allH3 = document.getElementsByTagName('h3');
   addId(allH2);
   addId(allH3);
+  */
+
+  $('.outer-div').find('h2').each(function(index) {
+    console.log('closed parent');
+    console.log(this.closest('.outer-div').className);
+    if (this.closest('.outer-div').className.includes('about')) {
+      console.log('contains about!'); 
+      addId(this, 'about', this.closest('.outer-div').id);
+    }
+    if (this.closest('.outer-div').className.includes('cases')) {
+      console.log('contains cases!'); 
+      addId(this, 'cases', this.closest('.outer-div').id);
+    }
+    if (this.closest('.outer-div').className.includes('resources')) {
+      console.log('contains resources!'); 
+      addId(this, 'resources', this.closest('.outer-div').id);
+    }
+    
+  });
+
+  //$('.outer-div').find('h3').each(function(index) {
+ //   addId(index);
+ // });
+
+  //var allH2 = document.getElementsByTagName('h2');
+
+  
+  //addId(allH3);
 
   // make the titles linkable
   $('h2[id], h3[id]','.doc').attr('title', 'Link to this section').click(function(e) {
-    window.location.hash = $(e.currentTarget).attr('id');
+    document.location.hash = $(e.currentTarget).attr('id');
+    //linkHandler(this.id);
   });
 
   //select the image containers so the images can be centered, styles in css
   $('img').parent().addClass('has-image');
-  
+
   // make title nav sticky
   
   /*
@@ -650,9 +736,35 @@ $( ".title" ).on( "click", function(){
     return $('#doc-nav-left').height() + 35;
   });
 
+  function offsetAnchor() {
+        console.log('this2');
+        //console.log(this);
+        console.log('hashchange triggered');
+        if(location.hash.length !== 0) {
+            window.scrollTo(window.scrollX, window.scrollY - 10);
+        }
+    }
+
   //http://stackoverflow.com/questions/17534661/make-anchor-link-go-some-pixels-above-where-its-linked-to
-  window.addEventListener("hashchange", function () {
-    window.scrollTo(window.scrollX, window.scrollY - 100);
+  //window.addEventListener("hashchange", offsetAnchor());
+
+    
+
+    //x = document.getElementById(nav_anchor);
+
+          // Basically `element_to_scroll_to` just have to be a reference
+          // to any DOM element present on the page
+          // Then:
+          //x.scrollIntoView();
+
+          //$('html, body').animate({ scrollTop: x.offset().top-100 }, 1000);
+
+
+  window.onload = linkHandler();
+
+  $(window).bind('hashchange', function() {
+   console.log('bind linkHandler');
+   linkHandler();
   });
-  
+
 </script>
