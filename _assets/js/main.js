@@ -88,7 +88,7 @@
             modestbranding: 1,
             html5: 1
           },
-          baseurl = 'http://www.youtube.com/embed/',
+          baseurl = 'https://www.youtube.com/embed/',
           videoId = _this.attr('data'),
           param = $.param(params),
           url = baseurl + videoId + '?' + param,
