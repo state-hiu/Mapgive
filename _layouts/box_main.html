@@ -259,7 +259,10 @@ var clickHandler = function( event ) {
 
             //load page content
             $( hash_section + ".outer-div" ).show();
-            $( ".box-container" ).show();
+            
+            if ($(window).width() > 740) {
+                  $( ".box-container" ).show();
+              } 
 
             //turn box face
 
@@ -382,7 +385,12 @@ var linkHandler = function(link) {
               $( "#home" + ".outer-div" ).show();
             } else {
               $( ".outer-div" ).hide();
-              $( ".box-container" ).show();
+
+              if ($(window).width() > 740) {
+                  $( ".box-container" ).show();
+              } 
+
+              
               //load page content
               $( hash_section + ".outer-div" ).show();
             }

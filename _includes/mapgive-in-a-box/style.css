@@ -830,7 +830,6 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
     }
     .cell-menubar {
       float: none;
-      width: 100%;
     }
     .doc-nav {
       position: initial;
@@ -839,6 +838,7 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
     .cell-main {
       float: none;
       width: 100%;
+      padding: 0px;
     }
     .doc-main {
       margin-left: 0px;
