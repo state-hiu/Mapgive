@@ -843,4 +843,10 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
     .doc-main {
       margin-left: 0px;
     }
+    /*
+    body, html { overflow-x:hidden; }
+    */
+    .doc-main img {
+    max-width: 95vw;
+    }
 }
