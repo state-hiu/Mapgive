@@ -39,4 +39,4 @@ There are two main kinds of MapGive engagements.
 
 ## Get Started 
 
-From here, it can be very helpful to read about how MapGive has been implemented in [Case Studies](#cases).
+From here, it can be very helpful to read about how MapGive has been implemented in <a class="page_link" href="#cases">Case Studies</a>.
