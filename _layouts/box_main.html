@@ -42,7 +42,7 @@ margin:-90px 0 0;
 
       <ul>
         <li class='doc rounded' style='padding:0px;'>
-          <a href="#home" class="title header" style="padding:0px;" onclick="document.location.hash='home'">
+          <a href="#home" class="title header" style="padding:0px;" >
             <img src="{{site.baseurl}}/assets/img/box_graphic_small.png" alt="MapGive in a box home page" class="img-responsive" style="width:33%;display:inline;">
             MapGive in a Box
           </a>
@@ -52,7 +52,7 @@ margin:-90px 0 0;
       {% if post_size != 0 %}
         <ul>
         <li class='doc rounded'>
-            <a class='title header' href='#about' onclick="clickHandler(this)"> 
+            <a class='title header' href='#about' > 
             <span>About</span>
             </a>
         </li>
@@ -79,7 +79,7 @@ margin:-90px 0 0;
       {% if post_size_cases != 0 %}
         <ul>
         <li class='doc rounded'>
-            <a class='title header' href='#cases' onclick="clickHandler(this)">
+            <a class='title header' href='#cases' >
             <span>Case Studies</span>
             </a>
         </li>
@@ -104,7 +104,7 @@ margin:-90px 0 0;
       {% if post_size != 0 %}
         <ul>
         <li class='doc rounded'>
-            <a class='title header' href='#resources' onclick="document.location.hash='resources'">
+            <a class='title header' href='#resources' >
             <span>Resources</span>
             </a>
         </li>
@@ -133,7 +133,7 @@ margin:-90px 0 0;
   {% include mapgive-in-a-box/3d_box.html %}
 
 
-  <div class="anchor outer-div" id="home1" style="display: none;">
+  <div class="anchor outer-div" id="home_header" style="display: none;">
     </br>
     <h2 class='tagtitle'>What is MapGive in a Box?</h2>
     <p class='tagwords'>
@@ -141,7 +141,7 @@ margin:-90px 0 0;
     </p></br>
   </div>
 
-  <div class="anchor outer-div" id="about1" style="display: none;">
+  <div class="anchor outer-div" id="about_header" style="display: none;">
     </br>
     <!--<h2 class='tagtitle'>About</h2>-->
     <p class='tagwords'>
@@ -149,7 +149,7 @@ margin:-90px 0 0;
     </p></br>
   </div>
 
-  <div class="anchor outer-div" id="cases1" style="display: none;">
+  <div class="anchor outer-div" id="cases_header" style="display: none;">
     </br>
     <!--<h2 class='tagtitle'>Case Studies</h2>-->
     <p class='tagwords'>
@@ -157,7 +157,7 @@ margin:-90px 0 0;
     </p></br>
   </div>
 
-  <div class="anchor outer-div" id="resources1" style="display: none;">
+  <div class="anchor outer-div" id="resources_header" style="display: none;">
     </br>
     <!--<h2 class='tagtitle'>Resources</h2>-->
     <p class='tagwords'>
@@ -226,8 +226,11 @@ and the page hashtag will load the post content
 var panelClassName = 'show-front'
 
 
-var clickHandler = function( event ) {
+var clickHandler = function( event, headerClicked ) {
     console.log('clickHandler called');
+
+    console.log('headerClicked val');
+    console.log(headerClicked);
     
     if ( event ) {
         console.log( 'event' );
@@ -242,7 +245,13 @@ var clickHandler = function( event ) {
         $(event).addClass("active");
 
         $( ".outer-div" ).hide();
-        //$( ".box-container" ).hide();
+
+        if (headerClicked) {
+          console.log('do not hide or turn off');
+        } else {
+          $( ".box-container" ).hide();
+        }
+        
 
         //take away first hash 
         title_href = title_href.slice(1).split('&');
@@ -261,7 +270,7 @@ var clickHandler = function( event ) {
             hash_section = '#' + title_href[0];
 
             //load page content
-            $( hash_section + ".outer-div" ).show();
+            $( hash_section + '_header' + ".outer-div" ).show();
             
             if ($(window).width() > 740) {
                   if ($('.box-container').css('display') == 'none') {
@@ -303,7 +312,7 @@ var clickHandler = function( event ) {
         console.log( 'title_href new: ' );
         console.log( title_href[1] );
 
-        title_href2 = '#' + title_href[1] + '1';
+        title_href2 = '#' + title_href[1];
 
         console.log( 'title_href2' );
         console.log( title_href2 );
@@ -409,7 +418,7 @@ var linkHandler = function(link) {
               } 
 
               //load page content
-              $( hash_section + ".outer-div" ).show();
+              $( hash_section + '_header' + ".outer-div" ).show();
             }
             //turn box face
 
@@ -636,7 +645,13 @@ $('.header').on('click', function(){
       clearTimeout(myTimeout);
     }
 
-    clickHandler(this);
+    if ( $( this ).hasClass("header") ) {
+      console.log('header clicked');
+      clickHandler(this, true );
+    } else {
+      clickHandler(this);
+    }
+    
   });
 
   // loop through the node list to get the innerHTML from each node
