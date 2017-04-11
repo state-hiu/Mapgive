@@ -42,7 +42,7 @@ margin:-90px 0 0;
 
       <ul>
         <li class='doc rounded' style='padding:0px;'>
-          <a href="#home" class="title header" style='padding:0px;'>
+          <a href="#home" class="title header" style="padding:0px;" >
             <img src="{{site.baseurl}}/assets/img/box_graphic_small.png" alt="MapGive in a box home page" class="img-responsive" style="width:33%;display:inline;">
             MapGive in a Box
           </a>
@@ -52,7 +52,7 @@ margin:-90px 0 0;
       {% if post_size != 0 %}
         <ul>
         <li class='doc rounded'>
-            <a class='title header' href='#about'> 
+            <a class='title header' href='#about' > 
             <span>About</span>
             </a>
         </li>
@@ -79,7 +79,7 @@ margin:-90px 0 0;
       {% if post_size_cases != 0 %}
         <ul>
         <li class='doc rounded'>
-            <a class='title header' href='#cases'>
+            <a class='title header' href='#cases' >
             <span>Case Studies</span>
             </a>
         </li>
@@ -104,7 +104,7 @@ margin:-90px 0 0;
       {% if post_size != 0 %}
         <ul>
         <li class='doc rounded'>
-            <a class='title header' href='#resources'>
+            <a class='title header' href='#resources' >
             <span>Resources</span>
             </a>
         </li>
@@ -133,7 +133,7 @@ margin:-90px 0 0;
   {% include mapgive-in-a-box/3d_box.html %}
 
 
-  <div class="anchor outer-div" id="home" style="display: none;">
+  <div class="anchor outer-div" id="home_header" style="display: none;">
     </br>
     <h2 class='tagtitle'>What is MapGive in a Box?</h2>
     <p class='tagwords'>
@@ -141,7 +141,7 @@ margin:-90px 0 0;
     </p></br>
   </div>
 
-  <div class="anchor outer-div" id="about" style="display: none;">
+  <div class="anchor outer-div" id="about_header" style="display: none;">
     </br>
     <!--<h2 class='tagtitle'>About</h2>-->
     <p class='tagwords'>
@@ -149,7 +149,7 @@ margin:-90px 0 0;
     </p></br>
   </div>
 
-  <div class="anchor outer-div" id="cases" style="display: none;">
+  <div class="anchor outer-div" id="cases_header" style="display: none;">
     </br>
     <!--<h2 class='tagtitle'>Case Studies</h2>-->
     <p class='tagwords'>
@@ -157,7 +157,7 @@ margin:-90px 0 0;
     </p></br>
   </div>
 
-  <div class="anchor outer-div" id="resources" style="display: none;">
+  <div class="anchor outer-div" id="resources_header" style="display: none;">
     </br>
     <!--<h2 class='tagtitle'>Resources</h2>-->
     <p class='tagwords'>
@@ -226,8 +226,12 @@ and the page hashtag will load the post content
 var panelClassName = 'show-front'
 
 
-var clickHandler = function( event ) {
+var clickHandler = function( event, headerClicked ) {
     console.log('clickHandler called');
+
+    console.log('headerClicked val');
+    console.log(headerClicked);
+    
     if ( event ) {
         console.log( 'event' );
         console.log( event );
@@ -241,7 +245,13 @@ var clickHandler = function( event ) {
         $(event).addClass("active");
 
         $( ".outer-div" ).hide();
-        $( ".box-container" ).hide();
+
+        if (headerClicked) {
+          console.log('do not hide or turn off');
+        } else {
+          $( ".box-container" ).hide();
+        }
+        
 
         //take away first hash 
         title_href = title_href.slice(1).split('&');
@@ -252,17 +262,24 @@ var clickHandler = function( event ) {
         console.log('title_href.length');
         console.log(title_href.length);
 
+
+
         //if just one hash, ex #cases
         if (title_href.length == 1) {
 
             hash_section = '#' + title_href[0];
 
             //load page content
-            $( hash_section + ".outer-div" ).show();
+            $( hash_section + '_header' + ".outer-div" ).show();
             
             if ($(window).width() > 740) {
-                  $( ".box-container" ).show();
-              } 
+                  if ($('.box-container').css('display') == 'none') {
+                    $( ".box-container" ).show();
+                  }
+                  if ($('.box-container').css('visibility') == 'hidden') {
+                    $( ".box-container" ).css('visibility', 'visible');
+                  }
+              }
 
             //turn box face
 
@@ -300,11 +317,15 @@ var clickHandler = function( event ) {
         console.log( 'title_href2' );
         console.log( title_href2 );
 
+        
+
         $( title_href2 + ".outer-div" ).show();
 
     } else {
         console.log( "this didn't come from an event!" );
     }
+
+    //debugger;
 };
 
 
@@ -313,7 +334,6 @@ var linkHandler = function(link) {
     console.log('linkHandler called');
     console.log('doc loc hash');
     console.log(document.location.hash);
-
 
     if (link) {
       console.log('link!');
@@ -381,18 +401,24 @@ var linkHandler = function(link) {
 
         if (title_href.length == 1) {
 
+            console.log('title_href.length 1 option');
+
             if (hash_page[0] == '') {
               $( "#home" + ".outer-div" ).show();
             } else {
               $( ".outer-div" ).hide();
 
               if ($(window).width() > 740) {
-                  $( ".box-container" ).show();
+                  if ($('.box-container').css('display') == 'none') {
+                    $( ".box-container" ).show();
+                  }
+                  if ($('.box-container').css('visibility') == 'hidden') {
+                    $( ".box-container" ).css('visibility', 'visible');
+                  }
               } 
 
-              
               //load page content
-              $( hash_section + ".outer-div" ).show();
+              $( hash_section + '_header' + ".outer-div" ).show();
             }
             //turn box face
 
@@ -453,9 +479,11 @@ var linkHandler = function(link) {
 
         if (title_href.length == 2) {
 
-          $( ".box-container" ).hide();
+          console.log('title_href.length 2 option');
 
-          $( ".outer-div" ).hide();
+          $(".box-container" ).hide();
+
+          $(".outer-div" ).hide();
 
           console.log( 'title_href new: ' );
           console.log( title_href[1] );
@@ -477,19 +505,9 @@ var linkHandler = function(link) {
 
         }
 
-        if (title_href.length == 4) {
-
-          console.log( 'title_href length 4! ' );
-
-          console.log( 'title_href' );
-          console.log( title_href );
-
-          //remove position 2 & run linkHandler again;
-
-        }
-
         if (title_href.length == 3) {
 
+          console.log('title_href.length 3 option');
 
           $( ".box-container" ).hide();
 
@@ -627,7 +645,13 @@ $('.header').on('click', function(){
       clearTimeout(myTimeout);
     }
 
-    clickHandler(this);
+    if ( $( this ).hasClass("header") ) {
+      console.log('header clicked');
+      clickHandler(this, true );
+    } else {
+      clickHandler(this);
+    }
+    
   });
 
   // loop through the node list to get the innerHTML from each node
@@ -748,7 +772,7 @@ $('.header').on('click', function(){
 
   function offsetAnchor() {
         console.log('this2');
-        window.scrollTo(window.scrollX, window.scrollY - 100);
+        window.scrollTo(window.scrollX, window.scrollY - 200);
     }
 
   //http://stackoverflow.com/questions/17534661/make-anchor-link-go-some-pixels-above-where-its-linked-to
@@ -777,24 +801,28 @@ $('.header').on('click', function(){
       console.log('hide box');
       $( ".box-container" ).hide();
   }
-  else {
-      //alert('More than 740');
-      $( ".box-container" ).show();
-  }
 
   $(window).on('resize', function() {
       if (!eventFired) {
           if ($(window).width() < 740) {
               $( ".box-container" ).hide();
-          } else {
-              $( ".box-container" ).show();
           }
       }
   });
 
+
   $(window).bind('hashchange', function() {
+
+   //window.scrollTo(0,0);
+
    console.log('bind linkHandler');
-   linkHandler();
+   link = document.location.hash.slice(0).split('&');
+
+   console.log('link hashend!');
+   console.log(link.length);
+   if (link.length > 1) {
+     linkHandler();
+   }
   });
 
 </script>
