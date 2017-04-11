@@ -654,6 +654,14 @@ $('.header').on('click', function(){
     
   });
 
+  $( ".page_link" ).on( "click", function(){
+    console.log('page_link clicked');
+    console.log($(this).attr('href'));
+    linkHandler($(this).attr('href'));
+
+  });
+  
+
   // loop through the node list to get the innerHTML from each node
   // copy that as the id for the node
 
