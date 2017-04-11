@@ -73,8 +73,7 @@ module.exports = function(grunt) {
               'assets/js/lightbox.js':'_assets/js/vendor/lightbox.js',
               'assets/js/leaflet.js':'_assets/js/vendor/leaflet.js',
               'assets/js/lightbox.min.js':'_assets/js/vendor/lightbox.min.js',
-              'assets/js/utils.js':'_assets/js/utils.js',
-              'assets/js/rotate-box.js':'_assets/js/rotate-box.js'
+              'assets/js/utils.js':'_assets/js/utils.js'
             }
           }
         },
