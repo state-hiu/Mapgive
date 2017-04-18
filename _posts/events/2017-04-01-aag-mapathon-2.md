@@ -3,11 +3,11 @@ layout: resource
 category: events
 external_url: 'http://aagmapathon.org/'
 title: The 2nd Mapathon @ AAG
-status: upcoming
-date: 20170401
+status: past
+date: 20170405
 tags:
   - event
 ---
 
-We are in the early stages of planning with our partners the 2nd annual Mapathon at the American Association of Geographers (AAG) Annual Meeting. Contact us for more information!
+This is the 2nd year that Mapathons and Mapathon related activities were hosted at the American Association of Geographers (AAG) Annual Meeting. Attendees joined a community of online mappers and contributed to five different OpenStreetMap (OSM) projects supporting humanitarian and development efforts. Using satellite imagery and freely available OpenStreetMap editing platforms, participants traced, edited, and labeled key infrastructure (buildings, roads, etc.). This years event consisted of 7 paper sessions, 2 panel sessions, 2 poster session, 2 OSM activities, 6 lightning talks, and 2 Mapathons.
 
