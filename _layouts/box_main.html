@@ -40,9 +40,10 @@ margin:-90px 0 0;
     {% comment %}{% assign post_size = {{site.categories[page.category].size}} %}{% endcomment %}
     {% assign post_size = {{site.categories.about.size}} %}
 
+    <!--http://stackoverflow.com/questions/269044/remove-fragment-in-url-with-javascript-w-out-causing-page-reload-->
       <ul>
         <li class='doc rounded' style='padding:0px;'>
-          <a href="#home" class="title header" style="padding:0px;" >
+          <a href="#home" class="title header" id="home_button" style="padding:0px;" >
             <img src="{{site.baseurl}}/assets/img/box_graphic_small.png" alt="MapGive in a box home page" class="img-responsive" style="width:33%;display:inline;">
             MapGive in a Box
           </a>
@@ -287,6 +288,18 @@ var clickHandler = function( event, headerClicked ) {
               box.removeClassName( panelClassName );
               panelClassName = 'show-front';
               box.addClassName( panelClassName );
+              
+              console.log('hash section home');
+
+              //this only removes the hash temporarily, but it later gets added by a jquery dispatch
+              // remove fragment as much as it can go without adding an entry in browser history:
+              //window.location.replace("#");
+
+              // slice off the remaining '#' in HTML5:    
+              //if (typeof window.history.replaceState == 'function') {
+              //  history.replaceState({}, '', window.location.href.slice(0, -1));
+             // }
+
             }
 
             if (hash_section == '#about') {
@@ -657,7 +670,7 @@ $('.header').on('click', function(){
   $( ".page_link" ).on( "click", function(){
     console.log('page_link clicked');
     console.log($(this).attr('href'));
-    linkHandler($(this).attr('href'));
+    linkHandler(this.href);
 
   });
   

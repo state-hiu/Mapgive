@@ -976,14 +976,6 @@ dt {
   margin: 20px;
 }
 
-
-@media (min-width: 768px) {
-  .col-sm-4.news-thumbnail {
-    width: 30%;
-    height: 400px;
-  }
-}
-
 .news-thumbnail {
   padding-top: 15px;
   padding-right: 15px;
@@ -1011,7 +1003,7 @@ dt {
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 736px) {
   .col-sm-4.projects-thumbnail {
     width: 30%;
     height: 420px;
@@ -2194,4 +2186,19 @@ display:inline;
     max-width: 1080px;
     margin-left: auto;
     margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .col-sm-4.news-thumbnail {
+    width: 30%;
+    height: 400px;
+  }
+}
+
+@media (min-width: 736px) {
+
+  .col-sm-4 {
+    float: left;
+  }
+
 }
