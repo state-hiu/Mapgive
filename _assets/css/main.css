@@ -2202,3 +2202,13 @@ display:inline;
   }
 
 }
+
+#osm-stories a, a:link {
+  color: #90CCCB;
+}
+
+#osm-stories a:focus, a:hover {
+  color: #d73f3f !important;
+  text-decoration: underline;
+}
+
