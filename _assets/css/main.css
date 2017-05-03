@@ -2203,11 +2203,11 @@ display:inline;
 
 }
 
-#osm-stories a, a:link {
+#osm-stories a, #osm-stories a:link {
   color: #90CCCB;
 }
 
-#osm-stories a:focus, a:hover {
+#osm-stories a:focus, #osm-stories a:hover {
   color: #d73f3f !important;
   text-decoration: underline;
 }

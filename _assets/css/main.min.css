@@ -394,5 +394,5 @@ h2,h3{page-break-after:avoid;}
 }
 @media (min-width: 736px){.col-sm-4{float:left;}
 }
-#osm-stories a,a:link{color:#90cccb;}
-#osm-stories a:focus,a:hover{color:#d73f3f!important;text-decoration:underline;}
+#osm-stories a,#osm-stories a:link{color:#90cccb;}
+#osm-stories a:focus,#osm-stories a:hover{color:#d73f3f!important;text-decoration:underline;}
