@@ -98,7 +98,7 @@ emailDescription: "Mapgive, an initiative of the U.S. State Department's Humanit
     
     map.setView([10, 27], 2);
 
-    var pinLayer = L.featureGroup([]);
+    //var pinLayer = L.featureGroup([]);
     
     //zoom listener from: http://stackoverflow.com/questions/19658564/leaflet-control-geojson-layers-by-zoom-level
     map.on('zoomend', function (e) {
@@ -189,8 +189,8 @@ emailDescription: "Mapgive, an initiative of the U.S. State Department's Humanit
     
     function popupContentFunction(projects,popupContent) {
     
-        if (projects.indexOf(",") > 0) {
-            projects = projects.split(",")
+        if (projects.indexOf(";") > 0) {
+            projects = projects.split(";")
             console.log(projects);
             //var popupContent = "<h4> HOT OSM projects: </h4>";
             console.log('test popupContent: ');
@@ -224,6 +224,9 @@ emailDescription: "Mapgive, an initiative of the U.S. State Department's Humanit
             //other FeatureCollections. The outer FeatureCollection object has no properties object
             if (test_json[i].hasOwnProperty('properties')) {
 
+                console.log('test_json entry: ');
+                console.log(test_json[i]);
+
                 var projects = test_json[i].properties.tm_projects
 
                 L.geoJson(test_json[i], {
@@ -238,6 +241,9 @@ emailDescription: "Mapgive, an initiative of the U.S. State Department's Humanit
                 //Turf JS centroid function
                 var centroidPt = turf.centroid(test_json[i]);
 
+                console.log('centroidPT: ');
+                console.log(centroidPt);
+
                 L.geoJson(centroidPt, {
                     onEachFeature: function (feature, layer) {
                         layer.bindPopup(popupContentFunction(projects,popupContent),popupOptions).setIcon(mapgiveIcon);
@@ -246,7 +252,7 @@ emailDescription: "Mapgive, an initiative of the U.S. State Department's Humanit
             }
         }
         
-        pinLayer.addTo(map);
+        //pinLayer.addTo(map);
         
     });
 
