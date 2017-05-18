@@ -51,7 +51,7 @@ dt{font-weight:normal;}
 .navbar-nav{margin:0;float:none;}
 @media (min-width: 768px){.navbar-nav{position:relative;top:25px;float:right;width:500px;font-size:12px;}
 }
-@media (min-width: 991px){.navbar-nav{position:relative;top:25px;float:right;font-size:15px;min-width:534px;}
+@media (min-width: 991px){.navbar-nav{position:relative;top:25px;float:right;font-size:15px;min-width:540px;}
 }
 .lt-ie9 .navbar-default{border-bottom:1px solid #bcbcbc;}
 .navbar-default .navbar-nav>li>a{padding:15px;color:#fff;}
