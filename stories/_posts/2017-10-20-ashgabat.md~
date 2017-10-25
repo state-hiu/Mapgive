@@ -1,0 +1,97 @@
+---
+layout: story
+category: stories
+title: "Mapping Ashgabat: Before an Earthquake, and in Time for the Games"
+person: Ambassador Allan Mustard
+country: Turkmenistan
+date: 2017-10-20
+image: asian_games_model_cropped.png
+tags: [Turkmenistan, Earthquake]
+altText: "Mapping Ashgabat: Before an E­arthquake, and in Time for the Games"
+caption: "A model of new construction in Ashgabat made in preparation for the 2017 Asian Indoor and Martial Arts games"
+twitterDescription: "Mapping Ashgabat: Before an E­arthquake, and in Time for the Games"
+twitterImage: "../assets/img/asian_games_model_cropped.png"
+ogDescription: "Mapping Ashgabat: Before an E­arthquake, and in Time for the Games"
+ogImage: "../assets/img/asian_games_model_cropped.png"
+emailSubject: Mapping Ashgabat
+emailDescription: "Mapping Ashgabat: Before an E­arthquake, and in Time for the Games"
+lat: 37.94
+lon: 58.384
+---
+
+<style type="text/css">
+#table_title {
+	margin-top:0px;
+}
+
+@media (min-width: 768px) {
+    .story .figure-right {
+        width: 410px;
+    }
+}
+
+.story .figure-right {
+    float: right;
+    margin: 0 0 5px 15px;
+}
+
+</style>
+<!-- http://christianspecht.de/2014/03/08/generating-an-image-gallery-with-jekyll-and-lightbox2/ -->
+<script src="{{site.baseurl}}/assets/js/lightbox.min.js"></script>
+<link href="{{site.baseurl}}/assets/css/lightbox.css" rel="stylesheet" />
+
+Ashgabat, capital of Turkmenistan, sits in a category 4 seismic zone.  A 7.3 MMS earthquake in 1948 leveled the city, leaving only three buildings standing, and killed an estimated 160,000 people.  Recognizing that a detailed map of the city would be crucially important in the event of another such calamity, U.S. Ambassador to Turkmenistan Allan Mustard and his wife, Ann, began spending evenings and weekends mapping Ashgabat early in 2015 using Open Street Map (OSM) and data collected on their GPS navigator.  When they started, the map was incomplete and badly out of date.  Only about a dozen city streets bore names in OSM, many new streets were not on the map, and few points of interest (POIs) had been identified.  Compounding the problem was the Turkmenistan government’s expenditure of over $14 billion during this period on urban renewal, which included addition of 60 kilometers of new streets, rebuilding of all major thoroughfares in the city, demolition of entire neighborhoods and construction of new ones, plus a complete overhaul of the city’s airport.
+<p>
+
+
+
+A little over two and a half years later, aided by updated imagery provided via MapGive, the ambassador with assistance from the Embassy Ashgabat motor pool, other Embassy employees, and other residents of the city has created an up-to-date map of Ashgabat showing not only streets but public buildings, filling stations, hospitals and clinics, other embassies, hotels, and other amenities, plus providing their street addresses and telephone numbers.
+<p>
+
+<div class="image-set" >
+    <div style="margin: 0 auto; display: block;">
+        <a class="image-link" href="{{site.baseurl}}/assets/img/community_outreach_ashgabat.png" data-lightbox="1" title="Embassy Ashgabat's Information Resource Center hosts a master class on OpenStreetMap for local residents, who have begun to contribute street names and businesses to the map">
+            <img src="{{ site.baseurl }}/assets/img/community_outreach_ashgabat.png" style="max-width:100%">
+        </a>
+        <p class="caption">Embassy Ashgabat's Information Resource Center hosts a master class on OpenStreetMap for local residents, who have begun to contribute street names and businesses to the map</p>
+    </div>
+</div>
+<br>
+
+In addition to improving disaster preparedness, everyday quality of life in Ashgabat has improved due to this mapping project.  Two new taxicab apps, <strong>TM! Taksi</strong> and <strong>Tiz Taxi</strong>, use the OSM base map for users to summon taxicabs in Ashgabat.  Two smartphone apps, <strong>Pocket Earth</strong> and <strong>MAPS.ME</strong>, use OSM for their offline maps, helping people navigate the city.  For drivers with Garmin GPS navigators, free downloadable maps drawn from the OSM database can be downloaded from a site in the Netherlands.  Apple Maps began using the OSM database for Turkmenistan.  Perhaps most noteworthy was the decision of Turkmenistan’s National Olympic Committee to use the OSM base map in the official smartphone app for the <a href="https://ashgabat2017.com/">Asian Indoor and Martial Arts Games</a> that Ashgabat hosted in September 2017.
+<br><br>
+
+<div class="video">
+  <div class="video-player-container shadowed" data="_t5DxV7cXgQ" tabindex="0">
+    <img src="{{ site.baseurl }}/assets/img/the-cause.jpg" alt="YouTube embedded video: The Cause. Press space or enter to play video." class="img-responsive" />
+    <div class="play"><span class="play-button"></span></div>
+  </div>
+  <p class="caption">Ambassador Allan Mustard goes into greater detail about the mapping efforts in Ashgabat during his State of the Map keynote address, Brussels 2016</p>
+</div>
+
+<div class="story-promo shadowed">
+
+<blockquote>
+
+    <div style="font-size: 18px;" class="story-promo qoute">&ldquo;It&#39;s easy to take extensive geographic information for granted in the developed world.
+    It’s the best map of Ashgabat anywhere. In addition to the general day to day usefulness of this map, Ashgabat is located in a category 4 seismic zone…  in the event of a disaster, having a map like this is going to be absolutely invaluable. &rdquo;
+    </div>
+
+
+    <div style="font-size: 18px;" class="story-promo qoute">&ldquo;The map of Ashgabat over the last year has become extremely rich compared to what it was before, because we’ve done this community outreach and gotten people involved. &rdquo;
+    </div>
+
+
+    <div class="story-promo qoute">&ldquo;I encourage all of you to keep on mapping, and to volunteer for mapgive. Pitch in with the humanitarian assistance when disaster strikes and your skills can help those in need. I hope you will engage MapGive’s efforts through the public affairs section of whatever U.S. embassy is closest to you and teach open mapping so that more people can contribute. &rdquo; –Ambassador Allan Mustard, State of the Map 2016 KeyNote address
+    </div>
+
+</blockquote>
+
+</div>
+
+
+
+
+
+
+

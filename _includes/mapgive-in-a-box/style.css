@@ -820,6 +820,10 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
           transform: translateZ( -100px ) rotateX(   90deg );
 }
 
+.cell-menubar ul {
+    list-style: none;
+}
+
 @media screen and (max-width: 736px) {
     #box {
       display: none;
