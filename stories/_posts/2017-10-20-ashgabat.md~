@@ -8,6 +8,7 @@ date: 2017-10-20
 image: asian_games_model_cropped.png
 tags: [Turkmenistan, Earthquake]
 altText: "Mapping Ashgabat: Before an E­arthquake, and in Time for the Games"
+caption: "A model of new construction in Ashgabat made in preparation for the 2017 Asian Indoor and Martial Arts games"
 twitterDescription: "Mapping Ashgabat: Before an E­arthquake, and in Time for the Games"
 twitterImage: "../assets/img/asian_games_model_cropped.png"
 ogDescription: "Mapping Ashgabat: Before an E­arthquake, and in Time for the Games"
@@ -47,9 +48,9 @@ Ashgabat, capital of Turkmenistan, sits in a category 4 seismic zone.  A 7.3 MMS
 A little over two and a half years later, aided by updated imagery provided via MapGive, the ambassador with assistance from the Embassy Ashgabat motor pool, other Embassy employees, and other residents of the city has created an up-to-date map of Ashgabat showing not only streets but public buildings, filling stations, hospitals and clinics, other embassies, hotels, and other amenities, plus providing their street addresses and telephone numbers.
 <p>
 
-<div class="image-set" style="margin: 0 auto; display: block;">
+<div class="image-set" >
     <a class="image-link" href="{{site.baseurl}}/assets/img/community_outreach_ashgabat.png" data-lightbox="1" title="Community outreach in Ashgabat">
-      <img src="{{ site.baseurl }}/assets/img/community_outreach_ashgabat.png" height="360">
+      <img style="margin: 0 auto; display: block;" src="{{ site.baseurl }}/assets/img/community_outreach_ashgabat.png" height="360">
     </a>
 </div>
 <br>
