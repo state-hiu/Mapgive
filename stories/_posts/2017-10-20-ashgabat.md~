@@ -47,7 +47,7 @@ Ashgabat, capital of Turkmenistan, sits in a category 4 seismic zone.  A 7.3 MMS
 A little over two and a half years later, aided by updated imagery provided via MapGive, the ambassador with assistance from the Embassy Ashgabat motor pool, other Embassy employees, and other residents of the city has created an up-to-date map of Ashgabat showing not only streets but public buildings, filling stations, hospitals and clinics, other embassies, hotels, and other amenities, plus providing their street addresses and telephone numbers.
 <p>
 
-<div class="image-set">
+<div class="image-set" style="margin: 0 auto; display: block;">
     <a class="image-link" href="{{site.baseurl}}/assets/img/community_outreach_ashgabat.png" data-lightbox="1" title="Community outreach in Ashgabat">
       <img src="{{ site.baseurl }}/assets/img/community_outreach_ashgabat.png" height="360">
     </a>
@@ -69,16 +69,16 @@ In addition to improving disaster preparedness, everyday quality of life in Ashg
 
 <blockquote>
 
-    <div style="font-size: 18px;" class="story-promo qoute">&ldquo; It&#39;s easy to take extensive geographic information for granted in the developed world.
-    It’s the best map of Ashgabat anywhere. In addition to the general day to day usefulness of this map, Ashgabat is located in a category 4 seismic zone…  in the event of a disaster, having a map like this is going to be absolutely invaluable.&rdquo;
+    <div style="font-size: 18px;" class="story-promo qoute">&ldquo;It&#39;s easy to take extensive geographic information for granted in the developed world.
+    It’s the best map of Ashgabat anywhere. In addition to the general day to day usefulness of this map, Ashgabat is located in a category 4 seismic zone…  in the event of a disaster, having a map like this is going to be absolutely invaluable. &rdquo;
     </div>
 
 
-    <div style="font-size: 18px;" class="story-promo qoute">&ldquo; The map of Ashgabat over the last year has become extremely rich compared to what it was before, because we’ve done this community outreach and gotten people involved.&rdquo;
+    <div style="font-size: 18px;" class="story-promo qoute">&ldquo;The map of Ashgabat over the last year has become extremely rich compared to what it was before, because we’ve done this community outreach and gotten people involved. &rdquo;
     </div>
 
 
-    <div class="story-promo qoute">&ldquo; I encourage all of you to keep on mapping, and to volunteer for mapgive. Pitch in with the humanitarian assistance when disaster strikes and your skills can help those in need. I hope you will engage MapGive’s efforts through the public affairs section of whatever U.S. embassy is closest to you and teach open mapping so that more people can contribute.&rdquo; –Ambassador Allan Mustard, State of the Map 2016 KeyNote address
+    <div class="story-promo qoute">&ldquo;I encourage all of you to keep on mapping, and to volunteer for mapgive. Pitch in with the humanitarian assistance when disaster strikes and your skills can help those in need. I hope you will engage MapGive’s efforts through the public affairs section of whatever U.S. embassy is closest to you and teach open mapping so that more people can contribute. &rdquo; –Ambassador Allan Mustard, State of the Map 2016 KeyNote address
     </div>
 
 </blockquote>

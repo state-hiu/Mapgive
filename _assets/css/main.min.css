@@ -218,7 +218,7 @@ dt{font-weight:normal;}
 .thumbnail img{width:328px;height:187px;}
 .news-thumbnail img{width:328px;height:187px;}
 }
-.story .figure{float:left;margin:0 15px 10px 0;width:100%;}
+.story .figure{float:left;margin:0 15px 0 0;width:100%;}
 @media (min-width: 768px){.story .figure{width:350px;}
 }
 .video{margin-bottom:30px;}
