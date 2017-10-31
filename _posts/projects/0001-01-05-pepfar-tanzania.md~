@@ -1,9 +1,9 @@
 ---
 layout: resource
 category: projects
-external_url: 'http://tasks.hotosm.org/project/3204'
+external_url: 'http://tasks.hotosm.org/?sort_by=priority&direction=asc&search=pepfar+tanzania'
 title: "Tanzania"
-project-number: 3204
+project-number: 2301
 author: PEPFAR, MapGive, USAID
 date: 20161118
 type: remote
