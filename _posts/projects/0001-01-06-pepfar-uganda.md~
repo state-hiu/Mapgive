@@ -1,9 +1,9 @@
 ---
 layout: resource
 category: projects
-external_url: 'http://tasks.hotosm.org/project/3205'
+external_url: 'http://tasks.hotosm.org/?sort_by=priority&direction=asc&search=pepfar+uganda'
 title: "Uganda"
-project-number: 3205
+project-number: 2290
 author: PEPFAR, MapGive, USAID
 date: 20161223
 type: remote
