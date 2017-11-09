@@ -1,7 +1,7 @@
 ---
 layout: resource
 category: news
-external_url: 'http://lahore.usconsulate.gov/pr060415.html'
+external_url: 'https://pk.usembassy.gov/u-s-consulate-lahore-holds-mapathon-nepal-information-technology-university/?_ga=2.55291243.1539569432.1510242344-1335987154.1510242344'
 title: U.S. Consulate Lahore Holds Mapathon for Nepal at Information Technology University
 publication: U.S. Consulate Lahore
 author: Press release
