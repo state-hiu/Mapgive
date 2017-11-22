@@ -1078,7 +1078,7 @@ dt {
   }
     .caption {
       display: inline-block;
-      width: 45%;
+      width: 95%;
       margin-left: 10px;
   }
     .img-responsive {
@@ -1726,6 +1726,17 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   margin-top: 10px;
 }
 
+.hiu-logo {
+    background-position: 0 -103px;
+    display: inline-block;
+    float: right;
+    margin-left: 23px;
+    margin-right: 16px;
+    margin-top: 32px;
+    opacity: 0.75;
+    width: 135px;
+}
+
 @media (min-width: 768px) {
   .media-object {
     width: 130px;
@@ -1841,6 +1852,13 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   }
 }
 
+@media (max-width: 768px) {
+  .hiu-logo {
+    display: none;
+    visibility: hidden;
+  }
+}
+
 @media (min-width: 992px) {
   .opera-mini .steps .estimate .clock,
   .no-svg .steps .estimate .clock,
@@ -1890,12 +1908,15 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 
 /************ Print Stylesheet *************/
 @media print {
+
+
   * {
     background: transparent !important;
     color: #000 !important; /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important;
   }
+
 
   a,
   a:visited {
@@ -1937,6 +1958,11 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 
   img {
     max-width: 100% !important;
+  }
+
+  .image-set {
+    width: 500px;
+    height: auto;
   }
 
   @page {
@@ -2052,16 +2078,6 @@ Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack*/
 }
 #map a {text-decoration: none; }
 
-.hiu-logo {
-    background-position: 0 -103px;
-    display: inline-block;
-    float: right;
-    margin-left: 23px;
-    margin-right: 16px;
-    margin-top: 32px;
-    opacity: 0.75;
-    width: 135px;
-}
 
 .ico.icon.collecticon-star-full {
 padding:10px;
