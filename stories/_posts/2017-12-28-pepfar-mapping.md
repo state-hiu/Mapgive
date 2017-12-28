@@ -71,7 +71,7 @@ Geographic focus is a <a href="https://data.pepfar.net/" target="_blank">critica
             <a class="image-link" href="{{site.baseurl}}/assets/img/pepfar_hot_and_mapgive_cropped.jpg" data-lightbox="1" title="Lightning talk from HOT">
                 <img class="example-image" src="{{ site.baseurl }}/assets/img/pepfar_hot_and_mapgive_cropped.jpg" style="max-width:100%">
             </a>
-            <p class="caption">Joint Mapathons taking place in Africa and the United States</p>
+            <p class="caption">joint mapathons taking place in Africa and the United States</p>
         </div>
     </div>
 </div>
