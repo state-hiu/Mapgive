@@ -56,7 +56,7 @@ Geographic focus is a <a href="https://data.pepfar.net/" target="_blank">critica
 </blockquote>
 </div>
 
-<a href="https://www.youtube.com/watch?v=FA6QBlnUcWo" target="_blank">Mapathons</a> are coordinated mapping events that engage citizens, and particularly young people, in increasing the availability of open geographic data in OpenStreetMap through crowdsourcing. Last year for World AIDS Day 2016, MapGive, along with <a href="http://www.youthmappers.org/" target="_blank">Youth Mappers</a> and the <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a>, hosted the <a href="https://www.youtube.com/watch?v=fePRDYqj9cY" target="_blank">inaugural PEPFAR mapathon</a> at the OpenGovHub in Washington, D.C. to begin engaging the volunteer mapping community and to publicize PEPFAR’s need for detailed geographic data. This year, we again observed World AIDS Day by hosting the second annual PEPFAR mapathon at the OpenGovHub. 
+<a href="https://www.youtube.com/watch?v=FA6QBlnUcWo" target="_blank">Mapathons</a> are coordinated mapping events that engage citizens, and particularly young people, in increasing the availability of open geographic data in OpenStreetMap through crowdsourcing. Last year for World AIDS Day 2016, MapGive, along with <a href="http://www.youthmappers.org/" target="_blank">Youth Mappers</a> and the <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a>, hosted the inaugural PEPFAR mapathon at the OpenGovHub in Washington, D.C. to begin engaging the volunteer mapping community and to publicize PEPFAR’s need for detailed geographic data. This year, we again observed World AIDS Day by hosting the second annual PEPFAR mapathon at the OpenGovHub. 
 <p>
 
 <div class="image-row">
@@ -85,7 +85,7 @@ MapGive is working hand-in-hand with PEPFAR to grow volunteer participation in o
     <img src="{{ site.baseurl }}/assets/img/the-cause.jpg" alt="YouTube embedded video: The Cause. Press space or enter to play video." class="img-responsive" />
     <div class="play"><span class="play-button"></span></div>
   </div>
-  <p class="caption">The 1st ever PEPFAR Mapathon, Washington D.C. 2016</p>
+  <p class="caption">inaugural PEPFAR mapathon</p>
 </div>
 <p>
 Specifically, in an effort to connect with youth in Africa and encourage the usage of data to address challenges in public health, MapGive and YouthMappers partnered directly with YALI, as well as local citizen mapping organizations like <a href="http://mapkibera.org/" target="_blank">Map Kibera</a> in Kenya, to host and facilitate mapathons across Africa and at U.S. universities. Participants at these events were trained on the basics of open mapping and how PEPFAR programs use these data to improve their work. <a href="https://www.mcc.gov/initiatives/initiative/mcc-pepfar-partnership" target="_blank">PEPFAR’s Data Collaboratives for Local Impact</a> (DCLI) partnership with the Millennium Challenge Corporation (MCC) is working to build on these efforts.  For example, DCLI’s dLab in Dar es Salaam hosts regular mapathons to support PEPFAR mapping projects, and DCLI’s Data Zetu program engages capable local civil society organizations working to map communities from a grassroots level. Read more about the YALI mapathons <a href="{{site.baseurl}}/projects/pepfar/YALI_HLM_Mapathons_Notification_20170623.pdf">here</a> and in a brief <a href="https://share.america.gov/putting-hiv-malaria-prevention-map/" target="_blank">article</a> via Share America.
