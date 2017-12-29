@@ -51,27 +51,28 @@ Geographic focus is a <a href="https://data.pepfar.net/" target="_blank">critica
 
 <div class="story-promo shadowed">
 <blockquote>
-    <div style="font-size: 18px;" class="story-promo qoute">&ldquo;Data derived through crowdsourced mapping has led to logistical savings in terms of travel time, fuel, and increased site visits throughout the year. &rdquo;
+    <div style="font-size: 18px;margin-bottom:0px" class="story-promo qoute">&ldquo;Improved base data has led to logistical savings in terms of travel time, fuel and increased the number of sites visited. &rdquo;
+    <div class="attribution">&ndash; PEPFAR Uganda team</div>
     </div>
 </blockquote>
 </div>
 
-<a href="https://www.youtube.com/watch?v=FA6QBlnUcWo" target="_blank">Mapathons</a> are coordinated mapping events that engage citizens, and particularly young people, in increasing the availability of open geographic data in OpenStreetMap through crowdsourcing. Last year for World AIDS Day 2016, MapGive, along with <a href="http://www.youthmappers.org/" target="_blank">Youth Mappers</a> and the <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a>, hosted the inaugural PEPFAR mapathon at the OpenGovHub in Washington, D.C. to begin engaging the volunteer mapping community and to publicize PEPFAR’s need for detailed geographic data. This year, we again observed World AIDS Day by hosting the second annual PEPFAR mapathon at the OpenGovHub. 
+<a href="https://www.youtube.com/watch?v=FA6QBlnUcWo" target="_blank">Mapathons</a> are coordinated mapping events that engage citizens, and particularly young people, in increasing the availability of open geographic data in OpenStreetMap through crowdsourcing. Last year for World AIDS Day 2016, MapGive, along with <a href="http://www.youthmappers.org/" target="_blank">Youth Mappers</a> and the <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team (HOT)</a>, hosted the inaugural PEPFAR mapathon at the OpenGovHub in Washington, D.C. to begin engaging the volunteer mapping community and to publicize PEPFAR’s need for detailed geographic data. This year, we again observed World AIDS Day by hosting the second annual PEPFAR mapathon at the OpenGovHub. 
 <p>
 
 <div class="image-row">
     <div class="image-set" >
         <div style="margin: 0 auto; display: block;">
-            <a class="image-link" href="{{site.baseurl}}/assets/img/pepfar_mapathon_africa.jpg" data-lightbox="1" title="">
+            <a class="image-link" href="{{site.baseurl}}/assets/img/pepfar_mapathon_africa.jpg" data-lightbox="1" title="Mapathon in Tanzania">
                 <img class="example-image" src="{{ site.baseurl }}/assets/img/pepfar_mapathon_africa.jpg" style="max-width:100%">
             </a>
-            <a class="image-link" href="{{site.baseurl}}/assets/img/mapgive_cake.jpg" data-lightbox="1" title="MapGive I Mapped Cake">
+            <a class="image-link" href="{{site.baseurl}}/assets/img/mapgive_cake.jpg" data-lightbox="1" title="MapGive 'I Mapped' Cake">
                 <img class="example-image" src="{{ site.baseurl }}/assets/img/mapgive_cake.jpg" style="max-width:50%">
             </a>
             <a class="image-link" href="{{site.baseurl}}/assets/img/pepfar_hot_and_mapgive_cropped.jpg" data-lightbox="1" title="Lightning talk from HOT">
                 <img class="example-image" src="{{ site.baseurl }}/assets/img/pepfar_hot_and_mapgive_cropped.jpg" style="max-width:100%">
             </a>
-            <p class="caption">joint mapathons taking place in Africa and the United States</p>
+            <p class="caption">Joint mapathons taking place in Africa and the United States</p>
         </div>
     </div>
 </div>
