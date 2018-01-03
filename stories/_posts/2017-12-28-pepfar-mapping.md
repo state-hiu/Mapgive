@@ -38,6 +38,7 @@ lon: 32.2927
 .example-image {
     width: 22rem;
     border-radius: 4px;
+    vertical-align: bottom;
 }
 
 </style>
@@ -60,7 +61,7 @@ Geographic focus is a <a href="https://data.pepfar.net/" target="_blank">critica
 <a href="https://www.youtube.com/watch?v=FA6QBlnUcWo" target="_blank">Mapathons</a> are coordinated mapping events that engage citizens, and particularly young people, in increasing the availability of open geographic data in OpenStreetMap through crowdsourcing. Last year for World AIDS Day 2016, MapGive, along with <a href="http://www.youthmappers.org/" target="_blank">Youth Mappers</a> and the <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team (HOT)</a>, hosted the inaugural PEPFAR mapathon at the OpenGovHub in Washington, D.C. to begin engaging the volunteer mapping community and to publicize PEPFAR’s need for detailed geographic data. This year, we again observed World AIDS Day by hosting the second annual PEPFAR mapathon at the OpenGovHub. 
 <p>
 
-<div class="image-row">
+<div class="image-row" style="margin-top:25px">
     <div class="image-set" >
         <div style="margin: 0 auto; display: block;">
             <a class="image-link" href="{{site.baseurl}}/assets/img/pepfar_mapathon_africa.jpg" data-lightbox="1" title="Mapathon in Tanzania">
