@@ -143,7 +143,7 @@ dt{font-weight:normal;}
 .attribution{padding:0 20px 20px;}
 .story-promo .attribution{text-align:right;}
 .story-promo .quote:before{content:"\201C";font-size:3em;position:absolute;padding:10px 0 0 20px;}
-.story-promo blockquote{padding:30px 20px 20px 40px;font-size:25px;line-height:1.15em;font-style:italic;}
+.story-promo blockquote{padding:20px 20px 0 40px;font-size:25px;line-height:1.15em;font-style:italic;}
 .promo-box h2{margin-top:0;-webkit-margin-before:0;font-size:25px;}
 .promo-box ul{list-style-type:none;margin:0;padding:0;}
 .promo-box li{border-top:1px dotted #444;line-height:1em;padding:.5em 0;}

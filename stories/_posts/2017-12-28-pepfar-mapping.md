@@ -36,7 +36,7 @@ lon: 32.2927
 }
 
 .example-image {
-    width: 22rem;
+    height: 21rem;
     border-radius: 4px;
     vertical-align: bottom;
 }
@@ -64,16 +64,12 @@ Geographic focus is a <a href="https://data.pepfar.net/" target="_blank">critica
 <div class="image-row" style="margin-top:25px">
     <div class="image-set" >
         <div style="margin: 0 auto; display: block;">
-            <a class="image-link" href="{{site.baseurl}}/assets/img/pepfar_mapathon_africa.jpg" data-lightbox="1" title="Mapathon in Tanzania">
-                <img class="example-image" src="{{ site.baseurl }}/assets/img/pepfar_mapathon_africa.jpg" style="max-width:100%">
-            </a>
             <a class="image-link" href="{{site.baseurl}}/assets/img/mapgive_cake.jpg" data-lightbox="1" title="MapGive 'I Mapped' Cake">
                 <img class="example-image" src="{{ site.baseurl }}/assets/img/mapgive_cake.jpg" style="max-width:50%">
             </a>
             <a class="image-link" href="{{site.baseurl}}/assets/img/pepfar_hot_and_mapgive_cropped.jpg" data-lightbox="1" title="Lightning talk from HOT">
                 <img class="example-image" src="{{ site.baseurl }}/assets/img/pepfar_hot_and_mapgive_cropped.jpg" style="max-width:100%">
             </a>
-            <p class="caption">Joint mapathons taking place in Africa and the United States</p>
         </div>
     </div>
 </div>
@@ -95,6 +91,20 @@ Specifically, in an effort to connect with youth in Africa and encourage the usa
 More than 1,700 volunteers have created over 280,000 data points for PEPFAR mapping projects throughout Africa with support from over 20 different organizations, including universities, local civil society organizations, international NGOs, and private companies. In addition, young leaders across Africa have learned these technologies and can continue to engage directly in mapping efforts that support important development and humanitarian programs in their countries.  Going forward, we want to further support efforts to engage and train local volunteers to ground truth data created through crowdsourcing and remote mapping. 
 <br><br>
 For more information on open mapping, explore the <a href="https://mapgive.state.gov/about-open-mapping/" target="_blank">MapGive</a> website and watch our <a href="https://mapgive.state.gov/why-map/" target="_blank">video</a> featuring some of our favorite partners!
+
+<br>
+
+<div class="image-row" style="margin-top:25px">
+    <div class="image-set" >
+        <div style="margin: 0 auto; display: block;">
+            <a class="image-link" href="{{site.baseurl}}/assets/img/pepfar_mapathon_africa.jpg" data-lightbox="2" title="Mapathon in Tanzania">
+                <img src="{{ site.baseurl }}/assets/img/pepfar_mapathon_africa.jpg" style="max-width:100%">
+            </a>
+            <p class="caption">Mapathon in Tanzania</p>
+        </div>
+    </div>
+</div>
+
 <br><br>
 
 
