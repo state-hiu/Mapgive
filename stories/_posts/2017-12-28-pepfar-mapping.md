@@ -90,7 +90,7 @@ Specifically, in an effort to connect with youth in Africa and encourage the usa
 <br><br>
 More than 1,700 volunteers have created over 280,000 data points for PEPFAR mapping projects throughout Africa with support from over 20 different organizations, including universities, local civil society organizations, international NGOs, and private companies. In addition, young leaders across Africa have learned these technologies and can continue to engage directly in mapping efforts that support important development and humanitarian programs in their countries.  Going forward, we want to further support efforts to engage and train local volunteers to ground truth data created through crowdsourcing and remote mapping. 
 <br><br>
-For more information on open mapping, explore the <a href="https://mapgive.state.gov/about-open-mapping/" target="_blank">MapGive</a> website and watch our <a href="https://mapgive.state.gov/why-map/" target="_blank">video</a> featuring some of our favorite partners!
+For more information on open mapping, explore the <a href="https://mapgive.state.gov/about-open-mapping/" target="_blank">MapGive</a> website and watch our <a href="https://mapgive.state.gov/why-map/" target="_blank">video</a> featuring some of our partners!
 
 <br>
 
