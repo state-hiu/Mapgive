@@ -120,9 +120,15 @@ var numberFormat = d3.format(",d");
 var countryChart = dc.geoChoroplethChart("#country-chart");
 
 
-d3.csv("mapgive_metrics.csv", function (error,csv) {
+//d3.csv("mapgive_metrics.csv", function (error,csv) {
+d3.csv("https://s3.amazonaws.com/mapgive-metrics/mapgive_metrics.csv")
+    .header("Accept-Language", "en-US")
+    //.header("Origin", "http://example.com")
+    .get(callback); 
         
         //if you're using d3.csv(), it will return the values as strings, so you'll need either to preprocess your data, or use +d.score to convert the values while reading them
+
+function callback(error,csv) {
         csv.forEach(function(d){
             d['building_count'] = +d['building_count']; 
             d['highway_count'] = +d['highway_count'];
@@ -296,7 +302,7 @@ d3.csv("mapgive_metrics.csv", function (error,csv) {
 
         });
 
-});
+};
 
 </script>
 
