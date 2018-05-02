@@ -121,9 +121,11 @@ var countryChart = dc.geoChoroplethChart("#country-chart");
 
 
 //d3.csv("mapgive_metrics.csv", function (error,csv) {
-d3.csv("https://s3.amazonaws.com/mapgive-metrics/mapgive_metrics.csv")
+//recieved a no Access-Control-Allow-Origin error in Chrome even though I configured it to allow origins in S3
+//this link describes problem: https://serverfault.com/questions/856904/chrome-s3-cloudfront-no-access-control-allow-origin-header-on-initial-xhr-req
+//added a made up query parameter '?x-request=xhr' in order to convince the browser that this is actually a seperate request
+d3.csv("https://s3.amazonaws.com/mapgive-metrics/mapgive_metrics.csv?x-request=xhr")
     .header("Accept-Language", "en-US")
-    //.header("Origin", "http://example.com")
     .get(callback); 
         
         //if you're using d3.csv(), it will return the values as strings, so you'll need either to preprocess your data, or use +d.score to convert the values while reading them
