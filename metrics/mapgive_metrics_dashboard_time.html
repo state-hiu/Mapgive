@@ -24,6 +24,7 @@
 <script src="https://d3js.org/d3-geo.v1.min.js"></script>
 <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
 
+
 <!--
     <script type="text/javascript" src="js/geolib.js"></script>
     <script type="text/javascript" src="js/leaflet.js"></script>
@@ -85,8 +86,13 @@ svg {
         <span class="reset" style="display: none;"> | Current filter: <span class="filter"></span></span>
 
         <div class="clearfix"></div>
-    </div>
+  </div>
 
+  <div class="row">
+    <div id="monthly-volume-chart">
+    </div>
+    <p class="muted pull-right" style="margin-right: 15px;">select a time range to zoom in</p>
+  </div>
 
 <!--
       <div class="col-xs-4">
@@ -119,6 +125,7 @@ var numberFormat = d3.format(",d");
 
 var countryChart = dc.geoChoroplethChart("#country-chart");
 
+var volumeChart = dc.barChart('#monthly-volume-chart');
 
 //d3.csv("mapgive_metrics.csv", function (error,csv) {
 //recieved a no Access-Control-Allow-Origin error in Chrome even though I configured it to allow origins in S3
@@ -140,9 +147,28 @@ d3.csv("https://s3.amazonaws.com/mapgive-metrics/mapgive_metrics.csv?x-request=x
         //if you're using d3.csv(), it will return the values as strings, so you'll need either to preprocess your data, or use +d.score to convert the values while reading them
 
 function callback(error,csv) {
+
+        // Since its a csv file we need to format the data a bit.
+        //var dateFormatSpecifier = '%m/%d/%Y';
+        //var formatDate = d3.time.format("%d-%b-%y");
+        var dateFormat = d3.time.format("%Y-%m-%d");
+        //var parseTime = dateFormat.parse("%B %d, %Y");
+        //var formatTime = d3.timeFormat("%B %d, %Y");
+        //var dateFormatParser = d3.timeParse(dateFormatSpecifier);
+        //var numberFormat = d3.format('.2f');
+
+        console.log(dateFormat);
+
         csv.forEach(function(d){
             d['building_count'] = +d['building_count']; 
             d['highway_count'] = +d['highway_count'];
+            //d.dd = dateFormatParser(d.date);
+            d.dd = dateFormat.parse(d.Datetime);
+            console.log('printing parsed dateFromat');
+            console.log(d.dd);
+            d.month = d3.time.month(d.dd); // pre-calculate month for better performance
+            console.log('printing d.month');
+            console.log(d.month);
         });
 
         var data = crossfilter(csv);
@@ -180,10 +206,29 @@ function callback(error,csv) {
         }
 
 
+
+
+        // Dimension by full date
+        var dateDimension = data.dimension(function(d) {
+            return d.dd;
+        });
+
+        // Dimension by month
+        var moveMonths = data.dimension(function(d) {
+            return d.month;
+        });
+
+     
+        // Group by total edits within move, and scale down result
+        var editsByMonthGroup = moveMonths.group().reduceSum(function (d) {
+            return d["building_count"];
+        });
+
+
         console.log('preview')
 
-        topTypes = custom_reducer.top(100);
-        console.log(topTypes[54]);
+        topTypes = custom_reducer.top(10);
+        console.log(topTypes[4]);
         topTypes[0].key; // the top payment type (e.g., "tab")
         topTypes[0].value; // the payment volume for that type (e.g., 920)
 
@@ -285,6 +330,7 @@ function callback(error,csv) {
                     .group(custom_reducer)
                     .colors(d3.scale.quantile().range(["#fff5f0","#fee0d2","#fcbba1","#fc9272","#fb6a4a","#ef3b2c","#cb181d","#a50f15","#67000d"]))
                     .colorDomain([0, 348146])
+                    //need to make sure all country names are in the csv in order to return a value
                     .colorCalculator(function (d) { return d.value.building_count ? countryChart.colors()(d.value.building_count) : '#ccc'; })
                     //leave the name of chart as 'state' because dc.css has the hover effect that reference 
                     .overlayGeoJson(countriesJson.features, "state", function (d) {
@@ -306,6 +352,27 @@ function callback(error,csv) {
                         return "Country: " + d.key + "\nTotal Buildings: " + numberFormat(d.value.value.building_count ? d.value.value.building_count : 0) + "\nTotal Roads: " + numberFormat(d.value.value.highway_count ? d.value.value.highway_count : 0);
                     });
 
+
+            //#### Range Chart
+
+            // Since this bar chart is specified as "range chart" for the area chart, its brush extent
+            // will always match the zoom of the area chart.
+            volumeChart.width(990) /* dc.barChart('#monthly-volume-chart', 'chartGroup'); */
+            .height(140)
+                .margins({
+                top: 0,
+                right: 50,
+                bottom: 20,
+                left: 40
+            })
+                .dimension(moveMonths)
+                .group(editsByMonthGroup)
+                .centerBar(true)
+                .gap(1)
+                .x(d3.time.scale().domain([new Date(2014, 0, 1), new Date(2017, 11, 31)]))
+                .round(d3.time.months.round)
+                .alwaysUseRounding(true)
+                .xUnits(d3.time.months);
 
 
           // showtime!
