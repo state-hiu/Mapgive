@@ -133,7 +133,7 @@ var volumeChart = dc.barChart('#monthly-volume-chart');
 //added a made up query parameter '?x-request=xhr' in order to convince the browser that this is actually a seperate request
 
 
-d3.csv("test2.csv")
+d3.csv("test4.csv")
     .header("Accept-Language", "en-US")
     .get(callback); 
 
@@ -162,13 +162,12 @@ function callback(error,csv) {
         csv.forEach(function(d){
             d['building_count'] = +d['building_count']; 
             d['highway_count'] = +d['highway_count'];
-            //d.dd = dateFormatParser(d.date);
-            d.dd = dateFormat.parse(d.Datetime);
-            console.log('printing parsed dateFromat');
-            console.log(d.dd);
+            d.dd = dateFormat.parse(d.datetime);
+            //console.log('printing parsed dateFromat');
+            //console.log(d.dd);
             d.month = d3.time.month(d.dd); // pre-calculate month for better performance
-            console.log('printing d.month');
-            console.log(d.month);
+            //console.log('printing d.month');
+            //console.log(d.month);
         });
 
         var data = crossfilter(csv);
@@ -206,8 +205,6 @@ function callback(error,csv) {
         }
 
 
-
-
         // Dimension by full date
         var dateDimension = data.dimension(function(d) {
             return d.dd;
@@ -225,10 +222,10 @@ function callback(error,csv) {
         });
 
 
-        console.log('preview')
+        //console.log('preview')
 
         topTypes = custom_reducer.top(10);
-        console.log(topTypes[4]);
+        //console.log(topTypes[4]);
         topTypes[0].key; // the top payment type (e.g., "tab")
         topTypes[0].value; // the payment volume for that type (e.g., 920)
 
@@ -331,7 +328,9 @@ function callback(error,csv) {
                     .colors(d3.scale.quantile().range(["#fff5f0","#fee0d2","#fcbba1","#fc9272","#fb6a4a","#ef3b2c","#cb181d","#a50f15","#67000d"]))
                     .colorDomain([0, 348146])
                     //need to make sure all country names are in the csv in order to return a value
-                    .colorCalculator(function (d) { return d.value.building_count ? countryChart.colors()(d.value.building_count) : '#ccc'; })
+                    .colorCalculator(function (d) { 
+                        return d ? countryChart.colors()(d.value.building_count) : '#ccc'; 
+                    })
                     //leave the name of chart as 'state' because dc.css has the hover effect that reference 
                     .overlayGeoJson(countriesJson.features, "state", function (d) {
                         return d.properties.COUNTRY_NA;
@@ -349,7 +348,12 @@ function callback(error,csv) {
                     .title(function (d) {
                         //console.log('returning title')
                         //console.log(d);
-                        return "Country: " + d.key + "\nTotal Buildings: " + numberFormat(d.value.value.building_count ? d.value.value.building_count : 0) + "\nTotal Roads: " + numberFormat(d.value.value.highway_count ? d.value.value.highway_count : 0);
+                        if (d.value) {
+                            //console.log('print d');
+                            //console.log(d);
+                            return "Country: " + d.key + "\nTotal Buildings: " + numberFormat(d.value.value.building_count ? d.value.value.building_count : 0) + "\nTotal Roads: " + numberFormat(d.value.value.highway_count ? d.value.value.highway_count : 0);
+                        }
+                        
                     });
 
 
