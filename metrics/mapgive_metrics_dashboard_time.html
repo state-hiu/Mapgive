@@ -21,6 +21,7 @@
 <script type="text/javascript" src="js/d3.js"></script>
 <script type="text/javascript" src="js/crossfilter.js"></script>
 <script type="text/javascript" src="js/dc.js"></script>
+<script type="text/javascript" src="js/d3.tip.min.js"></script>
 
 <script src="https://d3js.org/d3-array.v1.min.js"></script>
 <script src="https://d3js.org/d3-geo.v1.min.js"></script>
@@ -73,6 +74,12 @@ svg {
     line-height: 1;
 }
 
+.description-text {
+    font-family: Trebuchet MS,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+}
 
 </style>
 
@@ -105,8 +112,8 @@ roads: road
   <div class="row" id="control-row">
 
       <div class="row">
-          <div id="row-chart" style="padding-bottom:10px">
-            <span class="label-text">#MapGive hashtag</span>
+          <div id="row-chart" style="padding-bottom:15px">
+            <span class="description-text">This dashboard shows user contributions by country and time using the <strong>#MapGive</strong> hashtag. Visit our <a href="https://mapgive.state.gov/about-open-mapping/">Open Mapping page</a> to learn more about Open Mapping's role in humanitarian and development missions. Instructions: Filter metrics by selecting individual or multiple countries on the map. Another way of filtering is by selecting a time range on the time chart.</span>
           </div>
 
           <div class="col-md-4 stat-label label-text"><i class="fas fa-users fa-2x"></i> <div class="display-users"></div> <div>unique users</div> </div>
@@ -120,10 +127,10 @@ roads: road
           <div class="clearfix"></div>
       </div>
 
-      <div class="row" style="padding-top:10px">
+      <div class="row" style="padding-top:15px">
           <div id="country-chart">
-            <span class="label-text">Edits by Country (color: total amount of edits)</span>
-            <a class="reset" href="javascript:countryChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+            <span class="label-text">Edits by Country using the #MapGive hashtag (color: total amount of edits)</span>
+            <a class="reset" href="javascript:dc.filterAll();dc.redrawAll();$('.reset').css('display', 'none');" style="display: none;">reset</a>
             <span class="reset" style="display: none;"> | Current filter: <span class="filter"></span></span>
           </div>
         <div class="clearfix"></div>
@@ -131,8 +138,8 @@ roads: road
 
 
       <div class="row">
-        <div id="monthly-volume-chart" style="padding-top:10px">
-            <span class="label-text">Edits Through Time</span>
+        <div id="monthly-volume-chart" style="padding-top:15px">
+            <span class="label-text">Edits Through Time using the #MapGive hashtag</span>
         </div>
         <p class="muted pull-right" style="margin-right: 15px;">select a time range to zoom in</p>
       </div>
@@ -310,6 +317,19 @@ function callback(error,csv) {
         topTypes[0].key; // the top payment type (e.g., "tab")
         topTypes[0].value; // the payment volume for that type (e.g., 920)
 
+    
+        var tip = d3.tip()
+          .attr('class', 'd3-tip')
+          .html(data.groupAll().reduceSum(function(d) { 
+                //console.log('what is d?');
+                //console.log(d.building_count);
+                return d.building_count; }).value())
+
+
+
+/*
+return "<span style='color: #f0027f'>" + d.key + "</span>" + "\nunique users: " + numberFormat(d.value.value.unique_users ? d.value.value.unique_users : 0) + "\ntotal buildings: " + numberFormat(d.value.value.building_count ? d.value.value.building_count : 0) + "\ntotal roads: " + numberFormat(d.value.value.highway_count ? d.value.value.highway_count : 0);
+*/
 
 /*
 
@@ -400,6 +420,8 @@ function callback(error,csv) {
 */
 
 
+
+
         d3.json("geo/world.json", function (countriesJson) {
 
             countryChart.width(1200)
@@ -445,9 +467,9 @@ function callback(error,csv) {
                         $('.display-users').append(unique_users_total.toLocaleString("en"));
                     })
                     .valueAccessor(function(kv) {
-                        console.log('value accessor kv');
-                        console.log(kv);
-                        console.log(kv.value.building_count+kv.value.highway_count);
+                        //console.log('value accessor kv');
+                        //console.log(kv);
+                        //console.log(kv.value.building_count+kv.value.highway_count);
                         return kv;
                     })
                     .title(function (d) {
@@ -456,7 +478,7 @@ function callback(error,csv) {
                         if (d.value) {
                             //console.log('print d');
                             //console.log(d);
-                            return d.key + "\nunique users: " + numberFormat(d.value.value.unique_users ? d.value.value.unique_users : 0) + "\ntotal buildings: " + numberFormat(d.value.value.building_count ? d.value.value.building_count : 0) + "\ntotal roads: " + numberFormat(d.value.value.highway_count ? d.value.value.highway_count : 0);
+                            return "<span style='color: #f0027f'>" + d.key + "</span>" + "\nunique users: " + numberFormat(d.value.value.unique_users ? d.value.value.unique_users : 0) + "\ntotal buildings: " + numberFormat(d.value.value.building_count ? d.value.value.building_count : 0) + "\ntotal roads: " + numberFormat(d.value.value.highway_count ? d.value.value.highway_count : 0);
                         }
                         
                     });
@@ -468,7 +490,7 @@ function callback(error,csv) {
             // will always match the zoom of the area chart.
             volumeChart
               .width(1200) /* dc.barChart('#monthly-volume-chart', 'chartGroup'); */
-              .height(160)
+              .height(260)
               .margins({
                 top: 20,
                 right: 40,
@@ -478,7 +500,14 @@ function callback(error,csv) {
                .dimension(moveMonths)
                .group(editsByMonthGroup)
                .on("filtered", function (chart) {
-                         console.log('printing countryChart filter');
+                         console.log('printing volumeChart filter');
+                         console.log('trying to show filter');
+                         hiddenElements = $(':hidden');
+                         console.log('hidden elements');
+                    
+                         $('a.reset').css("display", "");
+                         //$('.stat-label').toggle();
+
                          //https://www.codeproject.com/Articles/693841/Making-Dashboards-with-Dc-js-Part-Using-Crossfil
                          console.log(data.groupAll().reduceSum(function(d) { 
                                 return d["building_count"];
@@ -499,14 +528,18 @@ function callback(error,csv) {
                             }).value();
                         $('.display-users').empty();
                         $('.display-users').append(unique_users_total.toLocaleString("en"));
+                        
                     })
                .centerBar(true)
-               .gap(1)
+               .renderHorizontalGridLines(true)
+               .gap(3)
                .x(d3.time.scale().domain([new Date(2014, 0, 1), new Date(2018, 04, 31)]))
                .round(d3.time.months.round)
                .alwaysUseRounding(true)
                .xUnits(d3.time.months);
 
+
+                
 /*
             rowChart
                 .width(768)
@@ -530,7 +563,31 @@ function callback(error,csv) {
           // showtime!
           dc.renderAll();
 
+           
+
+          d3.selectAll("g").call(tip);
+          d3.selectAll("g").on('mouseover', tip.show)
+            .on('mouseout', tip.hide);
+
+/*
+var vis = d3.select(document.body)
+  .append('svg')
+  // REQUIRED:  Call the tooltip on the context of the visualization
+  .call(tip)
+
+ vis.append('rect')
+  .attr('width', 100)
+  .attr('height', 100)
+  // Show and hide the tooltip
+  .on('mouseover', tip.show)
+  .on('mouseout', tip.hide)
+*/
+
+
+
         });
+
+
 
 };
 
