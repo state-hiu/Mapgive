@@ -52,7 +52,7 @@ maybe because chart text is created after main.css loads?
 }
 
 svg {
-  background: lightBlue;
+  background: #9BCAFF;
 }
 
 #monthly-volume-chart svg {
@@ -129,14 +129,16 @@ roads: road
 
       <div class="row" style="padding-top:15px">
           <div id="country-chart">
-            <span class="label-text">Edits by Country using the #MapGive hashtag (color: total amount of edits)</span>
-            <a class="reset" href="javascript:dc.filterAll();dc.redrawAll();$('.reset').css('display', 'none');" style="display: none;">reset</a>
-            <span class="reset" style="display: none;"> | Current filter: <span class="filter"></span></span>
+            <div class="map-label" style="padding-bottom:15px">
+                <span class="label-text">Edits by Country using the #MapGive hashtag (color: total amount of edits)</span>
+                <a class="reset" href="javascript:dc.filterAll();dc.redrawAll();$('a.reset').css('display', 'none');" style="display: none;"><button type="button" class="btn "><strong>reset</strong></button></a>
+                <span class="reset" style="display: none;"> | Country filter: <span class="filter">none</span></span>
+            </div>
           </div>
         <div class="clearfix"></div>
       </div>
 
-
+s
       <div class="row">
         <div id="monthly-volume-chart" style="padding-top:15px">
             <span class="label-text">Edits Through Time using the #MapGive hashtag</span>
@@ -428,11 +430,12 @@ return "<span style='color: #f0027f'>" + d.key + "</span>" + "\nunique users: " 
                     .height(600)
                     .dimension(countries)
                     .group(custom_reducer)
-                    .colors(d3.scale.quantile().range(["#fff5f0","#fee0d2","#fcbba1","#fc9272","#fb6a4a","#ef3b2c","#cb181d","#a50f15","#67000d"]))
+                    //.colors(d3.scale.quantile().range(["#fff5f0","#fee0d2","#fcbba1","#fc9272","#fb6a4a","#ef3b2c","#cb181d","#a50f15","#67000d"]))
+                    .colors(d3.scale.quantile().range(["#8d9d8d","#7f917f","#728572","#667766","#5a695a","#4e5c4e","#434e43"]))
                     .colorDomain([0, 348146])
                     //need to make sure all country names are in the csv in order to return a value
                     .colorCalculator(function (d) { 
-                        return d ? countryChart.colors()(d.value.building_count+d.value.highway_count) : '#ccc'; 
+                        return d ? countryChart.colors()(d.value.building_count+d.value.highway_count) : '#b7b7b7'; 
                     })
                     //leave the name of chart as 'state' because dc.css has the hover effect that reference 
                     .overlayGeoJson(countriesJson.features, "state", function (d) {
