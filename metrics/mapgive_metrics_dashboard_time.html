@@ -10,6 +10,8 @@
 
 <link rel="stylesheet" type="text/css" href="css/main.css">
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
 <!--
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter2/1.4.0-alpha.6/crossfilter.js"></script>
@@ -52,12 +54,35 @@ svg {
   background: lightBlue;
 }
 
+#monthly-volume-chart svg {
+    background: white;
+}
+
 .dc-chart g.state path {
     stroke: #000;
 }
 
+.stat-label {
+    text-align: center;
+}
+
+.label-text {
+    font-family: Trebuchet MS,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+}
+
+
 </style>
 
+<!-- font awesome
+
+unique users: users (alternative: user, or user-edit
+buildings: building
+roads: road
+
+-->
 
 <div class="container-fluid">
   <div class="row">
@@ -79,20 +104,38 @@ svg {
 
   <div class="row" id="control-row">
 
+      <div class="row">
+          <div id="row-chart" style="padding-bottom:10px">
+            <span class="label-text">#MapGive hashtag</span>
+          </div>
 
-  <div id="country-chart">
-        <strong>Edits by Country (color: total amount of edits)</strong>
-        <a class="reset" href="javascript:countryChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
-        <span class="reset" style="display: none;"> | Current filter: <span class="filter"></span></span>
+          <div class="col-md-4 stat-label label-text"><i class="fas fa-users fa-2x"></i> <div class="display-users"></div> <div>unique users</div> </div>
+          <div class="col-md-4 stat-label label-text"><i class="fas fa-building fa-2x"></i> <div class="display-building"></div> <div>buildings</div> </div>
+          <div class="col-md-4 stat-label label-text"><i class="fas fa-road fa-2x"></i> <div class="display-road"></div> <div>roads</div> </div>
+          
 
+         
+         
+
+          <div class="clearfix"></div>
+      </div>
+
+      <div class="row" style="padding-top:10px">
+          <div id="country-chart">
+            <span class="label-text">Edits by Country (color: total amount of edits)</span>
+            <a class="reset" href="javascript:countryChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+            <span class="reset" style="display: none;"> | Current filter: <span class="filter"></span></span>
+          </div>
         <div class="clearfix"></div>
-  </div>
+      </div>
 
-  <div class="row">
-    <div id="monthly-volume-chart">
-    </div>
-    <p class="muted pull-right" style="margin-right: 15px;">select a time range to zoom in</p>
-  </div>
+
+      <div class="row">
+        <div id="monthly-volume-chart" style="padding-top:10px">
+            <span class="label-text">Edits Through Time</span>
+        </div>
+        <p class="muted pull-right" style="margin-right: 15px;">select a time range to zoom in</p>
+      </div>
 
 <!--
       <div class="col-xs-4">
@@ -126,6 +169,8 @@ var numberFormat = d3.format(",d");
 var countryChart = dc.geoChoroplethChart("#country-chart");
 
 var volumeChart = dc.barChart('#monthly-volume-chart');
+
+//var rowChart = dc.rowChart('#row-chart');
 
 //d3.csv("mapgive_metrics.csv", function (error,csv) {
 //recieved a no Access-Control-Allow-Origin error in Chrome even though I configured it to allow origins in S3
@@ -162,6 +207,7 @@ function callback(error,csv) {
         csv.forEach(function(d){
             d['building_count'] = +d['building_count']; 
             d['highway_count'] = +d['highway_count'];
+            d['unique_users'] = +d['unique_users'];
             d.dd = dateFormat.parse(d.datetime);
             //console.log('printing parsed dateFromat');
             //console.log(d.dd);
@@ -182,6 +228,39 @@ function callback(error,csv) {
         });
 
 
+        console.log('testing GroupAll buildings')
+        console.log(data.groupAll().reduceSum(function(d){ return d["building_count"];}).value());
+
+        totalBuildingCount = countries.groupAll().reduceSum(function(d){ return d["building_count"];}).value();
+        totalHighwayCount = countries.groupAll().reduceSum(function(d){ return d["highway_count"];}).value();
+        totalUniqueUsersCount = countries.groupAll().reduceSum(function(d){ return d["unique_users"];}).value();
+
+        console.log(totalBuildingCount);
+
+        $.fn.digits = function(){ 
+            return this.each(function(){ 
+                $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") ); 
+            })
+        }
+
+        $('.display-building').append(totalBuildingCount.toLocaleString("en"));
+        $('.display-road').append(totalHighwayCount.toLocaleString("en"));
+        $('.display-users').append(totalUniqueUsersCount.toLocaleString("en"));
+
+        
+
+        console.log($(totalBuildingCount).digits());
+
+        var building_group_all = data.groupAll().reduceSum(function(d){ 
+            return d["building_count"];
+        }).value();
+
+        console.log('testing GroupAll hwys')
+        console.log(countries.groupAll().reduceSum(function(d){ return d["highway_count"];}).value());
+
+        //console.log('Group All test1')
+        //console.log(countries.all()[0].value);
+
         var highway_count_sum = countries.group().reduceSum(function (d) {
             return d["highway_count"];
         });
@@ -191,17 +270,19 @@ function callback(error,csv) {
         function reduceAdd(p, v) {
           p.building_count = p.building_count + v.building_count;
           p.highway_count = p.highway_count + v.highway_count;
+          p.unique_users = p.unique_users + v.unique_users;
           return p;
         }
 
         function reduceRemove(p, v) {
           p.building_count = p.building_count - v.building_count;
           p.highway_count = p.highway_count - v.highway_count;
+          p.unique_users = p.unique_users - v.unique_users;
           return p;
         }
 
         function reduceInitial() {
-          return {building_count: 0, highway_count: 0};
+          return {building_count: 0, highway_count: 0, unique_users: 0};
         }
 
 
@@ -218,7 +299,7 @@ function callback(error,csv) {
      
         // Group by total edits within move, and scale down result
         var editsByMonthGroup = moveMonths.group().reduceSum(function (d) {
-            return d["building_count"];
+            return d["building_count"]+d["highway_count"];
         });
 
 
@@ -329,7 +410,7 @@ function callback(error,csv) {
                     .colorDomain([0, 348146])
                     //need to make sure all country names are in the csv in order to return a value
                     .colorCalculator(function (d) { 
-                        return d ? countryChart.colors()(d.value.building_count) : '#ccc'; 
+                        return d ? countryChart.colors()(d.value.building_count+d.value.highway_count) : '#ccc'; 
                     })
                     //leave the name of chart as 'state' because dc.css has the hover effect that reference 
                     .overlayGeoJson(countriesJson.features, "state", function (d) {
@@ -340,9 +421,33 @@ function callback(error,csv) {
                         .translate([550, 225])
                         .scale(300)
                     )
+                    .on("filtered", function (chart) {
+                         console.log('printing countryChart filter');
+                         //https://www.codeproject.com/Articles/693841/Making-Dashboards-with-Dc-js-Part-Using-Crossfil
+                         console.log(data.groupAll().reduceSum(function(d) { 
+                                return d["building_count"];
+                            }).value()
+                        );
+                        var building_total = data.groupAll().reduceSum(function(d) { 
+                                return d["building_count"];
+                            }).value();
+                        $('.display-building').empty();
+                        $('.display-building').append(building_total.toLocaleString("en"));
+                        var highway_total = data.groupAll().reduceSum(function(d) { 
+                                return d["highway_count"];
+                            }).value();
+                        $('.display-road').empty();
+                        $('.display-road').append(highway_total.toLocaleString("en"));
+                        var unique_users_total = data.groupAll().reduceSum(function(d) { 
+                                return d["unique_users"];
+                            }).value();
+                        $('.display-users').empty();
+                        $('.display-users').append(unique_users_total.toLocaleString("en"));
+                    })
                     .valueAccessor(function(kv) {
-                        //console.log('value accessor');
-                        //console.log(kv);
+                        console.log('value accessor kv');
+                        console.log(kv);
+                        console.log(kv.value.building_count+kv.value.highway_count);
                         return kv;
                     })
                     .title(function (d) {
@@ -351,7 +456,7 @@ function callback(error,csv) {
                         if (d.value) {
                             //console.log('print d');
                             //console.log(d);
-                            return "Country: " + d.key + "\nTotal Buildings: " + numberFormat(d.value.value.building_count ? d.value.value.building_count : 0) + "\nTotal Roads: " + numberFormat(d.value.value.highway_count ? d.value.value.highway_count : 0);
+                            return d.key + "\nunique users: " + numberFormat(d.value.value.unique_users ? d.value.value.unique_users : 0) + "\ntotal buildings: " + numberFormat(d.value.value.building_count ? d.value.value.building_count : 0) + "\ntotal roads: " + numberFormat(d.value.value.highway_count ? d.value.value.highway_count : 0);
                         }
                         
                     });
@@ -361,23 +466,66 @@ function callback(error,csv) {
 
             // Since this bar chart is specified as "range chart" for the area chart, its brush extent
             // will always match the zoom of the area chart.
-            volumeChart.width(990) /* dc.barChart('#monthly-volume-chart', 'chartGroup'); */
-            .height(140)
-                .margins({
-                top: 0,
-                right: 50,
-                bottom: 20,
-                left: 40
-            })
-                .dimension(moveMonths)
-                .group(editsByMonthGroup)
-                .centerBar(true)
-                .gap(1)
-                .x(d3.time.scale().domain([new Date(2014, 0, 1), new Date(2017, 11, 31)]))
-                .round(d3.time.months.round)
-                .alwaysUseRounding(true)
-                .xUnits(d3.time.months);
+            volumeChart
+              .width(1200) /* dc.barChart('#monthly-volume-chart', 'chartGroup'); */
+              .height(160)
+              .margins({
+                top: 20,
+                right: 40,
+                bottom: 40,
+                left: 60
+              })
+               .dimension(moveMonths)
+               .group(editsByMonthGroup)
+               .on("filtered", function (chart) {
+                         console.log('printing countryChart filter');
+                         //https://www.codeproject.com/Articles/693841/Making-Dashboards-with-Dc-js-Part-Using-Crossfil
+                         console.log(data.groupAll().reduceSum(function(d) { 
+                                return d["building_count"];
+                            }).value()
+                        );
+                        var building_total = data.groupAll().reduceSum(function(d) { 
+                                return d["building_count"];
+                            }).value();
+                        $('.display-building').empty();
+                        $('.display-building').append(building_total.toLocaleString("en"));
+                        var highway_total = data.groupAll().reduceSum(function(d) { 
+                                return d["highway_count"];
+                            }).value();
+                        $('.display-road').empty();
+                        $('.display-road').append(highway_total.toLocaleString("en"));
+                        var unique_users_total = data.groupAll().reduceSum(function(d) { 
+                                return d["unique_users"];
+                            }).value();
+                        $('.display-users').empty();
+                        $('.display-users').append(unique_users_total.toLocaleString("en"));
+                    })
+               .centerBar(true)
+               .gap(1)
+               .x(d3.time.scale().domain([new Date(2014, 0, 1), new Date(2018, 04, 31)]))
+               .round(d3.time.months.round)
+               .alwaysUseRounding(true)
+               .xUnits(d3.time.months);
 
+/*
+            rowChart
+                .width(768)
+                .height(480)
+                .x(d3.scale.linear().domain([6,20]))
+                .elasticX(true)
+                .dimension(countries)
+                .group(countries.groupAll())
+                .render();
+
+
+          countryChart.on("filtered", function (chart, filter) {
+                // update function for d3
+            
+                console.log('printing countryChart filter');
+                console.log(countries.group().top(Infinity));
+
+                $('.fa-building').append(building_count_sum);
+           });*/
 
           // showtime!
           dc.renderAll();
