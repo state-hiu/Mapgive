@@ -434,10 +434,11 @@ return "<span style='color: #f0027f'>" + d.key + "</span>" + "\nunique users: " 
                     //.colors(d3.scale.quantile().range(["#f2f0f7","#dadaeb","#bcbddc","#9e9ac8","#756bb1","#54278f"]))
                     .colors(d3.scale.linear().range(["#f2f0f7","#54278f"]))
                     .colorDomain([0, 348146])
+                    .legend(dc.legend().x(450).y(555).itemHeight(13).gap(5))
                     //need to make sure all country names are in the csv in order to return a value
                     .colorCalculator(function (d) { 
-                        console.log('color calc');
-                        console.log(d);
+                        //console.log('color calc');
+                        //console.log(d);
                         if (d) {
                             //return d ? countryChart.colors()(d.value.building_count+d.value.highway_count) : '#f2f0f7'; 
                             return d.value ? countryChart.colors()(d.value.building_count+d.value.highway_count) : '#f2f0f7'; 
@@ -454,6 +455,11 @@ return "<span style='color: #f0027f'>" + d.key + "</span>" + "\nunique users: " 
                         .translate([550, 225])
                         .scale(300)
                     )
+                    //renderlet is invoked after transisitons after redraw and render. It makes sure to re-add the legend.
+                    .on("renderlet", function (chart) {
+                        console.log('trying readd legend function');
+                        reAddLegend();
+                    })
                     .on("filtered", function (chart) {
                          console.log('printing countryChart filter');
                          //https://www.codeproject.com/Articles/693841/Making-Dashboards-with-Dc-js-Part-Using-Crossfil
@@ -579,37 +585,13 @@ return "<span style='color: #f0027f'>" + d.key + "</span>" + "\nunique users: " 
 
           // showtime!
 
-          //https://stackoverflow.com/questions/49250107/dc-js-geochoroplethchart-doesnt-display-legend
-          countryChart.legendables = function () {
-  				var range = countryChart.colors().range()
-                console.log('this is the range');
-                console.log(range);
-                var domain = countryChart.colorDomain()
-                console.log('this is the domain');
-                console.log(domain);
-                var step = (domain[1] - domain[0]) / range.length
-                console.log('this is the step');
-                console.log(step);
-                var val = domain[0] 
-                console.log('this is the val0');
-                console.log(val);
-                return range.map(function (d, i) {
-                    //var legendable = {name: val + "-" + (val+step), chart: countryChart};
-                    var legendable = {name: "", chart: countryChart};
-                    console.log('legendable color');
-                    console.log(legendable.color);
-                    //legendable.color = countryChart.colorCalculator()(val);
-                    console.log('this is the val');
-                    console.log(val);
-                    //val += step
-                    return legendable;
-                });
-	 	      };  
 
-          countryChart.legend(dc.legend().x(450).y(555).itemHeight(13).gap(5))
 
 
           dc.renderAll();
+
+
+
 
 //https://www.visualcinnamon.com/2016/05/smooth-color-legend-d3-svg-gradient
 
@@ -637,28 +619,37 @@ linearGradient.append("stop")
     .attr("offset", "100%")
     .attr("stop-color", "#54278f"); //dark blue
 
-//Draw the rectangle and fill with gradient
-d3.select(".dc-legend").append("rect")
-    .attr("width", 300)
-    .attr("height", 20)
-    .style("fill", "url(#linear-gradient)");
-
-d3.select(".dc-legend").append("text")
-    .style("fill", "black")   // fill the text with the colour black
-    .style("font-size","20px")
-    .attr("x", 5)           // set x position of left side of text
-    .attr("y", 38)           // set y position of bottom of text 
-    .text("0");     // define the text to display 
-
-d3.select(".dc-legend").append("text")
-    .style("fill", "black")   // fill the text with the colour black
-    .style("font-size","20px")
-    .attr("x", 205)           // set x position of left side of text
-    .attr("y", 38)           // set y position of bottom of text 
-    .text("400k edits");     // define the text to display 
+//reAddLegend();
 
 //removing leftover legend item artifacts
-d3.selectAll(".dc-legend-item").remove();
+//d3.selectAll(".dc-legend-item").remove();
+
+
+function reAddLegend() {
+    console.log('reAddLegend function called');
+    //Draw the rectangle and fill with gradient
+    d3.select(".dc-legend").append("rect")
+        .attr("width", 300)
+        .attr("height", 20)
+        .style("fill", "url(#linear-gradient)");
+
+    d3.select(".dc-legend").append("text")
+        .style("fill", "black")   // fill the text with the colour black
+        .style("font-size","20px")
+        .attr("x", 5)           // set x position of left side of text
+        .attr("y", 38)           // set y position of bottom of text 
+        .text("0");     // define the text to display 
+
+    d3.select(".dc-legend").append("text")
+        .style("fill", "black")   // fill the text with the colour black
+        .style("font-size","20px")
+        .attr("x", 205)           // set x position of left side of text
+        .attr("y", 38)           // set y position of bottom of text 
+        .text("400k edits");     // define the text to display 
+
+    //removing leftover legend item artifacts
+    d3.selectAll(".dc-legend-item").remove();
+}
 
 
 //#f2f0f7","#54278f
