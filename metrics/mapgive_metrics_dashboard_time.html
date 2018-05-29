@@ -133,7 +133,7 @@ roads: road
       <div class="row" style="padding-top:15px">
           <div id="country-chart">
             <div class="map-label" style="padding-bottom:15px">
-                <span class="label-text">Edits by Country using the #MapGive hashtag (color: total amount of edits)</span>
+                <span class="label-text">Edits by Country using the #MapGive hashtag</span>
                 <a class="reset" href="javascript:dc.filterAll();dc.redrawAll();$('a.reset').css('display', 'none');" style="display: none;"><button type="button" class="btn "><strong>reset</strong></button></a>
                 <span class="reset" style="display: none;"> | Country filter: <span class="filter">none</span></span>
             </div>
@@ -645,14 +645,16 @@ d3.select(".dc-legend").append("rect")
 
 d3.select(".dc-legend").append("text")
     .style("fill", "black")   // fill the text with the colour black
+    .style("font-size","20px")
     .attr("x", 5)           // set x position of left side of text
-    .attr("y", 35)           // set y position of bottom of text 
+    .attr("y", 38)           // set y position of bottom of text 
     .text("0");     // define the text to display 
 
 d3.select(".dc-legend").append("text")
     .style("fill", "black")   // fill the text with the colour black
-    .attr("x", 220)           // set x position of left side of text
-    .attr("y", 35)           // set y position of bottom of text 
+    .style("font-size","20px")
+    .attr("x", 205)           // set x position of left side of text
+    .attr("y", 38)           // set y position of bottom of text 
     .text("400k edits");     // define the text to display 
 
 //removing leftover legend item artifacts
