@@ -62,7 +62,7 @@ svg {
     background: white;
 }
 
-.dc-chart g.state path {
+.dc-chart g.country path {
     stroke: #000;
 }
 
@@ -188,6 +188,8 @@ var volumeChart = dc.barChart('#monthly-volume-chart');
 //recieved a no Access-Control-Allow-Origin error in Chrome even though I configured it to allow origins in S3
 //this link describes problem: https://serverfault.com/questions/856904/chrome-s3-cloudfront-no-access-control-allow-origin-header-on-initial-xhr-req
 //added a made up query parameter '?x-request=xhr' in order to convince the browser that this is actually a seperate request
+
+
 
 
 d3.csv("test4.csv")
@@ -429,7 +431,8 @@ return "<span style='color: #f0027f'>" + d.key + "</span>" + "\nunique users: " 
                     .dimension(countries)
                     .group(custom_reducer)
                     //.colors(d3.scale.quantile().range(["#fff5f0","#fee0d2","#fcbba1","#fc9272","#fb6a4a","#ef3b2c","#cb181d","#a50f15","#67000d"]))
-                    .colors(d3.scale.quantile().range(["#f2f0f7","#dadaeb","#bcbddc","#9e9ac8","#756bb1","#54278f"]))
+                    //.colors(d3.scale.quantile().range(["#f2f0f7","#dadaeb","#bcbddc","#9e9ac8","#756bb1","#54278f"]))
+                    .colors(d3.scale.linear().range(["#f2f0f7","#54278f"]))
                     .colorDomain([0, 348146])
                     //need to make sure all country names are in the csv in order to return a value
                     .colorCalculator(function (d) { 
@@ -437,13 +440,13 @@ return "<span style='color: #f0027f'>" + d.key + "</span>" + "\nunique users: " 
                         console.log(d);
                         if (d) {
                             //return d ? countryChart.colors()(d.value.building_count+d.value.highway_count) : '#f2f0f7'; 
-                            return d.value ? countryChart.colors()(d.value.building_count) : '#f2f0f7'; 
+                            return d.value ? countryChart.colors()(d.value.building_count+d.value.highway_count) : '#f2f0f7'; 
                         } else {
                             return '#f2f0f7';
                         }
                     })
                     //leave the name of chart as 'state' because dc.css has the hover effect that reference 
-                    .overlayGeoJson(countriesJson.features, "state", function (d) {
+                    .overlayGeoJson(countriesJson.features, "country", function (d) {
                         return d.properties.COUNTRY_NA;
                     })
                     .projection(d3.geoHammer()
@@ -591,23 +594,72 @@ return "<span style='color: #f0027f'>" + d.key + "</span>" + "\nunique users: " 
                 console.log('this is the val0');
                 console.log(val);
                 return range.map(function (d, i) {
-                    var legendable = {name: val + "-" + (val+step), chart: countryChart};
+                    //var legendable = {name: val + "-" + (val+step), chart: countryChart};
+                    var legendable = {name: "", chart: countryChart};
                     console.log('legendable color');
                     console.log(legendable.color);
-                    legendable.color = countryChart.colorCalculator()(val);
+                    //legendable.color = countryChart.colorCalculator()(val);
                     console.log('this is the val');
                     console.log(val);
-                    val += step
+                    //val += step
                     return legendable;
                 });
 	 	      };  
 
-          countryChart.legend(dc.legend().x(40).y(450).itemHeight(13).gap(5))
+          countryChart.legend(dc.legend().x(450).y(555).itemHeight(13).gap(5))
 
 
           dc.renderAll();
 
+//https://www.visualcinnamon.com/2016/05/smooth-color-legend-d3-svg-gradient
 
+//Append a defs (for definition) element to your SVG
+var defs = d3.select("svg").append("defs");
+
+//Append a linearGradient element to the defs and give it a unique id
+var linearGradient = defs.append("linearGradient")
+    .attr("id", "linear-gradient");
+
+//Horizontal gradient
+linearGradient
+    .attr("x1", "0%")
+    .attr("y1", "0%")
+    .attr("x2", "100%")
+    .attr("y2", "0%");
+
+//Set the color for the start (0%)
+linearGradient.append("stop")
+    .attr("offset", "0%")
+    .attr("stop-color", "#f2f0f7"); //light blue
+
+//Set the color for the end (100%)
+linearGradient.append("stop")
+    .attr("offset", "100%")
+    .attr("stop-color", "#54278f"); //dark blue
+
+//Draw the rectangle and fill with gradient
+d3.select(".dc-legend").append("rect")
+    .attr("width", 300)
+    .attr("height", 20)
+    .style("fill", "url(#linear-gradient)");
+
+d3.select(".dc-legend").append("text")
+    .style("fill", "black")   // fill the text with the colour black
+    .attr("x", 5)           // set x position of left side of text
+    .attr("y", 35)           // set y position of bottom of text 
+    .text("0");     // define the text to display 
+
+d3.select(".dc-legend").append("text")
+    .style("fill", "black")   // fill the text with the colour black
+    .attr("x", 220)           // set x position of left side of text
+    .attr("y", 35)           // set y position of bottom of text 
+    .text("400k edits");     // define the text to display 
+
+//removing leftover legend item artifacts
+d3.selectAll(".dc-legend-item").remove();
+
+
+//#f2f0f7","#54278f
 
 /*
 var vis = d3.select(document.body)
