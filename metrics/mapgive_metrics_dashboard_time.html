@@ -438,8 +438,8 @@ return "<span style='color: #f0027f'>" + d.key + "</span>" + "\nunique users: " 
                     .dimension(countries)
                     .group(custom_reducer)
                     //.colors(d3.scale.quantile().range(["#efedf5","#dadaeb","#bcbddc","#9e9ac8","#807dba","#6a51a3","#54278f","#3f007d"]))
-                    .colors(d3.scale.quantile().range(["#f2f0f7","#cbc9e2","#9e9ac8","#756bb1","#54278f"]))
-                    //.colors(d3.scale.linear().range(["#efedf5","#3f007d"]))
+                    //.colors(d3.scale.quantile().range(["#f2f0f7","#cbc9e2","#9e9ac8","#756bb1","#54278f"]))
+                    .colors(d3.scale.linear().range(["#efedf5","#3f007d"]))
                     .colorDomain([0, 500000])
                     .legend(dc.legend().x(455).y(555).itemHeight(13).gap(5))
                     //need to make sure all country names are in the csv in order to return a value
