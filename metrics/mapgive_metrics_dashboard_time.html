@@ -441,7 +441,7 @@ return "<span style='color: #f0027f'>" + d.key + "</span>" + "\nunique users: " 
                     //.colors(d3.scale.quantile().range(["#f2f0f7","#dadaeb","#bcbddc","#9e9ac8","#756bb1","#54278f"]))
                     .colors(d3.scale.linear().range(["#f2f0f7","#54278f"]))
                     .colorDomain([0, 348146])
-                    .legend(dc.legend().x(450).y(555).itemHeight(13).gap(5))
+                    .legend(dc.legend().x(455).y(555).itemHeight(13).gap(5))
                     //need to make sure all country names are in the csv in order to return a value
                     .colorCalculator(function (d) { 
                         //console.log('color calc');
@@ -636,7 +636,7 @@ function reAddLegend() {
     console.log('reAddLegend function called');
     //Draw the rectangle and fill with gradient
     d3.select(".dc-legend").append("rect")
-        .attr("width", 300)
+        .attr("width", 310)
         .attr("height", 20)
         .style("fill", "url(#linear-gradient)");
 
@@ -650,7 +650,7 @@ function reAddLegend() {
     d3.select(".dc-legend").append("text")
         .style("fill", "black")   // fill the text with the colour black
         .style("font-size","18px")
-        .attr("x", 205)           // set x position of left side of text
+        .attr("x", 220)           // set x position of left side of text
         .attr("y", 38)           // set y position of bottom of text 
         .text("400k edits");     // define the text to display 
 
