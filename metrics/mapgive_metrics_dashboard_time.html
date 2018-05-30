@@ -84,6 +84,13 @@ svg {
     line-height: 1;
 }
 
+.chart-tip-text {
+    font-family: Trebuchet MS,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+}
+
 </style>
 
 <!-- font awesome
@@ -146,7 +153,7 @@ roads: road
         <div id="monthly-volume-chart" style="padding-top:15px">
             <span class="label-text">Edits Through Time using the #MapGive hashtag</span>
         </div>
-        <p class="muted pull-right" style="margin-right: 15px;">select a time range to zoom in</p>
+        <p class="chart-tip-text pull-right" style="margin-right: 15px;">select a time range to zoom in</p>
       </div>
 
 <!--
@@ -516,8 +523,8 @@ return "<span style='color: #f0027f'>" + d.key + "</span>" + "\nunique users: " 
               .height(260)
               .margins({
                 top: 20,
-                right: 40,
-                bottom: 40,
+                right: 30,
+                bottom: 30,
                 left: 60
               })
                .dimension(moveMonths)
@@ -635,14 +642,14 @@ function reAddLegend() {
 
     d3.select(".dc-legend").append("text")
         .style("fill", "black")   // fill the text with the colour black
-        .style("font-size","20px")
+        .style("font-size","18px")
         .attr("x", 5)           // set x position of left side of text
         .attr("y", 38)           // set y position of bottom of text 
         .text("0");     // define the text to display 
 
     d3.select(".dc-legend").append("text")
         .style("fill", "black")   // fill the text with the colour black
-        .style("font-size","20px")
+        .style("font-size","18px")
         .attr("x", 205)           // set x position of left side of text
         .attr("y", 38)           // set y position of bottom of text 
         .text("400k edits");     // define the text to display 
