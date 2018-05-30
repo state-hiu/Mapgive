@@ -462,8 +462,9 @@ return "<span style='color: #f0027f'>" + d.key + "</span>" + "\nunique users: " 
                         .translate([550, 225])
                         .scale(300)
                     )
-                    //renderlet is invoked after transisitons after redraw and render. It makes sure to re-add the legend.
-                    .on("renderlet", function (chart) {
+                    //pretransition is invoked after transisitons after redraw and render. It makes sure to re-add the legend.
+                    //renderlet works too, but pretransition works better! https://github.com/dc-js/dc.js/issues/1163
+                    .on("pretransition", function (chart) {
                         console.log('trying readd legend function');
                         reAddLegend();
                     })
