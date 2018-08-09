@@ -129,9 +129,24 @@ x.onreadystatechange = function () {
     var doc = x.responseXML;
     console.log('print xml responseXML')
     console.log(doc)
-    var filename = doc.getElementsByTagName("Contents")[0].getElementsByTagName("Key")[0].textContent;
+    var filename = doc.getElementsByTagName("Contents")[doc.getElementsByTagName("Contents").length-1].getElementsByTagName("Key")[0].textContent;
     console.log('print latest filename')
     console.log(filename)
+
+    //parse data from filename   https://stackoverflow.com/questions/7151543/convert-dd-mm-yyyy-string-to-date
+    var from = filename.split("-");
+    console.log('print from')
+    console.log(from)
+    var f = new Date(from[0], from[1] - 1, from[2])
+    console.log('f');
+    console.log(f);
+
+    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    var prettyDate = f.toLocaleDateString("en-US", options);
+    console.log(prettyDate); 
+
+    
+
     //recieved a no Access-Control-Allow-Origin error in Chrome even though I configured it to allow origins in S3
     //this link describes problem: https://serverfault.com/questions/856904/chrome-s3-cloudfront-no-access-control-allow-origin-header-on-initial-xhr-req
     //added a made up query parameter '?x-request=xhr' in order to convince the browser that this is actually a seperate request
@@ -366,7 +381,7 @@ function callback(error,csv) {
                .centerBar(true)
                .renderHorizontalGridLines(true)
                .gap(3)
-               .x(d3.time.scale().domain([new Date(2014, 0, 1), new Date(2018, 04, 31)]))
+               .x(d3.time.scale().domain([new Date(2014, 0, 1), new Date(2018, 07, 31)]))
                .round(d3.time.months.round)
                .alwaysUseRounding(true)
                .xUnits(d3.time.months);
