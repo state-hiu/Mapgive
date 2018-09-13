@@ -16,6 +16,9 @@
 <script src="https://d3js.org/d3-geo.v1.min.js"></script>
 <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
 
+<script src="http://d3js.org/queue.v1.min.js"></script>
+
+<script src="https://rawgit.com/pshihn/rough/master/dist/rough.min.js"></script>
 
 <style type="text/css">
 
@@ -24,8 +27,9 @@
     transform: rotate(-45deg);
 }
 
+/* ocean color of map */
 svg {
-  background: #9BCAFF;
+  background: #bde0f2;
 }
 
 #monthly-volume-chart svg {
@@ -33,7 +37,7 @@ svg {
 }
 
 .dc-chart g.country path {
-    stroke: #000;
+    stroke: #FFF;
 }
 
 .stat-label {
@@ -70,7 +74,7 @@ svg {
 
       <div class="row">
           <div id="row-chart" style="padding-bottom:15px">
-            <span class="description-text">This dashboard shows user contributions by country and time using the <strong>#MapGive</strong> hashtag. Visit our <a href="https://mapgive.state.gov/about-open-mapping/">Open Mapping page</a> to learn more about Open Mapping's role in humanitarian and development missions. Instructions: Filter metrics by selecting individual or multiple countries on the map. Another way of filtering is by selecting a time range on the time chart.</span>
+            <span class="description-text">This dashboard shows user contributions by country and time using the <strong>#MapGive</strong> hashtag. Visit our <a href="https://mapgive.state.gov/about-open-mapping/">Open Mapping page</a> to learn more about Open Mapping's role in humanitarian and development missions. <strong>Dashboard Instructions:</strong> You can apply filters by selecting individual or multiple countries on the map. Another way of filtering is by selecting a time range on the time bar chart. The map and the time bar chart are linked together so that filters applied in one will update the other. </span>
           </div>
 
           <div class="col-md-4 stat-label label-text"><i class="fas fa-users fa-2x"></i> <div class="display-users"></div> <div>unique users</div> </div>
@@ -256,7 +260,15 @@ function callback(error,csv) {
         topTypes[0].value; // the payment volume for that type (e.g., 920)
 
 
-        d3.json("geo/world.json", function (countriesJson) {
+        //https://gist.github.com/mapsam/6090056
+        queue()
+          .defer(d3.json, "geo/world.json")
+          .defer(d3.json, "geo/us-states.json")
+          .await(analyze);
+
+        //d3.json("geo/world.json", function (countriesJson) {
+        function analyze(error, countriesJson, statesJson) {
+
 
             countryChart.width(1200)
                     .height(600)
@@ -282,15 +294,18 @@ function callback(error,csv) {
                     .overlayGeoJson(countriesJson.features, "country", function (d) {
                         return d.properties.COUNTRY_NA;
                     })
-                    .projection(d3.geoHammer()
-                        .center([0, 20])
+                    .overlayGeoJson(statesJson.features, "state", function (d) {
+                        return d.properties.name;
+                    })
+                    .projection(d3.geoRobinson()
+                        .center([20, 20])
                         .translate([550, 225])
-                        .scale(300)
+                        .scale(280)
                     )
                     //pretransition is invoked after transisitons after redraw and render. It makes sure to re-add the legend.
                     //renderlet works too, but pretransition works better! https://github.com/dc-js/dc.js/issues/1163
                     .on("pretransition", function (chart) {
-                        console.log('trying readd legend function');
+                        console.log('trying read legend function');
                         reAddLegend();
                     })
                     .on("filtered", function (chart) {
@@ -445,7 +460,8 @@ function callback(error,csv) {
             }
 
 
-        });
+        //end of analyze callback function
+        }
 
 
 };
