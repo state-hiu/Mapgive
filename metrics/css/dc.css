@@ -177,7 +177,7 @@ div.dc-chart {
 }
 
 .dc-chart g.state path {
-    stroke: white;
+    stroke: #e02727;
 }
 
 .dc-chart g.selected path {
