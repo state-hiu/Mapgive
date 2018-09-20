@@ -269,7 +269,7 @@ function callback(error,csv) {
         //https://gist.github.com/mapsam/6090056
         queue()
           .defer(d3.json, "geo/world.json")
-          .defer(d3.json, "geo/us-states.json")
+          .defer(d3.json, "geo/LSIB9_combined_simplify2.json")
           .await(analyze);
 
         //d3.json("geo/world.json", function (countriesJson) {
@@ -301,7 +301,7 @@ function callback(error,csv) {
                         return d.properties.COUNTRY_NA;
                     })
                     .overlayGeoJson(statesJson.features, "state", function (d) {
-                        return d.properties.name;
+                        return d.properties;
                     })
                     .projection(d3.geoRobinson()
                         .center([20, 20])
