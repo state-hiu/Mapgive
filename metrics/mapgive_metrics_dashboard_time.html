@@ -32,10 +32,10 @@ svg {
   background: #bde0f2;
 }
 
-.dc-chart g.state path {
-	fill: #e5e5e5;
-	stroke: #e02727;
-	stroke-width:5px;
+.dc-chart g.lsib_lines path {
+	fill: none;
+	stroke: #FFF;
+	stroke-width:1.5px;
 }
 
 #monthly-volume-chart svg {
@@ -43,7 +43,7 @@ svg {
 }
 
 .dc-chart g.country path {
-    stroke: #FFF;
+    stroke: none;
 }
 
 .stat-label {
@@ -269,11 +269,11 @@ function callback(error,csv) {
         //https://gist.github.com/mapsam/6090056
         queue()
           .defer(d3.json, "geo/world.json")
-          .defer(d3.json, "geo/LSIB9_combined_simplify2.json")
+          .defer(d3.json, "geo/LSIB9_combined_simplify4.json")
           .await(analyze);
 
         //d3.json("geo/world.json", function (countriesJson) {
-        function analyze(error, countriesJson, statesJson) {
+        function analyze(error, countriesJson, lsib_lines_Json) {
 
 
             countryChart.width(1200)
@@ -298,10 +298,19 @@ function callback(error,csv) {
                     })
                     //leave the name of chart as 'state' because dc.css has the hover effect that reference 
                     .overlayGeoJson(countriesJson.features, "country", function (d) {
-                        return d.properties.COUNTRY_NA;
+                        if (d.properties.COUNTRY_NA) {
+                            console.log('logging d.properties.COUNTRY_NA');
+                            console.log(d.properties.COUNTRY_NA);
+                            return d.properties.COUNTRY_NA;
+                        }
                     })
-                    .overlayGeoJson(statesJson.features, "state", function (d) {
-                        return d.properties;
+                    .overlayGeoJson(lsib_lines_Json.features, "lsib_lines", function (d) {
+                        console.log('logging d.properties.rank2');
+                        console.log(d.properties.rank2);
+                        //d.properties.rank2 value has to be a string not an integer, or else dc.util libary throws an error
+                        if (d.properties.rank2) {
+                            return d.properties.rank2;
+                        }
                     })
                     .projection(d3.geoRobinson()
                         .center([20, 20])
