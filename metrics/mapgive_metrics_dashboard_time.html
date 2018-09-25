@@ -18,8 +18,6 @@
 
 <script src="js/queue.v1.min.js"></script>
 
-<script src="https://rawgit.com/pshihn/rough/master/dist/rough.min.js"></script>
-
 <style type="text/css">
 
 #chart-age-count .x.axis text {
@@ -271,6 +269,7 @@ function callback(error,csv) {
           .defer(d3.json, "geo/world_simplify.json")
           .defer(d3.json, "geo/LSIB9_combined_simplify4.json")
           .await(analyze);
+
 
         //d3.json("geo/world.json", function (countriesJson) {
         function analyze(error, countriesJson, lsib_lines_Json) {
