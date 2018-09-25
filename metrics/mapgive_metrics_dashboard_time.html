@@ -268,7 +268,7 @@ function callback(error,csv) {
 
         //https://gist.github.com/mapsam/6090056
         queue()
-          .defer(d3.json, "geo/world.json")
+          .defer(d3.json, "geo/world_simplify.json")
           .defer(d3.json, "geo/LSIB9_combined_simplify4.json")
           .await(analyze);
 
