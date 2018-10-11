@@ -20,6 +20,10 @@
 
 <style type="text/css">
 
+.dc-chart g.country :hover {
+    fill-opacity: .8;
+}
+
 #chart-age-count .x.axis text {
     text-anchor: end !important;
     transform: rotate(-45deg);
@@ -78,7 +82,7 @@ svg {
 
       <div class="row">
           <div id="row-chart" style="padding-bottom:15px">
-            <span class="description-text">This dashboard shows user contributions by country and time using the <strong>#MapGive</strong> hashtag. Visit our <a href="https://mapgive.state.gov/about-open-mapping/">Open Mapping page</a> to learn more about Open Mapping's role in humanitarian and development missions. <strong>Dashboard Instructions:</strong> You can apply filters by selecting individual or multiple countries on the map. Another way of filtering is by selecting a time range on the time bar chart. The map and the time bar chart are linked together so that filters applied in one will update the other. </span>
+            <span class="description-text">This dashboard shows user contributions to OpenStreetMap by country and time using the <strong>#MapGive</strong> hashtag. Visit our <a href="https://mapgive.state.gov/about-open-mapping/">Open Mapping page</a> to learn more about Open Mapping's role in humanitarian and development programs. <strong>Dashboard Instructions:</strong> You can apply filters by selecting individual or multiple countries on the map, or by selecting a time range on the  bar chart. The map and the bar chart are linked, so filters applied in one will update the other. </span>
           </div>
 
           <div class="col-md-4 stat-label label-text"><i class="fas fa-users fa-2x"></i> <div class="display-users"></div> <div>unique users</div> </div>
@@ -112,6 +116,8 @@ svg {
 
 
 <script type="text/javascript">
+
+
 
 var numberFormat = d3.format(",d");
 
