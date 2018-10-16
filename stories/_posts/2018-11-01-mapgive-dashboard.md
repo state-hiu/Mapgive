@@ -67,7 +67,7 @@ Volunteer contributions fluctuate during the year, although we have seen a stead
         </p>
         <strong>April 2015: Nepal Earthquake</strong>
         <p>
-        A 7.8 magnitude earthquake struck Nepal on April 25th2015. The earthquake and aftershocks resulted in about 9,000 deaths and over 22,000 injuries. Many different imagery providers coordinated in providing satellite imagery immediately following the disaster for the OpenStreetMap response. The MapGive team contributed a few crucial pre-disaster scenes in the Gorkha region northwest of Kathmandu.
+        A 7.8 magnitude earthquake struck Nepal on April 25, 2015. The earthquake and aftershocks resulted in about 9,000 deaths and over 22,000 injuries. Many different imagery providers coordinated in providing satellite imagery immediately following the disaster for the OpenStreetMap response. The MapGive team contributed a few crucial pre-disaster scenes in the Gorkha region northwest of Kathmandu.
         </p>
         <strong>2017: Uganda Mapping</strong>
         <ul>
