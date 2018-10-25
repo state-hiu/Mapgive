@@ -57,7 +57,6 @@ MapGive contributions have steadily increased since the 2014 launch. Contributio
 <div class="story-promo shadowed">
 <blockquote>
     <div style="font-size: 18px;margin-bottom:0px" class="story-promo qoute">
-
         <strong>July 2014: Ebola Outbreak, West Africa</strong>
         <p>
         The West Africa Ebola epidemic was the largest Ebola epidemic in history. It began with the first recorded case in Guinea in December 2013. The disease spread to Liberia and Sierra Leone, and by July 2014, all three capitals were struggling to deal with the epidemic. MapGive provided huge swaths of imagery services for Liberia and Sierra Leone, and hosted mapathons with the American Red Cross that mobilized hundreds of volunteers. Deployed response teams made use of updated OSM data for logistics and planning.</p>
@@ -67,7 +66,7 @@ MapGive contributions have steadily increased since the 2014 launch. Contributio
         </p>
         <strong>April 2015: Earthquake Response, Nepal</strong>
         <p>
-        A 7.8 magnitude earthquake struck Nepal on April 25th2015. The earthquake and aftershocks resulted in about 9,000 deaths and over 22,000 injuries. Many different imagery providers coordinated in providing satellite imagery immediately following the disaster for the OpenStreetMap response. The MapGive team contributed certain crucial pre-disaster scenes in the Gorkha region northwest of Kathmandu.
+        A 7.8 magnitude earthquake struck Nepal on April 25, 2015. The earthquake and aftershocks resulted in about 9,000 deaths and over 22,000 injuries. Many different imagery providers coordinated in providing satellite imagery immediately following the disaster for the OpenStreetMap response. The MapGive team contributed a few crucial pre-disaster scenes in the Gorkha region northwest of Kathmandu.
         </p>
         <strong>2017: Multi-pronged Mapping Efforts, Uganda</strong>
         <ul>
@@ -88,12 +87,6 @@ We encourage you to try out the dashboard for yourself. This tool is enabling ou
 <p>
 <strong>Technical note and acknowledgements</strong>: this dashboard is possible due to the work from <a href="https://aws.amazon.com/blogs/big-data/querying-openstreetmap-with-amazon-athena/" target="_blank">Amazon Web Services and by Seth Fitzsimmons</a> in making OSM data publically queryable using Amazon Athena. The backend metrics aggregator (points-in-polygon repository), and frontend code (MapGive repository) are all open source and available on <a href="https://github.com/state-hiu" target="_blank">Github</a>.
 </p>
-
-
-
-
-
-
 
 
 
