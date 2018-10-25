@@ -49,14 +49,14 @@ lon: 0
 
 The MapGive team is proud to launch the <a href="{{site.baseurl}}/dashboard" target="_blank">MapGive Dashboard</a> that highlights contributions to OpenStreetMap (OSM) projects supported by MapGive. MapGive primarily supports remote mapping projects designed and identified by organizations working on the ground in local communities. Digital volunteers can trace satellite imagery to identify buildings and roads in priority geographic areas to create map data that directly supports programs implemented by humanitarian and development organizations. Since MapGive's launch in 2014, over 17 thousand unique users have created more than 2 million buildings and 180,000 roads using #MapGive, all of which is openly available through OSM! 
 <p>
-You can use the MapGive Dashboard to explore where and when the #MapGive hashtag awas used in a user's contribution to OSM. Mappers using the Humanitarian OpenStreetMap Team's (HOT) Trasking Manager can find the #MapGive hashtag included in the changeset comments of any project supported by MapGive. To date, MapGive has published over 240 satellite imagery services to support the open mapping community and facilitated dozens of mapathons in support of these projects.
+You can use the MapGive Dashboard to explore where and when the #MapGive hashtag was used in a user's contribution to OSM. Mappers using the Humanitarian OpenStreetMap Team's (HOT) Tasking Manager can find the #MapGive hashtag included in the changeset comments of any project supported by MapGive. To date, MapGive has published over 240 satellite imagery services to support the open mapping community and facilitated dozens of mapathons in support of these projects.
 <p>
-MapGive contributions have steadily increased since the 2014 launch. Contributions visibly spike whever MapGive focuses support on critical humanitarian response efforts and every November as MapGive and the OSM community celebrates <a href="http://osmgeoweek.org/" target="_blank">OSM Geography Awareness Week</a>. The following events were noteworthy humanitarian emergencies where MapGive mobilized support to rapid mapping efforts that tangibly improved response efforts:
+MapGive contributions have steadily increased since the 2014 launch. Contributions visibly spike whenever MapGive focuses support on critical humanitarian response efforts and every November as MapGive and the OSM community celebrates <a href="http://osmgeoweek.org/" target="_blank">OSM Geography Awareness Week</a>. The following events were noteworthy humanitarian emergencies where MapGive mobilized support to rapid mapping efforts that tangibly improved response efforts:
 <p>
 
 <div class="story-promo shadowed">
 <blockquote>
-    <div style="font-size: 18px;margin-bottom:0px" class="story-promo qoute">
+    <div style="font-size: 18px;margin-bottom:0px" class="story-promo">
         <strong>July 2014: Ebola Outbreak, West Africa</strong>
         <p>
         The West Africa Ebola epidemic was the largest Ebola epidemic in history. It began with the first recorded case in Guinea in December 2013. The disease spread to Liberia and Sierra Leone, and by July 2014, all three capitals were struggling to deal with the epidemic. MapGive provided huge swaths of imagery services for Liberia and Sierra Leone, and hosted mapathons with the American Red Cross that mobilized hundreds of volunteers. Deployed response teams made use of updated OSM data for logistics and planning.</p>
@@ -85,7 +85,7 @@ MapGive contributions have steadily increased since the 2014 launch. Contributio
 We encourage you to try out the dashboard for yourself. This tool is enabling our team to make use of data to help us reflect on our past work, find gaps, and feed into our ongoing outreach efforts. It helps us measure our impact and set new goals. We look forward to continuing our partnerships with the humanitarian community and working together to map the world.
 </p>
 <p>
-<strong>Technical note and acknowledgements</strong>: this dashboard is possible due to the work from <a href="https://aws.amazon.com/blogs/big-data/querying-openstreetmap-with-amazon-athena/" target="_blank">Amazon Web Services and by Seth Fitzsimmons</a> in making OSM data publically queryable using Amazon Athena. The backend metrics aggregator (points-in-polygon repository), and frontend code (MapGive repository) are all open source and available on <a href="https://github.com/state-hiu" target="_blank">Github</a>.
+<strong>Technical note and acknowledgements</strong>: this dashboard is possible due to the work from <a href="https://aws.amazon.com/blogs/big-data/querying-openstreetmap-with-amazon-athena/" target="_blank">Amazon Web Services and by Seth Fitzsimmons</a> in making OSM data publicaly queryable using Amazon Athena. The backend metrics aggregator (points-in-polygon repository), and frontend code (MapGive repository) are all open source and available on <a href="https://github.com/state-hiu" target="_blank">Github</a>.
 </p>
 
 
