@@ -112,14 +112,14 @@
     <div id="main-wrapper">
       {% include main-nav.html %}
 
-        <!--
+
           <div class='fill-light-green osmgeoweek-text center pad2y'>
               <div class='limiter'>
-                <h3>Teach, Learn and Discover Geography With OpenStreetMap during Geography Awareness Week, 13–19 November. For more details go to <a href="http://osmgeoweek.org/" target="_blank">osmgeoweek.org</a> and follow #osmgeoweek</a>
+                <h3>Teach, Learn and Discover Geography With OpenStreetMap during Geography Awareness Week, 12–18 November. For more details go to <a href="http://osmgeoweek.org/" target="_blank">osmgeoweek.org</a> and follow #osmgeoweek</a>
                 </h3>
               </div>
           </div>
-        -->
+
 
           <div class="container" id="main" role="main">
             {{ content }}
