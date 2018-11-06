@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <title>Swipe between maps</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+
+
+
+<style>
+
+body {
+    overflow: hidden;
+}
+
+body * {
+   -webkit-touch-callout: none;
+     -webkit-user-select: none;
+        -moz-user-select: none;
+         -ms-user-select: none;
+             user-select: none;
+}
+
+.map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/**
+* Set rules for how the map overlays
+* (info box and legend) will be displayed
+* on the page. */
+.map-overlay-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+  margin-left: 20px;
+  font-family: Arial, sans-serif;
+  overflow: auto;
+  border-radius: 3px;
+}
+
+.map-overlay-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+  margin-right: 20px;
+  font-family: Arial, sans-serif;
+  overflow: auto;
+  border-radius: 3px;
+}
+
+#label-left {
+  bottom: 0;
+  /*height: 100px;*/
+  margin-top: 20px;
+  /*width: 250px;*/
+}
+
+#label-right {
+  bottom: 0;
+  /*height: 100px;*/
+  margin-top: 20px;
+  /*width: 250px;*/
+}
+
+/*
+#legend {
+  padding: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  line-height: 18px;
+  height: 150px;
+  margin-bottom: 40px;
+  width: 100px;
+}
+
+.legend-key {
+  display: inline-block;
+  border-radius: 20%;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+*/
+
+/*
+
+		.info {
+			padding: 6px 8px;
+			font: 14px/16px Arial, Helvetica, sans-serif;
+			background: white;
+			background: rgba(255,255,255,0.8);
+			box-shadow: 0 0 15px rgba(0,0,0,0.2);
+			border-radius: 5px;
+		}
+		.info h4 {
+			margin: 0 0 5px;
+			color: #d73f3f;
+		}
+		/*overides leaflet control layer order so it doesn't appear on top of nav bar*/
+    /*
+		.leaflet-top, .leaflet-bottom {
+			z-index: 1;
+		}
+*/
+/*adds extra bottom margin to bottom left label*/
+/*
+    .leaflet-left.leaflet-bottom {
+			margin-bottom: 20px;
+		}
+    */
+
+/*
+#mapAtitle {
+    left:1%;
+    bottom:15%;
+    width:35%;
+    text-align:left;
+    z-index:10;
+    background-color:rgba(255,255,255,0.7);
+}
+
+#mapBtitle {
+    left:69%;
+    width:30%;
+    bottom:15%;
+    text-align:right;
+    z-index:10;
+    background-color:rgba(255,255,255,0.7);
+}
+
+.leaflet-top .leaflet-control-zoom {
+  top:20px;
+  }
+*/
+</style>
+
+<body>
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.1.0/mapbox-gl-compare.css' type='text/css' />
+
+<div id='before' class='map'></div>
+<div id='after' class='map'></div>
+
+<div class='map-overlay-left' id='label-left'><h3 style="padding:10px;margin:5px" >Jan 1, 2017</h3></div>
+
+<div class='map-overlay-right' id='label-right'><h3 style="padding:10px;margin:5px" >Today</h3></div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ';
+var beforeMap = new mapboxgl.Map({
+    container: 'before',
+    style: {
+        "version": 8,
+        "sources": {
+            "raster-tiles": {
+                "type": "raster",
+                "url": "mapbox://" + "hiu.8lb61mt4",
+                "tileSize": 256
+            }
+        },
+        "layers": [{
+            "id": "simple-tiles",
+            "type": "raster",
+            "source": "raster-tiles",
+            "minzoom": 0,
+            "maxzoom": 22
+        }]
+    },
+    center: [31.3136,3.2780],
+    zoom: 10
+});
+
+/*
+var afterMap = new mapboxgl.Map({
+    container: 'after',
+    style: 'mapbox://styles/mapbox/dark-v9',
+    center: [2.9706415,31.390771],
+    zoom: 12
+});
+*/
+
+var afterMap = new mapboxgl.Map({
+    container: 'after',
+    style: {
+        "version": 8,
+        "sources": {
+          "osm": {
+              "type": "raster",
+              "tiles":["http://a.tile.openstreetmap.org/{z}/{x}/{y}.png", "http://b.tile.openstreetmap.org/{z}/{x}/{y}.png"],
+              "tileSize": 256
+          }
+        },
+        "layers": [{
+            "id": "osm-tiles",
+            "type": "raster",
+            "source": "osm",
+            "minzoom": 0,
+            "maxzoom": 22
+        }]
+    },
+    center: [31.3136,3.2780],
+    zoom: 10
+});
+
+var map = new mapboxgl.Compare(beforeMap, afterMap, {
+    // Set this to enable comparing two maps by mouse movement:
+    // mousemove: true
+});
+</script>
+
+
+
+<script>
+/*
+
+L.mapbox.accessToken = 'pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ';
+
+var southWest = L.latLng(0.911827,30.151978),
+    northEast = L.latLng(4.351889,35.310059),
+    bounds = L.latLngBounds(southWest, northEast);
+
+//var map = L.mapbox.map('map');
+
+var map = L.map('map', {
+	minZoom: 8,
+	maxZoom: 14
+});
+
+L.mapbox.tileLayer('hiu.8lb61mt4').addTo(map);
+
+map.setView([3.1212,31.3814],12);
+
+var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 14, attribution: osmAttrib});	
+//var overlay = osm.addTo(map);
+var right = osm.addTo(map);
+
+var range = document.getElementById('range');
+
+function clip() {
+        var nw = map.containerPointToLayerPoint([0, 0]),
+            se = map.containerPointToLayerPoint(map.getSize()),
+            clipX = nw.x + (se.x - nw.x) * range.value;
+        //left.getContainer().style.clip = 'rect(' + [nw.y, clipX, se.y, nw.x].join('px,') + 'px)';
+        right.getContainer().style.clip = 'rect(' + [nw.y, se.x, se.y, clipX].join('px,') + 'px)';
+    }
+
+//range['oninput' in range ? 'oninput' : 'onchange'] = clip;
+var isIE = false || !!document.documentMode;   // At least IE6
+
+range.change = clip;
+
+if (isIE) {
+  range.onchange = clip;
+}
+else {
+  range.oninput = clip;
+}
+
+map.on('move', clip);
+
+map.setMaxBounds(bounds);
+//map.minZoom(10);
+
+// zoom the map to that bounding box
+//map.fitBounds(bounds);
+
+
+
+		//taken from: http://leafletjs.com/examples/choropleth-example.html
+		//info box that contains title
+		var bottom_left_text = L.control({position: 'bottomleft'});
+
+		bottom_left_text.onAdd = function (map) {
+			this._div = L.DomUtil.create('div', 'info');
+			this._div.innerHTML = '<h4>Jan 1, 2017</h4>';
+			return this._div;
+		};
+
+		bottom_left_text.addTo(map);
+
+		var bottom_right_text = L.control({position: 'bottomright'});
+
+		bottom_right_text.onAdd = function (map) {
+			this._div = L.DomUtil.create('div', 'info');
+			this._div.innerHTML = '<h4>Today</h4>';
+			return this._div;
+		};
+
+		bottom_right_text.addTo(map);
+
+clip();
+*/
+</script>
+
+</body>
+</html>
+
+

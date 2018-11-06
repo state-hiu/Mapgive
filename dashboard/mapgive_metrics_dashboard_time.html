@@ -1,0 +1,491 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<link rel="stylesheet" type="text/css" href="css/dc.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+
+<script type="text/javascript" src="js/d3.js"></script>
+<script type="text/javascript" src="js/crossfilter.js"></script>
+<script type="text/javascript" src="js/dc.js"></script>
+
+<script type="text/javascript" src="js/d3-array.v1.min.js"></script>
+<script type="text/javascript" src="js/d3-geo.v1.min.js"></script>
+<script type="text/javascript" src="js/d3-geo-projection.v2.min.js"></script>
+
+<script src="js/queue.v1.min.js"></script>
+
+<style type="text/css">
+
+.dc-chart g.country :hover {
+    fill-opacity: .8;
+}
+
+#chart-age-count .x.axis text {
+    text-anchor: end !important;
+    transform: rotate(-45deg);
+}
+
+/* ocean color of map */
+svg {
+  background: #bdd7eb;
+}
+
+.dc-chart g.lsib_lines path {
+	fill: none;
+	stroke: #FFF;
+	stroke-width:1.5px;
+}
+
+#monthly-volume-chart svg {
+    background: white;
+}
+
+.dc-chart g.country path {
+    stroke: none;
+}
+
+.stat-label {
+    text-align: center;
+}
+
+.label-text {
+    font-family: Trebuchet MS,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.description-text {
+    font-family: Trebuchet MS,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.chart-tip-text {
+    font-family: Trebuchet MS,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+}
+
+</style>
+
+
+<div class="container-fluid">
+
+  <div class="row" id="control-row">
+
+      <div class="row">
+          <div id="row-chart" style="padding-bottom:15px">
+            <span class="description-text">This dashboard shows user contributions to OpenStreetMap by country and time using the <strong>#MapGive</strong> hashtag. Visit our <a href="https://mapgive.state.gov/about-open-mapping/">Open Mapping page</a> to learn more about Open Mapping's role in humanitarian and development programs. <strong>Dashboard Instructions:</strong> You can apply filters by selecting individual or multiple countries on the map, or by selecting a time range on the  bar chart. The map and the bar chart are linked, so filters applied in one will update the other. </span>
+          </div>
+
+          <div class="col-md-4 stat-label label-text"><i class="fas fa-users fa-2x"></i> <div class="display-users"></div> <div>unique users</div> </div>
+          <div class="col-md-4 stat-label label-text"><i class="fas fa-building fa-2x"></i> <div class="display-building"></div> <div>buildings</div> </div>
+          <div class="col-md-4 stat-label label-text"><i class="fas fa-road fa-2x"></i> <div class="display-road"></div> <div>roads</div> </div>
+
+          <div class="clearfix"></div>
+      </div>
+
+
+      <div class="row" style="padding-top:15px">
+          <div id="country-chart">
+            <div class="map-label" style="padding-bottom:15px">
+                <span class="label-text">Edits by Country using the #MapGive hashtag</span>
+                <a class="reset" href="javascript:dc.filterAll();dc.redrawAll();$('a.reset').css('display', 'none');" style="display: none;"><button type="button" class="btn "><strong>reset</strong></button></a>
+                <span class="reset" style="display: none;"> | Country filter: <span class="filter">none</span></span>
+            </div>
+          </div>
+        <div class="clearfix"></div>
+      </div>
+
+
+      <div class="row">
+        <div id="monthly-volume-chart" style="padding-top:15px">
+            <span class="label-text">Edits Through Time using the #MapGive hashtag</span>
+        </div>
+        <p class="chart-tip-text pull-right" style="margin-right: 15px;">select a time range to see edits</p>
+      </div>
+
+</div>
+
+
+<script type="text/javascript">
+
+
+
+var numberFormat = d3.format(",d");
+
+var countryChart = dc.geoChoroplethChart("#country-chart");
+
+var volumeChart = dc.barChart('#monthly-volume-chart');
+
+/*
+//for local testing
+d3.csv("test4.csv")
+    .header("Accept-Language", "en-US")
+    .get(callback); 
+*/
+
+
+/*need to parse s3 bucket xml for the newest file*/
+//https://stackoverflow.com/questions/8237923/parsing-xml-rss-from-url-using-java-script
+var x = new XMLHttpRequest();
+x.open("GET", "https://s3.amazonaws.com/mapgive-metrics/", true);
+x.onreadystatechange = function () {
+  if (x.readyState == 4 && x.status == 200)
+  {
+    var doc = x.responseXML;
+    //console.log('print xml responseXML')
+    //console.log(doc)
+    var filename = doc.getElementsByTagName("Contents")[doc.getElementsByTagName("Contents").length-1].getElementsByTagName("Key")[0].textContent;
+    //console.log('print latest filename')
+    //console.log(filename)
+
+    //parse data from filename   https://stackoverflow.com/questions/7151543/convert-dd-mm-yyyy-string-to-date
+    var from = filename.split("-");
+    //console.log('print from')
+    //console.log(from)
+    var f = new Date(from[0], from[1] - 1, from[2])
+    //console.log('f');
+    //console.log(f);
+
+    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    var prettyDate = f.toLocaleDateString("en-US", options);
+    //console.log(prettyDate); 
+
+    
+
+    //recieved a no Access-Control-Allow-Origin error in Chrome even though I configured it to allow origins in S3
+    //this link describes problem: https://serverfault.com/questions/856904/chrome-s3-cloudfront-no-access-control-allow-origin-header-on-initial-xhr-req
+    //added a made up query parameter '?x-request=xhr' in order to convince the browser that this is actually a seperate request
+    new_filename = "https://s3.amazonaws.com/mapgive-metrics/"+filename+"?x-request=xhr"
+    //console.log('print new string');
+    //console.log(new_filename);
+    d3.csv(new_filename)
+        .header("Accept-Language", "en-US")
+        .get(callback); 
+  }
+};
+
+x.send(null);
+
+//if you're using d3.csv(), it will return the values as strings, so you'll need either to preprocess your data, or use +d.score to convert the values while reading them
+
+function callback(error,csv) {
+
+        // Since its a csv file we need to format the data a bit.
+        var dateFormat = d3.time.format("%Y-%m-%d");
+
+        //console.log(dateFormat);
+
+        csv.forEach(function(d){
+            d['building_count'] = +d['building_count']; 
+            d['highway_count'] = +d['highway_count'];
+            d['unique_users'] = +d['unique_users'];
+            d.dd = dateFormat.parse(d.datetime);
+            //console.log('printing parsed dateFromat');
+            //console.log(d.dd);
+            d.month = d3.time.month(d.dd); // pre-calculate month for better performance
+            //console.log('printing d.month');
+            //console.log(d.month);
+        });
+
+        var data = crossfilter(csv);
+
+        var countries = data.dimension(function (d) {
+            return d["country_name"];
+        });
+
+
+        var building_count_sum = countries.group().reduceSum(function (d) {
+            return d["building_count"];
+        });
+
+
+        //console.log('testing GroupAll buildings')
+        //console.log(data.groupAll().reduceSum(function(d){ return d["building_count"];}).value());
+
+        totalBuildingCount = countries.groupAll().reduceSum(function(d){ return d["building_count"];}).value();
+        totalHighwayCount = countries.groupAll().reduceSum(function(d){ return d["highway_count"];}).value();
+        totalUniqueUsersCount = countries.groupAll().reduceSum(function(d){ return d["unique_users"];}).value();
+
+        //console.log(totalBuildingCount);
+
+        $('.display-building').append(totalBuildingCount.toLocaleString("en"));
+        $('.display-road').append(totalHighwayCount.toLocaleString("en"));
+        $('.display-users').append(totalUniqueUsersCount.toLocaleString("en"));
+
+        var building_group_all = data.groupAll().reduceSum(function(d){ 
+            return d["building_count"];
+        }).value();
+
+        var highway_count_sum = countries.group().reduceSum(function (d) {
+            return d["highway_count"];
+        });
+
+        var custom_reducer = countries.group().reduce(reduceAdd, reduceRemove, reduceInitial);
+
+        function reduceAdd(p, v) {
+          p.building_count = p.building_count + v.building_count;
+          p.highway_count = p.highway_count + v.highway_count;
+          p.unique_users = p.unique_users + v.unique_users;
+          return p;
+        }
+
+        function reduceRemove(p, v) {
+          p.building_count = p.building_count - v.building_count;
+          p.highway_count = p.highway_count - v.highway_count;
+          p.unique_users = p.unique_users - v.unique_users;
+          return p;
+        }
+
+        function reduceInitial() {
+          return {building_count: 0, highway_count: 0, unique_users: 0};
+        }
+
+        // Dimension by full date
+        var dateDimension = data.dimension(function(d) {
+            return d.dd;
+        });
+
+        // Dimension by month
+        var moveMonths = data.dimension(function(d) {
+            return d.month;
+        });
+     
+        // Group by total edits within move, and scale down result
+        var editsByMonthGroup = moveMonths.group().reduceSum(function (d) {
+            return d["building_count"]+d["highway_count"];
+        });
+
+        topTypes = custom_reducer.top(10);
+        //console.log(topTypes[4]);
+        topTypes[0].key; // the top payment type (e.g., "tab")
+        topTypes[0].value; // the payment volume for that type (e.g., 920)
+
+
+        //https://gist.github.com/mapsam/6090056
+        queue()
+          .defer(d3.json, "geo/world_simplify.json")
+          .defer(d3.json, "geo/LSIB9_combined_simplify4.json")
+          .await(analyze);
+
+
+        //d3.json("geo/world.json", function (countriesJson) {
+        function analyze(error, countriesJson, lsib_lines_Json) {
+
+
+            countryChart.width(1200)
+                    .height(600)
+                    .dimension(countries)
+                    .group(custom_reducer)
+                    //.colors(d3.scale.quantile().range(["#efedf5","#dadaeb","#bcbddc","#9e9ac8","#807dba","#6a51a3","#54278f","#3f007d"]))
+                    //.colors(d3.scale.quantile().range(["#f2f0f7","#cbc9e2","#9e9ac8","#756bb1","#54278f"]))
+                    .colors(d3.scale.linear().range(["#efedf5","#3f007d"]))
+                    .colorDomain([0, 500000])
+                    .legend(dc.legend().x(455).y(555).itemHeight(13).gap(5))
+                    //need to make sure all country names are in the csv in order to return a value
+                    .colorCalculator(function (d) { 
+                        //console.log('color calc');
+                        //console.log(d);
+                        if (d) {
+                            //return d ? countryChart.colors()(d.value.building_count+d.value.highway_count) : '#f2f0f7'; 
+                            return d.value ? countryChart.colors()(d.value.building_count+d.value.highway_count) : '#fcfbfd'; 
+                        } else {
+                            return '#fcfbfd';
+                        }
+                    })
+                    //leave the name of chart as 'state' because dc.css has the hover effect that reference 
+                    .overlayGeoJson(countriesJson.features, "country", function (d) {
+                        if (d.properties.COUNTRY_NA) {
+                            //console.log('logging d.properties.COUNTRY_NA');
+                            //console.log(d.properties.COUNTRY_NA);
+                            return d.properties.COUNTRY_NA;
+                        }
+                    })
+                    .overlayGeoJson(lsib_lines_Json.features, "lsib_lines", function (d) {
+                        //console.log('logging d.properties.rank2');
+                        //console.log(d.properties.rank2);
+                        //d.properties.rank2 value has to be a string not an integer, or else dc.util libary throws an error
+                        if (d.properties.rank2) {
+                            return d.properties.rank2;
+                        }
+                    })
+                    .projection(d3.geoRobinson()
+                        .center([20, 20])
+                        .translate([550, 225])
+                        .scale(280)
+                    )
+                    //pretransition is invoked after transisitons after redraw and render. It makes sure to re-add the legend.
+                    //renderlet works too, but pretransition works better! https://github.com/dc-js/dc.js/issues/1163
+                    .on("pretransition", function (chart) {
+                        //console.log('trying read legend function');
+                        reAddLegend();
+                    })
+                    .on("filtered", function (chart) {
+                         //console.log('printing countryChart filter');
+                         //https://www.codeproject.com/Articles/693841/Making-Dashboards-with-Dc-js-Part-Using-Crossfil
+                         console.log(data.groupAll().reduceSum(function(d) { 
+                                return d["building_count"];
+                            }).value()
+                        );
+                        var building_total = data.groupAll().reduceSum(function(d) { 
+                                return d["building_count"];
+                            }).value();
+                        $('.display-building').empty();
+                        $('.display-building').append(building_total.toLocaleString("en"));
+                        var highway_total = data.groupAll().reduceSum(function(d) { 
+                                return d["highway_count"];
+                            }).value();
+                        $('.display-road').empty();
+                        $('.display-road').append(highway_total.toLocaleString("en"));
+                        var unique_users_total = data.groupAll().reduceSum(function(d) { 
+                                return d["unique_users"];
+                            }).value();
+                        $('.display-users').empty();
+                        $('.display-users').append(unique_users_total.toLocaleString("en"));
+                    })
+                    .valueAccessor(function(kv) {
+                        //console.log('value accessor kv');
+                        //console.log(kv);
+                        //console.log(kv.value.building_count+kv.value.highway_count);
+                        return kv;
+                    })
+                    .title(function (d) {
+                        //console.log('returning title')
+                        //console.log(d);
+                        if (d.value) {
+                            //console.log('print d');
+                            //console.log(d);
+                            return d.key + "\nunique users: " + numberFormat(d.value.value.unique_users ? d.value.value.unique_users : 0) + "\ntotal buildings: " + numberFormat(d.value.value.building_count ? d.value.value.building_count : 0) + "\ntotal roads: " + numberFormat(d.value.value.highway_count ? d.value.value.highway_count : 0);
+                        }
+                        else {
+                            return d.key+"\n0 edits";
+                        }
+                        
+                    });
+
+
+            //#### Range Chart
+
+            volumeChart
+              .width(1200) /* dc.barChart('#monthly-volume-chart', 'chartGroup'); */
+              .height(260)
+              .margins({
+                top: 20,
+                right: 30,
+                bottom: 30,
+                left: 60
+              })
+               .dimension(moveMonths)
+               .group(editsByMonthGroup)
+               .on("filtered", function (chart) {
+                        //console.log('printing volumeChart filter');
+                        //console.log('trying to show filter');
+                        hiddenElements = $(':hidden');
+                        //console.log('hidden elements');
+                        $('a.reset').css("display", "");
+                        //$('.stat-label').toggle();
+                        //https://www.codeproject.com/Articles/693841/Making-Dashboards-with-Dc-js-Part-Using-Crossfil
+                        console.log(data.groupAll().reduceSum(function(d) { 
+                                return d["building_count"];
+                            }).value()
+                        );
+                        var building_total = data.groupAll().reduceSum(function(d) { 
+                                return d["building_count"];
+                            }).value();
+                        $('.display-building').empty();
+                        $('.display-building').append(building_total.toLocaleString("en"));
+                        var highway_total = data.groupAll().reduceSum(function(d) { 
+                                return d["highway_count"];
+                            }).value();
+                        $('.display-road').empty();
+                        $('.display-road').append(highway_total.toLocaleString("en"));
+                        var unique_users_total = data.groupAll().reduceSum(function(d) { 
+                                return d["unique_users"];
+                            }).value();
+                        $('.display-users').empty();
+                        $('.display-users').append(unique_users_total.toLocaleString("en"));
+                    })
+               .centerBar(true)
+               .renderHorizontalGridLines(true)
+               .gap(3)
+               .x(d3.time.scale().domain([new Date(2014, 0, 1), new Date(2018, 07, 31)]))
+               .round(d3.time.months.round)
+               .alwaysUseRounding(true)
+               .xUnits(d3.time.months);
+
+
+            dc.renderAll();
+
+
+
+            //https://www.visualcinnamon.com/2016/05/smooth-color-legend-d3-svg-gradient
+
+            //Append a defs (for definition) element to your SVG
+            var defs = d3.select("svg").append("defs");
+
+            //Append a linearGradient element to the defs and give it a unique id
+            var linearGradient = defs.append("linearGradient")
+                .attr("id", "linear-gradient");
+
+            //Horizontal gradient
+            linearGradient
+                .attr("x1", "0%")
+                .attr("y1", "0%")
+                .attr("x2", "100%")
+                .attr("y2", "0%");
+
+            //Set the color for the start (0%)
+            linearGradient.append("stop")
+                .attr("offset", "0%")
+                .attr("stop-color", "#fcfbfd"); //light blue
+
+            //Set the color for the end (100%)
+            linearGradient.append("stop")
+                .attr("offset", "100%")
+                .attr("stop-color", "#3f007d"); //dark blue
+
+
+            function reAddLegend() {
+                //console.log('reAddLegend function called');
+                //Draw the rectangle and fill with gradient
+                d3.select(".dc-legend").append("rect")
+                    .attr("width", 310)
+                    .attr("height", 20)
+                    .style("fill", "url(#linear-gradient)");
+
+                d3.select(".dc-legend").append("text")
+                    .style("fill", "black")   // fill the text with the colour black
+                    .style("font-size","18px")
+                    .attr("x", 3)           // set x position of left side of text
+                    .attr("y", 38)           // set y position of bottom of text 
+                    .text("0");     // define the text to display 
+
+                d3.select(".dc-legend").append("text")
+                    .style("fill", "black")   // fill the text with the colour black
+                    .style("font-size","18px")
+                    .attr("x", 223)           // set x position of left side of text
+                    .attr("y", 38)           // set y position of bottom of text 
+                    .text("500k edits");     // define the text to display 
+
+                //removing leftover legend item artifacts
+                d3.selectAll(".dc-legend-item").remove();
+            }
+
+
+        //end of analyze callback function
+        }
+
+
+};
+
+</script>
+
+

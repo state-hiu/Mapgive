@@ -1,0 +1,611 @@
+country_name,building_count,highway_count,Datetime
+Bangladesh,3,0,2015-01-31
+Bangladesh,12,1,2016-01-31
+Bangladesh,1,0,2016-02-29
+Bangladesh,4,0,2016-03-31
+Bangladesh,2,1,2017-11-30
+Bangladesh,1,8,2017-12-31
+Bangladesh,1,1,2018-01-31
+Bangladesh,0,2,2018-02-28
+Benin,1,0,2016-04-30
+Benin,17,1,2016-05-31
+Benin,27,10,2016-06-30
+Benin,24,6,2016-07-31
+Benin,4,0,2016-08-31
+Benin,8,0,2016-09-30
+Botswana,1,1,2016-01-31
+Burkina Faso,2,0,2016-12-31
+Burma,2,0,2017-02-28
+Burma,50,0,2017-03-31
+Burma,119,3,2017-04-30
+Burma,22,0,2017-05-31
+Burma,33,2,2017-06-30
+Burma,23,8,2017-07-31
+Burma,73,0,2017-08-31
+Burma,63,8,2017-09-30
+Burma,39,0,2017-10-31
+Burma,6,0,2018-02-28
+Burma,22,4,2018-03-31
+Central African Rep,4,1,2015-02-28
+Central African Rep,6,1,2015-07-31
+Central African Rep,6,0,2015-08-31
+Central African Rep,0,2,2015-11-30
+Central African Rep,0,1,2015-12-31
+Central African Rep,2,0,2016-01-31
+Central African Rep,1,1,2016-02-29
+Central African Rep,13,2,2016-03-31
+Central African Rep,3,0,2016-04-30
+Chad,1,0,2018-02-28
+China,2,0,2016-06-30
+"Congo, Dem Rep of the",3,0,2014-04-30
+"Congo, Dem Rep of the",1,0,2014-05-31
+"Congo, Dem Rep of the",1,0,2014-09-30
+"Congo, Dem Rep of the",3,1,2014-10-31
+"Congo, Dem Rep of the",0,1,2014-12-31
+"Congo, Dem Rep of the",1,0,2015-01-31
+"Congo, Dem Rep of the",5,3,2015-04-30
+"Congo, Dem Rep of the",1,0,2015-08-31
+"Congo, Dem Rep of the",3,6,2015-10-31
+"Congo, Dem Rep of the",1,4,2015-11-30
+"Congo, Dem Rep of the",0,3,2016-01-31
+"Congo, Dem Rep of the",3,6,2016-02-29
+"Congo, Dem Rep of the",0,2,2016-06-30
+"Congo, Dem Rep of the",1,1,2016-07-31
+"Congo, Dem Rep of the",0,4,2016-09-30
+"Congo, Dem Rep of the",0,2,2016-10-31
+"Congo, Dem Rep of the",0,4,2016-11-30
+"Congo, Dem Rep of the",3,0,2017-01-31
+"Congo, Dem Rep of the",132,16,2017-03-31
+"Congo, Dem Rep of the",28,4,2017-04-30
+"Congo, Dem Rep of the",8,1,2017-05-31
+"Congo, Dem Rep of the",11,2,2017-06-30
+"Congo, Dem Rep of the",3,1,2017-07-31
+Cote d'Ivoire,11,1,2017-05-31
+Cote d'Ivoire,0,1,2017-08-31
+Cote d'Ivoire,8,1,2017-11-30
+Ecuador,9,1,2015-12-31
+Ecuador,2,0,2016-01-31
+Ecuador,8,1,2016-10-31
+Ecuador,10,3,2016-11-30
+Ecuador,2,0,2017-06-30
+Ethiopia,6,1,2014-10-31
+Ethiopia,9,1,2016-04-30
+Ethiopia,3,0,2016-11-30
+Ethiopia,1,0,2017-01-31
+Ethiopia,5,1,2017-08-31
+Ethiopia,1,0,2017-10-31
+Fiji,35,9,2016-02-29
+Fiji,7,1,2016-03-31
+"Gambia, The",7,4,2015-12-31
+Guatemala,0,1,2015-10-31
+Guatemala,0,1,2015-11-30
+Guatemala,5,0,2016-06-30
+Guatemala,1,0,2016-07-31
+Guatemala,1,0,2016-10-31
+Guinea,3,0,2015-09-30
+Guinea,1,0,2015-10-31
+Haiti,4,0,2015-10-31
+Haiti,40,3,2015-11-30
+Haiti,7,1,2015-12-31
+Haiti,12,1,2016-01-31
+Haiti,1,1,2016-10-31
+Indonesia,2,0,2015-03-31
+Indonesia,6,0,2015-06-30
+Indonesia,8,1,2016-08-31
+Indonesia,3,0,2016-10-31
+Indonesia,2,0,2016-11-30
+Indonesia,9,1,2017-05-31
+Iraq,10,0,2016-04-30
+Iraq,14,3,2016-05-31
+Iraq,3,1,2016-06-30
+Jamaica,7,4,2016-06-30
+Jamaica,7,1,2016-07-31
+Jamaica,1,0,2017-03-31
+Jamaica,1,1,2017-10-31
+Japan,5,0,2016-04-30
+Kenya,13,0,2015-08-31
+Kenya,6,3,2016-11-30
+Kenya,5,5,2016-12-31
+Kenya,1,0,2017-01-31
+Kenya,5,2,2017-02-28
+Kenya,19,4,2017-03-31
+Kenya,51,16,2017-04-30
+Kenya,19,6,2017-05-31
+Kenya,3,4,2017-06-30
+Kenya,1,1,2017-08-31
+Kenya,3,0,2017-09-30
+Kenya,31,0,2017-10-31
+Kenya,21,3,2017-11-30
+Kenya,11,0,2017-12-31
+Kenya,12,1,2018-01-31
+Kenya,16,0,2018-02-28
+Kenya,3,0,2018-03-31
+Liberia,7,1,2014-08-31
+Liberia,1,1,2014-10-31
+Liberia,2,0,2015-03-31
+Liberia,1,0,2015-04-30
+Libya,1,0,2016-11-30
+Libya,7,0,2016-12-31
+Madagascar,2,1,2016-07-31
+Madagascar,1,0,2016-08-31
+Madagascar,1,0,2016-09-30
+Madagascar,15,0,2016-10-31
+Madagascar,3,0,2016-11-30
+Madagascar,1,0,2016-12-31
+Malawi,9,1,2014-09-30
+Malawi,2,2,2014-10-31
+Malawi,1,1,2014-11-30
+Malawi,9,3,2014-12-31
+Malawi,3,1,2015-01-31
+Malawi,9,3,2015-02-28
+Malawi,0,2,2015-04-30
+Malawi,1,0,2015-08-31
+Malawi,11,1,2015-10-31
+Malawi,7,0,2015-12-31
+Malawi,0,1,2016-01-31
+Malawi,1,0,2016-02-29
+Malawi,4,1,2016-04-30
+Malawi,16,7,2016-11-30
+Malawi,15,10,2016-12-31
+Malawi,12,10,2017-01-31
+Malawi,5,2,2017-02-28
+Malawi,4,1,2017-03-31
+Malawi,6,2,2017-04-30
+Malawi,19,1,2017-05-31
+Malawi,65,9,2017-06-30
+Malawi,16,0,2017-07-31
+Malawi,8,5,2017-08-31
+Malawi,9,0,2017-09-30
+Malawi,21,2,2017-10-31
+Malawi,12,0,2017-11-30
+Malawi,29,0,2018-01-31
+Malawi,15,1,2018-02-28
+Mali,0,1,2017-01-31
+Mali,7,0,2017-06-30
+Morocco,0,2,2017-03-31
+Mozambique,5,0,2014-10-31
+Mozambique,0,1,2014-12-31
+Mozambique,1,0,2015-04-30
+Mozambique,5,1,2015-09-30
+Mozambique,30,3,2015-10-31
+Mozambique,8,0,2015-11-30
+Mozambique,16,1,2015-12-31
+Mozambique,8,0,2016-01-31
+Mozambique,4,0,2016-02-29
+Mozambique,2,0,2016-05-31
+Mozambique,0,3,2016-06-30
+Mozambique,3,0,2018-01-31
+Mozambique,0,2,2018-02-28
+Nepal,12,0,2015-04-30
+Nepal,25,17,2015-05-31
+Nepal,0,1,2016-01-31
+Nepal,0,3,2016-02-29
+Nepal,0,1,2016-03-31
+Nepal,9,1,2016-04-30
+Nepal,45,3,2016-05-31
+Nepal,27,2,2016-06-30
+Nepal,4,0,2016-07-31
+Nepal,1,1,2016-08-31
+Nepal,35,1,2016-09-30
+Nepal,9,2,2016-10-31
+Nepal,3,1,2016-11-30
+Nepal,6,2,2016-12-31
+Nepal,13,4,2017-04-30
+Nepal,4,2,2017-05-31
+Netherlands [Caribbean],1,0,2016-05-31
+Nicaragua,1,0,2015-05-31
+Nicaragua,1,0,2015-06-30
+Nicaragua,2,0,2016-07-31
+Niger,6,1,2017-11-30
+Niger,3,0,2017-12-31
+Nigeria,2,0,2017-04-30
+Peru,4,2,2015-08-31
+Peru,1,0,2015-10-31
+Peru,23,1,2015-12-31
+Peru,2,0,2016-01-31
+Peru,3,0,2016-02-29
+Peru,1,0,2016-04-30
+Peru,4,0,2016-05-31
+Peru,1,0,2016-06-30
+Peru,4,0,2016-07-31
+Peru,1,0,2016-09-30
+Peru,2,0,2016-10-31
+Peru,3,0,2016-11-30
+Peru,1,0,2017-11-30
+Peru,6,0,2017-12-31
+Peru,1,0,2018-01-31
+Philippines,0,4,2014-11-30
+Philippines,81,8,2014-12-31
+Philippines,29,1,2015-01-31
+Philippines,3,1,2015-02-28
+Philippines,1,2,2015-04-30
+Philippines,1,0,2015-05-31
+Philippines,2,1,2015-08-31
+Philippines,1,1,2015-10-31
+Philippines,7,4,2015-11-30
+Philippines,7,1,2016-01-31
+Philippines,35,4,2016-02-29
+Philippines,50,2,2016-03-31
+Philippines,3,0,2016-04-30
+Philippines,1,0,2016-05-31
+Philippines,15,1,2016-06-30
+Philippines,1,0,2016-08-31
+Philippines,1,0,2016-09-30
+Philippines,43,2,2016-11-30
+Philippines,6,0,2016-12-31
+Philippines,15,0,2017-01-31
+Philippines,1,0,2017-02-28
+Philippines,5,0,2017-11-30
+Rwanda,0,1,2017-03-31
+Senegal,13,0,2015-11-30
+Senegal,0,1,2016-04-30
+Sierra Leone,72,18,2014-07-31
+Sierra Leone,20,11,2014-08-31
+Sierra Leone,2,7,2014-09-30
+Sierra Leone,2,1,2014-10-31
+Sierra Leone,0,7,2014-12-31
+Sierra Leone,3,6,2015-01-31
+Sierra Leone,1,0,2015-02-28
+Sierra Leone,0,1,2015-04-30
+Sierra Leone,1,0,2015-07-31
+South Africa,15,0,2015-09-30
+South Africa,37,1,2015-10-31
+South Africa,43,0,2015-11-30
+South Sudan,3,0,2014-03-31
+South Sudan,1,0,2014-04-30
+South Sudan,7,3,2014-11-30
+South Sudan,6,0,2015-02-28
+South Sudan,4,3,2015-03-31
+South Sudan,53,7,2015-07-31
+South Sudan,2,0,2017-10-31
+South Sudan,2,0,2017-11-30
+South Sudan,3,0,2017-12-31
+Sri Lanka,1,0,2015-10-31
+Sri Lanka,51,0,2015-11-30
+Sri Lanka,24,1,2015-12-31
+Sri Lanka,17,0,2016-01-31
+Sri Lanka,21,1,2016-02-29
+Sri Lanka,38,0,2016-03-31
+Sri Lanka,37,2,2016-04-30
+Sri Lanka,93,1,2016-05-31
+Sri Lanka,65,3,2016-06-30
+Sri Lanka,53,11,2016-07-31
+Sri Lanka,9,1,2016-08-31
+Sri Lanka,12,1,2016-09-30
+Sri Lanka,2,1,2016-10-31
+Sri Lanka,4,2,2016-11-30
+Sri Lanka,1,0,2017-03-31
+Sri Lanka,3,0,2017-10-31
+Tajikistan,1,0,2018-01-31
+Tanzania,2,0,2016-05-31
+Tanzania,1,0,2016-06-30
+Tanzania,1,0,2016-07-31
+Tanzania,1,0,2016-08-31
+Tanzania,1,0,2016-09-30
+Tanzania,12,2,2016-11-30
+Tanzania,10,4,2016-12-31
+Tanzania,19,2,2017-01-31
+Tanzania,13,3,2017-02-28
+Tanzania,48,17,2017-03-31
+Tanzania,33,11,2017-04-30
+Tanzania,12,17,2017-05-31
+Tanzania,9,0,2017-06-30
+Tanzania,3,0,2017-07-31
+Tanzania,2,0,2017-10-31
+Tanzania,12,6,2017-11-30
+Tanzania,0,1,2017-12-31
+Tanzania,1,1,2018-02-28
+Togo,6,1,2015-09-30
+Togo,8,0,2015-10-31
+Togo,12,3,2017-05-31
+Togo,0,1,2017-06-30
+Togo,3,0,2017-07-31
+Uganda,20,0,2014-03-31
+Uganda,6,2,2014-04-30
+Uganda,7,1,2014-05-31
+Uganda,5,1,2014-06-30
+Uganda,3,0,2014-10-31
+Uganda,4,2,2016-12-31
+Uganda,1,0,2017-01-31
+Uganda,8,1,2017-02-28
+Uganda,12,1,2017-03-31
+Uganda,72,6,2017-04-30
+Uganda,1,1,2017-05-31
+Uganda,0,1,2017-06-30
+Uganda,35,7,2017-07-31
+Uganda,149,26,2017-08-31
+Uganda,164,29,2017-09-30
+Uganda,112,47,2017-10-31
+Uganda,114,23,2017-11-30
+Uganda,19,13,2017-12-31
+Uganda,7,9,2018-01-31
+Uganda,45,3,2018-02-28
+Uganda,25,3,2018-03-31
+Ukraine,1,0,2016-08-31
+Ukraine,1,0,2017-10-31
+Ukraine,0,1,2018-01-31
+United States,0,1,2016-01-31
+United States,1,0,2017-10-31
+Vietnam,3,0,2018-01-31
+Vietnam,24,0,2018-03-31
+Yemen,0,1,2015-10-31
+Zimbabwe,1,0,2017-09-30
+Abyei (disp),,,2017-09-30
+Afghanistan,,,2017-09-30
+Akrotiri (UK),,,2017-09-30
+Aksai Chin (disp),,,2017-09-30
+Albania,,,2017-09-30
+Algeria,,,2017-09-30
+American Samoa (US),,,2017-09-30
+Antarctica,,,2017-09-30
+Antigua & Barbuda,,,2017-09-30
+Argentina,,,2017-09-30
+Andorra,,,2017-09-30
+Angola,,,2017-09-30
+Anguilla (UK),,,2017-09-30
+Armenia,,,2017-09-30
+Aruba (Neth),,,2017-09-30
+Ashmore & Cartier Is (Aus),,,2017-09-30
+Australia,,,2017-09-30
+Austria,,,2017-09-30
+Azerbaijan,,,2017-09-30
+"Bahamas, The",,,2017-09-30
+Barbados,,,2017-09-30
+Belarus,,,2017-09-30
+Belgium,,,2017-09-30
+Belize,,,2017-09-30
+Bermuda (UK),,,2017-09-30
+Bhutan,,,2017-09-30
+Bolivia,,,2017-09-30
+Bosnia & Herzegovina,,,2017-09-30
+Botswana,,,2017-09-30
+Bouvet Island (Nor),,,2017-09-30
+Br Virgin Is (UK),,,2017-09-30
+Cocos (Keeling) Is (Aus),,,2017-09-30
+Colombia,,,2017-09-30
+Comoros,,,2017-09-30
+Br Virgin Islands (UK),,,2017-09-30
+Brazil,,,2017-09-30
+Christmas I (Aus),,,2017-09-30
+Clipperton I (Fr),,,2017-09-30
+"Congo, Dem Rep of the",,,2017-09-30
+"Congo, Rep of the",,,2017-09-30
+Cook Is (NZ),,,2017-09-30
+British Indian Oc Terr (UK),,,2017-09-30
+Brunei,,,2017-09-30
+Bulgaria,,,2017-09-30
+Burkina Faso,,,2017-09-30
+Burundi,,,2017-09-30
+Cabo Verde,,,2017-09-30
+Cambodia,,,2017-09-30
+Cameroon,,,2017-09-30
+Canada,,,2017-09-30
+Coral Sea Is (Aus),,,2017-09-30
+Costa Rica,,,2017-09-30
+Cote d'Ivoire,,,2017-09-30
+Croatia,,,2017-09-30
+Cuba,,,2017-09-30
+Cayman Is (UK),,,2017-09-30
+Central African Rep,,,2017-09-30
+CH-IN (disp),,,2017-09-30
+Chad,,,2017-09-30
+Chile,,,2017-09-30
+China,,,2017-09-30
+Curacao (Neth),,,2017-09-30
+Cyprus,,,2017-09-30
+Czechia,,,2017-09-30
+Demchok (disp),,,2017-09-30
+Denmark,,,2017-09-30
+Dhekelia (UK),,,2017-09-30
+Djibouti,,,2017-09-30
+Dominica,,,2017-09-30
+Dominican Republic,,,2017-09-30
+Dragonja (disp),,,2017-09-30
+Dramana-Shakatoe (disp),,,2017-09-30
+Ecuador,,,2017-09-30
+Egypt,,,2017-09-30
+El Salvador,,,2017-09-30
+Equatorial Guinea,,,2017-09-30
+Eritrea,,,2017-09-30
+Estonia,,,2017-09-30
+Ethiopia,,,2017-09-30
+Falkland Islands (UK) (disp),,,2017-09-30
+Faroe Is (Den),,,2017-09-30
+Fiji,,,2017-09-30
+Finland,,,2017-09-30
+Fr S & Antarctic Lands (Fr),,,2017-09-30
+France,,,2017-09-30
+French Guiana (Fr),,,2017-09-30
+French Polynesia (Fr),,,2017-09-30
+Gabon,,,2017-09-30
+"Gambia, The",,,2017-09-30
+Montserrat (UK),,,2017-09-30
+Morocco,,,2017-09-30
+Mozambique,,,2017-09-30
+Namibia,,,2017-09-30
+Gaza Strip (disp),,,2017-09-30
+Georgia,,,2017-09-30
+Germany,,,2017-09-30
+Ghana,,,2017-09-30
+Gibraltar (UK),,,2017-09-30
+Greece,,,2017-09-30
+Greenland (Den),,,2017-09-30
+Grenada,,,2017-09-30
+Guadeloupe (Fr),,,2017-09-30
+Nauru,,,2017-09-30
+Guam (US),,,2017-09-30
+Guatemala,,,2017-09-30
+Navassa I (US),,,2017-09-30
+Nepal,,,2017-09-30
+Netherlands,,,2017-09-30
+Guernsey (UK),,,2017-09-30
+Guinea,,,2017-09-30
+Guinea-Bissau,,,2017-09-30
+Guyana,,,2017-09-30
+Haiti,,,2017-09-30
+Jersey (UK),,,2017-09-30
+Jordan,,,2017-09-30
+Kalapani (disp),,,2017-09-30
+Heard I & McDonald Is (Aus),,,2017-09-30
+Honduras,,,2017-09-30
+Hong Kong (Ch),,,2017-09-30
+Hungary,,,2017-09-30
+Iceland,,,2017-09-30
+Indonesia,,,2017-09-30
+Iran,,,2017-09-30
+Iraq,,,2017-09-30
+Ireland,,,2017-09-30
+Isla Brasilera (disp),,,2017-09-30
+Kazakhstan,,,2017-09-30
+Kenya,,,2017-09-30
+Kiribati,,,2017-09-30
+"Korea, North",,,2017-09-30
+"Korea, South",,,2017-09-30
+Kosovo,,,2017-09-30
+Serbia,,,2017-09-30
+Seychelles,,,2017-09-30
+Siachen-Saltoro (disp),,,2017-09-30
+Sierra Leone,,,2017-09-30
+Singapore,,,2017-09-30
+Isle of Man (UK),,,2017-09-30
+Italy,,,2017-09-30
+Jamaica,,,2017-09-30
+Jan Mayen (Nor),,,2017-09-30
+Japan,,,2017-09-30
+Koualou (disp),,,2017-09-30
+Kyrgyzstan,,,2017-09-30
+Laos,,,2017-09-30
+Latvia,,,2017-09-30
+Lebanon,,,2017-09-30
+Lesotho,,,2017-09-30
+Liancourt Rocks (disp),,,2017-09-30
+Liberia,,,2017-09-30
+Libya,,,2017-09-30
+Liechtenstein,,,2017-09-30
+Lithuania,,,2017-09-30
+Luxembourg,,,2017-09-30
+Monaco,,,2017-09-30
+Mongolia,,,2017-09-30
+Montenegro,,,2017-09-30
+Macau (Ch),,,2017-09-30
+Macedonia,,,2017-09-30
+Madagascar,,,2017-09-30
+Malawi,,,2017-09-30
+Malaysia,,,2017-09-30
+Maldives,,,2017-09-30
+Mali,,,2017-09-30
+Malta,,,2017-09-30
+Marshall Is,,,2017-09-30
+Martinique (Fr),,,2017-09-30
+Mauritania,,,2017-09-30
+Mauritius,,,2017-09-30
+Mayotte (Fr),,,2017-09-30
+Mexico,,,2017-09-30
+"Micronesia, Fed States of",,,2017-09-30
+Moldova,,,2017-09-30
+Netherlands [Caribbean],,,2017-09-30
+New Caledonia (Fr),,,2017-09-30
+New Zealand,,,2017-09-30
+Nicaragua,,,2017-09-30
+Niue (NZ),,,2017-09-30
+No Man's Land (disp),,,2017-09-30
+Norfolk I (Aus),,,2017-09-30
+Northern Mariana Is (US),,,2017-09-30
+Norway,,,2017-09-30
+Oman,,,2017-09-30
+Pakistan,,,2017-09-30
+Palau,,,2017-09-30
+Panama,,,2017-09-30
+Papua New Guinea,,,2017-09-30
+Paracel Is (disp),,,2017-09-30
+Paraguay,,,2017-09-30
+Peru,,,2017-09-30
+Philippines,,,2017-09-30
+Pitcairn Is (UK),,,2017-09-30
+Poland,,,2017-09-30
+Portugal,,,2017-09-30
+Portugal [Azores],,,2017-09-30
+Portugal [Madeira Is],,,2017-09-30
+Puerto Rico (US),,,2017-09-30
+Reunion (Fr),,,2017-09-30
+Romania,,,2017-09-30
+Russia,,,2017-09-30
+Rwanda,,,2017-09-30
+S Georgia & S Sandwich Is (UK),,,2017-09-30
+Samoa,,,2017-09-30
+San Marino,,,2017-09-30
+Tokelau (NZ),,,2017-09-30
+Tonga,,,2017-09-30
+Trinidad & Tobago,,,2017-09-30
+Tunisia,,,2017-09-30
+Turkmenistan,,,2017-09-30
+Sanafir & Tiran Is. (disp),,,2017-09-30
+Sao Tome & Principe,,,2017-09-30
+Saudi Arabia,,,2017-09-30
+Senegal,,,2017-09-30
+Senkakus (disp),,,2017-09-30
+Sint Maarten (Neth),,,2017-09-30
+Slovakia,,,2017-09-30
+Slovenia,,,2017-09-30
+Solomon Is,,,2017-09-30
+Somalia,,,2017-09-30
+South Africa,,,2017-09-30
+South Sudan,,,2017-09-30
+Spain,,,2017-09-30
+Spain [Canary Is],,,2017-09-30
+Spain [Plazas de Soberania],,,2017-09-30
+Spratly Is (disp),,,2017-09-30
+Sri Lanka,,,2017-09-30
+St Barthelemy (Fr),,,2017-09-30
+St Helena (UK),,,2017-09-30
+Turks & Caicos Is (UK),,,2017-09-30
+St Kitts & Nevis,,,2017-09-30
+St Lucia,,,2017-09-30
+St Martin (Fr),,,2017-09-30
+St Pierre & Miquelon (Fr),,,2017-09-30
+St Vincent & the Grenadines,,,2017-09-30
+Sudan,,,2017-09-30
+Suriname,,,2017-09-30
+Svalbard (Nor),,,2017-09-30
+Swaziland,,,2017-09-30
+Sweden,,,2017-09-30
+Switzerland,,,2017-09-30
+Syria,,,2017-09-30
+Taiwan,,,2017-09-30
+Tajikistan,,,2017-09-30
+Tanzania,,,2017-09-30
+Thailand,,,2017-09-30
+Timor-Leste,,,2017-09-30
+Togo,,,2017-09-30
+Tuvalu,,,2017-09-30
+Uganda,,,2017-09-30
+United Kingdom,,,2017-09-30
+United States,,,2017-09-30
+Uruguay,,,2017-09-30
+US Minor Pacific Is. Refuges (US),,,2017-09-30
+US Virgin Is (US),,,2017-09-30
+Uzbekistan,,,2017-09-30
+Vanuatu,,,2017-09-30
+Vatican City,,,2017-09-30
+Venezuela,,,2017-09-30
+Vietnam,,,2017-09-30
+Wake I (US),,,2017-09-30
+Wallis & Futuna (Fr),,,2017-09-30
+West Bank (disp),,,2017-09-30
+Western Sahara (disp),,,2017-09-30
+Zambia,,,2017-09-30
+Zimbabwe,,,2017-09-30
+Yemen,,,2017-09-30
+Ukraine,,,2017-09-30
+Bahrain,,,2017-09-30
+Kuwait,,,2017-09-30
+Qatar,,,2017-09-30
+United Arab Emirates,,,2017-09-30
+Turkey,,,2017-09-30
+Israel,,,2017-09-30
+Bangladesh,,,2017-09-30
+Burma,,,2017-09-30
+India,,,2017-09-30
+Benin,,,2017-09-30
+Niger,,,2017-09-30
+Nigeria,,,2017-09-30

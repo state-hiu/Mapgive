@@ -10,9 +10,9 @@ tags: [Uganda, Tanzania, Kenya, PEPFAR]
 altText: "Engaging New Audiences to Support PEPFAR’s Open Mapping Efforts"
 caption: "Irum Zaidi, Deputy Coordinator at the Office of the U.S. Global AIDS Coordinator, discusses open mapping for HIV/AIDS epidemic control"
 twitterDescription: "Engaging New Audiences to Support PEPFAR’s Open Mapping Efforts"
-twitterImage: "../assets/img/asian_games_model_cropped.png"
+twitterImage: "../assets/img/pepfar_presentation_cropped.jpg"
 ogDescription: "Engaging New Audiences to Support PEPFAR’s Open Mapping Efforts"
-ogImage: "../assets/img/asian_games_model_cropped.png"
+ogImage: "../assets/img/pepfar_presentation_cropped.jpg"
 emailSubject: PEPFAR Mapping Efforts
 emailDescription: "Engaging New Audiences to Support PEPFAR’s Open Mapping Efforts"
 lat: -0.3241
