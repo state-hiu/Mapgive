@@ -1,0 +1,320 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--<title>MapGive Metrics Dashboard - Data Visualization</title>-->
+<meta charset="UTF-8">
+
+<link rel="stylesheet" type="text/css" href="css/dc.css">
+<!--<link rel="stylesheet" type="text/css" href="css/leaflet.css">-->
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.css">-->
+
+
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+<!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter2/1.4.0-alpha.6/crossfilter.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.1/dc.js"></script>
+-->
+
+<script type="text/javascript" src="js/d3.js"></script>
+<script type="text/javascript" src="js/crossfilter.js"></script>
+<script type="text/javascript" src="js/dc.js"></script>
+
+<script src="https://d3js.org/d3-array.v1.min.js"></script>
+<script src="https://d3js.org/d3-geo.v1.min.js"></script>
+<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+
+<!--
+    <script type="text/javascript" src="js/geolib.js"></script>
+    <script type="text/javascript" src="js/leaflet.js"></script>
+    <script type="text/javascript" src="js/KML.js"></script>
+    <script type="text/javascript" src="js/underscore-min.js"></script>
+
+
+    <script src="js/leaflet-markercluster/leaflet.markercluster.js"></script>
+    <script src="js/Leaflet.heat-gh-pages/dist/leaflet-heat.js"></script>
+-->
+
+
+
+<style type="text/css">
+
+/*css entry must be here to work, not in main.css
+maybe because chart text is created after main.css loads?
+*/
+#chart-age-count .x.axis text {
+    text-anchor: end !important;
+    transform: rotate(-45deg);
+}
+
+svg {
+  background: lightBlue;
+}
+
+.dc-chart g.state path {
+    stroke: #000;
+}
+
+</style>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 dc-data-count dc-chart" id="data-count">
+      <!--<h2>MapGive Metrics Dashboard-->
+
+        <!--
+        <small>
+          <span class="filter-count"></span> selected out of <span class="total-count"></span> records |
+           <a id="all" href="#">Reset All</a>
+          </span>
+        </small>
+        -->
+
+      </h2>
+    </div>
+  </div>
+
+
+  <div class="row" id="control-row">
+
+
+  <div id="country-chart">
+        <strong>Edits by Country (color: total amount of edits)</strong>
+        <a class="reset" href="javascript:countryChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+        <span class="reset" style="display: none;"> | Current filter: <span class="filter"></span></span>
+
+        <div class="clearfix"></div>
+    </div>
+
+
+<!--
+      <div class="col-xs-4">
+        <div class="col-xs-12 col-md-12">
+          <h4>Age Groups</h4>
+          <div class="dc-chart" id="chart-age-count"></div>
+        </div>
+        <div class="col-xs-12 col-md-12">
+          <h4>Registrations Per Month</h4>
+          <div class="dc-chart" id="chart-register-count"></div>
+        </div>
+      </div>
+-->
+
+<!--
+      <div class="col-xs-8 col-md-8">
+        <h4>Map</h4>
+        <div id="map"></div>
+        To protect confidentiality, we randomly moved the actual user locations within a fixed radial buffer of 300 meters.
+      </div>
+  </div>
+-->
+
+
+</div>
+
+<script type="text/javascript">
+
+var numberFormat = d3.format(",d");
+
+var countryChart = dc.geoChoroplethChart("#country-chart");
+
+
+//d3.csv("mapgive_metrics.csv", function (error,csv) {
+//recieved a no Access-Control-Allow-Origin error in Chrome even though I configured it to allow origins in S3
+//this link describes problem: https://serverfault.com/questions/856904/chrome-s3-cloudfront-no-access-control-allow-origin-header-on-initial-xhr-req
+//added a made up query parameter '?x-request=xhr' in order to convince the browser that this is actually a seperate request
+
+
+d3.csv("test2.csv")
+    .header("Accept-Language", "en-US")
+    .get(callback); 
+
+
+/*
+d3.csv("https://s3.amazonaws.com/mapgive-metrics/mapgive_metrics.csv?x-request=xhr")
+    .header("Accept-Language", "en-US")
+    .get(callback); 
+*/
+
+        //if you're using d3.csv(), it will return the values as strings, so you'll need either to preprocess your data, or use +d.score to convert the values while reading them
+
+function callback(error,csv) {
+        csv.forEach(function(d){
+            d['building_count'] = +d['building_count']; 
+            d['highway_count'] = +d['highway_count'];
+        });
+
+        var data = crossfilter(csv);
+
+        var countries = data.dimension(function (d) {
+            return d["country_name"];
+        });
+
+
+        var building_count_sum = countries.group().reduceSum(function (d) {
+            return d["building_count"];
+        });
+
+
+        var highway_count_sum = countries.group().reduceSum(function (d) {
+            return d["highway_count"];
+        });
+
+        var custom_reducer = countries.group().reduce(reduceAdd, reduceRemove, reduceInitial);
+
+        function reduceAdd(p, v) {
+          p.building_count = p.building_count + v.building_count;
+          p.highway_count = p.highway_count + v.highway_count;
+          return p;
+        }
+
+        function reduceRemove(p, v) {
+          p.building_count = p.building_count - v.building_count;
+          p.highway_count = p.highway_count - v.highway_count;
+          return p;
+        }
+
+        function reduceInitial() {
+          return {building_count: 0, highway_count: 0};
+        }
+
+
+        console.log('preview')
+
+        topTypes = custom_reducer.top(100);
+        console.log(topTypes[54]);
+        topTypes[0].key; // the top payment type (e.g., "tab")
+        topTypes[0].value; // the payment volume for that type (e.g., 920)
+
+
+/*
+
+        var stateRaisedSum = states.group().reduceSum(function (d) {
+            return d["Raised"];
+        });
+
+*/
+
+
+        /*
+
+        var states = data.dimension(function (d) {
+            return d["State"];
+        });
+
+        var stateRaisedSum = states.group().reduceSum(function (d) {
+            return d["Raised"];
+        });
+
+        var industries = data.dimension(function (d) {
+            return d["Industry Group"];
+        });
+
+        
+        var statsByIndustries = industries.group().reduce(
+                function (p, v) {
+                    p.amountRaised += +v["Raised"];
+                    p.deals += +v["Deals"];
+                    return p;
+                },
+                function (p, v) {
+                    p.amountRaised -= +v["Raised"];
+                    if (p.amountRaised < 0.001) p.amountRaised = 0; // do some clean up
+                    p.deals -= +v["Deals"];
+                    return p;
+                },
+                function () {
+                    return {amountRaised: 0, deals: 0}
+                }
+        );
+
+        var rounds = data.dimension(function (d) {
+            return d["RoundClassDescr"];
+        });
+
+        var statsByRounds = rounds.group().reduce(
+                function (p, v) {
+                    p.amountRaised += +v["Raised"];
+                    p.deals += +v["Deals"];
+                    return p;
+                },
+                function (p, v) {
+                    p.amountRaised -= +v["Raised"];
+                    if (p.amountRaised < 0.001) p.amountRaised = 0; // do some clean up
+                    p.deals -= +v["Deals"];
+                    return p;
+                },
+                function () {
+                    return {amountRaised: 0, deals: 0}
+                }
+        );
+        */
+
+
+/*
+        d3.json("../geo/world.json", function (statesJson) {
+
+            usChart.width(1200)
+                    .height(800)
+                    .dimension(states)
+                    .group(building_count_sum)
+                    .colors(d3.scale.quantize().range(["#E2F2FF", "#C4E4FF", "#9ED2FF", "#81C5FF", "#6BBAFF", "#51AEFF", "#36A2FF", "#1E96FF", "#0089FF", "#0061B5"]))
+                    .colorDomain([0, 200])
+                    .colorCalculator(function (d) { return d ? usChart.colors()(d) : '#ccc'; })
+                    .overlayGeoJson(statesJson.features, "name", function (d) {
+                        return d.properties.COUNTRY_NA;
+                    })
+                    .projection(d3.geoHammer())
+                    .valueAccessor(function(kv) {
+                        console.log('value accessor');
+                        console.log(kv);
+                        return kv.value;
+                    })
+                    .title(function (d) {
+                        return "State: " + d.key + "\nTotal Amount Raised: " + numberFormat(d.value ? d.value : 0) + "M";
+                    });
+*/
+
+
+        d3.json("geo/world.json", function (countriesJson) {
+
+            countryChart.width(1200)
+                    .height(600)
+                    .dimension(countries)
+                    .group(custom_reducer)
+                    .colors(d3.scale.quantile().range(["#fff5f0","#fee0d2","#fcbba1","#fc9272","#fb6a4a","#ef3b2c","#cb181d","#a50f15","#67000d"]))
+                    .colorDomain([0, 348146])
+                    .colorCalculator(function (d) { return d.value.building_count ? countryChart.colors()(d.value.building_count) : '#ccc'; })
+                    //leave the name of chart as 'state' because dc.css has the hover effect that reference 
+                    .overlayGeoJson(countriesJson.features, "state", function (d) {
+                        return d.properties.COUNTRY_NA;
+                    })
+                    .projection(d3.geoHammer()
+                        .center([0, 20])
+                        .translate([550, 225])
+                        .scale(300)
+                    )
+                    .valueAccessor(function(kv) {
+                        //console.log('value accessor');
+                        //console.log(kv);
+                        return kv;
+                    })
+                    .title(function (d) {
+                        //console.log('returning title')
+                        //console.log(d);
+                        return "Country: " + d.key + "\nTotal Buildings: " + numberFormat(d.value.value.building_count ? d.value.value.building_count : 0) + "\nTotal Roads: " + numberFormat(d.value.value.highway_count ? d.value.value.highway_count : 0);
+                    });
+
+
+
+          // showtime!
+          dc.renderAll();
+
+        });
+
+};
+
+</script>
+
+

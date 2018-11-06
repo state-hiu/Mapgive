@@ -1,0 +1,332 @@
+	COUNTRY_NA	Datetime	building	highway
+0	Bangladesh	2015-01-31	3	0
+1	Bangladesh	2016-01-31	12	1
+2	Bangladesh	2016-02-29	1	0
+3	Bangladesh	2016-03-31	4	0
+4	Bangladesh	2017-11-30	2	1
+5	Bangladesh	2017-12-31	1	8
+6	Bangladesh	2018-01-31	1	1
+7	Bangladesh	2018-02-28	0	2
+8	Benin	2016-04-30	1	0
+9	Benin	2016-05-31	17	1
+10	Benin	2016-06-30	27	10
+11	Benin	2016-07-31	24	6
+12	Benin	2016-08-31	4	0
+13	Benin	2016-09-30	8	0
+14	Botswana	2016-01-31	1	1
+15	Burkina Faso	2016-12-31	2	0
+16	Burma	2017-02-28	2	0
+17	Burma	2017-03-31	50	0
+18	Burma	2017-04-30	119	3
+19	Burma	2017-05-31	22	0
+20	Burma	2017-06-30	33	2
+21	Burma	2017-07-31	23	8
+22	Burma	2017-08-31	73	0
+23	Burma	2017-09-30	63	8
+24	Burma	2017-10-31	39	0
+25	Burma	2018-02-28	6	0
+26	Burma	2018-03-31	22	4
+27	Central African Rep	2015-02-28	4	1
+28	Central African Rep	2015-07-31	6	1
+29	Central African Rep	2015-08-31	6	0
+30	Central African Rep	2015-11-30	0	2
+31	Central African Rep	2015-12-31	0	1
+32	Central African Rep	2016-01-31	2	0
+33	Central African Rep	2016-02-29	1	1
+34	Central African Rep	2016-03-31	13	2
+35	Central African Rep	2016-04-30	3	0
+36	Chad	2018-02-28	1	0
+37	China	2016-06-30	2	0
+38	Congo, Dem Rep of the	2014-04-30	3	0
+39	Congo, Dem Rep of the	2014-05-31	1	0
+40	Congo, Dem Rep of the	2014-09-30	1	0
+41	Congo, Dem Rep of the	2014-10-31	3	1
+42	Congo, Dem Rep of the	2014-12-31	0	1
+43	Congo, Dem Rep of the	2015-01-31	1	0
+44	Congo, Dem Rep of the	2015-04-30	5	3
+45	Congo, Dem Rep of the	2015-08-31	1	0
+46	Congo, Dem Rep of the	2015-10-31	3	6
+47	Congo, Dem Rep of the	2015-11-30	1	4
+48	Congo, Dem Rep of the	2016-01-31	0	3
+49	Congo, Dem Rep of the	2016-02-29	3	6
+50	Congo, Dem Rep of the	2016-06-30	0	2
+51	Congo, Dem Rep of the	2016-07-31	1	1
+52	Congo, Dem Rep of the	2016-09-30	0	4
+53	Congo, Dem Rep of the	2016-10-31	0	2
+54	Congo, Dem Rep of the	2016-11-30	0	4
+55	Congo, Dem Rep of the	2017-01-31	3	0
+56	Congo, Dem Rep of the	2017-03-31	132	16
+57	Congo, Dem Rep of the	2017-04-30	28	4
+58	Congo, Dem Rep of the	2017-05-31	8	1
+59	Congo, Dem Rep of the	2017-06-30	11	2
+60	Congo, Dem Rep of the	2017-07-31	3	1
+61	Cote d'Ivoire	2017-05-31	11	1
+62	Cote d'Ivoire	2017-08-31	0	1
+63	Cote d'Ivoire	2017-11-30	8	1
+64	Ecuador	2015-12-31	9	1
+65	Ecuador	2016-01-31	2	0
+66	Ecuador	2016-10-31	8	1
+67	Ecuador	2016-11-30	10	3
+68	Ecuador	2017-06-30	2	0
+69	Ethiopia	2014-10-31	6	1
+70	Ethiopia	2016-04-30	9	1
+71	Ethiopia	2016-11-30	3	0
+72	Ethiopia	2017-01-31	1	0
+73	Ethiopia	2017-08-31	5	1
+74	Ethiopia	2017-10-31	1	0
+75	Fiji	2016-02-29	35	9
+76	Fiji	2016-03-31	7	1
+77	Gambia, The	2015-12-31	7	4
+78	Guatemala	2015-10-31	0	1
+79	Guatemala	2015-11-30	0	1
+80	Guatemala	2016-06-30	5	0
+81	Guatemala	2016-07-31	1	0
+82	Guatemala	2016-10-31	1	0
+83	Guinea	2015-09-30	3	0
+84	Guinea	2015-10-31	1	0
+85	Haiti	2015-10-31	4	0
+86	Haiti	2015-11-30	40	3
+87	Haiti	2015-12-31	7	1
+88	Haiti	2016-01-31	12	1
+89	Haiti	2016-10-31	1	1
+90	Indonesia	2015-03-31	2	0
+91	Indonesia	2015-06-30	6	0
+92	Indonesia	2016-08-31	8	1
+93	Indonesia	2016-10-31	3	0
+94	Indonesia	2016-11-30	2	0
+95	Indonesia	2017-05-31	9	1
+96	Iraq	2016-04-30	10	0
+97	Iraq	2016-05-31	14	3
+98	Iraq	2016-06-30	3	1
+99	Jamaica	2016-06-30	7	4
+100	Jamaica	2016-07-31	7	1
+101	Jamaica	2017-03-31	1	0
+102	Jamaica	2017-10-31	1	1
+103	Japan	2016-04-30	5	0
+104	Kenya	2015-08-31	13	0
+105	Kenya	2016-11-30	6	3
+106	Kenya	2016-12-31	5	5
+107	Kenya	2017-01-31	1	0
+108	Kenya	2017-02-28	5	2
+109	Kenya	2017-03-31	19	4
+110	Kenya	2017-04-30	51	16
+111	Kenya	2017-05-31	19	6
+112	Kenya	2017-06-30	3	4
+113	Kenya	2017-08-31	1	1
+114	Kenya	2017-09-30	3	0
+115	Kenya	2017-10-31	31	0
+116	Kenya	2017-11-30	21	3
+117	Kenya	2017-12-31	11	0
+118	Kenya	2018-01-31	12	1
+119	Kenya	2018-02-28	16	0
+120	Kenya	2018-03-31	3	0
+121	Liberia	2014-08-31	7	1
+122	Liberia	2014-10-31	1	1
+123	Liberia	2015-03-31	2	0
+124	Liberia	2015-04-30	1	0
+125	Libya	2016-11-30	1	0
+126	Libya	2016-12-31	7	0
+127	Madagascar	2016-07-31	2	1
+128	Madagascar	2016-08-31	1	0
+129	Madagascar	2016-09-30	1	0
+130	Madagascar	2016-10-31	15	0
+131	Madagascar	2016-11-30	3	0
+132	Madagascar	2016-12-31	1	0
+133	Malawi	2014-09-30	9	1
+134	Malawi	2014-10-31	2	2
+135	Malawi	2014-11-30	1	1
+136	Malawi	2014-12-31	9	3
+137	Malawi	2015-01-31	3	1
+138	Malawi	2015-02-28	9	3
+139	Malawi	2015-04-30	0	2
+140	Malawi	2015-08-31	1	0
+141	Malawi	2015-10-31	11	1
+142	Malawi	2015-12-31	7	0
+143	Malawi	2016-01-31	0	1
+144	Malawi	2016-02-29	1	0
+145	Malawi	2016-04-30	4	1
+146	Malawi	2016-11-30	16	7
+147	Malawi	2016-12-31	15	10
+148	Malawi	2017-01-31	12	10
+149	Malawi	2017-02-28	5	2
+150	Malawi	2017-03-31	4	1
+151	Malawi	2017-04-30	6	2
+152	Malawi	2017-05-31	19	1
+153	Malawi	2017-06-30	65	9
+154	Malawi	2017-07-31	16	0
+155	Malawi	2017-08-31	8	5
+156	Malawi	2017-09-30	9	0
+157	Malawi	2017-10-31	21	2
+158	Malawi	2017-11-30	12	0
+159	Malawi	2018-01-31	29	0
+160	Malawi	2018-02-28	15	1
+161	Mali	2017-01-31	0	1
+162	Mali	2017-06-30	7	0
+163	Morocco	2017-03-31	0	2
+164	Mozambique	2014-10-31	5	0
+165	Mozambique	2014-12-31	0	1
+166	Mozambique	2015-04-30	1	0
+167	Mozambique	2015-09-30	5	1
+168	Mozambique	2015-10-31	30	3
+169	Mozambique	2015-11-30	8	0
+170	Mozambique	2015-12-31	16	1
+171	Mozambique	2016-01-31	8	0
+172	Mozambique	2016-02-29	4	0
+173	Mozambique	2016-05-31	2	0
+174	Mozambique	2016-06-30	0	3
+175	Mozambique	2018-01-31	3	0
+176	Mozambique	2018-02-28	0	2
+177	Nepal	2015-04-30	12	0
+178	Nepal	2015-05-31	25	17
+179	Nepal	2016-01-31	0	1
+180	Nepal	2016-02-29	0	3
+181	Nepal	2016-03-31	0	1
+182	Nepal	2016-04-30	9	1
+183	Nepal	2016-05-31	45	3
+184	Nepal	2016-06-30	27	2
+185	Nepal	2016-07-31	4	0
+186	Nepal	2016-08-31	1	1
+187	Nepal	2016-09-30	35	1
+188	Nepal	2016-10-31	9	2
+189	Nepal	2016-11-30	3	1
+190	Nepal	2016-12-31	6	2
+191	Nepal	2017-04-30	13	4
+192	Nepal	2017-05-31	4	2
+193	Netherlands [Caribbean]	2016-05-31	1	0
+194	Nicaragua	2015-05-31	1	0
+195	Nicaragua	2015-06-30	1	0
+196	Nicaragua	2016-07-31	2	0
+197	Niger	2017-11-30	6	1
+198	Niger	2017-12-31	3	0
+199	Nigeria	2017-04-30	2	0
+200	Peru	2015-08-31	4	2
+201	Peru	2015-10-31	1	0
+202	Peru	2015-12-31	23	1
+203	Peru	2016-01-31	2	0
+204	Peru	2016-02-29	3	0
+205	Peru	2016-04-30	1	0
+206	Peru	2016-05-31	4	0
+207	Peru	2016-06-30	1	0
+208	Peru	2016-07-31	4	0
+209	Peru	2016-09-30	1	0
+210	Peru	2016-10-31	2	0
+211	Peru	2016-11-30	3	0
+212	Peru	2017-11-30	1	0
+213	Peru	2017-12-31	6	0
+214	Peru	2018-01-31	1	0
+215	Philippines	2014-11-30	0	4
+216	Philippines	2014-12-31	81	8
+217	Philippines	2015-01-31	29	1
+218	Philippines	2015-02-28	3	1
+219	Philippines	2015-04-30	1	2
+220	Philippines	2015-05-31	1	0
+221	Philippines	2015-08-31	2	1
+222	Philippines	2015-10-31	1	1
+223	Philippines	2015-11-30	7	4
+224	Philippines	2016-01-31	7	1
+225	Philippines	2016-02-29	35	4
+226	Philippines	2016-03-31	50	2
+227	Philippines	2016-04-30	3	0
+228	Philippines	2016-05-31	1	0
+229	Philippines	2016-06-30	15	1
+230	Philippines	2016-08-31	1	0
+231	Philippines	2016-09-30	1	0
+232	Philippines	2016-11-30	43	2
+233	Philippines	2016-12-31	6	0
+234	Philippines	2017-01-31	15	0
+235	Philippines	2017-02-28	1	0
+236	Philippines	2017-11-30	5	0
+237	Rwanda	2017-03-31	0	1
+238	Senegal	2015-11-30	13	0
+239	Senegal	2016-04-30	0	1
+240	Sierra Leone	2014-07-31	72	18
+241	Sierra Leone	2014-08-31	20	11
+242	Sierra Leone	2014-09-30	2	7
+243	Sierra Leone	2014-10-31	2	1
+244	Sierra Leone	2014-12-31	0	7
+245	Sierra Leone	2015-01-31	3	6
+246	Sierra Leone	2015-02-28	1	0
+247	Sierra Leone	2015-04-30	0	1
+248	Sierra Leone	2015-07-31	1	0
+249	South Africa	2015-09-30	15	0
+250	South Africa	2015-10-31	37	1
+251	South Africa	2015-11-30	43	0
+252	South Sudan	2014-03-31	3	0
+253	South Sudan	2014-04-30	1	0
+254	South Sudan	2014-11-30	7	3
+255	South Sudan	2015-02-28	6	0
+256	South Sudan	2015-03-31	4	3
+257	South Sudan	2015-07-31	53	7
+258	South Sudan	2017-10-31	2	0
+259	South Sudan	2017-11-30	2	0
+260	South Sudan	2017-12-31	3	0
+261	Sri Lanka	2015-10-31	1	0
+262	Sri Lanka	2015-11-30	51	0
+263	Sri Lanka	2015-12-31	24	1
+264	Sri Lanka	2016-01-31	17	0
+265	Sri Lanka	2016-02-29	21	1
+266	Sri Lanka	2016-03-31	38	0
+267	Sri Lanka	2016-04-30	37	2
+268	Sri Lanka	2016-05-31	93	1
+269	Sri Lanka	2016-06-30	65	3
+270	Sri Lanka	2016-07-31	53	11
+271	Sri Lanka	2016-08-31	9	1
+272	Sri Lanka	2016-09-30	12	1
+273	Sri Lanka	2016-10-31	2	1
+274	Sri Lanka	2016-11-30	4	2
+275	Sri Lanka	2017-03-31	1	0
+276	Sri Lanka	2017-10-31	3	0
+277	Tajikistan	2018-01-31	1	0
+278	Tanzania	2016-05-31	2	0
+279	Tanzania	2016-06-30	1	0
+280	Tanzania	2016-07-31	1	0
+281	Tanzania	2016-08-31	1	0
+282	Tanzania	2016-09-30	1	0
+283	Tanzania	2016-11-30	12	2
+284	Tanzania	2016-12-31	10	4
+285	Tanzania	2017-01-31	19	2
+286	Tanzania	2017-02-28	13	3
+287	Tanzania	2017-03-31	48	17
+288	Tanzania	2017-04-30	33	11
+289	Tanzania	2017-05-31	12	17
+290	Tanzania	2017-06-30	9	0
+291	Tanzania	2017-07-31	3	0
+292	Tanzania	2017-10-31	2	0
+293	Tanzania	2017-11-30	12	6
+294	Tanzania	2017-12-31	0	1
+295	Tanzania	2018-02-28	1	1
+296	Togo	2015-09-30	6	1
+297	Togo	2015-10-31	8	0
+298	Togo	2017-05-31	12	3
+299	Togo	2017-06-30	0	1
+300	Togo	2017-07-31	3	0
+301	Uganda	2014-03-31	20	0
+302	Uganda	2014-04-30	6	2
+303	Uganda	2014-05-31	7	1
+304	Uganda	2014-06-30	5	1
+305	Uganda	2014-10-31	3	0
+306	Uganda	2016-12-31	4	2
+307	Uganda	2017-01-31	1	0
+308	Uganda	2017-02-28	8	1
+309	Uganda	2017-03-31	12	1
+310	Uganda	2017-04-30	72	6
+311	Uganda	2017-05-31	1	1
+312	Uganda	2017-06-30	0	1
+313	Uganda	2017-07-31	35	7
+314	Uganda	2017-08-31	149	26
+315	Uganda	2017-09-30	164	29
+316	Uganda	2017-10-31	112	47
+317	Uganda	2017-11-30	114	23
+318	Uganda	2017-12-31	19	13
+319	Uganda	2018-01-31	7	9
+320	Uganda	2018-02-28	45	3
+321	Uganda	2018-03-31	25	3
+322	Ukraine	2016-08-31	1	0
+323	Ukraine	2017-10-31	1	0
+324	Ukraine	2018-01-31	0	1
+325	United States	2016-01-31	0	1
+326	United States	2017-10-31	1	0
+327	Vietnam	2018-01-31	3	0
+328	Vietnam	2018-03-31	24	0
+329	Yemen	2015-10-31	0	1
+330	Zimbabwe	2017-09-30	1	0

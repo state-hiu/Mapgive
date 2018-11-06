@@ -1,0 +1,58 @@
+/* main.css: Add and override styles */
+.dc-data-count small {
+  font-size: 16px;
+}
+
+.container-fluid {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.pie-chart {
+  height: 150px;
+}
+
+.dc-chart .axis text{
+  font-size: 12px;
+}
+
+text {
+  font-size: 16px;
+}
+
+#map {
+  height: 500px;
+}
+
+#control-row {
+  padding-bottom: 20px;
+}
+
+a { cursor: pointer }
+
+div#gender-chart {
+    margin-top: 230px;
+}
+
+/*
+.pie-chart { 
+    height: 250px; 
+}
+*/
+
+.dc-chart .pie-slice {
+  fill: black;  
+}
+
+/*makes lables of pie chart clear*/
+#chart-ring-sleep .pie-slice {
+    fill: rgba(0, 0, 0, 0);
+}
+
+#chart-ring-sleep text {
+    font-size: 11px;
+}
+
+.dc-chart g.row text {
+  fill: black;  
+}
