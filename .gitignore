@@ -4,7 +4,7 @@ robot.txt
 Vagrantfile
 node_modules
 _site
-_assets
+assets
 backups
 temp
 Gemfile.lock
