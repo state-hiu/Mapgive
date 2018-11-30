@@ -8,7 +8,7 @@ assets
 backups
 temp
 Gemfile.lock
-#assets
+assets
 *~
 npm-debug.log
 package-lock.json
