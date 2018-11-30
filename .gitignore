@@ -4,11 +4,9 @@ robot.txt
 Vagrantfile
 node_modules
 _site
-assets
 backups
 temp
 Gemfile.lock
-#assets
 *~
 npm-debug.log
 package-lock.json
