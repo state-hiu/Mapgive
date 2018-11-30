@@ -3,13 +3,13 @@ MapGive
 
 ## Description
 
-This repository contains the contents of the MapGive website accessible at [http://mapgive.state.gov](http://mapgive.state.gov).
+This repository contains the contents of the MapGive website accessible at [https://mapgive.state.gov](https://mapgive.state.gov).
 
 ## Installation
 
 These installation instructions are subject to change.
 
-Jekyll (http://jekyllrb.com/) needs to be installed.
+Jekyll (https://jekyllrb.com/) needs to be installed.
 
 Now you can run the commands below to install the other dependencies:
 
