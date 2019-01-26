@@ -1,10 +1,12 @@
 ---
-layout: resource
-category: plan
 title: Event Guide
-permalink: '/plan/event-planning/'
+date: 0100-01-02 00:00:00 -04:56
+permalink: "/plan/event-planning/"
+categories:
+- plan
 tags:
-  - planner
+- planner
+layout: resource
 ---
 
 Here are helpful tips for planning an event, including recruiting participants and managing logistics.

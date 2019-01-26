@@ -1,16 +1,27 @@
-name: MapGive
+---
+title: Mapgive
 timezone: America/New_York
-baseurl: /Mapgive
-#url: http://mapgive.state.gov
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+name: MapGive
+baseurl: "/Mapgive"
 destination: temp/
 twitter_username: MapGive
 permalink: none
 future: true
-
-# Explicit excludes, including dotfiles to be safe
-exclude: [.DS_Store, .git, .gitignore, .vagrant, Gruntfile.js, Vagrantfile, package.json, node_modules, backups, _assets/img/src-images]
-
-
-
-
-
+exclude:
+- ".DS_Store"
+- ".git"
+- ".gitignore"
+- ".vagrant"
+- Gruntfile.js
+- Vagrantfile
+- package.json
+- node_modules
+- backups
+- _assets/img/src-images
