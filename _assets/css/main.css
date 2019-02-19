@@ -1467,6 +1467,26 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
   margin: 0 auto;
 }
 
+.media-object .mm-img {
+  width: 110px;
+  margin: 0 auto;
+}
+
+.media-object .ym-img {
+  width: 105px;
+  margin: 0 auto;
+}
+
+.media-object .gfdrr-img {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.media-object .2c-img {
+  width: 100px;
+  margin: 0 auto;
+}
+
 .site-logo {
   font-family: "Trebuchet MS", Arial, sans-serif;
   text-transform: uppercase;

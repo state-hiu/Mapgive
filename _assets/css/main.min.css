@@ -276,6 +276,10 @@ img[src$=".svgz"].img-responsive,img[src$=".svg"].img-responsive{width:100%;}
 .media-object .osm{background-image:url(../img/osm.svg);background-repeat:no-repeat;background-position:0 0;background-size:65px 64px;width:95px;height:93px;margin:0 auto;}
 .media-object .hot{background-position:-156px -68px;background-size:229px 134px;height:39px;margin:0 auto;}
 .media-object .dos{background-position:0 -67px;background-size:229px 134px;width:67px;height:68px;margin:0 auto;}
+.media-object .mm-img{width:110px;margin:0 auto;}
+.media-object .ym-img{width:105px;margin:0 auto;}
+.media-object .gfdrr-img{width:100px;margin:0 auto;}
+.media-object .2c-img{width:100px;margin:0 auto;}
 .site-logo{font-family:Trebuchet MS,Arial,sans-serif;text-transform:uppercase;}
 .site-logo.white{color:#fff;}
 .logo{background-position:-2em -1.16666666666667em;background-size:4.05555555555556em 2.30555555555556em;width:.80555555555556em;height:1.20833333333333em;display:inline-block;margin:0 3px;position:relative;top:.16666666666667em;}
