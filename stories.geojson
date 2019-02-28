@@ -3,7 +3,7 @@
 {
   "type": "FeatureCollection",
   "features": [{% assign stories = (site.posts | where: "category", "stories") %}{% for story in stories %}
-    {% if story.lon and story.lat %}
+    {% if story.lon != nil and story.lat != nil %}
     {
       "type": "Feature",
       "properties": {

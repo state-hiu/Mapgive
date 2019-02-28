@@ -15,8 +15,6 @@ ogDescription: "Measuring Impact with the MapGive Dashboard"
 ogImage: "../assets/img/mapgive_dashboard_thumb.png"
 emailSubject: MapGive Dashboard
 emailDescription: "Measuring Impact with the MapGive Dashboard"
-lat: 0
-lon: 0
 ---
 
 <style type="text/css">
