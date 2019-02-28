@@ -1,9 +1,9 @@
 ---
 layout: story
 category: stories
-title: "Filling the Gaps: MapGive imagery services enhance humanitarian mapping"
+title: "Filling the Gaps: MapGive Imagery Services Enhance Humanitarian Mapping"
 person: MapGive
-country: Uganda
+country: Bangladesh, Uganda, and Worldwide
 date: 2019-02-28
 image: updated_img_ex_bright.jpg
 tags: [dashboard, metrics]
@@ -52,18 +52,25 @@ Maps and geographic data feed into nearly every stage of the humanitarian respon
 <p>
 MapGive’s launch in 2014 coalesced and re-branded the HIU’s efforts to support crowdsourced humanitarian mapping.  By building on IttC, Mapgive is a more ambitious endeavor to leverage the U.S. Department of State’s vast global reach and encourage more active volunteer participation in the global mapping community.  We continue to provide a reliable imagery support service to those leading and designing volunteer mapping projects around the world, most recently in Uganda and Bangladesh in response to rapidly growing refugee crises. Since its inception, MapGive efforts have facilitated more than three million edits to OSM by nearly thirty five thousand volunteers, primarily for mapping projects designed to directly assist people in need (explore our <a href="https://mapgive.state.gov/dashboard/" target="_blank">interactive data dashboard</a> for more details).
 </p>
+
+<div class="image-row" style="margin-top:25px">
+    <div class="image-set" >
+        <div style="margin: 0 auto; display: block;">
+            <a class="image-link" href="{{site.baseurl}}/assets/img/updated_img_ex_bright.jpg" data-lightbox="2" title="Updated imagery can show new settlements">
+                <img src="{{ site.baseurl }}/assets/img/updated_img_ex_bright.jpg" style="max-width:100%">
+            </a>
+            <p class="caption">Updated imagery can show new settlements</p>
+        </div>
+    </div>
+</div>
+
 <p>
 Today, mappers have access to a wider variety of satellite imagery services, as companies like DigitalGlobe, Mapbox, Esri, and others have also opened their proprietary imagery services to facilitate the creation of foundation geographic data in OSM (e.g. DigitalGlobe, through its <a href="https://www.digitalglobe.com/opendata" target="_blank">Open Data Program</a>, frequently responds to natural disasters by publicly releasing its imagery). The impact has been felt across the community as more diverse imagery sources help to lower the barrier of entry in generating useful mapping projects in remote parts of the globe, whereas historically one might face challenges in identifying suitable imagery for a specific project.
 </p>
 <p>
 Despite the increasing availability of free imagery services, MapGive adds value in more discrete contexts, particularly where the available imagery is not sufficient in capturing recent developments on the ground and when satellite companies have not publicly released their imagery.  During two recent humanitarian emergencies, in Uganda and Bangladesh, MapGive-provided imagery formed the backbone of sustained mapping campaigns over areas affected by the influx of refugees from South Sudan and Burma, respectively.  In both cases, the volunteer community of “citizen mappers” quickly mobilized to support humanitarian agencies responding to the world’s fastest growing refugee crises.
 </p>
-<!--insert before & After visualization here -->
 
-<iframe src="/Mapgive/projects/northern_uganda/hist_slider_northern_uganda.html" width="100%" height="550px" style="float:left;border-width:0px;margin:15px">
-</iframe>
-<p class="caption">Before and After visualization of OpenStreetMap around refugee camps in Northern Uganda</p>
-<p></p><p></p>
 <p>
 MapGive responds directly to imagery needs identified by the humanitarian mapping community, which is rooted in our <a href="https://hiu.state.gov/imagery/" target="_blank">policy for sharing satellite imagery</a> with trusted partners.  By working with <a href="https://www.missingmaps.org/" target="_blank">Missing Maps</a> in Uganda, for example, we were able to publish extremely current imagery to support mapping projects designed by humanitarian organizations working directly in refugee settlements (see the image example below from Palorinya refugee settlement in northern Uganda).  In a matter of days, online volunteers mapped hundreds of thousands of shelters, roads, and camp facilities to facilitate further data attribution and validation in the field, which became integral to the UN-coordinated response in both contexts (see <a href="http://fingfx.thomsonreuters.com/gfx/rngs/MYANMAR-ROHINGYA/010051VB46G/index.html" target="_blank">this Reuters story</a> for illustrative examples from Bangladesh).
 </p>
@@ -71,8 +78,16 @@ MapGive responds directly to imagery needs identified by the humanitarian mappin
 Initially, the rapidly expanding refugee settlements needed to be mapped to assist in designing critical infrastructure such as emergency health clinics, water and sanitation centers, and food distribution points.  Later, multiple UN agencies and NGOs (including IOM, UNHCR, IFRC, MSF, REACH, HOT and others) continued to update the baseline geographic data and leverage it for the response.
 </p>
 <p>
-Today we have a more refined blueprint and mechanism to enable the rapid mapping of emerging settlements for civilians displaced by conflict. The significant growth of available imagery providers has been a tremendous success for the crowdsourced mapping community, and within that growing ecosystem MapGive continues to be a relevant and useful source of support—particularly in situations that require current satellite imagery—and capitalizes on the vast global reach of the U.S. Department of State to attract new mappers and facilitate participation in the wider community. 
+Today we have a more refined blueprint and mechanism to enable the rapid mapping of emerging settlements for civilians displaced by conflict. The significant growth of available imagery providers has been a tremendous success for the crowdsourced mapping community, and within that growing ecosystem MapGive continues to be a relevant and useful source of support—particularly in situations that require current satellite imagery—and capitalizes on the vast global reach of the U.S. Department of State to attract new mappers and facilitate participation in the wider community.
 </p>
+
+<p></p>
+<!--insert before & After visualization here -->
+
+<iframe src="/Mapgive/projects/northern_uganda/hist_slider_northern_uganda.html" width="100%" height="550px" style="float:left;border-width:0px;margin:0px">
+</iframe>
+<p class="caption">Before and After visualization of OpenStreetMap around refugee camps in Northern Uganda</p>
+<p></p><p></p>
 
 
 
