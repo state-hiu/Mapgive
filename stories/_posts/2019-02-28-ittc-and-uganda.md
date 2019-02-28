@@ -75,40 +75,4 @@ Today we have a more refined blueprint and mechanism to enable the rapid mapping
 </p>
 
 
-<!--
-<div class="story-promo shadowed">
-<blockquote>
-    <div style="font-size: 18px;margin-bottom:0px" class="story-promo">
-        <strong>July 2014: Ebola Outbreak, West Africa</strong>
-        <p>
-        The West Africa Ebola epidemic was the largest Ebola epidemic in history. It began with the first recorded case in Guinea in December 2013. The disease spread to Liberia and Sierra Leone, and by July 2014, all three capitals were struggling to deal with the epidemic. MapGive provided huge swaths of imagery services for Liberia and Sierra Leone, and hosted mapathons with the American Red Cross that mobilized hundreds of volunteers. Deployed response teams made use of updated OSM data for logistics and planning.</p>
-        <strong>Dec 2014: Typhoon Hagupit (Ruby), Philippines</strong>
-        <p>
-        Typhoon Hagupit (Ruby) was a category 3 typhoon that hit the Philippines on December 6th 2014. The MapGive team collaborated with HOTOSM imagery coordination team and coordinated imagery requests for satellite imagery along the typhoon’s path. Pre-disaster imagery was supplied within days of the typhoon making landfall, focusing over Samar Island.
-        </p>
-        <strong>April 2015: Earthquake Response, Nepal</strong>
-        <p>
-        A 7.8 magnitude earthquake struck Nepal on April 25, 2015. The earthquake and aftershocks resulted in about 9,000 deaths and over 22,000 injuries. Many different imagery providers coordinated in providing satellite imagery immediately following the disaster for the OpenStreetMap response. The MapGive team contributed a few crucial pre-disaster scenes in the Gorkha region northwest of Kathmandu.
-        </p>
-        <strong>2017: Multi-pronged Mapping Efforts, Uganda</strong>
-        <ul>
-        <li>MapGive published numerous satellite imagery services to support a State/PRM-funded project implemented by HOT to comprehensively map South Sudanese refugee settlements and the surrounding host communities in northern Uganda. These maps and data continue to be used across the humanitarian coordination system in Uganda to support South Sudanese and other refugee populations.</li>
-        <li>MapGive supported a <a href="https://mapgive.state.gov/stories/pepfar-mapping.html" target="_blank">PEPFAR Open Mapping Initiative</a> around Lake Victoria.</li>
-        </ul>
-        <strong>2017 & 2018: Rohingya Refugee Crisis, Burma</strong>
-        <p>
-        Immediately following the massive influx of Rohingya refugees into Bangladesh, resulting in rapid growth of refugee settlements in Cox’s Bazar. MapGive rapidly published satellite imagery services through efforts led by HOT, MSF, IOM, REACH, and others, these settlements were comprehensively mapped to improve coordination and the provision of essential services such as shelter, water, and food.
-        </p>
-    </div>
-</blockquote>
-</div>
-
-<p>
-We encourage you to try out the dashboard for yourself. This tool is enabling our team to make use of data to help us reflect on our past work, find gaps, and feed into our ongoing outreach efforts. It helps us measure our impact and set new goals. We look forward to continuing our partnerships with the humanitarian community and working together to map the world.
-</p>
-<p>
-<strong>Technical note and acknowledgements</strong>: this dashboard is possible due to the work from <a href="https://aws.amazon.com/blogs/big-data/querying-openstreetmap-with-amazon-athena/" target="_blank">Amazon Web Services and by Seth Fitzsimmons</a> in making OSM data publicaly queryable using Amazon Athena. The backend metrics aggregator (points-in-polygon repository), and frontend code (MapGive repository) are all open source and available on <a href="https://github.com/state-hiu" target="_blank">Github</a>.
-</p>
--->
-
 
