@@ -56,8 +56,8 @@ MapGive’s launch in 2014 coalesced and re-branded the HIU’s efforts to suppo
 <div class="image-row" style="margin-top:25px">
     <div class="image-set" >
         <div style="margin: 0 auto; display: block;">
-            <a class="image-link" href="{{site.baseurl}}/assets/img/updated_img_ex_bright.jpg" data-lightbox="2" title="Updated imagery can show new settlements">
-                <img src="{{ site.baseurl }}/assets/img/updated_img_ex_bright.jpg" style="max-width:100%">
+            <a class="image-link" href="{{site.baseurl}}/assets/img/uganda_before_after2.png" data-lightbox="2" title="Updated imagery can show new settlements">
+                <img src="{{ site.baseurl }}/assets/img/uganda_before_after2.png" style="max-width:100%">
             </a>
             <p class="caption">Updated imagery can show new settlements</p>
         </div>
