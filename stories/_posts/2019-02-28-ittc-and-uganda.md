@@ -84,7 +84,7 @@ Today we have a more refined blueprint and mechanism to enable the rapid mapping
 <p></p>
 <!--insert before & After visualization here -->
 
-<iframe src="/Mapgive/projects/northern_uganda/hist_slider_northern_uganda.html" width="100%" height="550px" style="float:left;border-width:0px;margin:0px">
+<iframe src="{{ site.baseurl }}/projects/northern_uganda/hist_slider_northern_uganda.html" width="100%" height="550px" style="float:left;border-width:0px;margin:0px">
 </iframe>
 <p class="caption">Before and After visualization of OpenStreetMap around refugee camps in Northern Uganda</p>
 <p></p><p></p>
