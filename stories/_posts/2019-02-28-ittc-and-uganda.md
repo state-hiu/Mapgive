@@ -1,5 +1,5 @@
 ---
-layout: story
+layout: story_no_country_title
 category: stories
 title: "Filling the Gaps: MapGive Imagery Services Enhance Humanitarian Mapping"
 person: MapGive

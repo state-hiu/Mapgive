@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div class="row">
+  <div class="col-md-8">
+    <header role="header">
+      <h1 class="page-title"><a href="{{ site.baseurl }}/stories">Stories</a></h1>
+    </header>
+  </div>
+  <div class="col-md-offset-1 col-md-3">
+    {% include social-media.html %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    <article>
+      <header>
+        <h2>{{ page.title }}</h2>
+      </header>
+      <div class="story">
+        <div class="figure">
+          <img src="{{ site.baseurl }}/assets/img/{{ page.image }}" alt="{{ page.altText }}" class="img-responsive shadowed" />
+          <p class="caption">{{ page.caption }}</p>
+      </div>
+        {{ content }}
+      </div>
+    </article>
+  </div>
+  <div class="col-md-offset-1 col-md-3">
+    {% include more-info.html %}
+  </div>
+</div>
+
