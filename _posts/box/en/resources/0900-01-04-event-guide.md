@@ -1,10 +1,11 @@
 ---
-layout: box
-permalink: /box/en/process/event-guide/
-lang: en
 title: Event Guide
-category: resources
-published: true
+date: 0900-01-04 00:00:00 -04:56
+permalink: "/box/en/process/event-guide/"
+categories:
+- resources
+layout: box
+lang: en
 ---
 
 <!-- ![WH Mapathon]({{site.baseurl}}/img/posts/whmapathon.jpg) -->
