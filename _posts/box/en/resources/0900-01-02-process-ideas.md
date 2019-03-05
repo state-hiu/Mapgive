@@ -1,10 +1,11 @@
 ---
-layout: box
-permalink: /box/en/process/ideas/
-lang: en
 title: Determine the Need
-category: resources
-published: true
+date: 0900-01-02 00:00:00 -04:56
+permalink: "/box/en/process/ideas/"
+categories:
+- resources
+layout: box
+lang: en
 ---
 
 <img src="{{site.baseurl}}/assets/img/pointing.png" alt="pointing" style="width:400px">

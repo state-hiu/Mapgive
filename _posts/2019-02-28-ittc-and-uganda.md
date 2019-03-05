@@ -1,20 +1,25 @@
 ---
+title: 'Filling the Gaps: MapGive Imagery Services Enhance Humanitarian Mapping'
+date: 2019-02-28 00:00:00 -05:00
+categories:
+- stories
+tags:
+- dashboard
+- metrics
 layout: story_no_country_title
-category: stories
-title: "Filling the Gaps: MapGive Imagery Services Enhance Humanitarian Mapping"
 person: MapGive
 country: Bangladesh, Uganda, and Worldwide
-date: 2019-02-28
 image: uganda_mapping2.png
-tags: [dashboard, metrics]
-altText: "MapGive imagery services enhance humanitarian mapping to assist the world’s most vulnerable populations"
-caption: "More recent quality imagery assists new mapping"
-twitterDescription: "MapGive imagery services enhance humanitarian mapping to assist the world’s most vulnerable populations"
+altText: MapGive imagery services enhance humanitarian mapping to assist the world’s
+  most vulnerable populations
+caption: More recent quality imagery assists new mapping
+twitterDescription: MapGive imagery services enhance humanitarian mapping to assist
+  the world’s most vulnerable populations
 twitterImage: "../assets/img/uganda_mapping2.png"
-ogDescription: "MapGive imagery services enhance humanitarian mapping"
+ogDescription: MapGive imagery services enhance humanitarian mapping
 ogImage: "../assets/img/uganda_mapping2.png"
 emailSubject: MapGive imagery services
-emailDescription: "MapGive imagery services enhance humanitarian mapping"
+emailDescription: MapGive imagery services enhance humanitarian mapping
 lat: 3.243
 lon: 31.385
 ---

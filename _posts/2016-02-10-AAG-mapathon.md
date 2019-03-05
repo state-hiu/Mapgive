@@ -1,19 +1,26 @@
 ---
-layout: story
-category: stories
 title: 2nd Mapathon @ AAG
-#person: Tyler Machado, Journalist 
+date: 2016-02-10 00:00:00 -05:00
+categories:
+- stories
+tags:
+- US
+- Mapathon
+- AAG
+layout: story
 country: United States
-date: 2016-02-10
 image: mit_mapathon.jpg
-tags: [US,Mapathon,AAG,Mapathon]
-altText: This is the 2nd year that Mapathons and Mapathon related activities were hosted at the American Association of Geographers (AAG) Annual Meeting.
-twitterDescription: "The 2nd year that Mapathons and Mapathon related activities were hosted at the American Association of Geographers (AAG) Annual Meeting."
+altText: This is the 2nd year that Mapathons and Mapathon related activities were
+  hosted at the American Association of Geographers (AAG) Annual Meeting.
+twitterDescription: The 2nd year that Mapathons and Mapathon related activities were
+  hosted at the American Association of Geographers (AAG) Annual Meeting.
 twitterImage: "../assets/img/mit_mapathon.jpg"
-ogDescription: "The 2nd year that Mapathons and Mapathon related activities were hosted at the American Association of Geographers (AAG) Annual Meeting."
+ogDescription: The 2nd year that Mapathons and Mapathon related activities were hosted
+  at the American Association of Geographers (AAG) Annual Meeting.
 ogImage: "../assets/img/mit_mapathon.jpg"
 emailSubject: 2nd Mapathon @ AAG
-emailDescription: "The 2nd year that Mapathons and Mapathon related activities were hosted at the American Association of Geographers (AAG) Annual Meeting."
+emailDescription: The 2nd year that Mapathons and Mapathon related activities were
+  hosted at the American Association of Geographers (AAG) Annual Meeting.
 lat: 42.34
 lon: -71.08
 ---
