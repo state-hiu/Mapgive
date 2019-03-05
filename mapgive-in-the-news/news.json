@@ -1,6 +1,5 @@
 ---
 ---
-
 [
   {% assign stories = (site.posts | where: "category", "news") %}{% for story in stories %}
     {

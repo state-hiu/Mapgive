@@ -1,12 +1,12 @@
 ---
-title: Additional Resources
-date: 0900-01-07 00:00:00 -04:56
-permalink: "/en/resources/"
-categories:
-- resources
 layout: box
+permalink: /en/resources/
 lang: en
+title: Additional Resources
+category: resources
+published: true
 ---
+
 
 <style>
 

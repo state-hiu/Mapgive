@@ -1,12 +1,11 @@
 ---
-title: Intro to Open Mapping
-date: 0100-01-02 00:00:00 -04:56
-permalink: "/box/about/"
-categories:
-- about
 layout: box
+permalink: /box/about/
 lang: en
-cover: 'yes'
+title: Intro to Open Mapping
+category: about
+cover: "yes"
+published: true
 ---
 
 OpenStreetMap is a volunteer driven map of the entire world. Anyone can contribute, and anyone can use the data. The focus is on infrastructure, like roads and buildings, services, and land use. The maps can be updated very fast, by large numbers of volunteers from around the world, making them extremely suited for humanitarian and development applications.

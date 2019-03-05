@@ -1,12 +1,7 @@
 ---
-title: Measuring Impact with the MapGive Dashboard
-date: 2018-11-01 00:00:00 -04:00
-categories:
-- stories
-tags:
-- dashboard
-- metrics
 layout: story
+category: stories
+title: "Measuring Impact with the MapGive Dashboard"
 person: MapGive
 country: Worldwide
 date: 2018-11-01
