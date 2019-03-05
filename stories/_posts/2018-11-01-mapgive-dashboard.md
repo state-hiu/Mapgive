@@ -1,23 +1,20 @@
 ---
-title: Measuring Impact with the MapGive Dashboard
-date: 2018-11-01 00:00:00 -04:00
-categories:
-- stories
-tags:
-- dashboard
-- metrics
 layout: story
+category: stories
+title: "Measuring Impact with the MapGive Dashboard"
 person: MapGive
 country: Worldwide
+date: 2018-11-01
 image: mapgive_dashboard2.png
-altText: Measuring Impact with the MapGive Dashboard
-caption: 'User contributions to OpenStreetMap can be shown by country and time '
-twitterDescription: Engaging New Audiences to Support PEPFAR’s Open Mapping Efforts
+tags: [dashboard, metrics]
+altText: "Measuring Impact with the MapGive Dashboard"
+caption: "User contributions to OpenStreetMap can be shown by country and time "
+twitterDescription: "Engaging New Audiences to Support PEPFAR’s Open Mapping Efforts"
 twitterImage: "../assets/img/mapgive_dashboard2.png"
-ogDescription: Measuring Impact with the MapGive Dashboard
+ogDescription: "Measuring Impact with the MapGive Dashboard"
 ogImage: "../assets/img/mapgive_dashboard2.png"
 emailSubject: MapGive Dashboard
-emailDescription: Measuring Impact with the MapGive Dashboard
+emailDescription: "Measuring Impact with the MapGive Dashboard"
 ---
 
 <style type="text/css">

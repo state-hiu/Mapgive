@@ -1,11 +1,10 @@
 ---
-title: What are OSM Stories?
-date: 0900-01-08 00:00:00 -04:56
-permalink: "/box/en/cases/osm-stories/"
-categories:
-- cases
 layout: box
+permalink: /box/en/cases/osm-stories/
 lang: en
+title: What are OSM Stories?
+category: cases
+published: true
 image: 
 submitted: Tom Gertin, gertintj@state.gov
 ---

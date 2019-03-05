@@ -1,12 +1,10 @@
 ---
-title: Executive Summary
-date: 0900-01-02 00:00:00 -04:56
-permalink: "/box/en/about/exec-summary/"
-published: false
-categories:
-- intro
 layout: doc
+permalink: /box/en/about/exec-summary/
 lang: en
+title: Executive Summary
+category: intro
+published: false
 ---
 
 (make essentially a one pager for leadership)

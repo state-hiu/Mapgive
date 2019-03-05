@@ -1,20 +1,20 @@
 ---
-title: Will Crowdsourcing and Data Stem the Ebola Outbreak
-date: 1970-08-21 22:46:41 -04:00
 layout: resource
 category: news
-external_url: https://soundcloud.com/ibmresearch/will-crowdsourcing-and-data-stem-the-ebola-outbreak
+external_url: 'https://soundcloud.com/ibmresearch/will-crowdsourcing-and-data-stem-the-ebola-outbreak'
+title: Will Crowdsourcing and Data Stem the Ebola Outbreak
 publication: IBM Research
 author: IBM Research
-mapgive_is_author: false
-explicit_mention: true
+date: 20141201
+mapgive_is_author: no
+explicit_mention: yes
 type: podcast
-photo: 
-video: 
-featured: false
-quote: 
+photo:
+video:
+featured: no
+quote:
 tags:
-- insert here
+  - insert here
 ---
 
 <!--not including this post as part of our news section-->

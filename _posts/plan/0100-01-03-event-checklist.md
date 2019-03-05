@@ -1,12 +1,10 @@
 ---
-title: Event Checklist
-date: 0100-01-03 00:00:00 -04:56
-permalink: "/plan/event-checklist/"
-categories:
-- plan
-tags:
-- planner
 layout: resource
+category: plan
+title: Event Checklist
+permalink: '/plan/event-checklist/'
+tags:
+  - planner
 ---
 
 Checklist to help in the preparation on the day of the event, and to follow-up:

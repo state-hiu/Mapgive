@@ -1,15 +1,15 @@
 ---
-title: Contribute
-date: 0100-01-01 00:00:00 -04:56
-permalink: "/box/en/about/contribute/"
 layout: contribute
+permalink: /box/en/about/contribute/
 lang: en
+title: Contribute
 contributetitle: Help improve our guides
-startwith: Ready to get started?
+startwith: "Ready to get started?"
 startA: Send us feedback
 startB: Make a Suggestion
 startC: Fork and improve site
 nosearch: true
+published: true
 ---
 
 # Credits and Contacts

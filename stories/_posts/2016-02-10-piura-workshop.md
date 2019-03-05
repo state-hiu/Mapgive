@@ -1,27 +1,19 @@
 ---
-title: Piura MapGive Workshop
-date: 2016-02-10 00:00:00 -05:00
-categories:
-- stories
-tags:
-- Peru
-- Mapathon
-- Piura
-- Workshop
 layout: story
+category: stories
+title: Piura MapGive Workshop
+#person: Tyler Machado, Journalist 
 country: Peru
+date: 2016-02-10
 image: piura-flag-small.jpg
-altText: The Piura MapGive Workshop introduced field data collection techniques in
-  OpenStreetMap (OSM), using OpenMapKit and FieldPapers
-twitterDescription: The Piura MapGive Workshop introduced field data collection techniques
-  in OpenStreetMap (OSM), using OpenMapKit and FieldPapers
+tags: [Peru,Mapathon,Piura,Workshop]
+altText: The Piura MapGive Workshop introduced field data collection techniques in OpenStreetMap (OSM), using OpenMapKit and FieldPapers
+twitterDescription: "The Piura MapGive Workshop introduced field data collection techniques in OpenStreetMap (OSM), using OpenMapKit and FieldPapers"
 twitterImage: "../assets/img/piura-flag-small.jpg"
-ogDescription: The Piura MapGive Workshop introduced field data collection techniques
-  in OpenStreetMap (OSM), using OpenMapKit and FieldPapers
+ogDescription: "The Piura MapGive Workshop introduced field data collection techniques in OpenStreetMap (OSM), using OpenMapKit and FieldPapers"
 ogImage: "../assets/img/piura-flag-small.jpg"
 emailSubject: MapOff Mapathon
-emailDescription: The Piura MapGive Workshop introduced field data collection techniques
-  in OpenStreetMap (OSM), using OpenMapKit and FieldPapers
+emailDescription: "The Piura MapGive Workshop introduced field data collection techniques in OpenStreetMap (OSM), using OpenMapKit and FieldPapers"
 lat: -5.183
 lon: -80.625
 ---

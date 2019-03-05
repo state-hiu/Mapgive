@@ -1,26 +1,20 @@
 ---
-title: Engaging New Audiences to Support PEPFAR’s Open Mapping Efforts
-date: 2017-12-28 00:00:00 -05:00
-categories:
-- stories
-tags:
-- Uganda
-- Tanzania
-- Kenya
-- PEPFAR
 layout: story
+category: stories
+title: "Engaging New Audiences to Support PEPFAR’s Open Mapping Efforts"
 person: MapGive
 country: Africa
+date: 2017-12-28
 image: pepfar_presentation_cropped.jpg
-altText: Engaging New Audiences to Support PEPFAR’s Open Mapping Efforts
-caption: Irum Zaidi, Deputy Coordinator at the Office of the U.S. Global AIDS Coordinator,
-  discusses open mapping for HIV/AIDS epidemic control
-twitterDescription: Engaging New Audiences to Support PEPFAR’s Open Mapping Efforts
+tags: [Uganda, Tanzania, Kenya, PEPFAR]
+altText: "Engaging New Audiences to Support PEPFAR’s Open Mapping Efforts"
+caption: "Irum Zaidi, Deputy Coordinator at the Office of the U.S. Global AIDS Coordinator, discusses open mapping for HIV/AIDS epidemic control"
+twitterDescription: "Engaging New Audiences to Support PEPFAR’s Open Mapping Efforts"
 twitterImage: "../assets/img/pepfar_presentation_cropped.jpg"
-ogDescription: Engaging New Audiences to Support PEPFAR’s Open Mapping Efforts
+ogDescription: "Engaging New Audiences to Support PEPFAR’s Open Mapping Efforts"
 ogImage: "../assets/img/pepfar_presentation_cropped.jpg"
 emailSubject: PEPFAR Mapping Efforts
-emailDescription: Engaging New Audiences to Support PEPFAR’s Open Mapping Efforts
+emailDescription: "Engaging New Audiences to Support PEPFAR’s Open Mapping Efforts"
 lat: -0.3241
 lon: 32.2927
 ---

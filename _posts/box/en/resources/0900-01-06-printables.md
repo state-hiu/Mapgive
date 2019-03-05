@@ -1,11 +1,10 @@
 ---
-title: Printables
-date: 0900-01-06 00:00:00 -04:56
-permalink: "/en/resources/printables/"
-categories:
-- resources
 layout: box
+permalink: /en/resources/printables/
 lang: en
+title: Printables
+category: resources
+published: true
 ---
 
 <style type="text/css">

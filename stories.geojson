@@ -1,6 +1,5 @@
 ---
 ---
-
 {
   "type": "FeatureCollection",
   "features": [{% assign stories = (site.posts | where: "category", "stories") %}{% for story in stories %}

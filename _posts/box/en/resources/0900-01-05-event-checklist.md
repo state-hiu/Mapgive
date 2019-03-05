@@ -1,11 +1,10 @@
 ---
-title: Event Checklist
-date: 0900-01-05 00:00:00 -04:56
-permalink: "/en/resources/event-checklist/"
-categories:
-- resources
 layout: box
+permalink: /en/resources/event-checklist/
 lang: en
+title: Event Checklist
+category: resources
+published: true
 ---
 
 Checklist to help in the preperation, on the day, and follow up to your event:
