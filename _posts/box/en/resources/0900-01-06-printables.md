@@ -35,7 +35,8 @@ published: true
 <div class="row">
   <div class="col-md-12">
       <div class="row">
-        {% assign sorted_pages = (site.categories.printable | reversed sort: 'date') %}
+        {% assign mid = site.categories.printable | sort: 'date' %}
+        {% assign sorted_pages = mid | reverse %}
           {% for post in sorted_pages %}
             {% assign display = null %}
             {% assign ready = null %}

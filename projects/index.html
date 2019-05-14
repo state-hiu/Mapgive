@@ -41,7 +41,8 @@ margin: 0 0 3px 40px;
 <div class="col-md-9">
 
     <div class="row">
-      {% assign sorted_pages = (site.categories.projects | reversed sort: 'date') %}
+      {% assign mid = site.categories.projects | sort: 'date' %}
+      {% assign sorted_pages = mid | reverse %}
         {% for post in sorted_pages %}
           {% assign display = null %}
           {% assign ready = null %}

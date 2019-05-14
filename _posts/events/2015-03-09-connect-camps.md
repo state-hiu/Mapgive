@@ -1,7 +1,7 @@
 ---
 layout: resource
 category: events
-external_url: 'http://mapgive.state.gov/events/connect-camp-maps/'
+permalink: '/events/2connect-camp-maps/'
 title: Connect Camps
 status: past
 date: 20150309

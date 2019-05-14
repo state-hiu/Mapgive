@@ -31,7 +31,8 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
     <div class="col-md-12">
 
       <div class="row">
-      {% assign sorted_pages = (site.categories.news | reversed sort: 'date') %}
+      {% assign mid = site.categories.news | sort: 'date' %}
+      {% assign sorted_pages = mid | reverse %}
         {% for post in sorted_pages %}
           {% assign display = null %}
           {% assign ready = null %}
@@ -72,7 +73,8 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
 <!--
 {% assign count = '' %}
 
-{% assign sorted_pages = (site.categories.news%}
+{% assign mid = site.categories.news | sort: 'date' %}
+{% assign sorted_pages = mid | reverse %}
   {% for post in sorted_pages %}
     {% if post.featured == false %}
       {% capture increment %}{{ count }}*{% endcapture %}
@@ -88,7 +90,8 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
 
 <!-- Don't need this anymore news.json builds a json feed
       <div class='limiter pad4y clearfix'>
-      {% assign sorted_pages = (site.categories.news | reversed sort: 'date') %}
+      {% assign mid = site.categories.news | sort: 'date' %}
+      {% assign sorted_pages = mid | reverse %}
       {% for post in sorted_pages %}
         {% if post.featured == false %}
           <div class='keyline-all pad4 space-bottom4 project-tile'>

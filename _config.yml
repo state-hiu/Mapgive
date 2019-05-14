@@ -1,6 +1,6 @@
 name: MapGive
 timezone: America/New_York
-baseurl: /Mapgive
+#baseurl: /Mapgive
 #url: http://mapgive.state.gov
 destination: temp/
 twitter_username: MapGive

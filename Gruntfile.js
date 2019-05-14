@@ -32,6 +32,8 @@ module.exports = function(grunt) {
               'assets/css/leaflet.css': '_assets/css/leaflet.css',
               'assets/css/ie-print.min.css': '_assets/css/ie-print.css',
               'assets/css/lightbox.css': '_assets/css/lightbox.css',
+              'assets/css/connect-camp-maps.css': '_assets/css/connect-camp-maps.css',
+              'assets/css/connect-camp-maps-base.css': '_assets/css/connect-camp-maps-base.css',
               'assets/css/unslider-combined.css': ['_assets/css/unslider.css', '_assets/css/unslider-dots.css']
             }
           }
@@ -73,7 +75,9 @@ module.exports = function(grunt) {
               'assets/js/lightbox.js':'_assets/js/vendor/lightbox.js',
               'assets/js/leaflet.js':'_assets/js/vendor/leaflet.js',
               'assets/js/lightbox.min.js':'_assets/js/vendor/lightbox.min.js',
-              'assets/js/utils.js':'_assets/js/utils.js'
+              'assets/js/utils.js':'_assets/js/utils.js',
+              'assets/js/connect-camps-jquery.min.js':'_assets/js/connect-camp-maps-js/connect-camps-jquery.min.js',
+              'assets/js/venues.js':'_assets/js/connect-camp-maps-js/venues.js'
             }
           }
         },
@@ -129,6 +133,10 @@ module.exports = function(grunt) {
                     src: '**', 
                     dest: 'assets/css/collecticons/',
                     filter: 'isFile'
+                  },
+                  bxslider: {
+                    src: '_assets/js/vendor/jquery.bxslider.min.js', 
+                    dest: 'assets/js/jquery.bxslider.min.js'
                   },
                   gov: {
                     expand: true,

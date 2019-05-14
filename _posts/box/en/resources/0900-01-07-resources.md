@@ -47,7 +47,7 @@ published: true
     </p>
 
     <p>
-    The <a href="http://hotosm.org/sites/default/files/HOTActivationProtocol.pdf">HOT Activation Protocol</a> describes the flow of activities and roles involved in working with OpenStreetMap during a disaster response.
+    The <a href="https://www.hotosm.org/hot-activation-protocol.html">HOT Activation Protocol</a> describes the flow of activities and roles involved in working with OpenStreetMap during a disaster response.
     </p>
 
 </div>
