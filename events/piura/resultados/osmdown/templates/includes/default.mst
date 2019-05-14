@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+	{{{ head }}}
+
+	<body>
+
+		<div class="main wrapper">
+
+			<div id="scrolling_header">
+				<h1 class="title"> {{ title }} </h1>
+				<ul id="scrolling_nav"></ul>
+				<p><button id="CodeButton" onclick="toggleCode()">Show Code</button></p>
+			</div>
+
+			{{{ content }}}
+
+			{{{ foot }}}
+
+		</div>
+
+	</body>
+
+</html>

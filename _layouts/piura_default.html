@@ -1,0 +1,103 @@
+---
+layout: piura_default
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <meta name='robots' content='{% if page.hidden %}noindex{% else %}index{% endif %}'/>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <meta name='twitter:site' content='@mapgive' />
+  <meta property='og:site_name' content='MapGive Field Project - Piura' />
+  <meta name='twitter:url' content='{{page.permalink}}' />
+  <meta name='twitter:domain' content='http://mapgive.state.gov/projects/piura/' />
+  <meta property='og:url' content='{{page.permalink}}' />
+  <meta name='twitter:title' content='{{page.title | replace:"'","&lsquo;"}}' />
+  <meta property='og:title' content='{{page.title | replace:"'","&lsquo;"}}' />
+  <meta name='twitter:description' content='{{page.content | markdownify | strip_html | trim_spaces | truncatewords: 30 | escape | replace:"'","&lsquo;" }}' />
+  <meta property='og:description' content='{{page.content | markdownify | strip_html | trim_spaces | truncatewords: 30 | escape | replace:"'","&lsquo;" }}' />
+  {% if page.image %}
+    <meta name='twitter:image' content='{{page.image | replace:"https:","http:"}}' />
+    <meta name='st:image' content='{{page.image | replace:"https:","http:"}}' />
+    <meta property='og:image' content='{{page.image | replace:"https:","http:"}}' />
+  {% else %}
+    <meta name='twitter:image' content='/assets/img/mapgive.png' />
+    <meta name='st:image' content='/assets/img/mapgive.png' />
+    <meta property='og:image' content='/assets/img/mapgive.png' />
+  {% endif %}
+  <meta property='og:type' content='website' />
+  <meta name='twitter:card' content='summary_large_image' />
+
+  <title>{% if page.url == "/"  %}{% else %}{{page.title}} | {% endif %}MapGive Field Project - Piura</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+  <link rel='shortcut icon' href='{{site.baseurl}}/img/favicon.ico' type='image/x-icon' />
+  <link href='http://fonts.googleapis.com/css?family=Kreon:400,700' rel='stylesheet' type='text/css'>
+  <link href='/events/piura/site.css' rel='stylesheet' />
+  <link href='/events/piura/base.css' rel='stylesheet' />
+  <link href='//api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
+  <script src='//api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+  <script src='/assets/js/connect-camps-jquery.min.js'></script>
+  <script src='/assets/js/jquery.bxslider.min.js'></script>
+  <script src='/assets/js/venues.js'></script>
+</head>
+<body class='{% if page.url == "/index.html" %}front{% endif %}'>
+
+<nav class='pad2 fill-green site-navigation center space'>
+
+  <a class='strong {% if page.url == "{{site.baseurl}}/index.html" or page.url == "/events/piura" %}active{% endif %}' href='{{site.baseurl}}/events/piura'>Inicio</a>
+  <a class='strong {% if page.url contains "materiales" %}active{% endif %}' href='./materiales/'>Materiales</a>
+  <!--<a class='strong {% if page.url contains "resultados" %}active{% endif %}' href='{{site.baseurl}}/resultados/'>Resultados</a>-->
+
+  <a href='https://twitter.com/mapgive' class='hide-mobile icon twitter inline small strong dark'>@mapgive</a>
+  <!--<a href='https://www.facebook.com/OpenStreetMapCusco' class='hide-mobile icon facebook inline small strong dark'>OpenStreetMap Piura</a>-->
+</nav>
+
+
+<header class='clearfix splash center pad2y' style="background-color:#52504d">
+  <a href='{{site.baseurl}}' class='block'>
+    <img src='/assets/img/piura-mapgive-logo.png' alt='MapGive Field Project - Piura' />
+
+  </a>
+</header>
+
+{{content}}
+
+<div class='pad2x show-mobile'>
+  <a href='#sponsors' class='button block'>Supporters</a>
+</div>
+
+
+<section id='sponsors' class='hide-mobile col12 center fill-light pad2y'>
+  <div class='limiter clearfix'>
+    <div class='col10 margin1'>
+      <h2 class='space-bottom1'>Colaboradores</h2>
+
+      <nav class='space-bottom2'>
+        <a href='http://mapgive.state.gov/' class='sponsor mapgive'>MapGive</a>
+
+        <a href='http://udep.edu.pe/' class='sponsor piura'>Piura University</a>
+
+      </nav>
+    </div>
+  </div>
+</section>
+
+<footer class='col12 center fill-blue dark'>
+  <div class='fill-darken3 pad2y col12'>
+    <div class='limiter'>
+      <p class='small hide-mobile'>
+
+        <a href='http://mapgive.state.gov/projects/piura/'>MapGive Field Project - Piura</a> | <a href='https://twitter.com/mapgive'>@mapgive</a>
+
+      </p>
+      <a href='https://twitter.com/mapgive' class='show-mobile small dark'>
+      <a href="mailto:mapgive@state.gov">Contáctenos a mapgive@state.gov</a>
+      <!--<a href='https://www.facebook.com/OpenStreetMapCusco' class='hide-mobile icon facebook inline small strong dark'>OpenStreetMap Piura</a>-->
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

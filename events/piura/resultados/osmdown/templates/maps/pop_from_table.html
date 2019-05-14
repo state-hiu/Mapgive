@@ -1,0 +1,30 @@
+<div id='{{ name }}' style='height:{{ height }}px; width:{{ width }}px; vertical-align:text-top; margin-left:5px;'></div>
+
+<script type="text/javascript">
+	var map = L.map('{{ name }}');
+  L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', { maxZoom: {{ maxzoom }}, id: '{{ id }}'}).addTo(map);
+	map.setView([27.732, 85.7266], 8);
+	var userEdits = L.featureGroup().addTo(map)
+
+  function popToMap(rows){
+    userEdits.clearLayers();
+    $(rows).each(function(idx, row){
+      console.log(row)
+      coords = row[3].split(' ')
+      thisLayer = L.geoJson(
+        {type: "Feature", properties: {handle:row[0], text:row[2], date:row[1]},
+         geometry:
+          {type: "Point", coordinates: [parseFloat(coords[0].substring(1,coords[0].length)),parseFloat(coords[1])]}
+        },{
+          onEachFeature: function(feature, layer){
+            layer.bindPopup("User " + feature.properties.handle + '<br>Date: '+
+              feature.properties.date+'<br>Text: '+
+              feature.properties.text);
+          }
+        })
+      userEdits.addLayer(thisLayer)
+      map.fitBounds(userEdits.getBounds())
+    })
+  }
+
+</script>

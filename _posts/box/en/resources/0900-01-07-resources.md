@@ -28,27 +28,31 @@ published: true
 
 <div class="clearfix"><img class="img2" src="{{site.baseurl}}/assets/img/globe-pops.jpg" alt="Globe Pops" style="width:250px; padding-left:15px;">
 
-    <p>There are many additional resources on engagement with OpenStreetMap.</p>
+    <p>There are many additional resources to further advance knowledge of OpenStreetMap and the different ways it can be utilized.</p>
 
-    <p>
-    For the classroom, <a href="http://teachosm.org/">TeachOSM</a> is a MapGive supported resource that brings OpenStreetMap into classroom curriculum.
-    </p>
+<ul>
 
-    <p>
+    <li>
+    For the classroom, <a href="http://teachosm.org/">TeachOSM</a> is an online resource to assist educators at all levels to introduce open source mapping using the OpenStreetMap platform.
+    </li>
+
+    <li>
     <a href="http://learnosm.org/">LearnOSM</a> provides easy to understand, step-by-step guides to get started with contributing to OpenStreetMap and using OpenStreetMap data.
-    </p>
+    </li>
 
-    <p>
-    <a href="http://www.worldbank.org/en/region/sar/publication/planning-open-cities-mapping-project">Planning an Open Cities Mapping Project Guide</a> is a detailed look at organizing OSM based field projects for disaster preparedness.
-    </p>
+    <li>
+    The <a href="https://opendri.org/resource/planning-an-open-cities-mapping-project/">World Bank Open Cities Mapping Project Guide</a> is a tool for practitioners who wish to bring community mapping initiatives to their cities or regions. The guide documents lessons learned from the regional Open Cities Africa program and its predecessors in South Asia to offer best practices on the design and implementation of a community mapping initiative. Community mapping efforts often result in increased awareness of disaster risk within governments and a consensus within ministries that this risk must be reduced.
+    </li>
 
-    <p>
-    The <a href="http://mapgive.state.gov/events/connect-camp-maps/sessions/">session plan from Connect Camps Maps</a> has good ideas on how to plan multi-faceted mapping sessions.
-    </p>
+    <li>
+    The <a href="http://mapgive.state.gov/events/connect-camp-maps/sessions/">Connect Camps Maps Session Plan</a> is a good template on how to plan a multi-faceted mapping workshop.
+    </li>
 
-    <p>
-    The <a href="https://www.hotosm.org/hot-activation-protocol.html">HOT Activation Protocol</a> describes the flow of activities and roles involved in working with OpenStreetMap during a disaster response.
-    </p>
+    <li>
+    The <a href="https://www.hotosm.org/hot-activation-protocol.html">Humanitarian OpenStreetMap Team (HOT) Activation Protocol</a> defines the flow of activities during a HOT Activation and describes how trained volunteers perform the tasks that lead to a successful and efficient response. 
+    </li>
+
+</ul>
 
 </div>
 

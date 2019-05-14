@@ -1,0 +1,272 @@
+body{
+  text-align: center;
+  background-color: #D2B48C;
+  padding: 0;
+}
+
+.wrapper{
+  width: 95%;
+  margin: 50px auto;
+  padding: 10px 30px 10px 10px;
+  text-align: left;
+  border-left: 2px solid #111;
+  border-right: 2px solid #111;
+  border-bottom: 2px solid #111;
+  background-color: #FFFAFA;
+}
+
+#scrolling_header{
+  position: fixed;
+  top: 0;
+  margin: 0 auto;
+  margin-left: -12px;
+  text-align: left;
+  border-left: 2px solid #111;
+  border-right: 2px solid #111;
+  border-top: 1px solid #222;
+  z-index: 9999;
+  width: 95%;
+  height: 50px;
+  background-color: #FDFDFD;
+  border-bottom: 1px solid #111;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.39);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.39);
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.39);
+}
+
+h1.title{
+  margin: 0px 10px;
+  padding: 5px 0px;
+  display: inline-block;
+}
+
+h1.title:hover{
+  display: inline-block;
+  cursor: pointer;
+}
+
+pre {
+  display: none;
+}
+
+#CodeButton {
+  float: right;
+  margin: -40px 20px 0px 0px;
+}
+
+#scrolling_nav{
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.scrolling-nav-item{
+  vertical-align: text-middle;
+  display: inline-block;
+  padding: 10px 10px;
+  margin: 0px;
+  font-size: 18px;
+}
+
+.scrolling-nav-item:hover{
+  cursor: pointer;
+  color: #4169E1;
+}
+
+.block{
+  border: 1px dashed #DDD;
+  margin: 0px 0px 10px 0px;
+  padding: 0px;
+}
+
+.block ul{
+  margin: 0;
+}
+
+.block h2{
+  margin: 0;
+  padding: 15px;
+}
+
+h5.subInfo{
+  margin: 10px;
+  padding: 0;
+  display: inline-block;
+}
+/*
+.markdown-body table{
+  width: auto;
+} */
+
+/* thead th{
+  background-color: lightblue;
+}
+ */
+/* thead .headerSortDown{
+  background-color: lightyellow;
+}
+
+thead .headerSortUp{
+  background-color: lightgreen;
+}
+ */
+
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.chart rect {
+  fill: steelblue;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.fatline{
+  fill: none;
+  stroke-width: 3px;
+}
+
+.line .hover{
+  stroke-width: 5px;
+}
+
+.multiline_0{
+  stroke: steelblue;
+} .multiline_1{
+  stroke: red;
+} .multiline_2{
+  stroke: brown;
+} .multiline_3{
+  stroke: crimson;
+} .multiline_4{
+  stroke: darkcyan;
+} .multiline_5{
+  stroke: darkgoldenrod;
+} .multiline_6{
+  stroke: rosybrown;
+} .multiline_7{
+  stroke: seagreen;
+} .multiline_8{
+  stroke: yellow;
+} .multiline_9{
+  stroke: turquoise;
+} .multiline_10{
+  stroke: tan; }
+
+
+.legend rect {
+  fill:white;
+  stroke:black;
+  opacity:0.8;}
+
+.grid .tick {
+  stroke: lightgrey;
+  opacity: 0.7;
+}
+.grid path {
+  stroke-width: 0;
+}
+
+.link {
+  stroke: #ccc;
+}
+
+.node text {
+  font: 9px helvetica;
+}
+
+.network-list-item{
+}
+
+.network-list-item:hover{
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.left{
+  width: 30%;
+  height: 400px;
+  display: inline-block;
+}
+
+.center{
+  display: inline-block;
+  width: 9%;
+  vertical-align: top;
+  margin: 0px 100px 0px 0px;
+}
+
+.right{
+  padding-left: 50px;
+  height: 400px;
+  width: 45%;
+  display: inline-block;
+}
+
+#summarymap{
+  vertical-align: top;
+}
+
+
+/* Changeset Block */
+#user-list{
+  display: inline-block;
+  width: 150px;
+  padding: 0px 0px 0px 15px;
+  margin: 0px;
+  height: 450px;
+}
+
+#changesets-map{
+  display: inline-block;
+  width: 800px;
+  height: 450px;
+  border: 1px solid blue;
+}
+
+#user-list li{
+  margin: 0;
+}
+
+#user-list li a:hover{
+  background-color: yellow;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#user-changesets{
+  display: inline-block;
+  width: 300px;
+  height: 450px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.overscroll{
+  height: 400px;
+  overflow: auto;
+  list-style-type: none;
+}
+
+.changeset-details{
+  border: 1px solid gray;
+}
