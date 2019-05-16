@@ -1,5 +1,5 @@
 ---
-layout: resource
+#layout: resource
 category: events
 internal_url: '/events/connect-camp-maps/'
 title: Connect Camps
