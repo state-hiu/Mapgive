@@ -1,7 +1,7 @@
 ---
 layout: resource
 category: events
-external_url: '/events/connect-camp-maps/'
+internal_url: '/events/connect-camp-maps/'
 title: Connect Camps
 status: past
 date: 20150309

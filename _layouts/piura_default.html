@@ -11,7 +11,7 @@ layout: piura_default
   <meta name='twitter:site' content='@mapgive' />
   <meta property='og:site_name' content='MapGive Field Project - Piura' />
   <meta name='twitter:url' content='{{page.permalink}}' />
-  <meta name='twitter:domain' content='http://mapgive.state.gov/projects/piura/' />
+  <meta name='twitter:domain' content='{{site.baseurl}}/events/piura/' />
   <meta property='og:url' content='{{page.permalink}}' />
   <meta name='twitter:title' content='{{page.title | replace:"'","&lsquo;"}}' />
   <meta property='og:title' content='{{page.title | replace:"'","&lsquo;"}}' />
@@ -33,13 +33,13 @@ layout: piura_default
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
   <link rel='shortcut icon' href='{{site.baseurl}}/img/favicon.ico' type='image/x-icon' />
   <link href='http://fonts.googleapis.com/css?family=Kreon:400,700' rel='stylesheet' type='text/css'>
-  <link href='/events/piura/site.css' rel='stylesheet' />
-  <link href='/events/piura/base.css' rel='stylesheet' />
+  <link href='{{site.baseurl}}/events/piura/site.css' rel='stylesheet' />
+  <link href='{{site.baseurl}}/events/piura/base.css' rel='stylesheet' />
   <link href='//api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
   <script src='//api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
-  <script src='/assets/js/connect-camps-jquery.min.js'></script>
-  <script src='/assets/js/jquery.bxslider.min.js'></script>
-  <script src='/assets/js/venues.js'></script>
+  <script src='{{site.baseurl}}/assets/js/connect-camps-jquery.min.js'></script>
+  <script src='{{site.baseurl}}/assets/js/jquery.bxslider.min.js'></script>
+  <script src='{{site.baseurl}}/assets/js/venues.js'></script>
 </head>
 <body class='{% if page.url == "/index.html" %}front{% endif %}'>
 
@@ -54,12 +54,11 @@ layout: piura_default
 </nav>
 
 
-<header class='clearfix splash center pad2y' style="background-color:#52504d">
-  <a href='{{site.baseurl}}' class='block'>
-    <img src='/assets/img/piura-mapgive-logo.png' alt='MapGive Field Project - Piura' />
-
-  </a>
-</header>
+<div class='clearfix splash center pad2y' style="background-color:#52504d">
+  <div class='block'>
+    <a href='https://mapgive.state.gov/'> <img src='{{site.baseurl}}/assets/img/piura-mapgive-logo.png' alt='MapGive Field Project - Piura' /></a>
+  </div>
+</div>
 
 {{content}}
 
@@ -88,7 +87,7 @@ layout: piura_default
     <div class='limiter'>
       <p class='small hide-mobile'>
 
-        <a href='http://mapgive.state.gov/projects/piura/'>MapGive Field Project - Piura</a> | <a href='https://twitter.com/mapgive'>@mapgive</a>
+        <a href='https://mapgive.state.gov/projects/piura/'>MapGive Field Project - Piura</a> | <a href='https://twitter.com/mapgive'>@mapgive</a>
 
       </p>
       <a href='https://twitter.com/mapgive' class='show-mobile small dark'>

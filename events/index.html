@@ -45,6 +45,8 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
     <div class='keyline-all pad4 space-bottom4 project-tile'>
       {% if post.external_url %}
         <h2><a href="{{ post.external_url }}">{{ post.title }}</a></h2>
+      {% elsif post.internal_url %}
+        <h2><a href="{{ site.baseurl}}{{ post.internal_url }}">{{ post.title }}</a></h2>
       {% else %}
         <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
       {% endif %}
@@ -76,6 +78,8 @@ emailDescription: "HIU through ITTC publishes high-resolution commercial satelli
       {% if post.external_url %}
         <h2><a href="{{ post.external_url }}">{{ post.title }}
 </a></h2>
+      {% elsif post.internal_url %}
+        <h2><a href="{{ site.baseurl}}{{ post.internal_url }}">{{ post.title }}</a></h2>
       {% else %}
         <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
       {% endif %}
