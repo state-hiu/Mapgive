@@ -1473,7 +1473,7 @@ img[src$=".svgz"].img-responsive, img[src$=".svg"].img-responsive {
 }
 
 .media-object .ym-img {
-  width: 100px;
+  width: 105px;
   margin: 0 auto;
 }
 

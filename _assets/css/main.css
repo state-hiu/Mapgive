@@ -831,6 +831,7 @@ dt {
 .steps .title:before {
   content: counter(li);
   counter-increment: li;
+  font-size: 19px;
   padding: 8px;
   position: absolute;
   left: -28px;
