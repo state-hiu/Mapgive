@@ -169,7 +169,7 @@ module.exports = function(grunt) {
             options: {
               stdout: true
             },
-            command: 'jekyll build'
+            command: 'bundle exec jekyll build'
           },
           rmAssets: {
             options: {
