@@ -7,8 +7,6 @@ phases:
     commands:
       - gem install jekyll
       - apt-get update --assume-yes --no-install-recommends
-      - apt-get install nodejs --assume-yes --no-install-recommends
-      - apt-get install npm --assume-yes --no-install-recommends
       - gem install bundler
       - bundle install
       - ln -s /usr/bin/nodejs /usr/bin/node
