@@ -21,4 +21,4 @@ phases:
       - echo "******** Uploading to S3 ********"
       - aws s3 sync _site/ s3://mapgive.state.gov
       - echo "******** Deleting AWS CloudFront Cache ********"
-      - aws cloudfront create-invalidation --distribution-id=E1G6B3BWHSBW74 --paths "/*"
+      - aws cloudfront create-invalidation --distribution-id E1G6B3BWHSBW74 --paths '/*'
