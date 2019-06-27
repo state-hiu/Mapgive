@@ -4,7 +4,7 @@ phases:
   install:
     commands:
       - gem install jekyll
-	  - apt-get update --assume-yes --no-install-recommends
+      - apt-get update --assume-yes --no-install-recommends
       - apt-get install nodejs --assume-yes --no-install-recommends
       - apt-get install npm --assume-yes --no-install-recommends
       - gem install bundler
@@ -16,7 +16,7 @@ phases:
     commands:
       - echo "******** Run Grunt Task ********"
       - grunt
-	  - echo "******** Building Jekyll site ********"
+      - echo "******** Building Jekyll site ********"
       - jekyll build
       - echo "******** Uploading to S3 ********"
       - aws s3 sync _site/ s3://www.mapgive.state.gov
