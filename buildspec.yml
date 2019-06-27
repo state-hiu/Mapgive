@@ -5,7 +5,7 @@ phases:
     runtime-versions:
         nodejs: 8
     commands:
-      - apt-get install jpegtran
+      - apt-get install optipng
       - gem install jekyll
       - apt-get update --assume-yes --no-install-recommends
       - gem install bundler
