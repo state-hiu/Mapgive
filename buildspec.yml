@@ -6,6 +6,7 @@ phases:
         nodejs: 8
     commands:
       - apt-get install optipng
+      - apt-get install jpegtran
       - gem install jekyll
       - apt-get update --assume-yes --no-install-recommends
       - gem install bundler
