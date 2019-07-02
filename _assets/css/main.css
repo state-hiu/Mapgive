@@ -1014,7 +1014,14 @@ dt {
 .projects-container {
   position: absolute;
   bottom: 0;
-  height: 405px;
+  height: 400px;
+  width: 92%;
+}
+
+.projects-container.additional-resource {
+  position: absolute;
+  bottom: 0;
+  height: 515px;
   width: 92%;
 }
 
@@ -1036,6 +1043,19 @@ dt {
     object-fit: cover;
 }
 
+.projects-thumbnail .img-responsive.additional-resource-image {
+    width: 100%;
+    max-width: 290px;
+    max-height: 190px;
+    overflow: hidden;
+    -ms-interpolation-mode: bicubic;
+    margin-bottom: 60%;
+    position: relative;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .projects-thumbnail h3 {
   margin-top: 0;
 }
@@ -1047,6 +1067,12 @@ dt {
 
 .projects-thumbnail .caption {
     margin-top: -50%;
+    font-size: .8em;
+    color: #666;
+}
+
+.projects-thumbnail .caption.additional-resources {
+    margin-top: -55%;
     font-size: .8em;
     color: #666;
 }

@@ -73,29 +73,35 @@ published: true
               <div class="row">
               {% endif %}
 
-              <div class="col-sm-5 projects-thumbnail" style="min-height: 425px;">
-                <div class="projects-container">
+              <div class="col-sm-5 projects-thumbnail" style="min-height: 530px;">
+                <div class="projects-container additional-resource">
 
-                    <img src="{{ post.photo }}" alt="{{ post.title }}" class="img-responsive shadowed" />
+                    <img src="{{ post.photo }}" alt="{{ post.title }}" class="img-responsive shadowed additional-resource-image" />
 
-                  <div class="caption">
+                  <div class="caption additional-resources">
                     <h3><a href="{{ post.external_url }}">{{ post.title }}</a></h3>
-                    <p><strong>author</strong>: {{ post.author }}</p>
-                    <p><strong>tags</strong>: {{ post.tags }}</p>
-                    {% if post.download_button == true %}
-                        <button class="btn btn-primary dropdown-toggle" style="padding: 3px 10px;" type="button" data-toggle="dropdown" aria-expanded="true">Download<span class="caret"></span></button>
-                        <ul class="dropdown-menu">
-                          <li>
-                            <a class="png" href="{{ post.png }}" target="_blank">{{ post.png_label }}</a>
-                          </li>
-                          <li>
-                            <a class="eps" href="{{ post.eps }}" download="">{{ post.eps_label }}</a>
-                          </li>
-                        </ul>
-                    {% else %}
-                    <a href="{{ post.external_url }}" class="btn btn-primary" style="padding: 3px 10px;" target="_blank">Visit Page</a>
-                    {% endif %}
-                    </br>
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <p><strong>author</strong>: {{ post.author }}</p>
+                            <p><strong>tags</strong>: {{ post.tags }}</p>
+                        </div>
+                        <div class="col-sm-3">
+                            {% if post.download_button == true %}
+                                <button class="btn btn-primary dropdown-toggle" style="padding: 3px 10px;" type="button" data-toggle="dropdown" aria-expanded="true">Download<span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                  <li>
+                                    <a class="png" href="{{ post.png }}" target="_blank">{{ post.png_label }}</a>
+                                  </li>
+                                  <li>
+                                    <a class="eps" href="{{ post.eps }}" download="">{{ post.eps_label }}</a>
+                                  </li>
+                                </ul>
+                            {% else %}
+                            <a href="{{ post.external_url }}" class="btn btn-primary" style="padding: 3px 10px;" target="_blank">Visit Page</a>
+                            {% endif %}
+                        </div>
+                    </div>
+
                     <p>{{ post.content }}</p>
                   </div>
 
