@@ -12,7 +12,7 @@ download_button: false
 quote: ""
 hashtag:
 tags:
-  - training
+  - field mapping, training
 ---
 
-The World Bank Open Cities Mapping Project Guide is a tool for practitioners who wish to bring community mapping initiatives to their cities or regions. The guide documents lessons learned from the regional Open Cities Africa program and its predecessors in South Asia to offer best practices on the design and implementation of a community mapping initiative. Community mapping efforts often result in increased awareness of disaster risk within governments and a consensus within ministries that this risk must be reduced.
+The World Bank Open Cities Mapping Project Guide is a tool for practitioners who wish to bring community mapping initiatives to their cities or regions. The guide documents lessons learned from the regional Open Cities Africa program and its predecessors in South Asia to offer best practices on the design and implementation of a community mapping initiative.

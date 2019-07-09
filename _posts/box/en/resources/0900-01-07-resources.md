@@ -52,7 +52,7 @@ published: true
 
 <div class="row">
   <div class="col-md-12">
-    <p>There are many additional resources to further advance knowledge of OpenStreetMap and the different ways it can be utilized.</p>
+    <p>There are many additional resources out there that allow anyone to understand the core concepts of mapping and start contributing to OpenStreetMap. Browse the resources below that span from covering advanced topics such as validating to how to plan your own successful field mapping project.</p>
   </div>
 </div>
 
@@ -73,7 +73,7 @@ published: true
               <div class="row">
               {% endif %}
 
-              <div class="col-sm-5 projects-thumbnail" style="min-height: 530px;">
+              <div class="col-sm-5 projects-thumbnail" style="min-height: 500px;">
                 <div class="projects-container additional-resource">
 
                     <img src="{{ post.photo }}" alt="{{ post.title }}" class="img-responsive shadowed additional-resource-image" />

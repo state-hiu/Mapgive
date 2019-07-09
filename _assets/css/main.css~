@@ -1021,7 +1021,7 @@ dt {
 .projects-container.additional-resource {
   position: absolute;
   bottom: 0;
-  height: 530px;
+  height: 515px;
   width: 92%;
 }
 

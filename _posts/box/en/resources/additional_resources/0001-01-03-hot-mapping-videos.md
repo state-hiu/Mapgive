@@ -1,9 +1,9 @@
 ---
 layout: resource
 category: additional_resource
-#external_url: 'http://tasks.hotosm.org/project/2030'
-title: "HOT mapping videos"
-author: MapGive
+external_url: 'https://www.youtube.com/playlist?list=PLb9506_-6FMHULD9iDUAh-4qpxKdVspnD'
+title: "Learn to Map! Videos from HOT"
+author: Humanitarian OpenStreetMap Team
 date: 20160901
 photo: 'https://mapgive.state.gov/assets/img/flickr_web.png'
 video: 
@@ -12,5 +12,7 @@ download_button: false
 quote: ""
 hashtag:
 tags:
-  - insert here
+  - iD, JOSM, training
 ---
+
+Visit the Humanitarian OpenStreetMap Team’s Learn to Map! Playlist on YouTube

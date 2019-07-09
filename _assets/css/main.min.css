@@ -191,7 +191,7 @@ dt{font-weight:normal;}
 @media (min-width: 736px){.col-sm-4.projects-thumbnail{width:30%;height:420px;}
 }
 .projects-container{position:absolute;bottom:0;height:400px;width:92%;}
-.projects-container.additional-resource{position:absolute;bottom:0;height:515px;width:92%;}
+.projects-container.additional-resource{position:absolute;bottom:0;height:480px;width:92%;}
 .img-responsive{width:100%;max-width:100%;height:auto!important;-ms-interpolation-mode:bicubic;}
 .projects-thumbnail .img-responsive{width:100%;max-width:240px;max-height:230px;overflow:hidden;-ms-interpolation-mode:bicubic;margin-bottom:60%;position:relative;object-fit:cover;}
 .projects-thumbnail .img-responsive.additional-resource-image{width:100%;max-width:290px;max-height:190px;overflow:hidden;-ms-interpolation-mode:bicubic;margin-bottom:60%;position:relative;object-fit:cover;margin-left:auto;margin-right:auto;}
