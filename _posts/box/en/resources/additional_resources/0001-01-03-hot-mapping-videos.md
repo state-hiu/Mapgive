@@ -15,4 +15,4 @@ tags:
   - iD, JOSM, training
 ---
 
-Visit the Humanitarian OpenStreetMap Team’s Learn to Map! Playlist on YouTube
+Visit the Humanitarian OpenStreetMap Team’s Learn to Map Playlist on YouTube. These include excellent Two Minute Tutorials that are designed to get you up to speed in no time!
