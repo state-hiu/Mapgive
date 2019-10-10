@@ -5,7 +5,7 @@ external_url: '../events/connect-camp-maps/sessions/'
 title: "Connect Camps Maps Session Plan"
 author: Missing Maps
 date: 20180901
-photo: 'https://mapgive.state.gov/assets/img/flickr_web.png'
+photo: 'connect_camp_maps.png'
 video: 
 featured: yes
 download_button: false

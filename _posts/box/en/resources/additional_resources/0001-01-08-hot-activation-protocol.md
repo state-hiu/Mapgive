@@ -5,7 +5,7 @@ external_url: 'https://www.hotosm.org/hot-activation-protocol.html'
 title: "Humanitarian OpenStreetMap Team (HOT) Activation Protocol"
 author: Humanitarian OpenStreetMap Team
 date: 20180901
-photo: 'https://mapgive.state.gov/assets/img/flickr_web.png'
+photo: 'hot_activation_guide.png'
 video: 
 featured: yes
 download_button: false

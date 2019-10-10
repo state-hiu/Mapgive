@@ -5,7 +5,7 @@ external_url: 'http://www.missingmaps.org/validate/'
 title: "Learn to Validate"
 author: Missing Maps
 date: 20190101
-photo: 'https://mapgive.state.gov/assets/img/flickr_web.png'
+photo: 'learn_to_validate2.png'
 video: 
 featured: yes
 download_button: false

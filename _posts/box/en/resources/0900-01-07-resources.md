@@ -76,7 +76,7 @@ published: true
               <div class="col-sm-5 projects-thumbnail" style="min-height: 500px;">
                 <div class="projects-container additional-resource">
 
-                    <img src="{{ post.photo }}" alt="{{ post.title }}" class="img-responsive shadowed additional-resource-image" />
+                    <img src="{{site.baseurl}}/assets/img/{{ post.photo }}" alt="{{ post.title }}" class="img-responsive shadowed additional-resource-image" />
 
                   <div class="caption additional-resources">
                     <h3><a href="{{ post.external_url }}">{{ post.title }}</a></h3>

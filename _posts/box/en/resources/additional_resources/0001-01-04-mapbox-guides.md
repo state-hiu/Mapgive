@@ -5,7 +5,7 @@ external_url: 'https://labs.mapbox.com/mapping/'
 title: "MapBox Guides"
 author: MapBox
 date: 20180801
-photo: 'https://mapgive.state.gov/assets/img/flickr_web.png'
+photo: 'mapbox_guides.png'
 video: 
 featured: yes
 download_button: false

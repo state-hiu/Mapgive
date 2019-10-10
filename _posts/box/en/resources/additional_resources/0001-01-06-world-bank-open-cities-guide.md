@@ -5,7 +5,7 @@ external_url: 'https://opendri.org/resource/planning-an-open-cities-mapping-proj
 title: "Open Cities Mapping Project Guide "
 author: World Bank
 date: 20180901
-photo: 'https://mapgive.state.gov/assets/img/flickr_web.png'
+photo: 'open_cities_guide.png'
 video: 
 featured: yes
 download_button: false
