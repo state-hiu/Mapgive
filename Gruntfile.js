@@ -85,7 +85,8 @@ module.exports = function(grunt) {
         sync: {
           main: {
             files: [
-              {cwd: '_assets/fonts', src: ['**'], dest: 'assets/fonts/'}
+              {cwd: '_assets/fonts', src: ['**'], dest: 'assets/fonts/'},
+              {cwd: '_assets/docs', src: ['**'], dest: 'assets/docs/'}
             ]
           }
         },
