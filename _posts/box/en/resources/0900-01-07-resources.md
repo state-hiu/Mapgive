@@ -50,7 +50,7 @@ published: true
 }
 </style>
 
-<div class="row">
+<div class="">
   <div class="col-md-10">
     <p>There are many additional resources out there that allow anyone to understand the core concepts of mapping and start contributing to OpenStreetMap. Browse the resources below that span from planning your own successful field mapping project to covering advanced topics such as validation.</p>
   </div>
