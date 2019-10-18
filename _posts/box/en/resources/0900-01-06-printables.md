@@ -55,7 +55,7 @@ published: true
                     <img src="{{site.baseurl}}/assets/img/{{ post.photo }} " alt="{{ post.title }}" class="img-responsive shadowed" />
                   <!--</a>-->
                   <div class="caption">
-                    <h3><a href="{{ post.external_url }}">{{ post.title }}</a></h3>
+                    <h3>{{ post.title }}</h3>
                     <p><strong>author</strong>: {{ post.author }}</p>
                     <!--
                     <p><strong>published</strong>: {{ post.date | date: '%B %d, %Y' }}</p>
