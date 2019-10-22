@@ -1,0 +1,108 @@
+---
+layout: connect_camp_maps_base
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <meta name='robots' content='index'/>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <meta name='twitter:site' content='@' />
+  <meta property='og:site_name' content='YALI Connect Camp Maps' />
+  <meta name='twitter:url' content='' />
+  <meta name='twitter:domain' content='/connect-camp-maps' />
+  <meta property='og:url' content='' />
+  <meta name='twitter:title' content='' />
+  <meta property='og:title' content='' />
+  <meta name='twitter:description' content='{{ site.title }}, March 2015, Dar es Salaam. {{ site.title }}! YALI Connect Camp Community Mapping Sessions. Hands on experience with OpenStreetMap and idea generation for community mapping back home....' />
+  <meta property='og:description' content='{{ site.title }}, March 2015, Dar es Salaam. {{ site.title }}! YALI Connect Camp Community Mapping Sessions. Hands on experience with OpenStreetMap and idea generation for community mapping back home....' />
+  
+    <meta name='twitter:image' content='/assets/img/default-twitter-card.png' />
+    <meta name='st:image' content='/assets/img/default-twitter-card.png' />
+    <meta property='og:image' content='/assets/img/default-twitter-card.png' />
+  
+  <meta property='og:type' content='website' />
+  <meta name='twitter:card' content='summary_large_image' />
+
+  <title>YALI Connect Camp Maps</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+ <!--  <link rel='shortcut icon' href='/connect-camp-maps/img/favicon.ico' type='image/x-icon' /> -->
+  <link href='http://fonts.googleapis.com/css?family=Kreon:400,700' rel='stylesheet' type='text/css'>
+  <link href='{{site.baseurl}}/assets/css/connect-camp-maps-base.css' rel='stylesheet' />
+  <link href='{{site.baseurl}}/assets/css/connect-camp-maps.css' rel='stylesheet' />
+  <link href='//api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
+  <script src='//api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+  <script src='{{site.baseurl}}/assets/js/connect-camps-jquery.min.js'></script>
+  <script src='{{site.baseurl}}/assets/js/jquery.bxslider.min.js'></script>
+  <script src='{{site.baseurl}}/assets/js/venues.js'></script>
+</head>
+<body class=''>
+
+<nav class='pad2 fill-blue site-navigation center space'>
+  <a class='strong ' href='{{site.baseurl}}/events/connect-camp-maps/'>Home</a>
+  <a class='strong ' href='{{site.baseurl}}/events/connect-camp-maps/sessions/'>Sessions</a>
+  <a class='strong ' href='{{site.baseurl}}/events/connect-camp-maps/resources/'>Resources</a>
+  <a class='strong ' href='{{site.baseurl}}/events/connect-camp-maps/about/'>About</a>
+  <a href='https://twitter.com/search?q=%23YALI&src=typd' target='_blank' class='hide-mobile icon twitter inline small strong dark'>#YALI</a>
+</nav>
+
+
+<header class='clearfix splash center'>
+  <a href='{{site.baseurl}}/events/connect-camp-maps' class='block'>
+    <img id='logo' src='/assets/img/yali-logo.png' alt='HOT Summit' />
+  </a>
+</header>
+
+
+
+
+
+{{ content }}
+
+
+
+
+
+
+<div class='pad2x show-mobile'>
+  <a href='#sponsors' class='button block'>Supporters</a>
+</div>
+
+
+<section id='sponsors' class='hide-mobile col12 center fill-light pad2y'>
+  <div class='limiter clearfix'>
+    <div class='col10 margin1'>
+      <h2 class='space-bottom1'>Participating Groups</h2>
+
+      <nav class='space-bottom2'>
+        <a href='http://yali.state.gov/' target='_blank'><img class='participating' src='/assets/img/yali_network_banner.png' alt='YALI' /></a><br/>
+        <a href='http://www.ohio.edu/' target='_blank'><img class='participating' src='/assets/img/ouws_front_0309_ohiogr.gif' alt='Ohio University' /></a><br/>
+        <a href='http://mapgive.state.gov/' target='_blank'><img class='participating' src='/assets/img/mapgive.png' alt='MapGive' /></a>
+      </nav>
+
+      <h3>Get in touch to get involved</h3>
+
+    </div>
+  </div>
+</section>
+
+<section class='fill-white pad2y center'>
+  <div class='limiter'>
+    <p><strong>Interested in participating?</strong> Email <a href='mailto:connect.camp.maps@gmail.com'>connect.camp.maps@gmail.com</a> to learn more.</p>
+  </div>
+</section>
+<footer class='col12 center fill-blue dark'>
+  <div class='fill-darken3 pad2y col12'>
+    <div class='limiter'>
+      <p class='small hide-mobile'>
+       <!-- <a href="/connect-camp-maps/codeofconduct/">Code of Conduct</a> | --> <a href='{{site.baseurl}}/events/connect-camp-maps'>YALI Connect Camp Maps</a> | <a href='https://twitter.com/search?q=%23YALI&src=typd' target='_blank'>#YALI</a><!-- | Photo credits: Photo Credits-->
+    </div>
+  </div>
+</footer>
+
+<!-- Analytics / Tracking -->
+<!-- End Analytics / Tracking -->
+
+</body>
+</html>

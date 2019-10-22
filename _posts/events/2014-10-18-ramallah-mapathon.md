@@ -1,7 +1,7 @@
 ---
 layout: resource
 category: events
-external_url: 'http://mapgive.state.gov/box/en/cases/ramallah/'
+permalink: '/events/box/en/cases/ramallah//'
 title: Ramallah Mapathon
 status: past
 date: 20141018

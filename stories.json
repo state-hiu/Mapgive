@@ -1,7 +1,7 @@
 ---
 ---
 [
-  {% assign stories = (site.posts | where: "category", "stories") %}{% for story in stories %}
+  {% assign stories = site.posts | where: "category", "stories" %}{% for story in stories %}
     {% if story.lon and story.lat %}
     {
       "title": "{{ story.title }}",

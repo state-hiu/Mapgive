@@ -1,0 +1,14 @@
+<div id='{{ name }}' style='height:{{ height }}; width:{{ width }}; {{ containerStyle }}'></div>
+
+<script type="text/javascript">
+	var map = L.map('{{ name }}');
+	L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', { maxZoom: {{ maxzoom }}, id: '{{ id }}'}).addTo(map);
+
+	var layer = L.geoJson( {{{ data }}} ).addTo(map);
+
+	var bounds = layer.getBounds();
+	map.fitBounds(bounds, { padding: [ {{ padding }},{{ padding }}] });
+	if ({{zoom}}) {
+		map.setZoom({{zoom}})
+	}
+</script>

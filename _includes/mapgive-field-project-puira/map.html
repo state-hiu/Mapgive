@@ -1,0 +1,27 @@
+<div id="map" style="min-height: 300px;"></div>
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoiZ3JvdW5kdHJ1dGgiLCJhIjoiS21jd2M3NCJ9.Oh7jfB2FCjkVHszCFLS-pg';
+var map = L.mapbox.map('map',  null, { infoControl: false, attributionControl: true });
+// map.attributionControl.setPrefix('');
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '<a href="http://osm.org/copyright">&copy; OpenStreetMap contributors</a>'
+}).addTo(map);
+var featureLayer = L.mapbox.featureLayer().loadURL('/events.geojson',{ style: L.mapbox.simplestyle.style }).addTo(map);
+//var featureLayer = L.geoJson(geojson, { style: L.mapbox.simplestyle.style }).addTo(map);
+
+ featureLayer.on('ready', function() {
+  map.fitBounds(featureLayer.getBounds());
+});
+featureLayer.on('layeradd', function(e) {
+  var marker = e.layer,
+  feature = marker.feature;
+  // Create custom popup content
+  var popupContent =  '<a target="_blank" class="popup" href="' + feature.properties.url + '">' +
+  '<h2 class="text-center">'+feature.properties.title+'</h2></a>';
+  // http://leafletjs.com/reference.html#popup
+  marker.bindPopup(popupContent,{
+    minWidth: 200,
+    closeButton: false
+  });
+}); 
+</script>

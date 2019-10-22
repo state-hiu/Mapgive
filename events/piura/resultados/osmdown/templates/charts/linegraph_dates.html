@@ -1,0 +1,98 @@
+<div id="{{ id }}" style="width:100%;">
+
+  <svg id="{{ id }}_date_chart" class="date-chart"></svg>
+
+  <div id="{{ id }}_date_slider" style="width:90%; margin: 20px auto;"></div>
+
+</div>
+
+<script type="text/javascript">
+
+var {{ id }}_toPlot = {{{ data }}}; //This is beautiful, if I may say so myself.
+
+//Standard D3 Defaults for time data
+var x = d3.time.scale().range([0, width]);
+    y = d3.scale.linear().range([height, 0]);
+    xAxis = d3.svg.axis().scale(x).orient("bottom");
+    yAxis = d3.svg.axis().scale(y).orient("left");
+
+//Looking for a date to parse and a value to call for a height
+var dateLine = d3.svg.line()
+  .x(function(d) { return x(parseDate(d.date)) })
+  .y(function(d) { return y(d.value)})
+
+//Call the graphic
+var width = {{width}}
+var {{id}}_dateChart = d3.select("#{{ id }}_date_chart")
+   .attr("width", width + margin.left + margin.right)
+   .attr("height", height + margin.top + margin.bottom)
+   .append("g")
+   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+x.domain(d3.extent({{ id }}_toPlot[0].data, function(d) { return parseDate(d.date); }));
+y.domain(d3.extent({{ id }}_toPlot[0].data, function(d) { return d.value; }));
+
+
+{{ id }}_toPlot.forEach(function(line, index){
+ {{id}}_dateChart.append("path")
+   .datum(line.data)
+   .attr("id", line.title)
+   .attr("class", "line multiline_"+index)
+   .attr("d", dateLine);
+})
+
+
+//Add the y Axis
+{{id}}_dateChart.append("g")
+  .attr("class", "y axis")
+  .call(yAxis)
+  .append("text")
+  .attr("transform", "rotate(-90)")
+  .attr("y", 6)
+  .attr("dy", ".71em")
+  .style("text-anchor", "end")
+
+
+$("#{{ id }}_date_slider").dateRangeSlider({
+  bounds:{
+    min: Date.parse("2015-04-25"),
+    max: new Date()
+  },
+  defaultValues:{
+    min: Date.parse("2015-4-25"),
+    max: new Date()
+  },
+  formatter:function(val){
+    var days = val.getUTCDate(),
+        month = val.getUTCMonth(),
+        hours = val.getUTCHours()
+    if (hours<10){hours = '0'+hours}
+    return MONTHS[month] + " " + days +", "+hours+":00 UTC";
+  },
+  scales: [{
+    first: function(value){ return value; },
+    end: function(value) {return value; },
+    next: function(value){
+      var next = new Date(value);
+      return new Date(next.setDate(value.getDate() + 1));
+    },
+    label: function(value){
+      return months[value.getMonth()] + " " +value.getDate();
+    },
+    format: function(tickContainer, tickStart, tickEnd){
+      tickContainer.addClass("myCustomClass");
+    }
+  }]
+}).bind("valuesChanged", function(e, data){
+  x.domain([data.values.min, data.values.max])
+  y.domain(d3.extent({{ id }}_toPlot[0].data, function(d) { if((parseDate(d.date) > data.values.min) && (parseDate(d.date) < data.values.max)){return d.value;}}));
+
+  {{ id }}_toPlot.forEach(function(i){
+    {{id}}_dateChart.transition().duration(750)
+    .select("#"+i.title).attr("d", dateLine);
+  });
+  {{id}}_dateChart.transition().duration(750)
+    .select(".y.axis").call(yAxis);
+});
+
+</script>

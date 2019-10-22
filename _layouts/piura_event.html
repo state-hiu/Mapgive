@@ -1,0 +1,24 @@
+---
+layout: piura_page
+category: schedule
+---
+
+<div class='fr fill-light round pad2 space-bottom2 margin0'>
+  <div>
+    Day: <strong>{{page.day}}</strong>
+  </div>
+  <div>
+    Time: <strong>{{page.time}}</strong>
+  </div>
+  <!--<div>
+    Location: <strong>{{page.room}}</strong>
+  </div>-->
+</div>
+
+<div class='speaker-byline'>
+  {% if page.twitter %}<a href='http://twitter.com/{{page.twitter}}'>{% endif %}
+    {{page.speaker}}, {{page.organization}}
+  {% if page.twitter %}</a>{% endif %}
+</div>
+
+{{content}}

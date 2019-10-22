@@ -1,0 +1,64 @@
+---
+layout: piura_swipe_default
+---
+
+<style>
+  #map { height: 600px; width:100%; }
+.range {
+  position:absolute;
+  width:100%;
+  z-index: 1000;
+  }
+.leaflet-top .leaflet-control-zoom {
+  top:20px;
+  }
+</style>
+
+<div class='fill-green'>
+  <div class='liner clearfix center col12'>
+    <h2 class='pad2'>{{page.title}}</h2>
+  </div>
+</div>
+
+
+<input id='range' class='range' type='range' min='0' max='1.0' step='any' />
+<div id='map'></div>
+
+{% if page.animation == true %}
+<div>
+<center>
+    <a href="https://s3.amazonaws.com/osmgeoweek/animations/osmgeoweek_{{page.project-id}}_animation.gif"><img width="800" src="https://s3.amazonaws.com/osmgeoweek/animations/osmgeoweek_{{page.project-id}}_animation.gif" /></a>
+</center>
+</div>
+{% endif %}
+
+{% if page.chart %}
+<iframe src="http://www.charted.co/?%7B%22dataUrl%22%3A%22http%3A%2F%2Fosmgeoweek.org%2Ffiles%2Fstats%2Fspaced%2Fosmgeoweek_{{page.chart}}_basic_osm_buildings.csv%22%2C%22charts%22%3A%5B%7B%22type%22%3A%22line%22%2C%22rounding%22%3A%22off%22%2C%22title%22%3A%22Buildings%22%7D%5D%7D" width="50%" height="600" style="float:left"></iframe>
+<iframe src="http://www.charted.co/?%7B%22dataUrl%22%3A%22http%3A%2F%2Fosmgeoweek.org%2Ffiles%2Fstats%2Fspaced%2Fosmgeoweek_{{page.chart}}_basic_osm_roads.csv%22%2C%22charts%22%3A%5B%7B%22type%22%3A%22line%22%2C%22rounding%22%3A%22off%22%2C%22title%22%3A%22Roads%20(km)%22%7D%5D%7D" width="50%" height="600" style="float:right"></iframe>
+{% endif %}
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoiZ3JvdW5kdHJ1dGgiLCJhIjoiS21jd2M3NCJ9.Oh7jfB2FCjkVHszCFLS-pg';
+var map = L.map('map');
+L.mapbox.tileLayer('{{page.mapboxid}}').addTo(map);
+
+var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+	var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+	var osm = new L.TileLayer(osmUrl, {minZoom: 7, maxZoom: 18, attribution: osmAttrib});	
+var overlay = osm.addTo(map);
+var range = document.getElementById('range');
+
+function clip() {
+  var nw = map.containerPointToLayerPoint([0, 0]),
+      se = map.containerPointToLayerPoint(map.getSize()),
+      clipX = nw.x + (se.x - nw.x) * range.value;
+
+  overlay.getContainer().style.clip = 'rect(' + [nw.y, clipX, se.y, nw.x].join('px,') + 'px)';
+}
+
+range['oninput' in range ? 'oninput' : 'onchange'] = clip;
+map.on('move', clip);
+map.setView([{{page.lat}},{{page.lon}}], {{page.zoom}});
+
+clip();
+</script>
+

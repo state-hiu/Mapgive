@@ -1,0 +1,16 @@
+<div class="osmviz table">
+
+  {{{ table }}}
+
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    var table = $('#{{id}}').DataTable();
+
+    $('#{{id}} tbody').on( 'click', 'tr', function () {
+      $(this).toggleClass('selected');
+      {{ row_function }}( table.rows('.selected').data())
+    });
+  });
+</script>

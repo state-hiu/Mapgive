@@ -37,8 +37,8 @@ margin:-90px 0 0;
 
   <div class='doc-nav cell-menubar padLeft cf' id='doc-nav-left show-buttons'>
 
-    {% comment %}{% assign post_size = {{site.categories[page.category].size}} %}{% endcomment %}
-    {% assign post_size = {{site.categories.about.size}} %}
+    {% assign post_size = site.categories.about.size %}
+    {% comment %}<h1>{{ site.categories.about.size }}</h1>{% endcomment %}
 
     <!--http://stackoverflow.com/questions/269044/remove-fragment-in-url-with-javascript-w-out-causing-page-reload-->
       <ul>
@@ -75,7 +75,7 @@ margin:-90px 0 0;
       {% endif %}
 
 
-    {% assign post_size_cases = {{site.categories.cases.size}} %}
+    {% assign post_size_cases = site.categories.cases.size %}
 
       {% if post_size_cases != 0 %}
         <ul>
@@ -100,7 +100,7 @@ margin:-90px 0 0;
         </ul>
       {% endif %}
 
-    {% assign post_size = {{site.categories.resources.size}} %}
+    {% assign post_size = site.categories.resources.size %}
 
       {% if post_size != 0 %}
         <ul>

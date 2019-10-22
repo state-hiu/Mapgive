@@ -1,0 +1,24 @@
+<div class="network" style="width:100%;">
+  <svg id="{{{id}}}" class="network" style="display:inline-block"></svg>
+  <div class="Directions" style="float:right; width:25%; display: inline-block; vertical-align:top">
+    <h3>Available Interactivity</h3>
+    <p><strong>Hover</strong> over a node to view the username</p>
+    <p><strong>Double-Click</strong> on a node to higlight that node's entire connected component.  Double-click any node again to show all.</p>
+    <h3>Statistics</h3>
+    <p>Nodes: <span id="{{{id}}}-nodeCount"></span></p>
+    <p>Edges: <span id="{{{id}}}-edgeCount"></span></p>
+    <p>Connected Components: <span id="{{{id}}}-compCount"></span></p>
+  </div>
+</div>
+<h2>Available Networks</h2><table id="available-networks-{{{id}}}" class="networks-table">
+  <thead><tr><th>File</th><th>Nodes</th><th>Edges</th></tr></thead>
+  <tbody>
+  </tbody>
+</table>
+<script type='text/javascript' src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"> </script>
+<script type="text/javascript" src="/templates/_assets/js/networks.js"></script>
+<script type="text/javascript">
+
+  buildNetworkList('{{{id}}}','{{{path}}}',{{{files}}})
+
+</script>

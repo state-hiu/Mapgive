@@ -35,7 +35,8 @@ published: true
 <div class="row">
   <div class="col-md-12">
       <div class="row">
-        {% assign sorted_pages = (site.categories.printable | reversed sort: 'date') %}
+        {% assign mid = site.categories.printable | sort: 'date' %}
+        {% assign sorted_pages = mid | reverse %}
           {% for post in sorted_pages %}
             {% assign display = null %}
             {% assign ready = null %}
@@ -51,10 +52,10 @@ published: true
               <div class="col-sm-4 projects-thumbnail">
                 <div class="projects-container">
                   <!--<a href="{{ post.external_url }}" class="image">-->
-                    <img src="{{ post.photo }} " alt="{{ post.title }}" class="img-responsive shadowed" />
+                    <img src="{{site.baseurl}}/assets/img/{{ post.photo }} " alt="{{ post.title }}" class="img-responsive shadowed" />
                   <!--</a>-->
                   <div class="caption">
-                    <h3><a href="{{ post.external_url }}">{{ post.title }}</a></h3>
+                    <h3>{{ post.title }}</h3>
                     <p><strong>author</strong>: {{ post.author }}</p>
                     <!--
                     <p><strong>published</strong>: {{ post.date | date: '%B %d, %Y' }}</p>
@@ -62,12 +63,21 @@ published: true
                     {% if post.download_button == true %}
                     <button class="btn btn-primary dropdown-toggle" style="padding: 3px 10px;" type="button" data-toggle="dropdown" aria-expanded="true">Download<span class="caret"></span></button>
                     <ul class="dropdown-menu">
+                    {% if post.png %}
                       <li>
-                        <a class="png" href="{{ post.png }}" target="_blank">{{ post.png_label }}</a>
+                        <a class="png" href="{{site.baseurl}}/assets/img/{{ post.png }}" target="_blank">{{ post.png_label }}</a>
                       </li>
+                    {% endif %}
+                    {% if post.epg %}
                       <li>
-                        <a class="eps" href="{{ post.eps }}" download="">{{ post.eps_label }}</a>
+                        <a class="eps" href="{{site.baseurl}}/assets/img/{{ post.eps }}" download="">{{ post.eps_label }}</a>
                       </li>
+                    {% endif %}
+                    {% if post.pdf %}
+                      <li>
+                        <a class="eps" href="{{site.baseurl}}/assets/docs/{{ post.pdf }}" download="">{{ post.pdf_label }}</a>
+                      </li>
+                    {% endif %}
                     </ul>
                     {% else %}
                     <a href="https://www.flickr.com/photos/mapgive/" class="btn btn-primary" style="padding: 3px 10px;" target="_blank">Visit Page</a>

@@ -1,0 +1,94 @@
+<div id="{{ id }}" style="width:100%;">
+
+  <svg id="{{ id }}_date_chart" class="date-chart"></svg>
+
+</div>
+
+<script type="text/javascript">
+
+var {{ id }}_toPlot = {{{ data }}}; //This is beautiful, if I may say so myself.
+
+//Standard D3 Defaults for time data
+var x = d3.time.scale().range([0, width]);
+    y = d3.scale.linear().range([height, 0]);
+    xAxis = d3.svg.axis().scale(x).orient("bottom").ticks(10);
+    yAxis = d3.svg.axis().scale(y).orient("left").ticks(10);
+
+//Looking for a date to parse and a value to call for a height
+var dateLine = d3.svg.line()
+  .x(function(d) { return x(parseDate(d.date)) })
+  .y(function(d) { return y(d.value)})
+
+//Call the graphic
+var width = {{width}}
+var {{id}}_dateChart = d3.select("#{{ id }}_date_chart")
+   .attr("width", width + margin.left + margin.right)
+   .attr("height", height + margin.top + margin.bottom)
+   .append("g")
+   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+x.domain(d3.extent({{ id }}_toPlot[0].data, function(d) { return parseDate(d.date); }));
+y.domain(d3.extent({{ id }}_toPlot[0].data, function(d) { return d.value; }));
+
+
+{{ id }}_toPlot.forEach(function(line, index){
+ {{id}}_dateChart.append("path")
+   .datum(line.data)
+   .style("stroke",COLORS(index))
+   .attr("id", line.title)
+   .attr("data-legend",line.title)
+   .attr("class", "line")
+   .attr("d", dateLine);
+})
+
+//Add the y Axis
+{{id}}_dateChart.append("g")
+  .attr("class", "y axis")
+  .call(yAxis)
+  .append("text")
+  .attr("transform", "rotate(-90)")
+  .attr("y", 6)
+  .attr("dy", ".71em")
+  .style("text-anchor", "end")
+
+//Add the x Axis
+{{id}}_dateChart.append("g")
+  .attr("class", "x axis")
+  .attr("transform", "translate(0," + height + ")")
+  .call(xAxis);
+
+//Add a legend
+legend = {{id}}_dateChart.append("g")
+  .attr("class","legend")
+  .attr("transform","translate(50,30)")
+  .style("font-size","14px")
+  .call(d3.legend)
+
+// function make_x_axis() {
+//   return d3.svg.axis()
+//     .scale(x)
+//     .orient("bottom")
+//     .ticks(5);
+// }
+// function make_y_axis() {
+//   return d3.svg.axis()
+//     .scale(y)
+//     .orient("left")
+//     .ticks(5)
+// }
+
+//Add grid
+// {{id}}_dateChart.append("g")
+//   .attr("class", "grid")
+//   .attr("transform", "translate(0," + height + ")")
+//   .call(xAxis)
+//     .tickSize(-height, 0, 0)
+//     .tickFormat("")
+//
+// {{id}}_dateChart.append("g")
+//   .attr("class", "grid")
+//   .call(yAxis)
+//     .tickSize(-width, 0, 0)
+//     .tickFormat("")
+
+</script>

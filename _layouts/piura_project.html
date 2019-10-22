@@ -1,0 +1,13 @@
+---
+layout: piura_page_default2
+category: project
+---
+
+<h2>{{page.subtitle}}</h2>
+
+{% if page.animation == true %}
+    <a href="https://s3.amazonaws.com/osmgeoweek/animations/osmgeoweek_{{page.project-id}}_animation.gif"><img width="350" style="float:right" src="https://s3.amazonaws.com/osmgeoweek/animations/osmgeoweek_{{page.project-id}}_animation.gif" /></a>
+{% endif %}
+
+{{content}}
+

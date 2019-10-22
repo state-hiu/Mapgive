@@ -1,0 +1,53 @@
+<div id='{{ name }}' style='height:{{ height }}; width:{{ width }}; {{ containerStyle }}'></div>
+
+<script type="text/javascript">
+	function popupFormatter (popupStyle,popupData) {
+		switch (popupStyle) {
+			case 'basic':
+				var HTML = '<p>' + popupData.{{popupData}} + '</p>';
+				return HTML;
+			case 'comments':
+				var HTML = '<strong>Comments</strong><br />';
+				for (i=0; i < popupData.comments.comment.length; i++) {
+					if (popupData.comments.comment[i].date) {
+						HTML += '<p><em>Date: </em>' + popupData.comments.comment[i].date; + '</p>'
+					}
+					if (popupData.comments.comment[i].action) {
+						HTML += '<p><em>Action: </em>' + popupData.comments.comment[i].action; + '</p>'
+					}
+					if (popupData.comments.comment[i].user) {
+						HTML += '<p><em>User: </em>' + popupData.comments.comment[i].user; + '</p>'
+					}
+					if (popupData.comments.comment[i].text) {
+						HTML += '<p><em>Text: </em>' + popupData.comments.comment[i].text; + '</p>'
+					}
+					HTML += '<hr />'
+				}
+				HTML += '<p><em>Link: </em> <a target="_blank" href="http://openstreetmap.org/note/' + popupData.id + '">www.openstreetmap.org/note/' + popupData.id + '</a></p>';
+				return HTML;
+			default:
+				return
+		}
+	}
+
+	function onEachFeature(feature, layer) {
+		if (feature.properties && feature.properties['{{ popupContent }}']) {
+			layer.bindPopup(popupFormatter('{{ popupFormat }}',feature.properties),{ maxHeight:200 });
+		}
+	}
+
+	var map = L.map('{{ name }}');
+	L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', { maxZoom: {{ maxzoom }}, id: '{{ id }}'}).addTo(map);
+	map.scrollWheelZoom.disable()
+	var layer = L.geoJson( {{{ data }}} )
+
+	L.geoJson({{{ data }}}, {
+		onEachFeature: onEachFeature
+	}).addTo(map);
+
+	var bounds = layer.getBounds();
+	map.fitBounds(bounds, { padding: [ {{ padding }},{{ padding }}] });
+		if ({{zoom}}) {
+		map.setZoom({{zoom}})
+	}
+</script>
