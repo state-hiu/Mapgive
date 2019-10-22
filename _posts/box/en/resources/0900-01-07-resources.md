@@ -11,6 +11,30 @@ published: true
 <style>
 
 
+.dropdown-menu {
+    position: inherit;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -10px;
+}
+.btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #d73f3f;
+    border-color: #d73f3f;
+}
+.btn-primary.focus, .btn-primary:focus {
+    color: #fff;
+    background-color: #d73f3f;
+    border-color: #d73f3f;
+}
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
+    color: #fff;
+    background-color: #d73f3f;
+    border-color: #d73f3f;
+}
+
+
 .img1 {
     float: right;
 }
@@ -26,29 +50,106 @@ published: true
 }
 </style>
 
+<div class="">
+  <div class="col-md-10">
+    <p>There are many additional resources out there that allow anyone to understand the core concepts of mapping and start contributing to OpenStreetMap. Browse the resources below that span from planning your own successful field mapping project to covering advanced topics such as validation.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+      <div class="row">
+        {% assign mid = site.categories.additional_resource | sort: 'date' %}
+        {% assign sorted_pages = mid | reverse %}
+          {% for post in sorted_pages %}
+            {% assign display = null %}
+            {% assign ready = null %}
+            {% if post.featured == true %}{% assign display = true %}{% endif %}
+            {% if display == true %}
+
+            {% capture thecycle %}{% cycle '1', '2' %}{% endcapture %}
+    
+              {% if thecycle == '1' %}
+              <div class="row">
+              {% endif %}
+
+              <div class="col-sm-5 projects-thumbnail" style="min-height: 500px;">
+                <div class="projects-container additional-resource">
+
+                    <img src="{{site.baseurl}}/assets/img/{{ post.photo }}" alt="{{ post.title }}" class="img-responsive shadowed additional-resource-image" />
+
+                  <div class="caption additional-resources">
+                    <h3><a href="{{ post.external_url }}">{{ post.title }}</a></h3>
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <p><strong>author</strong>: {{ post.author }}</p>
+                            <p><strong>tags</strong>: {{ post.tags }}</p>
+                        </div>
+                        <div class="col-sm-3">
+                            {% if post.download_button == true %}
+                                <button class="btn btn-primary dropdown-toggle" style="padding: 3px 10px;" type="button" data-toggle="dropdown" aria-expanded="true">Download<span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                  <li>
+                                    <a class="png" href="{{ post.png }}" target="_blank">{{ post.png_label }}</a>
+                                  </li>
+                                  <li>
+                                    <a class="eps" href="{{ post.eps }}" download="">{{ post.eps_label }}</a>
+                                  </li>
+                                </ul>
+                            {% else %}
+                            <a href="{{ post.external_url }}" class="btn btn-primary" style="padding: 3px 10px;" target="_blank">Visit Page</a>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <p>{{ post.content }}</p>
+                  </div>
+
+                </div>
+              </div>
+
+              {% if thecycle == '2' %}
+                </div>
+              {% endif %}
+
+            {% endif %}
+          {% endfor %}
+      </div>
+  </div>
+</div>
+
+
+
+
+<!--
+
 <div class="clearfix"><img class="img2" src="{{site.baseurl}}/assets/img/globe-pops.jpg" alt="Globe Pops" style="width:250px; padding-left:15px;">
 
-    <p>There are many additional resources on engagement with OpenStreetMap.</p>
+    <p>There are many additional resources to further advance knowledge of OpenStreetMap and the different ways it can be utilized.</p>
 
-    <p>
-    For the classroom, <a href="http://teachosm.org/">TeachOSM</a> is a MapGive supported resource that brings OpenStreetMap into classroom curriculum.
-    </p>
+<ul>
 
-    <p>
+    <li>
+    For the classroom, <a href="http://teachosm.org/">TeachOSM</a> is an online resource to assist educators at all levels to introduce open source mapping using the OpenStreetMap platform.
+    </li>
+
+    <li>
     <a href="http://learnosm.org/">LearnOSM</a> provides easy to understand, step-by-step guides to get started with contributing to OpenStreetMap and using OpenStreetMap data.
-    </p>
+    </li>
 
-    <p>
-    <a href="http://www.worldbank.org/en/region/sar/publication/planning-open-cities-mapping-project">Planning an Open Cities Mapping Project Guide</a> is a detailed look at organizing OSM based field projects for disaster preparedness.
-    </p>
+    <li>
+    The <a href="https://opendri.org/resource/planning-an-open-cities-mapping-project/">World Bank Open Cities Mapping Project Guide</a> is a tool for practitioners who wish to bring community mapping initiatives to their cities or regions. The guide documents lessons learned from the regional Open Cities Africa program and its predecessors in South Asia to offer best practices on the design and implementation of a community mapping initiative. Community mapping efforts often result in increased awareness of disaster risk within governments and a consensus within ministries that this risk must be reduced.
+    </li>
 
-    <p>
-    The <a href="http://mapgive.state.gov/events/connect-camp-maps/sessions/">session plan from Connect Camps Maps</a> has good ideas on how to plan multi-faceted mapping sessions.
-    </p>
+    <li>
+    The <a href="http://mapgive.state.gov/events/connect-camp-maps/sessions/">Connect Camps Maps Session Plan</a> is a good template on how to plan a multi-faceted mapping workshop.
+    </li>
 
-    <p>
-    The <a href="http://hotosm.org/sites/default/files/HOTActivationProtocol.pdf">HOT Activation Protocol</a> describes the flow of activities and roles involved in working with OpenStreetMap during a disaster response.
-    </p>
+    <li>
+    The <a href="https://www.hotosm.org/hot-activation-protocol.html">Humanitarian OpenStreetMap Team (HOT) Activation Protocol</a> defines the flow of activities during a HOT Activation and describes how trained volunteers perform the tasks that lead to a successful and efficient response. 
+    </li>
+
+</ul>
 
 </div>
 
@@ -60,3 +161,4 @@ published: true
 And always count on the strong network of <a href="#resources&form-partnerships">partners</a> for even more help and insights.
 </p>
 
+-->

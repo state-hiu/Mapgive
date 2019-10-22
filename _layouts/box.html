@@ -8,8 +8,8 @@ layout: default
 
 <div class='doc-nav cell2 padLeft cf' id='doc-nav-left'>
 
-{% comment %}{% assign post_size = {{site.categories[page.category].size}} %}{% endcomment %}
-{% assign post_size = {{site.categories.about.size}} %}
+{% comment %}{% assign post_size = site.categories[page.category].size %}{% endcomment %}
+{% assign post_size = site.categories.about.size %}
 
   {% if post_size != 0 %}
     <ul>
@@ -35,7 +35,7 @@ layout: default
   {% endif %}
 
 
-{% assign post_size_cases = {{site.categories.cases.size}} %}
+{% assign post_size_cases = site.categories.cases.size %}
 
   {% if post_size_cases != 0 %}
     <ul>
@@ -60,7 +60,7 @@ layout: default
     </ul>
   {% endif %}
 
-{% assign post_size = {{site.categories.resources.size}} %}
+{% assign post_size = site.categories.resources.size %}
 
   {% if post_size != 0 %}
     <ul>

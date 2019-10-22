@@ -1,0 +1,55 @@
+<div id='{{ name }}' style='height:{{ height }}px; width:{{ width }}px; vertical-align:text-top; margin-left:5px;'></div>
+
+<script type="text/javascript">
+	var map = L.map('{{ name }}');
+  L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', { maxZoom: {{ maxzoom }}, id: '{{ id }}'}).addTo(map);
+	map.setView([0, 0], 2);
+	var userEdits = L.featureGroup().addTo(map)
+	var userEditIds = {}
+
+	function showUserEdits(selectedUserNames){
+		var usersToAdd = []
+		//If none selected, clear all the layers
+		if ( selectedUserNames.length == 0 ){
+			userEditIds = {}
+			userEdits.clearLayers();
+		//Else, check if the layer was removed
+		}else{
+			userEdits.getLayers().forEach(function(layer){
+				if (selectedUserNames.indexOf(userEditIds[layer._leaflet_id]) < 0){
+					delete userEditIds[layer._leaflet_id]
+					userEdits.removeLayer(layer)
+				}
+			})
+		}
+		//Ultimately, add only those userNames which don't exist in userEditIds
+		usersToAdd = []
+		vals = _.values(userEditIds)
+		selectedUserNames.forEach(function(name){
+			if (vals.indexOf(name) < 0){
+				usersToAdd.push(name)
+			}
+		})
+
+		usersToAdd.forEach(function(userName){
+			$.getJSON('{{{path}}}'+'/json/all_contributors_with_geometry/'+userName+'.json', function(data, err){
+	      thisLayer = L.geoJson(data,
+					{
+				    onEachFeature: function(feature, layer){
+							layer.bindPopup("User " + userName);
+						}
+					}
+				)
+				userEdits.addLayer(thisLayer)
+				userEditIds[thisLayer._leaflet_id] = userName
+				map.fitBounds(userEdits.getBounds())
+	    })
+		})
+  }
+
+	function showUserEditsFromRows(rows){
+		selecedUserNames = _.collect(rows, function(row){return row[0]})
+		showUserEdits(selecedUserNames)
+	}
+
+</script>

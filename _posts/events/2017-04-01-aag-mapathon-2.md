@@ -1,7 +1,7 @@
 ---
 layout: resource
 category: events
-external_url: 'http://aagmapathon.org/'
+permalink: '/events/2017aag-mapathon/'
 title: The 2nd Mapathon @ AAG
 status: past
 date: 20170405

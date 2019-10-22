@@ -158,7 +158,7 @@ dt{font-weight:normal;}
 .steps{counter-reset:li;padding-left:50px;margin-top:30px;}
 .steps .step{list-style:none;margin-left:0;}
 .step-or:before{content:"";background-color:#deccb4;position:absolute;left:15px;border-radius:50%;width:40px;height:40px;z-index:-1;}
-.steps .title:before{content:counter(li);counter-increment:li;padding:8px;position:absolute;left:-28px;}
+.steps .title:before{content:counter(li);counter-increment:li;font-size:19px;padding:8px;position:absolute;left:-28px;}
 .steps .step.start .title:before{content:"\2730";}
 .steps .step:before{content:"";background-color:#deccb4;padding:0;position:absolute;left:15px;border-radius:50%;width:40px;height:40px;}
 .lt-ie8 .steps{padding-left:0;}
@@ -190,12 +190,15 @@ dt{font-weight:normal;}
 .news-thumbnail{margin-top:20px;margin-bottom:20px;margin:5px;}
 @media (min-width: 736px){.col-sm-4.projects-thumbnail{width:30%;height:420px;}
 }
-.projects-container{position:absolute;bottom:0;height:405px;width:92%;}
+.projects-container{position:absolute;bottom:0;height:400px;width:92%;}
+.projects-container.additional-resource{position:absolute;bottom:0;height:480px;width:92%;}
 .img-responsive{width:100%;max-width:100%;height:auto!important;-ms-interpolation-mode:bicubic;}
 .projects-thumbnail .img-responsive{width:100%;max-width:240px;max-height:230px;overflow:hidden;-ms-interpolation-mode:bicubic;margin-bottom:60%;position:relative;object-fit:cover;}
+.projects-thumbnail .img-responsive.additional-resource-image{width:100%;max-width:290px;max-height:190px;overflow:hidden;-ms-interpolation-mode:bicubic;margin-bottom:60%;position:relative;object-fit:cover;margin-left:auto;margin-right:auto;}
 .projects-thumbnail h3{margin-top:0;}
 .projects-thumbnail .image{display:block;width:100%;}
 .projects-thumbnail .caption{margin-top:-50%;font-size:.8em;color:#666;}
+.projects-thumbnail .caption.additional-resources{margin-top:-55%;font-size:.8em;color:#666;}
 .projects-thumbnail{padding-top:15px;padding-right:10px;padding-bottom:0;padding-left:10px;border:1px solid #bcbcbc;box-shadow:1px 1px 7px -3px #888;border-radius:0;min-height:208px;margin-top:20px;margin-bottom:20px;margin:5px;}
 .story{margin-bottom:50px;}
 @media (max-width: 768px){.projects-container{height:92%;}

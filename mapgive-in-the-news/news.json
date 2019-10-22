@@ -1,7 +1,7 @@
 ---
 ---
 [
-  {% assign stories = (site.posts | where: "category", "news") %}{% for story in stories %}
+  {% assign stories = site.posts | where: "category", "news" %}{% for story in stories %}
     {
       "external_url": "{{ story.external_url }}",
       "title": "{{ story.title }}",

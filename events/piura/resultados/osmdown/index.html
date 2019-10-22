@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+  <meta charset="UTF-8">
+
+  <!--JQuery-->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>  -->
+  <!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
+  <script type="text/javascript" src="./templates/assets/js/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="./templates/assets/js/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="./templates/assets/css/jquery/jquery-ui.theme.min.css" />
+
+  <!--TimeSlider-->
+  <script type="text/javascript" src="./templates/assets/js/jQDateRangeSlider-withRuler-min.js"></script>
+  <link rel="stylesheet" href="./templates/assets/css/iThing-min.css" />
+  <link rel="stylesheet" href="./templates/assets/css/classic-min.css" />
+
+  <!-- D3 -->
+  <!-- <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
+  <script type="text/javascript" src="./templates/assets/js/d3/d3.min.js"></script>
+  <script type="text/javascript" src="./templates/assets/js/d3/d3.legend.js"></script>
+
+  <!-- TableSorter -->
+  <!-- <script src="./templates/assets/js/tablesorter.min.js"></script> -->
+  <link rel="stylesheet" href="./templates/assets/css/jquery.dataTables.css">
+  <script type="text/javascript" src="./templates/assets/js/jquery.dataTables.min.js"></script>
+
+  <!-- Lodash-->
+  <script type="text/javascript" src="./templates/assets/js/lodash.min.js"></script>
+
+  <!-- Front End Mustache -->
+  <script type="text/javascript" src="./templates/assets/js/mustache.min.js"></script>
+
+
+  <!-- External Stylesheets-->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="./templates/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./templates/assets/css/github-markdown.css">
+
+  <!-- Leaflet -->
+  <!-- <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+   -->
+  <link rel="stylesheet" href="./templates/assets/leaflet-0.7.3/leaflet.css"/>
+  <script src="./templates/assets/leaflet-0.7.3/leaflet.js"></script>
+
+  <!-- Custom Stylesheets (Always Last)-->
+  <link rel="stylesheet" href="./templates/assets/main.css">
+
+  <!-- Custom Functions-->
+  <script type="text/javascript" src="./templates/assets/js/osmdown-base.js"></script>
+  <script type="text/javascript" src="./templates/assets/js/scrolling-header.js"></script>
+
+  <title> MapGive Field Project Cusco </title>
+  <!-- Load the Front End Templates here for Mustache -->
+  <script id="changesetViewTemplate" type="x-tmpl-mustache">
+  <h5>{{comment}}</h5>
+  <p>{{#formatDate}} {{created_at}} {{/formatDate}}</p>
+
+  {{#tags}}
+    {{#created_by}} source: {{created_by}}{{/created_by}}
+  {{/tags}}
+
+  {{^tags}}<b>No tags</b>{{/tags}}
+</script>
+
+  <!-- End of Front End Templates -->
+</head>
+
+
+	<body>
+
+		<div class="main wrapper">
+
+			<div id="scrolling_header">
+				<h1 class="title"> MapGive Field Project Cusco </h1>
+				<ul id="scrolling_nav"></ul>
+				<p><button id="CodeButton" onclick="toggleCode()">Show Code</button></p>
+			</div>
+
+			<article class="markdown-body">
+<h1 id="cusco-mapgive-field-project">Cusco MapGive Field Project</h1>
+
+<pre>
+var dataURL = '/usr/share/nginx/html/mapgive-cusco/'
+var total_mappers = _.values(osmdata(dataURL+'total_user_count.json'))[0]
+var experienced_mappers = _.values(osmdata(dataURL + 'experienced_user_count.json'))[0]
+var new_mappers = _.values(osmdata(dataURL + 'new_user_count.json'))[0]
+
+var options = {
+	chartType: 'linegraph_simple', width:1200, id: 'PerHour'
+}
+var changesets = osmdata(dataURL+'changesets_x_hour.json')
+var hourly_changesets = []
+var totalChangesets = 0
+var hourlyUsers = []
+var cumulativeUsers = []
+var cumulativeUserIds = []
+for (var i=0; i < changesets.length; i ++) {
+	if (new Date(changesets[i].start_date) > new Date('2015-08-18 00:00:00 +0000') && new Date(changesets[i].start_date) < new Date().getTime()) {
+		hourly_changesets[i] = {}
+		hourly_changesets[i].date = changesets[i].start_date
+		hourly_changesets[i].value = changesets[i].objects.length
+		totalChangesets += changesets[i].objects.length
+
+		uniqueUsers = _.uniq(_.collect(changesets[i].objects, 'uid'))
+		
+		hourlyUsers[i] = {}
+		hourlyUsers[i].date = changesets[i].start_date
+		hourlyUsers[i].value = uniqueUsers.length
+	}
+}
+
+var toPlot = [
+			  {id: 'cSets',    title: "Changesets",   data: _.compact(hourly_changesets)},
+			  {id: 'actUsers', title: "Active Users", data: _.compact(hourlyUsers)}
+			 ]
+</pre>
+<h1 id="changesets">Changesets</h1>
+
+<pre>
+//Another comment
+</pre>
+
+<div id="PerHour" style="width:100%;">
+
+  <svg id="PerHour_date_chart" class="date-chart"></svg>
+
+</div>
+
+<script type="text/javascript">
+
+var PerHour_toPlot = [{"id":"cSets","title":"Changesets","data":[{"date":"2015-08-18 01:00:00 +0000","value":0},{"date":"2015-08-18 02:00:00 +0000","value":0},{"date":"2015-08-18 03:00:00 +0000","value":0},{"date":"2015-08-18 04:00:00 +0000","value":0},{"date":"2015-08-18 05:00:00 +0000","value":0},{"date":"2015-08-18 06:00:00 +0000","value":0},{"date":"2015-08-18 07:00:00 +0000","value":0},{"date":"2015-08-18 08:00:00 +0000","value":0},{"date":"2015-08-18 09:00:00 +0000","value":0},{"date":"2015-08-18 10:00:00 +0000","value":0},{"date":"2015-08-18 11:00:00 +0000","value":0},{"date":"2015-08-18 12:00:00 +0000","value":0},{"date":"2015-08-18 13:00:00 +0000","value":0},{"date":"2015-08-18 14:00:00 +0000","value":0},{"date":"2015-08-18 15:00:00 +0000","value":0},{"date":"2015-08-18 16:00:00 +0000","value":0},{"date":"2015-08-18 17:00:00 +0000","value":0},{"date":"2015-08-18 18:00:00 +0000","value":0},{"date":"2015-08-18 19:00:00 +0000","value":0},{"date":"2015-08-18 20:00:00 +0000","value":0},{"date":"2015-08-18 21:00:00 +0000","value":0},{"date":"2015-08-18 22:00:00 +0000","value":0},{"date":"2015-08-18 23:00:00 +0000","value":0},{"date":"2015-08-19 00:00:00 +0000","value":0},{"date":"2015-08-19 01:00:00 +0000","value":0},{"date":"2015-08-19 02:00:00 +0000","value":0},{"date":"2015-08-19 03:00:00 +0000","value":0},{"date":"2015-08-19 04:00:00 +0000","value":0},{"date":"2015-08-19 05:00:00 +0000","value":0},{"date":"2015-08-19 06:00:00 +0000","value":0},{"date":"2015-08-19 07:00:00 +0000","value":0},{"date":"2015-08-19 08:00:00 +0000","value":0},{"date":"2015-08-19 09:00:00 +0000","value":0},{"date":"2015-08-19 10:00:00 +0000","value":0},{"date":"2015-08-19 11:00:00 +0000","value":0},{"date":"2015-08-19 12:00:00 +0000","value":0},{"date":"2015-08-19 13:00:00 +0000","value":0},{"date":"2015-08-19 14:00:00 +0000","value":0},{"date":"2015-08-19 15:00:00 +0000","value":0},{"date":"2015-08-19 16:00:00 +0000","value":0},{"date":"2015-08-19 17:00:00 +0000","value":1},{"date":"2015-08-19 18:00:00 +0000","value":0},{"date":"2015-08-19 19:00:00 +0000","value":0},{"date":"2015-08-19 20:00:00 +0000","value":0},{"date":"2015-08-19 21:00:00 +0000","value":0},{"date":"2015-08-19 22:00:00 +0000","value":0},{"date":"2015-08-19 23:00:00 +0000","value":0},{"date":"2015-08-20 00:00:00 +0000","value":0},{"date":"2015-08-20 01:00:00 +0000","value":3},{"date":"2015-08-20 02:00:00 +0000","value":11},{"date":"2015-08-20 03:00:00 +0000","value":1},{"date":"2015-08-20 04:00:00 +0000","value":0},{"date":"2015-08-20 05:00:00 +0000","value":2},{"date":"2015-08-20 06:00:00 +0000","value":0},{"date":"2015-08-20 07:00:00 +0000","value":0},{"date":"2015-08-20 08:00:00 +0000","value":0},{"date":"2015-08-20 09:00:00 +0000","value":0},{"date":"2015-08-20 10:00:00 +0000","value":0},{"date":"2015-08-20 11:00:00 +0000","value":0},{"date":"2015-08-20 12:00:00 +0000","value":0},{"date":"2015-08-20 13:00:00 +0000","value":0},{"date":"2015-08-20 14:00:00 +0000","value":0},{"date":"2015-08-20 15:00:00 +0000","value":0},{"date":"2015-08-20 16:00:00 +0000","value":0},{"date":"2015-08-20 17:00:00 +0000","value":0},{"date":"2015-08-20 18:00:00 +0000","value":0},{"date":"2015-08-20 19:00:00 +0000","value":0},{"date":"2015-08-20 20:00:00 +0000","value":0},{"date":"2015-08-20 21:00:00 +0000","value":95},{"date":"2015-08-20 22:00:00 +0000","value":95},{"date":"2015-08-20 23:00:00 +0000","value":0},{"date":"2015-08-21 00:00:00 +0000","value":0},{"date":"2015-08-21 01:00:00 +0000","value":0},{"date":"2015-08-21 02:00:00 +0000","value":0},{"date":"2015-08-21 03:00:00 +0000","value":0},{"date":"2015-08-21 04:00:00 +0000","value":0},{"date":"2015-08-21 05:00:00 +0000","value":0},{"date":"2015-08-21 06:00:00 +0000","value":0},{"date":"2015-08-21 07:00:00 +0000","value":0},{"date":"2015-08-21 08:00:00 +0000","value":0},{"date":"2015-08-21 09:00:00 +0000","value":0},{"date":"2015-08-21 10:00:00 +0000","value":0},{"date":"2015-08-21 11:00:00 +0000","value":0},{"date":"2015-08-21 12:00:00 +0000","value":0},{"date":"2015-08-21 13:00:00 +0000","value":1},{"date":"2015-08-21 14:00:00 +0000","value":3},{"date":"2015-08-21 15:00:00 +0000","value":0},{"date":"2015-08-21 16:00:00 +0000","value":0},{"date":"2015-08-21 17:00:00 +0000","value":0},{"date":"2015-08-21 18:00:00 +0000","value":1},{"date":"2015-08-21 19:00:00 +0000","value":0},{"date":"2015-08-21 20:00:00 +0000","value":0},{"date":"2015-08-21 21:00:00 +0000","value":0},{"date":"2015-08-21 22:00:00 +0000","value":0},{"date":"2015-08-21 23:00:00 +0000","value":0},{"date":"2015-08-22 00:00:00 +0000","value":0},{"date":"2015-08-22 01:00:00 +0000","value":0},{"date":"2015-08-22 02:00:00 +0000","value":0},{"date":"2015-08-22 03:00:00 +0000","value":0},{"date":"2015-08-22 04:00:00 +0000","value":0},{"date":"2015-08-22 05:00:00 +0000","value":0},{"date":"2015-08-22 06:00:00 +0000","value":0},{"date":"2015-08-22 07:00:00 +0000","value":0},{"date":"2015-08-22 08:00:00 +0000","value":0},{"date":"2015-08-22 09:00:00 +0000","value":0},{"date":"2015-08-22 10:00:00 +0000","value":0},{"date":"2015-08-22 11:00:00 +0000","value":0},{"date":"2015-08-22 12:00:00 +0000","value":0},{"date":"2015-08-22 13:00:00 +0000","value":0},{"date":"2015-08-22 14:00:00 +0000","value":11},{"date":"2015-08-22 15:00:00 +0000","value":30},{"date":"2015-08-22 16:00:00 +0000","value":40},{"date":"2015-08-22 17:00:00 +0000","value":32},{"date":"2015-08-22 18:00:00 +0000","value":0},{"date":"2015-08-22 19:00:00 +0000","value":0},{"date":"2015-08-22 20:00:00 +0000","value":0},{"date":"2015-08-22 21:00:00 +0000","value":0},{"date":"2015-08-22 22:00:00 +0000","value":0},{"date":"2015-08-22 23:00:00 +0000","value":0},{"date":"2015-08-23 00:00:00 +0000","value":0},{"date":"2015-08-23 01:00:00 +0000","value":0},{"date":"2015-08-23 02:00:00 +0000","value":0},{"date":"2015-08-23 03:00:00 +0000","value":0},{"date":"2015-08-23 04:00:00 +0000","value":0},{"date":"2015-08-23 05:00:00 +0000","value":0},{"date":"2015-08-23 06:00:00 +0000","value":0},{"date":"2015-08-23 07:00:00 +0000","value":0},{"date":"2015-08-23 08:00:00 +0000","value":0},{"date":"2015-08-23 09:00:00 +0000","value":0},{"date":"2015-08-23 10:00:00 +0000","value":0},{"date":"2015-08-23 11:00:00 +0000","value":0},{"date":"2015-08-23 12:00:00 +0000","value":0},{"date":"2015-08-23 13:00:00 +0000","value":0},{"date":"2015-08-23 14:00:00 +0000","value":0},{"date":"2015-08-23 15:00:00 +0000","value":7},{"date":"2015-08-23 16:00:00 +0000","value":28},{"date":"2015-08-23 17:00:00 +0000","value":105},{"date":"2015-08-23 18:00:00 +0000","value":18},{"date":"2015-08-23 19:00:00 +0000","value":4},{"date":"2015-08-23 20:00:00 +0000","value":4},{"date":"2015-08-23 21:00:00 +0000","value":0},{"date":"2015-08-23 22:00:00 +0000","value":0},{"date":"2015-08-23 23:00:00 +0000","value":1},{"date":"2015-08-24 00:00:00 +0000","value":0},{"date":"2015-08-24 01:00:00 +0000","value":0},{"date":"2015-08-24 02:00:00 +0000","value":0},{"date":"2015-08-24 03:00:00 +0000","value":0},{"date":"2015-08-24 04:00:00 +0000","value":0},{"date":"2015-08-24 05:00:00 +0000","value":0},{"date":"2015-08-24 06:00:00 +0000","value":0},{"date":"2015-08-24 07:00:00 +0000","value":0},{"date":"2015-08-24 08:00:00 +0000","value":0},{"date":"2015-08-24 09:00:00 +0000","value":0},{"date":"2015-08-24 10:00:00 +0000","value":0},{"date":"2015-08-24 11:00:00 +0000","value":0},{"date":"2015-08-24 12:00:00 +0000","value":0},{"date":"2015-08-24 13:00:00 +0000","value":24},{"date":"2015-08-24 14:00:00 +0000","value":3},{"date":"2015-08-24 15:00:00 +0000","value":0},{"date":"2015-08-24 16:00:00 +0000","value":0},{"date":"2015-08-24 17:00:00 +0000","value":0},{"date":"2015-08-24 18:00:00 +0000","value":0},{"date":"2015-08-24 19:00:00 +0000","value":0},{"date":"2015-08-24 20:00:00 +0000","value":0},{"date":"2015-08-24 21:00:00 +0000","value":0},{"date":"2015-08-24 22:00:00 +0000","value":0},{"date":"2015-08-24 23:00:00 +0000","value":0},{"date":"2015-08-25 00:00:00 +0000","value":0},{"date":"2015-08-25 01:00:00 +0000","value":0},{"date":"2015-08-25 02:00:00 +0000","value":0},{"date":"2015-08-25 03:00:00 +0000","value":0},{"date":"2015-08-25 04:00:00 +0000","value":0},{"date":"2015-08-25 05:00:00 +0000","value":0},{"date":"2015-08-25 06:00:00 +0000","value":0},{"date":"2015-08-25 07:00:00 +0000","value":0},{"date":"2015-08-25 08:00:00 +0000","value":0},{"date":"2015-08-25 09:00:00 +0000","value":0},{"date":"2015-08-25 10:00:00 +0000","value":0},{"date":"2015-08-25 11:00:00 +0000","value":0},{"date":"2015-08-25 12:00:00 +0000","value":0},{"date":"2015-08-25 13:00:00 +0000","value":0},{"date":"2015-08-25 14:00:00 +0000","value":0},{"date":"2015-08-25 15:00:00 +0000","value":0},{"date":"2015-08-25 16:00:00 +0000","value":0},{"date":"2015-08-25 17:00:00 +0000","value":0},{"date":"2015-08-25 18:00:00 +0000","value":0},{"date":"2015-08-25 19:00:00 +0000","value":0},{"date":"2015-08-25 20:00:00 +0000","value":0},{"date":"2015-08-25 21:00:00 +0000","value":0},{"date":"2015-08-25 22:00:00 +0000","value":0},{"date":"2015-08-25 23:00:00 +0000","value":0},{"date":"2015-08-26 00:00:00 +0000","value":0},{"date":"2015-08-26 01:00:00 +0000","value":0},{"date":"2015-08-26 02:00:00 +0000","value":0},{"date":"2015-08-26 03:00:00 +0000","value":0},{"date":"2015-08-26 04:00:00 +0000","value":0},{"date":"2015-08-26 05:00:00 +0000","value":0},{"date":"2015-08-26 06:00:00 +0000","value":0},{"date":"2015-08-26 07:00:00 +0000","value":0},{"date":"2015-08-26 08:00:00 +0000","value":0},{"date":"2015-08-26 09:00:00 +0000","value":0},{"date":"2015-08-26 10:00:00 +0000","value":0},{"date":"2015-08-26 11:00:00 +0000","value":0},{"date":"2015-08-26 12:00:00 +0000","value":0},{"date":"2015-08-26 13:00:00 +0000","value":0},{"date":"2015-08-26 14:00:00 +0000","value":0},{"date":"2015-08-26 15:00:00 +0000","value":0},{"date":"2015-08-26 16:00:00 +0000","value":0},{"date":"2015-08-26 17:00:00 +0000","value":0},{"date":"2015-08-26 18:00:00 +0000","value":0},{"date":"2015-08-26 19:00:00 +0000","value":0},{"date":"2015-08-26 20:00:00 +0000","value":0},{"date":"2015-08-26 21:00:00 +0000","value":0},{"date":"2015-08-26 22:00:00 +0000","value":0},{"date":"2015-08-26 23:00:00 +0000","value":0},{"date":"2015-08-27 00:00:00 +0000","value":0},{"date":"2015-08-27 01:00:00 +0000","value":0},{"date":"2015-08-27 02:00:00 +0000","value":0},{"date":"2015-08-27 03:00:00 +0000","value":0},{"date":"2015-08-27 04:00:00 +0000","value":0},{"date":"2015-08-27 05:00:00 +0000","value":0},{"date":"2015-08-27 06:00:00 +0000","value":0},{"date":"2015-08-27 07:00:00 +0000","value":0},{"date":"2015-08-27 08:00:00 +0000","value":0},{"date":"2015-08-27 09:00:00 +0000","value":0},{"date":"2015-08-27 10:00:00 +0000","value":0},{"date":"2015-08-27 11:00:00 +0000","value":0},{"date":"2015-08-27 12:00:00 +0000","value":0},{"date":"2015-08-27 13:00:00 +0000","value":0}]},{"id":"actUsers","title":"Active Users","data":[{"date":"2015-08-18 01:00:00 +0000","value":0},{"date":"2015-08-18 02:00:00 +0000","value":0},{"date":"2015-08-18 03:00:00 +0000","value":0},{"date":"2015-08-18 04:00:00 +0000","value":0},{"date":"2015-08-18 05:00:00 +0000","value":0},{"date":"2015-08-18 06:00:00 +0000","value":0},{"date":"2015-08-18 07:00:00 +0000","value":0},{"date":"2015-08-18 08:00:00 +0000","value":0},{"date":"2015-08-18 09:00:00 +0000","value":0},{"date":"2015-08-18 10:00:00 +0000","value":0},{"date":"2015-08-18 11:00:00 +0000","value":0},{"date":"2015-08-18 12:00:00 +0000","value":0},{"date":"2015-08-18 13:00:00 +0000","value":0},{"date":"2015-08-18 14:00:00 +0000","value":0},{"date":"2015-08-18 15:00:00 +0000","value":0},{"date":"2015-08-18 16:00:00 +0000","value":0},{"date":"2015-08-18 17:00:00 +0000","value":0},{"date":"2015-08-18 18:00:00 +0000","value":0},{"date":"2015-08-18 19:00:00 +0000","value":0},{"date":"2015-08-18 20:00:00 +0000","value":0},{"date":"2015-08-18 21:00:00 +0000","value":0},{"date":"2015-08-18 22:00:00 +0000","value":0},{"date":"2015-08-18 23:00:00 +0000","value":0},{"date":"2015-08-19 00:00:00 +0000","value":0},{"date":"2015-08-19 01:00:00 +0000","value":0},{"date":"2015-08-19 02:00:00 +0000","value":0},{"date":"2015-08-19 03:00:00 +0000","value":0},{"date":"2015-08-19 04:00:00 +0000","value":0},{"date":"2015-08-19 05:00:00 +0000","value":0},{"date":"2015-08-19 06:00:00 +0000","value":0},{"date":"2015-08-19 07:00:00 +0000","value":0},{"date":"2015-08-19 08:00:00 +0000","value":0},{"date":"2015-08-19 09:00:00 +0000","value":0},{"date":"2015-08-19 10:00:00 +0000","value":0},{"date":"2015-08-19 11:00:00 +0000","value":0},{"date":"2015-08-19 12:00:00 +0000","value":0},{"date":"2015-08-19 13:00:00 +0000","value":0},{"date":"2015-08-19 14:00:00 +0000","value":0},{"date":"2015-08-19 15:00:00 +0000","value":0},{"date":"2015-08-19 16:00:00 +0000","value":0},{"date":"2015-08-19 17:00:00 +0000","value":1},{"date":"2015-08-19 18:00:00 +0000","value":0},{"date":"2015-08-19 19:00:00 +0000","value":0},{"date":"2015-08-19 20:00:00 +0000","value":0},{"date":"2015-08-19 21:00:00 +0000","value":0},{"date":"2015-08-19 22:00:00 +0000","value":0},{"date":"2015-08-19 23:00:00 +0000","value":0},{"date":"2015-08-20 00:00:00 +0000","value":0},{"date":"2015-08-20 01:00:00 +0000","value":1},{"date":"2015-08-20 02:00:00 +0000","value":2},{"date":"2015-08-20 03:00:00 +0000","value":1},{"date":"2015-08-20 04:00:00 +0000","value":0},{"date":"2015-08-20 05:00:00 +0000","value":1},{"date":"2015-08-20 06:00:00 +0000","value":0},{"date":"2015-08-20 07:00:00 +0000","value":0},{"date":"2015-08-20 08:00:00 +0000","value":0},{"date":"2015-08-20 09:00:00 +0000","value":0},{"date":"2015-08-20 10:00:00 +0000","value":0},{"date":"2015-08-20 11:00:00 +0000","value":0},{"date":"2015-08-20 12:00:00 +0000","value":0},{"date":"2015-08-20 13:00:00 +0000","value":0},{"date":"2015-08-20 14:00:00 +0000","value":0},{"date":"2015-08-20 15:00:00 +0000","value":0},{"date":"2015-08-20 16:00:00 +0000","value":0},{"date":"2015-08-20 17:00:00 +0000","value":0},{"date":"2015-08-20 18:00:00 +0000","value":0},{"date":"2015-08-20 19:00:00 +0000","value":0},{"date":"2015-08-20 20:00:00 +0000","value":0},{"date":"2015-08-20 21:00:00 +0000","value":9},{"date":"2015-08-20 22:00:00 +0000","value":9},{"date":"2015-08-20 23:00:00 +0000","value":0},{"date":"2015-08-21 00:00:00 +0000","value":0},{"date":"2015-08-21 01:00:00 +0000","value":0},{"date":"2015-08-21 02:00:00 +0000","value":0},{"date":"2015-08-21 03:00:00 +0000","value":0},{"date":"2015-08-21 04:00:00 +0000","value":0},{"date":"2015-08-21 05:00:00 +0000","value":0},{"date":"2015-08-21 06:00:00 +0000","value":0},{"date":"2015-08-21 07:00:00 +0000","value":0},{"date":"2015-08-21 08:00:00 +0000","value":0},{"date":"2015-08-21 09:00:00 +0000","value":0},{"date":"2015-08-21 10:00:00 +0000","value":0},{"date":"2015-08-21 11:00:00 +0000","value":0},{"date":"2015-08-21 12:00:00 +0000","value":0},{"date":"2015-08-21 13:00:00 +0000","value":1},{"date":"2015-08-21 14:00:00 +0000","value":2},{"date":"2015-08-21 15:00:00 +0000","value":0},{"date":"2015-08-21 16:00:00 +0000","value":0},{"date":"2015-08-21 17:00:00 +0000","value":0},{"date":"2015-08-21 18:00:00 +0000","value":1},{"date":"2015-08-21 19:00:00 +0000","value":0},{"date":"2015-08-21 20:00:00 +0000","value":0},{"date":"2015-08-21 21:00:00 +0000","value":0},{"date":"2015-08-21 22:00:00 +0000","value":0},{"date":"2015-08-21 23:00:00 +0000","value":0},{"date":"2015-08-22 00:00:00 +0000","value":0},{"date":"2015-08-22 01:00:00 +0000","value":0},{"date":"2015-08-22 02:00:00 +0000","value":0},{"date":"2015-08-22 03:00:00 +0000","value":0},{"date":"2015-08-22 04:00:00 +0000","value":0},{"date":"2015-08-22 05:00:00 +0000","value":0},{"date":"2015-08-22 06:00:00 +0000","value":0},{"date":"2015-08-22 07:00:00 +0000","value":0},{"date":"2015-08-22 08:00:00 +0000","value":0},{"date":"2015-08-22 09:00:00 +0000","value":0},{"date":"2015-08-22 10:00:00 +0000","value":0},{"date":"2015-08-22 11:00:00 +0000","value":0},{"date":"2015-08-22 12:00:00 +0000","value":0},{"date":"2015-08-22 13:00:00 +0000","value":0},{"date":"2015-08-22 14:00:00 +0000","value":2},{"date":"2015-08-22 15:00:00 +0000","value":4},{"date":"2015-08-22 16:00:00 +0000","value":6},{"date":"2015-08-22 17:00:00 +0000","value":5},{"date":"2015-08-22 18:00:00 +0000","value":0},{"date":"2015-08-22 19:00:00 +0000","value":0},{"date":"2015-08-22 20:00:00 +0000","value":0},{"date":"2015-08-22 21:00:00 +0000","value":0},{"date":"2015-08-22 22:00:00 +0000","value":0},{"date":"2015-08-22 23:00:00 +0000","value":0},{"date":"2015-08-23 00:00:00 +0000","value":0},{"date":"2015-08-23 01:00:00 +0000","value":0},{"date":"2015-08-23 02:00:00 +0000","value":0},{"date":"2015-08-23 03:00:00 +0000","value":0},{"date":"2015-08-23 04:00:00 +0000","value":0},{"date":"2015-08-23 05:00:00 +0000","value":0},{"date":"2015-08-23 06:00:00 +0000","value":0},{"date":"2015-08-23 07:00:00 +0000","value":0},{"date":"2015-08-23 08:00:00 +0000","value":0},{"date":"2015-08-23 09:00:00 +0000","value":0},{"date":"2015-08-23 10:00:00 +0000","value":0},{"date":"2015-08-23 11:00:00 +0000","value":0},{"date":"2015-08-23 12:00:00 +0000","value":0},{"date":"2015-08-23 13:00:00 +0000","value":0},{"date":"2015-08-23 14:00:00 +0000","value":0},{"date":"2015-08-23 15:00:00 +0000","value":5},{"date":"2015-08-23 16:00:00 +0000","value":10},{"date":"2015-08-23 17:00:00 +0000","value":11},{"date":"2015-08-23 18:00:00 +0000","value":7},{"date":"2015-08-23 19:00:00 +0000","value":2},{"date":"2015-08-23 20:00:00 +0000","value":2},{"date":"2015-08-23 21:00:00 +0000","value":0},{"date":"2015-08-23 22:00:00 +0000","value":0},{"date":"2015-08-23 23:00:00 +0000","value":1},{"date":"2015-08-24 00:00:00 +0000","value":0},{"date":"2015-08-24 01:00:00 +0000","value":0},{"date":"2015-08-24 02:00:00 +0000","value":0},{"date":"2015-08-24 03:00:00 +0000","value":0},{"date":"2015-08-24 04:00:00 +0000","value":0},{"date":"2015-08-24 05:00:00 +0000","value":0},{"date":"2015-08-24 06:00:00 +0000","value":0},{"date":"2015-08-24 07:00:00 +0000","value":0},{"date":"2015-08-24 08:00:00 +0000","value":0},{"date":"2015-08-24 09:00:00 +0000","value":0},{"date":"2015-08-24 10:00:00 +0000","value":0},{"date":"2015-08-24 11:00:00 +0000","value":0},{"date":"2015-08-24 12:00:00 +0000","value":0},{"date":"2015-08-24 13:00:00 +0000","value":1},{"date":"2015-08-24 14:00:00 +0000","value":1},{"date":"2015-08-24 15:00:00 +0000","value":0},{"date":"2015-08-24 16:00:00 +0000","value":0},{"date":"2015-08-24 17:00:00 +0000","value":0},{"date":"2015-08-24 18:00:00 +0000","value":0},{"date":"2015-08-24 19:00:00 +0000","value":0},{"date":"2015-08-24 20:00:00 +0000","value":0},{"date":"2015-08-24 21:00:00 +0000","value":0},{"date":"2015-08-24 22:00:00 +0000","value":0},{"date":"2015-08-24 23:00:00 +0000","value":0},{"date":"2015-08-25 00:00:00 +0000","value":0},{"date":"2015-08-25 01:00:00 +0000","value":0},{"date":"2015-08-25 02:00:00 +0000","value":0},{"date":"2015-08-25 03:00:00 +0000","value":0},{"date":"2015-08-25 04:00:00 +0000","value":0},{"date":"2015-08-25 05:00:00 +0000","value":0},{"date":"2015-08-25 06:00:00 +0000","value":0},{"date":"2015-08-25 07:00:00 +0000","value":0},{"date":"2015-08-25 08:00:00 +0000","value":0},{"date":"2015-08-25 09:00:00 +0000","value":0},{"date":"2015-08-25 10:00:00 +0000","value":0},{"date":"2015-08-25 11:00:00 +0000","value":0},{"date":"2015-08-25 12:00:00 +0000","value":0},{"date":"2015-08-25 13:00:00 +0000","value":0},{"date":"2015-08-25 14:00:00 +0000","value":0},{"date":"2015-08-25 15:00:00 +0000","value":0},{"date":"2015-08-25 16:00:00 +0000","value":0},{"date":"2015-08-25 17:00:00 +0000","value":0},{"date":"2015-08-25 18:00:00 +0000","value":0},{"date":"2015-08-25 19:00:00 +0000","value":0},{"date":"2015-08-25 20:00:00 +0000","value":0},{"date":"2015-08-25 21:00:00 +0000","value":0},{"date":"2015-08-25 22:00:00 +0000","value":0},{"date":"2015-08-25 23:00:00 +0000","value":0},{"date":"2015-08-26 00:00:00 +0000","value":0},{"date":"2015-08-26 01:00:00 +0000","value":0},{"date":"2015-08-26 02:00:00 +0000","value":0},{"date":"2015-08-26 03:00:00 +0000","value":0},{"date":"2015-08-26 04:00:00 +0000","value":0},{"date":"2015-08-26 05:00:00 +0000","value":0},{"date":"2015-08-26 06:00:00 +0000","value":0},{"date":"2015-08-26 07:00:00 +0000","value":0},{"date":"2015-08-26 08:00:00 +0000","value":0},{"date":"2015-08-26 09:00:00 +0000","value":0},{"date":"2015-08-26 10:00:00 +0000","value":0},{"date":"2015-08-26 11:00:00 +0000","value":0},{"date":"2015-08-26 12:00:00 +0000","value":0},{"date":"2015-08-26 13:00:00 +0000","value":0},{"date":"2015-08-26 14:00:00 +0000","value":0},{"date":"2015-08-26 15:00:00 +0000","value":0},{"date":"2015-08-26 16:00:00 +0000","value":0},{"date":"2015-08-26 17:00:00 +0000","value":0},{"date":"2015-08-26 18:00:00 +0000","value":0},{"date":"2015-08-26 19:00:00 +0000","value":0},{"date":"2015-08-26 20:00:00 +0000","value":0},{"date":"2015-08-26 21:00:00 +0000","value":0},{"date":"2015-08-26 22:00:00 +0000","value":0},{"date":"2015-08-26 23:00:00 +0000","value":0},{"date":"2015-08-27 00:00:00 +0000","value":0},{"date":"2015-08-27 01:00:00 +0000","value":0},{"date":"2015-08-27 02:00:00 +0000","value":0},{"date":"2015-08-27 03:00:00 +0000","value":0},{"date":"2015-08-27 04:00:00 +0000","value":0},{"date":"2015-08-27 05:00:00 +0000","value":0},{"date":"2015-08-27 06:00:00 +0000","value":0},{"date":"2015-08-27 07:00:00 +0000","value":0},{"date":"2015-08-27 08:00:00 +0000","value":0},{"date":"2015-08-27 09:00:00 +0000","value":0},{"date":"2015-08-27 10:00:00 +0000","value":0},{"date":"2015-08-27 11:00:00 +0000","value":0},{"date":"2015-08-27 12:00:00 +0000","value":0},{"date":"2015-08-27 13:00:00 +0000","value":0}]}]; //This is beautiful, if I may say so myself.
+
+//Standard D3 Defaults for time data
+var x = d3.time.scale().range([0, width]);
+    y = d3.scale.linear().range([height, 0]);
+    xAxis = d3.svg.axis().scale(x).orient("bottom").ticks(10);
+    yAxis = d3.svg.axis().scale(y).orient("left").ticks(10);
+
+//Looking for a date to parse and a value to call for a height
+var dateLine = d3.svg.line()
+  .x(function(d) { return x(parseDate(d.date)) })
+  .y(function(d) { return y(d.value)})
+
+//Call the graphic
+var width = 1200
+var PerHour_dateChart = d3.select("#PerHour_date_chart")
+   .attr("width", width + margin.left + margin.right)
+   .attr("height", height + margin.top + margin.bottom)
+   .append("g")
+   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+x.domain(d3.extent(PerHour_toPlot[0].data, function(d) { return parseDate(d.date); }));
+y.domain(d3.extent(PerHour_toPlot[0].data, function(d) { return d.value; }));
+
+
+PerHour_toPlot.forEach(function(line, index){
+ PerHour_dateChart.append("path")
+   .datum(line.data)
+   .style("stroke",COLORS(index))
+   .attr("id", line.title)
+   .attr("data-legend",line.title)
+   .attr("class", "line")
+   .attr("d", dateLine);
+})
+
+//Add the y Axis
+PerHour_dateChart.append("g")
+  .attr("class", "y axis")
+  .call(yAxis)
+  .append("text")
+  .attr("transform", "rotate(-90)")
+  .attr("y", 6)
+  .attr("dy", ".71em")
+  .style("text-anchor", "end")
+
+//Add the x Axis
+PerHour_dateChart.append("g")
+  .attr("class", "x axis")
+  .attr("transform", "translate(0," + height + ")")
+  .call(xAxis);
+
+//Add a legend
+legend = PerHour_dateChart.append("g")
+  .attr("class","legend")
+  .attr("transform","translate(50,30)")
+  .style("font-size","14px")
+  .call(d3.legend)
+
+// function make_x_axis() {
+//   return d3.svg.axis()
+//     .scale(x)
+//     .orient("bottom")
+//     .ticks(5);
+// }
+// function make_y_axis() {
+//   return d3.svg.axis()
+//     .scale(y)
+//     .orient("left")
+//     .ticks(5)
+// }
+
+//Add grid
+// PerHour_dateChart.append("g")
+//   .attr("class", "grid")
+//   .attr("transform", "translate(0," + height + ")")
+//   .call(xAxis)
+//     .tickSize(-height, 0, 0)
+//     .tickFormat("")
+//
+// PerHour_dateChart.append("g")
+//   .attr("class", "grid")
+//   .call(yAxis)
+//     .tickSize(-width, 0, 0)
+//     .tickFormat("")
+
+</script>
+
+<p style="font-size:10px; margin:-10px 0px 0px 35px;">UTC/GMT Time</p>
+
+
+<pre>
+//Spacing Comment
+//Checking for update
+</pre>
+<h1 id="individual-user-contributions">Individual User Contributions</h1>
+<p style="font-size:22px; margin-top:20px;"><strong>24</strong> total mappers with <strong>14</strong> new mappers.</p>
+
+
+<pre>
+var userList = osmdata(dataURL+ 'user_list.json')
+var userTable = []
+var ops = {headers:["User","Node Count", "Way Count", "Changeset Count"], row_function:'showUserEditsFromRows'}
+
+userList.forEach(function(user){
+	userTable.push([user.user, user.nodes, user.ways, user.changesets])
+})
+ops.title="userTable"
+</pre>
+
+<div style="width:45%; display:inline-block"><div class="osmviz table">
+
+  <table id="userTable" class="dataTable"><thead><tr><th>User</th><th>Node Count</th><th>Way Count</th><th>Changeset Count</th></tr></thead><tbody><tr><td>mikelmaron</td><td>0</td><td>165</td><td>13</td></tr><tr><td>ediyes</td><td>4</td><td>558</td><td>76</td></tr><tr><td>calfarome</td><td>0</td><td>418</td><td>43</td></tr><tr><td>EKNunez</td><td>0</td><td>170</td><td>8</td></tr><tr><td>RichRico</td><td>0</td><td>437</td><td>41</td></tr><tr><td>Rub21</td><td>0</td><td>274</td><td>25</td></tr><tr><td>karitotp</td><td>0</td><td>425</td><td>25</td></tr><tr><td>samely</td><td>0</td><td>64</td><td>9</td></tr><tr><td>abel801</td><td>17</td><td>130</td><td>53</td></tr><tr><td>dannykath</td><td>3</td><td>381</td><td>42</td></tr><tr><td>Luis36995</td><td>0</td><td>95</td><td>20</td></tr><tr><td>hencho</td><td>55</td><td>21</td><td>17</td></tr><tr><td>ademiro</td><td>0</td><td>18</td><td>5</td></tr><tr><td>thait</td><td>1</td><td>18</td><td>16</td></tr><tr><td>vlads2015</td><td>0</td><td>13</td><td>6</td></tr><tr><td>Luis01</td><td>2</td><td>10</td><td>4</td></tr><tr><td>SMERAT</td><td>0</td><td>2</td><td>1</td></tr><tr><td>Sandrarroyoa</td><td>9</td><td>42</td><td>22</td></tr><tr><td>maritza58</td><td>1</td><td>90</td><td>36</td></tr><tr><td>Helgakmp</td><td>6</td><td>7</td><td>8</td></tr><tr><td>Carlihta</td><td>5</td><td>13</td><td>13</td></tr><tr><td>Evelna</td><td>3</td><td>15</td><td>14</td></tr><tr><td>winurch63</td><td>0</td><td>53</td><td>17</td></tr><tr><td>Nayshalv</td><td>3</td><td>21</td><td>6</td></tr></tbody></table>
+
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    var table = $('#userTable').DataTable();
+
+    $('#userTable tbody').on( 'click', 'tr', function () {
+      $(this).toggleClass('selected');
+      showUserEditsFromRows( table.rows('.selected').data())
+    });
+  });
+</script>
+</div><div style="width:54%; display:inline-block; vertical-align:top;"><div id='UserContributions' style='height:550px; width:700px; vertical-align:text-top; margin-left:5px;'></div>
+
+<script type="text/javascript">
+	var map = L.map('UserContributions');
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, id: 'mapbox.mapbox-streets-v5'}).addTo(map);
+	map.setView([0, 0], 2);
+	var userEdits = L.featureGroup().addTo(map)
+	var userEditIds = {}
+
+	function showUserEdits(selectedUserNames){
+		var usersToAdd = []
+		//If none selected, clear all the layers
+		if ( selectedUserNames.length == 0 ){
+			userEditIds = {}
+			userEdits.clearLayers();
+		//Else, check if the layer was removed
+		}else{
+			userEdits.getLayers().forEach(function(layer){
+				if (selectedUserNames.indexOf(userEditIds[layer._leaflet_id]) < 0){
+					delete userEditIds[layer._leaflet_id]
+					userEdits.removeLayer(layer)
+				}
+			})
+		}
+		//Ultimately, add only those userNames which don't exist in userEditIds
+		usersToAdd = []
+		vals = _.values(userEditIds)
+		selectedUserNames.forEach(function(name){
+			if (vals.indexOf(name) < 0){
+				usersToAdd.push(name)
+			}
+		})
+
+		usersToAdd.forEach(function(userName){
+			$.getJSON('./user_list_with_geometry/'+userName+'.json', function(data, err){
+	      thisLayer = L.geoJson(data,
+					{
+				    onEachFeature: function(feature, layer){
+							layer.bindPopup("User " + userName);
+						}
+					}
+				)
+				userEdits.addLayer(thisLayer)
+				userEditIds[thisLayer._leaflet_id] = userName
+				map.fitBounds(userEdits.getBounds())
+	    })
+		})
+  }
+
+	function showUserEditsFromRows(rows){
+		selecedUserNames = _.collect(rows, function(row){return row[0]})
+		showUserEdits(selecedUserNames)
+	}
+
+</script>
+</div>
+
+
+
+<pre>
+// Highways
+var highways_per_tag = osmdata(dataURL + 'number_of_highways_per_tag.json')
+var totalHighways = 0
+var highwayTable = []
+var options = {headers:['Tag', 'Count']}
+highways_per_tag.forEach(function(d){
+	highwayTable.push([d.tag, d.count])
+	totalHighways = totalHighways + d.count
+})
+
+// Buildings
+var buildings_per_tag = osmdata(dataURL + 'number_of_buildings_per_tag.json')
+var buildingsTable = []
+var buildingCount = 0
+var options = {headers:['Tag', 'Count']}
+buildings_per_tag.forEach(function(d){
+	buildingsTable.push([d.tag, d.count])
+	buildingCount = buildingCount + d.count
+})
+
+// Changesets
+var changesets_per_tag = osmdata(dataURL + 'number_of_changesets_per_tag.json')
+var changesetTable = []
+var changesetCount = 0
+var options = {headers:['Tag', 'Count']}
+changesets_per_tag.forEach(function(d){
+	changesetTable.push([d.tag, d.count])
+	changesetCount = changesetCount + d.count
+})
+
+// Ways
+var ways_per_tag = osmdata(dataURL + 'number_of_ways_per_tag.json')
+var wayTable = []
+var wayCount = 0
+var options = {headers:['Tag', 'Count']}
+ways_per_tag.forEach(function(d){
+	wayTable.push([d.tag, d.count])
+	wayCount = wayCount + d.count
+})
+
+//Totals
+var totalOptions = {headers: ['Roads', 'Buildings', 'Ways','Changesets']}
+var totalValues = [[totalHighways, buildingCount, wayCount, changesetCount]]
+</pre>
+<h1 id="total-object-counts">Total Object Counts</h1>
+
+<pre>
+//where I had to add a comment
+</pre>
+
+<div class="osmviz table">
+  <table id="table_77008" class="dataTable"><thead><tr><th>Roads</th><th>Buildings</th><th>Ways</th><th>Changesets</th></tr></thead><tbody><tr><td>749</td><td>2504</td><td>3440</td><td>520</td></tr></tbody></table>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+      $('#table_77008').DataTable({
+        paging:   false,
+        info:     false,
+        bFilter: false,
+        scrollY: 300
+      });
+  });
+</script>
+
+
+
+<pre>
+options = {headers:['Tag', 'Count']}
+</pre>
+
+<div style="float:left; display:inline-block; margin:10px; width:21%; vertical-align:top;"><h2>Roads</h2>
+<div class="osmviz table">
+  <table id="table_66770" class="dataTable"><thead><tr><th>Tag</th><th>Count</th></tr></thead><tbody><tr><td>#mapgive-cusco</td><td>749</td></tr></tbody></table>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+      $('#table_66770').DataTable({
+        paging:   false,
+        info:     false,
+        bFilter: false,
+        scrollY: 300
+      });
+  });
+</script>
+<p style="text-align:right">Total: <strong>749</strong></p></div>
+
+<pre>
+options = {headers:['Tag', 'Count']}
+</pre>
+
+<div style="float:left; display:inline-block; margin:10px; width:21%; vertical-align:top;"><h2>Buildings</h2><div class="osmviz table">
+  <table id="table_47469" class="dataTable"><thead><tr><th>Tag</th><th>Count</th></tr></thead><tbody><tr><td>#mapgive-cusco</td><td>2504</td></tr></tbody></table>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+      $('#table_47469').DataTable({
+        paging:   false,
+        info:     false,
+        bFilter: false,
+        scrollY: 300
+      });
+  });
+</script>
+<p style="text-align:right">Total: <strong>2504</strong></p></div>
+
+
+<pre>
+options = {headers:['Tag', 'Count']} 
+</pre>
+
+<div style="float:left; display:inline-block; margin:10px; width:21%; vertical-align:top;"><h2>Ways</h2><div class="osmviz table">
+  <table id="table_40632" class="dataTable"><thead><tr><th>Tag</th><th>Count</th></tr></thead><tbody><tr><td>#mapgive-cusco</td><td>3440</td></tr></tbody></table>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+      $('#table_40632').DataTable({
+        paging:   false,
+        info:     false,
+        bFilter: false,
+        scrollY: 300
+      });
+  });
+</script>
+<p style="text-align:right">Total: <strong>3440</strong></p></div>
+
+
+<pre>
+options = {headers:['Tag', 'Count']}
+</pre>
+
+<div style="float:left; display:inline-block; margin:10px; width:21%; vertical-align:top;"><h2>Total Changesets</h2><div class="osmviz table">
+  <table id="table_49654" class="dataTable"><thead><tr><th>Tag</th><th>Count</th></tr></thead><tbody><tr><td>#mapgive-cusco</td><td>520</td></tr></tbody></table>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+      $('#table_49654').DataTable({
+        paging:   false,
+        info:     false,
+        bFilter: false,
+        scrollY: 300
+      });
+  });
+</script>
+<p style="text-align:right">Total: <strong>520</strong></p></div>
+</article>
+
+			<div id="footer" style="text-align: center; margin-top: 100px;">
+  <hr>
+  <p>Thu Aug 27 2015 13:55:19 GMT+0000 (UTC) </p>
+
+  <a href="http://mapgive.state.gov/" target="_blank">
+    <img src="https://pbs.twimg.com/profile_images/441322778780659712/Rd07X3fe.png" height="75">
+  </a>
+  <img src="./templates/assets/images/cu.png" height="75">
+  <a href="http://epic.cs.colorado.edu/" target="_blank">
+    <img src="./templates/assets/images/epic.png" height="75">
+  </a>
+  <h6 style="font-size:15px;">
+    Page built with <a href="http://github.com/project-epic/osmdown">osmdown</a>
+    and <a href="http://github.com/project-epic/epic-osm">epic-osm</a>.
+    Licensed under the terms of the <a href="http://project-epic.github.io/epic-osm/about/#licensing">MIT License</a>
+  </h6>
+
+</div>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+<script type="text/javascript">
+  function toggleCode() {
+    var pres = document.getElementsByTagName('pre');
+    for (i = 0; i < pres.length; i++) {
+    	if (pres[i].style.display == 'none') {
+    		pres[i].style.display = 'block'
+    		document.getElementById('CodeButton').innerText = 'Hide Code'
+    	}
+    	else {
+    		pres[i].style.display = 'none'
+    		document.getElementById('CodeButton').innerText = 'Show Code'
+    	}
+    }
+  }
+</script>
+
+
+		</div>
+
+	</body>
+
+</html>

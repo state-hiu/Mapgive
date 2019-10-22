@@ -1,0 +1,189 @@
+<div id="summaryblock" class="block">
+  <div id="summary-map" class="left">
+  </div>
+
+  <div id="Stats" class="center">
+    <table>
+      <tr>
+        <td><h3>Contributors</h3></td>
+        <td><h3 id="users">###</h3></td>
+      </tr><tr>
+        <tr>
+          <td><h3>Changesets</h3></td>
+          <td><h3 id="changesets">###</h3></td>
+      </tr><tr>
+        <td><h3>Miles of Roads</h3></td>
+        <td><h3 id="milesofroad">###</h3></td>
+      </tr><tr>
+        <td><h3># of Buildings</h3></td>
+        <td><h3 id="buildingcount">###</h3></td>
+      </tr>
+    </table>
+  </div>
+
+  <svg id="cumulativechart" class="right">
+  </svg>
+
+  <div id="summary_slider" style="width: 90%; margin: 0 auto;">
+  </div>
+  <br>
+  <br>
+</div>
+
+
+<script type="text/javascript" class="jsonp" src="json/changesets_x_day.jsonp"></script>
+<script type="text/javascript" class="jsonp" src="json/new_nodes_per_day.jsonp"></script>
+<script type="text/javascript" class="jsonp" src="json/new_ways_per_day.jsonp"></script>
+<script type="text/javascript" class="jsonp" src="json/bbox_geojson_geometry.jsonp"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  var summaryMap = L.map('summary-map', {scrollWheelZoom: false});
+  //Add the bounding box
+  var bbox = L.geoJson(bbox_geojson_geometry)
+  bbox.addTo(summaryMap)
+  summaryMap.fitBounds(bbox.getBounds());
+  // add an OpenStreetMap tile layer
+  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(summaryMap);
+
+  var parseDate = d3.time.format("%Y-%m-%d %X %Z").parse;
+
+  var first_entry = changesets_x_day[0]
+  var last_entry  = changesets_x_day[changesets_x_day.length-1]
+  var mid_point = Math.round((changesets_x_day.length/2))
+  var scale = Math.round(changesets_x_day.length/12)
+
+  //This is for the linechart
+  var margin = {top: 20, right: 20, bottom: 30, left: 75},
+    width = 900 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
+  //Standard D3 Defaults
+  var x = d3.time.scale().range([0, width]);
+      y = d3.scale.linear().range([height, 0]);
+      xAxis = d3.svg.axis().scale(x).orient("bottom");
+      yAxis = d3.svg.axis().scale(y).orient("left");
+
+  //Node Line
+  var node_line = d3.svg.line()
+    .x(function(d) { return x(parseDate(d.start_date)) })
+    .y(function(d) { return y(d.cumulative_nodes)})
+
+  //Way Line
+  var way_line  = d3.svg.line()
+    .x(function(d) { return x(parseDate(d.start_date)) })
+    .y(function(d) { return y(d.cumulative_ways)})
+
+  //Call the graphic
+  var linechartgraphic = d3.select("#cumulativechart")
+     .attr("width", width + margin.left + margin.right)
+     .attr("height", height + margin.top + margin.bottom)
+     .append("g")
+     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  //Set the domain (Set the domain by nodes)
+  x.domain(d3.extent(new_nodes_per_day, function(d) { return parseDate(d.start_date); }));
+  y.domain(d3.extent(new_nodes_per_day, function(d) { return d.cumulative_nodes; }));
+
+  //Add the x Axis
+  linechartgraphic.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
+
+  //Add the y Axis
+  linechartgraphic.append("g")
+    .attr("class", "y axis")
+    .call(yAxis)
+    .append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", 6)
+    .attr("dy", ".71em")
+    .style("text-anchor", "end")
+
+  // linechartgraphic.append("path")
+  //   .datum(data)
+  //   .attr("class", "line")
+  //   .attr("d", line);
+
+  linechartgraphic.append("path")
+    .datum(new_nodes_per_day)
+    .attr("id", "node-line")
+    .attr("class", "line")
+    .attr("d", node_line);
+
+  linechartgraphic.append("path")
+      .datum(new_ways_per_day)
+      .attr("id", "way-line")
+      .attr("class", "line")
+      .attr("d", way_line);
+
+
+  //Finally, add the Legend:
+  //TODO
+
+  function updateCenterStats(min, max){
+    users = []
+    changesetCount = 0
+    changesets_x_day.forEach(function(bin){
+      if (bin.objects.length > 0){
+        if ( (Date.parse(bin.start_date) > min) && (Date.parse(bin.end_date) < max) ){
+          bin.objects.forEach(function(changeset){
+            users.push(changeset.uid)
+            changesetCount+=1
+          })
+        }
+      }
+    })
+    $("#milesofroad").text('N/A')
+    $("#users").text(_.uniq(users).length)
+    $('#changesets').text(changesetCount)
+  }
+
+  updateCenterStats(Date.parse(first_entry.start_date), Date.parse(last_entry.end_date))
+
+  //Date Slider & Selector for this Block
+  var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
+  $("#summary_slider").dateRangeSlider({
+    bounds:{
+      min: Date.parse(first_entry.start_date),
+      max: Date.parse(last_entry.end_date)
+    },
+    defaultValues:{
+      min: Date.parse(first_entry.start_date),
+      max: Date.parse(last_entry.end_date)
+    },
+    formatter:function(val){
+      var days = val.getDate(),
+          month = val.getMonth(),
+          year = val.getFullYear();
+      return months[month] + " " + days +", "+ year;
+    },
+    scales: [{
+      first: function(value){ return value; },
+      end: function(value) {return value; },
+      next: function(value){
+        var next = new Date(value);
+        return new Date(next.setMonth(value.getMonth() + 1));
+      },
+      label: function(value){
+        return months[value.getMonth()];
+      },
+      format: function(tickContainer, tickStart, tickEnd){
+        tickContainer.addClass("myCustomClass");
+      }
+    }]
+  }).bind("valuesChanged", function(e, data){
+    console.log("Something moved. min: " + data.values.min + " max: " + data.values.max);
+    x.domain([data.values.min, data.values.max])
+    linechartgraphic.transition().duration(750)
+      .select(".x.axis").call(xAxis);
+    linechartgraphic.transition().duration(750)
+      .select("#node-line").attr("d", node_line);
+    linechartgraphic.transition().duration(750)
+      .select("#way-line").attr("d", way_line);
+    updateCenterStats(data.values.min, data.values.max)
+    });
+});
+</script>

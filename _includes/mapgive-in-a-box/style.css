@@ -410,7 +410,9 @@ body {
 .doc-nav {
   /*position:absolute;*/
   padding-top: 5px;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 75px;
   margin-left: -320px;
 }
 .doc-nav.fixed {

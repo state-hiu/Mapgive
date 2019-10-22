@@ -1,0 +1,190 @@
+<div id="changeset-block" class="block">
+  <h5 id="changesetCount" class="subInfo"></h5> by
+  <h5 id="userCount" class="subInfo"></h5>
+  <br>
+
+
+  <ul id="user-list" class="overscroll">
+  </ul>
+
+  <div id="changesets-map">
+  </div>
+
+  <div id="user-changesets">
+    <h2 id="user-changesets-title"><em>select a user</em></h2>
+    <ul id="user-changesets-list" class="overscroll">
+    </ul>
+  </div>
+
+  <div id="changeset_slider" style="width: 90%; margin: 0 auto;">
+  </div>
+
+</div>
+
+<script class="jsonp" src="json/changesets_x_day.jsonp"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+  //Load the changesets
+  var parseDate = d3.time.format("%Y-%m-%d %X %Z").parse;
+
+  var first_entry = changesets_x_day[0]
+  var last_entry  = changesets_x_day[changesets_x_day.length-1]
+  var mid_point = Math.round((changesets_x_day.length/2))
+  var scale = Math.round(changesets_x_day.length/12)
+
+  //Parse the template:
+  var changesetViewTemplate = $('#changesetViewTemplate').html();
+  Mustache.parse(changesetViewTemplate);
+  // console.log(changesetViewTemplate)
+
+  //Add the map!
+  var changesetMap = L.map('changesets-map', {scrollWheelZoom: false}).setView([51.505, -0.09], 13);
+  changesetMap.on('focus', function() { changesetMap.scrollWheelZoom.enable(); });
+  // changesetMap.on('focusout', function() { changesetMap.scrollWheelZoom.disable(); });
+
+
+  // add an OpenStreetMap tile layer
+  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(changesetMap);
+
+  var c = null
+  var highlighted = null
+
+  //Update the Changeset List
+  function showChangesetDetails(user, changesets){
+    $("#user-changesets-title").text(user)
+    var changesetList = $("#user-changesets-list")
+    changesetList.empty();
+    if (c != null){ changesetMap.removeLayer(c) }
+
+    var changesetsForMap = {type: "FeatureCollection", features:[]}
+
+    //This will be a layer of geojson objects
+    changesets.forEach(function(changeset){
+      changesetsForMap.features.push({type: "Feature", geometry: changeset.geometry, properties: changeset})
+      // console.log(changeset)
+      changeset.formatDate = function(){
+        return function(text, render) {
+          var time = new Date(render(text))
+          return time.toTimeString()+"<br>"+MONTHS[time.getMonth()] + " " + time.getDate() +", "+ time.getFullYear()
+        }
+      }
+      var li = $('<li/>')
+        .addClass('ui-menu-item')
+        .attr('role', 'menuitem')
+        .addClass('ui-all')
+        .addClass('changeset-details')
+        .html(Mustache.render(changesetViewTemplate, changeset))
+        .appendTo(changesetList)
+        .bind("click", function(){
+          if (highlighted != null){ changesetMap.removeLayer(highlighted) }
+          highlighted = L.geoJson(changeset.geometry,{
+            style:{
+              "color": "#004070",
+              "fillColor" : "#A60007",
+              "weight": 5,
+              "opacity": 1
+            }
+          })
+          highlighted.addTo(changesetMap)
+          changesetMap.fitBounds(highlighted.getBounds());
+        });
+    })
+    c = L.geoJson(changesetsForMap, {
+     onEachFeature: function (feature, layer) {
+         layer.bindPopup(feature.properties.comment);
+     }
+    })
+    c.addTo(changesetMap)
+    changesetMap.fitBounds(c.getBounds());
+  }
+
+  function updateUserList(min, max){
+    var userList = $("#user-list")
+    users = {}
+    changesetCount = 0
+    changesets_x_day.forEach(function(bin){
+      if (bin.objects.length > 0){
+        if ( (Date.parse(bin.start_date) > min) && (Date.parse(bin.end_date) < max) ){
+          bin.objects.forEach(function(changeset){
+            if (users[changeset.user] == undefined){ users[changeset.user] = [] }
+            users[changeset.user].push(changeset)
+            changesetCount++;
+          })
+        }
+      }
+    })
+    //Update Simple Stats:
+    $("#changesetCount").text(changesetCount + " Changesets");
+    $("#userCount").text(Object.keys(users).length + " Users");
+
+    //Iterate over unique users
+    userList.empty();
+    var usersToSort = []
+    Object.keys(users).forEach(function(username){
+      usersToSort.push({name: username, count: users[username].length})
+    })
+    _.sortByOrder(usersToSort, 'count', false).forEach(function(user){
+      var li = $('<li/>')
+        .addClass('ui-menu-item')
+        .attr('role', 'menuitem')
+        .appendTo(userList);
+      var aaa = $('<a/>')
+        .addClass('ui-all')
+        .text( user.count+" "+user.name)
+        .appendTo(li)
+        .bind("click", function(){
+          showChangesetDetails(user.name, users[user.name])
+        });
+    });
+  }
+
+  updateUserList(Date.parse(first_entry.start_date), Date.parse(last_entry.end_date))
+
+
+
+
+
+
+
+
+  //Date Slider & Selector for this Block
+  var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
+  $("#changeset_slider").dateRangeSlider({
+    bounds:{
+      min: Date.parse(first_entry.start_date),
+      max: Date.parse(last_entry.end_date)
+    },
+    defaultValues:{
+      min: Date.parse(first_entry.start_date),
+      max: Date.parse(last_entry.end_date)
+    },
+    formatter:function(val){
+      var days = val.getDate(),
+          month = val.getMonth(),
+          year = val.getFullYear();
+      return months[month] + " " + days +", "+ year;
+    },
+    scales: [{
+      first: function(value){ return value; },
+      end: function(value) {return value; },
+      next: function(value){
+        var next = new Date(value);
+        return new Date(next.setMonth(value.getMonth() + 1));
+      },
+      label: function(value){
+        return months[value.getMonth()];
+      },
+      format: function(tickContainer, tickStart, tickEnd){
+        tickContainer.addClass("myCustomClass");
+      }
+    }]
+  }).bind("valuesChanged", function(e, data){
+    // console.log("Something moved. min: " + data.values.min + " max: " + data.values.max);
+    updateUserList(data.values.min, data.values.max)
+  });
+})
+</script>

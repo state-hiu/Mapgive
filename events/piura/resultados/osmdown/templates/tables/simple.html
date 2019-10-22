@@ -1,0 +1,14 @@
+<div class="osmviz table">
+  {{{ table }}}
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+      $('#{{id}}').DataTable({
+        paging:   false,
+        info:     false,
+        bFilter: false,
+        scrollY: 300
+      });
+  });
+</script>
