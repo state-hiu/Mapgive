@@ -1012,10 +1012,8 @@ dt {
 }
 
 .projects-container {
-  position: absolute;
   bottom: 0;
-  height: 400px;
-  width: 92%;
+  width: 95%;
 }
 
 .projects-container.additional-resource {
@@ -1034,18 +1032,16 @@ dt {
 
 .projects-thumbnail .img-responsive {
     width: 100%;
-    max-width: 240px;
-    max-height: 230px;
+    max-width: 300px;
     overflow: hidden;
     -ms-interpolation-mode: bicubic;
-    margin-bottom: 60%;
     position: relative;
     object-fit: cover;
 }
 
 .projects-thumbnail .img-responsive.additional-resource-image {
     width: 100%;
-    max-width: 290px;
+    max-width: 300px;
     max-height: 190px;
     overflow: hidden;
     -ms-interpolation-mode: bicubic;
@@ -1066,7 +1062,6 @@ dt {
 }
 
 .projects-thumbnail .caption {
-    margin-top: -50%;
     font-size: .8em;
     color: #666;
 }
