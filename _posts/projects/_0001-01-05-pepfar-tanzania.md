@@ -9,7 +9,7 @@ date: 20161118
 type: remote
 photo: 'https://mapgive.state.gov/assets/img/tanz_pepfar_logo.jpg'
 video: 
-featured: yes
+featured: no
 quote: ""
 hashtag:
 tags:

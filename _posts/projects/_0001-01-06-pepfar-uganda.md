@@ -9,7 +9,7 @@ date: 20161223
 type: remote
 photo: 'https://mapgive.state.gov/assets/img/uganda_pepfar_logo.jpg'
 video: 
-featured: yes
+featured: no
 quote: ""
 hashtag:
 tags:

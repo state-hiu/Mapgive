@@ -1012,16 +1012,14 @@ dt {
 }
 
 .projects-container {
-  position: absolute;
   bottom: 0;
-  height: 400px;
-  width: 92%;
+  width: 95%;
 }
 
 .projects-container.additional-resource {
   position: absolute;
   bottom: 0;
-  height: 515px;
+  height: 480px;
   width: 92%;
 }
 
@@ -1035,10 +1033,8 @@ dt {
 .projects-thumbnail .img-responsive {
     width: 100%;
     max-width: 240px;
-    max-height: 230px;
     overflow: hidden;
     -ms-interpolation-mode: bicubic;
-    margin-bottom: 60%;
     position: relative;
     object-fit: cover;
 }
@@ -1066,7 +1062,6 @@ dt {
 }
 
 .projects-thumbnail .caption {
-    margin-top: -50%;
     font-size: .8em;
     color: #666;
 }

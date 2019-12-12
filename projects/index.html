@@ -22,7 +22,99 @@ margin: 0 0 3px 40px;
 .tasks a:hover {
    text-decoration: underline; 
 }
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.flex-item-pic {
+  background: none;
+  width: 300px;
+  height: 200px;
+  margin-top: 0px;
+  box-shadow: 1px 1px 7px -3px #888;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+
+.flex-item {
+  background: none;
+  padding: 20px;
+  width: 300px;
+  height: 200px;
+  margin-top: 0px;
+  box-shadow: 1px 1px 7px -3px #888;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+
+.chart div {
+  font: 20px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 8px;
+  margin: 1px;
+  color: white;
+}
+
+.axis path,
+.axis line {
+  stroke: #D4D8DA;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    vertical-align: top;
+    overflow: hidden;
+}
+.svg-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+rect.mapped { fill: rgba(0, 128, 0, 0.4) }
+
+rect.validated { fill: rgba(255, 198, 12, 0.4) }
+
+ 
+text.value {
+    font-size: 20px;
+    fill: red;
+}
+
+text {
+    font: 12px Open Sans,Arial,sans-serif;
+    color: black;
+}
+
+
 </style>
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
 
 <div class="row">
   <div class="col-md-9">
@@ -40,6 +132,8 @@ margin: 0 0 3px 40px;
 
 <div class="col-md-9">
 
+
+
     <div class="row">
       {% assign mid = site.categories.projects | sort: 'date' %}
       {% assign sorted_pages = mid | reverse %}
@@ -55,14 +149,20 @@ margin: 0 0 3px 40px;
             <div class="row">
             {% endif %}
 
-            <div class="col-sm-4 projects-thumbnail">
+            <div class="col-sm-10 projects-thumbnail">
               <div class="projects-container">
-                <a href="{{ post.external_url }}" class="image">
-                  <img src="{{ post.photo }} " alt="{{ post.title }}" class="img-responsive shadowed" />
-                </a>
+                <ul class="flex-container">
+                    <li class="flex-item-pic" >
+                        <a href="{{ post.external_url }}" class="image">
+                          <img src="{{ site.baseurl }}/assets/img/{{ post.photo }} " alt="{{ post.title }}" class="img-responsive shadowed" />
+                        </a>
+                    </li>
+                    <li class="flex-item" style="display:flex"><div id="container" class="svg-container"></div></li>
+                </ul>
                 <div class="caption">
                   <h3><a href="{{ post.external_url }}">{{ post.title }}</a></h3>
                   <p><strong>author</strong>: {{ post.author }}</p>
+                  {{ post.content }}
                   <!--
                   <p><strong>published</strong>: {{ post.date | date: '%B %d, %Y' }}</p>
                   -->
@@ -120,5 +220,98 @@ margin: 0 0 3px 40px;
   </div>
 
 </div>
-          
+
+<script>
+$(document).ready(function(){
+
+   $.ajax({
+            url: "https://tasks.hotosm.org/api/v1/stats/project/7260",
+            type: 'GET',
+            dataType: 'json',
+            success: function(res) {
+                console.log('hi');
+                console.log(res.percentMapped);
+                //$('#result').html(res.percentMapped)
+
+                //d3 code
+                //http://bl.ocks.org/anonymous/64f9c70bd629810bee67392f6224d414
+                var data = [{"category": "mapped", "percent_complete": res.percentMapped },{"category": "validated", "percent_complete": res.percentValidated }];
+
+                var chartElement = d3.select('div#container').node();
+
+                console.log('chart width ' + chartElement.getBoundingClientRect().width)
+                console.log('chart height ' + chartElement.getBoundingClientRect().height)
+
+                height = chartElement.getBoundingClientRect().height;
+
+                width = chartElement.getBoundingClientRect().width;
+
+                // since this is a horizontal bar chart, this is reversed
+                var x = d3.scaleLinear().range([0, width]);
+                var y = d3.scaleBand().range([height, 0])
+
+                x.domain([0, 100]);
+                y.domain(data.map(function(d) { return d.category; })).padding(0.45);
+
+                var svg = d3.select("div#container")
+                      .append("svg")
+                      .attr("preserveAspectRatio", "xMinYMin meet")
+                      .attr("viewBox", "0 0 300 200")
+                      .classed("svg-content", true);
+
+                // append the rectangles for the bar chart
+                bar = svg.selectAll(".bar")
+                  .data(data)
+                      .enter().append("g")
+
+
+                  bar.append("rect")
+                  //.attr("x", 0)
+                  //.attr("y", y.bandwidth())
+                  //.attr("x", function(d) { return x(d.sales); })
+                  .attr("class", function(d) { return d.category })
+                  .attr("width", function(d) { return d.percent_complete + "%"; })
+                  .attr("y", function(d) { return y(d.category); })
+                  .attr("height", y.bandwidth());
+                  
+
+
+                bar.append("text")
+                    .attr("class", "value")
+                    .attr("y", function(d) { return y(d.category); })
+                    .attr("dy", y.bandwidth() - 40)
+                    .attr("text-anchor", "start")
+                    .text(function(d){
+                        return (d.category + ": " + d.percent_complete+"% complete");
+                    })
+                    .attr("x", 10);
+
+                
+
+                // add the y Axis
+                svg.append("g")
+                  .attr("class", "y axis")
+                  .call(d3.axisLeft(y));
+
+        
+                // add the x Axis
+                svg.append("g")
+                  .attr("class", "x axis")
+                  .attr("transform", "translate(0," + height + ")")
+                  .call(d3.axisBottom(x).tickValues([100]).tickFormat(function(d) { return d + "%"; }));
+                        
+               
+               
+
+
+            }
+        });
+
+
+
+
+
+
+})
+</script>
 
