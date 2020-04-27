@@ -5,6 +5,7 @@ phases:
     runtime-versions:
         nodejs: 8
     commands:
+      - apt update
       - apt-get install optipng
       - apt-get install libjpeg-progs -y
       - gem install jekyll
