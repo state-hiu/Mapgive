@@ -3,7 +3,7 @@ layout: resource
 category: events
 permalink: '/events/el-salvador-mapathon/'
 title: "March 5th: El Salvador - International Women’s Day Day American Spaces Mapathons"
-status: upcoming
+status: past
 date: 20200305
 tags:
   - event
