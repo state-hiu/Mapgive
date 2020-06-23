@@ -21,10 +21,11 @@ sudo npm install -g grunt-cli
 sudo apt-get install optipng
 sudo apt-get install libjpeg-progs
 ```
+Navigate to the Mapgive directory. The first time run 'npm install' to install the grunt dependencies. Also run 'bundle install' to install the ruby dependencies from the gem file.
 
 ## Usage
 
-Navigate to the Mapgive directory. The first time run 'npm install' to install the grunt dependencies. From now on you can build the site by running the 'grunt' command inside of the Mapgive directory. Grunt outputs the site in the '_site' folder.
+From now on you can build the site by running the 'grunt' command inside of the Mapgive directory. Grunt outputs the site in the '_site' folder. You can also run the site locally by running 'jekyll serve'.
 
 ## Contributing
 
