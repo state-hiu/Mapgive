@@ -225,7 +225,8 @@ text {
 $(document).ready(function(){
 
    $.ajax({
-            url: "https://tasks.hotosm.org/api/v1/stats/project/7260",
+            //url: "https://tasks.hotosm.org/api/v1/stats/project/7260",
+			url: "https://tasking-manager-tm4-production-api.hotosm.org/api/v2/projects/7260/statistics/",
             type: 'GET',
             dataType: 'json',
             success: function(res) {
