@@ -117,7 +117,10 @@ svg {
 
 <script type="text/javascript">
 
-
+var d_minus_90 = new Date();
+//console.log('Today is: ' + d_minus_90.toLocaleString());
+//d_minus_90.setDate(d_minus_90.getDate() - 90);
+//console.log('<br>5 days ago was: ' + d_minus_90.toLocaleString());
 
 var numberFormat = d3.format(",d");
 
@@ -416,7 +419,7 @@ function callback(error,csv) {
                .centerBar(true)
                .renderHorizontalGridLines(true)
                .gap(3)
-               .x(d3.time.scale().domain([new Date(2014, 0, 1), new Date(2019, 05, 31)]))
+               .x(d3.time.scale().domain([new Date(2014, 0, 1), d_minus_90]))
                .round(d3.time.months.round)
                .alwaysUseRounding(true)
                .xUnits(d3.time.months);
