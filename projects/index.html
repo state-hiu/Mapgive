@@ -133,15 +133,30 @@ text {
 <div class="col-md-9">
 
 
-
     <div class="row">
       {% assign mid = site.categories.projects | sort: 'date' %}
       {% assign sorted_pages = mid | reverse %}
+
+      {% assign project_list = "" | split: "" %}
         {% for post in sorted_pages %}
           {% assign display = null %}
           {% assign ready = null %}
           {% if post.featured == true %}{% assign display = true %}{% endif %}
           {% if display == true %}
+          
+            {% assign project_name = post.project-number %}
+            {% if forloop.first == true %}
+                {% assign project_list = project_list | push: "[" %}
+                {% assign project_list = project_list | push: project_name %}
+            {% else %}
+                {% assign project_list = project_list | push: "," %}
+                {% assign project_list = project_list | push: project_name %}
+            {% endif %}
+            
+            {% if forloop.last == true %}
+                {% assign project_list = project_list | push: "]" %}
+            {% endif %}
+            
 
           {% capture thecycle %}{% cycle '1', '2', '3' %}{% endcapture %}
   
@@ -157,7 +172,7 @@ text {
                           <img src="{{ site.baseurl }}/assets/img/{{ post.photo }} " alt="{{ post.title }}" class="img-responsive shadowed" />
                         </a>
                     </li>
-                    <li class="flex-item" style="display:flex"><div id="container" class="svg-container"></div></li>
+                    <li class="flex-item" style="display:flex"><div id="container-{{ post.project-number }}" class="svg-container"></div></li>
                 </ul>
                 <div class="caption">
                   <h3><a href="{{ post.external_url }}">{{ post.title }}</a></h3>
@@ -221,12 +236,138 @@ text {
 
 </div>
 
-<script>
-$(document).ready(function(){
 
+<script>
+
+
+
+
+function fetchProductData(project_list) {
+    console.log('print project_list');
+    console.log(project_list);
+    
+    project_list.forEach(function (ref) {
+        console.log(ref);
+        
+        
+        
+        $.ajax({
+            //url: "https://tasks.hotosm.org/api/v1/stats/project/7260",
+			url: "https://tasking-manager-tm4-production-api.hotosm.org/api/v2/projects/" + ref + "/statistics/",
+            type: 'GET',
+            dataType: 'json',
+            success: function(res) {
+                console.log('hi');
+                console.log(res.percentMapped);
+                //$('#result').html(res.percentMapped)
+
+                //d3 code
+                //http://bl.ocks.org/anonymous/64f9c70bd629810bee67392f6224d414
+                var data = [{"category": "mapped", "percent_complete": res.percentMapped },{"category": "validated", "percent_complete": res.percentValidated }];
+
+                var chartElement = d3.select("div#container-" + ref).node();
+
+                console.log('chart width ' + chartElement.getBoundingClientRect().width)
+                console.log('chart height ' + chartElement.getBoundingClientRect().height)
+
+                height = chartElement.getBoundingClientRect().height;
+
+                width = chartElement.getBoundingClientRect().width;
+
+                // since this is a horizontal bar chart, this is reversed
+                var x = d3.scaleLinear().range([0, width]);
+                var y = d3.scaleBand().range([height, 0])
+
+                x.domain([0, 100]);
+                y.domain(data.map(function(d) { return d.category; })).padding(0.45);
+
+                var svg = d3.select("div#container-" + ref)
+                      .append("svg")
+                      .attr("preserveAspectRatio", "xMinYMin meet")
+                      .attr("viewBox", "0 0 300 200")
+                      .classed("svg-content", true);
+
+                // append the rectangles for the bar chart
+                bar = svg.selectAll(".bar")
+                  .data(data)
+                      .enter().append("g")
+
+
+                  bar.append("rect")
+                  //.attr("x", 0)
+                  //.attr("y", y.bandwidth())
+                  //.attr("x", function(d) { return x(d.sales); })
+                  .attr("class", function(d) { return d.category })
+                  .attr("width", function(d) { return d.percent_complete + "%"; })
+                  .attr("y", function(d) { return y(d.category); })
+                  .attr("height", y.bandwidth());
+                  
+
+
+                bar.append("text")
+                    .attr("class", "value")
+                    .attr("y", function(d) { return y(d.category); })
+                    .attr("dy", y.bandwidth() - 40)
+                    .attr("text-anchor", "start")
+                    .text(function(d){
+                        return (d.category + ": " + d.percent_complete+"% complete");
+                    })
+                    .attr("x", 10);
+
+                
+
+                // add the y Axis
+                svg.append("g")
+                  .attr("class", "y axis")
+                  .call(d3.axisLeft(y));
+
+        
+                // add the x Axis
+                svg.append("g")
+                  .attr("class", "x axis")
+                  .attr("transform", "translate(0," + height + ")")
+                  .call(d3.axisBottom(x).tickValues([100]).tickFormat(function(d) { return d + "%"; }));
+
+            }
+        });
+        
+        
+        
+        
+        
+    });
+
+
+
+
+   }
+
+
+
+
+
+
+
+$(document).ready(function(){
+  console.log('print project list');
+  //console.log({{project_list}});
+  var construct_array = {{project_list}};
+  //console.log(construct_array);
+  console.log(construct_array);
+  console.log(construct_array[1]);
+
+
+  var products = fetchProductData(construct_array);
+});
+
+
+
+/*
+$(document).ready(function(){
+   
    $.ajax({
             //url: "https://tasks.hotosm.org/api/v1/stats/project/7260",
-			url: "https://tasking-manager-tm4-production-api.hotosm.org/api/v2/projects/7260/statistics/",
+			url: "https://tasking-manager-tm4-production-api.hotosm.org/api/v2/projects/{{ post.project-number }}/statistics/",
             type: 'GET',
             dataType: 'json',
             success: function(res) {
@@ -308,11 +449,9 @@ $(document).ready(function(){
             }
         });
 
-
-
-
-
-
 })
+*/
+
+
 </script>
 
