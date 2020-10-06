@@ -50,39 +50,104 @@ margin:-90px 0 0;
         </li>
       </ul>
 
-      <ul>
-        <li class='doc rounded' style='padding:0px;'>
-          <a class='title header' href='#africa-hub' > 
+      {% if post_size != 0 %}
+        <ul>
+        <li class='doc rounded'>
+            <a class='title header' href='#africa_hub' > 
             <span>Africa Hub</span>
             </a>
         </li>
-      </ul>
-      
-      <ul>
-        <li class='doc rounded' style='padding:0px;'>
-          <a class='title header' href='#asia-hub' > 
-            <span>Asia Hub</span>
-          </a>
-        </li>
-      </ul>
-      
-      <ul>
-        <li class='doc rounded' style='padding:0px;'>
-          <a class='title header' href='#latin-america-hub' > 
-            <span>Latin America Hub</span>
-           </a>
-        </li>
-      </ul>
-      
-      <ul>
-        <li class='doc rounded' style='padding:0px;'>
-          <a class='title header' href='#resources' > 
-            <span>Resources</span>
-           </a>
-        </li>
-      </ul>
-      
+        <div class="submenu">
+          {% for post in site.categories.africa_hub reversed %}
+              {% if post.lang == page.lang %}
+                  {% unless post.hidden %}
 
+                    <li class='doc rounded'>
+                        <a class='title {% comment %}{% if post.cover %}cover{% endif %}{% endcomment %} ' href="#africa_hub&{{ post.title | slugify }}">
+                        <span>{{ post.title }}</span>
+                        </a>
+                    </li>
+                  {% endunless %}
+              {% endif %}
+          {% endfor %}
+        </div>
+        </ul>
+      {% endif %}
+
+      {% if post_size != 0 %}
+        <ul>
+        <li class='doc rounded'>
+            <a class='title header' href='#asia_hub' > 
+            <span>Asia Hub</span>
+            </a>
+        </li>
+        <div class="submenu">
+          {% for post in site.categories.asia_hub reversed %}
+              {% if post.lang == page.lang %}
+                  {% unless post.hidden %}
+
+                    <li class='doc rounded'>
+                        <a class='title {% comment %}{% if post.cover %}cover{% endif %}{% endcomment %} ' href="#asia_hub&{{ post.title | slugify }}">
+                        <span>{{ post.title }}</span>
+                        </a>
+                    </li>
+                  {% endunless %}
+              {% endif %}
+          {% endfor %}
+        </div>
+        </ul>
+      {% endif %}
+
+      {% if post_size != 0 %}
+        <ul>
+        <li class='doc rounded'>
+            <a class='title header' href='#latin_america_hub' > 
+            <span>Latin America Hub</span>
+            </a>
+        </li>
+        <div class="submenu">
+          {% for post in site.categories.latin_america_hub reversed %}
+              {% if post.lang == page.lang %}
+                  {% unless post.hidden %}
+
+                    <li class='doc rounded'>
+                        <a class='title {% comment %}{% if post.cover %}cover{% endif %}{% endcomment %} ' href="#latin_america_hub&{{ post.title | slugify }}">
+                        <span>{{ post.title }}</span>
+                        </a>
+                    </li>
+                  {% endunless %}
+              {% endif %}
+          {% endfor %}
+        </div>
+        </ul>
+      {% endif %}
+      
+    {% assign post_size_cases = site.categories.cases.size %}
+
+    {% assign post_size = site.categories.resources.size %}
+
+      {% if post_size != 0 %}
+        <ul>
+        <li class='doc rounded'>
+            <a class='title header' href='#resources' >
+            <span>Resources</span>
+            </a>
+        </li>
+        <div class="submenu">
+          {% for post in site.categories.c2m2_resources reversed %}
+              {% if post.lang == page.lang %}
+                  {% unless post.hidden %}
+                    <li class='doc rounded'>
+                        <a class='title {% if page.url == post.url %}active{% endif %}' href="#resources&{{ post.title | slugify }}">
+                        <span>{{ post.title }}</span>
+                        </a>
+                    </li>
+                  {% endunless %}
+              {% endif %}
+          {% endfor %}
+        </div>
+        </ul>
+      {% endif %}
 
   </div>
 
@@ -108,50 +173,6 @@ margin:-90px 0 0;
     </p></br>
   </div>
 
-<!--
-  <div class="anchor outer-div" id="africa_hub" style="display: none;">
-            <div>Africa Hub:  Gaston Mblongou, UASG Advisors, Philadelphia, PA, USA</div>
-        <br>
-
-        <table style="width:100%">
-          <tr>
-            <th>Projects</th>
-            <th>Partner</th>
-            <th>Topic</th>
-          </tr>
-          <tr>
-            <td>Bukavu, Democratic Republic of Congo (DRC)</td>
-            <td>University of Bukavu</td>
-            <td>
-            Access to health services
-            Tracking schools and student adaptations to COVID-driven strategies 
-            </td>
-          </tr>
-          <tr>
-            <td>Kibera, Kenya</td>
-            <td>Map Kibera</td>
-          </tr>
-          <tr>
-            <td>Pemba, Mozambique</td>
-            <td>Universidad Catolica de Mozambique</td>
-            <td>
-            Impacts on informal economy; impacts on port activity
-            Assess status of available resources:  identify subsistence needs and track availability
-            </td>
-          </tr>
-          <tr>
-            <td>Africa Hub project: 
-        Regional mini-technical exchanges</td>
-            <td>Network of West African universities</td>
-            <td>
-            Open source geospatial tools for data generation
-            Collaborate with Secondary Cities alumni 
-            Facilitate network of geospatial users in West Africa
-            </td>
-          </tr>
-        </table>        
-  </div>
--->
 
 <!--
   <div class="anchor outer-div" id="about_header" style="display: none;">
@@ -292,15 +313,9 @@ var clickHandler = function( event, headerClicked ) {
         if (title_href.length == 1) {
 
             hash_section = '#' + title_href[0];
-            
-            if (hash_section == '#home') {
-                //load page content
-                $( hash_section + '_header' + ".outer-div" ).show();
-            } else {
-                //load page content
-                $( hash_section + ".outer-div" ).show();
-            }
-            
+
+            //load page content
+            $( hash_section + '_header' + ".outer-div" ).show();
             
          }
 
@@ -365,7 +380,7 @@ used to turn 3-D box
 
         }
         
-
+*/
 
         console.log( 'title_href new: ' );
         console.log( title_href[1] );
@@ -378,7 +393,7 @@ used to turn 3-D box
         
 
         $( title_href2 + ".outer-div" ).show();
-*/
+
     } else {
         console.log( "this didn't come from an event!" );
     }
@@ -461,8 +476,6 @@ var linkHandler = function(link) {
 
             console.log('title_href.length 1 option');
 
-
-
             if (hash_page[0] == '') {
               $( "#home" + ".outer-div" ).show();
             } else {
@@ -478,17 +491,8 @@ var linkHandler = function(link) {
               } 
 
               //load page content
-              
-            if (hash_section == '#home') {
-                //load page content
-                $( hash_section + '_header' + ".outer-div" ).show();
-            } else {
-                //load page content
-                $( hash_section + ".outer-div" ).show();
+              $( hash_section + '_header' + ".outer-div" ).show();
             }
-            
-
-          }
             
 /*
             //turn box face
