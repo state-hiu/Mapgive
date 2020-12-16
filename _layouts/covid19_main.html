@@ -55,6 +55,12 @@ ul.city-list {
   flex-grow: 1;
 }
 
+@media (min-width: 992px) {
+    .social {
+        margin:20px 0 30px
+    }
+}
+
 </style>
 
 <!--Code for Tools Table-->
@@ -141,14 +147,22 @@ ul.city-list {
 
   <div class="anchor outer-div" id="home_header" style="display: none;">
 
-    <div class="col-md-offset-9 col-md-3">
-    {% include social-media.html %}
+    <div>
+    
+        <h1 class='tagtitle col-md-9' style="padding-left:0px">Cities’ COVID Mitigation Mapping</h1>
+        
+        <div class="col-md-3">
+        {% include social-media.html %}
+        </div>
+        
     </div>
     
-    <h2 class='tagtitle'>Cities’ COVID Mitigation Mapping</h2>
+    <!-- testing:
+    display: {{ layout.twitterDescription }},{{ site.url }},{{ page.url }} 
+    -->
     
     <p class='tagwords'>
-    </br>
+
     The COVID-19 pandemic has rapidly spread around the world affecting public health and having cascading impacts on nearly every aspect of human life. Challenges from COVID-19 extend far beyond the illness, to include disruption of the global economy and local socio-economic relationships. 
     </br></br>
     The COVID-19 pandemic will continue to challenge vulnerable populations and communities   long after the infection numbers peak. Many vulnerable populations around the world are experiencing a new complexity the virus is bringing to existing challenges such as poverty, food insecurity, obstacles to social, economic, and labor mobility, and access to education. Understanding these second-order impacts will help officials as well as civil society organizations mitigate negative effects and strengthen responses to address growing economic, health, and education needs.
