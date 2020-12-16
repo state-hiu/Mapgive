@@ -29,6 +29,31 @@ margin:-90px 0 0;
 
 .submenu{display:none}
 
+.flex-containter {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Create two equal columns that sits next to each other */
+.flex-item-left {
+  padding-right: 10px;
+  flex: 4%;
+}
+
+.flex-item-right {
+  padding-right: 0px;
+  flex: 1 1 0;
+}
+
+ul.city-list {
+  padding-inline-start: 0px;
+}
+
+.city-list.li {
+  height: 40vh;
+  flex-grow: 1;
+}
+
 </style>
 
 <!--Code for Tools Table-->
@@ -114,19 +139,24 @@ margin:-90px 0 0;
   {% endcomment %}
 
   <div class="anchor outer-div" id="home_header" style="display: none;">
-    </br></br>
-    <h2 class='tagtitle'>C2M2</h2>
-    <img src="{{site.baseurl}}/assets/img/c2m2_projects.png" width="700px">
+
+    <div class="col-md-offset-9 col-md-3">
+    {% include social-media.html %}
+    </div>
+    
+    <h2 class='tagtitle'>Cities’ COVID Mitigation Mapping</h2>
+    
     <p class='tagwords'>
     </br></br>
-    Second order impacts of COVID-19 need mitigation to reduce development backsliding and prevent instability among vulnerable population.  Community resources are already limited for the urban poor and current COVID-19 closures (and future crises/disasters will) further restrict access to resources.  Reduced mobility, reduced income, and increased demand on the remaining available (health, food) resources and the capacity to understand and fulfill this need is limited within the vulnerable communities and local governments. 
+    The COVID-19 pandemic has rapidly spread around the world affecting public health and having cascading impacts on nearly every aspect of human life. Challenges from COVID-19 extend far beyond the illness, to include disruption of the global economy and local socio-economic relationships. 
     </br></br>
-    The C2M2 initiative builds on global networks of geospatial experts to analyze second-order impacts of COVID-19. The goal of this initiative is to Increase the capacity to understand the distribution and gaps in resources available to vulnerable urban communities to enable fulfillment of needs and promote resilience and sustainability due to  COVID-19 and address long term impacts.
+    The COVID-19 pandemic will continue to challenge vulnerable populations and communities   long after the infection numbers peak. Many vulnerable populations around the world are experiencing a new complexity the virus is bringing to existing challenges such as poverty, food insecurity, obstacles to social, economic, and labor mobility, and access to education. Understanding these second-order impacts will help officials as well as civil society organizations mitigate negative effects and strengthen responses to address growing economic, health, and education needs.
     </br></br>
-    Our projects build local capacity to utilize open-source geospatial technologies, strengthen international partnerships, and create new data to inform data-driven decision making for policies that address COVID second-order impacts.
+    The <strong>Cities’ COVID Mitigation Mapping program (C2M2)</strong> builds on global networks of geospatial experts to analyze second-order impacts of COVID-19. The goal of this program is to increase the capacity to understand the distribution and gaps in resources available to vulnerable populations in urban communities. This program has three regional hubs in Africa, Asia, and Latin America, where select local organizations, with regional geospatial and community development expertise, identify and work with various local project partners to develop and guide C2M2 projects in each region.
     </br></br>
-    The C2M2 project partners with regional geospatial and community development experts to create local/regional projects. C2M2 partners will focus on key themes:  tourism, health, food security, informal economy, and mobility to address second-order impacts of COVID019. C2M2 partners will implement projects in priority cities to address issues related to COVID-19 long term impacts due to inequality and poverty.  C2M2 partners will assess existing data to identify data needs and potential data surrogates to measure impacts inclusive of metrics that include inequality, poverty, access to services, food security.
+    C2M2 projects build local capacity to utilize open data and geospatial technologies, strengthen international partnerships, and create new data and analyses to inform data-driven decision making for planning to mitigate COVID-19 second-order impacts. Project partners will focus on key themes: food security, informal economy, tourism, health, and mobility to address second-order impacts of COVID-19.
     </p></br>
+    <img src="{{site.baseurl}}/assets/img/C2M2-MainPage-GlobalActivitiesMapTitled.jpg" style="width: 100%;height: auto;">
   </div>
 
 <!--
