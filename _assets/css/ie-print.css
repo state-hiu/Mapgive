@@ -1,0 +1,145 @@
+* {
+  background: transparent !important;
+  color: #000 !important; /* Black prints faster: h5bp.com/s */
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+a,
+a:visited {
+  text-decoration: underline;
+}
+
+a[href]:after {
+  content: "";
+}
+
+abbr[title]:after {
+  content: " (" attr(title) ")";
+}
+
+/*
+* Don't show links for images, or javascript/internal links
+*/
+
+.ir a:after,
+a[href^="javascript:"]:after,
+a[href^="#"]:after {
+  content: "";
+}
+
+pre,
+blockquote {
+  border: 1px solid #999;
+  page-break-inside: avoid;
+}
+
+thead {
+  display: table-header-group; /* h5bp.com/t */
+}
+
+tr,
+img {
+  page-break-inside: avoid;
+}
+
+img {
+  max-width: 100% !important;
+}
+
+@page {
+  margin: 0.5cm;
+}
+
+p,
+h2,
+h3 {
+  orphans: 3;
+  widows: 3;
+}
+
+h2,
+h3 {
+  page-break-after: avoid;
+}
+
+.col-md-8 {
+  width: 100%;
+}
+
+#main {
+  padding-bottom: 0;
+}
+
+#main-wrapper {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.page-title {
+  margin: 0;
+}
+
+.thumbnail {
+  border: 0;
+  padding: 0;
+  height: 300px !important;
+}
+
+.story .figure,
+.thumbnail img {
+  width: 250px;
+  height: auto;
+}
+
+.media-body {
+  padding: 0;
+}
+
+.accordion dd p:first-child {
+  padding: 0;
+  border: 0;
+}
+
+.accordion .hide {
+  max-height: none;
+}
+
+.hide {
+  display: block !important;
+}
+
+#footer {
+  border: 0;
+  position: static;
+  margin: 0;
+  min-height: none;
+}
+
+.footer-title {
+  border: 0;
+  margin: 0;
+}
+
+.footer-title h2 {
+  padding: 0;
+  margin: 0;
+}
+
+#footer .mission {
+  border: 0;
+  width: 100%;
+}
+
+.infographics img.img-responsive,
+.infographics .btn,
+.accordion .js-control,
+.promo-box,
+.story-promo,
+.video,
+.social,
+#footer .legal,
+#footer nav,
+#footer .footer-nav {
+  display: none !important;
+}
