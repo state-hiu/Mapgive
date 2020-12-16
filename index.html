@@ -8,12 +8,50 @@ emailSubject: Become a digital humanitarian with MapGive!
 emailDescription: "Global humanitarian efforts rely on access to digital map data.  Help avert crises and build stronger communities. Start mapping.  #MapGive, drawing resources together."
 ---
 
+<style>
+
+.carousel1 {
+    background-color: #BCBCBC;
+    height: 320px;
+}
+
+.text-area {
+    padding: 40px 140px;
+}
+
+#main a.carousel-text {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 10px #693f41;
+    font-size: 4.8em;
+    box-shadow: none;
+    margin-top: 10px;
+    border-radius: 0;
+    width: 100%;
+    font-size: 3em;
+    text-align: left;
+    line-height: 1em;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    
+}
+
+
+
+    
+
+</style>
+
+
+<h2>MapGive is a U.S. Department of State initiative that encourages and increases participation in the global mapping community and facilitates the creation of open geographic data to support humanitarian relief and development programs.</h2>
+
 <h1 class="hook">
   <span>You can help. Map any place in the world</span>
   <span>even if you've never been there.</span>
 </h1>
 
-<h2>MapGive is a U.S. Department of State initiative that encourages and increases volunteer participation in the global mapping community and facilitates the creation of open geographic data to support humanitarian relief and development programs.</h2>
 <div class="row infographics">
 
   <div class="col-sm-4 col-md-4">
@@ -32,4 +70,72 @@ emailDescription: "Global humanitarian efforts rely on access to digital map dat
   </div>
   
 </div>
+
+<!-- https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_carousel&stacked=h -->
+
+<div class="row">
+
+  <!--<h2>Carousel Example</h2>-->
+  
+  <!-- Carousel box -->
+  <div id="myCarousel" class="carousel slide col-sm-12 col-md-12" style="padding-right: 15px;padding-left: 15px" data-ride="carousel" data-interval="500000" data-pause="hover">
+  
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active carousel1">
+          <div class="text-area">
+                <a href="{{ site.baseurl }}/c2m2/" class="carousel-text shadowed" role="button"><span class="first text" style="text-shadow: 3px 3px 10px #52504d; text-align: center" >Cities' Covid Mitigation Mapping (C2M2)</span></a>
+                <div>
+                <h3>
+                Second-order impacts of COVID-19 will transform society and economies. The C2M2 project builds on global networks of geospatial experts to analyze second-order impacts of COVID-19.  These include long-term effects on informal economies, changing patterns of mobility, and access to basic services.
+                </h3>
+                </div>
+          </div>
+      </div>
+      
+      <div class="item carousel1">
+          <div class="text-area">
+                <a href="{{ site.baseurl }}/box/" class="carousel-text shadowed" role="button"><span class="first text" style="text-shadow: 3px 3px 10px #52504d; text-align: center" >MapGive in a Box</span></a>
+                <div>
+                <h3>
+                This guide contains the collective wisdom of the MapGive team, and partners who have organized MapGive events and projects. The goal is to provide clear guidelines for engagement and project design with the MapGive program, for someone with no background in mapping. The MapGive team is ready to help, and MapGive in a Box will help you prepare to work with the team.
+                </h3>
+                </div>
+          </div>
+      </div>
+    
+      <div class="item carousel1">
+          <div class="text-area">
+                <a href="{{ site.baseurl }}/dashboard/" class="carousel-text shadowed" role="button"><span class="first text" style="text-shadow: 3px 3px 10px #52504d; text-align: center" >MapGive Dashboard</span></a>
+                <div>
+                <h3>
+                This dashboard shows user contributions to OpenStreetMap by country and time using the #MapGive hashtag.
+                </h3>
+                </div>
+          </div>
+      </div>
+      
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" style="margin-left: 15px" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" style="margin-right: 15px" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    
+  </div>
+</div>
+
+</br></br>
 

@@ -1,0 +1,979 @@
+---
+layout: default
+twitterDescription: "The Cities’ COVID Mitigation Mapping program (C2M2) builds on global networks of geospatial experts to analyze second-order impacts of COVID-19 and to increase local capacity to mitigate COVID-19 second-order impacts."
+---
+
+<style type="text/css">
+{% include mapgive-in-a-box/style.css %}
+
+#main {
+  min-height: 930px;
+}
+
+#doc-nav-left {
+  min-height: 580px;
+}
+
+/*https://www.itsupportguides.com/tech-tips-tricks/how-to-offset-anchor-tag-link-using-css/
+div.anchor :before {
+content:"";
+display:block;
+height:90px; 
+margin:-90px 0 0; 
+}
+*/
+
+.anchor {
+    padding-top: 200px;
+    margin-top: -200px;
+}
+
+.submenu{display:none}
+
+.flex-containter {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Create two equal columns that sits next to each other */
+.flex-item-left {
+  padding-right: 10px;
+  flex: 4%;
+}
+
+.flex-item-right {
+  padding-right: 0px;
+  flex: 1 1 0;
+}
+
+ul.city-list {
+  padding-inline-start: 0px;
+}
+
+.city-list.li {
+  height: 40vh;
+  flex-grow: 1;
+}
+
+</style>
+
+<!--Code for Tools Table-->
+
+<!--JS LIBRARIES-->
+
+<!--JQUERY, already loaded
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>-->
+
+<!--BOOTSTRAP JS, already loaded
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>-->
+
+<!-- DATATABLES -->
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.11/js/jquery.dataTables.min.js"></script>-->
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+<!--BOOTSTRAP INTEGRATION JS -->
+<script src="https://cdn.datatables.net/plug-ins/a5734b29083/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+
+<!-- TableTop -->
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.4.3/tabletop.min.js"></script>-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+
+<div class='doc-main doc cell-main'>
+
+  <div class='doc-nav cell-menubar padLeft cf' id='doc-nav-left show-buttons'>
+
+    {% assign post_size = site.categories.about.size %}
+    {% comment %}<h1>{{ site.categories.about.size }}</h1>{% endcomment %}
+
+    <!--http://stackoverflow.com/questions/269044/remove-fragment-in-url-with-javascript-w-out-causing-page-reload-->
+      <ul>
+        <li class='doc rounded' style='padding:0px;'>
+          <a href="#home" class="title header" id="home_button" >
+            <!--<img src="{{site.baseurl}}/assets/img/box_graphic_small.png" alt="MapGive in a box home page" class="img-responsive" style="width:33%;display:inline;">-->
+            C2M2
+          </a>
+        </li>
+      </ul>
+
+      <ul>
+        <li class='doc rounded' style='padding:0px;'>
+          <a class='title header' href='#africa-hub' > 
+            <span>Africa Hub</span>
+            </a>
+        </li>
+      </ul>
+      
+      <ul>
+        <li class='doc rounded' style='padding:0px;'>
+          <a class='title header' href='#asia-hub' > 
+            <span>Asia Hub</span>
+          </a>
+        </li>
+      </ul>
+      
+      <ul>
+        <li class='doc rounded' style='padding:0px;'>
+          <a class='title header' href='#latin-america-hub' > 
+            <span>Latin America Hub</span>
+           </a>
+        </li>
+      </ul>
+      
+      <ul>
+        <li class='doc rounded' style='padding:0px;'>
+          <a class='title header' href='#resources' > 
+            <span>Resources</span>
+           </a>
+        </li>
+      </ul>
+      
+
+
+  </div>
+
+  <!-- http://stackoverflow.com/questions/19230537/how-to-make-content-next-to-a-fixed-position-menu-not-overlap-in-smaller-resolut -->
+  <!-- http://jsfiddle.net/YE7ZZ/4/ -->
+  <div id="positioner">
+
+  {% comment %}
+  {% include mapgive-in-a-box/3d_box.html %}
+  {% endcomment %}
+
+  <div class="anchor outer-div" id="home_header" style="display: none;">
+
+    <div class="col-md-offset-9 col-md-3">
+    {% include social-media.html %}
+    </div>
+    
+    <h2 class='tagtitle'>Cities’ COVID Mitigation Mapping</h2>
+    
+    <p class='tagwords'>
+    </br>
+    The COVID-19 pandemic has rapidly spread around the world affecting public health and having cascading impacts on nearly every aspect of human life. Challenges from COVID-19 extend far beyond the illness, to include disruption of the global economy and local socio-economic relationships. 
+    </br></br>
+    The COVID-19 pandemic will continue to challenge vulnerable populations and communities   long after the infection numbers peak. Many vulnerable populations around the world are experiencing a new complexity the virus is bringing to existing challenges such as poverty, food insecurity, obstacles to social, economic, and labor mobility, and access to education. Understanding these second-order impacts will help officials as well as civil society organizations mitigate negative effects and strengthen responses to address growing economic, health, and education needs.
+    </br></br>
+    The <strong>Cities’ COVID Mitigation Mapping program (C2M2)</strong> builds on global networks of geospatial experts to analyze second-order impacts of COVID-19. The goal of this program is to increase the capacity to understand the distribution and gaps in resources available to vulnerable populations in urban communities. This program has three regional hubs in Africa, Asia, and Latin America, where select local organizations, with regional geospatial and community development expertise, identify and work with various local project partners to develop and guide C2M2 projects in each region.
+    </br></br>
+    C2M2 projects build local capacity to utilize open data and geospatial technologies, strengthen international partnerships, and create new data and analyses to inform data-driven decision making for planning to mitigate COVID-19 second-order impacts. Project partners will focus on key themes: food security, informal economy, tourism, health, and mobility to address second-order impacts of COVID-19.
+    </p></br>
+    <img src="{{site.baseurl}}/assets/img/C2M2-MainPage-GlobalActivitiesMapTitled.jpg" style="width: 100%;height: auto;">
+  </div>
+
+<!--
+  <div class="anchor outer-div" id="africa_hub" style="display: none;">
+            <div>Africa Hub:  Gaston Mblongou, UASG Advisors, Philadelphia, PA, USA</div>
+        <br>
+
+        <table style="width:100%">
+          <tr>
+            <th>Projects</th>
+            <th>Partner</th>
+            <th>Topic</th>
+          </tr>
+          <tr>
+            <td>Bukavu, Democratic Republic of Congo (DRC)</td>
+            <td>University of Bukavu</td>
+            <td>
+            Access to health services
+            Tracking schools and student adaptations to COVID-driven strategies 
+            </td>
+          </tr>
+          <tr>
+            <td>Kibera, Kenya</td>
+            <td>Map Kibera</td>
+          </tr>
+          <tr>
+            <td>Pemba, Mozambique</td>
+            <td>Universidad Catolica de Mozambique</td>
+            <td>
+            Impacts on informal economy; impacts on port activity
+            Assess status of available resources:  identify subsistence needs and track availability
+            </td>
+          </tr>
+          <tr>
+            <td>Africa Hub project: 
+        Regional mini-technical exchanges</td>
+            <td>Network of West African universities</td>
+            <td>
+            Open source geospatial tools for data generation
+            Collaborate with Secondary Cities alumni 
+            Facilitate network of geospatial users in West Africa
+            </td>
+          </tr>
+        </table>        
+  </div>
+-->
+
+<!--
+  <div class="anchor outer-div" id="about_header" style="display: none;">
+    </br>
+    <p class='tagwords'>
+      MapGive is a Department of State public diplomacy program designed to engage volunteers to map in OpenStreetMap, for humanitarian and development missions.  The goal of this guide is to provide clear guidelines for engagement and project design with the MapGive program, for someone with no background in mapping. Particularly, this guide is for staff at Post looking to implement MapGive projects, and their bureau colleagues advising on innovative diplomatic engagements.
+    </p></br>
+  </div>
+
+  <div class="anchor outer-div" id="cases_header" style="display: none;">
+    </br>
+    <p class='tagwords'>
+      MapGive has been utilized in a wide variety of places and settings, and range from simple, lightly resourced events to in-depth activities with substantial design and implementation support. Take a look through these Case Studies to learn more how colleagues have implemented MapGive programs.
+    </p></br>
+  </div>
+
+  <div class="anchor outer-div" id="resources_header" style="display: none;">
+    </br>
+    <p class='tagwords'>
+      All the resources you need to be successful from start to finish. The timeline to organize a MapGive event can vary from something thrown together in just a few days for an urgent need, to a large scale, high profile event taking several months of preparation. This section includes an event guide, event checklist, printable materials, and more.
+    </p></br>
+  </div>
+-->
+
+  <!--do for loops and make everything hidden here-->
+  <!--the hidden posts can have their images be lazy loads
+  <!--when button is clicked, show active post-->
+
+
+  {% for post in site.categories.africa_hub reversed %}
+      {% if post.lang == page.lang %}
+          {% unless post.hidden %}
+            
+            <div class="anchor outer-div africa_hub" id="{{ post.title | slugify }}" style="display: none;">
+              <h1>{{post.title}}</h1>
+              {{ post.content }}
+            </div>
+
+          {% endunless %}
+      {% endif %}
+  {% endfor %}
+
+  {% for post in site.categories.asia_hub reversed %}
+      {% if post.lang == page.lang %}
+          {% unless post.hidden %}
+            
+            <div class="anchor outer-div asia_hub" id="{{ post.title | slugify }}" style="display: none;">
+              <h1>{{post.title}}</h1>
+              {{ post.content }}
+            </div>
+
+          {% endunless %}
+      {% endif %}
+  {% endfor %}
+  
+  {% for post in site.categories.latin_america_hub reversed %}
+      {% if post.lang == page.lang %}
+          {% unless post.hidden %}
+            
+            <div class="anchor outer-div latin_america_hub" id="{{ post.title | slugify }}" style="display: none;">
+              <h1>{{post.title}}</h1>
+              {{ post.content }}
+            </div>
+
+          {% endunless %}
+      {% endif %}
+  {% endfor %}
+
+  {% for post in site.categories.c2m2_resources reversed %}
+      {% if post.lang == page.lang %}
+          {% unless post.hidden %}
+            
+            <div class="anchor outer-div c2m2_resources" id="{{ post.title | slugify }}" style="display: none;">
+              <h1>{{post.title}}</h1>
+              {{ post.content }}
+            </div>
+
+          {% endunless %}
+      {% endif %}
+  {% endfor %}
+
+  </div>
+</div>
+
+
+<script type="text/javascript">
+/*
+need a router for the hashes in the url
+first hash will be for the categories: #about, #cases, and #resources
+2nd hash will be for the page: ex. #determine-the-need
+
+the hashes will be parsed. the categories will determine the submenu to be opened
+and the page hashtag will load the post content
+*/
+
+var panelClassName = 'show-front'
+
+
+var clickHandler = function( event, headerClicked ) {
+    console.log('clickHandler called');
+
+    console.log('headerClicked val');
+    console.log(headerClicked);
+    
+    if ( event ) {
+        console.log( 'event' );
+        console.log( event );
+
+        title_href = $(event).attr('href');
+
+        console.log( 'showing link href' );
+        console.log( title_href );
+
+        $( ".title" ).removeClass("active");
+        $(event).addClass("active");
+
+        $( ".outer-div" ).hide();
+
+        if (headerClicked) {
+          console.log('do not hide or turn off');
+        } else {
+          $( ".box-container" ).hide();
+        }
+        
+
+        //take away first hash 
+        title_href = title_href.slice(1).split('&');
+
+        console.log( 'showing link href2' );
+        console.log( title_href );
+
+        console.log('title_href.length');
+        console.log(title_href.length);
+        
+        
+        
+        //if just one hash, ex #cases
+        if (title_href.length == 1) {
+
+            hash_section = '#' + title_href[0];
+            
+            if (hash_section == '#home') {
+                //load page content
+                $( hash_section + '_header' + ".outer-div" ).show();
+            } else if (hash_section == '#resources') {
+                //load page content
+                $( hash_section + ".outer-div" ).show();
+                //load resources table
+                loadTable();
+            } else {
+                //load page content
+                $( hash_section + ".outer-div" ).show();
+            }
+            
+            
+         }
+
+
+/*
+used to turn 3-D box
+
+        //if just one hash, ex #cases
+        if (title_href.length == 1) {
+
+            hash_section = '#' + title_href[0];
+
+            //load page content
+            $( hash_section + '_header' + ".outer-div" ).show();
+            
+            if ($(window).width() > 740) {
+                  if ($('.box-container').css('display') == 'none') {
+                    $( ".box-container" ).show();
+                  }
+                  if ($('.box-container').css('visibility') == 'hidden') {
+                    $( ".box-container" ).css('visibility', 'visible');
+                  }
+              }
+
+            //turn box face
+
+            if (hash_section == '#home') {
+              box.removeClassName( panelClassName );
+              panelClassName = 'show-front';
+              box.addClassName( panelClassName );
+              
+              console.log('hash section home');
+
+              //this only removes the hash temporarily, but it later gets added by a jquery dispatch
+              // remove fragment as much as it can go without adding an entry in browser history:
+              //window.location.replace("#");
+
+              // slice off the remaining '#' in HTML5:    
+              //if (typeof window.history.replaceState == 'function') {
+              //  history.replaceState({}, '', window.location.href.slice(0, -1));
+             // }
+
+            }
+
+            if (hash_section == '#about') {
+              box.removeClassName( panelClassName );
+              panelClassName = 'show-right';
+              box.addClassName( panelClassName );
+            }
+
+            if (hash_section == '#cases') {
+              box.removeClassName( panelClassName );
+              panelClassName = 'show-back2';
+              box.addClassName( panelClassName );
+            }
+
+            if (hash_section == '#resources') {
+              box.removeClassName( panelClassName );
+              panelClassName = 'show-left2';
+              box.addClassName( panelClassName );
+            }
+
+        }
+        
+
+
+        console.log( 'title_href new: ' );
+        console.log( title_href[1] );
+
+        title_href2 = '#' + title_href[1];
+
+        console.log( 'title_href2' );
+        console.log( title_href2 );
+
+        
+
+        $( title_href2 + ".outer-div" ).show();
+*/
+    } else {
+        console.log( "this didn't come from an event!" );
+    }
+
+    //debugger;
+};
+
+
+var linkHandler = function(link) {
+
+    console.log('linkHandler called');
+    console.log('doc loc hash');
+    console.log(document.location.hash);
+
+    if (link) {
+      console.log('link!');
+      console.log(link);
+      link = link.slice(1).split('#');
+      //link = '#' + link[1];
+      link = '#' + link;
+      console.log('link hash!');
+      console.log(link);
+    } else {
+      // Javascript to enable link to tab
+      var link = document.location.hash;
+    }
+
+    console.log('link!2');
+    console.log(link);
+
+    hash_page = link.slice(1).split('#');
+
+    console.log('hash page 1');
+    console.log(hash_page[0]);
+
+    console.log('hash page 2');
+    console.log(hash_page[1]);
+
+    section = hash_page[0].slice(0).split('&');
+
+    console.log('section');
+    console.log(section);
+
+    //remove active from existing headers
+    $('.header').removeClass("active");
+
+    /*if ($("a[href='#"+section[0]+"']").closest(".rounded").next().is(':visible'))) {
+
+    }*/
+    
+
+    $("a[href='#"+section[0]+"']").closest(".rounded").next().slideDown();
+    $("a[href='#"+section[0]+"']").addClass("active");
+
+    $('.header').not(".active").closest(".rounded").next().slideUp();
+    $('.header').not(".active").closest(".rounded").next().removeClass("active");
+
+    console.log('hash_page length: ');
+    console.log(hash_page.length);
+
+
+    if (hash_page.length == 1) {
+
+        hash_section = '#' + hash_page[0];
+
+        console.log('hash_section');
+        console.log(hash_section);
+
+        title_href = hash_section.slice(1).split('&');
+
+        console.log( 'showing link href2' );
+        console.log( title_href );
+
+        console.log('title_href.length');
+        console.log(title_href.length);
+
+        window.scrollTo(0,0);
+
+        if (title_href.length == 1) {
+
+            console.log('title_href.length 1 option');
+            console.log('print out');
+
+
+            if (hash_page[0] == '') {
+              $( "#home" + ".outer-div" ).show();
+            } else {
+              $( ".outer-div" ).hide();
+
+              if ($(window).width() > 740) {
+                  if ($('.box-container').css('display') == 'none') {
+                    $( ".box-container" ).show();
+                  }
+                  if ($('.box-container').css('visibility') == 'hidden') {
+                    $( ".box-container" ).css('visibility', 'visible');
+                  }
+              } 
+            }
+
+            //load page content
+            console.log("print hash_section again");
+            console.log(hash_section);
+
+            if ((hash_section == '#home') || (hash_section == '#')) {
+                //load page content
+                console.log('loading homepage');
+                $( "#home" + '_header' + ".outer-div" ).show();
+            } else if (hash_section == '#resources'){
+                //load page content
+                $( hash_section + ".outer-div" ).show();
+                loadTable();
+            } else {
+                //load page content
+                $( hash_section + ".outer-div" ).show();
+            }
+
+          
+            
+/*
+            //turn box face
+
+            if (hash_section == '#home') {
+              box.removeClassName( panelClassName );
+              panelClassName = 'show-front';
+              box.addClassName( panelClassName );
+            }
+
+            if (hash_section == '#about') {
+              box.removeClassName( panelClassName );
+              panelClassName = 'show-right';
+              box.addClassName( panelClassName );
+            }
+
+            if (hash_section == '#cases') {
+              box.removeClassName( panelClassName );
+              panelClassName = 'show-back2';
+              box.addClassName( panelClassName );
+            }
+
+            if (hash_section == '#resources') {
+              box.removeClassName( panelClassName );
+              panelClassName = 'show-left2';
+              box.addClassName( panelClassName );
+            }
+
+
+            if (hash_page[0] == 'home' || hash_page[0] == '') {
+
+              console.log('do the loop');
+
+              loop = ['#home','#about','#cases','#resources'];
+
+              // loop through array 
+              var i = 0, l = loop.length;
+              (function iterator() {
+                  console.log('loop[i]');
+                  console.log(loop[i]);
+
+                  clickHandler($('.header[href="'+loop[i]+'"]'));
+
+                  console.log('i');
+                  console.log(i);
+                  console.log('l');
+                  console.log(l);
+
+                  if(i==l-1) {
+                    i=-1;
+                  }
+
+                  if(++i<l) {
+                      myTimeout = setTimeout(iterator, 6000);
+                  }
+              })();
+            }
+*/
+        }
+        
+        if (title_href.length == 2) {
+
+          console.log('title_href.length 2 option');
+
+          $(".box-container" ).hide();
+
+          $(".outer-div" ).hide();
+
+          console.log( 'title_href new: ' );
+          console.log( title_href[1] );
+
+          title_href2 = '#' + title_href[1];
+
+          console.log( 'title_href2' );
+          console.log( title_href2 );
+
+          //scrolls to the top of the page
+          window.scrollTo(0,0);
+
+          $( title_href2 + ".outer-div" ).show();
+
+          $( ".title" ).removeClass("active");
+
+          //make page link in menu active
+          $("a[href='"+hash_section+"']").addClass("active");
+
+        }
+
+        if (title_href.length == 3) {
+
+          console.log('title_href.length 3 option');
+
+          $( ".box-container" ).hide();
+
+          $( ".outer-div" ).hide();
+
+          console.log( 'title_href new: ' );
+          console.log( title_href[1] );
+
+          title_href2 = '#' + title_href[1];
+
+          console.log( 'title_href2' );
+          console.log( title_href2 );
+
+          $( title_href2 + ".outer-div" ).show();
+
+          $( ".title" ).removeClass("active");
+
+          //make page link in menu active
+          $("a[href='"+hash_section+"']").addClass("active");
+
+
+
+          console.log( 'title_href length 3! ' );
+
+          console.log( 'title_href' );
+          console.log( title_href );
+
+          nav_anchor = '#'+title_href[0]+'&'+title_href[1]+'&'+title_href[2];
+
+          console.log( 'nav_anchor' );
+          console.log( nav_anchor );
+
+
+          var x = document.getElementById(nav_anchor);
+
+          x.scrollIntoView();
+
+          window.scrollBy(0,-80);
+
+          //$('html,body').animate({scrollTop: x.offset().top},'slow');
+
+          //var element_to_scroll_to = $('#resources\\&determine-the-need\\&developing-a-project')[0];
+
+          //x = document.getElementById("#resources&determine-the-need&developing-a-project");
+
+          //x = document.getElementById(nav_anchor);
+
+          // Basically `element_to_scroll_to` just have to be a reference
+          // to any DOM element present on the page
+          // Then:
+          //x.scrollIntoView();
+
+          //$('html, body').animate({ scrollTop: x.offset().top-10 }, 1000);
+
+        }
+    }
+
+}
+ 
+
+
+
+//make header active that has an active link
+//$('.title.active').closest('.submenu').addClass("active");
+
+//hide all menus that aren't active
+$('.submenu').not('.active').hide();
+
+//if one of the titles is active
+if ( $( '.title.active' ).length ) {
+  //just hide the other menus
+  console.log('we have an active title');
+  //console.log($( '.title.active' ));
+  console.log($('.title').not('active').closest('.submenu'));
+
+    //if submenu not already active
+    if ( !$( '.submenu.active' ).length ) {
+      console.log('submenu not active yet');
+      //make submenu active
+      $('.title.active').closest('.submenu').addClass("active");
+
+      //slide down the submenu
+      $('.title.active').closest('.submenu').slideDown();
+    }
+
+
+} else {
+  //hide all menus
+  //$('.header').not(".active").closest(".rounded").next().hide();
+
+  //open the menu with the active title
+  console.log('submenu to open');
+  console.log($('.title.active').parent().parent());
+
+  //$('.title.active').parent().parent().slideDown();
+  //$('.title.active').parent().parent().addClass("active");
+
+}
+
+$('.header').on('click', function(){
+  console.log('next');
+  console.log($(this).closest(".rounded").next());
+  //$(this).closest(".rounded").next().slideUp();
+
+  //if submenu is not visible
+  if(!($(this).closest(".rounded").next().is(':visible'))){
+
+    $('.header').removeClass("active");
+
+    $(this).closest(".rounded").next().slideUp();
+    $(this).closest(".rounded").next().slideDown();
+    $(this).addClass("active");
+
+    $('.header').not(".active").closest(".rounded").next().slideUp();
+    $('.header').not(".active").closest(".rounded").next().removeClass("active");
+    //$('.header').not(".active").closest(".rounded").next().slideDown();
+
+    $(this).removeClass("active");
+
+  } else {
+    $(this).closest(".rounded").next().slideUp();
+    $(this).removeClass("active");
+  }
+
+});
+
+
+  //click listeners to show and hide posts
+  $( ".title" ).on( "click", function(){
+    console.log('clicking title');
+    console.log( $( this ).text() );
+
+    //Stop Timeout loop
+    if(typeof myTimeout !== "undefined"){
+      clearTimeout(myTimeout);
+    }
+
+    if ( $( this ).hasClass("header") ) {
+      console.log('header clicked');
+      clickHandler(this, true );
+    } else {
+      clickHandler(this);
+    }
+    
+  });
+
+  $( ".page_link" ).on( "click", function(){
+    console.log('page_link clicked');
+    console.log($(this).attr('href'));
+    linkHandler(this.href);
+
+  });
+  
+
+  // loop through the node list to get the innerHTML from each node
+  // copy that as the id for the node
+
+  //if url already has hash with more than two '&' then need to shorten
+
+  id_title_href = document.location.hash.slice(1).split('&');
+
+  console.log( 'new showing link href2' );
+  console.log( id_title_href );
+
+  console.log('new title_href.length');
+  console.log(id_title_href.length);
+
+  var reduced_id_title_href = document.location.hash;
+
+  if (id_title_href.length >= 3) {
+    reduced_id_title_href = '#'+id_title_href[0]+'&'+id_title_href[1];
+  }
+
+
+    var addId = function(element, section, page){
+      console.log('addId called');
+      console.log(element);
+
+      console.log('reduced_id_title_href');
+      console.log(reduced_id_title_href);
+
+      sectionCopy = '#'+section+'&'+page+'&'+element.innerHTML.toLowerCase().replace(/ /g, '-').replace(/([^0-9a-z-])/g,''); //substitute space with dash
+      element.id = sectionCopy;
+}
+
+  /*
+  var allH2 = document.getElementsByTagName('h2');
+  var allH3 = document.getElementsByTagName('h3');
+  addId(allH2);
+  addId(allH3);
+  */
+
+  $('.outer-div').find('h2').each(function(index) {
+    console.log('closed parent');
+    console.log(this.closest('.outer-div').className);
+    if (this.closest('.outer-div').className.includes('about')) {
+      console.log('contains about!'); 
+      addId(this, 'about', this.closest('.outer-div').id);
+    }
+    if (this.closest('.outer-div').className.includes('cases')) {
+      console.log('contains cases!'); 
+      addId(this, 'cases', this.closest('.outer-div').id);
+    }
+    if (this.closest('.outer-div').className.includes('resources')) {
+      console.log('contains resources!'); 
+      addId(this, 'resources', this.closest('.outer-div').id);
+    }
+    
+  });
+
+  //$('.outer-div').find('h3').each(function(index) {
+ //   addId(index);
+ // });
+
+  //var allH2 = document.getElementsByTagName('h2');
+
+  
+  //addId(allH3);
+
+  // make the titles linkable
+  $('h2[id], h3[id]','.doc').attr('title', 'Link to this section').click(function(e) {
+    document.location.hash = $(e.currentTarget).attr('id');
+    //linkHandler(this.id);
+  });
+
+  //select the image containers so the images can be centered, styles in css
+  $('img').parent().addClass('has-image');
+
+  // make title nav sticky
+  
+  /*
+  $(document).ready(function(){
+  	var nav = $('.doc-nav'),
+      	navTop = nav.offset().top,
+      	navHeight = nav.outerHeight(true),
+      	footerHeight = $('#footer').outerHeight(true);
+
+  	$(window).scroll(function(e){
+    	var scrolled = $(this).scrollTop();
+    	var leftToScroll = $(document).height() - scrolled;
+    	
+    	if (scrolled >= navTop && leftToScroll > (footerHeight + navHeight + 20)) {
+    	// if in the middle - nav box is positioned fixed
+      		nav.addClass('fixed');
+      		//nav.removeClass('bottom');
+    	} else if (scrolled < navTop) {
+    	// if at the beginning - nav box is positioned at top
+      		nav.removeClass('fixed');
+      		//nav.removeClass('bottom');
+    	} else if (leftToScroll <= (footerHeight + navHeight + 20)) {
+    	// if at the end - nav box is positioned at bottom
+    	// only if height of viewport is not sufficient to have nav box and footer in it
+    		if ((footerHeight + navHeight + 20) > $(window).height()) {
+	      		//nav.removeClass('fixed');
+    	  		//nav.addClass('bottom');
+    	  	}
+    	}
+  	});
+  });
+*/
+
+  // get the second url of doc nav and make it the url of the 'proceed' link
+  var proceedTo = $('.doc-nav li:nth-child(2) a').attr('href');
+  $('a.start').attr('href',proceedTo);
+
+  // Set the min-height of the page dynamically based on height of navigation div
+  $('.doc-main').css("min-height", function() {
+    return $('#doc-nav-left').height() + 35;
+  });
+
+  function offsetAnchor() {
+        console.log('this2');
+        window.scrollTo(window.scrollX, window.scrollY - 200);
+    }
+
+  //http://stackoverflow.com/questions/17534661/make-anchor-link-go-some-pixels-above-where-its-linked-to
+  window.addEventListener("hashchange", offsetAnchor());
+
+    
+
+    //x = document.getElementById(nav_anchor);
+
+          // Basically `element_to_scroll_to` just have to be a reference
+          // to any DOM element present on the page
+          // Then:
+          //x.scrollIntoView();
+
+          //$('html, body').animate({ scrollTop: x.offset().top-100 }, 1000);
+
+
+  window.onload = linkHandler();
+
+  var eventFired = 0;
+
+  console.log('window width');
+  console.log($(window).width());
+
+  if ($(window).width() < 740) {
+      console.log('hide box');
+      $( ".box-container" ).hide();
+  }
+
+  $(window).on('resize', function() {
+      if (!eventFired) {
+          if ($(window).width() < 740) {
+              $( ".box-container" ).hide();
+          }
+      }
+  });
+
+
+  $(window).bind('hashchange', function() {
+
+   //window.scrollTo(0,0);
+
+   console.log('bind linkHandler');
+   link = document.location.hash.slice(0).split('&');
+
+   console.log('link hashend!');
+   console.log(link.length);
+   if (link.length > 1) {
+     linkHandler();
+   }
+  });
+
+</script>
+
+
+
+
+
+
+
