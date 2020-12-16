@@ -309,8 +309,8 @@ module.exports = function(grunt) {
       'shell:rmAssets',
       'shell:mkAssets',
       'img',
-      'svgmin',
-      'compress'
+      'svgmin'//,
+      //'compress'
     ]);
     
     
