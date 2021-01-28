@@ -58,11 +58,13 @@ emailDescription: "Maps play a powerful role at each stage of the disaster relie
 
         //L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
         //L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ', {
+        //L.tileLayer('https://api.mapbox.com/styles/v1/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ', {
+
+        L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ', {
             maxZoom: 18,
             attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
                 '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Names and boundary representation are not necessarily authoritative. ',
-            id: 'mapbox.streets-basic'
+            id: 'streets-v11'
         }).addTo(map);
 
         //used Inkscape to save MapGive icon: http://inkscapetutorials.org/2014/04/22/inkscape-faq-how-do-i-crop-in-inkscape/#document
