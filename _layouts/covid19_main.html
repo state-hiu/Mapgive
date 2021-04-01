@@ -312,6 +312,8 @@ ul.city-list {
 </div>
 
 
+
+
 <script type="text/javascript">
 /*
 need a router for the hashes in the url
@@ -323,7 +325,6 @@ and the page hashtag will load the post content
 */
 
 var panelClassName = 'show-front'
-
 
 var clickHandler = function( event, headerClicked ) {
     console.log('clickHandler called');
@@ -360,8 +361,7 @@ var clickHandler = function( event, headerClicked ) {
 
         console.log('title_href.length');
         console.log(title_href.length);
-        
-        
+                
         
         //if just one hash, ex #cases
         if (title_href.length == 1) {
@@ -384,81 +384,6 @@ var clickHandler = function( event, headerClicked ) {
             
          }
 
-
-/*
-used to turn 3-D box
-
-        //if just one hash, ex #cases
-        if (title_href.length == 1) {
-
-            hash_section = '#' + title_href[0];
-
-            //load page content
-            $( hash_section + '_header' + ".outer-div" ).show();
-            
-            if ($(window).width() > 740) {
-                  if ($('.box-container').css('display') == 'none') {
-                    $( ".box-container" ).show();
-                  }
-                  if ($('.box-container').css('visibility') == 'hidden') {
-                    $( ".box-container" ).css('visibility', 'visible');
-                  }
-              }
-
-            //turn box face
-
-            if (hash_section == '#home') {
-              box.removeClassName( panelClassName );
-              panelClassName = 'show-front';
-              box.addClassName( panelClassName );
-              
-              console.log('hash section home');
-
-              //this only removes the hash temporarily, but it later gets added by a jquery dispatch
-              // remove fragment as much as it can go without adding an entry in browser history:
-              //window.location.replace("#");
-
-              // slice off the remaining '#' in HTML5:    
-              //if (typeof window.history.replaceState == 'function') {
-              //  history.replaceState({}, '', window.location.href.slice(0, -1));
-             // }
-
-            }
-
-            if (hash_section == '#about') {
-              box.removeClassName( panelClassName );
-              panelClassName = 'show-right';
-              box.addClassName( panelClassName );
-            }
-
-            if (hash_section == '#cases') {
-              box.removeClassName( panelClassName );
-              panelClassName = 'show-back2';
-              box.addClassName( panelClassName );
-            }
-
-            if (hash_section == '#resources') {
-              box.removeClassName( panelClassName );
-              panelClassName = 'show-left2';
-              box.addClassName( panelClassName );
-            }
-
-        }
-        
-
-
-        console.log( 'title_href new: ' );
-        console.log( title_href[1] );
-
-        title_href2 = '#' + title_href[1];
-
-        console.log( 'title_href2' );
-        console.log( title_href2 );
-
-        
-
-        $( title_href2 + ".outer-div" ).show();
-*/
     } else {
         console.log( "this didn't come from an event!" );
     }
@@ -575,65 +500,6 @@ var linkHandler = function(link) {
                 $( hash_section + ".outer-div" ).show();
             }
 
-          
-            
-/*
-            //turn box face
-
-            if (hash_section == '#home') {
-              box.removeClassName( panelClassName );
-              panelClassName = 'show-front';
-              box.addClassName( panelClassName );
-            }
-
-            if (hash_section == '#about') {
-              box.removeClassName( panelClassName );
-              panelClassName = 'show-right';
-              box.addClassName( panelClassName );
-            }
-
-            if (hash_section == '#cases') {
-              box.removeClassName( panelClassName );
-              panelClassName = 'show-back2';
-              box.addClassName( panelClassName );
-            }
-
-            if (hash_section == '#resources') {
-              box.removeClassName( panelClassName );
-              panelClassName = 'show-left2';
-              box.addClassName( panelClassName );
-            }
-
-
-            if (hash_page[0] == 'home' || hash_page[0] == '') {
-
-              console.log('do the loop');
-
-              loop = ['#home','#about','#cases','#resources'];
-
-              // loop through array 
-              var i = 0, l = loop.length;
-              (function iterator() {
-                  console.log('loop[i]');
-                  console.log(loop[i]);
-
-                  clickHandler($('.header[href="'+loop[i]+'"]'));
-
-                  console.log('i');
-                  console.log(i);
-                  console.log('l');
-                  console.log(l);
-
-                  if(i==l-1) {
-                    i=-1;
-                  }
-
-                  if(++i<l) {
-                      myTimeout = setTimeout(iterator, 6000);
-                  }
-              })();
-            }
-*/
         }
         
         if (title_href.length == 2) {
@@ -706,27 +572,11 @@ var linkHandler = function(link) {
 
           window.scrollBy(0,-80);
 
-          //$('html,body').animate({scrollTop: x.offset().top},'slow');
-
-          //var element_to_scroll_to = $('#resources\\&determine-the-need\\&developing-a-project')[0];
-
-          //x = document.getElementById("#resources&determine-the-need&developing-a-project");
-
-          //x = document.getElementById(nav_anchor);
-
-          // Basically `element_to_scroll_to` just have to be a reference
-          // to any DOM element present on the page
-          // Then:
-          //x.scrollIntoView();
-
-          //$('html, body').animate({ scrollTop: x.offset().top-10 }, 1000);
-
         }
     }
 
 }
  
-
 
 
 //make header active that has an active link
@@ -752,19 +602,7 @@ if ( $( '.title.active' ).length ) {
       $('.title.active').closest('.submenu').slideDown();
     }
 
-
-} else {
-  //hide all menus
-  //$('.header').not(".active").closest(".rounded").next().hide();
-
-  //open the menu with the active title
-  console.log('submenu to open');
-  console.log($('.title.active').parent().parent());
-
-  //$('.title.active').parent().parent().slideDown();
-  //$('.title.active').parent().parent().addClass("active");
-
-}
+} 
 
 $('.header').on('click', function(){
   console.log('next');
@@ -774,51 +612,47 @@ $('.header').on('click', function(){
   //if submenu is not visible
   if(!($(this).closest(".rounded").next().is(':visible'))){
 
-    $('.header').removeClass("active");
+      $('.header').removeClass("active");
 
-    $(this).closest(".rounded").next().slideUp();
-    $(this).closest(".rounded").next().slideDown();
-    $(this).addClass("active");
+      $(this).closest(".rounded").next().slideUp();
+      $(this).closest(".rounded").next().slideDown();
+      $(this).addClass("active");
 
-    $('.header').not(".active").closest(".rounded").next().slideUp();
-    $('.header').not(".active").closest(".rounded").next().removeClass("active");
-    //$('.header').not(".active").closest(".rounded").next().slideDown();
+      $('.header').not(".active").closest(".rounded").next().slideUp();
+      $('.header').not(".active").closest(".rounded").next().removeClass("active");
+      //$('.header').not(".active").closest(".rounded").next().slideDown();
 
-    $(this).removeClass("active");
+      $(this).removeClass("active");
 
   } else {
-    $(this).closest(".rounded").next().slideUp();
-    $(this).removeClass("active");
+
+      $(this).closest(".rounded").next().slideUp();
+      $(this).removeClass("active");
   }
 
 });
 
 
-  //click listeners to show and hide posts
-  $( ".title" ).on( "click", function(){
-    console.log('clicking title');
-    console.log( $( this ).text() );
+//click listeners to show and hide posts
+$( ".title" ).on( "click", function(){
+  console.log('clicking title');
+  console.log( $( this ).text() );
 
-    //Stop Timeout loop
-    if(typeof myTimeout !== "undefined"){
-      clearTimeout(myTimeout);
-    }
+  //Stop Timeout loop
+  if(typeof myTimeout !== "undefined"){
+    clearTimeout(myTimeout);
+  }
 
-    if ( $( this ).hasClass("header") ) {
-      console.log('header clicked');
-      clickHandler(this, true );
-    } else {
-      clickHandler(this);
-    }
-    
-  });
+  if ( $( this ).hasClass("header") ) {
+    console.log('header clicked');
+    clickHandler(this, true );
+  } else {
+    clickHandler(this);
+  }
+  
+});
 
-  $( ".page_link" ).on( "click", function(){
-    console.log('page_link clicked');
-    console.log($(this).attr('href'));
-    linkHandler(this.href);
 
-  });
   
 
   // loop through the node list to get the innerHTML from each node
@@ -841,23 +675,15 @@ $('.header').on('click', function(){
   }
 
 
-    var addId = function(element, section, page){
-      console.log('addId called');
-      console.log(element);
+  var addId = function(element, section, page) {
+    console.log('addId called');
+    console.log(element);
 
-      console.log('reduced_id_title_href');
-      console.log(reduced_id_title_href);
+    sectionCopy = '#'+section+'&'+page+'&'+element.innerHTML.toLowerCase().replace(/ /g, '-').replace(/([^0-9a-z-])/g,''); //substitute space with dash
+    element.id = sectionCopy;
+  }
 
-      sectionCopy = '#'+section+'&'+page+'&'+element.innerHTML.toLowerCase().replace(/ /g, '-').replace(/([^0-9a-z-])/g,''); //substitute space with dash
-      element.id = sectionCopy;
-}
 
-  /*
-  var allH2 = document.getElementsByTagName('h2');
-  var allH3 = document.getElementsByTagName('h3');
-  addId(allH2);
-  addId(allH3);
-  */
 
   $('.outer-div').find('h2').each(function(index) {
     console.log('closed parent');
@@ -877,14 +703,6 @@ $('.header').on('click', function(){
     
   });
 
-  //$('.outer-div').find('h3').each(function(index) {
- //   addId(index);
- // });
-
-  //var allH2 = document.getElementsByTagName('h2');
-
-  
-  //addId(allH3);
 
   // make the titles linkable
   $('h2[id], h3[id]','.doc').attr('title', 'Link to this section').click(function(e) {
@@ -894,39 +712,6 @@ $('.header').on('click', function(){
 
   //select the image containers so the images can be centered, styles in css
   $('img').parent().addClass('has-image');
-
-  // make title nav sticky
-  
-  /*
-  $(document).ready(function(){
-  	var nav = $('.doc-nav'),
-      	navTop = nav.offset().top,
-      	navHeight = nav.outerHeight(true),
-      	footerHeight = $('#footer').outerHeight(true);
-
-  	$(window).scroll(function(e){
-    	var scrolled = $(this).scrollTop();
-    	var leftToScroll = $(document).height() - scrolled;
-    	
-    	if (scrolled >= navTop && leftToScroll > (footerHeight + navHeight + 20)) {
-    	// if in the middle - nav box is positioned fixed
-      		nav.addClass('fixed');
-      		//nav.removeClass('bottom');
-    	} else if (scrolled < navTop) {
-    	// if at the beginning - nav box is positioned at top
-      		nav.removeClass('fixed');
-      		//nav.removeClass('bottom');
-    	} else if (leftToScroll <= (footerHeight + navHeight + 20)) {
-    	// if at the end - nav box is positioned at bottom
-    	// only if height of viewport is not sufficient to have nav box and footer in it
-    		if ((footerHeight + navHeight + 20) > $(window).height()) {
-	      		//nav.removeClass('fixed');
-    	  		//nav.addClass('bottom');
-    	  	}
-    	}
-  	});
-  });
-*/
 
   // get the second url of doc nav and make it the url of the 'proceed' link
   var proceedTo = $('.doc-nav li:nth-child(2) a').attr('href');
@@ -938,31 +723,19 @@ $('.header').on('click', function(){
   });
 
   function offsetAnchor() {
-        console.log('this2');
+        //console.log('this2');
         window.scrollTo(window.scrollX, window.scrollY - 200);
     }
 
   //http://stackoverflow.com/questions/17534661/make-anchor-link-go-some-pixels-above-where-its-linked-to
   window.addEventListener("hashchange", offsetAnchor());
 
-    
-
-    //x = document.getElementById(nav_anchor);
-
-          // Basically `element_to_scroll_to` just have to be a reference
-          // to any DOM element present on the page
-          // Then:
-          //x.scrollIntoView();
-
-          //$('html, body').animate({ scrollTop: x.offset().top-100 }, 1000);
-
-
   window.onload = linkHandler();
 
   var eventFired = 0;
 
-  console.log('window width');
-  console.log($(window).width());
+  // console.log('window width');
+  // console.log($(window).width());
 
   if ($(window).width() < 740) {
       console.log('hide box');
@@ -978,19 +751,19 @@ $('.header').on('click', function(){
   });
 
 
-  $(window).bind('hashchange', function() {
+  $(window).on('hashchange', function() {
 
-   //window.scrollTo(0,0);
+    console.log('hashchange, call linkHandler');
+    link = document.location.hash.slice(0).split('&');
+    console.log('link hashend!');
+    console.log(link.length);
+    
+    if (link.length >= 1) {
+      linkHandler();
+    }
 
-   console.log('bind linkHandler');
-   link = document.location.hash.slice(0).split('&');
-
-   console.log('link hashend!');
-   console.log(link.length);
-   if (link.length > 1) {
-     linkHandler();
-   }
   });
+  
 
 </script>
 
