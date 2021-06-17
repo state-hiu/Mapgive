@@ -4,16 +4,14 @@
   "author": "Office of Innovative Engagement, U.S. Department of State",
   "description": "MapGive, part of the Imagery to the Crowd project from the U.S. Department of State’s Humanitarian Information Unit, makes it easy for new volunteers to learn to map and get involved in online mapping tasks",
   "contributors": [
-    {
-      "name": "Humanitarian Information Unit, U.S. Department of State"
-    }
+    "Humanitarian Information Unit, U.S. Department of State"
   ],
   "scripts": {
     "test": "jshint **.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/state-hiu/Mapgive"
+    "url": "git+https://github.com/state-hiu/Mapgive.git"
   },
   "license": "MIT",
   "private": "true",
@@ -37,5 +35,11 @@
     "jshint": "^2.5.1",
     "matchdep": "*",
     "wrench": "*"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/state-hiu/Mapgive/issues"
+  },
+  "homepage": "https://github.com/state-hiu/Mapgive#readme",
+  "main": "index.html",
+  "dependencies": {}
 }
