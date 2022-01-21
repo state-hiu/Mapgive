@@ -1,0 +1,59 @@
+---
+layout: story_no_country_title
+category: stories
+title: "Contributing to the pandemic-stricken tourism of Nepal"
+person: MapGive
+country: Nepal
+date: 2021-10-06
+image: kathmandu_geo_night_2021_thumb.jpg
+tags: [health, mapping, covid-19]
+altText: "The Cities' COVID Mitigation Mapping (C2M2) program is an initiative of the Office of the Geographer and Global Issues at the U.S. Department of State that builds partnerships to enhance geospatial capacity, generate data, and share maps to support planning for mitigating COVID-19 second order impacts."
+caption: "Guest Post from Cities COVID Mitigation Mapping Partner, Kathmandu Living Labs"
+twitterDescription: "The Cities' COVID Mitigation Mapping (C2M2) program is an initiative of the Office of the Geographer and Global Issues at the U.S. Department of State that builds partnerships to enhance geospatial capacity, generate data, and share maps to support planning for mitigating COVID-19 second order impacts."
+twitterImage: "../assets/img/kathmandu_geo_night_2021_thumb.jpg"
+ogDescription: "The Cities' COVID Mitigation Mapping (C2M2) program"
+ogImage: "../assets/img/kathmandu_geo_night_2021_thumb.jpg"
+emailSubject: The Cities' COVID Mitigation Mapping (C2M2) program
+emailDescription: "The Cities' COVID Mitigation Mapping (C2M2) program is an initiative of the Office of the Geographer and Global Issues at the U.S. Department of State that builds partnerships to enhance geospatial capacity, generate data, and share maps to support planning for mitigating COVID-19 second order impacts."
+lat: 27.7076762
+lon: 85.3148882
+external_url: "https://blog.kathmandulivinglabs.org/geonight-2021-contributing-to-the-pandemic-stricken-tourism-of-nepal/"
+---
+
+<!--<h3>Using Geospatial Data to Tackle COVID-19's Second-Order Impacts</h3>-->
+
+<p>
+While the global community grapples with the direct effects of the COVID-19 pandemic, local communities around the world strive to manage the second-order impacts of the pandemic. Second-order impacts, including strains on education systems, changing patterns of mobility due to restrictions on travel, and decreasing food security, can also impact informal economies and access to basic service in informal settlements (i.e., handwashing stations, sanitation, electricity). The U.S. State Department’s Cities’ COVID Mitigation Mapping program (C2M2), initiated in September 2020 with U.S. foreign assistance funding, aims to mitigate those second-order impacts of COVID-19 by establishing partnerships to generate unique geospatial data at urban scales to expose information to the public and support local, strategic decision-making.  This pandemic magnifies and exacerbates many existing inequalities, and thinking spatially, generating data, and integrating diverse sources of information across multiple scales, are all critical approaches to understand and mitigate vulnerability.  
+</p>
+
+<h3>A Global Community of Practice</h3>
+
+<p>
+Focusing on the power of geospatial data and analysis, MapGive’s C2M2 program builds on a previous U.S. Department of State project – the <a href="https://secondarycities.state.gov/" target="_blank"> Secondary Cities (2C) Initiative</a>. The 2C Initiative created a global network of sixteen cities around the world to generate geospatial data for emergency preparedness, human security, and resilience.  Organized into three regional hubs (based in Asia, Latin American, and Africa), the 2C Initiative helped strengthen a reliable global community of skilled geospatial practitioners, students, and experts ready to implement geospatial applications to address problems characteristic of rapidly growing urban areas.  Following this model, the C2M2 program quickly established three regional hubs in Asia, Africa, and Latin America. These hubs, local practitioners and organizations with deep expertise and strong networks quickly identified and teamed with local partners whose projects used geospatial analysis to help address the challenges brought on by the COVID-19 pandemic.
+</p>
+
+<h3>Harnessing the Power of Geography with Cities’ COVID Mitigation Mapping Program</h3>
+
+<p>
+The <a href="https://mapgive.state.gov/c2m2/" target="_blank">C2M2 program</a> includes twelve city-based projects, which are facilitated by the regional hub leaders in Asia, Africa, and Latin America. C2M2 partners are working in rapidly growing cities in lower- and middle-income countries around the world (see map below). Each project is creating open geospatial data and conducting analyses that use the science of where to better understand and address the second-order impacts of COVID-19. City-level projects of the C2M2 program tap into local capacity to utilize geospatial data and technologies, strengthen international partnerships, and create new data to fill information gaps and inform data-driven decision making for policies in anticipation of the “downstream” impacts of COVID-19.  Many C2M2 partners are working on common themes such as food security, health, informal economies, tourism, and mobility. Follow MapGive’s C2M2 updates to see the progress the C2M2 teams make as they navigate the impacts of second-order impacts and determine best practices for data generation that will inform decision-making.
+</p>
+
+<h3>C2M2 Launch Webinar: Defining the Geospatial Characteristics of COVID-19 Second-Order Impacts</h3>
+
+<div class="video">
+    <div class="video-player-container shadowed" data="y8LfjuhGYPg" tabindex="0">
+        <img src="{{ site.baseurl }}/assets/img/the-cause.jpg" alt="YouTube embedded video: Cities' Covid Mitigation Mapping (C2M2) Launch Webinar. Press space or enter to play video." class="img-responsive" />
+        <div class="play"><span class="play-button"></span></div>
+    </div>
+    <p class="caption">Cities' COVID Mitigation Mapping (C2M2) team meets for the program's launch webinar, featuring presentations on the second order impacts of COVID-19 from the Africa, Asia, and Latin America Hubs, December 2020.</p>
+</div>
+
+<p><i>
+The Cities' COVID Mitigation Mapping (C2M2) program is an initiative of the Office of the Geographer and Global Issues at the U.S. Department of State that builds partnerships to enhance geospatial capacity, generate data, and share maps to support planning for mitigating COVID-19 second order impacts. We acknowledge the many partners who make this a successful program. For more information about the C2M2 program, please visit <a href="https://mapgive.state.gov/c2m2/" target="_blank">mapgive.state.gov/c2m2</a>.
+</i></p>
+
+
+
+
+
+
