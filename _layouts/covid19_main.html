@@ -61,6 +61,48 @@ ul.city-list {
     }
 }
 
+.container2 {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.video2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.flex-item-pic {
+    background: none;
+    width: 297px;
+    height: 192px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    box-shadow: 1px 1px 7px -3px #888;
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+}
+
 </style>
 
 <!--Code for Tools Table-->
@@ -83,6 +125,8 @@ ul.city-list {
 <!-- TableTop -->
 <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.4.3/tabletop.min.js"></script>-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+
+<script type="text/javascript" src="https://unpkg.com/papaparse@5.3.1/papaparse.min.js"></script>
 
 <div class='doc-main doc cell-main'>
 
@@ -167,6 +211,32 @@ ul.city-list {
     </br></br>
     The COVID-19 pandemic will continue to challenge vulnerable populations and communities   long after the infection numbers peak. Many vulnerable populations around the world are experiencing a new complexity the virus is bringing to existing challenges such as poverty, food insecurity, obstacles to social, economic, and labor mobility, and access to education. Understanding these second-order impacts will help officials as well as civil society organizations mitigate negative effects and strengthen responses to address growing economic, health, and education needs.
     </br></br>
+
+    </p>
+
+    <div class="col-sm-5 projects-thumbnail" style="margin-right: 20px; margin-bottom: 0;">
+      <div >
+        <ul class="flex-container" >
+            <li class="flex-item-pic">
+                <a href="https://earth.google.com/web/data=Mj8KPQo7CiExc3Q4Mllyby1QNzNseFJ0RWRCUi0tZjJ2YklDUktFdUISFgoUMEVCRkY5RkZDODFDNDJBMjBEOTY" class="image" target="_blank">
+                  <img src="/assets/img/voyager_thumb.png " alt="C2M2 Voyage" class="img-responsive shadowed">
+                </a>
+            </li>
+            <li class="flex-item" style="display:flex"><div id="container-7260" class="svg-container"><svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 300 200" class="svg-content"><g><rect class="mapped" width="95%" y="94.6938775510204" height="35.91836734693878"></rect><text class="value" y="94.6938775510204" dy="-4.08163265306122" text-anchor="start" x="10">mapped: 95% complete</text></g><g><rect class="validated" width="1%" y="29.387755102040813" height="35.91836734693878"></rect><text class="value" y="29.387755102040813" dy="-4.08163265306122" text-anchor="start" x="10">validated: 1% complete</text></g><g class="y axis" fill="none" font-size="10" font-family="sans-serif" text-anchor="end"><path class="domain" stroke="currentColor" d="M-6,160.5H0.5V0.5H-6"></path><g class="tick" opacity="1" transform="translate(0,112.65306122448979)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">mapped</text></g><g class="tick" opacity="1" transform="translate(0,47.3469387755102)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">validated</text></g></g><g class="x axis" transform="translate(0,160)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle"><path class="domain" stroke="currentColor" d="M0.5,6V0.5H260.5V6"></path><g class="tick" opacity="1" transform="translate(260.5,0)"><line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">100%</text></g></g></svg></div></li>
+        </ul>
+        <div class="caption">
+          <h3><a href="https://earth.google.com/web/data=Mj8KPQo7CiExc3Q4Mllyby1QNzNseFJ0RWRCUi0tZjJ2YklDUktFdUISFgoUMEVCRkY5RkZDODFDNDJBMjBEOTY" target="_blank">C2M2 Voyage</a></h3>
+          <!--<p><strong>author</strong>: PEPFAR, MapGive, USAID</p>-->
+          <p>Take a voyage on the Google Earth C2M2 voyager story.</p>
+
+          <!--
+          <p><strong>published</strong>: November 22, 2018</p>
+          -->
+        </div>
+      </div>
+    </div>
+
+    <p class='tagwords'>
     The <strong>Cities’ COVID Mitigation Mapping program (C2M2)</strong> builds on global networks of geospatial experts to analyze second-order impacts of COVID-19. The goal of this program is to increase the capacity to understand the distribution and gaps in resources available to vulnerable populations in urban communities. This program has three regional hubs in Africa, Asia, and Latin America, where select local organizations, with regional geospatial and community development expertise, identify and work with various local project partners to develop and guide C2M2 projects in each region.
     </br></br>
     C2M2 projects build local capacity to utilize open data and geospatial technologies, strengthen international partnerships, and create new data and analyses to inform data-driven decision making for planning to mitigate COVID-19 second-order impacts. Project partners will focus on key themes: food security, informal economy, tourism, health, and mobility to address second-order impacts of COVID-19.
@@ -181,6 +251,16 @@ ul.city-list {
       </div>
       <p class="caption">Cities' COVID Mitigation Mapping (C2M2) team meets for the program's launch webinar, featuring presentations on the second order impacts of COVID-19 from the Africa, Asia, and Latin America Hubs, December 2020.</p>
     </div>
+    </p>
+
+    <h3>C2M2 Complete Playlist</h3>
+    <!-- https://www.h3xed.com/web-development/how-to-make-a-responsive-100-width-youtube-iframe-embed -->
+    <div class="container2">
+        <iframe class="video2" src="https://www.youtube.com/embed/videoseries?list=PLK2isG8b-NQhzRLYY-REcwoMFlQgUYaGm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+
+
   </div>
 
 <!--
