@@ -124,8 +124,15 @@ emailDescription: "Maps play a powerful role at each stage of the disaster relie
             <img src="{{ site.baseurl }}/assets/img/{{ story.image }} " alt="{{ story.altText }}" class="img-responsive shadowed" />
           </a>
           <div class="caption">
-            <h3><a href="{{ site.baseurl }}{{ story.url }}">{{ story.title }}</a></h3>
+            {% if story.external_url %}
+              <h3><a href="{{ story.external_url }}">{{ story.title }}</a></h3>
+            {% else %}
+              <h3><a href="{{ site.baseurl }}{{ story.url }}">{{ story.title }}</a></h3>
+            {% endif %}
             <p><strong>Location</strong>: {{ story.country }}</p>
+            {% if story.external_url %}
+              <p> {{ story.caption }} </p>
+            {% endif %}
           </div>
         </div>
       </div>
