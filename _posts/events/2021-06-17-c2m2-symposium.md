@@ -3,7 +3,7 @@ layout: resource
 category: events
 external_url: 'https://gis.harvard.edu/event/cities-covid-mitigation-and-mapping-c2m2-symposium'
 title: CITIES' COVID MITIGATION AND MAPPING (C2M2) SYMPOSIUM
-status: upcoming
+status: past
 date: 20210617
 tags:
   - event
