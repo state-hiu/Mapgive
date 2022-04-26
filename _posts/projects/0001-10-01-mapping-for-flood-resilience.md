@@ -3,7 +3,7 @@ layout: resource
 category: projects
 external_url: 'https://tasks.hotosm.org/projects/12421'
 title: "Mapping for Flood Resilience"
-project-number: 12421
+project-number: 12423
 author: MapUganda, MapGive, Youth Mappers
 date: 20220413
 type: remote
@@ -25,10 +25,13 @@ Therefore, through mapping, the OpenStreetMap Uganda community and its partners 
 ## Project Links
 
 ### Beginner
-[MAPPING FOR FLOOD RESILIENCE - BUSIRO, WAKISO DISTRICT](https://tasks.hotosm.org/projects/12421)  
+[MAPPING FOR FLOOD RESILIENCE - BUSIRO, WAKISO DISTRICT](https://tasks.hotosm.org/projects/12421)
+
 [MAPPING FOR FLOOD RESILIENCE - LUKAYA TOWN, KALUNGU DISTRICT](https://tasks.hotosm.org/projects/12423)
+
 [MAPPING FOR FLOOD RESILIENCE - NANGO TOWN, MAYUGE DISTRICT](https://tasks.hotosm.org/projects/12424)
 
 ### Intermediate/Advanced
-[MAPPING FOR FLOOD RESILIENCE - GARUGA, WAKISO DISTRICT](https://tasks.hotosm.org/projects/12417)  
+[MAPPING FOR FLOOD RESILIENCE - GARUGA, WAKISO DISTRICT](https://tasks.hotosm.org/projects/12417)
+
 [MAPPING FOR FLOOD RESILIENCE - KATOSI, MUKONO DISTRICT](https://tasks.hotosm.org/projects/12420)  
