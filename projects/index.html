@@ -53,7 +53,7 @@ margin: 0 0 3px 40px;
 
 .flex-item {
   background: none;
-  padding: 20px;
+  padding: 10px 10px 10px 10px;
   width: 300px;
   height: 200px;
   margin-top: 0px;
@@ -172,6 +172,7 @@ text {
                           <img src="{{ site.baseurl }}/assets/img/{{ post.photo }} " alt="{{ post.title }}" class="img-responsive shadowed" />
                         </a>
                     </li>
+                    
                     <li class="flex-item" style="display:flex"><div id="container-{{ post.project-number }}" class="svg-container"></div></li>
                 </ul>
                 <div class="caption">
@@ -246,10 +247,10 @@ function fetchProductData(project_list) {
     console.log('print project_list');
     console.log(project_list);
     
+    const margin = 25;
+
     project_list.forEach(function (ref) {
         console.log(ref);
-        
-        
         
         $.ajax({
             //url: "https://tasks.hotosm.org/api/v1/stats/project/7260",
@@ -270,7 +271,7 @@ function fetchProductData(project_list) {
                 console.log('chart width ' + chartElement.getBoundingClientRect().width)
                 console.log('chart height ' + chartElement.getBoundingClientRect().height)
 
-                height = chartElement.getBoundingClientRect().height;
+                height = chartElement.getBoundingClientRect().height - margin;
 
                 width = chartElement.getBoundingClientRect().width;
 
@@ -291,16 +292,17 @@ function fetchProductData(project_list) {
                 bar = svg.selectAll(".bar")
                   .data(data)
                       .enter().append("g")
+                  .attr('transform', `translate(0, ${margin})`);
 
 
-                  bar.append("rect")
-                  //.attr("x", 0)
-                  //.attr("y", y.bandwidth())
-                  //.attr("x", function(d) { return x(d.sales); })
-                  .attr("class", function(d) { return d.category })
-                  .attr("width", function(d) { return d.percent_complete + "%"; })
-                  .attr("y", function(d) { return y(d.category); })
-                  .attr("height", y.bandwidth());
+                bar.append("rect")
+                //.attr("x", 0)
+                //.attr("y", y.bandwidth())
+                //.attr("x", function(d) { return x(d.sales); })
+                .attr("class", function(d) { return d.category })
+                .attr("width", function(d) { return d.percent_complete + "%"; })
+                .attr("y", function(d) { return y(d.category); })
+                .attr("height", y.bandwidth());
                   
 
 
@@ -327,6 +329,13 @@ function fetchProductData(project_list) {
                   .attr("class", "x axis")
                   .attr("transform", "translate(0," + height + ")")
                   .call(d3.axisBottom(x).tickValues([100]).tickFormat(function(d) { return d + "%"; }));
+
+                svg.append('text')
+                  .attr('x', width / 2 + margin)
+                  .attr('y', 10)
+                  .attr('text-anchor', 'middle')
+                  .style("font-size", "14px")
+                  .text('Task ' + ref);
 
             }
         });
