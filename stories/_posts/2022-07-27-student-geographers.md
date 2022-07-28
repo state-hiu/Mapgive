@@ -1,37 +1,38 @@
 ---
 layout: story_no_country_title
 category: stories
-title: "Latest Fieldwork Program awardees for 2022"
+title: "Celebrating student geographers: 2022 Fieldwork Program awardees"
 person: MapGive
 country: Worldwide
 date: 2022-07-27
 image: GGI_100yr_anniversary_wide.png
 tags: [100th anniversary, mapping]
-altText: "In celebration of the 100th anniversary of the U.S. Department of State's Office of the Geographer and Global Issues and as a demonstration of our commitment to open data, its MapGive initiative is partnering with YouthMappers to support the next generation of geographers."
-caption: "In celebration of the 100th anniversary of the U.S. Department of State's Office of the Geographer and Global Issues and as a demonstration of our commitment to open data, its MapGive initiative is partnering with YouthMappers to support the next generation of geographers."
-twitterDescription: "In celebration of the 100th anniversary of the U.S. Department of State's Office of the Geographer and Global Issues and as a demonstration of our commitment to open data, its MapGive initiative is partnering with YouthMappers to support the next generation of geographers."
+altText: "In celebration of the 100th anniversary of the U.S. Department of State’s Office of the Geographer and Global Issues, and as a demonstration of a commitment to open data, its MapGive initiative is partnering with YouthMappers to support the next generation of geographers!"
+caption: ""
+twitterDescription: "In celebration of the 100th anniversary of the U.S. Department of State’s Office of the Geographer and Global Issues, and as a demonstration of a commitment to open data, its MapGive initiative is partnering with YouthMappers to support the next generation of geographers!"
 twitterImage: "../assets/img/GGI_100yr_anniversary_wide.png"
 ogDescription: "supporting the next generation of geographers"
 ogImage: "../assets/img/GGI_100yr_anniversary_wide.png"
 emailSubject: supporting the next generation of geographers
-emailDescription: "In celebration of the 100th anniversary of the U.S. Department of State's Office of the Geographer and Global Issues and as a demonstration of our commitment to open data, its MapGive initiative is partnering with YouthMappers to support the next generation of geographers."
+emailDescription: "In celebration of the 100th anniversary of the U.S. Department of State’s Office of the Geographer and Global Issues, and as a demonstration of a commitment to open data, its MapGive initiative is partnering with YouthMappers to support the next generation of geographers!"
 lat: 3.243
 lon: 31.385
 ---
 
 <p>
-In celebration of the 100th anniversary of the U.S. Department of State’s Office of the Geographer and Global Issues and as a demonstration of our commitment to open data, its MapGive initiative is partnering with <a href="https://www.youthmappers.org/" target="_blank">YouthMappers</a> to support the next generation of geographers and is happy to announce its sponsorship of an impressive cohort of student projects that showcase the importance of open data as a public good.
+In celebration of the 100th anniversary of the U.S. Department of State’s Office of the Geographer and Global Issues, and as a demonstration of a commitment to open data, its MapGive initiative is partnering with <a href="https://www.youthmappers.org/" target="_blank">YouthMappers</a> to support the next generation of geographers! MapGive is happy to announce its sponsorship of an impressive cohort of student projects that showcase the importance of open data as a public good.
 </p>
 <p>
 The <a href="https://www.youthmappers.org/youthmappersfieldwork">YouthMappers Fieldwork Program</a> is an opportunity to financially support students’ efforts as they undertake student-led projects related to creating and analyzing geospatial data in their local or regional communities. As a public diplomacy initiative encouraging participation and building capacity in the global open mapping community, MapGive is thrilled to help students around the world pursue projects which will help them develop key skills, build professional networks, and gain invaluable experiences, while contributing meaningful open data and analysis for more sustainable development.
 </p>
 <p>
-This year, funding was awarded to the following four chapters in different parts of the globe whose projects focus on using geospatial data to address slum conditions, improving sanitation and hygiene access through field data creation, and filling data gaps in newly urbanized areas using field photo mapping.
+This year, funding was awarded to the following four chapters in different parts of the globe whose projects focus on using geospatial data to address slum conditions, improving sanitation and hygiene access through field data creation, and filling data gaps in newly urbanized areas using field photo mapping. Awardees include YouthMappers chapters in Bangladesh, Paraguay, and also a close collaboration between two chapters in Uganda!
+
 </p>
 
 
 
-<h3><img src="{{site.baseurl}}/assets/img/CUSS_logo.png" style="width:50px"> <a href="https://www.facebook.com/cusscu.bd">CUSS YouthMappers, University of Chittagong</a></h3>
+<h3><img src="{{site.baseurl}}/assets/img/CUSS_logo.png" style="width:70px"> <a href="https://www.facebook.com/cusscu.bd">CUSS YouthMappers, University of Chittagong</a></h3>
 
 <p>Chittagong, Bangladesh</p>
 <i>Sanitation and Hygiene Scenario in the Slum Community: A Fieldwork Program on Shanti Nagar Slum, Chittagong, Bangladesh</i>
@@ -51,7 +52,6 @@ This year, funding was awarded to the following four chapters in different parts
 <li>The project aims to create a workflow to fill in a gap of updated geospatial data to understand the urban characterization of cities in Paraguay. The students will produce freely available base layers of cartographic data (buildings, vegetation, and water) of cities location in the Asuncion-Ciudad del Este road corridor.</li>
 </ul>
 <p><a href="https://youthmappersuna.wordpress.com/">Website</a> | <a href="https://www.instagram.com/youthmappersuna/">Instagram</a> </p>
-<i>And, a collaboration between two YouthMappers chapters who plan to work closely together addressing health security!</i>
 
 <h3><img src="{{site.baseurl}}/assets/img/geo_ym_logo.png" style="width:50px"> <a href="https://twitter.com/GeoYouthmappers">Geo YouthMappers, Makerere University</a></h3>
 
@@ -88,7 +88,7 @@ This year, funding was awarded to the following four chapters in different parts
 <blockquote>
     <div style="font-size: 18px;margin-bottom:0px" class="story-promo">
     <i>
-    We are thrilled to support these chapters with their projects and are grateful for their time, effort, and willingness to tackle pressing issues head on!
+    We are excited to support these chapters with their projects and are grateful for their time, effort, and willingness to tackle pressing issues head on!
     Follow the chapters (see links in above descriptions) and us at <a href="https://twitter.com/mapgive">@mapgive</a> and <a href="http://www.twitter.com/youthmappers">@YouthMappers</a> to get additional updates on these projects and our programs in the coming months.
     </i>
     </div>
