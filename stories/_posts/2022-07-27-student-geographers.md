@@ -30,6 +30,7 @@ This year, funding was awarded to the following four chapters in different parts
 
 </p>
 
+<img src="{{site.baseurl}}/assets/img/ym_banner.jpg" style="width:650px;padding: 40px 0px 40px 0px">
 
 
 <h3><img src="{{site.baseurl}}/assets/img/CUSS_logo.png" style="width:70px"> <a href="https://www.facebook.com/cusscu.bd">CUSS YouthMappers, University of Chittagong</a></h3>
