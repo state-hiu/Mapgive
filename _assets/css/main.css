@@ -958,7 +958,7 @@ dt {
   border: 1px solid #bcbcbc;
   box-shadow: 1px 1px 7px -3px #888;
   border-radius: 0;
-  min-height: 308px;
+  min-height: 380px;
   height:330px;
 }
 
@@ -1116,7 +1116,7 @@ dt {
 
 @media (min-width: 768px) {
   .thumbnail {
-    min-height: 308px;
+    min-height: 380px;
   }
 
   .thumbnail img {
@@ -1148,7 +1148,7 @@ dt {
 
 @media (min-width: 1200px) {
   .thumbnail {
-    min-height: 336px;
+    min-height: 380px;
   }
 
   .news-thumbnail {
