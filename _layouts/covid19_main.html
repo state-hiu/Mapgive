@@ -176,6 +176,24 @@ ul.city-list {
            </a>
         </li>
       </ul>
+
+      <ul>
+        <li class='doc rounded' style='padding:0px;'>
+          <a class='title header' href='#outcomes' > 
+            <span>Outcomes</span>
+           </a>
+        </li>
+      </ul>
+
+
+
+      <!-- <div class="story-promo shadowed">
+        <div class="quote">
+          <blockquote><a href="/stories/responding-to-disasters.html" class="hyphenate">It's easy to take extensive geographic information for granted in the developed world.</a>”</blockquote>
+        </div>
+        <a href="/stories/responding-to-disasters.html" class="image"><img src="../assets/img/philippines-story.jpg" alt="Mappers review their materials in the Philippines." class="img-responsive"></a>
+        <p class="attribution"><a href="/stories/responding-to-disasters.html">–Tyler Machado, <em>U.S.A.</em></a></p>
+      </div> -->
       
 
 
@@ -383,6 +401,19 @@ ul.city-list {
           {% unless post.hidden %}
             
             <div class="anchor outer-div c2m2_resources" id="{{ post.title | slugify }}" style="display: none;">
+              <h1>{{post.title}}</h1>
+              {{ post.content }}
+            </div>
+
+          {% endunless %}
+      {% endif %}
+  {% endfor %}
+
+  {% for post in site.categories.outcomes reversed %}
+      {% if post.lang == page.lang %}
+          {% unless post.hidden %}
+            
+            <div class="anchor outer-div outcomes" id="{{ post.title | slugify }}" style="display: none;">
               <h1>{{post.title}}</h1>
               {{ post.content }}
             </div>

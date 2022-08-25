@@ -275,9 +275,13 @@ function callback(error,csv) {
 
         //https://gist.github.com/mapsam/6090056
         queue()
-          .defer(d3.json, "geo/world_simplify.json")
-          .defer(d3.json, "geo/LSIB9_combined_simplify4.json")
+          .defer(d3.json, "geo/World_Polygons_Simplified_Basemap_8_22.geojson")
+          .defer(d3.json, "geo/LSIB_Simplified_Basemap_8_22.geojson")
           .await(analyze);
+        // queue()
+        //   .defer(d3.json, "geo/world_simplify.json")
+        //   .defer(d3.json, "geo/LSIB9_combined_simplify4.json")
+        //   .await(analyze);
 
 
         //d3.json("geo/world.json", function (countriesJson) {
@@ -306,10 +310,10 @@ function callback(error,csv) {
                     })
                     //leave the name of chart as 'state' because dc.css has the hover effect that reference 
                     .overlayGeoJson(countriesJson.features, "country", function (d) {
-                        if (d.properties.COUNTRY_NA) {
+                        if (d.properties.Entity) {
                             //console.log('logging d.properties.COUNTRY_NA');
                             //console.log(d.properties.COUNTRY_NA);
-                            return d.properties.COUNTRY_NA;
+                            return d.properties.Entity;
                         }
                     })
                     .overlayGeoJson(lsib_lines_Json.features, "lsib_lines", function (d) {
