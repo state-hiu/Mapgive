@@ -187,12 +187,36 @@ ul.city-list {
 
 
 
-      <!-- <div class="story-promo shadowed">
-        <div class="quote">
+      <div class="submenu story-promo shadowed" id="africa-hub">
+        <!-- <div class="quote">
           <blockquote><a href="/stories/responding-to-disasters.html" class="hyphenate">It's easy to take extensive geographic information for granted in the developed world.</a>”</blockquote>
-        </div>
-        <a href="/stories/responding-to-disasters.html" class="image"><img src="../assets/img/philippines-story.jpg" alt="Mappers review their materials in the Philippines." class="img-responsive"></a>
-        <p class="attribution"><a href="/stories/responding-to-disasters.html">–Tyler Machado, <em>U.S.A.</em></a></p>
+        </div> -->
+        <img src="/assets/img/c2m2_bakuvu2.jpg" alt="Members of the MapGive C2M2 Bukavu project gather during a workshop in June 2020. " class="img-responsive">
+        <p class="attribution">Members of the MapGive C2M2 Bukavu project gather during a workshop in June 2020. </em></p>
+        <img src="/assets/img/bukavu_vizathon_thumb2.jpg" alt="Members of the MapGive C2M2 Bukavu project meet with members of the local community." class="img-responsive">
+        <p class="attribution">Members of the MapGive C2M2 Bukavu project meet with members of the local community.</em></p>
+      </div>
+
+      <div class="submenu story-promo shadowed" id="asia-hub">
+        <img src="/assets/img/nepal_caption.jpg" alt="" class="img-responsive">
+        <p class="attribution"></em></p>
+        <img src="/assets/img/nepal_thamel.jpg" alt="Members of the C2M2 Nepal project gather with volunteers in Thamel to map tourism businesses on OpenStreetMap to help offset second-order impacts of COVID-19 in the area." class="img-responsive">
+        <p class="attribution">Members of the C2M2 Nepal project gather with volunteers in Thamel to map tourism businesses on OpenStreetMap to help offset second-order impacts of COVID-19 in the area.</em></p>
+      </div>
+
+      <div class="submenu story-promo shadowed" id="latin-america-hub">
+        <img src="/assets/img/santa_cruz_workshop.jpg" alt="Members of the MapGive C2M2 Santa Cruz project participate in a workshop discussing second-order COVID-19 impacts on hotels and restaurants." class="img-responsive">
+        <p class="attribution"> Members of the MapGive C2M2 Santa Cruz project participate in a workshop discussing second-order COVID-19 impacts on hotels and restaurants.</em></p>
+        <img src="/assets/img/santa_cruz_activity.jpg" alt="Members of the MapGive C2M2 Santa Cruz project participate in a hands on activity during a workshop related to second-order COVID-19 impacts on hotels and restaurants." class="img-responsive">
+        <p class="attribution">Members of the MapGive C2M2 Santa Cruz project participate in a hands on activity during a workshop related to second-order COVID-19 impacts on hotels and restaurants.</em></p>
+      </div>
+
+      
+
+
+
+      <!-- <div class="story-promo shadowed">
+        <img src="/assets/img/voyager_thumb.png" alt="Mappers review their materials in the Philippines." class="img-responsive">
       </div> -->
       
 
@@ -455,8 +479,13 @@ var clickHandler = function( event, headerClicked ) {
         console.log( 'showing link href' );
         console.log( title_href );
 
-        $( ".title" ).removeClass("active");
+        $(".title" ).removeClass("active");
+        $(".submenu" ).removeClass("active");
+        $(".submenu").hide();
         $(event).addClass("active");
+
+        $(title_href).addClass("active");
+        $(".submenu.active").show();
 
         $( ".outer-div" ).hide();
 
