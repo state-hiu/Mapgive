@@ -187,12 +187,35 @@ ul.city-list {
 
 
 
-      <!-- <div class="story-promo shadowed">
-        <div class="quote">
+      <div class="submenu story-promo shadowed" id="africa-hub">
+        <!-- <div class="quote">
           <blockquote><a href="/stories/responding-to-disasters.html" class="hyphenate">It's easy to take extensive geographic information for granted in the developed world.</a>”</blockquote>
-        </div>
-        <a href="/stories/responding-to-disasters.html" class="image"><img src="../assets/img/philippines-story.jpg" alt="Mappers review their materials in the Philippines." class="img-responsive"></a>
-        <p class="attribution"><a href="/stories/responding-to-disasters.html">–Tyler Machado, <em>U.S.A.</em></a></p>
+        </div> -->
+        <img src="{{ site.baseurl }}/assets/img/c2m2_bakuvu2.jpg" alt="Members of the MapGive C2M2 Bukavu project gather during a workshop in June 2020. " class="img-responsive" style="padding: 10px 0px 10px 0px;">
+        <p class="attribution" style="font-size: 12px;">Members of the MapGive C2M2 Bukavu project gather during a workshop in June 2020. </p>
+        <img src="{{ site.baseurl }}/assets/img/bukavu_vizathon_thumb2.jpg" alt="Members of the MapGive C2M2 Bukavu project meet with members of the local community." class="img-responsive" style="padding: 0px 0px 10px 0px;">
+        <p class="attribution" style="font-size: 12px;">Members of the MapGive C2M2 Bukavu project meet with members of the local community.</p>
+      </div>
+
+      <div class="submenu story-promo shadowed" id="asia-hub">
+        <img src="{{ site.baseurl }}/assets/img/nepal_caption.jpg" alt="" class="img-responsive" style="padding: 10px 0px 10px 0px;">
+        <img src="{{ site.baseurl }}/assets/img/nepal_thamel.jpg" alt="Members of the C2M2 Nepal project gather with volunteers in Thamel to map tourism businesses on OpenStreetMap to help offset second-order impacts of COVID-19 in the area." class="img-responsive" style="padding: 0px 0px 10px 0px;">
+        <p class="attribution" style="font-size: 12px;">Members of the C2M2 Nepal project gather with volunteers in Thamel to map tourism businesses on OpenStreetMap to help offset second-order impacts of COVID-19 in the area.</p>
+      </div>
+
+      <div class="submenu story-promo shadowed" id="latin-america-hub">
+        <img src="{{ site.baseurl }}/assets/img/santa_cruz_workshop.jpg" alt="Members of the MapGive C2M2 Santa Cruz project participate in a workshop discussing second-order COVID-19 impacts on hotels and restaurants." class="img-responsive" style="padding: 10px 0px 10px 0px;">
+        <p class="attribution" style="font-size: 12px;"> Members of the MapGive C2M2 Santa Cruz project participate in a workshop discussing second-order COVID-19 impacts on hotels and restaurants.</p>
+        <img src="{{ site.baseurl }}/assets/img/santa_cruz_activity.jpg" alt="Members of the MapGive C2M2 Santa Cruz project participate in a hands on activity during a workshop related to second-order COVID-19 impacts on hotels and restaurants." class="img-responsive" style="padding: 0px 0px 10px 0px;">
+        <p class="attribution" style="font-size: 12px;"> Members of the MapGive C2M2 Santa Cruz project participate in a hands on activity during a workshop related to second-order COVID-19 impacts on hotels and restaurants.</p>
+      </div>
+
+      
+
+
+
+      <!-- <div class="story-promo shadowed">
+        <img src="{{ site.baseurl }}/assets/img/voyager_thumb.png" alt="Mappers review their materials in the Philippines." class="img-responsive">
       </div> -->
       
 
@@ -237,7 +260,7 @@ ul.city-list {
         <ul class="flex-container" >
             <li class="flex-item-pic">
                 <a href="https://earth.google.com/web/data=Mj8KPQo7CiExc3Q4Mllyby1QNzNseFJ0RWRCUi0tZjJ2YklDUktFdUISFgoUMEVCRkY5RkZDODFDNDJBMjBEOTY" class="image" target="_blank">
-                  <img src="/assets/img/voyager_thumb.png " alt="C2M2 Voyage" class="img-responsive shadowed">
+                  <img src="{{ site.baseurl }}/assets/img/voyager_thumb.png " alt="C2M2 Voyage" class="img-responsive shadowed">
                 </a>
             </li>
             <li class="flex-item" style="display:flex"><div id="container-7260" class="svg-container"><svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 300 200" class="svg-content"><g><rect class="mapped" width="95%" y="94.6938775510204" height="35.91836734693878"></rect><text class="value" y="94.6938775510204" dy="-4.08163265306122" text-anchor="start" x="10">mapped: 95% complete</text></g><g><rect class="validated" width="1%" y="29.387755102040813" height="35.91836734693878"></rect><text class="value" y="29.387755102040813" dy="-4.08163265306122" text-anchor="start" x="10">validated: 1% complete</text></g><g class="y axis" fill="none" font-size="10" font-family="sans-serif" text-anchor="end"><path class="domain" stroke="currentColor" d="M-6,160.5H0.5V0.5H-6"></path><g class="tick" opacity="1" transform="translate(0,112.65306122448979)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">mapped</text></g><g class="tick" opacity="1" transform="translate(0,47.3469387755102)"><line stroke="currentColor" x2="-6"></line><text fill="currentColor" x="-9" dy="0.32em">validated</text></g></g><g class="x axis" transform="translate(0,160)" fill="none" font-size="10" font-family="sans-serif" text-anchor="middle"><path class="domain" stroke="currentColor" d="M0.5,6V0.5H260.5V6"></path><g class="tick" opacity="1" transform="translate(260.5,0)"><line stroke="currentColor" y2="6"></line><text fill="currentColor" y="9" dy="0.71em">100%</text></g></g></svg></div></li>
@@ -455,8 +478,13 @@ var clickHandler = function( event, headerClicked ) {
         console.log( 'showing link href' );
         console.log( title_href );
 
-        $( ".title" ).removeClass("active");
+        $(".title" ).removeClass("active");
+        $(".submenu" ).removeClass("active");
+        $(".submenu").hide();
         $(event).addClass("active");
+
+        $(title_href).addClass("active");
+        $(".submenu.active").show();
 
         $( ".outer-div" ).hide();
 
