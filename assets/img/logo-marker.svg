@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="68.5 5.2 262.3 394.8" style="enable-background:new 68.5 5.2 262.3 394.8;" xml:space="preserve">
+<g>
+	<defs>
+		<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="88.5" y="372" width="223" height="28">
+			<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+		</filter>
+	</defs>
+	<mask maskUnits="userSpaceOnUse" x="88.5" y="372" width="223" height="28" id="Shadow_1_">
+		<g style="filter:url(#Adobe_OpacityMaskFilter);">
+			<g>
+				<ellipse cx="200" cy="386" rx="111.5" ry="14"/>
+				<ellipse style="fill:#070707;" cx="200" cy="386" rx="107.5" ry="13.5"/>
+				<ellipse style="fill:#0D0D0D;" cx="200" cy="386" rx="103.5" ry="13"/>
+				<ellipse style="fill:#141414;" cx="200" cy="386" rx="99" ry="12.5"/>
+				<ellipse style="fill:#1B1B1B;" cx="200" cy="386" rx="95" ry="12"/>
+				<ellipse style="fill:#212121;" cx="200" cy="386" rx="91" ry="11.5"/>
+				<ellipse style="fill:#282828;" cx="200" cy="386" rx="87" ry="11"/>
+				<ellipse style="fill:#2F2F2F;" cx="200" cy="386" rx="82.5" ry="10.5"/>
+				<ellipse style="fill:#353535;" cx="200" cy="386" rx="78.5" ry="10"/>
+				<ellipse style="fill:#3C3C3C;" cx="200" cy="386" rx="74.5" ry="9.5"/>
+				<ellipse style="fill:#434343;" cx="200" cy="386" rx="70.5" ry="9"/>
+				<ellipse style="fill:#494949;" cx="200" cy="386" rx="66.5" ry="8.5"/>
+				<ellipse style="fill:#505050;" cx="200" cy="386" rx="62" ry="8"/>
+				<ellipse style="fill:#565656;" cx="200" cy="386" rx="58" ry="7.5"/>
+				<ellipse style="fill:#5D5D5D;" cx="200" cy="386" rx="54" ry="7"/>
+				<ellipse style="fill:#646464;" cx="200" cy="386" rx="50" ry="6.5"/>
+				<ellipse style="fill:#6A6A6A;" cx="200" cy="386" rx="46" ry="6"/>
+				<ellipse style="fill:#717171;" cx="200" cy="386" rx="41.5" ry="5.5"/>
+				<ellipse style="fill:#787878;" cx="200" cy="386" rx="37.5" ry="5"/>
+				<ellipse style="fill:#7E7E7E;" cx="200" cy="386" rx="33.5" ry="4"/>
+				<ellipse style="fill:#858585;" cx="200" cy="386" rx="29.5" ry="3.5"/>
+				<ellipse style="fill:#8C8C8C;" cx="200" cy="386" rx="25.5" ry="3"/>
+				<ellipse style="fill:#929292;" cx="200" cy="386" rx="21" ry="2.5"/>
+				<ellipse style="fill:#999999;" cx="200" cy="386" rx="17" ry="2"/>
+				<ellipse style="fill:#A0A0A0;" cx="200" cy="386" rx="13" ry="1.5"/>
+				<ellipse style="fill:#A6A6A6;" cx="200" cy="386" rx="9" ry="1"/>
+				<ellipse style="fill:#ADADAD;" cx="200" cy="386" rx="5" ry="0.5"/>
+			</g>
+		</g>
+	</mask>
+	<ellipse id="Shadow_160_" style="mask:url(#Shadow_1_);fill:#505050;" cx="200" cy="386" rx="111.5" ry="14"/>
+	<g>
+		<path id="Map_x5F_Marker_130_" style="fill:#FFFFFF;stroke:#667767;stroke-width:0.2031;stroke-miterlimit:10;" d="M200,386
+			c0,0-5-22-41.5-92c-37-69.5-89.5-99-89.5-166.5s58.5-122,131-122c72,0,130.5,54.5,130.5,122s-52,97-89,166.5
+			C205,364,200,386,200,386z"/>
+		<path id="Shadow_159_" style="fill:#B4B4B4;fill-opacity:0.5;" d="M268.5,61.5L330,119c0,2.5,0.5,5.5,0.5,8.5
+			c0,67.5-52,97-88.5,166l-111.5-104L268.5,61.5z"/>
+		<g id="Circle_84_">
+			<path style="fill:#667767;" d="M200,216.5c53.5,0,97-41,97-91s-43.5-91-97-91c-54,0.5-97.5,41-97.5,91.5
+				C102.5,176,146,216.5,200,216.5L200,216.5z"/>
+			<path style="fill:#FFFFFF;" d="M200,171c26.5,0,48-20,48-45c0-12-5-23.5-14.5-32c-9-8.5-21-13-33.5-13c-13,0-25,4.5-34,13
+				s-14,20-14,32s5,23,14,31.5S187,171,200,171z"/>
+			<path style="fill:#414F40;" d="M248,126c0-12-5-23.5-14.5-32l60,56c-9,31-35,55-68,63.5l-60-56c9,8.5,21,13.5,34,13.5
+				C226.5,171,248,150.5,248,126z"/>
+		</g>
+	</g>
+</g>
+</svg>
