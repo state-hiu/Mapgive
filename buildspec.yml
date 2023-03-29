@@ -19,8 +19,8 @@ phases:
     commands:
       - echo "******** Run Grunt Task ********"
       - grunt
-      - echo "******** Run Jekyll Build Task ********"
-      - jekyll build
+      - echo "******** Jekyll Build command ********"
+      - bundle exec jekyll build
       - echo "******** Uploading to S3 ********"
       - aws s3 sync _site/ s3://mapgive.state.gov
       - echo "******** Deleting AWS CloudFront Cache ********"
