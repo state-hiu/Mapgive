@@ -3,15 +3,13 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-        nodejs: 12
+        nodejs: latest
     commands:
       - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
       - rm -f /etc/apt/sources.list.d/sbt.list
-      - apt update
+      - apt-get update --assume-yes --no-install-recommends
       - apt-get install optipng
       - apt-get install libjpeg-progs -y
-      - gem install jekyll
-      - apt-get update --assume-yes --no-install-recommends
       - gem install bundler
       - bundle install
       - ln -s /usr/bin/nodejs /usr/bin/node

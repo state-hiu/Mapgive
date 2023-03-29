@@ -104,22 +104,22 @@ module.exports = function(grunt) {
         },
 
 
-        svgmin: {
-          options: {
-            plugins: [
-              { collapseGroups: false }
-            ]
-          },
-          dist: {
-            files: [{
-              expand: true,
-              cwd: '_assets/img',
-              src: ['*.svg'],
-              dest: 'assets/img',
-              ext: '.svg'
-            }]
-          }
-        },
+        // svgmin: {
+        //   options: {
+        //     plugins: [
+        //       { collapseGroups: false }
+        //     ]
+        //   },
+        //   dist: {
+        //     files: [{
+        //       expand: true,
+        //       cwd: '_assets/img',
+        //       src: ['*.svg'],
+        //       dest: 'assets/img',
+        //       ext: '.svg'
+        //     }]
+        //   }
+        // },
         
         copy: {  
             /* osm.svg was not compressing right so copying it instead
@@ -155,6 +155,14 @@ module.exports = function(grunt) {
                     dest: 'assets/img',
                     flatten: true,
                     filter: 'isFile'
+                  },
+                  svg: {
+                    expand: true,
+                    cwd: '_assets/img',
+                    src: ['**/*.svg'],
+                    dest: 'assets/img',
+                    flatten: true,
+                    filter: 'isFile'
                   }
             },
         compress: {
@@ -173,32 +181,32 @@ module.exports = function(grunt) {
         },
 
 
-        shell: {
-          jekyll: {
-            options: {
-              stdout: true
-            },
-            command: 'bundle exec jekyll build'
-          },
-          rmAssets: {
-            options: {
-              stdout: true
-            },
-            command: 'rm -rf assets/'
-          },
-          mkAssets: {
-            options: {
-              stdout: true
-            },
-            command: 'mkdir -p assets/img'
-          },
-          mvTemp: {
-            options: {
-              stdout: true
-            },
-            command: 'rm -rf _site && mv temp _site'
-          }
-        },
+        // shell: {
+        //   jekyll: {
+        //     options: {
+        //       stdout: true
+        //     },
+        //     command: 'bundle exec jekyll build'
+        //   },
+        //   rmAssets: {
+        //     options: {
+        //       stdout: true
+        //     },
+        //     command: 'rm -rf assets/'
+        //   },
+        //   mkAssets: {
+        //     options: {
+        //       stdout: true
+        //     },
+        //     command: 'mkdir -p assets/img'
+        //   },
+        //   mvTemp: {
+        //     options: {
+        //       stdout: true
+        //     },
+        //     command: 'rm -rf _site && mv temp _site'
+        //   }
+        // },
         
 
         hashres: {
@@ -257,7 +265,8 @@ module.exports = function(grunt) {
           },
           img: {
             files: ['_assets/img/*.jpg', '_assets/img/*.png', '_assets/img/*.svg'],
-            tasks: ['imagmin', 'svgmin']
+            // tasks: ['imagmin', 'svgmin']
+            tasks: ['imagmin']
           },
           imgFonts: {
             files: ['_assets/img/**', '_assets/fonts/**'],
@@ -279,8 +288,8 @@ module.exports = function(grunt) {
               'the-cause/**/*',
               '_layouts/**/*',
               'transcripts/**/*'
-            ],
-            tasks: 'shell:jekyll'
+            ]
+            // tasks: 'shell:jekyll'
           }
         }
     });
@@ -290,12 +299,12 @@ module.exports = function(grunt) {
       'sync',
       'uglify',
       'buildcss',
-      'shell:jekyll',
+      //'shell:jekyll',
       'hashres:images',
       'hashres:js',
       'hashres:css',
       //'backupSite',
-      'shell:mvTemp',
+      //'shell:mvTemp',
       //'htmlhint'
     ]);
 
@@ -306,10 +315,10 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('optimages', [
-      'shell:rmAssets',
-      'shell:mkAssets',
+      // 'shell:rmAssets',
+      // 'shell:mkAssets',
       'img',
-      'svgmin'//,
+      //'svgmin'//,
       //'compress'
     ]);
     
